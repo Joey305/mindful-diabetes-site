@@ -22,6 +22,19 @@ DEFAULT_CONTENT_PATH = (
     / "wp_migration_outputs"
     / "flask_content_seed.json"
 )
+PRESERVED_CONTENT_CLASSES = {
+    "article-image-placeholder",
+    "article-wellness-tools",
+    "article-wellness-tools__intro",
+    "article-wellness-tools__title",
+    "article-wellness-tools__grid",
+    "article-wellness-tools__resources",
+    "article-tool-card",
+    "article-tool-card--jeir",
+    "article-tool-card--memovela",
+    "article-tool-card--game",
+    "eyebrow",
+}
 
 
 def load_env_file(path):
@@ -791,7 +804,7 @@ def clean_wordpress_html(raw_html, paypal_button_id):
     html = re.sub(r"<style\b[^>]*>.*?</style>", "", html, flags=re.IGNORECASE | re.DOTALL)
     html = rewrite_upload_urls(html)
     html = rewrite_internal_href_attributes(html)
-    html = re.sub(r"\s(?:class|style|data-[\w-]+)=\"[^\"]*\"", "", html)
+    html = strip_imported_attributes(html)
     html = wrap_media_iframes(html)
     html = re.sub(r"\[give_form[^\]]*\]", paypal_form(paypal_button_id), html, flags=re.IGNORECASE)
     html = re.sub(r"\[give_receipt[^\]]*\]", donation_receipt_message(paypal_button_id), html, flags=re.IGNORECASE)
@@ -801,6 +814,29 @@ def clean_wordpress_html(raw_html, paypal_button_id):
     html = remove_empty_list_items(html)
     html = re.sub(r"<iframe\b", '<iframe loading="lazy"', html, flags=re.IGNORECASE)
     return html
+
+
+def strip_imported_attributes(html):
+    def replace(match):
+        attr_name = match.group("name").lower()
+        attr_value = match.group("value")
+
+        if attr_name == "class":
+            classes = [item for item in attr_value.split() if item in PRESERVED_CONTENT_CLASSES]
+            if classes:
+                return f' class="{" ".join(classes)}"'
+
+        if attr_name == "data-image-slot":
+            return match.group(0)
+
+        return ""
+
+    return re.sub(
+        r'\s(?P<name>class|style|data-[\w-]+)="(?P<value>[^"]*)"',
+        replace,
+        html,
+        flags=re.IGNORECASE,
+    )
 
 
 def clean_article_html(raw_html, paypal_button_id, post_slug=""):

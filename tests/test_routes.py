@@ -29,7 +29,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 89
+    assert len(content.latest_posts) == 90
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -751,12 +751,58 @@ def test_shared_article_css_frames_images_and_videos():
 
     assert ".article-post-hero__media" in css
     assert ".article-content img" in css
+    assert ".article-content .article-image-placeholder" in css
     assert ".article-content .video-frame" in css
     assert ".article-wellness-tools" in css
     assert ".article-tool-card--memovela" in css
     assert ".article-impact-card" in css
     assert "var(--secondary) 0 50%" in css
     assert "var(--miami-green) 50% 100%" in css
+
+
+def test_new_summer_hydration_post_has_links_and_placeholders():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    response = client.get("/summer-walks-hydration-diabetes/")
+
+    internal_links = [
+        b'href="/guide/"',
+        b'href="/summer-diabetes/"',
+        b'href="/summer-diabetes-management/"',
+        b'href="/walking-health/"',
+        b'href="/walking-heart-health/"',
+        b'href="/low-impact-exercise/"',
+        b'href="/prevent-type-3-diabetes-with-exercise/"',
+        b'href="/daily-wellness-habits/"',
+        b'href="/blood-sugar-body/"',
+        b'href="/type-3-diabetes/"',
+        b'href="/connecting-diabetes-and-alzheimers/"',
+        b'href="/insulin-resistance-cognitive-decline/"',
+        b'href="/food-sequencing-diabetes/"',
+        b'href="/mindful-eating/"',
+        b'href="/healthy-eating/"',
+        b'href="/memovela/"',
+        b'href="/diabetes-health-jeir-updates/"',
+        b'href="/donation/"',
+    ]
+    external_links = [
+        b"https://www.cdc.gov/diabetes/articles/managing-diabetes-in-the-heat.html",
+        b"https://medlineplus.gov/dehydration.html",
+        b"https://medlineplus.gov/heatillness.html",
+        b"https://www.ncbi.nlm.nih.gov/books/NBK526095/",
+        b"https://pubmed.ncbi.nlm.nih.gov/32998820/",
+        b"https://pubmed.ncbi.nlm.nih.gov/20150024/",
+        b"https://pubmed.ncbi.nlm.nih.gov/35868079/",
+        b"https://magazine.medlineplus.gov/article/h20-for-healthy-aging",
+        b"https://pubmed.ncbi.nlm.nih.gov/27329025/",
+        b"https://pubmed.ncbi.nlm.nih.gov/33217794/",
+    ]
+
+    assert response.status_code == 200
+    assert b"Summer Walks, Hydration, and Diabetes" in response.data
+    assert response.data.count(b'class="article-image-placeholder"') == 6
+    assert all(link in response.data for link in internal_links)
+    assert all(link in response.data for link in external_links)
 
 
 def test_articles_do_not_expose_mailchimp_api_key():

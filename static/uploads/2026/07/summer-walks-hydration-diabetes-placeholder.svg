@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Summer walks, hydration, and diabetes placeholder</title>
+  <desc id="desc">A placeholder illustration for a Mindful Diabetes article about summer walking, hydration, and heat safety.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e8f7f0"/>
+      <stop offset="0.55" stop-color="#f9f0e9"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#005030"/>
+      <stop offset="1" stop-color="#f07239"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1290" cy="180" r="92" fill="#f8b55f" opacity="0.72"/>
+  <path d="M0 660 C280 560 440 590 660 508 C880 426 1070 380 1600 430 L1600 900 L0 900 Z" fill="#cde8d8"/>
+  <path d="M0 760 C280 710 470 700 710 628 C940 558 1200 540 1600 590 L1600 900 L0 900 Z" fill="#8ab99c"/>
+  <path d="M0 840 C310 770 620 735 920 670 C1160 618 1360 625 1600 650 L1600 900 L0 900 Z" fill="#005030" opacity="0.92"/>
+  <path d="M408 900 C534 750 668 638 820 558 C970 480 1110 442 1260 410" fill="none" stroke="url(#path)" stroke-width="72" stroke-linecap="round" opacity="0.88"/>
+  <path d="M440 900 C562 770 690 670 834 596 C980 520 1120 484 1268 452" fill="none" stroke="#fff7ef" stroke-width="38" stroke-linecap="round" opacity="0.92"/>
+  <g transform="translate(156 196)">
+    <rect width="530" height="302" rx="28" fill="#ffffff" opacity="0.88"/>
+    <text x="46" y="82" fill="#005030" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">Summer Walks</text>
+    <text x="46" y="136" fill="#0d1338" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Hydration and Diabetes</text>
+    <text x="46" y="202" fill="#5f657a" font-family="Arial, Helvetica, sans-serif" font-size="25">Image placeholder</text>
+    <text x="46" y="240" fill="#5f657a" font-family="Arial, Helvetica, sans-serif" font-size="25">Replace with generated hero art</text>
+  </g>
+  <g transform="translate(1106 566)">
+    <rect x="0" y="0" width="116" height="206" rx="42" fill="#ffffff" opacity="0.95"/>
+    <rect x="38" y="-34" width="42" height="56" rx="14" fill="#ffffff"/>
+    <rect x="18" y="44" width="80" height="124" rx="26" fill="#8bd0b4" opacity="0.75"/>
+    <path d="M42 112 C58 92 74 92 88 112" fill="none" stroke="#005030" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>
