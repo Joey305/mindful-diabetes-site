@@ -2629,7 +2629,7 @@ a.article-navigation__link:hover {
 }
 
 .newsletter-form > input[name="email"] {
-  flex: 1 1 14rem;
+  flex: 1 1 12rem;
   min-width: 0;
 }
 
@@ -2646,6 +2646,13 @@ a.article-navigation__link:hover {
   border-radius: 0;
 }
 
+.newsletter-form--footer > input[name="email"],
+.guide-signup .newsletter-form > input[name="email"],
+.jeir-sidebar-card .newsletter-form > input[name="email"],
+.article-sidebar-card .newsletter-form > input[name="email"] {
+  flex-basis: auto;
+}
+
 .newsletter-form__bot-field {
   position: absolute;
   left: -100vw;
@@ -2660,6 +2667,7 @@ a.article-navigation__link:hover {
   justify-content: center;
   min-height: 0;
   max-width: 100%;
+  overflow: hidden;
 }
 
 .subscribe-result-shell {
@@ -4934,6 +4942,10 @@ a.article-navigation__link:hover {
   .newsletter-form {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .newsletter-form > input[name="email"] {
+    flex-basis: auto;
   }
 
   .header-search {

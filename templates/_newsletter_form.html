@@ -7,7 +7,7 @@
   <label class="screen-reader-text" for="{{ newsletter_id|default('newsletter-email') }}">Email address</label>
   <input id="{{ newsletter_id|default('newsletter-email') }}" name="email" type="email" placeholder="Email address" required>
   {% if turnstile_site_key %}
-    <div class="cf-turnstile newsletter-form__turnstile" data-sitekey="{{ turnstile_site_key }}" data-size="compact" data-appearance="interaction-only" data-action="newsletter"></div>
+    <div class="cf-turnstile newsletter-form__turnstile" data-sitekey="{{ turnstile_site_key }}" data-size="compact" data-appearance="execute" data-execution="execute" data-action="newsletter" data-callback="onNewsletterTurnstileSuccess" data-error-callback="onNewsletterTurnstileError" data-expired-callback="onNewsletterTurnstileExpired"></div>
   {% endif %}
   <button type="submit">Subscribe</button>
 </form>
