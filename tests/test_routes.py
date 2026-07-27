@@ -29,7 +29,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 90
+    assert len(content.latest_posts) == 91
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -834,6 +834,83 @@ def test_summer_hydration_preview_images_include_seo_metadata():
         assert b"/static/uploads/2026/07/summer-walks-hydration-diabetes-hero.webp" in response.data
         assert b'title="Summer walking essentials for diabetes and hydration"' in response.data
         assert b'data-description="Hero image for a Mindful Diabetes article' in response.data
+
+
+def test_april_alzheimers_research_post_has_sources_and_generated_images():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    response = client.get("/alzheimers-research-blood-tests-tau-trials/")
+    post = app.config["CONTENT"].posts_by_slug["alzheimers-research-blood-tests-tau-trials"]
+
+    internal_links = [
+        b'href="/type-3-diabetes/"',
+        b'href="/connecting-diabetes-and-alzheimers/"',
+        b'href="/insulin-resistance-cognitive-decline/"',
+        b'href="/glucose-metabolism-and-brain-health/"',
+        b'href="/blood-sugar-body/"',
+        b'href="/daily-wellness-habits/"',
+        b'href="/walking-health/"',
+        b'href="/prevent-type-3-diabetes-with-exercise/"',
+        b'href="/mental-health/"',
+        b'href="/stress-in-diabetes-and-strategies-for-stress-management/"',
+        b'href="/mind-diet/"',
+        b'href="/food-sequencing-diabetes/"',
+        b'href="/mindful-eating/"',
+        b'href="/diabetes-artificial-intelligence-jeir/"',
+        b'href="/memovela/"',
+        b'href="/guide/"',
+        b'href="/donation/"',
+    ]
+    external_links = [
+        b"https://www.nature.com/articles/s41591-026-04303-y",
+        b"https://www.multipark.lu.se/article/new-ai-model-can-detect-multiple-cognitive-brain-diseases-single-blood-sample",
+        b"https://www.nature.com/articles/s41467-026-71732-1",
+        b"https://link.springer.com/article/10.1186/s13195-026-02044-1",
+        b"https://www.sciencedirect.com/science/article/pii/S2274580726000270",
+        b"https://clinicaltrials.gov/study/NCT04468659",
+        b"https://clinicaltrials.gov/study/NCT05026866",
+        b"https://www.alzheimers.gov/clinical-trials",
+        b"https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/761375s000lbl.pdf",
+        b"https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/761248s004lbl.pdf",
+        b"https://pubmed.ncbi.nlm.nih.gov/42075835/",
+    ]
+    image_assets = [
+        b"/static/uploads/2026/04/alzheimers-research-blood-tests-tau-trials-hero.webp",
+        b"/static/uploads/2026/04/plasma-proteomics-dementia-ai-model.webp",
+        b"/static/uploads/2026/04/alzheimers-tau-timeline-biomarkers.webp",
+        b"/static/uploads/2026/04/preclinical-alzheimers-biomarker-context.webp",
+        b"/static/uploads/2026/04/digital-memory-blood-biomarker-trials.webp",
+        b"/static/uploads/2026/04/alzheimers-aria-safety-monitoring.webp",
+    ]
+
+    assert response.status_code == 200
+    assert post["date"] == "2026-04-18 09:00:00"
+    assert b"Alzheimer" in response.data
+    assert b"Families deserve hope, but not hype" in response.data
+    assert b"Blood protein patterns in Alzheimer" in response.data
+    assert b"Safety monitoring in Alzheimer" in response.data
+    assert b"Hero image for a Mindful Diabetes article translating early April 2026" in response.data
+    assert b"Supporting image for a section about anti-amyloid therapy safety" in response.data
+    assert all(asset in response.data for asset in image_assets)
+    assert all(link in response.data for link in internal_links)
+    assert all(link in response.data for link in external_links)
+
+
+def test_april_alzheimers_research_preview_image_includes_seo_metadata():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    post = app.config["CONTENT"].posts_by_slug["alzheimers-research-blood-tests-tau-trials"]
+
+    assert post["preview_image_title"] == "Alzheimer’s research explained with warmth and honesty"
+    assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
+
+    for path in ["/guide/", "/alzheimers-research-blood-tests-tau-trials/"]:
+        response = client.get(path)
+
+        assert response.status_code == 200
+        assert b"/static/uploads/2026/04/alzheimers-research-blood-tests-tau-trials-hero.webp" in response.data
+        assert b'title="Alzheimer\xe2\x80\x99s research explained with warmth and honesty"' in response.data
+        assert b'data-description="Hero image for a Mindful Diabetes article translating early April 2026' in response.data
 
 
 def test_articles_do_not_expose_mailchimp_api_key():
