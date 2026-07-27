@@ -71,6 +71,24 @@ def test_uploaded_media_urls_are_local_static_assets():
     assert b"https://mindfuldiabetes.org/wp-content/uploads/" not in response.data
 
 
+def test_footer_links_to_all_social_channels():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    assert b"Follow Us" in response.data
+    assert b"social-link-row--footer" in response.data
+    assert b"https://www.facebook.com/profile.php?id=61551356473510" in response.data
+    assert b"https://www.instagram.com/mindfuldiabetesinc/" in response.data
+    assert b"https://www.youtube.com/channel/UCrh06dTVO4bnUMFEgBj6p0g" in response.data
+    assert b"https://www.tiktok.com/@mindfuldiabetesinc" in response.data
+    assert b"https://www.linkedin.com/company/mindful-diabetes-inc" in response.data
+    assert b"YouTube" in response.data
+    assert b"LinkedIn" in response.data
+
+
 def test_homepage_restores_key_original_sections():
     app = create_app({"TESTING": True})
     client = app.test_client()
@@ -199,8 +217,7 @@ def test_jeir_article_uses_pilot_layout():
     assert b'class="article-post-hero"' in response.data
     assert b"MindfulDiabetes.ai Has Leveled Up" in response.data
     assert b"https://www.mindfuldiabetes.ai/" in response.data
-    assert b"https://www.youtube.com/embed/aOk3eEcSQGo" in response.data
-    assert response.data.count(b"https://www.youtube.com/embed/aOk3eEcSQGo") == 1
+    assert b"https://www.youtube.com/embed/aOk3eEcSQGo" not in response.data
     assert b"https://youtu.be/aOk3eEcSQGo" not in response.data
     assert b"Join Us in Preventing Type 3 Diabetes" not in response.data
     assert b"<li>\xc2\xa0</li>" not in response.data
@@ -538,7 +555,7 @@ def test_random_article_excludes_current_post(monkeypatch):
     assert response.headers["Location"] != current_post["canonical_path"]
 
 
-def test_articles_render_responsive_media_wrappers():
+def test_articles_remove_blog_audio_video_prompts():
     app = create_app({"TESTING": True})
     client = app.test_client()
 
@@ -547,9 +564,14 @@ def test_articles_render_responsive_media_wrappers():
 
         assert response.status_code == 200
         assert b'class="article-post-hero__media"' in response.data
-        assert b'class="article-post-media"' in response.data
-        assert b'class="video-frame"' in response.data
-        assert b"<audio" in response.data
+        assert b'class="article-post-media"' not in response.data
+        assert b'class="video-frame"' not in response.data
+        assert b"<audio" not in response.data
+        assert b"Listen or watch" not in response.data
+        assert b"Choose the format that fits your day" not in response.data
+        assert b"Use the audio version for a quick listen" not in response.data
+        assert b"Full article" not in response.data
+        assert b"Want to listen instead?" not in response.data
 
 
 def test_shared_article_css_frames_images_and_videos():

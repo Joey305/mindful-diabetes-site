@@ -33,30 +33,9 @@
       </div>
     </section>
 
-    {% if post.article_media.audio_url or post.article_media.video_embed_url %}
-      <section class="article-post-media" aria-labelledby="article-media-heading">
-        <div class="article-post-media__copy">
-          <p class="eyebrow">Listen or watch</p>
-          <h2 id="article-media-heading">Choose the format that fits your day</h2>
-          <p>Use the audio version for a quick listen, or watch the related video before reading the full article.</p>
-          {% if post.article_media.audio_url %}
-            <audio src="{{ post.article_media.audio_url }}" preload="none" controls>
-              Your browser does not support the audio tag.
-            </audio>
-          {% endif %}
-        </div>
-        {% if post.article_media.video_embed_url %}
-          <div class="video-frame">
-            <iframe src="{{ post.article_media.video_embed_url }}" title="{{ post.article_media.video_title }}" loading="lazy" allowfullscreen></iframe>
-          </div>
-        {% endif %}
-      </section>
-    {% endif %}
-
     <section id="article" class="article-post-shell">
       <div class="article-post-body">
         <div class="article-post-body__header">
-          <p class="eyebrow">Full article</p>
           <h2>{{ post.article_section_title }}</h2>
         </div>
         <div class="wp-content article-content">

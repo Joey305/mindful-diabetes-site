@@ -1915,6 +1915,11 @@ a.article-navigation__link:hover {
   gap: 0.55rem;
 }
 
+.social-link-row--footer {
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+}
+
 .social-link {
   display: inline-flex;
   min-height: 3.15rem;
@@ -1934,6 +1939,14 @@ a.article-navigation__link:hover {
   min-height: 2.75rem;
   justify-content: flex-start;
   padding: 0.62rem 0.8rem;
+}
+
+.social-link-row--footer .social-link {
+  min-height: 2.55rem;
+  justify-content: flex-start;
+  padding: 0.58rem 0.72rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: none;
 }
 
 .social-link--facebook {
@@ -2639,6 +2652,10 @@ a.article-navigation__link:hover {
   font-family: "Lora", serif;
   font-size: 1.05rem;
   letter-spacing: 0;
+}
+
+.footer-social-heading {
+  margin-top: 1rem !important;
 }
 
 .footer-links a,

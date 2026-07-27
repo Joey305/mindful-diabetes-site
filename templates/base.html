@@ -89,8 +89,10 @@
           <a href="{{ url_for('volunteer') }}">Volunteer</a>
           <a href="{{ url_for('page_detail', slug='donation') }}">Donate</a>
           <a class="footer-contact-button" href="mailto:jmschulz@mindfuldiabetes.org">Contact Us</a>
-          <a href="https://www.facebook.com/profile.php?id=61551356473510" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.instagram.com/mindfuldiabetesinc/" target="_blank" rel="noopener">Instagram</a>
+          <h2 class="footer-social-heading">Follow Us</h2>
+          {% set social_link_variant = "social-link-row--footer" %}
+          {% include "_social_links.html" %}
+          {% set social_link_variant = "" %}
         </nav>
       </div>
       <div class="footer-bottom">

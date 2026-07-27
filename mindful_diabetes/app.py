@@ -439,8 +439,7 @@ def load_content(path):
         preview_image = first_content_image(item.get("content_html", ""))
         item["preview_image_url"] = preview_image["src"] if preview_image else ""
         item["preview_image_alt"] = preview_image["alt"] if preview_image else item.get("title", "")
-        item["article_media"] = article_media_for(item.get("content_html", ""), item.get("title", ""))
-        item["article_section_title"] = first_heading_text(item.get("content_html", "")) or item.get("title", "")
+        item["article_section_title"] = article_section_title_for(item.get("content_html", "")) or item.get("title", "")
         item["search_text"] = " ".join(
             [item.get("title", ""), item.get("slug", ""), item.get("excerpt_text", ""), content_text]
         ).lower()
@@ -460,45 +459,6 @@ def navigation_for_post(latest_posts, slug):
     }
 
 
-def article_media_for(raw_html, title):
-    audio_url = first_audio_url(raw_html)
-    video_embed_url = first_youtube_embed_url(raw_html)
-    return {
-        "audio_url": audio_url,
-        "video_embed_url": video_embed_url,
-        "video_title": f"{title} video" if title else "Mindful Diabetes video",
-    }
-
-
-def first_audio_url(raw_html):
-    match = re.search(r"<audio\b[^>]*\bsrc=(?P<quote>[\"'])(?P<src>.*?)(?P=quote)", raw_html or "", re.IGNORECASE | re.DOTALL)
-    if not match:
-        return ""
-    return html_lib.unescape(rewrite_upload_urls(match.group("src").strip()))
-
-
-def first_youtube_embed_url(raw_html):
-    html = raw_html or ""
-    bare = re.search(
-        r"(?<![\"'=])(?P<url>https?://(?:www\.)?(?:youtu\.be/[^\s<]+|youtube\.com/watch\?[^\s<]+))",
-        html,
-        re.IGNORECASE,
-    )
-    if bare:
-        embed_url = youtube_url_to_embed(html_lib.unescape(bare.group("url")))
-        if embed_url:
-            return embed_url
-
-    iframe = re.search(
-        r"<iframe\b[^>]*\bsrc=(?P<quote>[\"'])(?P<src>https?://(?:www\.)?youtube\.com/embed/.*?)(?P=quote)",
-        html,
-        re.IGNORECASE | re.DOTALL,
-    )
-    if iframe:
-        return html_lib.unescape(iframe.group("src").strip())
-    return ""
-
-
 def youtube_url_to_embed(raw_url):
     parsed = urlparse(raw_url.rstrip(".,);"))
     video_id = ""
@@ -513,11 +473,13 @@ def youtube_url_to_embed(raw_url):
     return f"https://www.youtube.com/embed/{video_id}"
 
 
-def first_heading_text(raw_html):
-    match = re.search(r"<h[1-4]\b[^>]*>(.*?)</h[1-4]>", raw_html or "", re.IGNORECASE | re.DOTALL)
-    if not match:
-        return ""
-    return html_to_text(match.group(1))
+def article_section_title_for(raw_html):
+    for match in re.finditer(r"<h[1-4]\b[^>]*>(.*?)</h[1-4]>", raw_html or "", re.IGNORECASE | re.DOTALL):
+        heading = html_to_text(match.group(1))
+        if re.search(r"\b(?:want|prefer)\b.*\blisten\b", heading, re.IGNORECASE):
+            continue
+        return heading
+    return ""
 
 
 def search_content(content, query, extra_items=None):
@@ -766,7 +728,7 @@ def clean_wordpress_html(raw_html, paypal_button_id):
 
 def clean_article_html(raw_html, paypal_button_id, post_slug=""):
     html = clean_wordpress_html(raw_html, paypal_button_id)
-    html = remove_repeated_article_media(html)
+    html = remove_article_media(html)
     html = replace_imported_donation_blocks(html, paypal_button_id)
     html = replace_imported_wellness_tools_blocks(html)
     html = promote_chicago_marathon_figure(html)
@@ -852,21 +814,19 @@ def wrap_media_iframes(html):
     return re.sub(r"<iframe\b.*?</iframe>", iframe_wrapper, html, flags=re.IGNORECASE | re.DOTALL)
 
 
-def remove_repeated_article_media(html):
+def remove_article_media(html):
     html = re.sub(r"\s*<img\b[^>]*>\s*", "", html, count=1, flags=re.IGNORECASE | re.DOTALL)
     html = re.sub(
         r"\s*<h[2-4]\b[^>]*>\s*(?:want|prefer)[^<]*listen[^<]*</h[2-4]>\s*",
         "",
         html,
-        count=1,
         flags=re.IGNORECASE | re.DOTALL,
     )
-    html = re.sub(r"\s*<audio\b.*?</audio>\s*", "", html, count=1, flags=re.IGNORECASE | re.DOTALL)
+    html = re.sub(r"\s*<audio\b.*?</audio>\s*", "", html, flags=re.IGNORECASE | re.DOTALL)
     html = re.sub(
         r"\s*<div class=\"video-frame\">\s*<iframe\b.*?</iframe>\s*</div>\s*",
         "",
         html,
-        count=1,
         flags=re.IGNORECASE | re.DOTALL,
     )
     return html
