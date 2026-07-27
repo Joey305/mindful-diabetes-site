@@ -760,7 +760,7 @@ def test_shared_article_css_frames_images_and_videos():
     assert "var(--miami-green) 50% 100%" in css
 
 
-def test_new_summer_hydration_post_has_links_and_placeholders():
+def test_new_summer_hydration_post_has_links_and_generated_images():
     app = create_app({"TESTING": True})
     client = app.test_client()
     response = client.get("/summer-walks-hydration-diabetes/")
@@ -797,12 +797,43 @@ def test_new_summer_hydration_post_has_links_and_placeholders():
         b"https://pubmed.ncbi.nlm.nih.gov/27329025/",
         b"https://pubmed.ncbi.nlm.nih.gov/33217794/",
     ]
+    image_assets = [
+        b"/static/uploads/2026/07/summer-walks-hydration-diabetes-hero.webp",
+        b"/static/uploads/2026/07/summer-walking-shaded-route.webp",
+        b"/static/uploads/2026/07/summer-hydration-kit-diabetes.webp",
+        b"/static/uploads/2026/07/summer-walk-body-signals-checklist.webp",
+        b"/static/uploads/2026/07/summer-walk-cool-down-hydration.webp",
+        b"/static/uploads/2026/07/check-carry-choose-cool-down.webp",
+    ]
 
     assert response.status_code == 200
     assert b"Summer Walks, Hydration, and Diabetes" in response.data
-    assert response.data.count(b'class="article-image-placeholder"') == 6
+    assert b"A shaded summer walking path with a water bottle" in response.data
+    assert b"Summer walking essentials for diabetes and hydration" in response.data
+    assert b"Hero image for a Mindful Diabetes article about summertime walking" in response.data
+    assert b"Supporting image for a section about planning safer summer walks" in response.data
+    assert b"Mobile-friendly infographic summarizing hydration" in response.data
+    assert b"A little planning can make summer walks safer" in response.data
+    assert all(asset in response.data for asset in image_assets)
     assert all(link in response.data for link in internal_links)
     assert all(link in response.data for link in external_links)
+
+
+def test_summer_hydration_preview_images_include_seo_metadata():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    post = app.config["CONTENT"].posts_by_slug["summer-walks-hydration-diabetes"]
+
+    assert post["preview_image_title"] == "Summer walking essentials for diabetes and hydration"
+    assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
+
+    for path in ["/", "/guide/", "/summer-walks-hydration-diabetes/"]:
+        response = client.get(path)
+
+        assert response.status_code == 200
+        assert b"/static/uploads/2026/07/summer-walks-hydration-diabetes-hero.webp" in response.data
+        assert b'title="Summer walking essentials for diabetes and hydration"' in response.data
+        assert b'data-description="Hero image for a Mindful Diabetes article' in response.data
 
 
 def test_articles_do_not_expose_mailchimp_api_key():

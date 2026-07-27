@@ -160,7 +160,7 @@
           <article class="post-card guide-post-card home-post-card">
             {% if post.preview_image_url %}
               <a class="guide-post-card__image" href="{{ post.canonical_path }}">
-                <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt }}">
+                <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt }}" title="{{ post.preview_image_title or post.title }}"{% if post.preview_image_description %} data-description="{{ post.preview_image_description }}"{% endif %}>
               </a>
             {% endif %}
             <div class="guide-post-card__body">

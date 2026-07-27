@@ -22,6 +22,8 @@ env/
 .vscode/
 
 # Local archives, database exports, and backups
+tmp/
+*.zip
 *.wpress
 *.sql
 *.sqlite

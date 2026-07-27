@@ -487,6 +487,8 @@ def load_content(path):
         preview_image = first_content_image(item.get("content_html", ""))
         item["preview_image_url"] = preview_image["src"] if preview_image else ""
         item["preview_image_alt"] = preview_image["alt"] if preview_image else item.get("title", "")
+        item["preview_image_title"] = preview_image["title"] if preview_image else item.get("title", "")
+        item["preview_image_description"] = preview_image["description"] if preview_image else ""
         item["article_section_title"] = article_section_title_for(item.get("content_html", "")) or item.get("title", "")
         item["search_text"] = " ".join(
             [item.get("title", ""), item.get("slug", ""), item.get("excerpt_text", ""), content_text]
@@ -777,6 +779,8 @@ class FirstImageParser(HTMLParser):
         self.image = {
             "src": html_lib.unescape(src),
             "alt": html_lib.unescape(attr_map.get("alt", "")).strip(),
+            "title": html_lib.unescape(attr_map.get("title", "")).strip(),
+            "description": html_lib.unescape(attr_map.get("data-description", "")).strip(),
         }
 
     @staticmethod
@@ -826,7 +830,7 @@ def strip_imported_attributes(html):
             if classes:
                 return f' class="{" ".join(classes)}"'
 
-        if attr_name == "data-image-slot":
+        if attr_name in {"data-description", "data-image-slot"}:
             return match.group(0)
 
         return ""

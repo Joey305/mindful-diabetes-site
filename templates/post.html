@@ -27,7 +27,7 @@
         </div>
         {% if post.preview_image_url %}
           <div class="article-post-hero__media">
-            <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt or post.title }}">
+            <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt or post.title }}" title="{{ post.preview_image_title or post.title }}"{% if post.preview_image_description %} data-description="{{ post.preview_image_description }}"{% endif %}>
           </div>
         {% endif %}
       </div>
