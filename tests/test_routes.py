@@ -1,3 +1,4 @@
+import json
 from importlib import import_module
 
 from mindful_diabetes import create_app
@@ -29,7 +30,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 91
+    assert len(content.latest_posts) == 92
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -913,6 +914,78 @@ def test_april_alzheimers_research_preview_image_includes_seo_metadata():
         assert b'data-description="Hero image for a Mindful Diabetes article translating early April 2026' in response.data
 
 
+def test_february_ipsc_alzheimers_post_has_sources_and_generated_images():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    response = client.get("/ipsc-cells-alzheimers-disease-models/")
+    post = app.config["CONTENT"].posts_by_slug["ipsc-cells-alzheimers-disease-models"]
+
+    internal_links = [
+        b'href="/type-3-diabetes/"',
+        b'href="/connecting-diabetes-and-alzheimers/"',
+        b'href="/insulin-resistance-cognitive-decline/"',
+        b'href="/glucose-metabolism-and-brain-health/"',
+        b'href="/daily-wellness-habits/"',
+        b'href="/walking-heart-health/"',
+        b'href="/mind-diet/"',
+        b'href="/food-sequencing-diabetes/"',
+        b'href="/mindful-eating/"',
+        b'href="/stress-in-diabetes-and-strategies-for-stress-management/"',
+        b'href="/mental-health/"',
+        b'href="/memovela/"',
+        b'href="/guide/"',
+        b'href="/donation/"',
+    ]
+    external_links = [
+        b"https://www.cell.com/cell/fulltext/S0092-8674(06)00976-7",
+        b"https://www.cell.com/cell/fulltext/S0092-8674(07)01471-7",
+        b"https://www.nature.com/articles/nature10821",
+        b"https://www.cell.com/neuron/fulltext/S0896-6273(18)30307-2",
+        b"https://www.cell.com/neuron/fulltext/S0896-6273(21)00926-0",
+        b"https://www.nature.com/articles/s41467-020-19264-0",
+        b"https://onlinelibrary.wiley.com/doi/10.1002/adhm.202505427",
+        b"https://www.nature.com/articles/s42003-025-07507-7",
+        b"https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.71117",
+        b"https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202505549",
+    ]
+    image_assets = [
+        b"/static/uploads/2026/02/ipsc-alzheimers-modeling-hero.webp",
+        b"/static/uploads/2026/02/cellular-time-machine-ipsc-workflow.webp",
+        b"/static/uploads/2026/02/isogenic-ipsc-lines-alzheimers-research.webp",
+        b"/static/uploads/2026/02/brain-organoid-on-chip-alzheimers-model.webp",
+        b"/static/uploads/2026/02/ipsc-microglia-neuron-organoid-model.webp",
+        b"/static/uploads/2026/02/ipsc-models-promise-limits-alzheimers.webp",
+    ]
+
+    assert response.status_code == 200
+    assert post["date"] == "2026-02-16 09:00:00"
+    assert b"Tiny Cells, Big Questions" in response.data
+    assert b"A positive drug signal in a cell model is not proof" in response.data
+    assert b"iPSC models do not recreate a whole brain" in response.data
+    assert b"Hero image for a Mindful Diabetes article explaining how induced pluripotent stem cells" in response.data
+    assert b"Supporting image for a section about iPSC-derived microglia" in response.data
+    assert all(asset in response.data for asset in image_assets)
+    assert all(link in response.data for link in internal_links)
+    assert all(link in response.data for link in external_links)
+
+
+def test_february_ipsc_alzheimers_preview_image_includes_seo_metadata():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    post = app.config["CONTENT"].posts_by_slug["ipsc-cells-alzheimers-disease-models"]
+
+    assert post["preview_image_title"] == "iPSC models help researchers study Alzheimer’s disease in human cells"
+    assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
+
+    for path in ["/guide/", "/ipsc-cells-alzheimers-disease-models/"]:
+        response = client.get(path)
+
+        assert response.status_code == 200
+        assert b"/static/uploads/2026/02/ipsc-alzheimers-modeling-hero.webp" in response.data
+        assert b'title="iPSC models help researchers study Alzheimer\xe2\x80\x99s disease in human cells"' in response.data
+        assert b'data-description="Hero image for a Mindful Diabetes article explaining how induced pluripotent stem cells' in response.data
+
+
 def test_articles_do_not_expose_mailchimp_api_key():
     secret = "test-us21-secret-api-key"
     app = create_app(
@@ -929,3 +1002,73 @@ def test_articles_do_not_expose_mailchimp_api_key():
 
         assert response.status_code == 200, post["canonical_path"]
         assert secret.encode() not in response.data, post["canonical_path"]
+
+
+def test_admin_dashboard_requires_email_code_login(tmp_path, monkeypatch):
+    sent_payloads = []
+
+    def fake_urlopen(request_obj, timeout=0):
+        sent_payloads.append(json.loads(request_obj.data.decode("utf-8")))
+        assert request_obj.full_url == "https://api.brevo.com/v3/smtp/email"
+        assert request_obj.headers["Api-key"] == "brevo-test-key"
+        return StubUrlopenResponse(status=201, body=b'{"messageId":"test"}')
+
+    monkeypatch.setattr(app_module, "urlopen", fake_urlopen)
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_EMAIL": "jmschulz@mindfuldiabetes.org",
+            "BREVO_API_KEY": "brevo-test-key",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+        }
+    )
+    client = app.test_client()
+
+    protected_response = client.get("/admin/")
+    assert protected_response.status_code == 302
+    assert protected_response.headers["Location"].endswith("/admin/login/?next=/admin/")
+
+    login_page_response = client.get("/admin/login/")
+    assert login_page_response.status_code == 200
+    assert b'value="jmschulz@mindfuldiabetes.org"' not in login_page_response.data
+
+    request_code_response = client.post(
+        "/admin/login/",
+        data={"email": "jmschulz@mindfuldiabetes.org"},
+    )
+    assert request_code_response.status_code == 200
+    assert b"Check your email for the one-time admin code." in request_code_response.data
+    assert sent_payloads
+
+    code = sent_payloads[0]["textContent"].split(" is ")[1].split(".")[0]
+    login_response = client.post(
+        "/admin/login/",
+        data={"email": "jmschulz@mindfuldiabetes.org", "code": code},
+    )
+
+    assert login_response.status_code == 302
+    assert login_response.headers["Location"].endswith("/admin/")
+
+    dashboard_response = client.get("/admin/")
+    assert dashboard_response.status_code == 200
+    assert b"Site activity" in dashboard_response.data
+    assert b"Signed in as jmschulz@mindfuldiabetes.org" in dashboard_response.data
+
+
+def test_admin_activity_tracks_public_page_views(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+        }
+    )
+    client = app.test_client()
+
+    response = client.get("/guide/")
+    assert response.status_code == 200
+
+    dashboard = app_module.build_admin_dashboard(app.config)
+    assert dashboard["stats"][0]["value"] == 1
+    assert dashboard["top_paths"][0] == {"path": "/guide/", "count": 1}

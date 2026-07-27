@@ -12,6 +12,28 @@
       "description": "PayPal hosted donation button ID.",
       "required": false
     },
+    "SECRET_KEY": {
+      "description": "Long random secret used to sign Flask admin sessions.",
+      "required": true
+    },
+    "ADMIN_EMAIL": {
+      "description": "The single email address allowed to access /admin/.",
+      "required": false,
+      "value": "jmschulz@mindfuldiabetes.org"
+    },
+    "ADMIN_EMAIL_FROM": {
+      "description": "Verified Brevo sender used for admin login codes.",
+      "required": false,
+      "value": "Mindful Diabetes <login@auth.mindfuldiabetes.org>"
+    },
+    "BREVO_API_KEY": {
+      "description": "Brevo API key used to send passwordless admin login codes. Keep private.",
+      "required": false
+    },
+    "DATABASE_URL": {
+      "description": "Optional Postgres connection URL for persistent admin login codes and activity tracking.",
+      "required": false
+    },
     "MAILCHIMP_API_KEY": {
       "description": "Mailchimp API key for newsletter subscriptions. Leave unset until ready.",
       "required": false

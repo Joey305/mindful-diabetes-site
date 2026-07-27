@@ -1,18 +1,28 @@
 import json
 import html as html_lib
+import hmac
 import hashlib
 import os
 import random
 import re
-from datetime import datetime
+import secrets
+from datetime import datetime, timedelta, timezone
+from functools import wraps
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import parse_qs, urlencode, urlparse
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from flask import Flask, abort, redirect, render_template, request, url_for
+from flask import Flask, abort, redirect, render_template, request, session, url_for
 from markupsafe import Markup, escape
+
+try:
+    import psycopg
+    from psycopg.rows import dict_row
+except ImportError:  # pragma: no cover - optional until DATABASE_URL is configured
+    psycopg = None
+    dict_row = None
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,6 +32,9 @@ DEFAULT_CONTENT_PATH = (
     / "wp_migration_outputs"
     / "flask_content_seed.json"
 )
+DEFAULT_ADMIN_EMAIL = "jmschulz@mindfuldiabetes.org"
+ADMIN_CODE_TTL_MINUTES = 10
+ADMIN_SESSION_HOURS = 12
 PRESERVED_CONTENT_CLASSES = {
     "article-image-placeholder",
     "article-wellness-tools",
@@ -173,6 +186,16 @@ def create_app(test_config=None):
         MAILCHIMP_AUDIENCE_ID=os.getenv("MAILCHIMP_AUDIENCE_ID", ""),
         MAILCHIMP_SERVER_PREFIX=os.getenv("MAILCHIMP_SERVER_PREFIX", ""),
         MAILCHIMP_TAGS=os.getenv("MAILCHIMP_TAGS", ",".join(DEFAULT_MAILCHIMP_TAGS)),
+        SECRET_KEY=os.getenv("SECRET_KEY") or os.getenv("ADMIN_SESSION_SECRET") or "dev-only-change-me",
+        ADMIN_EMAIL=os.getenv("ADMIN_EMAIL", DEFAULT_ADMIN_EMAIL),
+        ADMIN_EMAIL_FROM=os.getenv(
+            "ADMIN_EMAIL_FROM",
+            "Mindful Diabetes <login@auth.mindfuldiabetes.org>",
+        ),
+        ADMIN_DATA_PATH=os.getenv("ADMIN_DATA_PATH", str(BASE_DIR / "instance" / "admin_data.json")),
+        BREVO_API_KEY=os.getenv("BREVO_API_KEY", ""),
+        BREVO_SMTP_URL=os.getenv("BREVO_SMTP_URL", "https://api.brevo.com/v3/smtp/email"),
+        DATABASE_URL=os.getenv("DATABASE_URL", ""),
         TURNSTILE_SITE_KEY=os.getenv("TURNSTILE_SITE_KEY", ""),
         TURNSTILE_SECRET_KEY=os.getenv("TURNSTILE_SECRET_KEY", ""),
         TURNSTILE_VERIFY_URL=os.getenv(
@@ -188,8 +211,12 @@ def create_app(test_config=None):
     if test_config:
         app.config.update(test_config)
 
+    app.secret_key = app.config["SECRET_KEY"]
+    app.permanent_session_lifetime = timedelta(hours=ADMIN_SESSION_HOURS)
+
     content = load_content(Path(app.config["CONTENT_PATH"]))
     app.config["CONTENT"] = content
+    ensure_admin_storage(app.config)
 
     @app.context_processor
     def inject_site_data():
@@ -230,6 +257,31 @@ def create_app(test_config=None):
                 post_slug="diabetes-health-jeir-updates",
             )
         )
+
+    def admin_required(view):
+        @wraps(view)
+        def wrapped_view(*args, **kwargs):
+            if normalize_email(session.get("admin_email")) != normalize_email(app.config["ADMIN_EMAIL"]):
+                return redirect(url_for("admin_login", next=request.path))
+            return view(*args, **kwargs)
+
+        return wrapped_view
+
+    @app.after_request
+    def track_public_activity(response):
+        if should_track_request(response):
+            record_activity_event(
+                app.config,
+                "page_view",
+                request.path,
+                title_for_request(content, request.endpoint, request.view_args or {}),
+                {
+                    "query": public_query_args(request.args),
+                    "referrer": request.referrer or "",
+                    "user_agent": (request.user_agent.string or "")[:240],
+                },
+            )
+        return response
 
     @app.get("/")
     def home():
@@ -354,6 +406,17 @@ def create_app(test_config=None):
                 source=source,
             ), 502
 
+        record_activity_event(
+            app.config,
+            "newsletter_signup",
+            request.path,
+            "Newsletter signup",
+            {
+                "source": source,
+                "email_domain": email.rsplit("@", 1)[1].lower() if "@" in email else "",
+            },
+        )
+
         return render_template(
             "subscribe.html",
             status="success",
@@ -395,6 +458,90 @@ def create_app(test_config=None):
     @app.get("/volunteer/")
     def volunteer():
         return render_template("volunteer.html")
+
+    @app.route("/admin/login/", methods=["GET", "POST"])
+    def admin_login():
+        admin_email = app.config["ADMIN_EMAIL"]
+        if request.method == "POST":
+            email = request.form.get("email", "").strip()
+            code = request.form.get("code", "").strip()
+            next_url = safe_admin_next_url(request.form.get("next") or request.args.get("next") or url_for("admin_dashboard"))
+
+            if code:
+                success, message = verify_admin_login_code(app.config, email, code)
+                if success:
+                    session.clear()
+                    session.permanent = True
+                    session["admin_email"] = normalize_email(admin_email)
+                    session["admin_login_at"] = utc_now().isoformat()
+                    record_activity_event(
+                        app.config,
+                        "admin_login",
+                        request.path,
+                        "Admin login",
+                        {"email": normalize_email(admin_email)},
+                    )
+                    return redirect(next_url)
+
+                return render_template(
+                    "admin_login.html",
+                    admin_email=admin_email,
+                    email=email,
+                    code_requested=True,
+                    error=message,
+                    next_url=next_url,
+                ), 400
+
+            if not is_valid_email(email):
+                return render_template(
+                    "admin_login.html",
+                    admin_email=admin_email,
+                    email=email,
+                    error="Enter the admin email address to request a code.",
+                    next_url=next_url,
+                ), 400
+
+            code_requested = False
+            notice = "If that email is the site admin, a one-time code is on its way."
+            error = ""
+            if normalize_email(email) == normalize_email(admin_email):
+                code_requested = True
+                one_time_code = generate_admin_code()
+                save_admin_login_code(app.config, email, one_time_code)
+                sent, send_message = send_admin_login_code(app.config, email, one_time_code)
+                if not sent:
+                    error = send_message
+                    code_requested = False
+                else:
+                    notice = "Check your email for the one-time admin code."
+
+            return render_template(
+                "admin_login.html",
+                admin_email=admin_email,
+                email=email,
+                code_requested=code_requested,
+                notice=notice,
+                error=error,
+                next_url=next_url,
+            ), 503 if error else 200
+
+        return render_template(
+            "admin_login.html",
+            admin_email=admin_email,
+            email="",
+            next_url=safe_admin_next_url(request.args.get("next") or url_for("admin_dashboard")),
+        )
+
+    @app.get("/admin/logout/")
+    def admin_logout():
+        session.clear()
+        return redirect(url_for("admin_login"))
+
+    @app.get("/admin/")
+    @admin_required
+    def admin_dashboard():
+        dashboard = build_admin_dashboard(app.config)
+        return render_template("admin_dashboard.html", dashboard=dashboard, admin_email=app.config["ADMIN_EMAIL"])
 
     @app.get("/random-article/")
     def random_article():
@@ -640,6 +787,479 @@ def is_mailchimp_configured(config):
 
 def is_turnstile_configured(config):
     return bool(config.get("TURNSTILE_SITE_KEY") and config.get("TURNSTILE_SECRET_KEY"))
+
+
+def utc_now():
+    return datetime.now(timezone.utc)
+
+
+def normalize_email(email):
+    return (email or "").strip().lower()
+
+
+def generate_admin_code():
+    return "".join(secrets.choice("0123456789") for _ in range(6))
+
+
+def hash_admin_code(config, email, code):
+    secret = config.get("SECRET_KEY") or "dev-only-change-me"
+    value = f"{secret}:{normalize_email(email)}:{code.strip()}".encode("utf-8")
+    return hashlib.sha256(value).hexdigest()
+
+
+def get_database_url(config):
+    database_url = (config.get("DATABASE_URL") or "").strip()
+    if database_url.startswith("postgres://"):
+        return f"postgresql://{database_url[len('postgres://'):]}"
+    return database_url
+
+
+def database_configured(config):
+    return bool(get_database_url(config) and psycopg)
+
+
+def connect_admin_database(config):
+    connection = psycopg.connect(get_database_url(config), row_factory=dict_row)
+    connection.autocommit = True
+    return connection
+
+
+def ensure_admin_storage(config):
+    if database_configured(config):
+        try:
+            with connect_admin_database(config) as connection:
+                with connection.cursor() as cursor:
+                    cursor.execute(
+                        """
+                        CREATE TABLE IF NOT EXISTS admin_login_codes (
+                            email TEXT PRIMARY KEY,
+                            code_hash TEXT NOT NULL,
+                            expires_at TIMESTAMPTZ NOT NULL,
+                            attempts INTEGER NOT NULL DEFAULT 0,
+                            created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+                        )
+                        """
+                    )
+                    cursor.execute(
+                        """
+                        CREATE TABLE IF NOT EXISTS admin_activity_events (
+                            id BIGSERIAL PRIMARY KEY,
+                            event_type TEXT NOT NULL,
+                            path TEXT NOT NULL,
+                            title TEXT NOT NULL DEFAULT '',
+                            metadata JSONB NOT NULL DEFAULT '{}'::jsonb,
+                            created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+                        )
+                        """
+                    )
+                    cursor.execute(
+                        """
+                        CREATE INDEX IF NOT EXISTS admin_activity_events_created_at_idx
+                        ON admin_activity_events (created_at DESC)
+                        """
+                    )
+                    cursor.execute(
+                        """
+                        CREATE INDEX IF NOT EXISTS admin_activity_events_event_type_idx
+                        ON admin_activity_events (event_type)
+                        """
+                    )
+            config["ADMIN_STORAGE_BACKEND"] = "Postgres"
+            return
+        except Exception:
+            config["ADMIN_STORAGE_BACKEND"] = "local file"
+            return
+
+    config["ADMIN_STORAGE_BACKEND"] = "local file"
+
+
+def admin_data_path(config):
+    return Path(config.get("ADMIN_DATA_PATH") or BASE_DIR / "instance" / "admin_data.json")
+
+
+def read_admin_file_data(config):
+    path = admin_data_path(config)
+    if not path.exists():
+        return {"login_codes": {}, "activity_events": []}
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {"login_codes": {}, "activity_events": []}
+
+    data.setdefault("login_codes", {})
+    data.setdefault("activity_events", [])
+    return data
+
+
+def write_admin_file_data(config, data):
+    path = admin_data_path(config)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, indent=2, sort_keys=True), encoding="utf-8")
+
+
+def save_admin_login_code(config, email, code):
+    code_hash = hash_admin_code(config, email, code)
+    expires_at = utc_now() + timedelta(minutes=ADMIN_CODE_TTL_MINUTES)
+
+    if database_configured(config):
+        try:
+            ensure_admin_storage(config)
+            with connect_admin_database(config) as connection:
+                with connection.cursor() as cursor:
+                    cursor.execute(
+                        """
+                        INSERT INTO admin_login_codes (email, code_hash, expires_at, attempts, created_at)
+                        VALUES (%s, %s, %s, 0, NOW())
+                        ON CONFLICT (email)
+                        DO UPDATE SET code_hash = EXCLUDED.code_hash,
+                                      expires_at = EXCLUDED.expires_at,
+                                      attempts = 0,
+                                      created_at = NOW()
+                        """,
+                        (normalize_email(email), code_hash, expires_at),
+                    )
+                    return
+        except Exception:
+            pass
+
+    data = read_admin_file_data(config)
+    data["login_codes"][normalize_email(email)] = {
+        "code_hash": code_hash,
+        "expires_at": expires_at.isoformat(),
+        "attempts": 0,
+        "created_at": utc_now().isoformat(),
+    }
+    write_admin_file_data(config, data)
+
+
+def verify_admin_login_code(config, email, code):
+    email = normalize_email(email)
+    if email != normalize_email(config.get("ADMIN_EMAIL")):
+        return False, "That code did not match. Request a fresh code and try again."
+
+    record = get_admin_login_code(config, email)
+    if not record:
+        return False, "Request a fresh code and try again."
+
+    expires_at = parse_timestamp(record.get("expires_at"))
+    if not expires_at or expires_at < utc_now():
+        delete_admin_login_code(config, email)
+        return False, "That code expired. Request a fresh code and try again."
+
+    if int(record.get("attempts") or 0) >= 5:
+        delete_admin_login_code(config, email)
+        return False, "Too many attempts. Request a fresh code and try again."
+
+    expected_hash = record.get("code_hash") or ""
+    submitted_hash = hash_admin_code(config, email, code)
+    if hmac.compare_digest(expected_hash, submitted_hash):
+        delete_admin_login_code(config, email)
+        return True, ""
+
+    increment_admin_login_attempts(config, email)
+    return False, "That code did not match. Try again or request a fresh code."
+
+
+def get_admin_login_code(config, email):
+    if database_configured(config):
+        try:
+            ensure_admin_storage(config)
+            with connect_admin_database(config) as connection:
+                with connection.cursor() as cursor:
+                    cursor.execute(
+                        """
+                        SELECT email, code_hash, expires_at, attempts, created_at
+                        FROM admin_login_codes
+                        WHERE email = %s
+                        """,
+                        (normalize_email(email),),
+                    )
+                    return cursor.fetchone()
+        except Exception:
+            pass
+
+    return read_admin_file_data(config)["login_codes"].get(normalize_email(email))
+
+
+def delete_admin_login_code(config, email):
+    if database_configured(config):
+        try:
+            ensure_admin_storage(config)
+            with connect_admin_database(config) as connection:
+                with connection.cursor() as cursor:
+                    cursor.execute("DELETE FROM admin_login_codes WHERE email = %s", (normalize_email(email),))
+                    return
+        except Exception:
+            pass
+
+    data = read_admin_file_data(config)
+    data["login_codes"].pop(normalize_email(email), None)
+    write_admin_file_data(config, data)
+
+
+def increment_admin_login_attempts(config, email):
+    if database_configured(config):
+        try:
+            ensure_admin_storage(config)
+            with connect_admin_database(config) as connection:
+                with connection.cursor() as cursor:
+                    cursor.execute(
+                        "UPDATE admin_login_codes SET attempts = attempts + 1 WHERE email = %s",
+                        (normalize_email(email),),
+                    )
+                    return
+        except Exception:
+            pass
+
+    data = read_admin_file_data(config)
+    record = data["login_codes"].get(normalize_email(email))
+    if record:
+        record["attempts"] = int(record.get("attempts") or 0) + 1
+        write_admin_file_data(config, data)
+
+
+def parse_email_identity(raw_value):
+    value = (raw_value or "").strip()
+    match = re.fullmatch(r"\s*(?P<name>.*?)\s*<(?P<email>[^>]+)>\s*", value)
+    if match:
+        return {"name": match.group("name").strip() or match.group("email").strip(), "email": match.group("email").strip()}
+    return {"email": value}
+
+
+def send_admin_login_code(config, email, code):
+    api_key = config.get("BREVO_API_KEY") or ""
+    if not api_key:
+        return False, "Brevo email is not configured yet. Add BREVO_API_KEY in Heroku Config Vars."
+
+    sender = parse_email_identity(config.get("ADMIN_EMAIL_FROM"))
+    payload = {
+        "sender": sender,
+        "to": [{"email": email}],
+        "subject": "Your Mindful Diabetes admin code",
+        "textContent": (
+            f"Your Mindful Diabetes admin code is {code}. "
+            f"It expires in {ADMIN_CODE_TTL_MINUTES} minutes."
+        ),
+        "htmlContent": (
+            "<p>Your Mindful Diabetes admin code is:</p>"
+            f"<p style=\"font-size:28px;font-weight:700;letter-spacing:4px;\">{code}</p>"
+            f"<p>This code expires in {ADMIN_CODE_TTL_MINUTES} minutes.</p>"
+        ),
+    }
+    request_obj = Request(
+        config.get("BREVO_SMTP_URL") or "https://api.brevo.com/v3/smtp/email",
+        data=json.dumps(payload).encode("utf-8"),
+        method="POST",
+        headers={
+            "api-key": api_key,
+            "accept": "application/json",
+            "Content-Type": "application/json",
+        },
+    )
+
+    try:
+        with urlopen(request_obj, timeout=12) as response:
+            if 200 <= response.status < 300:
+                return True, "Code sent"
+    except HTTPError as error:
+        try:
+            body = json.loads(error.read().decode("utf-8"))
+            message = body.get("message") or body.get("detail")
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            message = None
+        return False, message or "Brevo rejected the login email request."
+    except URLError:
+        return False, "Could not reach Brevo. Please try again."
+
+    return False, "Brevo returned an unexpected response."
+
+
+def record_activity_event(config, event_type, path, title="", metadata=None):
+    metadata = metadata or {}
+    created_at = utc_now()
+
+    if database_configured(config):
+        try:
+            ensure_admin_storage(config)
+            with connect_admin_database(config) as connection:
+                with connection.cursor() as cursor:
+                    cursor.execute(
+                        """
+                        INSERT INTO admin_activity_events (event_type, path, title, metadata, created_at)
+                        VALUES (%s, %s, %s, %s::jsonb, %s)
+                        """,
+                        (event_type, path, title or "", json.dumps(metadata), created_at),
+                    )
+                    return
+        except Exception:
+            pass
+
+    data = read_admin_file_data(config)
+    events = data["activity_events"]
+    next_id = (max([int(event.get("id", 0)) for event in events], default=0) + 1) if events else 1
+    events.append(
+        {
+            "id": next_id,
+            "event_type": event_type,
+            "path": path,
+            "title": title or "",
+            "metadata": metadata,
+            "created_at": created_at.isoformat(),
+        }
+    )
+    data["activity_events"] = events[-5000:]
+    write_admin_file_data(config, data)
+
+
+def fetch_admin_events(config, limit=750):
+    if database_configured(config):
+        try:
+            ensure_admin_storage(config)
+            with connect_admin_database(config) as connection:
+                with connection.cursor() as cursor:
+                    cursor.execute(
+                        """
+                        SELECT id, event_type, path, title, metadata, created_at
+                        FROM admin_activity_events
+                        ORDER BY created_at DESC
+                        LIMIT %s
+                        """,
+                        (limit,),
+                    )
+                    return [normalize_event_record(row) for row in cursor.fetchall()]
+        except Exception:
+            pass
+
+    events = read_admin_file_data(config)["activity_events"]
+    normalized_events = [normalize_event_record(event) for event in events]
+    return sorted(normalized_events, key=lambda event: event["created_at"], reverse=True)[:limit]
+
+
+def normalize_event_record(event):
+    created_at = parse_timestamp(event.get("created_at")) or utc_now()
+    metadata = event.get("metadata") or {}
+    if isinstance(metadata, str):
+        try:
+            metadata = json.loads(metadata)
+        except json.JSONDecodeError:
+            metadata = {}
+    return {
+        "id": event.get("id"),
+        "event_type": event.get("event_type") or "",
+        "path": event.get("path") or "",
+        "title": event.get("title") or "",
+        "metadata": metadata,
+        "created_at": created_at,
+        "created_at_label": created_at.astimezone().strftime("%b %-d, %Y %-I:%M %p"),
+    }
+
+
+def parse_timestamp(value):
+    if isinstance(value, datetime):
+        return value if value.tzinfo else value.replace(tzinfo=timezone.utc)
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+
+
+def build_admin_dashboard(config):
+    events = fetch_admin_events(config)
+    now = utc_now()
+    since_7_days = now - timedelta(days=7)
+    today = now.date()
+    page_views = [event for event in events if event["event_type"] == "page_view"]
+    newsletter_signups = [event for event in events if event["event_type"] == "newsletter_signup"]
+    admin_logins = [event for event in events if event["event_type"] == "admin_login"]
+    today_events = [event for event in events if event["created_at"].date() == today]
+    recent_page_views = [event for event in page_views if event["created_at"] >= since_7_days]
+
+    path_counts = {}
+    for event in page_views:
+        path_counts[event["path"]] = path_counts.get(event["path"], 0) + 1
+
+    top_paths = [
+        {"path": path, "count": count}
+        for path, count in sorted(path_counts.items(), key=lambda item: (-item[1], item[0]))[:8]
+    ]
+
+    return {
+        "storage_backend": config.get("ADMIN_STORAGE_BACKEND") or "local file",
+        "stats": [
+            {"label": "Visits tracked", "value": len(page_views)},
+            {"label": "Last 7 days", "value": len(recent_page_views)},
+            {"label": "Newsletter signups", "value": len(newsletter_signups)},
+            {"label": "Today", "value": len(today_events)},
+        ],
+        "admin_login_count": len(admin_logins),
+        "top_paths": top_paths,
+        "recent_events": events[:30],
+        "next_widgets": [
+            "Donation and PayPal click tracking",
+            "Newsletter source trends",
+            "Most-read article groups",
+            "Health-tool outbound clicks",
+            "Weekly email summary to the admin",
+        ],
+    }
+
+
+def should_track_request(response):
+    tracked_endpoints = {
+        "home",
+        "guide",
+        "search",
+        "pages_index",
+        "research",
+        "health_tools",
+        "volunteer",
+        "page_detail",
+    }
+    return (
+        request.method == "GET"
+        and response.status_code == 200
+        and request.endpoint in tracked_endpoints
+        and "text/html" in (response.content_type or "")
+    )
+
+
+def title_for_request(content, endpoint, view_args):
+    if endpoint == "home":
+        return "Homepage"
+    if endpoint == "guide":
+        return "Guide"
+    if endpoint == "search":
+        return "Search"
+    if endpoint == "pages_index":
+        return "All Pages"
+    if endpoint == "research":
+        return "Research"
+    if endpoint == "health_tools":
+        return "Health Tools"
+    if endpoint == "volunteer":
+        return "Volunteer"
+    if endpoint == "page_detail":
+        slug = (view_args or {}).get("slug", "")
+        item = content.pages_by_slug.get(slug) or content.posts_by_slug.get(slug)
+        return item.get("title", slug) if item else slug
+    return endpoint or ""
+
+
+def public_query_args(args):
+    return {key: args.get(key, "") for key in ("q", "page") if args.get(key)}
+
+
+def safe_admin_next_url(raw_url):
+    url = raw_url or "/admin/"
+    if not url.startswith("/") or url.startswith("//"):
+        return "/admin/"
+    if not url.startswith("/admin/"):
+        return "/admin/"
+    return url
 
 
 def verify_turnstile(config, token, remote_ip=""):

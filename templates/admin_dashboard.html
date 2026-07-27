@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}admin-page{% endblock %}
+
+{% block content %}
+  <section class="admin-dashboard" aria-labelledby="admin-dashboard-heading">
+    <div class="admin-dashboard__header">
+      <div>
+        <p class="eyebrow">Admin dashboard</p>
+        <h1 id="admin-dashboard-heading">Site activity</h1>
+        <p class="admin-muted">Signed in as {{ admin_email }}. Data source: {{ dashboard.storage_backend }}.</p>
+      </div>
+      <a class="admin-logout" href="{{ url_for('admin_logout') }}">Sign out</a>
+    </div>
+
+    <div class="admin-stat-grid" aria-label="Dashboard summary">
+      {% for stat in dashboard.stats %}
+        <article class="admin-stat">
+          <span>{{ stat.label }}</span>
+          <strong>{{ stat.value }}</strong>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="admin-dashboard__grid">
+      <section class="admin-panel" aria-labelledby="admin-top-pages-heading">
+        <h2 id="admin-top-pages-heading">Top pages</h2>
+        {% if dashboard.top_paths %}
+          <ol class="admin-ranked-list">
+            {% for item in dashboard.top_paths %}
+              <li>
+                <a href="{{ item.path }}">{{ item.path }}</a>
+                <span>{{ item.count }}</span>
+              </li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <p class="admin-empty">Activity will appear here after visitors load public pages.</p>
+        {% endif %}
+      </section>
+
+      <section class="admin-panel" aria-labelledby="admin-next-widgets-heading">
+        <h2 id="admin-next-widgets-heading">Good next widgets</h2>
+        <ul class="admin-next-list">
+          {% for widget in dashboard.next_widgets %}
+            <li>{{ widget }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-recent-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-recent-heading">Recent activity</h2>
+        <span>{{ dashboard.recent_events|length }} latest</span>
+      </div>
+      {% if dashboard.recent_events %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th scope="col">When</th>
+                <th scope="col">Type</th>
+                <th scope="col">Page</th>
+                <th scope="col">Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for event in dashboard.recent_events %}
+                <tr>
+                  <td>{{ event.created_at_label }}</td>
+                  <td>{{ event.event_type|replace("_", " ")|title }}</td>
+                  <td><a href="{{ event.path }}">{{ event.title or event.path }}</a></td>
+                  <td>
+                    {% if event.metadata.source %}
+                      Source: {{ event.metadata.source }}
+                    {% elif event.metadata.query is defined and event.metadata.query.q %}
+                      Search: {{ event.metadata.query.q }}
+                    {% elif event.metadata.referrer %}
+                      Referrer logged
+                    {% else %}
+                      -
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">No activity yet. Visit a public page, then refresh this dashboard.</p>
+      {% endif %}
+    </section>
+  </section>
+{% endblock %}

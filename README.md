@@ -217,6 +217,10 @@ Basic Heroku flow:
 heroku create mindful-diabetes-site
 heroku buildpacks:set heroku/python
 heroku config:set PAYPAL_HOSTED_BUTTON_ID=5BM2YU7LNZDVJ
+heroku config:set SECRET_KEY=your-long-random-secret
+heroku config:set ADMIN_EMAIL=jmschulz@mindfuldiabetes.org
+heroku config:set ADMIN_EMAIL_FROM="Mindful Diabetes <login@auth.mindfuldiabetes.org>"
+heroku config:set BREVO_API_KEY=your-brevo-api-key
 heroku config:set MAILCHIMP_API_KEY=your-mailchimp-key
 heroku config:set MAILCHIMP_AUDIENCE_ID=your-audience-id
 heroku config:set MAILCHIMP_SERVER_PREFIX=us21
@@ -253,6 +257,12 @@ Then fill only the values needed for your local or production environment.
 ```bash
 PAYPAL_HOSTED_BUTTON_ID=5BM2YU7LNZDVJ
 
+SECRET_KEY=
+ADMIN_EMAIL=jmschulz@mindfuldiabetes.org
+ADMIN_EMAIL_FROM=Mindful Diabetes <login@auth.mindfuldiabetes.org>
+BREVO_API_KEY=
+DATABASE_URL=
+
 MAILCHIMP_API_KEY=
 MAILCHIMP_AUDIENCE_ID=
 MAILCHIMP_SERVER_PREFIX=
@@ -267,6 +277,11 @@ Environment variable reference:
 | Variable | Required | Purpose |
 | --- | --- | --- |
 | `PAYPAL_HOSTED_BUTTON_ID` | Optional | Overrides the default PayPal hosted donation button ID |
+| `SECRET_KEY` | Required in production | Signs Flask sessions for the passwordless admin login |
+| `ADMIN_EMAIL` | Required for admin | Single email address allowed to access `/admin/` |
+| `ADMIN_EMAIL_FROM` | Required for email login | Verified Brevo sender for one-time admin codes |
+| `BREVO_API_KEY` | Required for email login | Sends admin one-time login codes through Brevo |
+| `DATABASE_URL` | Optional | Stores admin login codes and activity events in Postgres when you want persistent dashboard history |
 | `MAILCHIMP_API_KEY` | Optional | Enables newsletter subscription when paired with an audience ID |
 | `MAILCHIMP_AUDIENCE_ID` | Optional | Mailchimp list/audience ID for subscribers |
 | `MAILCHIMP_SERVER_PREFIX` | Optional | Mailchimp data center prefix, such as `us21` |
@@ -276,6 +291,51 @@ Environment variable reference:
 | `CONTENT_PATH` | Optional | Overrides the default `flask_content_seed.json` location |
 
 Important: `.env` is intentionally ignored by Git. Do not commit real Mailchimp keys, private tokens, database dumps, or local backups.
+
+---
+
+## Admin Dashboard
+
+The private admin dashboard lives at:
+
+```text
+/admin/
+```
+
+It uses a passwordless email-code flow:
+
+1. The admin enters `ADMIN_EMAIL`.
+2. The app generates a six-digit one-time code.
+3. Brevo sends the code to the admin email.
+4. The code expires after 10 minutes and is deleted after a successful login.
+5. The admin session stays signed in for 12 hours.
+
+Production setup:
+
+```bash
+heroku config:set SECRET_KEY=your-long-random-secret
+heroku config:set ADMIN_EMAIL=jmschulz@mindfuldiabetes.org
+heroku config:set ADMIN_EMAIL_FROM="Mindful Diabetes <login@auth.mindfuldiabetes.org>"
+heroku config:set BREVO_API_KEY=your-brevo-api-key
+```
+
+Behavior:
+
+- You do not need a database to test the admin dashboard locally.
+- If `DATABASE_URL` is missing, the app stores activity in `instance/admin_data.json`. On Heroku, that storage is temporary and can reset when dynos restart.
+- If you later want persistent Heroku dashboard history, add Heroku Postgres; Heroku will provide `DATABASE_URL` automatically.
+- The first dashboard tracks page views, newsletter signups, admin logins, recent activity, and top visited paths.
+- The dashboard intentionally is not linked from the public navigation.
+
+Good next widgets:
+
+- Donation and PayPal click tracking.
+- Newsletter source trends.
+- Most-read article groups.
+- Health-tool outbound clicks.
+- Weekly email summary to the admin.
+
+Security tip: if a real Brevo key is ever pasted into chat, docs, or an issue, rotate it in Brevo and update Heroku Config Vars.
 
 ---
 
