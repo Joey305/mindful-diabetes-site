@@ -2163,9 +2163,13 @@ a.article-navigation__link:hover {
 }
 
 .guide-signup .newsletter-form {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.65rem;
   padding: 0.5rem;
   background: var(--white);
   border: 2px solid rgba(0, 80, 48, 0.28);
+  border-radius: 22px;
   box-shadow: 0 0 0 6px rgba(0, 80, 48, 0.08);
 }
 
@@ -2178,6 +2182,10 @@ a.article-navigation__link:hover {
 .guide-signup .newsletter-form button {
   min-height: 3.35rem;
   padding-inline: 1.35rem;
+}
+
+.guide-signup .newsletter-form__turnstile {
+  margin: 0 auto;
 }
 
 .guide-donate {
@@ -2620,6 +2628,15 @@ a.article-navigation__link:hover {
   position: relative;
 }
 
+.newsletter-form > input[name="email"] {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+
+.newsletter-form > button {
+  flex: 0 0 auto;
+}
+
 .newsletter-form--footer {
   padding: 0;
   flex-direction: column;
@@ -2641,7 +2658,8 @@ a.article-navigation__link:hover {
   display: flex;
   flex: 1 0 100%;
   justify-content: center;
-  min-height: 65px;
+  min-height: 0;
+  max-width: 100%;
 }
 
 .subscribe-result-shell {

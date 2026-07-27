@@ -463,6 +463,7 @@ def test_turnstile_widget_renders_without_exposing_secret_key():
     assert b"https://challenges.cloudflare.com/turnstile/v0/api.js" in response.data
     assert b'class="cf-turnstile newsletter-form__turnstile"' in response.data
     assert b'data-sitekey="public-site-key"' in response.data
+    assert b'data-appearance="interaction-only"' in response.data
     assert b"private-secret-key" not in response.data
 
 
