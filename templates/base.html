@@ -32,6 +32,25 @@
           <input id="site-search" name="q" type="search" value="{{ query|default('') }}" placeholder="Search">
           <button type="submit">Search</button>
         </form>
+        <details class="mobile-menu">
+          <summary aria-label="Open navigation menu">
+            <span class="mobile-menu__bars" aria-hidden="true"></span>
+            <span>Menu</span>
+          </summary>
+          <div class="mobile-menu__panel">
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+              {% for page in nav_pages %}
+                <a href="{{ page.canonical_path }}" {% if request.path == page.canonical_path %}aria-current="page"{% endif %}>{{ "Home" if page.slug == "mindful" else page.title }}</a>
+              {% endfor %}
+              <a href="#subscribe">Subscribe</a>
+            </nav>
+            <form class="mobile-search" action="{{ url_for('search') }}" method="get" role="search">
+              <label class="screen-reader-text" for="mobile-site-search">Search the site</label>
+              <input id="mobile-site-search" name="q" type="search" value="{{ query|default('') }}" placeholder="Search">
+              <button type="submit">Search</button>
+            </form>
+          </div>
+        </details>
       </div>
     </header>
 
@@ -52,7 +71,7 @@
             </span>
           </a>
           <p>{{ site_description }}</p>
-          <div class="footer-newsletter">
+          <div id="subscribe" class="footer-newsletter">
             <h2>Subscribe</h2>
             <p>Get new articles and updates from Mindful Diabetes.</p>
             {% set newsletter_id = "footer-newsletter-email" %}

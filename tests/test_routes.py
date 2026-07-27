@@ -89,6 +89,35 @@ def test_footer_links_to_all_social_channels():
     assert b"LinkedIn" in response.data
 
 
+def test_subscribe_links_scroll_to_footer_form_on_current_page():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    response = client.get("/memovela/")
+
+    assert response.status_code == 200
+    assert b'id="subscribe"' in response.data
+    assert b'href="#subscribe"' in response.data
+    assert b'href="#subscribe" target="_blank"' not in response.data
+    assert b'href="/guide/">Subscribe</a>' not in response.data
+
+
+def test_mobile_menu_and_guide_signup_are_available():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    response = client.get("/guide/")
+    css = (app_module.BASE_DIR / "static" / "css" / "site.css").read_text(encoding="utf-8")
+
+    assert response.status_code == 200
+    assert b'class="mobile-menu"' in response.data
+    assert b'class="mobile-nav"' in response.data
+    assert b'id="guide-subscribe"' in response.data
+    assert b"Stay close to the newest prevention guides." in response.data
+    assert ".mobile-menu" in css
+    assert ".guide-signup .social-link-row" in css
+
+
 def test_homepage_restores_key_original_sections():
     app = create_app({"TESTING": True})
     client = app.test_client()

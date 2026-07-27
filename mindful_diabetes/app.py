@@ -728,6 +728,7 @@ def clean_wordpress_html(raw_html, paypal_button_id):
 
 def clean_article_html(raw_html, paypal_button_id, post_slug=""):
     html = clean_wordpress_html(raw_html, paypal_button_id)
+    html = rewrite_article_subscribe_links(html)
     html = remove_article_media(html)
     html = replace_imported_donation_blocks(html, paypal_button_id)
     html = replace_imported_wellness_tools_blocks(html)
@@ -780,6 +781,40 @@ def rewrite_internal_href_attributes(html):
         rewrite,
         html,
         flags=re.IGNORECASE,
+    )
+
+
+def rewrite_article_subscribe_links(html):
+    def rewrite(match):
+        attrs = match.group("attrs")
+        label = html_to_text(match.group("label"))
+        href_match = re.search(r'href=(?P<quote>["\'])(?P<href>.*?)(?P=quote)', attrs, re.IGNORECASE)
+        if not href_match:
+            return match.group(0)
+
+        href = href_match.group("href").strip()
+        if label.lower() != "subscribe":
+            return match.group(0)
+        if href not in {"/guide/", "/guide", "https://mindfuldiabetes.org/guide/", "https://www.mindfuldiabetes.org/guide/"}:
+            return match.group(0)
+
+        quote = href_match.group("quote")
+        new_attrs = re.sub(
+            r'href=(?P<quote>["\']).*?(?P=quote)',
+            f"href={quote}#subscribe{quote}",
+            attrs,
+            count=1,
+            flags=re.IGNORECASE,
+        )
+        new_attrs = re.sub(r"\s+target=(?P<quote>[\"']).*?(?P=quote)", "", new_attrs, flags=re.IGNORECASE)
+        new_attrs = re.sub(r"\s+rel=(?P<quote>[\"']).*?(?P=quote)", "", new_attrs, flags=re.IGNORECASE)
+        return f"<a{new_attrs}>{match.group('label')}</a>"
+
+    return re.sub(
+        r"<a(?P<attrs>\b[^>]*)>(?P<label>.*?)</a>",
+        rewrite,
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
     )
 
 
