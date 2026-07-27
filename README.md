@@ -134,6 +134,7 @@ Mindful-Diabetes-Site/
 |-- Procfile
 |-- .python-version
 |-- app.json
+|-- .slugignore
 |-- .env.example
 |-- .gitignore
 `-- README.md
@@ -150,6 +151,7 @@ Key files:
 - `Procfile`: Heroku web process command.
 - `.python-version`: Python version requested by Heroku and local tooling.
 - `app.json`: Heroku app metadata and safe config variable definitions.
+- `.slugignore`: Heroku-only deploy exclusions for large/private non-runtime files.
 
 ---
 
@@ -193,6 +195,7 @@ This project includes Heroku-ready files:
 Procfile
 .python-version
 app.json
+.slugignore
 requirements.txt
 ```
 
@@ -223,6 +226,13 @@ heroku open
 ```
 
 If newsletter subscriptions are not ready yet, skip the Mailchimp config vars. The site can still run without them.
+
+Important Heroku media note:
+
+- Heroku rejected a build when the compressed slug reached `1.1G`.
+- `.slugignore` excludes large audio/video files (`.wav`, `.mp3`, `.mp4`, etc.) from Heroku's deploy package.
+- Pages that reference excluded media may show missing audio/video until those assets are moved to external storage and the URLs are updated.
+- Images and normal site files remain deployable from the app.
 
 Tip: keep all production secrets in Heroku config vars. Do not commit `.env`.
 
