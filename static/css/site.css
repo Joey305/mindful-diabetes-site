@@ -1976,35 +1976,39 @@ a.article-navigation__link:hover {
 }
 
 .guide-signup {
-  padding: clamp(3rem, 7vw, 5rem) 0;
+  padding: clamp(2.4rem, 6vw, 4.2rem) 0;
   background:
-    radial-gradient(circle at 14% 20%, rgba(240, 114, 57, 0.18), transparent 17rem),
-    linear-gradient(135deg, var(--miami-green-tint), #ffffff);
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.24), transparent 16rem),
+    linear-gradient(135deg, var(--miami-green), var(--primary));
 }
 
 .guide-signup__inner {
   display: grid;
   width: min(var(--content), calc(100% - 2rem));
   margin: 0 auto;
-  padding: clamp(1.15rem, 4vw, 2.2rem);
-  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1fr);
-  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1.15rem, 4vw, 2rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.8fr);
+  gap: clamp(1rem, 3vw, 1.7rem);
   align-items: center;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(0, 80, 48, 0.14);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--radius);
-  box-shadow: 0 24px 75px rgba(0, 80, 48, 0.16);
+  box-shadow: 0 26px 85px rgba(0, 0, 0, 0.2);
 }
 
 .guide-signup h2 {
   margin-bottom: 0.65rem;
-  font-size: clamp(1.75rem, 4vw, 2.55rem);
-  text-align: center;
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  text-align: left;
 }
 
 .guide-signup p {
-  margin: 0 0 1rem;
-  text-align: center;
+  margin: 0 0 0.75rem;
+  text-align: left;
+}
+
+.guide-signup .eyebrow {
+  color: var(--secondary);
 }
 
 .social-link-row {
@@ -2024,6 +2028,11 @@ a.article-navigation__link:hover {
 .social-link-row--footer {
   grid-template-columns: 1fr;
   gap: 0.55rem;
+}
+
+.social-link-row--mini {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.45rem;
 }
 
 .social-link {
@@ -2053,6 +2062,25 @@ a.article-navigation__link:hover {
   padding: 0.58rem 0.72rem;
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: none;
+}
+
+.social-link-row--mini .social-link {
+  min-height: 2.35rem;
+  padding: 0.5rem;
+  border-radius: 999px;
+  font-size: 0;
+  box-shadow: none;
+}
+
+.social-link-row--mini .social-link__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 0.85rem;
+}
+
+.social-link-row--mini .social-link__icon svg {
+  width: 0.98rem;
+  height: 0.98rem;
 }
 
 .social-link--facebook {
@@ -2114,23 +2142,42 @@ a.article-navigation__link:hover {
 
 .guide-signup__form {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.85rem;
   min-width: 0;
-  padding: clamp(1rem, 4vw, 1.4rem);
-  background: var(--miami-green-tint-2);
-  border: 1px solid rgba(0, 80, 48, 0.16);
+  padding: clamp(1rem, 4vw, 1.5rem);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(240, 114, 57, 0.16), transparent 11rem),
+    var(--miami-green-tint-2);
+  border: 1px solid rgba(0, 80, 48, 0.18);
   border-radius: 18px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.guide-signup__form-label {
+  margin: 0;
+  color: var(--miami-green);
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .guide-signup .newsletter-form {
-  padding: 0.45rem;
+  padding: 0.5rem;
   background: var(--white);
   border: 2px solid rgba(0, 80, 48, 0.28);
   box-shadow: 0 0 0 6px rgba(0, 80, 48, 0.08);
 }
 
 .guide-signup .newsletter-form input {
+  min-height: 3.35rem;
   border-color: transparent;
+  font-size: 1.05rem;
+}
+
+.guide-signup .newsletter-form button {
+  min-height: 3.35rem;
+  padding-inline: 1.35rem;
 }
 
 .guide-donate {
@@ -2138,9 +2185,26 @@ a.article-navigation__link:hover {
 }
 
 .guide-donate .donate-button {
-  min-height: 2.75rem;
+  min-height: 2.9rem;
   margin: 0 auto;
   padding: 0.75rem 1.4rem;
+}
+
+.guide-signup__social {
+  grid-column: 1 / -1;
+  display: grid;
+  max-width: 520px;
+  margin: 0 auto;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.guide-signup__social p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-align: center;
 }
 
 .guide-approach {
@@ -4761,6 +4825,11 @@ a.article-navigation__link:hover {
     text-align: center;
   }
 
+  .guide-signup h2,
+  .guide-signup p {
+    text-align: center;
+  }
+
   .fundraiser-copy p {
     font-size: 1.08rem;
   }
@@ -4945,13 +5014,13 @@ a.article-navigation__link:hover {
   }
 
   .guide-signup {
-    padding: 1.4rem 0;
+    padding: 1.2rem 0;
   }
 
   .guide-signup__inner {
     width: min(100% - 1rem, 100%);
     padding: 1rem;
-    gap: 1rem;
+    gap: 0.9rem;
     border-radius: 16px;
   }
 
@@ -4960,21 +5029,37 @@ a.article-navigation__link:hover {
   }
 
   .guide-signup .social-link-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.42rem;
   }
 
   .guide-signup__form {
-    padding: 0.85rem;
+    order: -1;
+    padding: 0.95rem;
     border-radius: 14px;
   }
 
   .guide-signup .newsletter-form {
     border-radius: 18px;
+    box-shadow: 0 0 0 5px rgba(0, 80, 48, 0.08);
   }
 
   .guide-signup .newsletter-form button,
   .guide-donate .donate-button {
     width: 100%;
+  }
+
+  .guide-signup__copy {
+    order: -2;
+  }
+
+  .guide-signup__social {
+    gap: 0.45rem;
+  }
+
+  .social-link-row--mini .social-link {
+    min-height: 2.45rem;
+    padding: 0.45rem;
   }
 
   .footer-newsletter {

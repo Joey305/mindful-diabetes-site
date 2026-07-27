@@ -25,9 +25,9 @@
         <p class="eyebrow">Newsletter</p>
         <h2 id="guide-signup-heading">Stay close to the newest prevention guides.</h2>
         <p>Get practical tips, research notes, and Mindful Diabetes updates in your inbox.</p>
-        {% include "_social_links.html" %}
       </div>
       <div class="guide-signup__form">
+        <p class="guide-signup__form-label">Join the list</p>
         {% set newsletter_id = "guide-newsletter-email" %}
         {% set newsletter_source = "guide" %}
         {% include "_newsletter_form.html" %}
@@ -35,6 +35,12 @@
           <input type="hidden" name="hosted_button_id" value="{{ paypal_button_id }}">
           <button class="donate-button" type="submit">Donate with PayPal</button>
         </form>
+      </div>
+      <div class="guide-signup__social">
+        <p>Prefer social updates?</p>
+        {% set social_link_variant = "social-link-row--mini" %}
+        {% include "_social_links.html" %}
+        {% set social_link_variant = "" %}
       </div>
     </div>
   </section>
