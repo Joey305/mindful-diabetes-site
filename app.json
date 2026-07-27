@@ -1,0 +1,33 @@
+{
+  "name": "Mindful Diabetes Website",
+  "description": "Flask website for www.mindfuldiabetes.org.",
+  "keywords": ["flask", "python", "health", "diabetes", "nonprofit"],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "PAYPAL_HOSTED_BUTTON_ID": {
+      "description": "PayPal hosted donation button ID.",
+      "required": false
+    },
+    "MAILCHIMP_API_KEY": {
+      "description": "Mailchimp API key for newsletter subscriptions. Leave unset until ready.",
+      "required": false
+    },
+    "MAILCHIMP_AUDIENCE_ID": {
+      "description": "Mailchimp audience/list ID for newsletter subscriptions.",
+      "required": false
+    },
+    "MAILCHIMP_SERVER_PREFIX": {
+      "description": "Mailchimp server prefix, such as us21. Optional if included in the API key suffix.",
+      "required": false
+    },
+    "MAILCHIMP_TAGS": {
+      "description": "Comma-separated tags applied to new Mailchimp subscribers.",
+      "required": false,
+      "value": "Mindful Diabetes Subscribers"
+    }
+  }
+}

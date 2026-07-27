@@ -67,6 +67,7 @@ Helpful redirects:
 - [What This Site Does](#what-this-site-does)
 - [Repository Layout](#repository-layout)
 - [Quick Start](#quick-start)
+- [Heroku Deployment](#heroku-deployment)
 - [Environment Variables](#environment-variables)
 - [Newsletter Setup](#newsletter-setup)
 - [Donation Setup](#donation-setup)
@@ -130,6 +131,9 @@ Mindful-Diabetes-Site/
 |-- tests/
 |   `-- test_routes.py
 |-- requirements.txt
+|-- Procfile
+|-- .python-version
+|-- app.json
 |-- .env.example
 |-- .gitignore
 `-- README.md
@@ -143,6 +147,9 @@ Key files:
 - `templates/`: Jinja views for the website.
 - `static/css/site.css`: primary styling.
 - `tests/test_routes.py`: route, rendering, search, donation, newsletter, and migration coverage tests.
+- `Procfile`: Heroku web process command.
+- `.python-version`: Python version requested by Heroku and local tooling.
+- `app.json`: Heroku app metadata and safe config variable definitions.
 
 ---
 
@@ -175,6 +182,49 @@ http://127.0.0.1:5000/sitemap.xml
 ```
 
 Tip: restart the Flask server after editing `.env`, `requirements.txt`, or the content seed.
+
+---
+
+## Heroku Deployment
+
+This project includes Heroku-ready files:
+
+```text
+Procfile
+.python-version
+app.json
+requirements.txt
+```
+
+The web process runs the Flask app through Gunicorn:
+
+```text
+web: gunicorn app:app
+```
+
+The Python runtime is requested with `.python-version`:
+
+```text
+3.13
+```
+
+Basic Heroku flow:
+
+```bash
+heroku create mindful-diabetes-site
+heroku buildpacks:set heroku/python
+heroku config:set PAYPAL_HOSTED_BUTTON_ID=5BM2YU7LNZDVJ
+heroku config:set MAILCHIMP_API_KEY=your-mailchimp-key
+heroku config:set MAILCHIMP_AUDIENCE_ID=your-audience-id
+heroku config:set MAILCHIMP_SERVER_PREFIX=us21
+heroku config:set MAILCHIMP_TAGS="Mindful Diabetes Subscribers"
+git push heroku main
+heroku open
+```
+
+If newsletter subscriptions are not ready yet, skip the Mailchimp config vars. The site can still run without them.
+
+Tip: keep all production secrets in Heroku config vars. Do not commit `.env`.
 
 ---
 
