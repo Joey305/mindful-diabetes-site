@@ -7,7 +7,7 @@ import re
 from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, urlencode, urlparse
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -160,6 +160,12 @@ def create_app(test_config=None):
         MAILCHIMP_AUDIENCE_ID=os.getenv("MAILCHIMP_AUDIENCE_ID", ""),
         MAILCHIMP_SERVER_PREFIX=os.getenv("MAILCHIMP_SERVER_PREFIX", ""),
         MAILCHIMP_TAGS=os.getenv("MAILCHIMP_TAGS", ",".join(DEFAULT_MAILCHIMP_TAGS)),
+        TURNSTILE_SITE_KEY=os.getenv("TURNSTILE_SITE_KEY", ""),
+        TURNSTILE_SECRET_KEY=os.getenv("TURNSTILE_SECRET_KEY", ""),
+        TURNSTILE_VERIFY_URL=os.getenv(
+            "TURNSTILE_VERIFY_URL",
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+        ),
         SITE_DESCRIPTION=(
             "Preventing the progression of Type II to Type III Diabetes, "
             "one person at a time."
@@ -179,6 +185,9 @@ def create_app(test_config=None):
             "paypal_button_id": app.config["PAYPAL_HOSTED_BUTTON_ID"],
             "site_description": app.config["SITE_DESCRIPTION"],
             "newsletter_enabled": is_mailchimp_configured(app.config),
+            "turnstile_site_key": (
+                app.config["TURNSTILE_SITE_KEY"] if is_turnstile_configured(app.config) else ""
+            ),
         }
 
     @app.template_filter("date_label")
@@ -271,6 +280,17 @@ def create_app(test_config=None):
     def subscribe():
         email = request.form.get("email", "").strip()
         source = request.form.get("source", "site")
+        bot_field = request.form.get("website", "").strip()
+
+        if bot_field:
+            return render_template(
+                "subscribe.html",
+                status="success",
+                title="You're subscribed",
+                message="Thanks for joining the Mindful Diabetes newsletter.",
+                email=email,
+                source=source,
+            )
 
         if not is_valid_email(email):
             return render_template(
@@ -278,6 +298,21 @@ def create_app(test_config=None):
                 status="error",
                 title="Please check the email address",
                 message="Enter a valid email address and try again.",
+                email=email,
+                source=source,
+            ), 400
+
+        turnstile_success, turnstile_message = verify_turnstile(
+            app.config,
+            request.form.get("cf-turnstile-response", ""),
+            request.headers.get("CF-Connecting-IP") or request.remote_addr or "",
+        )
+        if not turnstile_success:
+            return render_template(
+                "subscribe.html",
+                status="error",
+                title="Please complete the human check",
+                message=turnstile_message,
                 email=email,
                 source=source,
             ), 400
@@ -586,6 +621,48 @@ def is_valid_email(email):
 
 def is_mailchimp_configured(config):
     return bool(config.get("MAILCHIMP_API_KEY") and config.get("MAILCHIMP_AUDIENCE_ID"))
+
+
+def is_turnstile_configured(config):
+    return bool(config.get("TURNSTILE_SITE_KEY") and config.get("TURNSTILE_SECRET_KEY"))
+
+
+def verify_turnstile(config, token, remote_ip=""):
+    if not is_turnstile_configured(config):
+        return True, ""
+
+    if not token:
+        return False, "Please complete the human verification and try again."
+
+    payload = {
+        "secret": config["TURNSTILE_SECRET_KEY"],
+        "response": token,
+    }
+    if remote_ip:
+        payload["remoteip"] = remote_ip
+
+    request_obj = Request(
+        config["TURNSTILE_VERIFY_URL"],
+        data=urlencode(payload).encode("utf-8"),
+        method="POST",
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+
+    try:
+        with urlopen(request_obj, timeout=8) as response:
+            result = json.loads(response.read().decode("utf-8"))
+    except HTTPError as error:
+        try:
+            result = json.loads(error.read().decode("utf-8"))
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            result = {}
+    except (URLError, json.JSONDecodeError, UnicodeDecodeError):
+        return False, "We could not verify the signup. Please try again."
+
+    if result.get("success"):
+        return True, ""
+
+    return False, "Please complete the human verification and try again."
 
 
 def mailchimp_server_prefix(config):

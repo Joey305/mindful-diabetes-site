@@ -6,6 +6,21 @@ from mindful_diabetes import create_app
 app_module = import_module("mindful_diabetes.app")
 
 
+class StubUrlopenResponse:
+    def __init__(self, status=200, body=b"{}"):
+        self.status = status
+        self.body = body
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        return False
+
+    def read(self):
+        return self.body
+
+
 def test_published_wordpress_pages_and_posts_resolve():
     app = create_app({"TESTING": True})
     client = app.test_client()
@@ -409,6 +424,8 @@ def test_subscribe_without_mailchimp_config_shows_setup_message():
             "TESTING": True,
             "MAILCHIMP_API_KEY": "",
             "MAILCHIMP_AUDIENCE_ID": "",
+            "TURNSTILE_SITE_KEY": "",
+            "TURNSTILE_SECRET_KEY": "",
         }
     )
     client = app.test_client()
@@ -428,6 +445,129 @@ def test_subscribe_rejects_invalid_email():
 
     assert response.status_code == 400
     assert b"Please check the email address" in response.data
+
+
+def test_turnstile_widget_renders_without_exposing_secret_key():
+    app = create_app(
+        {
+            "TESTING": True,
+            "TURNSTILE_SITE_KEY": "public-site-key",
+            "TURNSTILE_SECRET_KEY": "private-secret-key",
+        }
+    )
+    client = app.test_client()
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    assert b"https://challenges.cloudflare.com/turnstile/v0/api.js" in response.data
+    assert b'class="cf-turnstile newsletter-form__turnstile"' in response.data
+    assert b'data-sitekey="public-site-key"' in response.data
+    assert b"private-secret-key" not in response.data
+
+
+def test_turnstile_widget_stays_hidden_until_both_keys_exist():
+    app = create_app(
+        {
+            "TESTING": True,
+            "TURNSTILE_SITE_KEY": "public-site-key",
+            "TURNSTILE_SECRET_KEY": "",
+        }
+    )
+    client = app.test_client()
+
+    response = client.get("/")
+
+    assert response.status_code == 200
+    assert b"cf-turnstile" not in response.data
+    assert b"public-site-key" not in response.data
+
+
+def test_subscribe_requires_turnstile_token_when_configured(monkeypatch):
+    def fail_urlopen(*args, **kwargs):
+        raise AssertionError("Turnstile and Mailchimp should not be called without a token.")
+
+    monkeypatch.setattr(app_module, "urlopen", fail_urlopen)
+    app = create_app(
+        {
+            "TESTING": True,
+            "MAILCHIMP_API_KEY": "mailchimp-key-us21",
+            "MAILCHIMP_AUDIENCE_ID": "audience-id",
+            "TURNSTILE_SITE_KEY": "public-site-key",
+            "TURNSTILE_SECRET_KEY": "private-secret-key",
+        }
+    )
+    client = app.test_client()
+
+    response = client.post("/subscribe/", data={"email": "reader@example.com"})
+
+    assert response.status_code == 400
+    assert b"Please complete the human check" in response.data
+    assert b"Please complete the human verification and try again." in response.data
+
+
+def test_subscribe_verifies_turnstile_before_mailchimp(monkeypatch):
+    calls = []
+
+    def fake_urlopen(request_obj, timeout):
+        calls.append(request_obj.full_url)
+        if "siteverify" in request_obj.full_url:
+            assert b"secret=private-secret-key" in request_obj.data
+            assert b"response=turnstile-token" in request_obj.data
+            return StubUrlopenResponse(body=b'{"success": true}')
+        assert "api.mailchimp.com" in request_obj.full_url
+        return StubUrlopenResponse(body=b"{}")
+
+    monkeypatch.setattr(app_module, "urlopen", fake_urlopen)
+    app = create_app(
+        {
+            "TESTING": True,
+            "MAILCHIMP_API_KEY": "mailchimp-key-us21",
+            "MAILCHIMP_AUDIENCE_ID": "audience-id",
+            "TURNSTILE_SITE_KEY": "public-site-key",
+            "TURNSTILE_SECRET_KEY": "private-secret-key",
+        }
+    )
+    client = app.test_client()
+
+    response = client.post(
+        "/subscribe/",
+        data={
+            "email": "reader@example.com",
+            "source": "test",
+            "cf-turnstile-response": "turnstile-token",
+        },
+    )
+
+    assert response.status_code == 200
+    assert b"Thanks for joining the Mindful Diabetes newsletter." in response.data
+    assert calls[0].endswith("/turnstile/v0/siteverify")
+    assert "api.mailchimp.com" in calls[1]
+
+
+def test_subscribe_honeypot_silently_skips_bot_submission(monkeypatch):
+    def fail_urlopen(*args, **kwargs):
+        raise AssertionError("Bot submissions should not call Turnstile or Mailchimp.")
+
+    monkeypatch.setattr(app_module, "urlopen", fail_urlopen)
+    app = create_app(
+        {
+            "TESTING": True,
+            "MAILCHIMP_API_KEY": "mailchimp-key-us21",
+            "MAILCHIMP_AUDIENCE_ID": "audience-id",
+            "TURNSTILE_SITE_KEY": "public-site-key",
+            "TURNSTILE_SECRET_KEY": "private-secret-key",
+        }
+    )
+    client = app.test_client()
+
+    response = client.post(
+        "/subscribe/",
+        data={"email": "bot@example.com", "website": "https://spam.example"},
+    )
+
+    assert response.status_code == 200
+    assert b"Thanks for joining the Mindful Diabetes newsletter." in response.data
 
 
 def test_footer_uses_contact_button_without_public_phone_or_address():

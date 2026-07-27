@@ -2616,6 +2616,8 @@ a.article-navigation__link:hover {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .newsletter-form--footer {
@@ -2625,6 +2627,21 @@ a.article-navigation__link:hover {
   background: transparent;
   border: 0;
   border-radius: 0;
+}
+
+.newsletter-form__bot-field {
+  position: absolute;
+  left: -100vw;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.newsletter-form__turnstile {
+  display: flex;
+  flex: 1 0 100%;
+  justify-content: center;
+  min-height: 65px;
 }
 
 .subscribe-result-shell {

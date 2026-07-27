@@ -1,6 +1,13 @@
 <form class="newsletter-form {{ newsletter_class|default('') }}" action="{{ url_for('subscribe') }}" method="post">
   <input type="hidden" name="source" value="{{ newsletter_source|default(request.path) }}">
+  <div class="newsletter-form__bot-field" aria-hidden="true">
+    <label for="{{ newsletter_id|default('newsletter-email') }}-website">Website</label>
+    <input id="{{ newsletter_id|default('newsletter-email') }}-website" name="website" type="text" tabindex="-1" autocomplete="off">
+  </div>
   <label class="screen-reader-text" for="{{ newsletter_id|default('newsletter-email') }}">Email address</label>
   <input id="{{ newsletter_id|default('newsletter-email') }}" name="email" type="email" placeholder="Email address" required>
+  {% if turnstile_site_key %}
+    <div class="cf-turnstile newsletter-form__turnstile" data-sitekey="{{ turnstile_site_key }}" data-size="compact" data-action="newsletter"></div>
+  {% endif %}
   <button type="submit">Subscribe</button>
 </form>

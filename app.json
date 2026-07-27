@@ -28,6 +28,14 @@
       "description": "Comma-separated tags applied to new Mailchimp subscribers.",
       "required": false,
       "value": "Mindful Diabetes Subscribers"
+    },
+    "TURNSTILE_SITE_KEY": {
+      "description": "Cloudflare Turnstile public site key for newsletter bot protection.",
+      "required": false
+    },
+    "TURNSTILE_SECRET_KEY": {
+      "description": "Cloudflare Turnstile secret key for server-side verification. Keep private.",
+      "required": false
     }
   }
 }

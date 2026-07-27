@@ -221,6 +221,8 @@ heroku config:set MAILCHIMP_API_KEY=your-mailchimp-key
 heroku config:set MAILCHIMP_AUDIENCE_ID=your-audience-id
 heroku config:set MAILCHIMP_SERVER_PREFIX=us21
 heroku config:set MAILCHIMP_TAGS="Mindful Diabetes Subscribers"
+heroku config:set TURNSTILE_SITE_KEY=your-cloudflare-turnstile-site-key
+heroku config:set TURNSTILE_SECRET_KEY=your-cloudflare-turnstile-secret-key
 git push heroku main
 heroku open
 ```
@@ -255,6 +257,9 @@ MAILCHIMP_API_KEY=
 MAILCHIMP_AUDIENCE_ID=
 MAILCHIMP_SERVER_PREFIX=
 MAILCHIMP_TAGS=Mindful Diabetes Subscribers
+
+TURNSTILE_SITE_KEY=
+TURNSTILE_SECRET_KEY=
 ```
 
 Environment variable reference:
@@ -266,6 +271,8 @@ Environment variable reference:
 | `MAILCHIMP_AUDIENCE_ID` | Optional | Mailchimp list/audience ID for subscribers |
 | `MAILCHIMP_SERVER_PREFIX` | Optional | Mailchimp data center prefix, such as `us21` |
 | `MAILCHIMP_TAGS` | Optional | Comma-separated Mailchimp tags applied to new subscribers |
+| `TURNSTILE_SITE_KEY` | Optional | Public Cloudflare Turnstile site key for newsletter bot checks |
+| `TURNSTILE_SECRET_KEY` | Optional | Private Cloudflare Turnstile secret key for server verification |
 | `CONTENT_PATH` | Optional | Overrides the default `flask_content_seed.json` location |
 
 Important: `.env` is intentionally ignored by Git. Do not commit real Mailchimp keys, private tokens, database dumps, or local backups.
@@ -282,12 +289,15 @@ To enable live subscriptions:
 2. Add `MAILCHIMP_API_KEY`.
 3. Add `MAILCHIMP_AUDIENCE_ID`.
 4. Add `MAILCHIMP_SERVER_PREFIX` if the prefix is not already included at the end of the API key.
-5. Restart Flask.
-6. Test the form locally before deploying.
+5. Add `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` from Cloudflare Turnstile to block automated signups.
+6. Restart Flask.
+7. Test the form locally before deploying.
 
 Behavior:
 
 - If Mailchimp values are missing, newsletter UI can render without submitting to Mailchimp.
+- If both Turnstile values are present, newsletter forms show a compact human check and the server validates each token before sending the signup to Mailchimp.
+- If Turnstile values are blank, the human check is hidden so development and staging can continue while keys are being created.
 - If `MAILCHIMP_SERVER_PREFIX` is blank, the app tries to infer it from an API key ending like `-us21`.
 - Subscribers are sent to Mailchimp using a hashed email member ID.
 - Optional tags from `MAILCHIMP_TAGS` are applied to the subscriber.
@@ -529,6 +539,8 @@ Check:
 - `MAILCHIMP_API_KEY` is set.
 - `MAILCHIMP_AUDIENCE_ID` is set.
 - `MAILCHIMP_SERVER_PREFIX` is set or can be inferred from the API key suffix.
+- `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` are both set if bot protection is enabled.
+- The Turnstile widget hostnames include `www.mindfuldiabetes.org` and the active Heroku app hostname.
 - Flask was restarted after editing `.env`.
 
 ### Donation button is wrong
