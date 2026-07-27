@@ -1,0 +1,6 @@
+<form class="newsletter-form {{ newsletter_class|default('') }}" action="{{ url_for('subscribe') }}" method="post">
+  <input type="hidden" name="source" value="{{ newsletter_source|default(request.path) }}">
+  <label class="screen-reader-text" for="{{ newsletter_id|default('newsletter-email') }}">Email address</label>
+  <input id="{{ newsletter_id|default('newsletter-email') }}" name="email" type="email" placeholder="Email address" required>
+  <button type="submit">Subscribe</button>
+</form>

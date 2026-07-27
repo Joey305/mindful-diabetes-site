@@ -1,0 +1,216 @@
+{
+    "version": "0.4",
+    "title": "Default Kit",
+    "type": "section",
+    "metadata": {
+        "template_type": "global-styles",
+        "include_in_zip": "1",
+        "elementor_pro_required": "1",
+        "additional_template_information": [
+            "These are the global theme styles configured through the Elementor Theme Styles area."
+        ],
+        "wp_page_template": "default"
+    },
+    "content": [],
+    "page_settings": {
+        "system_colors": [
+            {
+                "_id": "primary",
+                "title": "Primary",
+                "color": "#0D1338"
+            },
+            {
+                "_id": "secondary",
+                "title": "Secondary",
+                "color": "#EB6855"
+            },
+            {
+                "_id": "text",
+                "title": "Black",
+                "color": "#000000"
+            },
+            {
+                "_id": "accent",
+                "title": "White",
+                "color": "#FFFFFF"
+            }
+        ],
+        "custom_colors": [
+            {
+                "_id": "fdcf095",
+                "title": "Other",
+                "color": "#E4E6EF"
+            },
+            {
+                "_id": "0d35fdc",
+                "title": "Other 2",
+                "color": "#F5F7FE"
+            },
+            {
+                "_id": "ecd24b4",
+                "title": "Blue 2",
+                "color": "#0D243C"
+            }
+        ],
+        "system_typography": [
+            {
+                "_id": "primary",
+                "title": "Primary",
+                "typography_typography": "custom",
+                "typography_font_family": "Roboto",
+                "typography_font_weight": "600"
+            },
+            {
+                "_id": "secondary",
+                "title": "Secondary",
+                "typography_typography": "custom",
+                "typography_font_family": "Roboto Slab",
+                "typography_font_weight": "400"
+            },
+            {
+                "_id": "text",
+                "title": "Text",
+                "typography_typography": "custom",
+                "typography_font_family": "Roboto",
+                "typography_font_weight": "400"
+            },
+            {
+                "_id": "accent",
+                "title": "Accent",
+                "typography_typography": "custom",
+                "typography_font_family": "Roboto",
+                "typography_font_weight": "500"
+            }
+        ],
+        "custom_typography": [],
+        "default_generic_fonts": "Sans-serif",
+        "site_name": "Gaveall",
+        "site_description": "Just another TemplateKit TokoMoo Sites site",
+        "page_title_selector": "h1.entry-title",
+        "activeItemIndex": "3",
+        "body_color": "#000000A3",
+        "body_typography_typography": "custom",
+        "body_typography_font_family": "Lato",
+        "body_typography_font_size": {
+            "unit": "px",
+            "size": "16",
+            "sizes": []
+        },
+        "body_typography_font_weight": "400",
+        "body_typography_line_height": {
+            "unit": "em",
+            "size": "1.6",
+            "sizes": []
+        },
+        "h1_typography_typography": "custom",
+        "h1_typography_font_family": "Lora",
+        "h1_typography_font_size": {
+            "unit": "px",
+            "size": "58",
+            "sizes": []
+        },
+        "h1_typography_font_weight": "600",
+        "h1_typography_line_height": {
+            "unit": "em",
+            "size": "1.3",
+            "sizes": []
+        },
+        "h2_typography_typography": "custom",
+        "h2_typography_font_family": "Lora",
+        "h2_typography_font_size": {
+            "unit": "px",
+            "size": "48",
+            "sizes": []
+        },
+        "h2_typography_font_weight": "600",
+        "h2_typography_line_height": {
+            "unit": "em",
+            "size": "1.3",
+            "sizes": []
+        },
+        "h3_typography_typography": "custom",
+        "h3_typography_font_family": "Lora",
+        "h3_typography_font_size": {
+            "unit": "px",
+            "size": "32",
+            "sizes": []
+        },
+        "h3_typography_font_weight": "700",
+        "h3_typography_line_height": {
+            "unit": "em",
+            "size": "1.3",
+            "sizes": []
+        },
+        "h4_typography_typography": "custom",
+        "h4_typography_font_family": "Lora",
+        "h4_typography_font_size": {
+            "unit": "px",
+            "size": "24",
+            "sizes": []
+        },
+        "h4_typography_font_weight": "700",
+        "h4_typography_line_height": {
+            "unit": "em",
+            "size": "1.2",
+            "sizes": []
+        },
+        "h5_typography_typography": "custom",
+        "h5_typography_font_family": "Lora",
+        "h5_typography_font_size": {
+            "unit": "px",
+            "size": "22",
+            "sizes": []
+        },
+        "h5_typography_font_weight": "600",
+        "h6_typography_typography": "custom",
+        "h6_typography_font_family": "Lora",
+        "h6_typography_font_size": {
+            "unit": "px",
+            "size": "20",
+            "sizes": []
+        },
+        "h6_typography_font_weight": "600",
+        "button_typography_typography": "custom",
+        "button_typography_font_family": "Lato",
+        "button_typography_font_size": {
+            "unit": "px",
+            "size": "16",
+            "sizes": []
+        },
+        "button_typography_font_weight": "500",
+        "button_border_radius": {
+            "unit": "px",
+            "top": "13",
+            "right": "13",
+            "bottom": "13",
+            "left": "13",
+            "isLinked": "1"
+        },
+        "button_padding": {
+            "unit": "px",
+            "top": "20",
+            "right": "40",
+            "bottom": "20",
+            "left": "40",
+            "isLinked": ""
+        },
+        "__globals__": {
+            "h1_color": "globals\/colors?id=accent",
+            "h2_color": "globals\/colors?id=text",
+            "h3_color": "globals\/colors?id=text",
+            "h4_color": "globals\/colors?id=text",
+            "h5_color": "globals\/colors?id=text",
+            "h6_color": "globals\/colors?id=text",
+            "button_background_color": "globals\/colors?id=secondary",
+            "button_text_color": "globals\/colors?id=accent"
+        },
+        "form_field_border_radius": {
+            "unit": "px",
+            "top": "10",
+            "right": "10",
+            "bottom": "10",
+            "left": "10",
+            "isLinked": "1"
+        }
+    }
+}

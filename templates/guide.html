@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Guide: Pathways to Wellness | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}guide-view page-guide{% endblock %}
+
+{% block content %}
+  <section class="guide-hero" aria-labelledby="guide-hero-heading">
+    <div class="guide-hero__inner">
+      <p class="eyebrow">Guide</p>
+      <h1 id="guide-hero-heading">Guide: Pathways to Wellness</h1>
+    </div>
+  </section>
+
+  <section class="guide-intro" aria-labelledby="guide-intro-heading">
+    <div class="guide-intro__inner">
+      <h2 id="guide-intro-heading">Type 3 Diabetes Guide:</h2>
+      <img src="{{ url_for('static', filename='uploads/2023/12/BLOG-COVER2-768x494.png') }}" alt="Pathways to Wellness forest guide cover">
+      <p class="guide-intro__statement">Pathways to Wellness: A Guide to Unraveling the Type 2 Diabetes-Alzheimer's Connection</p>
+    </div>
+  </section>
+
+  <section id="subscribe" class="guide-signup" aria-labelledby="guide-signup-heading">
+    <div class="guide-signup__inner">
+      <div class="guide-signup__copy">
+        <h2 id="guide-signup-heading">Interested in staying up to date on the latest from Mindful Diabetes and Type 3 &amp; Type 2 Diabetes Guide?</h2>
+        <p>Join the community and do not miss an update.</p>
+        {% include "_social_links.html" %}
+      </div>
+      <div class="guide-signup__form">
+        {% set newsletter_id = "guide-newsletter-email" %}
+        {% set newsletter_source = "guide" %}
+        {% include "_newsletter_form.html" %}
+        <form class="guide-donate" action="https://www.paypal.com/donate" method="post" target="_blank">
+          <input type="hidden" name="hosted_button_id" value="{{ paypal_button_id }}">
+          <button class="donate-button" type="submit">Donate with PayPal</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-approach" aria-labelledby="guide-approach-heading">
+    <div class="section-heading">
+      <h2 id="guide-approach-heading">Our Guide's 3 Prong Approach</h2>
+      <p>Understanding. Changing. Insighting.</p>
+    </div>
+    <div class="guide-approach-grid">
+      <article>
+        <span>01</span>
+        <h3>Understanding Type 2 &amp; 3: Our Blog's Goal</h3>
+        <p>Pathways to Wellness explores the intersection between Type II Diabetes and Type III Diabetes, helping readers understand the link between metabolic health and cognitive health.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Lifestyle Changes for Holistic Health</h3>
+        <p>Our content is crafted to inspire practical lifestyle modifications, from food and movement to stress reduction and daily routines that support long-term wellness.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Medicinal Research Insights</h3>
+        <p>The guide follows emerging diabetes and Alzheimer's research so readers can pair everyday prevention habits with a clearer view of evolving medical science.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="guide-search" aria-labelledby="guide-search-heading">
+    <div>
+      <p class="eyebrow">Search the guide</p>
+      <h2 id="guide-search-heading">Find articles by topic</h2>
+    </div>
+    <form action="{{ url_for('search') }}" method="get" role="search">
+      <label class="screen-reader-text" for="guide-search-input">Search articles</label>
+      <input id="guide-search-input" name="q" type="search" placeholder="Search diabetes, brain health, recipes..." value="{{ query|default('') }}">
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  {% if latest_posts %}
+    <section class="post-list guide-post-list" aria-labelledby="latest-posts">
+      <div class="section-heading">
+        <p class="eyebrow">Recent Posts</p>
+        <h2 id="latest-posts">Latest from Pathways to Wellness</h2>
+      </div>
+      <div class="post-grid">
+        {% for post in latest_posts %}
+          <article class="post-card guide-post-card">
+            {% if post.preview_image_url %}
+              <a class="guide-post-card__image" href="{{ post.canonical_path }}">
+                <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt }}">
+              </a>
+            {% endif %}
+            <div class="guide-post-card__body">
+              <p>{{ post.date | date_label }}</p>
+              <h3><a href="{{ post.canonical_path }}">{{ post.title }}</a></h3>
+              {% if post.excerpt_text %}
+                <p>{{ post.excerpt_text }}</p>
+              {% endif %}
+              <a class="read-more-link" href="{{ post.canonical_path }}">Read More »</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+      {% if pagination and pagination.pages > 1 %}
+        <nav class="pagination" aria-label="Guide pagination">
+          {% if pagination.page > 1 %}
+            <a href="{{ url_for(pagination.endpoint, page=pagination.page - 1) }}">Previous</a>
+          {% endif %}
+          {% for page_number in range(1, pagination.pages + 1) %}
+            {% if page_number == pagination.page %}
+              <span aria-current="page">{{ page_number }}</span>
+            {% else %}
+              <a href="{{ url_for(pagination.endpoint, page=page_number) }}">{{ page_number }}</a>
+            {% endif %}
+          {% endfor %}
+          {% if pagination.page < pagination.pages %}
+            <a href="{{ url_for(pagination.endpoint, page=pagination.page + 1) }}">Next</a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    </section>
+  {% endif %}
+{% endblock %}

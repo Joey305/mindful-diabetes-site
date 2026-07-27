@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block title %}Health Tools | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}health-tools-view{% endblock %}
+
+{% block content %}
+  {% set jeir_update = tool_posts.get("diabetes-health-jeir-updates") %}
+  {% set jeir_article = tool_posts.get("diabetes-artificial-intelligence-jeir") %}
+  {% set memovela = tool_posts.get("memovela") %}
+  {% set game = tool_posts.get("healthy-eating") %}
+
+  <section class="health-tools-hero">
+    <div class="health-tools-hero__inner">
+      <div class="health-tools-hero__copy">
+        <p class="eyebrow">Health Tools</p>
+        <h1>Practical tools for blood sugar, brain health, and everyday habits</h1>
+        <p>Mindful Diabetes builds free wellness tools that make prevention easier to understand and easier to practice. Start with AI-guided education, daily habit tracking, or a quick nutrition game.</p>
+        <div class="button-row">
+          <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Open JEIR</a>
+          <a class="button-secondary button-secondary--light" href="https://memovela.com/" target="_blank" rel="noopener">Try Memovela</a>
+        </div>
+      </div>
+      <div class="health-tools-hero__panel" aria-label="Mindful Diabetes health tools">
+        <span>3</span>
+        <strong>free tools</strong>
+        <p>AI education, habit tracking, and nutrition learning connected to the same prevention mission.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="health-tools-intro" aria-labelledby="health-tools-intro-heading">
+    <div>
+      <p class="eyebrow">Why this page exists</p>
+      <h2 id="health-tools-intro-heading">A clearer path from learning to action</h2>
+    </div>
+    <p>People do not need more confusing health noise. They need simple ways to ask better questions, notice daily patterns, and build small habits before problems become crises. These tools connect Mindful Diabetes education to real daily choices around movement, meals, sleep, hydration, and metabolic health.</p>
+  </section>
+
+  <section class="health-tool-showcase" aria-labelledby="health-tool-showcase-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Explore the tools</p>
+      <h2 id="health-tool-showcase-heading">Choose the support that fits your day</h2>
+    </div>
+
+    <div class="health-tool-list">
+      <article class="health-tool-feature health-tool-feature--jeir">
+        <div class="health-tool-feature__media">
+          {% if jeir_update and jeir_update.preview_image_url %}
+            <img src="{{ jeir_update.preview_image_url }}" alt="{{ jeir_update.preview_image_alt }}">
+          {% endif %}
+        </div>
+        <div class="health-tool-feature__copy">
+          <p class="eyebrow">AI health education</p>
+          <h3>JEIR, your AI wellness guide</h3>
+          <p>JEIR helps people ask clearer questions about blood sugar, insulin resistance, cognitive health, Type 2 diabetes, and Type 3 diabetes education. It is built to turn complex science into accessible language, without making visitors feel lost before they begin.</p>
+          {% if jeir_update %}
+            <p>{{ jeir_update.excerpt_text }}</p>
+          {% endif %}
+          <div class="health-tool-actions">
+            <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Open JEIR</a>
+            {% if jeir_update %}
+              <a class="button-secondary" href="{{ jeir_update.canonical_path }}">Read JEIR updates</a>
+            {% endif %}
+            {% if jeir_article %}
+              <a class="text-link" href="{{ jeir_article.canonical_path }}">Read the AI introduction</a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+
+      <article class="health-tool-feature health-tool-feature--memovela">
+        <div class="health-tool-feature__media">
+          {% if memovela and memovela.preview_image_url %}
+            <img src="{{ memovela.preview_image_url }}" alt="{{ memovela.preview_image_alt }}">
+          {% endif %}
+        </div>
+        <div class="health-tool-feature__copy">
+          <p class="eyebrow">Daily wellness tracker</p>
+          <h3>Memovela for metabolic and brain health</h3>
+          <p>Memovela helps people build small, repeatable habits around movement, meals, sleep, hydration, and daily check-ins. It connects directly to the Mindful Diabetes prevention mission: make healthier choices easier before a crisis arrives.</p>
+          {% if memovela %}
+            <p>{{ memovela.excerpt_text }}</p>
+          {% endif %}
+          <div class="health-tool-actions">
+            <a class="button-primary" href="https://memovela.com/" target="_blank" rel="noopener">Try Memovela</a>
+            {% if memovela %}
+              <a class="button-secondary" href="{{ memovela.canonical_path }}">Read the Memovela article</a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+
+      <article class="health-tool-feature health-tool-feature--game">
+        <div class="health-tool-feature__media">
+          {% if game and game.preview_image_url %}
+            <img src="{{ game.preview_image_url }}" alt="{{ game.preview_image_alt }}">
+          {% endif %}
+        </div>
+        <div class="health-tool-feature__copy">
+          <p class="eyebrow">Nutrition learning game</p>
+          <h3>Mindful Eating Game</h3>
+          <p>The Mindful Eating Game turns nutrition education into a quick, playful experience. Visitors can practice recognizing healthier choices, build momentum, and connect the lesson back to long-term metabolic and cognitive health.</p>
+          {% if game %}
+            <p>{{ game.excerpt_text }}</p>
+          {% endif %}
+          <div class="health-tool-actions">
+            <a class="button-primary" href="https://www.jeir.fun/" target="_blank" rel="noopener">Play the game</a>
+            {% if game %}
+              <a class="button-secondary" href="{{ game.canonical_path }}">Read about the game</a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="health-tools-pathway" aria-labelledby="health-tools-pathway-heading">
+    <div class="section-heading section-heading--left">
+      <p class="eyebrow">How they work together</p>
+      <h2 id="health-tools-pathway-heading">Learn, track, practice, repeat</h2>
+      <p>Each tool has a different job, but they all point in the same direction: earlier prevention, clearer education, and healthier routines that can be repeated.</p>
+    </div>
+    <div class="health-tools-pathway__grid">
+      <article>
+        <span>01</span>
+        <h3>Ask better questions</h3>
+        <p>Use JEIR when you want a clearer explanation of insulin resistance, brain energy, blood sugar, or Type 3 diabetes concepts.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Notice daily patterns</h3>
+        <p>Use Memovela to make everyday wellness visible through check-ins around habits that influence metabolic health.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Practice healthy choices</h3>
+        <p>Use the Mindful Eating Game to make nutrition learning faster, friendlier, and easier to remember.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="health-tools-cta" aria-labelledby="health-tools-cta-heading">
+    <div>
+      <p class="eyebrow">Start anywhere</p>
+      <h2 id="health-tools-cta-heading">Small tools can support bigger prevention habits</h2>
+      <p>Explore the tool that feels most useful today, then keep reading the guide for research-backed education on metabolic and brain health.</p>
+    </div>
+    <div class="button-row">
+      <a class="button-primary" href="{{ url_for('guide') }}">Read the guide</a>
+      <a class="button-secondary button-secondary--light" href="{{ url_for('page_detail', slug='donation') }}">Support the tools</a>
+    </div>
+  </section>
+{% endblock %}

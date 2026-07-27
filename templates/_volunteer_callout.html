@@ -1,0 +1,19 @@
+<section class="volunteer-callout {{ volunteer_callout_class|default('') }}" aria-labelledby="{{ volunteer_callout_id|default('volunteer-callout-heading') }}">
+  <div class="volunteer-callout__copy">
+    <p class="eyebrow">Help without donating</p>
+    <h2 id="{{ volunteer_callout_id|default('volunteer-callout-heading') }}">There are many ways to support the mission.</h2>
+    <p>Not everyone can give money, and that is completely okay. Mindful Diabetes can also grow through writing, research summaries, tool testing, outreach, social media support, events, design help, and thoughtful introductions.</p>
+  </div>
+  <div class="volunteer-callout__cards">
+    <a class="volunteer-callout-card volunteer-callout-card--primary" href="{{ url_for('volunteer') }}">
+      <span>Volunteer</span>
+      <strong>Share your time or skills</strong>
+      <small>Explore practical roles that help us create education, improve tools, and reach more people.</small>
+    </a>
+    <a class="volunteer-callout-card" href="mailto:jmschulz@mindfuldiabetes.org?subject=I%20want%20to%20help%20Mindful%20Diabetes">
+      <span>Start a conversation</span>
+      <strong>Have another idea?</strong>
+      <small>Send a note if you want to collaborate, introduce a partner, or help in a way that is not listed yet.</small>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Newsletter | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}subscribe-view{% endblock %}
+
+{% block content %}
+  <section class="content-shell subscribe-result-shell">
+    <article class="subscribe-result subscribe-result--{{ status }}">
+      <p class="eyebrow">Newsletter</p>
+      <h1>{{ title }}</h1>
+      <p>{{ message }}</p>
+      {% if email %}
+        <p class="subscribe-email">{{ email }}</p>
+      {% endif %}
+      <div class="button-row">
+        <a class="button-primary" href="{{ url_for('guide') }}">Explore the Guide</a>
+        <a class="button-secondary" href="{{ url_for('home') }}">Back Home</a>
+      </div>
+    </article>
+  </section>
+{% endblock %}

@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block title %}Mindful Diabetes Inc | Halt the progression before symptoms arise{% endblock %}
+{% block body_class %}home-view page-mindful{% endblock %}
+
+{% block content %}
+  <section class="home-hero">
+    <div class="home-hero__inner">
+      <div class="home-hero__copy">
+        <p class="eyebrow">Mindful Diabetes Inc</p>
+        <h1>Halt the progression before symptoms arise</h1>
+        <p>We fund education, prevention, and early intervention work around Type II and Type III Diabetes, with a focus on long-term brain health.</p>
+        <div class="button-row">
+          <a class="button-primary" href="{{ url_for('page_detail', slug='donation') }}">Join Our Cause</a>
+          <a class="button-secondary button-secondary--light" href="#story">Learn More</a>
+        </div>
+      </div>
+      <div class="home-hero__media" aria-hidden="true">
+        <img src="{{ url_for('static', filename='uploads/2023/08/Frame-1707478567.png') }}" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="mission-tier" aria-label="Mission, vision, and roots">
+    <div class="mission-grid">
+      <a class="mission-card" href="https://www.guidestar.org/profile/92-3940202" target="_blank" rel="noopener">
+        <img src="{{ url_for('static', filename='uploads/2023/08/What-we-do03.png') }}" alt="">
+        <h2>Our Mission</h2>
+        <p>Our commitment is unyielding - to find a cure for Type III Diabetes, more commonly referred known as Alzheimer's Disease. We believe in a two-pronged approach: combining holistic practices with cutting-edge pharmacological research.</p>
+      </a>
+      <a class="mission-card" href="https://www.guidestar.org/profile/92-3940202" target="_blank" rel="noopener">
+        <img src="{{ url_for('static', filename='uploads/2023/08/What-we-do02.png') }}" alt="">
+        <h2>Our Vision</h2>
+        <p>To halt the progression of long-term Type II Diabetes before it evolves into a full-blown Type III Diabetes condition. By investing in early prevention and intervention research, we aim to provide a beacon of hope for millions affected globally.</p>
+      </a>
+      <a class="mission-card" href="https://www.guidestar.org/profile/92-3940202" target="_blank" rel="noopener">
+        <img src="{{ url_for('static', filename='uploads/2023/08/What-we-do01.png') }}" alt="">
+        <h2>Our Roots</h2>
+        <p>Located in the heart of Florida, Mindful Diabetes Inc. stands as a testament to collaborative efforts, research, and an undying commitment to a world free from Alzheimer's Disease.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="story" class="story-section">
+    <div class="story-grid">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/ixqrtPd0E7s" title="Welcome to Mindful Diabetes" allowfullscreen></iframe>
+      </div>
+      <div class="story-copy">
+        <h2>Our Story</h2>
+        <p>At Mindful Diabetes Inc., we envision a world where Type III diabetes, also known as Alzheimer's Disease, is not a looming threat. By funding early prevention and intervention research, our mission is not just about finding a cure but also about preventing its onset. Be a part of this groundbreaking journey with us.</p>
+        <a href="{{ url_for('page_detail', slug='who-we-are') }}">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="fundraiser-section" aria-labelledby="fundraiser-heading">
+    <div class="fundraiser-section__shine" aria-hidden="true"></div>
+    <div class="fundraiser-grid">
+      <div class="fundraiser-copy">
+        <p class="eyebrow">Featured fundraiser</p>
+        <h2 id="fundraiser-heading">Turn a story into prevention research.</h2>
+        <p class="fundraiser-copy__lead">Buy <strong>The Man in the Ballcap</strong> by the <a href="https://jsmcoop.com" target="_blank" rel="noopener">JSM Cooperative</a> and help support Mindful Diabetes Inc. education, tools, and research at the junction of Type II and Type III diabetes.</p>
+        <div class="fundraiser-highlights" aria-label="Fundraiser highlights">
+          <span>100% of sales donated</span>
+          <span>Supports prevention education</span>
+          <span>Community-powered research</span>
+        </div>
+        <div class="button-row fundraiser-actions">
+          <a class="button-primary" href="https://www.amazon.com/Man-Ballcap-JSM-Cooperative-ebook/dp/B0CPKTVMYX/" target="_blank" rel="noopener">Get the book</a>
+          <a class="button-secondary" href="https://jsmcoop.com" target="_blank" rel="noopener">Visit JSM Cooperative</a>
+        </div>
+      </div>
+      <a class="fundraiser-book" href="https://a.co/d/dNzqc6h" target="_blank" rel="noopener">
+        <span class="fundraiser-book__badge">Book fundraiser</span>
+        <img src="{{ url_for('static', filename='uploads/2023/12/Release-6-791x1024.png') }}" alt="The Man in the Ballcap book cover">
+      </a>
+    </div>
+  </section>
+
+  <section class="wellness-tools-section" aria-labelledby="wellness-tools-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Wellness tools</p>
+      <h2 id="wellness-tools-heading">Support for daily habits and clearer health education</h2>
+    </div>
+    <div class="wellness-tools-grid">
+      <article class="tool-card">
+        <div class="tool-card__media">
+          <img src="{{ url_for('static', filename='uploads/2026/03/ChatGPT-Image-Mar-3-2026-03_03_42-PM-1024x683.png') }}" alt="Memovela wellness tracker shown on a phone">
+        </div>
+        <div class="tool-card__copy">
+          <p class="eyebrow">Daily wellness tracker</p>
+          <h3>Memovela for metabolic and brain health</h3>
+          <p>Memovela helps people build small, repeatable habits around movement, meals, sleep, hydration, and daily check-ins.</p>
+          {% if memovela_post %}
+            <p>{{ memovela_post.excerpt_text }}</p>
+          {% endif %}
+          <div class="button-row">
+            <a class="button-primary" href="https://memovela.com" target="_blank" rel="noopener">Try Memovela</a>
+            {% if memovela_post %}
+              <a class="button-secondary" href="{{ memovela_post.canonical_path }}">Read the article</a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+
+      <article class="tool-card tool-card--jeir">
+        <div class="tool-card__media">
+          <img src="{{ url_for('static', filename='uploads/2024/04/DALL·E-2024-04-23-14.16.07-Create-a-visually-engaging-image-of-a-futuristic-medical-interface-used-by-an-AI-called-JEIR-designed-for-diabetes-management.-The-image-should-depic-768x768.webp') }}" alt="JEIR AI health education interface">
+        </div>
+        <div class="tool-card__copy">
+          <p class="eyebrow">Health education assistant</p>
+          <h3>JEIR for clearer metabolic brain-health learning</h3>
+          <p>JEIR helps explain blood sugar, insulin resistance, brain energy, Alzheimer's education, and Type 3 diabetes research concepts in plain language.</p>
+          <div class="button-row">
+            <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Try JEIR</a>
+            <a class="button-secondary" href="{{ url_for('page_detail', slug='diabetes-health-jeir-updates') }}">Read JEIR updates</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="home-support">
+    <div>
+      <h2>Explore the Research Behind the Mission</h2>
+      <p>Mindful Diabetes is grounded in active research across pancreatic biology, Alzheimer's disease modeling, computational drug discovery, and health technology.</p>
+      <a class="button-primary" href="{{ url_for('research') }}">View Our Research</a>
+    </div>
+    <div>
+      <h2>How to Support</h2>
+      <p>Every contribution, big or small, aids our mission. Support our work through donations, volunteering, and collaborative partnerships.</p>
+      <a class="button-primary" href="{{ url_for('volunteer') }}">Get Involved</a>
+    </div>
+  </section>
+
+  <section class="newsletter-section" aria-labelledby="home-newsletter-heading">
+    <div class="newsletter-panel">
+      <div>
+        <p class="eyebrow">Subscribe</p>
+        <h2 id="home-newsletter-heading">Stay up to date on the latest guide posts</h2>
+        <p>Get practical updates on Type II and Type III Diabetes prevention, brain health, wellness tools, and new research articles.</p>
+      </div>
+      <div>
+        {% set newsletter_id = "home-newsletter-email" %}
+        {% set newsletter_source = "home" %}
+        {% include "_newsletter_form.html" %}
+      </div>
+    </div>
+  </section>
+
+  {% if latest_posts %}
+    <section class="post-list home-latest" aria-labelledby="latest-posts">
+      <div class="section-heading">
+        <p class="eyebrow">From the blog</p>
+        <h2 id="latest-posts">Latest articles</h2>
+      </div>
+      <div class="post-grid">
+        {% for post in latest_posts %}
+          <article class="post-card guide-post-card home-post-card">
+            {% if post.preview_image_url %}
+              <a class="guide-post-card__image" href="{{ post.canonical_path }}">
+                <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt }}">
+              </a>
+            {% endif %}
+            <div class="guide-post-card__body">
+              <p>{{ post.date | date_label }}</p>
+              <h3><a href="{{ post.canonical_path }}">{{ post.title }}</a></h3>
+              {% if post.excerpt_text %}
+                <p>{{ post.excerpt_text }}</p>
+              {% endif %}
+              <a class="read-more-link" href="{{ post.canonical_path }}">Read More »</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Search | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}search-view{% endblock %}
+
+{% block content %}
+  <section class="content-shell search-shell">
+    <div class="search-hero">
+      <p class="eyebrow">Site search</p>
+      <h1>Search Mindful Diabetes</h1>
+      <p>Find articles, pages, research updates, donation information, and wellness tools across the migrated site.</p>
+      <form class="search-page-form" action="{{ url_for('search') }}" method="get" role="search">
+        <label class="screen-reader-text" for="search-page-input">Search the site</label>
+        <input id="search-page-input" name="q" type="search" value="{{ query }}" placeholder="Try insulin resistance, recipes, JEIR, Memovela">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    {% if query %}
+      <section class="search-results" aria-labelledby="search-results-heading">
+        <div class="section-heading">
+          <p class="eyebrow">{{ results|length }} result{{ "" if results|length == 1 else "s" }}</p>
+          <h2 id="search-results-heading">Results for "{{ query }}"</h2>
+        </div>
+        {% if results %}
+          <div class="search-result-list">
+            {% for item in results %}
+              <article class="search-result-card">
+                <p class="eyebrow">{{ "Page" if item.type == "page" else "Article" }}{% if item.date %} · {{ item.date | date_label }}{% endif %}</p>
+                <h3><a href="{{ item.canonical_path }}">{{ item.title }}</a></h3>
+                {% if item.excerpt_text %}
+                  <p>{{ item.excerpt_text }}</p>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="empty-state">
+            <h2>No results yet</h2>
+            <p>Try a broader phrase like brain health, insulin resistance, diabetes, recipes, JEIR, or Memovela.</p>
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
+  </section>
+{% endblock %}

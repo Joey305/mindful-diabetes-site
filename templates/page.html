@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}page-view page-{{ page.slug }}{% endblock %}
+
+{% block content %}
+  <section class="content-shell page-shell">
+    <article class="article">
+      <p class="eyebrow">{{ "Home" if page.slug == "mindful" else "Page" }}</p>
+      {% if page.slug != "mindful" %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
+      <div class="wp-content">
+        {{ page.content_html | wordpress_html }}
+      </div>
+    </article>
+
+    {% if page.slug == "donation" %}
+      {% set volunteer_callout_id = "donation-volunteer-heading" %}
+      {% set volunteer_callout_class = "volunteer-callout--donation" %}
+      {% include "_volunteer_callout.html" %}
+    {% endif %}
+
+    {% if page.slug == "guide" %}
+      <section class="guide-search" aria-labelledby="guide-search-heading">
+        <div>
+          <p class="eyebrow">Search the guide</p>
+          <h2 id="guide-search-heading">Find articles by topic</h2>
+        </div>
+        <form action="{{ url_for('search') }}" method="get" role="search">
+          <label class="screen-reader-text" for="guide-search-input">Search articles</label>
+          <input id="guide-search-input" name="q" type="search" placeholder="Search diabetes, brain health, recipes..." value="{{ query|default('') }}">
+          <button type="submit">Search</button>
+        </form>
+      </section>
+      <section id="subscribe" class="newsletter-section newsletter-section--guide" aria-labelledby="guide-newsletter-heading">
+        <div class="newsletter-panel">
+          <div>
+            <p class="eyebrow">Subscribe</p>
+            <h2 id="guide-newsletter-heading">Do not miss the next guide update</h2>
+            <p>Join the newsletter for new articles, research notes, and wellness tool updates.</p>
+          </div>
+          <div>
+            {% set newsletter_id = "guide-newsletter-email" %}
+            {% set newsletter_source = "guide" %}
+            {% include "_newsletter_form.html" %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
+    {% if latest_posts %}
+      <section class="post-list" aria-labelledby="latest-posts">
+        <div class="section-heading">
+          <p class="eyebrow">From the blog</p>
+          <h2 id="latest-posts">Latest articles</h2>
+        </div>
+        <div class="post-grid">
+          {% for post in latest_posts %}
+            <article class="post-card">
+              <p>{{ post.date | date_label }}</p>
+              <h3><a href="{{ post.canonical_path }}">{{ post.title }}</a></h3>
+              {% if post.excerpt_text %}
+                <p>{{ post.excerpt_text }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+        {% if pagination and pagination.pages > 1 %}
+          <nav class="pagination" aria-label="Guide pagination">
+            {% if pagination.page > 1 %}
+              <a href="{{ url_for(pagination.endpoint, page=pagination.page - 1) }}">Previous</a>
+            {% endif %}
+            {% for page_number in range(1, pagination.pages + 1) %}
+              {% if page_number == pagination.page %}
+                <span aria-current="page">{{ page_number }}</span>
+              {% else %}
+                <a href="{{ url_for(pagination.endpoint, page=page_number) }}">{{ page_number }}</a>
+              {% endif %}
+            {% endfor %}
+            {% if pagination.page < pagination.pages %}
+              <a href="{{ url_for(pagination.endpoint, page=pagination.page + 1) }}">Next</a>
+            {% endif %}
+          </nav>
+        {% endif %}
+      </section>
+    {% endif %}
+  </section>
+{% endblock %}

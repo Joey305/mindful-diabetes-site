@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}post-view post-pilot post-{{ post.slug }}{% endblock %}
+
+{% block content %}
+  <article class="article-post">
+    <section class="article-post-hero">
+      <div class="article-post-hero__inner">
+        <div class="article-post-hero__copy">
+          <p class="eyebrow">{{ "JEIR update" if post.slug == "diabetes-health-jeir-updates" else "Pathways to wellness" }}</p>
+          <h1>{{ post.title }}</h1>
+          {% if post.date %}
+            <p class="meta">{{ post.date | date_label }}</p>
+          {% endif %}
+          <p>{{ post.excerpt_text }}</p>
+          <div class="button-row">
+            {% if post.slug == "diabetes-health-jeir-updates" %}
+              <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Try JEIR</a>
+            {% elif post.slug == "memovela" %}
+              <a class="button-primary" href="https://memovela.com" target="_blank" rel="noopener">Try Memovela</a>
+            {% else %}
+              <a class="button-primary" href="{{ url_for('page_detail', slug='donation') }}">Support prevention</a>
+            {% endif %}
+            <a class="button-secondary button-secondary--light" href="#article">Read the article</a>
+          </div>
+        </div>
+        {% if post.preview_image_url %}
+          <div class="article-post-hero__media">
+            <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt or post.title }}">
+          </div>
+        {% endif %}
+      </div>
+    </section>
+
+    {% if post.article_media.audio_url or post.article_media.video_embed_url %}
+      <section class="article-post-media" aria-labelledby="article-media-heading">
+        <div class="article-post-media__copy">
+          <p class="eyebrow">Listen or watch</p>
+          <h2 id="article-media-heading">Choose the format that fits your day</h2>
+          <p>Use the audio version for a quick listen, or watch the related video before reading the full article.</p>
+          {% if post.article_media.audio_url %}
+            <audio src="{{ post.article_media.audio_url }}" preload="none" controls>
+              Your browser does not support the audio tag.
+            </audio>
+          {% endif %}
+        </div>
+        {% if post.article_media.video_embed_url %}
+          <div class="video-frame">
+            <iframe src="{{ post.article_media.video_embed_url }}" title="{{ post.article_media.video_title }}" loading="lazy" allowfullscreen></iframe>
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
+
+    <section id="article" class="article-post-shell">
+      <div class="article-post-body">
+        <div class="article-post-body__header">
+          <p class="eyebrow">Full article</p>
+          <h2>{{ post.article_section_title }}</h2>
+        </div>
+        <div class="wp-content article-content">
+          {{ post.content_html | article_html(post.slug) }}
+        </div>
+      </div>
+
+      <aside class="article-post-sidebar" aria-label="Article actions">
+        <div class="article-sidebar-card">
+          <p class="eyebrow">Tool</p>
+          <h2>Explore wellness tools</h2>
+          <p>Use Mindful Diabetes tools to connect everyday habits with metabolic and cognitive health.</p>
+          <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Open JEIR</a>
+        </div>
+
+        <div class="article-sidebar-card">
+          <p class="eyebrow">Support</p>
+          <h2>Fund prevention education</h2>
+          <p>Donations help Mindful Diabetes build tools, publish education, and support early prevention work.</p>
+          <form action="https://www.paypal.com/donate" method="post" target="_blank">
+            <input type="hidden" name="hosted_button_id" value="{{ paypal_button_id }}">
+            <button class="donate-button" type="submit">Donate with PayPal</button>
+          </form>
+        </div>
+
+        <div class="article-sidebar-card">
+          <p class="eyebrow">Subscribe</p>
+          <h2>Get future updates</h2>
+          <p>Receive new guide posts, JEIR updates, and wellness tool notes.</p>
+          {% set newsletter_id = "post-newsletter-email-" ~ post.slug %}
+          {% set newsletter_source = post.slug %}
+          {% include "_newsletter_form.html" %}
+        </div>
+
+        <div class="article-sidebar-card">
+          <p class="eyebrow">Follow</p>
+          <h2>Follow Mindful Diabetes</h2>
+          <p>Find new posts, wellness tool updates, and prevention education across our channels.</p>
+          {% set social_link_variant = "social-link-row--compact" %}
+          {% include "_social_links.html" %}
+          {% set social_link_variant = "" %}
+        </div>
+      </aside>
+    </section>
+  </article>
+
+  {% include "_article_navigation.html" %}
+
+  {% if related_posts %}
+    <section class="post-list article-related" aria-labelledby="more-posts">
+      <div class="section-heading">
+        <p class="eyebrow">Keep reading</p>
+        <h2 id="more-posts">More from Mindful Diabetes</h2>
+      </div>
+      <div class="post-grid">
+        {% for item in related_posts %}
+          <article class="post-card">
+            <p>{{ item.date | date_label }}</p>
+            <h3><a href="{{ item.canonical_path }}">{{ item.title }}</a></h3>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}

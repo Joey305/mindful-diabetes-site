@@ -1,0 +1,161 @@
+{
+  "site": {
+    "title": "Mindful Diabetes Inc",
+    "link": "https://mindfuldiabetes.org",
+    "description": "Preventing the progression of Type II to Type III Diabetes, one person at a time.",
+    "pubDate": "Wed, 17 Jun 2026 10:57:18 +0000",
+    "wxr_version": "1.2",
+    "base_site_url": "https://mindfuldiabetes.org",
+    "base_blog_url": "https://mindfuldiabetes.org"
+  },
+  "total_items": 574,
+  "by_post_type": {
+    "attachment": 405,
+    "elementor_library": 26,
+    "custom_css": 1,
+    "elementskit_template": 2,
+    "give_forms": 2,
+    "give_payment": 19,
+    "elementor_snippet": 1,
+    "elementskit_content": 1,
+    "nav_menu_item": 15,
+    "give_pdf_template": 1,
+    "mc4wp-form": 1,
+    "page": 9,
+    "post": 90,
+    "wp_navigation": 1
+  },
+  "by_status": {
+    "inherit": 405,
+    "publish": 158,
+    "draft": 5,
+    "abandoned": 5,
+    "trash": 1
+  },
+  "by_type_status": {
+    "attachment": {
+      "inherit": 405
+    },
+    "custom_css": {
+      "publish": 1
+    },
+    "elementor_library": {
+      "publish": 23,
+      "draft": 3
+    },
+    "elementor_snippet": {
+      "publish": 1
+    },
+    "elementskit_content": {
+      "publish": 1
+    },
+    "elementskit_template": {
+      "publish": 2
+    },
+    "give_forms": {
+      "publish": 1,
+      "trash": 1
+    },
+    "give_payment": {
+      "abandoned": 5,
+      "publish": 14
+    },
+    "give_pdf_template": {
+      "publish": 1
+    },
+    "mc4wp-form": {
+      "publish": 1
+    },
+    "nav_menu_item": {
+      "publish": 15
+    },
+    "page": {
+      "publish": 8,
+      "draft": 1
+    },
+    "post": {
+      "publish": 89,
+      "draft": 1
+    },
+    "wp_navigation": {
+      "publish": 1
+    }
+  },
+  "published_pages": 8,
+  "published_posts": 89,
+  "attachments": 405,
+  "media_references_in_content": 4775,
+  "upload_references_in_content": 2426,
+  "items_with_wordpress_blocks": 27,
+  "items_with_shortcodes": 4,
+  "shortcode_counts": {
+    "give_form": 2,
+    "give_receipt": 1,
+    "give_donor_dashboard": 1
+  },
+  "top_level_pages": [
+    {
+      "title": "Donation",
+      "slug": "donation",
+      "status": "publish",
+      "menu_order": "0",
+      "link": "https://mindfuldiabetes.org/donation/"
+    },
+    {
+      "title": "Donation Confirmation",
+      "slug": "donation-confirmation",
+      "status": "publish",
+      "menu_order": "0",
+      "link": "https://mindfuldiabetes.org/donation-confirmation/"
+    },
+    {
+      "title": "Donation Failed",
+      "slug": "donation-failed",
+      "status": "publish",
+      "menu_order": "0",
+      "link": "https://mindfuldiabetes.org/donation-failed/"
+    },
+    {
+      "title": "Donor dashboard",
+      "slug": "donor-dashboard",
+      "status": "publish",
+      "menu_order": "0",
+      "link": "https://mindfuldiabetes.org/donor-dashboard/"
+    },
+    {
+      "title": "Guide",
+      "slug": "guide",
+      "status": "publish",
+      "menu_order": "0",
+      "link": "https://mindfuldiabetes.org/guide/"
+    },
+    {
+      "title": "Home",
+      "slug": "mindful",
+      "status": "publish",
+      "menu_order": "0",
+      "link": "https://mindfuldiabetes.org/"
+    },
+    {
+      "title": "JOIN THE CAMINO",
+      "slug": "jointhecamino",
+      "status": "publish",
+      "menu_order": "0",
+      "link": "https://mindfuldiabetes.org/jointhecamino/"
+    },
+    {
+      "title": "ORDER",
+      "slug": "order",
+      "status": "draft",
+      "menu_order": "0",
+      "link": "https://mindfuldiabetes.org/?page_id=1225"
+    },
+    {
+      "title": "Sponsors",
+      "slug": "sponsors",
+      "status": "publish",
+      "menu_order": "0",
+      "link": "https://mindfuldiabetes.org/sponsors/"
+    }
+  ]
+}

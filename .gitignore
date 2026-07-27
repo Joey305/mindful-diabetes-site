@@ -1,0 +1,41 @@
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# macOS / editor noise
+.DS_Store
+._*
+.idea/
+.vscode/
+
+# Local archives, database exports, and backups
+*.wpress
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+
+# WordPress migration/export artifacts that can contain private data
+mindfuldiabetesinc.WordPress.*.xml
+mindful_diabetes_wp_parse_outputs/.DS_Store
+mindful_diabetes_wp_parse_outputs/wp_migration_outputs/*.csv
+mindful_diabetes_wp_parse_outputs/wp_migration_outputs/wordpress_*.json
+
+# Uploaded runtime/debug artifacts from the old WordPress site
+static/uploads/trustedlogin-logs/
+static/uploads/mailchimp-for-wp/debug-log.php
+*.log
