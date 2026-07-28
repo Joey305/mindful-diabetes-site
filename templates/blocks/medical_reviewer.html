@@ -1,0 +1,7 @@
+<aside class="cms-block cms-medical-reviewer">
+  <h2>Reviewed by {{ block.content.name }}</h2>
+  {% if block.content.credentials %}<p class="cms-meta">{{ block.content.credentials }}</p>{% endif %}
+  <p>{{ block.content.statement }}</p>
+  {% if block.content.review_date %}<p class="cms-meta">Review date: {{ block.content.review_date }}</p>{% endif %}
+  {% if block.content.profile_url %}<a href="{{ block.content.profile_url }}">Reviewer profile</a>{% endif %}
+</aside>

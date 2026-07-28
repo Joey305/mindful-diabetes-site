@@ -1,0 +1,9 @@
+<section class="cms-block cms-sponsor-grid {% if block.settings.grayscale %}cms-sponsor-grid--grayscale{% endif %}">
+  {% for sponsor in block.content.sponsors %}
+    <a href="{{ sponsor.url or '#' }}" {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}>
+      {% if sponsor.logo %}<img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">{% endif %}
+      <strong>{{ sponsor.name }}</strong>
+      {% if sponsor.level %}<span>{{ sponsor.level }}</span>{% endif %}
+    </a>
+  {% endfor %}
+</section>

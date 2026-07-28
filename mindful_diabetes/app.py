@@ -293,7 +293,7 @@ def create_app(test_config=None):
         rendered_blocks = cms.render_blocks(
             item["blocks_json"],
             app.config,
-            lambda template, **context: render_template(template, **context),
+            lambda template, **context: render_template(template, item=item, **context),
         )
         template = "cms_post.html" if item["content_type"] == "post" else "cms_page.html"
         return render_template(

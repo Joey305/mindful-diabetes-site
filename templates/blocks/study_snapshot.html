@@ -1,0 +1,15 @@
+<section class="cms-block cms-study-snapshot">
+  <h2>Study snapshot</h2>
+  <dl>
+    {% for label, value in [
+      ("Study type", block.content.study_type),
+      ("Participants", block.content.participants),
+      ("Duration", block.content.duration),
+      ("Population", block.content.population),
+      ("Main outcome", block.content.outcome),
+      ("Publication", block.content.publication)
+    ] %}
+      {% if value %}<div><dt>{{ label }}</dt><dd>{{ value }}</dd></div>{% endif %}
+    {% endfor %}
+  </dl>
+</section>

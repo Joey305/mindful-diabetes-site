@@ -1,0 +1,15 @@
+<article class="cms-block cms-event">
+  <div class="cms-event__date">
+    <strong>{{ block.content.date or "Date TBD" }}</strong>
+    {% if block.content.time %}<span>{{ block.content.time }} {{ block.content.timezone }}</span>{% endif %}
+  </div>
+  <div>
+    <h2>{{ block.content.title }}</h2>
+    {% if block.content.location %}<p class="cms-meta">{{ block.content.location }}</p>{% endif %}
+    {% if block.content.description %}<p>{{ block.content.description }}</p>{% endif %}
+    <div class="cms-button-pair">
+      {% if block.content.registration_url %}<a class="cms-button cms-button--green" href="{{ block.content.registration_url }}">Register</a>{% endif %}
+      {% if block.content.calendar_url %}<a class="cms-button cms-button--orange" href="{{ block.content.calendar_url }}">Add to calendar</a>{% endif %}
+    </div>
+  </div>
+</article>

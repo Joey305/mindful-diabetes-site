@@ -24,7 +24,7 @@ Title: How iPSCs become Alzheimer's disease models
 Caption: Researchers can reprogram donated cells, then guide them into brain-related cell types for disease modeling.
 Description: Educational image for a section explaining how an adult cell can be reprogrammed into an iPSC and guided into Alzheimer's-relevant brain cell types.
 
-Prompt: Create a clean scientific educational image showing a simple visual pathway from an adult donated cell to an induced pluripotent stem cell, then to neurons, astrocytes, microglia-like cells, and a small brain organoid. Use icons and cell-like visuals but no readable text. The image should be approachable for lay readers, accurate in spirit, and not overcomplicated. Calm colors, soft lab background, no logos, no cure message, no tiny labels.
+Prompt: Create a clean scientific educational image showing a simple visual pathway from an adult donated cell to an induced pluripotent stem cell, then to neurons, astrocytes, microglia-like cells, and a small brain organoid. Use icons and cell-like visuals but no readable text. The image should be approachable for general readers, accurate in spirit, and not overcomplicated. Calm colors, soft lab background, no logos, no cure message, no tiny labels.
 
 ## 3. Isogenic Lines
 
@@ -65,7 +65,7 @@ Filename: `ipsc-models-promise-limits-alzheimers.webp`
 Size: 1400 x 933
 Alt text: A balanced research scene showing a cell culture dish, organoid, data notebook, and a careful checklist, suggesting promise and limits without cure language.
 Title: The promise and limits of iPSC Alzheimer's models
-Caption: Good models help researchers ask sharper questions, but they still need careful follow-up in people.
+Caption: Good models help researchers test more precise hypotheses, but they still need careful follow-up in people.
 Description: Closing educational image for a section explaining both the promise and limits of iPSC-derived Alzheimer's disease models.
 
 Prompt: Create a balanced editorial research image showing a cell culture dish, a small organoid, a data notebook, and a careful checklist on a lab desk. The mood should be hopeful but restrained, representing both promise and limits of iPSC Alzheimer's models. No readable text, no logos, no cure language, no dramatic breakthrough imagery, no scary medical scene.

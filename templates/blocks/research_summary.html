@@ -1,0 +1,10 @@
+<section class="cms-block cms-research-summary">
+  <h2>{{ block.content.question }}</h2>
+  <div>
+    <article><h3>What researchers did</h3><p>{{ block.content.methods }}</p></article>
+    <article><h3>Key finding</h3><p>{{ block.content.finding }}</p></article>
+    <article><h3>Why it matters</h3><p>{{ block.content.why_it_matters }}</p></article>
+    {% if block.content.limitations %}<article><h3>Limitations</h3><p>{{ block.content.limitations }}</p></article>{% endif %}
+  </div>
+  {% if block.content.source %}<a href="{{ block.content.source }}" target="_blank" rel="noopener">Source</a>{% endif %}
+</section>

@@ -1,0 +1,6 @@
+<section class="cms-block cms-definition">
+  <h2>{{ block.content.term }}</h2>
+  <p class="cms-definition__simple">{{ block.content.definition }}</p>
+  {% if block.content.explanation %}<div>{{ block.content.explanation|safe }}</div>{% endif %}
+  {% if block.content.source %}<a href="{{ block.content.source }}" target="_blank" rel="noopener">Source</a>{% endif %}
+</section>

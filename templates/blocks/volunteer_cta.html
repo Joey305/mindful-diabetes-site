@@ -1,0 +1,8 @@
+<section class="cms-block cms-volunteer-cta">
+  <div>
+    <h2>{{ block.content.title }}</h2>
+    {% if block.content.description %}<p>{{ block.content.description }}</p>{% endif %}
+    <p class="cms-meta">{{ block.content.time_commitment }}{% if block.content.time_commitment and block.content.location %} · {% endif %}{{ block.content.location }}</p>
+  </div>
+  <a class="cms-button cms-button--green" href="{{ block.content.url }}">{{ block.content.button }}</a>
+</section>

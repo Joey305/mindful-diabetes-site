@@ -1,0 +1,10 @@
+<section class="cms-block cms-hero-section cms-hero-section--{{ block.settings.height }} cms-align-{{ block.settings.alignment }} {% if block.settings.overlay %}cms-hero-section--overlay{% endif %}" {% if block.content.image %}style="background-image: url('{{ block.content.image }}')"{% endif %}>
+  <div>
+    <h2>{{ block.content.title }}</h2>
+    {% if block.content.subtitle %}<p>{{ block.content.subtitle }}</p>{% endif %}
+    <div class="cms-button-pair">
+      {% if block.content.primary_label and block.content.primary_url %}<a class="cms-button cms-button--green" href="{{ block.content.primary_url }}">{{ block.content.primary_label }}</a>{% endif %}
+      {% if block.content.secondary_label and block.content.secondary_url %}<a class="cms-button cms-button--orange" href="{{ block.content.secondary_url }}">{{ block.content.secondary_label }}</a>{% endif %}
+    </div>
+  </div>
+</section>

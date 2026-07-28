@@ -1,0 +1,9 @@
+<section class="cms-block cms-health-tool-card">
+  {% if block.content.image %}<img src="{{ block.content.image }}" alt="">{% endif %}
+  <div>
+    <p class="eyebrow">Health tool</p>
+    <h2>{{ block.content.title_override or health_tool.title }}</h2>
+    <p>{{ block.content.description or health_tool.description }}</p>
+    <a class="cms-button cms-button--green" href="{{ health_tool.url }}" {% if health_tool.url.startswith('http') %}target="_blank" rel="noopener"{% endif %}>{{ block.content.button }}</a>
+  </div>
+</section>

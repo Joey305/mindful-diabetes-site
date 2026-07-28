@@ -49,6 +49,52 @@
     newsletter_signup: () => ({ settings: {}, content: { heading: "Stay up to date", description: "Get new articles and updates from Mindful Diabetes." } }),
   };
 
+  Object.assign(defaults, {
+    faq: () => ({ settings: { style: "green", multiple_open: false, faq_schema: true }, content: { heading: "Frequently asked questions", items: [{ first: "Question", second: "<p>Answer</p>" }] } }),
+    card_grid: () => ({ settings: { columns: 3, equal_height: true, mobile_horizontal: false }, content: { cards: [{ heading: "Helpful resource", description: "Add a short description.", button: "Learn more", url: "" }] } }),
+    statistics: () => ({ settings: { count_up: false }, content: { items: [{ prefix: "", number: "12,500", suffix: "+", label: "People reached through diabetes education", icon: "" }] } }),
+    table_of_contents: () => ({ settings: { sticky: false, collapse_mobile: true, highlight_current: true }, content: { heading: "On this page" } }),
+    related_posts: () => ({ settings: { count: 3, layout: "cards", show_image: true, show_date: true, show_excerpt: true }, content: { heading: "Related reading", category: "", tags: [], slugs: [] } }),
+    featured_content: () => ({ settings: { layout: "image_left" }, content: { slug: "", eyebrow: "Featured", title_override: "", description_override: "", image_override: "", button: "Read more" } }),
+    resource_download: () => ({ settings: { email_required: false }, content: { title: "Resource download", description: "", file_url: "", file_type: "PDF", file_size: "", preview_image: "", button: "Download" } }),
+    citation: () => ({ settings: { display: "compact" }, content: { authors: "", title: "Article title", journal: "", year: "", doi: "", pubmed_url: "", number: "" } }),
+    alert_notice: () => ({ settings: { type: "information" }, content: { heading: "Note", message: "<p>This information is educational.</p>" } }),
+    icon_list: () => ({ settings: {}, content: { heading: "", items: [{ icon: "", title: "Practical support", description: "Add a short description.", url: "" }] } }),
+    process_steps: () => ({ settings: { layout: "vertical" }, content: { heading: "Step by step", steps: [{ title: "Step", text: "Add a short description." }] } }),
+    definition: () => ({ settings: {}, content: { term: "Term", definition: "Simple definition.", explanation: "", source: "" } }),
+    comparison_table: () => ({ settings: { highlight_column: 0 }, content: { headers: ["Option A", "Option B"], rows: [{ cells: ["Add comparison text", "Add comparison text"] }] } }),
+    side_by_side: () => ({ settings: {}, content: { left_label: "Before", left_title: "Problem", left_text: "", right_label: "After", right_title: "Solution", right_text: "" } }),
+    myth_fact: () => ({ settings: {}, content: { myth: "Add the myth.", fact: "Add the fact." } }),
+    quiz: () => ({ settings: {}, content: { question: "Knowledge check", answers: [{ text: "Answer A", correct: true }, { text: "Answer B", correct: false }], explanation: "" } }),
+    sponsor_logo_grid: () => ({ settings: { grayscale: false }, content: { sponsors: [{ logo: "", name: "Sponsor name", url: "", level: "" }] } }),
+    team_profile: () => ({ settings: {}, content: { photo: "", name: "Team member", role: "", credentials: "", bio: "", profile_url: "" } }),
+    donation_progress: () => ({ settings: {}, content: { campaign: "Fundraising campaign", raised: 0, goal: 1000, donors: 0, button: "Donate", url: "/donation/" } }),
+    volunteer_cta: () => ({ settings: {}, content: { title: "Volunteer with Mindful Diabetes", description: "", time_commitment: "", location: "Remote", button: "Volunteer", url: "/volunteer/" } }),
+    event: () => ({ settings: {}, content: { title: "Event", date: "", time: "", timezone: "", location: "", description: "", registration_url: "", calendar_url: "" } }),
+    newsletter_archive: () => ({ settings: { count: 3 }, content: { heading: "Newsletter archive", items: [{ title: "Newsletter issue", date: "", description: "Add a short description.", url: "" }] } }),
+    author_bio: () => ({ settings: {}, content: { photo: "", name: "", credentials: "", bio: "", profile_url: "" } }),
+    article_metadata: () => ({ settings: { show_author: true, show_dates: true, show_category: true, show_reading_time: true }, content: { reviewed_by: "" } }),
+    medical_reviewer: () => ({ settings: {}, content: { name: "Medical reviewer", credentials: "", review_date: "", profile_url: "", statement: "Reviewed for educational clarity and accuracy." } }),
+    social_sharing: () => ({ settings: { facebook: true, linkedin: true, x: true, email: true, copy: true }, content: { heading: "Share this" } }),
+    post_navigation: () => ({ settings: {}, content: { heading: "Keep reading" } }),
+    footnotes: () => ({ settings: {}, content: { heading: "Footnotes", notes: ["Add a note."] } }),
+    hero_section: () => ({ settings: { height: "compact", alignment: "left", overlay: false }, content: { title: "Hero title", subtitle: "", image: "", primary_label: "", primary_url: "", secondary_label: "", secondary_url: "" } }),
+    section_container: () => ({ settings: { width: "standard", background: "soft", spacing: "medium", frame: false }, content: { blocks: [] } }),
+    tabs: () => ({ settings: {}, content: { tabs: [{ title: "Overview", body: "<p>Add tab content.</p>" }] } }),
+    image_gallery: () => ({ settings: { columns: 3, ratio: "natural", frame: false }, content: { images: [{ src: "", alt: "", caption: "" }] } }),
+    image_text: () => ({ settings: { image_position: "left", vertical_alignment: "center" }, content: { image: "", alt: "", heading: "Image and text", text: "", button: "", url: "" } }),
+    logo_badge_row: () => ({ settings: {}, content: { badges: [{ image: "", label: "Badge", url: "" }] } }),
+    embed: () => ({ settings: { provider: "google_maps" }, content: { url: "" } }),
+    recipe_card: () => ({ settings: {}, content: { title: "Recipe", image: "", prep_time: "", cook_time: "", servings: "", ingredients: ["Add an ingredient"], steps: ["Add a step"], nutrition: "", tags: [] } }),
+    nutrition_facts: () => ({ settings: {}, content: { serving_size: "", calories: "", carbohydrates: "", fiber: "", protein: "", fat: "", sodium: "", estimated: true } }),
+    glucose_tip: () => ({ settings: {}, content: { heading: "Glucose-friendly tip", explanation: "", example: "", source: "" } }),
+    meal_swap: () => ({ settings: {}, content: { heading: "Meal swap", swaps: [{ first: "Instead of", second: "Consider" }] } }),
+    health_tool_card: () => ({ settings: {}, content: { tool: "health_tools", title_override: "", description: "", button: "Open tool", image: "" } }),
+    research_summary: () => ({ settings: {}, content: { question: "Research question", methods: "", finding: "", why_it_matters: "", limitations: "", source: "" } }),
+    study_snapshot: () => ({ settings: {}, content: { study_type: "", participants: "", duration: "", population: "", outcome: "", publication: "" } }),
+    community_story: () => ({ settings: { permission_confirmed: false }, content: { name: "Anonymous community member", anonymous: true, photo: "", story: "", pull_quote: "", consent_reference: "" } }),
+  });
+
   function makeId(prefix) {
     return `${prefix}_${Math.random().toString(36).slice(2, 10)}`;
   }
@@ -118,6 +164,8 @@
         const found = findBlockById(column.blocks || [], id);
         if (found) return found;
       }
+      const nested = findBlockById(block.content?.blocks || [], id);
+      if (nested) return nested;
     }
     return null;
   }
@@ -130,6 +178,8 @@
         const found = findBlockParent(column.blocks || [], id, block);
         if (found) return found;
       }
+      const nested = findBlockParent(block.content?.blocks || [], id, block);
+      if (nested) return nested;
     }
     return null;
   }
@@ -149,6 +199,7 @@
         column.id = makeId("col");
         (column.blocks || []).forEach(renew);
       }
+      (item.content?.blocks || []).forEach(renew);
     }
     renew(cloned);
     return cloned;
@@ -174,6 +225,7 @@
       for (const column of block.content?.columns || []) {
         if (column.id === zoneId) return column.blocks;
       }
+      if (block.id === zoneId && Array.isArray(block.content?.blocks)) return block.content.blocks;
     }
     return state.blocks;
   }
@@ -185,6 +237,7 @@
       for (const column of block.content?.columns || []) {
         all.push(...flattenBlocks(column.blocks || []));
       }
+      all.push(...flattenBlocks(block.content?.blocks || []));
     }
     return all;
   }
@@ -292,7 +345,34 @@
     if (block.type === "newsletter_signup") {
       return `<section class="cms-block cms-newsletter-signup"><div><h2>${escapeHtml(content.heading || "Stay up to date")}</h2><p>${escapeHtml(content.description || "")}</p></div><div class="cms-image-placeholder">Newsletter form</div></section>`;
     }
-    return `<div class="cms-block cms-image-placeholder">Reusable section</div>`;
+    if (block.type === "faq") {
+      return `<section class="cms-block cms-faq"><h2>${escapeHtml(content.heading || "FAQ")}</h2>${(content.items || []).map((item) => `<details><summary>${escapeHtml(item.first || item.question)}</summary><div>${item.second || item.answer || ""}</div></details>`).join("")}</section>`;
+    }
+    if (block.type === "card_grid") {
+      return `<section class="cms-block cms-card-grid cms-card-grid--${settings.columns || 3}">${(content.cards || []).map((card) => `<article class="cms-resource-card"><h3>${escapeHtml(card.heading)}</h3><p>${escapeHtml(card.description)}</p></article>`).join("")}</section>`;
+    }
+    if (block.type === "statistics") {
+      return `<section class="cms-block cms-statistics">${(content.items || []).map((item) => `<article><strong>${escapeHtml(item.prefix)}${escapeHtml(item.number)}${escapeHtml(item.suffix)}</strong><p>${escapeHtml(item.label)}</p></article>`).join("")}</section>`;
+    }
+    if (block.type === "table_of_contents") return `<nav class="cms-block cms-table-of-contents"><h2>${escapeHtml(content.heading || "On this page")}</h2><p class="admin-muted">Generated from H2 and H3 headings after saving.</p></nav>`;
+    if (block.type === "related_posts") return `<section class="cms-block cms-related-posts"><h2>${escapeHtml(content.heading || "Related reading")}</h2><div class="cms-image-placeholder">Dynamic related posts</div></section>`;
+    if (block.type === "featured_content") return `<section class="cms-block cms-featured-content"><div><p class="eyebrow">${escapeHtml(content.eyebrow || "Featured")}</p><h2>${escapeHtml(content.title_override || content.slug || "Featured content")}</h2><p>${escapeHtml(content.description_override || "Pulls from a selected page or post after saving.")}</p></div></section>`;
+    if (block.type === "resource_download") return `<section class="cms-block cms-resource-download"><div><h2>${escapeHtml(content.title || "Resource download")}</h2><p>${escapeHtml(content.description || "")}</p><span class="cms-button cms-button--orange">${escapeHtml(content.button || "Download")}</span></div></section>`;
+    if (block.type === "citation") return `<aside class="cms-block cms-citation"><p><strong>${escapeHtml(content.title || "Article title")}</strong> ${escapeHtml(content.journal || "")} ${escapeHtml(content.year || "")}</p></aside>`;
+    if (block.type === "alert_notice") return `<aside class="cms-block cms-alert cms-alert--${settings.type || "information"}"><h2>${escapeHtml(content.heading || "Note")}</h2><div>${content.message || ""}</div></aside>`;
+    if (block.type === "icon_list") return `<section class="cms-block cms-icon-list"><h2>${escapeHtml(content.heading || "Icon list")}</h2><div>${(content.items || []).map((item) => `<article><span>${escapeHtml(item.icon || "✓")}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.description)}</p></article>`).join("")}</div></section>`;
+    if (block.type === "process_steps") return `<section class="cms-block cms-process"><h2>${escapeHtml(content.heading || "Step by step")}</h2><ol>${(content.steps || []).map((step, index) => `<li><span>${index + 1}</span><div><h3>${escapeHtml(step.title)}</h3><p>${escapeHtml(step.text)}</p></div></li>`).join("")}</ol></section>`;
+    if (block.type === "definition") return `<section class="cms-block cms-definition"><h2>${escapeHtml(content.term || "Term")}</h2><p>${escapeHtml(content.definition || "")}</p></section>`;
+    if (block.type === "comparison_table") return `<div class="cms-block cms-comparison-table"><table><thead><tr>${(content.headers || []).map((header) => `<th>${escapeHtml(header)}</th>`).join("")}</tr></thead><tbody>${(content.rows || []).map((row) => `<tr>${(row.cells || []).map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+    if (block.type === "side_by_side") return `<section class="cms-block cms-side-by-side"><article><p class="eyebrow">${escapeHtml(content.left_label)}</p><h3>${escapeHtml(content.left_title)}</h3><p>${escapeHtml(content.left_text)}</p></article><article><p class="eyebrow">${escapeHtml(content.right_label)}</p><h3>${escapeHtml(content.right_title)}</h3><p>${escapeHtml(content.right_text)}</p></article></section>`;
+    if (block.type === "myth_fact") return `<section class="cms-block cms-myth-fact"><article><p class="eyebrow">Myth</p><p>${escapeHtml(content.myth)}</p></article><article><p class="eyebrow">Fact</p><p>${escapeHtml(content.fact)}</p></article></section>`;
+    if (block.type === "quiz") return `<section class="cms-block cms-quiz"><h2>${escapeHtml(content.question)}</h2><div class="cms-quiz__answers">${(content.answers || []).map((answer) => `<button type="button">${escapeHtml(answer.text)}</button>`).join("")}</div></section>`;
+    if (block.type === "section_container") return `<section class="cms-block cms-section-container cms-drop-zone" data-drop-zone="${block.id}">${(content.blocks || []).map((nested) => renderEditorBlock(nested).outerHTML).join("") || "<p class='admin-muted'>Drop blocks into this section</p>"}</section>`;
+    if (block.type === "tabs") return `<section class="cms-block cms-tabs">${(content.tabs || []).map((tab) => `<details open><summary>${escapeHtml(tab.title)}</summary><div>${tab.body || ""}</div></details>`).join("")}</section>`;
+    if (block.type === "hero_section") return `<section class="cms-block cms-hero-section cms-hero-section--${settings.height || "compact"}"><div><h2>${escapeHtml(content.title)}</h2><p>${escapeHtml(content.subtitle)}</p></div></section>`;
+    const title = content.title || content.heading || content.name || content.campaign || content.question || content.term || block.type.replace(/_/g, " ");
+    const summary = content.description || content.text || content.bio || content.story || content.explanation || content.finding || "";
+    return `<section class="cms-block cms-component-preview"><p class="eyebrow">${escapeHtml(block.type.replace(/_/g, " "))}</p><h2>${escapeHtml(title)}</h2>${summary ? `<p>${escapeHtml(summary)}</p>` : ""}</section>`;
   }
 
   function bindInlineEditing(wrapper, block) {
@@ -347,7 +427,7 @@
       return;
     }
     blockSettings.innerHTML = settingsHtml(block);
-    blockSettings.querySelectorAll("[data-block-content], [data-block-setting]").forEach((field) => {
+    blockSettings.querySelectorAll("[data-block-content], [data-block-setting], [data-block-json]").forEach((field) => {
       field.addEventListener("input", () => updateBlockFromField(block, field));
       field.addEventListener("change", () => updateBlockFromField(block, field));
     });
@@ -391,7 +471,11 @@
     if (block.type === "quote") return [textArea("Quote", "quote", c.quote), textInput("Author", "author", c.author), textInput("Role or organization", "role", c.role)].join("");
     if (block.type === "donation_cta") return [textInput("Heading", "heading", c.heading), textArea("Body", "body", c.body), textInput("Button", "button", c.button)].join("");
     if (block.type === "newsletter_signup") return [textInput("Heading", "heading", c.heading), textArea("Description", "description", c.description)].join("");
-    return "<p class='admin-muted'>No settings for this block yet.</p>";
+    return [
+      "<p class='admin-muted'>Edit this structured block as JSON for now. Keep field names intact.</p>",
+      `<label>Content JSON<textarea rows="10" data-block-json="content">${escapeHtml(JSON.stringify(c, null, 2))}</textarea></label>`,
+      `<label>Settings JSON<textarea rows="6" data-block-json="settings">${escapeHtml(JSON.stringify(s, null, 2))}</textarea></label>`,
+    ].join("");
   }
 
   function updateBlockFromField(block, field) {
@@ -399,6 +483,14 @@
     const value = field.type === "checkbox" ? field.checked : field.value;
     if (field.dataset.blockContent) block.content[field.dataset.blockContent] = value;
     if (field.dataset.blockSetting) block.settings[field.dataset.blockSetting] = field.dataset.blockSetting === "level" ? Number(value) : value;
+    if (field.dataset.blockJson) {
+      try {
+        block[field.dataset.blockJson] = JSON.parse(field.value || "{}");
+      } catch (error) {
+        saveState.textContent = "JSON needs a quick fix";
+        return;
+      }
+    }
     render();
   }
 

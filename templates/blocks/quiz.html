@@ -1,0 +1,10 @@
+<section class="cms-block cms-quiz" data-quiz-block>
+  <h2>{{ block.content.question }}</h2>
+  <div class="cms-quiz__answers">
+    {% for answer in block.content.answers %}
+      <button type="button" data-correct="{{ '1' if answer.correct else '0' }}">{{ answer.text }}</button>
+    {% endfor %}
+  </div>
+  {% if block.content.explanation %}<p class="cms-quiz__explanation" hidden>{{ block.content.explanation }}</p>{% endif %}
+  <p class="cms-meta">Educational knowledge check only; not a diagnosis or medical advice.</p>
+</section>

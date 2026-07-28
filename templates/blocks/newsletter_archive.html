@@ -1,0 +1,13 @@
+<section class="cms-block cms-newsletter-archive">
+  <h2>{{ block.content.heading }}</h2>
+  {% for item in block.content.items[:block.settings.count] %}
+    <article>
+      <div>
+        <h3>{{ item.title }}</h3>
+        {% if item.date %}<p class="cms-meta">{{ item.date }}</p>{% endif %}
+        {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+      </div>
+      {% if item.url %}<a href="{{ item.url }}">View</a>{% endif %}
+    </article>
+  {% endfor %}
+</section>

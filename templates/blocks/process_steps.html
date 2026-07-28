@@ -1,0 +1,14 @@
+<section class="cms-block cms-process cms-process--{{ block.settings.layout }}">
+  <h2>{{ block.content.heading }}</h2>
+  <ol>
+    {% for step in block.content.steps %}
+      <li>
+        <span>{{ loop.index }}</span>
+        <div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

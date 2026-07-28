@@ -1,0 +1,10 @@
+<section class="cms-block cms-donation-progress">
+  {% set percent = (block.content.raised / block.content.goal * 100) if block.content.goal else 0 %}
+  <div>
+    <h2>{{ block.content.campaign }}</h2>
+    <p><strong>${{ "{:,}".format(block.content.raised) }}</strong> raised of ${{ "{:,}".format(block.content.goal) }}</p>
+    {% if block.content.donors %}<p class="cms-meta">{{ block.content.donors }} donors</p>{% endif %}
+  </div>
+  <div class="cms-progress-bar" aria-label="{{ percent|round|int }} percent funded"><span style="width: {{ [percent, 100]|min }}%"></span></div>
+  <a class="cms-button cms-button--orange" href="{{ block.content.url }}">{{ block.content.button }}</a>
+</section>

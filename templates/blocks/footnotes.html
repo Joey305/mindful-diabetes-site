@@ -1,0 +1,8 @@
+<section class="cms-block cms-footnotes">
+  <h2>{{ block.content.heading }}</h2>
+  <ol>
+    {% for note in block.content.notes %}
+      <li>{{ note }}</li>
+    {% endfor %}
+  </ol>
+</section>

@@ -1,0 +1,10 @@
+<section class="cms-block cms-social-sharing">
+  <h2>{{ block.content.heading }}</h2>
+  <div>
+    {% if block.settings.facebook %}<a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url|urlencode }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
+    {% if block.settings.linkedin %}<a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.url|urlencode }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    {% if block.settings.x %}<a href="https://twitter.com/intent/tweet?url={{ request.url|urlencode }}&text={{ item.title|urlencode }}" target="_blank" rel="noopener">X</a>{% endif %}
+    {% if block.settings.email %}<a href="mailto:?subject={{ item.title|urlencode }}&body={{ request.url|urlencode }}">Email</a>{% endif %}
+    {% if block.settings.copy %}<button type="button" onclick="navigator.clipboard && navigator.clipboard.writeText(window.location.href)">Copy link</button>{% endif %}
+  </div>
+</section>

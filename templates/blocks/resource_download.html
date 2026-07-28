@@ -1,0 +1,9 @@
+<section class="cms-block cms-resource-download">
+  {% if block.content.preview_image %}<img src="{{ block.content.preview_image }}" alt="">{% endif %}
+  <div>
+    <h2>{{ block.content.title }}</h2>
+    {% if block.content.description %}<p>{{ block.content.description }}</p>{% endif %}
+    <p class="cms-meta">{{ block.content.file_type }}{% if block.content.file_size %} · {{ block.content.file_size }}{% endif %}{% if block.settings.email_required %} · Email required{% endif %}</p>
+    {% if block.content.file_url %}<a class="cms-button cms-button--orange" href="{{ block.content.file_url }}">{{ block.content.button }}</a>{% endif %}
+  </div>
+</section>

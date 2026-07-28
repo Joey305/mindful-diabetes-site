@@ -1,0 +1,8 @@
+<section class="cms-block cms-badge-row">
+  {% for badge in block.content.badges %}
+    <a href="{{ badge.url or '#' }}" {% if badge.url %}target="_blank" rel="noopener"{% endif %}>
+      {% if badge.image %}<img src="{{ badge.image }}" alt="{{ badge.label }}">{% endif %}
+      <span>{{ badge.label }}</span>
+    </a>
+  {% endfor %}
+</section>

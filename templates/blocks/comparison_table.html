@@ -1,0 +1,20 @@
+<div class="cms-block cms-comparison-table">
+  <table>
+    <thead>
+      <tr>
+        {% for header in block.content.headers %}
+          <th class="{% if loop.index == block.settings.highlight_column %}is-highlighted{% endif %}" scope="col">{{ header }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in block.content.rows %}
+        <tr>
+          {% for cell in row.cells %}
+            <td class="{% if loop.index == block.settings.highlight_column %}is-highlighted{% endif %}">{{ cell }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,7 @@
+<aside class="cms-block cms-glucose-tip">
+  <p class="eyebrow">Glucose-friendly tip</p>
+  <h2>{{ block.content.heading }}</h2>
+  {% if block.content.explanation %}<p>{{ block.content.explanation }}</p>{% endif %}
+  {% if block.content.example %}<p><strong>Try this:</strong> {{ block.content.example }}</p>{% endif %}
+  {% if block.content.source %}<a href="{{ block.content.source }}" target="_blank" rel="noopener">Source</a>{% endif %}
+</aside>

@@ -1,3 +1,3 @@
 <div class="cms-block cms-block-heading cms-align-{{ block.settings.alignment }} cms-color-{{ block.settings.color }}">
-  <h{{ block.settings.level }} class="{% if block.settings.accent %}cms-heading-accent{% endif %}">{{ block.content.text }}</h{{ block.settings.level }}>
+  <h{{ block.settings.level }} id="{{ block.settings.anchor|default(block.id) }}" class="{% if block.settings.accent %}cms-heading-accent{% endif %}">{{ block.content.text }}</h{{ block.settings.level }}>
 </div>

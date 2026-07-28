@@ -1,0 +1,8 @@
+{% set url = embed_url(block.settings.provider, block.content.url) %}
+<section class="cms-block cms-approved-embed cms-approved-embed--{{ block.settings.provider }}">
+  {% if url %}
+    <iframe src="{{ url }}" title="{{ block.settings.provider|replace('_', ' ')|title }}" loading="lazy" allowfullscreen></iframe>
+  {% else %}
+    <div class="cms-image-placeholder">Approved embed</div>
+  {% endif %}
+</section>
