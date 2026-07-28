@@ -5,6 +5,18 @@
       <button type="button" data-correct="{{ '1' if answer.correct else '0' }}">{{ answer.text }}</button>
     {% endfor %}
   </div>
+  <p class="cms-quiz__result" role="status" aria-live="polite"></p>
   {% if block.content.explanation %}<p class="cms-quiz__explanation" hidden>{{ block.content.explanation }}</p>{% endif %}
   <p class="cms-meta">Educational knowledge check only; not a diagnosis or medical advice.</p>
+  <script>
+    document.currentScript.closest("[data-quiz-block]").addEventListener("click", function (event) {
+      var button = event.target.closest("button[data-correct]");
+      if (!button) return;
+      var block = button.closest("[data-quiz-block]");
+      var result = block.querySelector(".cms-quiz__result");
+      var explanation = block.querySelector(".cms-quiz__explanation");
+      result.textContent = button.dataset.correct === "1" ? "Correct." : "Not quite.";
+      if (explanation) explanation.hidden = false;
+    });
+  </script>
 </section>

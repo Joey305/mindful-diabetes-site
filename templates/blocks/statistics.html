@@ -1,5 +1,5 @@
 <section class="cms-block cms-statistics {% if block.settings.count_up %}cms-statistics--count-up{% endif %}">
-  {% for item in block.content.items %}
+  {% for item in block.content["items"] %}
     <article>
       {% if item.icon %}<span aria-hidden="true">{{ item.icon }}</span>{% endif %}
       <strong>{{ item.prefix }}{{ item.number }}{{ item.suffix }}</strong>

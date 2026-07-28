@@ -1,6 +1,6 @@
 <section class="cms-block cms-faq cms-faq--{{ block.settings.style }}" {% if block.settings.faq_schema %}itemscope itemtype="https://schema.org/FAQPage"{% endif %}>
   <h2>{{ block.content.heading }}</h2>
-  {% for item in block.content.items %}
+  {% for item in block.content["items"] %}
     <details {% if loop.first and not block.settings.multiple_open %}open{% endif %} {% if block.settings.faq_schema %}itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"{% endif %}>
       <summary {% if block.settings.faq_schema %}itemprop="name"{% endif %}>{{ item.first }}</summary>
       <div {% if block.settings.faq_schema %}itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"{% endif %}>

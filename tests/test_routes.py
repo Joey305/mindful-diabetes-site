@@ -1216,3 +1216,119 @@ def test_admin_content_state_changes_require_csrf(tmp_path):
     response = client.post("/admin/pages/new/")
 
     assert response.status_code == 400
+
+
+def test_cms_new_mindful_diabetes_blocks_render_and_sanitize(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        }
+    )
+    client = app.test_client()
+    csrf_token = sign_in_admin(client)
+    create_response = client.post("/admin/posts/new/", data={"csrf_token": csrf_token})
+    content_id = create_response.headers["Location"].split("/admin/content/", 1)[1].split("/edit/", 1)[0]
+
+    payload = {
+        "id": content_id,
+        "content_type": "post",
+        "title": "Mindful Block Pack",
+        "slug": "mindful-block-pack",
+        "status": "draft",
+        "blocks": [
+            {
+                "id": "toc",
+                "type": "table_of_contents",
+                "version": 1,
+                "settings": {"sticky": True, "collapse_mobile": True, "highlight_current": True},
+                "content": {"heading": "Article guide"},
+            },
+            {
+                "id": "heading-a1c",
+                "type": "heading",
+                "version": 1,
+                "settings": {"level": 2, "alignment": "left", "accent": True, "color": "green"},
+                "content": {"text": "Understanding A1C"},
+            },
+            {
+                "id": "faq",
+                "type": "faq",
+                "version": 1,
+                "settings": {"style": "orange", "multiple_open": True, "faq_schema": True},
+                "content": {
+                    "heading": "Diabetes questions",
+                    "items": [{"question": "Can I eat carbohydrates?", "answer": "<p>Yes, with planning.</p><script>bad()</script>"}],
+                },
+            },
+            {
+                "id": "myth",
+                "type": "myth_fact",
+                "version": 1,
+                "settings": {},
+                "content": {"myth": "Diabetes means no carbs.", "fact": "Carbohydrates can fit with thoughtful portions."},
+            },
+            {
+                "id": "citation",
+                "type": "citation",
+                "version": 1,
+                "settings": {"display": "card"},
+                "content": {
+                    "authors": "Schulz J",
+                    "title": "Helpful research",
+                    "journal": "Mindful Diabetes Review",
+                    "year": "2026",
+                    "doi": "10.1234/example",
+                    "pubmed_url": "javascript:alert(1)",
+                },
+            },
+            {
+                "id": "related",
+                "type": "related_posts",
+                "version": 1,
+                "settings": {"count": 2, "layout": "cards", "show_image": False, "show_date": True, "show_excerpt": False},
+                "content": {"heading": "Related reading"},
+            },
+        ],
+        "settings": {"template": "article"},
+        "seo": {},
+    }
+
+    publish_response = client.post(
+        f"/admin/content/{content_id}/publish/",
+        data=json.dumps(payload),
+        content_type="application/json",
+        headers={"X-CSRF-Token": csrf_token},
+    )
+    assert publish_response.status_code == 200
+
+    response = client.get("/mindful-block-pack/")
+
+    assert response.status_code == 200
+    assert b"Article guide" in response.data
+    assert b'href="#understanding-a1c"' in response.data
+    assert b'id="understanding-a1c"' in response.data
+    assert b"Diabetes questions" in response.data
+    assert b'itemtype="https://schema.org/FAQPage"' in response.data
+    assert b"<script>" not in response.data
+    assert b"Diabetes means no carbs." in response.data
+    assert b"Helpful research" in response.data
+    assert b"javascript:alert" not in response.data
+    assert b"Related reading" in response.data
+
+
+def test_cms_block_library_includes_domain_specific_blocks():
+    labels = {block["type"] for block in app_module.cms.block_library()}
+
+    for expected in [
+        "faq",
+        "card_grid",
+        "statistics",
+        "research_summary",
+        "nutrition_facts",
+        "health_tool_card",
+        "community_story",
+    ]:
+        assert expected in labels

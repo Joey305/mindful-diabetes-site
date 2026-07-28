@@ -1013,6 +1013,402 @@
   color: var(--muted);
 }
 
+.cms-component-preview,
+.cms-faq,
+.cms-table-of-contents,
+.cms-resource-download,
+.cms-citation,
+.cms-alert,
+.cms-definition,
+.cms-quiz,
+.cms-donation-progress,
+.cms-event,
+.cms-medical-reviewer,
+.cms-recipe-card,
+.cms-nutrition-facts,
+.cms-glucose-tip,
+.cms-research-summary,
+.cms-study-snapshot,
+.cms-community-story {
+  padding: 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 42px rgba(13, 19, 56, 0.08);
+}
+
+.cms-faq details,
+.cms-tabs details {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cms-faq details:last-child,
+.cms-tabs details:last-child {
+  border-bottom: 0;
+}
+
+.cms-faq summary,
+.cms-tabs summary {
+  color: var(--primary);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cms-faq--green {
+  background: var(--miami-green-tint);
+}
+
+.cms-faq--orange {
+  background: var(--miami-orange-tint);
+}
+
+.cms-card-grid,
+.cms-related-posts__grid,
+.cms-statistics,
+.cms-sponsor-grid,
+.cms-gallery {
+  display: grid;
+  gap: 1rem;
+}
+
+.cms-card-grid--2,
+.cms-related-posts__grid,
+.cms-sponsor-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cms-card-grid--3,
+.cms-gallery--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cms-card-grid--4,
+.cms-gallery--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cms-resource-card,
+.cms-sponsor-grid a,
+.cms-badge-row a,
+.cms-newsletter-archive article {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1rem;
+  color: var(--body);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(13, 19, 56, 0.07);
+}
+
+.cms-resource-card img,
+.cms-sponsor-grid img,
+.cms-badge-row img,
+.cms-gallery img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+}
+
+.cms-resource-card h3,
+.cms-resource-card p {
+  margin: 0;
+}
+
+.cms-resource-card__icon {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  color: var(--white);
+  background: var(--miami-green);
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.cms-statistics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cms-statistics article {
+  padding: 1.25rem;
+  background: var(--miami-green-tint);
+  border: 1px solid var(--tint-line-green);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cms-statistics strong {
+  display: block;
+  color: var(--primary);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.cms-table-of-contents--sticky {
+  position: sticky;
+  top: 7rem;
+}
+
+.cms-table-of-contents ol,
+.cms-footnotes ol,
+.cms-process ol {
+  margin: 0.75rem 0 0;
+}
+
+.cms-toc-level-3 {
+  margin-left: 1rem;
+}
+
+.cms-meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.cms-featured-content,
+.cms-resource-download,
+.cms-profile-card,
+.cms-author-bio,
+.cms-health-tool-card,
+.cms-recipe-card,
+.cms-community-story {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.cms-featured-content img,
+.cms-resource-download img,
+.cms-profile-card img,
+.cms-author-bio img,
+.cms-health-tool-card img,
+.cms-recipe-card img,
+.cms-community-story img {
+  width: 100%;
+  margin: 0;
+}
+
+.cms-alert--information,
+.cms-alert--medical,
+.cms-glucose-tip,
+.cms-research-summary {
+  background: var(--miami-green-tint);
+  border-color: var(--tint-line-green);
+}
+
+.cms-alert--caution,
+.cms-alert--urgent {
+  background: var(--miami-orange-tint);
+  border-color: var(--tint-line-orange);
+}
+
+.cms-alert--success {
+  background: var(--miami-green-tint-2);
+  border-color: var(--tint-line-green);
+}
+
+.cms-icon-list > div,
+.cms-side-by-side,
+.cms-myth-fact,
+.cms-research-summary > div,
+.cms-recipe-card__grid,
+.cms-study-snapshot dl,
+.cms-nutrition-facts dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cms-icon-list article,
+.cms-side-by-side article,
+.cms-myth-fact article,
+.cms-research-summary article,
+.cms-meal-swap article {
+  padding: 1rem;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.cms-process li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.cms-process li > span,
+.cms-event__date {
+  display: grid;
+  min-width: 3rem;
+  min-height: 3rem;
+  place-items: center;
+  color: var(--white);
+  background: var(--miami-green);
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.cms-comparison-table {
+  overflow-x: auto;
+}
+
+.cms-comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cms-comparison-table th,
+.cms-comparison-table td {
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+.cms-comparison-table .is-highlighted {
+  background: var(--miami-orange-tint);
+}
+
+.cms-quiz__answers,
+.cms-social-sharing > div,
+.cms-button-pair,
+.cms-post-navigation > div,
+.cms-badge-row,
+.cms-meal-swap > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.cms-quiz button,
+.cms-social-sharing a,
+.cms-social-sharing button,
+.cms-post-navigation a {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
+  color: var(--miami-green);
+  background: var(--miami-green-tint);
+  border: 1px solid var(--tint-line-green);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cms-progress-bar {
+  height: 0.85rem;
+  overflow: hidden;
+  background: var(--soft);
+  border-radius: 999px;
+}
+
+.cms-progress-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--miami-green), var(--secondary));
+}
+
+.cms-event {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1rem;
+}
+
+.cms-article-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.cms-article-metadata span {
+  padding: 0.4rem 0.65rem;
+  background: var(--soft);
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.cms-hero-section {
+  display: grid;
+  min-height: 320px;
+  align-items: center;
+  padding: 2rem;
+  color: var(--primary);
+  background: var(--miami-green-tint);
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.cms-hero-section--large {
+  min-height: 520px;
+}
+
+.cms-hero-section--overlay {
+  color: var(--white);
+  background-color: rgba(0, 80, 48, 0.72);
+  background-blend-mode: multiply;
+}
+
+.cms-section-container {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.cms-section-container--soft {
+  background: var(--soft);
+}
+
+.cms-section-container--green {
+  background: var(--miami-green-tint);
+}
+
+.cms-section-container--orange {
+  background: var(--miami-orange-tint);
+}
+
+.cms-section-container--framed {
+  border: 2px solid var(--secondary);
+}
+
+.cms-gallery figure {
+  margin: 0;
+}
+
+.cms-gallery--square img {
+  aspect-ratio: 1;
+}
+
+.cms-gallery--wide img {
+  aspect-ratio: 16 / 9;
+}
+
+.cms-gallery--square img,
+.cms-gallery--wide img {
+  object-fit: cover;
+}
+
+.cms-image-text {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.45fr) 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cms-image-text--right .cms-image-text__media {
+  order: 2;
+}
+
+.cms-approved-embed iframe {
+  width: 100%;
+  min-height: 360px;
+}
+
 @media (max-width: 1180px) {
   .cms-editor-toolbar,
   .cms-editor-layout {
@@ -1045,8 +1441,32 @@
 
   .cms-callout,
   .cms-donation-cta,
-  .cms-newsletter-signup {
+  .cms-newsletter-signup,
+  .cms-featured-content,
+  .cms-resource-download,
+  .cms-profile-card,
+  .cms-author-bio,
+  .cms-health-tool-card,
+  .cms-recipe-card,
+  .cms-community-story,
+  .cms-icon-list > div,
+  .cms-side-by-side,
+  .cms-myth-fact,
+  .cms-research-summary > div,
+  .cms-recipe-card__grid,
+  .cms-study-snapshot dl,
+  .cms-nutrition-facts dl,
+  .cms-event,
+  .cms-image-text,
+  .cms-statistics,
+  .cms-card-grid--2,
+  .cms-card-grid--3,
+  .cms-card-grid--4,
+  .cms-gallery--2,
+  .cms-gallery--3,
+  .cms-gallery--4 {
     display: grid;
+    grid-template-columns: 1fr;
   }
 }
 

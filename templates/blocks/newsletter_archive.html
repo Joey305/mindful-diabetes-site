@@ -1,6 +1,6 @@
 <section class="cms-block cms-newsletter-archive">
   <h2>{{ block.content.heading }}</h2>
-  {% for item in block.content.items[:block.settings.count] %}
+  {% for item in block.content["items"][:block.settings.count] %}
     <article>
       <div>
         <h3>{{ item.title }}</h3>
