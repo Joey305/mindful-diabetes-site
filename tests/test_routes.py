@@ -918,10 +918,10 @@ def test_june_alzheimers_clinical_trials_post_has_snapshot_sources_and_images():
     assert b"592 interventional" in response.data
     assert b"286 observational" in response.data
     assert b"671 studies" in response.data
-    assert b"Records updated after that date were preserved in a separate exclusions file" in response.data
+    assert b"Full research notes and the downloadable dataset preserve" in response.data
     assert b"Clinical trials are not promises" in response.data
     assert b'class="article-impact-grid"' in response.data
-    assert response.data.count(b'class="article-table-wrap"') == 4
+    assert response.data.count(b'class="article-table-wrap"') == 3
     assert b'class="article-wellness-tools"' in response.data
     assert all(asset in response.data for asset in image_assets)
     assert all(link in response.data for link in internal_links)
