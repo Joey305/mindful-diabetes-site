@@ -69,3 +69,14 @@ Caption: Good models help researchers ask sharper questions, but they still need
 Description: Closing educational image for a section explaining both the promise and limits of iPSC-derived Alzheimer's disease models.
 
 Prompt: Create a balanced editorial research image showing a cell culture dish, a small organoid, a data notebook, and a careful checklist on a lab desk. The mood should be hopeful but restrained, representing both promise and limits of iPSC Alzheimer's models. No readable text, no logos, no cure language, no dramatic breakthrough imagery, no scary medical scene.
+
+## 7. Protein Location Map
+
+Filename: `ipsc-alzheimers-protein-map.webp`
+Size: 1400 x 933
+Alt text: A labeled neuron and glia diagram showing APP, amyloid beta, tau, PSEN1, GSK3 beta, APOE, calcium signaling, astrocytes, and microglia in an Alzheimer's iPSC model.
+Title: Where Alzheimer's iPSC model proteins appear in neurons and glia
+Caption: In simplified form: APP and PSEN1 sit close to amyloid processing, tau and GSK3β connect to neuron and axon stress, and APOE shapes lipid handling and amyloid cleanup in astrocytes and microglia.
+Description: Educational figure showing where key Alzheimer's iPSC model proteins and signals can appear across neurons, astrocytes, and microglia.
+
+Implementation note: This figure was hand-built as `ipsc-alzheimers-protein-map.svg` because the protein and cell labels need to stay accurate and readable, then rendered into the optimized WebP used by the article.

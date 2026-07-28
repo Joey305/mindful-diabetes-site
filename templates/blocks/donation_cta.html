@@ -1,0 +1,10 @@
+<section class="cms-block cms-donation-cta">
+  <div>
+    <h2>{{ block.content.heading }}</h2>
+    <p>{{ block.content.body }}</p>
+  </div>
+  <form action="https://www.paypal.com/donate" method="post" target="_blank">
+    <input type="hidden" name="hosted_button_id" value="{{ paypal_button_id }}">
+    <button class="donate-button" type="submit">{{ block.content.button }}</button>
+  </form>
+</section>

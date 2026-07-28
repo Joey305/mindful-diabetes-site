@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Content | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}admin-page{% endblock %}
+
+{% block content %}
+  <section class="admin-dashboard admin-content-index" aria-labelledby="admin-content-heading">
+    <div class="admin-dashboard__header">
+      <div>
+        <p class="eyebrow">Content management</p>
+        <h1 id="admin-content-heading">Manage content</h1>
+        <p class="admin-muted">Create pages and posts with structured blocks. Storage: {{ storage_backend }}.</p>
+      </div>
+      <a class="admin-logout" href="{{ url_for('admin_dashboard') }}">Dashboard</a>
+    </div>
+
+    {% if not storage_warning.persistent %}
+      <p class="admin-alert admin-alert--error">Uploads are local development only. Configure persistent storage before relying on image uploads on Heroku.</p>
+    {% endif %}
+
+    <div class="admin-action-row" aria-label="Content actions">
+      <form action="{{ url_for('admin_new_page') }}" method="post">
+        <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+        <button type="submit">Create New Page</button>
+      </form>
+      <form action="{{ url_for('admin_new_post') }}" method="post">
+        <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+        <button type="submit">Create New Post</button>
+      </form>
+    </div>
+
+    <section class="admin-panel admin-panel--wide" aria-label="Content filters">
+      <form class="admin-filter-form" action="{{ url_for('admin_content_index') }}" method="get">
+        <label>
+          Search
+          <input name="q" type="search" value="{{ query }}" placeholder="Title, slug, or excerpt">
+        </label>
+        <label>
+          Type
+          <select name="type">
+            <option value="">All types</option>
+            <option value="page" {% if content_type == "page" %}selected{% endif %}>Pages</option>
+            <option value="post" {% if content_type == "post" %}selected{% endif %}>Posts</option>
+          </select>
+        </label>
+        <label>
+          Status
+          <select name="status">
+            <option value="">All statuses</option>
+            {% for option in ["draft", "published", "scheduled", "archived"] %}
+              <option value="{{ option }}" {% if status == option %}selected{% endif %}>{{ option|title }}</option>
+            {% endfor %}
+          </select>
+        </label>
+        <button type="submit">Filter</button>
+      </form>
+    </section>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="content-list-heading">
+      <div class="admin-panel__header">
+        <h2 id="content-list-heading">Content</h2>
+        <span>{{ items|length }} item{{ "" if items|length == 1 else "s" }}</span>
+      </div>
+
+      {% if items %}
+        <div class="admin-table-wrap">
+          <table class="admin-table admin-content-table">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Type</th>
+                <th scope="col">Status</th>
+                <th scope="col">Author</th>
+                <th scope="col">Updated</th>
+                <th scope="col">Published</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in items %}
+                <tr>
+                  <td>
+                    <a href="{{ url_for('admin_content_editor', content_id=item.id) }}">{{ item.title }}</a>
+                    <small>/{{ item.slug }}/</small>
+                  </td>
+                  <td>{{ item.content_type|title }}</td>
+                  <td><span class="admin-status admin-status--{{ item.status }}">{{ item.status|title }}</span></td>
+                  <td>{{ item.author or "Admin" }}</td>
+                  <td>{{ item.updated_at_label }}</td>
+                  <td>{{ item.published_at_label or "-" }}</td>
+                  <td>
+                    <div class="admin-table-actions">
+                      <a href="{{ url_for('admin_content_editor', content_id=item.id) }}">Edit</a>
+                      {% if item.status == "published" %}
+                        <a href="{{ url_for('page_detail', slug=item.slug) }}" target="_blank" rel="noopener">View</a>
+                      {% else %}
+                        <a href="{{ url_for('admin_content_preview', content_id=item.id) }}" target="_blank" rel="noopener">Preview</a>
+                      {% endif %}
+                      <form action="{{ url_for('admin_content_duplicate', content_id=item.id) }}" method="post">
+                        <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+                        <button type="submit">Duplicate</button>
+                      </form>
+                      {% if item.status != "archived" %}
+                        <form action="{{ url_for('admin_content_archive', content_id=item.id) }}" method="post" data-confirm="Archive this content?">
+                          <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+                          <button type="submit">Archive</button>
+                        </form>
+                      {% endif %}
+                    </div>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <div class="admin-empty-state">
+          <h2>Create your first editable page or post</h2>
+          <p>CMS-created content will appear here without changing the existing migrated website.</p>
+          <div class="admin-action-row">
+            <form action="{{ url_for('admin_new_page') }}" method="post">
+              <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+              <button type="submit">Create New Page</button>
+            </form>
+            <form action="{{ url_for('admin_new_post') }}" method="post">
+              <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+              <button type="submit">Create New Post</button>
+            </form>
+          </div>
+        </div>
+      {% endif %}
+    </section>
+  </section>
+  <script>
+    document.addEventListener("submit", function (event) {
+      var form = event.target.closest("[data-confirm]");
+      if (form && !window.confirm(form.dataset.confirm)) {
+        event.preventDefault();
+      }
+    });
+  </script>
+{% endblock %}

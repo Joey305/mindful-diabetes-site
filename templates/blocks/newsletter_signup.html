@@ -1,0 +1,9 @@
+<section class="cms-block cms-newsletter-signup">
+  <div>
+    <h2>{{ block.content.heading }}</h2>
+    <p>{{ block.content.description }}</p>
+  </div>
+  {% set newsletter_id = "cms-newsletter-" ~ block.id %}
+  {% set newsletter_source = "cms-" ~ block.id %}
+  {% include "_newsletter_form.html" %}
+</section>

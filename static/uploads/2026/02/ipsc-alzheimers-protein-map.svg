@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 933" role="img" aria-labelledby="title desc">
+  <title id="title">Neuron and glia map of Alzheimer’s iPSC model proteins</title>
+  <desc id="desc">Educational diagram showing where APP, amyloid beta, tau, PSEN1, GSK3 beta, APOE, astrocytes, microglia, cholesterol, and calcium signaling appear in Alzheimer’s iPSC model systems.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fffb"/>
+      <stop offset="0.55" stop-color="#eef8f4"/>
+      <stop offset="1" stop-color="#fff3ec"/>
+    </linearGradient>
+    <linearGradient id="neuron" x1="0" x2="1">
+      <stop offset="0" stop-color="#6fb8a2"/>
+      <stop offset="1" stop-color="#005030"/>
+    </linearGradient>
+    <linearGradient id="axon" x1="0" x2="1">
+      <stop offset="0" stop-color="#315d8f"/>
+      <stop offset="1" stop-color="#83b7e7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0d1338" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#f07239"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="933" fill="url(#bg)"/>
+  <circle cx="1120" cy="135" r="210" fill="#f07239" opacity="0.06"/>
+  <circle cx="210" cy="770" r="240" fill="#005030" opacity="0.06"/>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="58" width="1256" height="790" rx="30" fill="#ffffff" opacity="0.94"/>
+  </g>
+
+  <text x="112" y="118" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" fill="#0d1338">Where key Alzheimer’s iPSC signals show up</text>
+  <text x="112" y="156" font-family="Inter, Arial, sans-serif" font-size="20" fill="#50605b">A simplified neuron-and-glia map for APP, Aβ, tau, PSEN1, GSK3β, APOE, calcium signaling, and glial cleanup.</text>
+
+  <g transform="translate(0,18)">
+    <path d="M282 538 C184 493 155 415 204 356 C245 307 319 312 371 362 C442 327 524 361 528 435 C532 500 458 551 383 531 C350 570 311 568 282 538Z" fill="url(#neuron)" opacity="0.96"/>
+    <circle cx="344" cy="440" r="70" fill="#f8fffb" opacity="0.35"/>
+    <circle cx="344" cy="440" r="33" fill="#0d1338" opacity="0.18"/>
+
+    <path d="M505 445 C620 421 748 415 883 431 C998 445 1080 489 1165 556" fill="none" stroke="url(#axon)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M548 418 C606 369 671 338 744 326" fill="none" stroke="#005030" stroke-width="10" stroke-linecap="round"/>
+    <path d="M562 477 C643 522 735 548 839 553" fill="none" stroke="#005030" stroke-width="10" stroke-linecap="round"/>
+    <path d="M408 368 C440 309 494 262 570 232" fill="none" stroke="#005030" stroke-width="10" stroke-linecap="round"/>
+    <path d="M283 374 C226 321 173 295 122 294" fill="none" stroke="#005030" stroke-width="10" stroke-linecap="round"/>
+    <path d="M264 521 C208 560 166 613 136 681" fill="none" stroke="#005030" stroke-width="10" stroke-linecap="round"/>
+
+    <g fill="#83b7e7">
+      <ellipse cx="646" cy="435" rx="22" ry="15"/>
+      <ellipse cx="719" cy="428" rx="22" ry="15"/>
+      <ellipse cx="799" cy="431" rx="22" ry="15"/>
+      <ellipse cx="883" cy="444" rx="22" ry="15"/>
+      <ellipse cx="966" cy="472" rx="22" ry="15"/>
+      <ellipse cx="1042" cy="511" rx="22" ry="15"/>
+    </g>
+  </g>
+
+  <g>
+    <path d="M1020 245 C1072 204 1150 206 1197 257 C1251 316 1204 411 1117 396 C1061 430 984 405 966 340 C953 297 978 264 1020 245Z" fill="#f7a076" opacity="0.9"/>
+    <circle cx="1089" cy="314" r="42" fill="#ffffff" opacity="0.26"/>
+    <text x="1024" y="455" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="800" fill="#0d1338">Astrocyte</text>
+  </g>
+
+  <g>
+    <circle cx="1085" cy="666" r="54" fill="#7d6bb2" opacity="0.92"/>
+    <path d="M1085 612 L1085 557 M1138 648 L1195 623 M1123 709 L1178 756 M1041 704 L991 746 M1034 639 L984 600" stroke="#7d6bb2" stroke-width="15" stroke-linecap="round"/>
+    <text x="1020" y="767" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="800" fill="#0d1338">Microglia</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="20" fill="#0d1338">
+    <g>
+      <rect x="95" y="200" width="244" height="82" rx="18" fill="#e9f6f1" stroke="#94c7b8"/>
+      <text x="118" y="235" font-weight="800">APP</text>
+      <text x="118" y="263" font-size="17">cell membrane signal</text>
+      <path d="M252 283 C280 322 300 350 318 392" fill="none" stroke="#f07239" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="565" y="188" width="256" height="92" rx="18" fill="#fff2eb" stroke="#f4b194"/>
+      <text x="590" y="224" font-weight="800">Aβ</text>
+      <text x="590" y="252" font-size="17">secreted amyloid beta</text>
+      <path d="M686 281 C700 330 704 365 698 421" fill="none" stroke="#f07239" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="430" y="610" width="300" height="98" rx="18" fill="#eef4fc" stroke="#96bce3"/>
+      <text x="454" y="647" font-weight="800">Tau / p-tau</text>
+      <text x="454" y="675" font-size="17">axon support and stress marker</text>
+      <path d="M617 609 C662 558 715 514 784 455" fill="none" stroke="#f07239" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="118" y="712" width="272" height="96" rx="18" fill="#fff2eb" stroke="#f4b194"/>
+      <text x="142" y="748" font-weight="800">GSK3β</text>
+      <text x="142" y="776" font-size="17">kinase linked with tau changes</text>
+      <path d="M362 712 C443 614 534 542 653 475" fill="none" stroke="#f07239" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="804" y="84" width="286" height="104" rx="18" fill="#f3eefb" stroke="#c5b8df"/>
+      <text x="828" y="121" font-weight="800">PSEN1</text>
+      <text x="828" y="149" font-size="17">gamma-secretase complex</text>
+      <text x="828" y="172" font-size="17">and calcium signaling</text>
+      <path d="M897 190 C810 280 718 365 552 420" fill="none" stroke="#f07239" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="1118" y="481" width="190" height="93" rx="18" fill="#fff2eb" stroke="#f4b194"/>
+      <text x="1142" y="517" font-weight="800">APOE</text>
+      <text x="1142" y="545" font-size="17">lipid transport</text>
+      <path d="M1142 481 C1125 444 1110 416 1098 380" fill="none" stroke="#f07239" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="821" y="718" width="270" height="84" rx="18" fill="#f3eefb" stroke="#c5b8df"/>
+      <text x="845" y="753" font-weight="800">Aβ cleanup</text>
+      <text x="845" y="781" font-size="17">microglia and astrocytes</text>
+      <path d="M991 718 C1020 704 1048 689 1073 671" fill="none" stroke="#f07239" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+
+    <g>
+      <rect x="110" y="520" width="205" height="84" rx="18" fill="#e9f6f1" stroke="#94c7b8"/>
+      <text x="134" y="556" font-weight="800">Ca²⁺</text>
+      <text x="134" y="584" font-size="17">cell signaling</text>
+      <path d="M315 550 C366 523 419 491 485 445" fill="none" stroke="#f07239" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+  </g>
+
+  <text x="112" y="875" font-family="Inter, Arial, sans-serif" font-size="17" fill="#50605b">Simplified educational map. These signals appear in many cell contexts; exact location and behavior depend on the model, mutation, and experiment.</text>
+</svg>

@@ -14,8 +14,10 @@ from urllib.parse import parse_qs, urlencode, urlparse
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from flask import Flask, abort, redirect, render_template, request, session, url_for
+from flask import Flask, abort, jsonify, redirect, render_template, request, session, url_for
 from markupsafe import Markup, escape
+
+from mindful_diabetes import cms
 
 try:
     import psycopg
@@ -193,6 +195,8 @@ def create_app(test_config=None):
             "Mindful Diabetes <login@auth.mindfuldiabetes.org>",
         ),
         ADMIN_DATA_PATH=os.getenv("ADMIN_DATA_PATH", str(BASE_DIR / "instance" / "admin_data.json")),
+        CMS_DATA_PATH=os.getenv("CMS_DATA_PATH", str(BASE_DIR / "instance" / "cms_content.json")),
+        CMS_LOCAL_UPLOAD_ROOT=os.getenv("CMS_LOCAL_UPLOAD_ROOT", str(BASE_DIR / "static")),
         BREVO_API_KEY=os.getenv("BREVO_API_KEY", ""),
         BREVO_SMTP_URL=os.getenv("BREVO_SMTP_URL", "https://api.brevo.com/v3/smtp/email"),
         DATABASE_URL=os.getenv("DATABASE_URL", ""),
@@ -217,6 +221,7 @@ def create_app(test_config=None):
     content = load_content(Path(app.config["CONTENT_PATH"]))
     app.config["CONTENT"] = content
     ensure_admin_storage(app.config)
+    cms.ensure_cms_storage(app.config)
 
     @app.context_processor
     def inject_site_data():
@@ -228,6 +233,7 @@ def create_app(test_config=None):
             "turnstile_site_key": (
                 app.config["TURNSTILE_SITE_KEY"] if is_turnstile_configured(app.config) else ""
             ),
+            "admin_csrf_token": get_admin_csrf_token,
         }
 
     @app.template_filter("date_label")
@@ -282,6 +288,21 @@ def create_app(test_config=None):
                 },
             )
         return response
+
+    def render_cms_content(item, preview=False):
+        rendered_blocks = cms.render_blocks(
+            item["blocks_json"],
+            app.config,
+            lambda template, **context: render_template(template, **context),
+        )
+        template = "cms_post.html" if item["content_type"] == "post" else "cms_page.html"
+        return render_template(
+            template,
+            item=item,
+            rendered_blocks=rendered_blocks,
+            preview=preview,
+            latest_posts=content.latest_posts[:3],
+        )
 
     @app.get("/")
     def home():
@@ -543,6 +564,154 @@ def create_app(test_config=None):
         dashboard = build_admin_dashboard(app.config)
         return render_template("admin_dashboard.html", dashboard=dashboard, admin_email=app.config["ADMIN_EMAIL"])
 
+    @app.get("/admin/content/")
+    @admin_required
+    def admin_content_index():
+        items = cms.list_content(app.config)
+        query = request.args.get("q", "").strip().lower()
+        content_type = request.args.get("type", "").strip()
+        status = request.args.get("status", "").strip()
+        if query:
+            items = [
+                item
+                for item in items
+                if query in item["title"].lower()
+                or query in item["slug"].lower()
+                or query in item.get("excerpt", "").lower()
+            ]
+        if content_type in {"page", "post"}:
+            items = [item for item in items if item["content_type"] == content_type]
+        if status in {"draft", "published", "scheduled", "archived"}:
+            items = [item for item in items if item["status"] == status]
+        return render_template(
+            "admin/content/index.html",
+            items=items,
+            query=request.args.get("q", ""),
+            content_type=content_type,
+            status=status,
+            storage_backend=app.config.get("CMS_STORAGE_BACKEND", "local file"),
+            storage_warning=cms.upload_storage_info(app.config),
+        )
+
+    @app.post("/admin/pages/new/")
+    @admin_required
+    def admin_new_page():
+        validate_admin_csrf()
+        item = cms.create_content(app.config, "page", author=session.get("admin_email", ""))
+        return redirect(url_for("admin_content_editor", content_id=item["id"]))
+
+    @app.post("/admin/posts/new/")
+    @admin_required
+    def admin_new_post():
+        validate_admin_csrf()
+        item = cms.create_content(app.config, "post", author=session.get("admin_email", ""))
+        return redirect(url_for("admin_content_editor", content_id=item["id"]))
+
+    @app.get("/admin/content/<content_id>/edit/")
+    @admin_required
+    def admin_content_editor(content_id):
+        item = cms.get_content(app.config, content_id)
+        if not item:
+            abort(404)
+        return render_template(
+            "admin/content/editor.html",
+            item=item,
+            blocks_json=json.dumps(item["blocks_json"]),
+            settings_json=json.dumps(item["settings_json"]),
+            seo_json=json.dumps(item["seo_json"]),
+            block_library=cms.block_library(),
+            storage_warning=cms.upload_storage_info(app.config),
+        )
+
+    @app.post("/admin/content/<content_id>/save/")
+    @admin_required
+    def admin_content_save(content_id):
+        validate_admin_csrf()
+        item = cms.get_content(app.config, content_id)
+        if not item:
+            abort(404)
+        payload = request.get_json(silent=True) or request.form.to_dict()
+        try:
+            merged = merge_cms_payload(item, payload)
+            saved = cms.save_content(app.config, merged, actor=session.get("admin_email", ""), make_revision=True)
+        except cms.CmsValidationError as error:
+            return jsonify({"ok": False, "message": str(error)}), 400
+        return jsonify(
+            {
+                "ok": True,
+                "message": "Draft saved",
+                "content": cms_public_payload(saved),
+                "view_url": cms_view_url(saved),
+            }
+        )
+
+    @app.post("/admin/content/<content_id>/publish/")
+    @admin_required
+    def admin_content_publish(content_id):
+        validate_admin_csrf()
+        item = cms.get_content(app.config, content_id)
+        if not item:
+            abort(404)
+        payload = request.get_json(silent=True) or request.form.to_dict()
+        try:
+            merged = merge_cms_payload(item, payload)
+            merged["status"] = "published"
+            saved = cms.save_content(app.config, merged, actor=session.get("admin_email", ""), make_revision=True)
+        except cms.CmsValidationError as error:
+            return jsonify({"ok": False, "message": str(error)}), 400
+        return jsonify(
+            {
+                "ok": True,
+                "message": "Published",
+                "content": cms_public_payload(saved),
+                "view_url": cms_view_url(saved),
+            }
+        )
+
+    @app.get("/admin/content/<content_id>/preview/")
+    @admin_required
+    def admin_content_preview(content_id):
+        item = cms.get_content(app.config, content_id)
+        if not item:
+            abort(404)
+        return render_cms_content(item, preview=True)
+
+    @app.get("/admin/content/<content_id>/revisions/")
+    @admin_required
+    def admin_content_revisions(content_id):
+        item = cms.get_content(app.config, content_id)
+        if not item:
+            abort(404)
+        return render_template("admin/content/revisions.html", item=item, revisions=cms.list_revisions(app.config, content_id))
+
+    @app.post("/admin/content/<content_id>/duplicate/")
+    @admin_required
+    def admin_content_duplicate(content_id):
+        validate_admin_csrf()
+        item = cms.duplicate_content(app.config, content_id, actor=session.get("admin_email", ""))
+        if not item:
+            abort(404)
+        return redirect(url_for("admin_content_editor", content_id=item["id"]))
+
+    @app.post("/admin/content/<content_id>/archive/")
+    @admin_required
+    def admin_content_archive(content_id):
+        validate_admin_csrf()
+        item = cms.archive_content(app.config, content_id, actor=session.get("admin_email", ""))
+        if not item:
+            abort(404)
+        return redirect(url_for("admin_content_index"))
+
+    @app.post("/admin/assets/upload/")
+    @admin_required
+    def admin_asset_upload():
+        validate_admin_csrf()
+        try:
+            asset = cms.save_uploaded_image(app.config, request.files.get("image"))
+        except cms.CmsValidationError as error:
+            return jsonify({"ok": False, "message": str(error)}), 400
+        return jsonify({"ok": True, "asset": asset})
+
     @app.get("/random-article/")
     def random_article():
         exclude_slug = request.args.get("exclude", "").strip("/")
@@ -584,6 +753,10 @@ def create_app(test_config=None):
                 related_posts=related_posts,
                 article_navigation=article_navigation,
             )
+
+        cms_item = cms.get_published_content_by_slug(app.config, slug)
+        if cms_item:
+            return render_cms_content(cms_item)
 
         abort(404)
 
@@ -1260,6 +1433,63 @@ def safe_admin_next_url(raw_url):
     if not url.startswith("/admin/"):
         return "/admin/"
     return url
+
+
+def get_admin_csrf_token():
+    token = session.get("admin_csrf_token")
+    if not token:
+        token = secrets.token_urlsafe(32)
+        session["admin_csrf_token"] = token
+    return token
+
+
+def validate_admin_csrf():
+    expected = session.get("admin_csrf_token")
+    submitted = request.headers.get("X-CSRF-Token") or request.form.get("csrf_token")
+    if not expected or not submitted or not hmac.compare_digest(expected, submitted):
+        abort(400)
+
+
+def merge_cms_payload(existing, payload):
+    merged = dict(existing)
+    payload = payload or {}
+    for key in (
+        "title",
+        "slug",
+        "status",
+        "excerpt",
+        "featured_image",
+        "content_type",
+        "author",
+        "published_at",
+        "scheduled_at",
+        "archived_at",
+    ):
+        if key in payload:
+            merged[key] = payload[key]
+    for key in ("blocks_json", "settings_json", "seo_json"):
+        if key in payload:
+            merged[key] = payload[key]
+    for browser_key, model_key in (("blocks", "blocks_json"), ("settings", "settings_json"), ("seo", "seo_json")):
+        if browser_key in payload:
+            merged[model_key] = payload[browser_key]
+    return merged
+
+
+def cms_public_payload(item):
+    return {
+        "id": item["id"],
+        "title": item["title"],
+        "slug": item["slug"],
+        "status": item["status"],
+        "content_type": item["content_type"],
+        "updated_at": item["updated_at"],
+        "published_at": item["published_at"],
+    }
+
+
+def cms_view_url(item):
+    return url_for("page_detail", slug=item["slug"]) if item.get("status") == "published" else ""
 
 
 def verify_turnstile(config, token, remote_ip=""):

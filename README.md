@@ -262,6 +262,8 @@ ADMIN_EMAIL=jmschulz@mindfuldiabetes.org
 ADMIN_EMAIL_FROM=Mindful Diabetes <login@auth.mindfuldiabetes.org>
 BREVO_API_KEY=
 DATABASE_URL=
+CMS_DATA_PATH=
+CMS_LOCAL_UPLOAD_ROOT=
 
 MAILCHIMP_API_KEY=
 MAILCHIMP_AUDIENCE_ID=
@@ -281,7 +283,9 @@ Environment variable reference:
 | `ADMIN_EMAIL` | Required for admin | Single email address allowed to access `/admin/` |
 | `ADMIN_EMAIL_FROM` | Required for email login | Verified Brevo sender for one-time admin codes |
 | `BREVO_API_KEY` | Required for email login | Sends admin one-time login codes through Brevo |
-| `DATABASE_URL` | Optional | Stores admin login codes and activity events in Postgres when you want persistent dashboard history |
+| `DATABASE_URL` | Optional | Stores admin login codes, activity events, and CMS content in Postgres when you want persistent Heroku data |
+| `CMS_DATA_PATH` | Optional | Local development JSON path for CMS content when no database is configured |
+| `CMS_LOCAL_UPLOAD_ROOT` | Optional | Local development upload root for admin image uploads |
 | `MAILCHIMP_API_KEY` | Optional | Enables newsletter subscription when paired with an audience ID |
 | `MAILCHIMP_AUDIENCE_ID` | Optional | Mailchimp list/audience ID for subscribers |
 | `MAILCHIMP_SERVER_PREFIX` | Optional | Mailchimp data center prefix, such as `us21` |
@@ -336,6 +340,34 @@ Good next widgets:
 - Weekly email summary to the admin.
 
 Security tip: if a real Brevo key is ever pasted into chat, docs, or an issue, rotate it in Brevo and update Heroku Config Vars.
+
+### Content Studio
+
+The admin dashboard includes a simple content studio:
+
+```text
+/admin/content/
+/admin/pages/new/
+/admin/posts/new/
+/admin/content/<content_id>/edit/
+```
+
+The first version supports:
+
+- Create New Page, Create New Post, and Manage Content actions.
+- A three-panel editor with block library, live canvas, and settings panel.
+- Structured JSON blocks rather than unrestricted full-page HTML.
+- Heading, rich text, image, button, two-column, three-column, video, callout, divider, spacer, quote, donation CTA, and newsletter signup blocks.
+- Save draft, preview, publish/update, duplicate, archive, undo, redo, autosave, desktop/tablet/mobile canvas widths, and basic revisions.
+- Server-side block validation, URL validation, video-provider validation, and rich-text sanitization.
+- Existing public pages continue to resolve before CMS-created content, so the migration stays stable.
+
+Storage notes:
+
+- Without `DATABASE_URL`, CMS content is saved to `instance/cms_content.json`. This is useful locally but not durable on Heroku.
+- With `DATABASE_URL`, CMS content and revisions are stored in Postgres.
+- Image uploads currently use local development storage and show a warning in admin. Configure persistent object storage before relying on uploads in production on Heroku.
+- CMS-created published content appears at `/<slug>/` only after publication.
 
 ---
 

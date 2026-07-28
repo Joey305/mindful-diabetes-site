@@ -947,6 +947,9 @@ def test_february_ipsc_alzheimers_post_has_sources_and_generated_images():
         b"https://www.nature.com/articles/s42003-025-07507-7",
         b"https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.71117",
         b"https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202505549",
+        b"https://onlinelibrary.wiley.com/doi/10.1155/2021/5511630",
+        b"https://onlinelibrary.wiley.com/doi/10.1155/2021/5511630#bib-0120",
+        b"https://onlinelibrary.wiley.com/doi/10.1155/2021/5511630#bib-0139",
     ]
     image_assets = [
         b"/static/uploads/2026/02/ipsc-alzheimers-modeling-hero.webp",
@@ -955,6 +958,7 @@ def test_february_ipsc_alzheimers_post_has_sources_and_generated_images():
         b"/static/uploads/2026/02/brain-organoid-on-chip-alzheimers-model.webp",
         b"/static/uploads/2026/02/ipsc-microglia-neuron-organoid-model.webp",
         b"/static/uploads/2026/02/ipsc-models-promise-limits-alzheimers.webp",
+        b"/static/uploads/2026/02/ipsc-alzheimers-protein-map.webp",
     ]
 
     assert response.status_code == 200
@@ -962,8 +966,13 @@ def test_february_ipsc_alzheimers_post_has_sources_and_generated_images():
     assert b"Tiny Cells, Big Questions" in response.data
     assert b"A positive drug signal in a cell model is not proof" in response.data
     assert b"iPSC models do not recreate a whole brain" in response.data
+    assert b"How Our Earlier Stem Cells International Review Fits In" in response.data
+    assert b"Table 1. Selected genetic iPSC models of Alzheimer" in response.data
+    assert b"APOE type can influence APP transcription" in response.data
+    assert b"Where Alzheimer" in response.data
     assert b"Hero image for a Mindful Diabetes article explaining how induced pluripotent stem cells" in response.data
     assert b"Supporting image for a section about iPSC-derived microglia" in response.data
+    assert b"Educational figure showing where key Alzheimer" in response.data
     assert all(asset in response.data for asset in image_assets)
     assert all(link in response.data for link in internal_links)
     assert all(link in response.data for link in external_links)
@@ -1072,3 +1081,138 @@ def test_admin_activity_tracks_public_page_views(tmp_path):
     dashboard = app_module.build_admin_dashboard(app.config)
     assert dashboard["stats"][0]["value"] == 1
     assert dashboard["top_paths"][0] == {"path": "/guide/", "count": 1}
+
+
+def sign_in_admin(client):
+    with client.session_transaction() as flask_session:
+        flask_session["admin_email"] = "jmschulz@mindfuldiabetes.org"
+        flask_session["admin_csrf_token"] = "csrf-test-token"
+    return "csrf-test-token"
+
+
+def test_admin_dashboard_links_to_content_studio(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        }
+    )
+    client = app.test_client()
+    sign_in_admin(client)
+
+    response = client.get("/admin/")
+
+    assert response.status_code == 200
+    assert b"Content studio" in response.data
+    assert b"Create New Page" in response.data
+    assert b"Create New Post" in response.data
+    assert b"Manage Content" in response.data
+
+
+def test_admin_content_flow_saves_publishes_and_renders_sanitized_blocks(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        }
+    )
+    client = app.test_client()
+    csrf_token = sign_in_admin(client)
+
+    create_response = client.post("/admin/pages/new/", data={"csrf_token": csrf_token})
+    assert create_response.status_code == 302
+    editor_path = create_response.headers["Location"]
+    content_id = editor_path.split("/admin/content/", 1)[1].split("/edit/", 1)[0]
+
+    editor_response = client.get(editor_path)
+    assert editor_response.status_code == 200
+    assert b"Blocks" in editor_response.data
+    assert b"Save Draft" in editor_response.data
+    assert b"Publish" in editor_response.data
+
+    payload = {
+        "id": content_id,
+        "content_type": "page",
+        "title": "CMS Test Page",
+        "slug": "cms-test-page",
+        "status": "draft",
+        "excerpt": "A safe editable page.",
+        "blocks": [
+            {
+                "id": "heading-one",
+                "type": "heading",
+                "version": 1,
+                "settings": {"level": 1, "alignment": "left", "accent": True, "color": "navy"},
+                "content": {"text": "CMS Test Page"},
+            },
+            {
+                "id": "body-copy",
+                "type": "rich_text",
+                "version": 1,
+                "settings": {},
+                "content": {
+                    "html": '<p>Hello <strong>reader</strong>.</p><script>alert("bad")</script><a href="javascript:alert(1)">bad link</a>'
+                },
+            },
+            {
+                "id": "cta",
+                "type": "button",
+                "version": 1,
+                "settings": {"style": "orange", "alignment": "center", "new_tab": False},
+                "content": {"label": "Donate", "url": "/donation/"},
+            },
+        ],
+        "settings": {"template": "standard"},
+        "seo": {"seo_title": "Safe CMS Page", "meta_description": "A safe page."},
+    }
+
+    save_response = client.post(
+        f"/admin/content/{content_id}/save/",
+        data=json.dumps(payload),
+        content_type="application/json",
+        headers={"X-CSRF-Token": csrf_token},
+    )
+    assert save_response.status_code == 200
+    assert save_response.json["ok"] is True
+
+    public_draft_response = client.get("/cms-test-page/")
+    assert public_draft_response.status_code == 404
+
+    publish_response = client.post(
+        f"/admin/content/{content_id}/publish/",
+        data=json.dumps(payload),
+        content_type="application/json",
+        headers={"X-CSRF-Token": csrf_token},
+    )
+    assert publish_response.status_code == 200
+    assert publish_response.json["ok"] is True
+    assert publish_response.json["view_url"] == "/cms-test-page/"
+
+    public_response = client.get("/cms-test-page/")
+    assert public_response.status_code == 200
+    assert b"CMS Test Page" in public_response.data
+    assert b"Hello <strong>reader</strong>" in public_response.data
+    assert b"<script>" not in public_response.data
+    assert b"javascript:alert" not in public_response.data
+    assert b'href="/donation/"' in public_response.data
+
+
+def test_admin_content_state_changes_require_csrf(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        }
+    )
+    client = app.test_client()
+    sign_in_admin(client)
+
+    response = client.post("/admin/pages/new/")
+
+    assert response.status_code == 400

@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}Edit {{ item.title }} | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}admin-page cms-editor-page{% endblock %}
+
+{% block content %}
+  <section
+    class="cms-editor"
+    data-content-id="{{ item.id }}"
+    data-save-url="{{ url_for('admin_content_save', content_id=item.id) }}"
+    data-publish-url="{{ url_for('admin_content_publish', content_id=item.id) }}"
+    data-preview-url="{{ url_for('admin_content_preview', content_id=item.id) }}"
+    data-upload-url="{{ url_for('admin_asset_upload') }}"
+    data-csrf-token="{{ admin_csrf_token() }}"
+  >
+    <script id="cms-editor-initial" type="application/json">
+      {{ {
+        "id": item.id,
+        "content_type": item.content_type,
+        "title": item.title,
+        "slug": item.slug,
+        "status": item.status,
+        "excerpt": item.excerpt,
+        "featured_image": item.featured_image,
+        "author": item.author,
+        "blocks": item.blocks_json,
+        "settings": item.settings_json,
+        "seo": item.seo_json
+      }|tojson }}
+    </script>
+
+    <header class="cms-editor-toolbar" aria-label="Editor toolbar">
+      <a href="{{ url_for('admin_content_index') }}">Back to content</a>
+      <div class="cms-editor-toolbar__title">
+        <label for="cms-title">Title</label>
+        <input id="cms-title" type="text" value="{{ item.title }}" data-field="title">
+      </div>
+      <span class="admin-status admin-status--{{ item.status }}" data-status-label>{{ item.status|title }}</span>
+      <button type="button" data-action="undo" disabled>Undo</button>
+      <button type="button" data-action="redo" disabled>Redo</button>
+      <div class="cms-preview-toggle" aria-label="Preview width">
+        <button type="button" data-preview-size="desktop" aria-pressed="true">Desktop</button>
+        <button type="button" data-preview-size="tablet">Tablet</button>
+        <button type="button" data-preview-size="mobile">Mobile</button>
+      </div>
+      <button type="button" data-action="save">Save Draft</button>
+      <a href="{{ url_for('admin_content_preview', content_id=item.id) }}" target="_blank" rel="noopener" data-preview-link>Preview</a>
+      <button type="button" class="cms-publish-button" data-action="publish">{{ "Update" if item.status == "published" else "Publish" }}</button>
+      <span class="cms-save-state" role="status" aria-live="polite" data-save-state>Saved</span>
+    </header>
+
+    {% if not storage_warning.persistent %}
+      <p class="cms-editor-warning">Image uploads are local-only until persistent storage is configured for Heroku.</p>
+    {% endif %}
+
+    <div class="cms-editor-layout">
+      <aside class="cms-editor-panel cms-editor-blocks" aria-labelledby="cms-blocks-heading">
+        <div class="cms-panel-header">
+          <h2 id="cms-blocks-heading">Blocks</h2>
+          <input type="search" placeholder="Search blocks" aria-label="Search blocks" data-block-search>
+        </div>
+        <div class="cms-block-library">
+          {% for block in block_library %}
+            <button type="button" draggable="true" data-block-type="{{ block.type }}">
+              <strong>{{ block.label }}</strong>
+              <span>{{ block.description }}</span>
+            </button>
+          {% endfor %}
+        </div>
+      </aside>
+
+      <main class="cms-editor-main" aria-labelledby="cms-canvas-heading">
+        <div class="cms-canvas-shell" data-canvas-shell>
+          <div class="cms-canvas" data-canvas data-drop-zone="root">
+            <h2 id="cms-canvas-heading" class="screen-reader-text">Page canvas</h2>
+          </div>
+        </div>
+      </main>
+
+      <aside class="cms-editor-panel cms-settings-panel" aria-labelledby="cms-settings-heading">
+        <div class="cms-panel-header">
+          <h2 id="cms-settings-heading">Settings</h2>
+          <a href="{{ url_for('admin_content_revisions', content_id=item.id) }}">Revisions</a>
+        </div>
+
+        <div class="cms-settings-tabs" role="tablist" aria-label="Settings tabs">
+          <button type="button" data-settings-tab="block" aria-pressed="true">Block</button>
+          <button type="button" data-settings-tab="page">Page</button>
+          <button type="button" data-settings-tab="seo">SEO</button>
+        </div>
+
+        <div class="cms-settings-section" data-settings-panel="block">
+          <p class="admin-muted" data-no-block-message>Select a block to edit its settings.</p>
+          <div data-block-settings hidden></div>
+        </div>
+
+        <div class="cms-settings-section" data-settings-panel="page" hidden>
+          <label>
+            Slug
+            <input type="text" value="{{ item.slug }}" data-field="slug">
+          </label>
+          <label>
+            Type
+            <select data-field="content_type">
+              <option value="page" {% if item.content_type == "page" %}selected{% endif %}>Page</option>
+              <option value="post" {% if item.content_type == "post" %}selected{% endif %}>Post</option>
+            </select>
+          </label>
+          <label>
+            Status
+            <select data-field="status">
+              {% for option in ["draft", "published", "scheduled", "archived"] %}
+                <option value="{{ option }}" {% if item.status == option %}selected{% endif %}>{{ option|title }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          <label>
+            Author
+            <input type="text" value="{{ item.author }}" data-field="author">
+          </label>
+          <label>
+            Excerpt
+            <textarea rows="4" data-field="excerpt">{{ item.excerpt }}</textarea>
+          </label>
+          <label>
+            Featured image URL
+            <input type="url" value="{{ item.featured_image }}" data-field="featured_image">
+          </label>
+          <label>
+            Template
+            <select data-setting="template">
+              {% for option in ["standard", "full_width", "article", "landing"] %}
+                <option value="{{ option }}" {% if item.settings_json.template == option %}selected{% endif %}>{{ option|replace("_", " ")|title }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          <label>
+            Upload image
+            <input type="file" accept="image/png,image/jpeg,image/gif,image/webp" data-image-upload>
+          </label>
+        </div>
+
+        <div class="cms-settings-section" data-settings-panel="seo" hidden>
+          <label>
+            SEO title
+            <input type="text" value="{{ item.seo_json.seo_title }}" data-seo="seo_title" maxlength="70">
+          </label>
+          <label>
+            Meta description
+            <textarea rows="4" data-seo="meta_description" maxlength="180">{{ item.seo_json.meta_description }}</textarea>
+          </label>
+          <label>
+            Social title
+            <input type="text" value="{{ item.seo_json.social_title }}" data-seo="social_title" maxlength="90">
+          </label>
+          <label>
+            Social description
+            <textarea rows="4" data-seo="social_description" maxlength="220">{{ item.seo_json.social_description }}</textarea>
+          </label>
+          <label>
+            Social image URL
+            <input type="url" value="{{ item.seo_json.social_image }}" data-seo="social_image">
+          </label>
+          <label>
+            Canonical URL
+            <input type="url" value="{{ item.seo_json.canonical_url }}" data-seo="canonical_url">
+          </label>
+          <label class="cms-checkbox-label">
+            <input type="checkbox" data-seo="noindex" {% if item.seo_json.noindex %}checked{% endif %}>
+            Noindex
+          </label>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <script src="{{ url_for('static', filename='js/cms-editor.js') }}" defer></script>
+{% endblock %}

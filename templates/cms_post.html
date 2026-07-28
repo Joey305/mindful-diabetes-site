@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.seo_json.seo_title or item.title }} | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}cms-public-page cms-public-post{% endblock %}
+
+{% block content %}
+  {% if preview %}
+    <div class="cms-preview-banner">Previewing draft content</div>
+  {% endif %}
+  <article class="cms-public-shell cms-public-shell--post" aria-labelledby="cms-content-title">
+    <header class="cms-public-hero">
+      <p class="eyebrow">Guide post</p>
+      <h1 id="cms-content-title">{{ item.title }}</h1>
+      <p>
+        {% if item.author %}By {{ item.author }}{% endif %}
+        {% if item.published_at_label %} · {{ item.published_at_label }}{% endif %}
+      </p>
+      {% if item.excerpt %}
+        <p>{{ item.excerpt }}</p>
+      {% endif %}
+      {% if item.featured_image %}
+        <img src="{{ item.featured_image }}" alt="">
+      {% endif %}
+    </header>
+    <div class="cms-public-blocks">
+      {{ rendered_blocks }}
+    </div>
+  </article>
+{% endblock %}

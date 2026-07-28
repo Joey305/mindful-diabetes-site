@@ -1,0 +1,10 @@
+{% set embed_url = video_embed_url(block.content.url) %}
+<div class="cms-block cms-video {% if block.settings.frame %}cms-video--framed{% endif %}">
+  {% if embed_url %}
+    <div class="video-frame">
+      <iframe src="{{ embed_url }}" title="Embedded video" loading="lazy" allowfullscreen></iframe>
+    </div>
+  {% else %}
+    <div class="cms-image-placeholder">Video</div>
+  {% endif %}
+</div>

@@ -1,0 +1,10 @@
+<figure class="cms-block cms-image cms-image--{{ block.settings.width }} cms-align-{{ block.settings.alignment }} {% if block.settings.frame %}cms-image--framed{% endif %}">
+  {% if block.content.src %}
+    <img src="{{ block.content.src }}" alt="{{ '' if block.content.decorative else block.content.alt }}">
+  {% else %}
+    <div class="cms-image-placeholder">Image</div>
+  {% endif %}
+  {% if block.content.caption %}
+    <figcaption>{{ block.content.caption }}</figcaption>
+  {% endif %}
+</figure>

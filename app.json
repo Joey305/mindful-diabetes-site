@@ -31,7 +31,15 @@
       "required": false
     },
     "DATABASE_URL": {
-      "description": "Optional Postgres connection URL for persistent admin login codes and activity tracking.",
+      "description": "Optional Postgres connection URL for persistent admin login codes, activity tracking, and CMS content.",
+      "required": false
+    },
+    "CMS_DATA_PATH": {
+      "description": "Optional local development JSON path for CMS content when DATABASE_URL is unavailable.",
+      "required": false
+    },
+    "CMS_LOCAL_UPLOAD_ROOT": {
+      "description": "Optional local development upload root. Do not rely on local uploads for Heroku persistence.",
       "required": false
     },
     "MAILCHIMP_API_KEY": {

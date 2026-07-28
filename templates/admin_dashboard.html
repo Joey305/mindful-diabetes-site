@@ -23,6 +23,24 @@
       {% endfor %}
     </div>
 
+    <section class="admin-panel admin-panel--wide admin-cms-actions" aria-labelledby="admin-cms-heading">
+      <div>
+        <h2 id="admin-cms-heading">Content studio</h2>
+        <p class="admin-muted">Create and edit pages or posts with reusable visual blocks.</p>
+      </div>
+      <div class="admin-action-row">
+        <form action="{{ url_for('admin_new_page') }}" method="post">
+          <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+          <button type="submit">Create New Page</button>
+        </form>
+        <form action="{{ url_for('admin_new_post') }}" method="post">
+          <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+          <button type="submit">Create New Post</button>
+        </form>
+        <a href="{{ url_for('admin_content_index') }}">Manage Content</a>
+      </div>
+    </section>
+
     <div class="admin-dashboard__grid">
       <section class="admin-panel" aria-labelledby="admin-top-pages-heading">
         <h2 id="admin-top-pages-heading">Top pages</h2>
