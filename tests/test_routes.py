@@ -30,7 +30,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 93
+    assert len(content.latest_posts) == 98
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -1096,6 +1096,99 @@ def test_january_amyloid_plaques_preview_image_and_tone_guardrails():
         assert b"/static/uploads/2026/01/amyloid-plaques-alzheimers-research-hero.webp" in response.data
         assert b'title="Amyloid plaques in Alzheimer\xe2\x80\x99s research"' in response.data
         assert b'data-description="Hero image for a Mindful Diabetes article explaining amyloid plaque research' in response.data
+
+
+def test_2025_alzheimers_research_articles_have_sources_and_image_metadata():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    articles = {
+        "alzheimers-blood-biomarkers": {
+            "date": "2025-05-14 09:00:00",
+            "hero_title": "Alzheimer’s blood biomarker research workflow",
+            "brief": "2025-05-14-alzheimers-blood-biomarkers.md",
+            "source": b"https://jamanetwork.com/journals/jama/fullarticle/2821669",
+            "image": b"/static/uploads/2025/05/alzheimers-blood-biomarker-workflow-hero.webp",
+            "text": b"False Positives, False Negatives, and Medical Context",
+        },
+        "sleep-aging-brain-dementia-risk": {
+            "date": "2025-07-11 09:00:00",
+            "hero_title": "Sleep, circadian rhythm, and the aging brain",
+            "brief": "2025-07-11-sleep-aging-brain-dementia-risk.md",
+            "source": b"https://www.nature.com/articles/s41467-021-22354-2",
+            "image": b"/static/uploads/2025/07/sleep-aging-brain-circadian-hero.webp",
+            "text": b"Reverse Causation Is the Tricky Part",
+        },
+        "tau-microglia-neuronal-stress": {
+            "date": "2025-08-14 09:00:00",
+            "hero_title": "Healthy tau supporting neuronal transport",
+            "brief": "2025-08-14-tau-microglia-neuronal-stress.md",
+            "source": b"https://pubmed.ncbi.nlm.nih.gov/26436904/",
+            "image": b"/static/uploads/2025/08/healthy-tau-microtubules-neuron-hero.webp",
+            "text": b"Where Microglia Enter the Story",
+        },
+        "tau-pet-imaging-alzheimers": {
+            "date": "2025-10-13 09:00:00",
+            "hero_title": "Tau PET imaging research suite",
+            "brief": "2025-10-13-tau-pet-imaging-alzheimers.md",
+            "source": b"https://jnm.snmjournals.org/content/66/5/787",
+            "image": b"/static/uploads/2025/10/tau-pet-imaging-research-suite-hero.webp",
+            "text": b"Amyloid PET and Tau PET Ask Different Questions",
+        },
+        "microglia-astrocytes-alzheimers": {
+            "date": "2025-12-14 09:00:00",
+            "hero_title": "Microglia, astrocytes, and neurons in conversation",
+            "brief": "2025-12-14-microglia-astrocytes-alzheimers.md",
+            "source": b"https://pubmed.ncbi.nlm.nih.gov/28099414/",
+            "image": b"/static/uploads/2025/12/microglia-astrocytes-neurons-immune-conversation-hero.webp",
+            "text": b"Cell States Are Not Personality Types",
+        },
+    }
+
+    for slug, expected in articles.items():
+        post = app.config["CONTENT"].posts_by_slug[slug]
+        response = client.get(f"/{slug}/")
+        brief = app_module.BASE_DIR / "docs" / "blog-image-briefs" / expected["brief"]
+
+        assert response.status_code == 200
+        assert post["date"] == expected["date"]
+        assert post["content_html"].count("<img ") == 6
+        assert post["content_html"].count("data-description=") == 6
+        assert post["content_html"].count("title=") == 6
+        assert post["preview_image_title"] == expected["hero_title"]
+        assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
+        assert expected["image"] in response.data
+        assert expected["source"] in response.data
+        assert expected["text"] in response.data
+        assert b'class="article-wellness-tools"' in response.data
+        assert b'class="article-impact-grid"' in response.data
+        assert brief.exists()
+        assert brief.read_text(encoding="utf-8").count(".webp`") == 6
+
+
+def test_2025_alzheimers_research_articles_keep_cutoffs_and_tone():
+    app = create_app({"TESTING": True})
+    blocked_phrases = [
+        "for a lay reader",
+        "in plain english",
+        "the name is a mouthful",
+        "you do not need to know",
+        "miracle",
+        "breakthrough",
+        "cure",
+        "FDA clearance",
+    ]
+    slugs = [
+        "alzheimers-blood-biomarkers",
+        "sleep-aging-brain-dementia-risk",
+        "tau-microglia-neuronal-stress",
+        "tau-pet-imaging-alzheimers",
+        "microglia-astrocytes-alzheimers",
+    ]
+
+    for slug in slugs:
+        content = app.config["CONTENT"].posts_by_slug[slug]["content_html"].lower()
+
+        assert all(phrase.lower() not in content for phrase in blocked_phrases)
 
 
 def test_articles_do_not_expose_mailchimp_api_key():
