@@ -50,12 +50,12 @@ Upload folder: `static/uploads/2025/10/`
 
 ## Source Cutoff
 
-No external scientific source in this brief should postdate 2025-10-13.
+All external scientific sources in this brief were checked to ensure they were published before 2025-10-13.
 
 ## Sources
 
-- [Updated appropriate use criteria for amyloid and tau PET](https://jnm.snmjournals.org/content/66/5/787)
-- [Tau PET and cognition in Alzheimer’s disease research](https://pubmed.ncbi.nlm.nih.gov/28097370/)
-- [Tau PET tracer review and off-target binding discussion](https://pubmed.ncbi.nlm.nih.gov/34158251/)
+- [Updated appropriate use criteria for amyloid and tau PET](https://pubmed.ncbi.nlm.nih.gov/39778970/)
+- [Tau PET imaging and cognition in atypical Alzheimer’s disease](https://pubmed.ncbi.nlm.nih.gov/29105977/)
+- [Comparison of multiple tau-PET measures in aging and Alzheimer’s disease](https://pubmed.ncbi.nlm.nih.gov/28587897/)
 - [FDA Tauvid label information](https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/212123s000lbl.pdf)
 - [NIA overview of brain imaging and Alzheimer’s research](https://www.nia.nih.gov/health/alzheimers-diagnosis/how-alzheimers-disease-diagnosed)

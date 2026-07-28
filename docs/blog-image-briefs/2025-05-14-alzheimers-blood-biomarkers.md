@@ -50,12 +50,12 @@ Upload folder: `static/uploads/2025/05/`
 
 ## Source Cutoff
 
-No external scientific source in this brief should postdate 2025-05-14.
+All external scientific sources in this brief were checked to ensure they were published before 2025-05-14.
 
 ## Sources
 
 - [JAMA 2024 study of blood biomarkers in primary and secondary care](https://jamanetwork.com/journals/jama/fullarticle/2821669)
 - [Nature Medicine 2024 plasma p-tau217 research](https://www.nature.com/articles/s41591-024-02869-z)
 - [Alzheimer’s Association appropriate use recommendations for blood biomarkers](https://pubmed.ncbi.nlm.nih.gov/35908251/)
-- [JAMA Neurology kidney dysfunction and blood biomarkers](https://jamanetwork.com/journals/jamaneurology/fullarticle/2803026)
+- [JAMA Neurology 2023 kidney dysfunction and blood biomarkers](https://pubmed.ncbi.nlm.nih.gov/36987840/)
 - [NIA overview of Alzheimer’s biomarkers](https://www.nia.nih.gov/health/alzheimers-causes-and-risk-factors/what-causes-alzheimers-disease)

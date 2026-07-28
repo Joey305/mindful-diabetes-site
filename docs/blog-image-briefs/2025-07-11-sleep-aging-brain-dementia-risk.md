@@ -50,12 +50,12 @@ Upload folder: `static/uploads/2025/07/`
 
 ## Source Cutoff
 
-No external scientific source in this brief should postdate 2025-07-11.
+All external scientific sources in this brief were checked to ensure they were published before 2025-07-11.
 
 ## Sources
 
 - [Nature Communications Whitehall II sleep duration and dementia study](https://www.nature.com/articles/s41467-021-22354-2)
 - [PubMed record for Whitehall II sleep duration study](https://pubmed.ncbi.nlm.nih.gov/33879784/)
-- [JAMA Network Open sleep regularity and dementia risk](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2813014)
+- [Neurology 2024 sleep regularity and dementia risk](https://pubmed.ncbi.nlm.nih.gov/38165323/)
 - [NIH sleep apnea overview](https://www.nhlbi.nih.gov/health/sleep-apnea)
 - [Lancet Commission 2024 dementia prevention report](https://www.thelancet.com/commissions/dementia-prevention-intervention-care)

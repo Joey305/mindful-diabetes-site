@@ -50,12 +50,12 @@ Upload folder: `static/uploads/2025/08/`
 
 ## Source Cutoff
 
-No external scientific source in this brief should postdate 2025-08-14.
+All external scientific sources in this brief were checked to ensure they were published before 2025-08-14.
 
 ## Sources
 
 - [Nature Neuroscience 2015 microglia and tau propagation](https://pubmed.ncbi.nlm.nih.gov/26436904/)
-- [Nature Neuroscience 2019 microglia and APOE-dependent tau neurodegeneration](https://pubmed.ncbi.nlm.nih.gov/31086347/)
-- [Neuron review on tau propagation and spreading](https://pubmed.ncbi.nlm.nih.gov/26496675/)
-- [Lancet Neurology semorinemab tau antibody trial](https://pubmed.ncbi.nlm.nih.gov/35636471/)
+- [Journal of Experimental Medicine 2019 microglia and APOE-dependent tau neurodegeneration](https://pubmed.ncbi.nlm.nih.gov/31601677/)
+- [Neuron 2012 tau pathology propagation study](https://pubmed.ncbi.nlm.nih.gov/22365544/)
+- [JAMA Neurology semorinemab tau antibody trial](https://pubmed.ncbi.nlm.nih.gov/35696185/)
 - [NIA overview of Alzheimer’s brain changes](https://www.nia.nih.gov/health/alzheimers-causes-and-risk-factors/what-causes-alzheimers-disease)

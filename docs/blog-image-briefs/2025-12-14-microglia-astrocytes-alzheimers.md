@@ -50,12 +50,12 @@ Upload folder: `static/uploads/2025/12/`
 
 ## Source Cutoff
 
-No external scientific source in this brief should postdate 2025-12-14.
+All external scientific sources in this brief were checked to ensure they were published before 2025-12-14.
 
 ## Sources
 
 - [Nature 2017 microglia-induced reactive astrocytes](https://pubmed.ncbi.nlm.nih.gov/28099414/)
-- [Nature Neuroscience 2016 microglial barrier around amyloid plaques](https://pubmed.ncbi.nlm.nih.gov/26808230/)
-- [Nature Medicine 2023 human microglial states in Alzheimer’s disease](https://pubmed.ncbi.nlm.nih.gov/36823337/)
-- [Nature Neuroscience 2025 microglia and amyloid-dependent astrocyte reactivity](https://www.nature.com/articles/s41593-025-01953-2)
+- [Nature Communications 2015 microglial barrier around amyloid plaques](https://pubmed.ncbi.nlm.nih.gov/25630253/)
+- [Nature Neuroscience 2024 astrocyte transcriptomic changes in Alzheimer’s disease](https://pubmed.ncbi.nlm.nih.gov/39528672/)
+- [Nature Immunology 2025 spatial proteomics of Alzheimer’s disease-specific microglial states](https://pubmed.ncbi.nlm.nih.gov/40696045/)
 - [NIA overview of Alzheimer’s causes and brain changes](https://www.nia.nih.gov/health/alzheimers-causes-and-risk-factors/what-causes-alzheimers-disease)

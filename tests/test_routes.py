@@ -1130,7 +1130,7 @@ def test_2025_alzheimers_research_articles_have_sources_and_image_metadata():
             "date": "2025-10-13 09:00:00",
             "hero_title": "Tau PET imaging research suite",
             "brief": "2025-10-13-tau-pet-imaging-alzheimers.md",
-            "source": b"https://jnm.snmjournals.org/content/66/5/787",
+            "source": b"https://pubmed.ncbi.nlm.nih.gov/39778970/",
             "image": b"/static/uploads/2025/10/tau-pet-imaging-research-suite-hero.webp",
             "text": b"Amyloid PET and Tau PET Ask Different Questions",
         },
@@ -1160,9 +1160,55 @@ def test_2025_alzheimers_research_articles_have_sources_and_image_metadata():
         assert expected["source"] in response.data
         assert expected["text"] in response.data
         assert b'class="article-wellness-tools"' in response.data
+        assert b"published before this article" in response.data
         assert b'class="article-impact-grid"' in response.data
         assert brief.exists()
         assert brief.read_text(encoding="utf-8").count(".webp`") == 6
+
+
+def test_2025_alzheimers_research_source_links_are_relevant_urls():
+    app = create_app({"TESTING": True})
+    required_links = {
+        "alzheimers-blood-biomarkers": [
+            "https://pubmed.ncbi.nlm.nih.gov/36987840/",
+            "https://pubmed.ncbi.nlm.nih.gov/35908251/",
+        ],
+        "sleep-aging-brain-dementia-risk": [
+            "https://pubmed.ncbi.nlm.nih.gov/38165323/",
+            "https://pubmed.ncbi.nlm.nih.gov/33879784/",
+        ],
+        "tau-microglia-neuronal-stress": [
+            "https://pubmed.ncbi.nlm.nih.gov/31601677/",
+            "https://pubmed.ncbi.nlm.nih.gov/35696185/",
+        ],
+        "tau-pet-imaging-alzheimers": [
+            "https://pubmed.ncbi.nlm.nih.gov/39778970/",
+            "https://pubmed.ncbi.nlm.nih.gov/29105977/",
+            "https://pubmed.ncbi.nlm.nih.gov/28587897/",
+        ],
+        "microglia-astrocytes-alzheimers": [
+            "https://pubmed.ncbi.nlm.nih.gov/25630253/",
+            "https://pubmed.ncbi.nlm.nih.gov/39528672/",
+            "https://pubmed.ncbi.nlm.nih.gov/40696045/",
+        ],
+    }
+    bad_links = [
+        "https://pubmed.ncbi.nlm.nih.gov/36823337/",
+        "https://www.nature.com/articles/s41593-025-01953-2",
+        "https://pubmed.ncbi.nlm.nih.gov/31086347/",
+        "https://pubmed.ncbi.nlm.nih.gov/35636471/",
+        "https://pubmed.ncbi.nlm.nih.gov/28097370/",
+        "https://pubmed.ncbi.nlm.nih.gov/34158251/",
+        "https://pubmed.ncbi.nlm.nih.gov/26808230/",
+        "https://jnm.snmjournals.org/content/66/5/787",
+        "available before this article",
+    ]
+
+    for slug, links in required_links.items():
+        content = app.config["CONTENT"].posts_by_slug[slug]["content_html"]
+
+        assert all(link in content for link in links)
+        assert all(link not in content for link in bad_links)
 
 
 def test_2025_alzheimers_research_articles_keep_cutoffs_and_tone():
