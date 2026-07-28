@@ -1,6 +1,6 @@
 <section class="cms-block cms-sponsor-grid {% if block.settings.grayscale %}cms-sponsor-grid--grayscale{% endif %}">
   {% for sponsor in block.content.sponsors %}
-    <a href="{{ sponsor.url or '#' }}" {% if sponsor.url %}target="_blank" rel="noopener"{% endif %}>
+    <a href="{{ sponsor.url or '#' }}" {% if sponsor.url %}target="_blank" rel="noopener"{% endif %} data-track-event="sponsor_click" data-track-category="sponsor" data-track-label="{{ sponsor.name }}" data-track-id="{{ block.id }}-{{ loop.index }}" data-track-position="cms-sponsor-grid" data-track-content-id="{{ item.id if item is defined else '' }}" data-track-content-type="{{ item.content_type if item is defined else '' }}" data-sponsor-id="{{ sponsor.name|lower|replace(' ', '-') }}" data-track-impression="1">
       {% if sponsor.logo %}<img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">{% endif %}
       <strong>{{ sponsor.name }}</strong>
       {% if sponsor.level %}<span>{{ sponsor.level }}</span>{% endif %}

@@ -1,5 +1,21 @@
-<form class="newsletter-form {{ newsletter_class|default('') }}" action="{{ url_for('subscribe') }}" method="post">
+<form
+  class="newsletter-form {{ newsletter_class|default('') }}"
+  action="{{ url_for('subscribe') }}"
+  method="post"
+  data-track-event="newsletter_form_view"
+  data-track-impression="1"
+  data-track-category="newsletter"
+  data-track-label="Newsletter signup"
+  data-track-id="{{ newsletter_id|default('newsletter-email') }}"
+  data-track-position="{{ newsletter_source|default(request.path) }}"
+  data-signup-form-id="{{ newsletter_id|default('newsletter-email') }}"
+>
   <input type="hidden" name="source" value="{{ newsletter_source|default(request.path) }}">
+  <input type="hidden" name="analytics_form_id" value="{{ newsletter_id|default('newsletter-email') }}">
+  <input type="hidden" name="analytics_element_id" value="{{ newsletter_id|default('newsletter-email') }}">
+  <input type="hidden" name="analytics_position" value="{{ newsletter_source|default(request.path) }}">
+  <input type="hidden" name="analytics_session_id" value="">
+  <input type="hidden" name="page_path" value="{{ request.path }}">
   <div class="newsletter-form__bot-field" aria-hidden="true">
     <label for="{{ newsletter_id|default('newsletter-email') }}-website">Website</label>
     <input id="{{ newsletter_id|default('newsletter-email') }}-website" name="website" type="text" tabindex="-1" autocomplete="off">

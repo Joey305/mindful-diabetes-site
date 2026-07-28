@@ -3,8 +3,8 @@
     <h2>{{ block.content.title }}</h2>
     {% if block.content.subtitle %}<p>{{ block.content.subtitle }}</p>{% endif %}
     <div class="cms-button-pair">
-      {% if block.content.primary_label and block.content.primary_url %}<a class="cms-button cms-button--green" href="{{ block.content.primary_url }}">{{ block.content.primary_label }}</a>{% endif %}
-      {% if block.content.secondary_label and block.content.secondary_url %}<a class="cms-button cms-button--orange" href="{{ block.content.secondary_url }}">{{ block.content.secondary_label }}</a>{% endif %}
+      {% if block.content.primary_label and block.content.primary_url %}<a class="cms-button cms-button--green" href="{{ block.content.primary_url }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="{{ block.content.primary_label }}" data-track-id="{{ block.id }}-primary" data-track-position="cms-hero-primary" data-track-content-id="{{ item.id if item is defined else '' }}" data-track-content-type="{{ item.content_type if item is defined else '' }}" data-track-impression="1">{{ block.content.primary_label }}</a>{% endif %}
+      {% if block.content.secondary_label and block.content.secondary_url %}<a class="cms-button cms-button--orange" href="{{ block.content.secondary_url }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="{{ block.content.secondary_label }}" data-track-id="{{ block.id }}-secondary" data-track-position="cms-hero-secondary" data-track-content-id="{{ item.id if item is defined else '' }}" data-track-content-type="{{ item.content_type if item is defined else '' }}" data-track-impression="1">{{ block.content.secondary_label }}</a>{% endif %}
     </div>
   </div>
 </section>

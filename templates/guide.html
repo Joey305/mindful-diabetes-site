@@ -31,7 +31,7 @@
         {% set newsletter_id = "guide-newsletter-email" %}
         {% set newsletter_source = "guide" %}
         {% include "_newsletter_form.html" %}
-        <form class="guide-donate" action="https://www.paypal.com/donate" method="post" target="_blank">
+        <form class="guide-donate" action="https://www.paypal.com/donate" method="post" target="_blank" data-track-event="paypal_click" data-track-category="donation" data-track-label="Donate with PayPal" data-track-id="guide-paypal-donate" data-track-position="guide-newsletter" data-track-destination="https://www.paypal.com/donate" data-provider="paypal" data-campaign-id="general-support" data-track-impression="1">
           <input type="hidden" name="hosted_button_id" value="{{ paypal_button_id }}">
           <button class="donate-button" type="submit">Donate with PayPal</button>
         </form>

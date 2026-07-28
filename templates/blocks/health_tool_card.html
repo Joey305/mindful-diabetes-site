@@ -4,6 +4,6 @@
     <p class="eyebrow">Health tool</p>
     <h2>{{ block.content.title_override or health_tool.title }}</h2>
     <p>{{ block.content.description or health_tool.description }}</p>
-    <a class="cms-button cms-button--green" href="{{ health_tool.url }}" {% if health_tool.url.startswith('http') %}target="_blank" rel="noopener"{% endif %}>{{ block.content.button }}</a>
+    <a class="cms-button cms-button--green" href="{{ health_tool.url }}" {% if health_tool.url.startswith('http') %}target="_blank" rel="noopener"{% endif %} data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="{{ block.content.title_override or health_tool.title }}" data-track-id="{{ block.id }}" data-track-position="cms-health-tool-card" data-track-content-id="{{ item.id if item is defined else '' }}" data-track-content-type="{{ item.content_type if item is defined else '' }}" data-tool-id="{{ block.content.tool_slug }}" data-tool-name="{{ block.content.title_override or health_tool.title }}" data-tool-slug="{{ block.content.tool_slug }}" data-tool-destination-type="{% if health_tool.url.startswith('http') %}external{% else %}internal{% endif %}" data-track-impression="1">{{ block.content.button }}</a>
   </div>
 </section>

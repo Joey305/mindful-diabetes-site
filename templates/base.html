@@ -12,6 +12,7 @@
       <link rel="preconnect" href="https://challenges.cloudflare.com">
     {% endif %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+    <script src="{{ url_for('static', filename='js/site-analytics.js') }}" defer data-enabled="{{ 1 if analytics_browser_config.enabled else 0 }}" data-endpoint="{{ analytics_browser_config.endpoint }}" data-environment="{{ analytics_browser_config.environment }}"></script>
     {% if turnstile_site_key %}
       <script src="{{ url_for('static', filename='js/newsletter-turnstile.js') }}" defer></script>
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -86,7 +87,7 @@
             {% set newsletter_class = "newsletter-form--footer" %}
             {% include "_newsletter_form.html" %}
           </div>
-          <form class="footer-donate" action="https://www.paypal.com/donate" method="post" target="_blank">
+          <form class="footer-donate" action="https://www.paypal.com/donate" method="post" target="_blank" data-track-event="paypal_click" data-track-category="donation" data-track-label="Donate with PayPal" data-track-id="footer-paypal-donate" data-track-position="footer" data-track-destination="https://www.paypal.com/donate" data-provider="paypal" data-campaign-id="general-support">
             <input type="hidden" name="hosted_button_id" value="{{ paypal_button_id }}">
             <button class="donate-button" type="submit">Donate with PayPal</button>
           </form>
@@ -113,7 +114,7 @@
         <nav class="footer-links" aria-label="Get involved">
           <h2>Get Involved</h2>
           <a href="{{ url_for('volunteer') }}">Volunteer</a>
-          <a href="{{ url_for('page_detail', slug='donation') }}">Donate</a>
+          <a href="{{ url_for('page_detail', slug='donation') }}" data-track-event="donation_cta_click" data-track-category="donation" data-track-label="Donate" data-track-id="footer-donate-link" data-track-position="footer" data-track-campaign-id="general-support">Donate</a>
           <a class="footer-contact-button" href="mailto:jmschulz@mindfuldiabetes.org">Contact Us</a>
           <h2 class="footer-social-heading">Follow Us</h2>
           {% set social_link_variant = "social-link-row--footer" %}

@@ -4,5 +4,5 @@
     {% if block.content.description %}<p>{{ block.content.description }}</p>{% endif %}
     <p class="cms-meta">{{ block.content.time_commitment }}{% if block.content.time_commitment and block.content.location %} · {% endif %}{{ block.content.location }}</p>
   </div>
-  <a class="cms-button cms-button--green" href="{{ block.content.url }}">{{ block.content.button }}</a>
+  <a class="cms-button cms-button--green" href="{{ block.content.url }}" data-track-event="volunteer_cta_click" data-track-category="volunteer" data-track-label="{{ block.content.button }}" data-track-id="{{ block.id }}" data-track-position="cms-volunteer-cta" data-track-content-id="{{ item.id if item is defined else '' }}" data-track-content-type="{{ item.content_type if item is defined else '' }}" data-volunteer-role="{{ block.content.title }}" data-track-impression="1">{{ block.content.button }}</a>
 </section>

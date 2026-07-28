@@ -16,8 +16,8 @@
         <h1>Practical tools for blood sugar, brain health, and everyday habits</h1>
         <p>Mindful Diabetes builds free wellness tools that make prevention easier to understand and easier to practice. Start with AI-guided education, daily habit tracking, or a quick nutrition game.</p>
         <div class="button-row">
-          <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Open JEIR</a>
-          <a class="button-secondary button-secondary--light" href="https://memovela.com/" target="_blank" rel="noopener">Try Memovela</a>
+          <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Open JEIR" data-track-id="health-tools-hero-jeir" data-track-position="hero" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">Open JEIR</a>
+          <a class="button-secondary button-secondary--light" href="https://memovela.com/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="health-tools-hero-memovela" data-track-position="hero" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">Try Memovela</a>
         </div>
       </div>
       <div class="health-tools-hero__panel" aria-label="Mindful Diabetes health tools">
@@ -57,7 +57,7 @@
             <p>{{ jeir_update.excerpt_text }}</p>
           {% endif %}
           <div class="health-tool-actions">
-            <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Open JEIR</a>
+            <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Open JEIR" data-track-id="health-tools-jeir-card" data-track-position="tool-card" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">Open JEIR</a>
             {% if jeir_update %}
               <a class="button-secondary" href="{{ jeir_update.canonical_path }}">Read JEIR updates</a>
             {% endif %}
@@ -82,7 +82,7 @@
             <p>{{ memovela.excerpt_text }}</p>
           {% endif %}
           <div class="health-tool-actions">
-            <a class="button-primary" href="https://memovela.com/" target="_blank" rel="noopener">Try Memovela</a>
+            <a class="button-primary" href="https://memovela.com/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="health-tools-memovela-card" data-track-position="tool-card" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">Try Memovela</a>
             {% if memovela %}
               <a class="button-secondary" href="{{ memovela.canonical_path }}">Read the Memovela article</a>
             {% endif %}
@@ -104,7 +104,7 @@
             <p>{{ game.excerpt_text }}</p>
           {% endif %}
           <div class="health-tool-actions">
-            <a class="button-primary" href="https://www.jeir.fun/" target="_blank" rel="noopener">Play the game</a>
+            <a class="button-primary" href="https://www.jeir.fun/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Play the game" data-track-id="health-tools-eating-game-card" data-track-position="tool-card" data-tool-id="mindful-eating-game" data-tool-name="Mindful Eating Game" data-tool-slug="healthy-eating" data-tool-destination-type="external" data-track-impression="1">Play the game</a>
             {% if game %}
               <a class="button-secondary" href="{{ game.canonical_path }}">Read about the game</a>
             {% endif %}
@@ -147,7 +147,7 @@
     </div>
     <div class="button-row">
       <a class="button-primary" href="{{ url_for('guide') }}">Read the guide</a>
-      <a class="button-secondary button-secondary--light" href="{{ url_for('page_detail', slug='donation') }}">Support the tools</a>
+      <a class="button-secondary button-secondary--light" href="{{ url_for('page_detail', slug='donation') }}" data-track-event="donation_cta_click" data-track-category="donation" data-track-label="Support the tools" data-track-id="health-tools-support-cta" data-track-position="health-tools-footer" data-track-campaign-id="health-tools-support" data-track-impression="1">Support the tools</a>
     </div>
   </section>
 {% endblock %}

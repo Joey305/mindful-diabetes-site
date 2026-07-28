@@ -1,9 +1,9 @@
-<section class="cms-block cms-donation-cta">
+<section class="cms-block cms-donation-cta" data-track-event="cta_impression" data-track-impression="1" data-track-category="donation" data-track-label="{{ block.content.heading }}" data-track-id="{{ block.id }}" data-track-position="cms-donation-cta" data-track-content-id="{{ item.id if item is defined else '' }}" data-track-content-type="{{ item.content_type if item is defined else '' }}">
   <div>
     <h2>{{ block.content.heading }}</h2>
     <p>{{ block.content.body }}</p>
   </div>
-  <form action="https://www.paypal.com/donate" method="post" target="_blank">
+  <form action="https://www.paypal.com/donate" method="post" target="_blank" data-track-event="paypal_click" data-track-category="donation" data-track-label="{{ block.content.button }}" data-track-id="{{ block.id }}-paypal" data-track-position="cms-donation-cta" data-track-content-id="{{ item.id if item is defined else '' }}" data-track-content-type="{{ item.content_type if item is defined else '' }}" data-track-destination="https://www.paypal.com/donate" data-provider="paypal" data-campaign-id="cms-donation">
     <input type="hidden" name="hosted_button_id" value="{{ paypal_button_id }}">
     <button class="donate-button" type="submit">{{ block.content.button }}</button>
   </form>

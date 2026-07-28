@@ -16,11 +16,11 @@
           <p>{{ post.excerpt_text }}</p>
           <div class="button-row">
             {% if post.slug == "diabetes-health-jeir-updates" %}
-              <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Try JEIR</a>
+              <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try JEIR" data-track-id="post-hero-jeir-{{ post.slug }}" data-track-position="article-hero" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-article-group="health tools" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">Try JEIR</a>
             {% elif post.slug == "memovela" %}
-              <a class="button-primary" href="https://memovela.com" target="_blank" rel="noopener">Try Memovela</a>
+              <a class="button-primary" href="https://memovela.com" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="post-hero-memovela-{{ post.slug }}" data-track-position="article-hero" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-article-group="health tools" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">Try Memovela</a>
             {% else %}
-              <a class="button-primary" href="{{ url_for('page_detail', slug='donation') }}">Support prevention</a>
+              <a class="button-primary" href="{{ url_for('page_detail', slug='donation') }}" data-track-event="donation_cta_click" data-track-category="donation" data-track-label="Support prevention" data-track-id="post-hero-donation-{{ post.slug }}" data-track-position="article-hero" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-campaign-id="article-support" data-track-impression="1">Support prevention</a>
             {% endif %}
             <a class="button-secondary button-secondary--light" href="#article">Read the article</a>
           </div>
@@ -48,14 +48,14 @@
           <p class="eyebrow">Tool</p>
           <h2>Explore wellness tools</h2>
           <p>Use Mindful Diabetes tools to connect everyday habits with metabolic and cognitive health.</p>
-          <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Open JEIR</a>
+          <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Open JEIR" data-track-id="article-sidebar-jeir-{{ post.slug }}" data-track-position="article-sidebar" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">Open JEIR</a>
         </div>
 
         <div class="article-sidebar-card">
           <p class="eyebrow">Support</p>
           <h2>Fund prevention education</h2>
           <p>Donations help Mindful Diabetes build tools, publish education, and support early prevention work.</p>
-          <form action="https://www.paypal.com/donate" method="post" target="_blank">
+          <form action="https://www.paypal.com/donate" method="post" target="_blank" data-track-event="paypal_click" data-track-category="donation" data-track-label="Donate with PayPal" data-track-id="article-sidebar-paypal-{{ post.slug }}" data-track-position="article-sidebar" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-destination="https://www.paypal.com/donate" data-provider="paypal" data-campaign-id="article-support" data-track-impression="1">
             <input type="hidden" name="hosted_button_id" value="{{ paypal_button_id }}">
             <button class="donate-button" type="submit">Donate with PayPal</button>
           </form>

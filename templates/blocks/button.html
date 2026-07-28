@@ -1,3 +1,3 @@
 <div class="cms-block cms-button-row cms-align-{{ block.settings.alignment }}">
-  <a class="cms-button cms-button--{{ block.settings.style }}" href="{{ block.content.url or '/' }}" {% if block.settings.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ block.content.label }}</a>
+  <a class="cms-button cms-button--{{ block.settings.style }}" href="{{ block.content.url or '/' }}" {% if block.settings.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="{{ block.content.label }}" data-track-id="{{ block.id }}" data-track-position="cms-button" data-track-content-id="{{ item.id if item is defined else '' }}" data-track-content-type="{{ item.content_type if item is defined else '' }}" data-track-impression="1">{{ block.content.label }}</a>
 </div>

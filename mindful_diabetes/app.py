@@ -6,6 +6,7 @@ import os
 import random
 import re
 import secrets
+import click
 from datetime import datetime, timedelta, timezone
 from functools import wraps
 from html.parser import HTMLParser
@@ -18,6 +19,7 @@ from flask import Flask, abort, jsonify, redirect, render_template, request, ses
 from markupsafe import Markup, escape
 
 from mindful_diabetes import cms
+from mindful_diabetes import analytics
 
 try:
     import psycopg
@@ -41,6 +43,7 @@ PRESERVED_CONTENT_CLASSES = {
     "article-image-placeholder",
     "article-impact-card",
     "article-impact-grid",
+    "article-table-wrap",
     "article-wellness-tools",
     "article-wellness-tools__intro",
     "article-wellness-tools__title",
@@ -199,6 +202,14 @@ def create_app(test_config=None):
         ADMIN_DATA_PATH=os.getenv("ADMIN_DATA_PATH", str(BASE_DIR / "instance" / "admin_data.json")),
         CMS_DATA_PATH=os.getenv("CMS_DATA_PATH", str(BASE_DIR / "instance" / "cms_content.json")),
         CMS_LOCAL_UPLOAD_ROOT=os.getenv("CMS_LOCAL_UPLOAD_ROOT", str(BASE_DIR / "static")),
+        ANALYTICS_STORAGE_BACKEND=os.getenv("ANALYTICS_STORAGE_BACKEND", "local"),
+        ANALYTICS_LOCAL_PATH=os.getenv("ANALYTICS_LOCAL_PATH", str(BASE_DIR / "instance" / "analytics.sqlite3")),
+        ANALYTICS_RETENTION_DAYS=int(os.getenv("ANALYTICS_RETENTION_DAYS", analytics.DEFAULT_RETENTION_DAYS)),
+        ANALYTICS_ENABLE_LOCAL_TESTING=os.getenv("ANALYTICS_ENABLE_LOCAL_TESTING", ""),
+        ANALYTICS_REPORT_RECIPIENTS=os.getenv("ANALYTICS_REPORT_RECIPIENTS", ""),
+        ANALYTICS_REMOTE_BASE_URL=os.getenv("ANALYTICS_REMOTE_BASE_URL", ""),
+        ANALYTICS_REMOTE_API_TOKEN=os.getenv("ANALYTICS_REMOTE_API_TOKEN", ""),
+        ANALYTICS_REMOTE_TIMEOUT_SECONDS=os.getenv("ANALYTICS_REMOTE_TIMEOUT_SECONDS", "5"),
         BREVO_API_KEY=os.getenv("BREVO_API_KEY", ""),
         BREVO_SMTP_URL=os.getenv("BREVO_SMTP_URL", "https://api.brevo.com/v3/smtp/email"),
         DATABASE_URL=os.getenv("DATABASE_URL", ""),
@@ -224,6 +235,9 @@ def create_app(test_config=None):
     app.config["CONTENT"] = content
     ensure_admin_storage(app.config)
     cms.ensure_cms_storage(app.config)
+    if app.config["ANALYTICS_STORAGE_BACKEND"] == "local":
+        analytics.analytics_store(app.config).health_check()
+    register_analytics_commands(app)
 
     @app.context_processor
     def inject_site_data():
@@ -236,6 +250,7 @@ def create_app(test_config=None):
                 app.config["TURNSTILE_SITE_KEY"] if is_turnstile_configured(app.config) else ""
             ),
             "admin_csrf_token": get_admin_csrf_token,
+            "analytics_browser_config": browser_analytics_config(app.config),
         }
 
     @app.template_filter("date_label")
@@ -274,22 +289,6 @@ def create_app(test_config=None):
             return view(*args, **kwargs)
 
         return wrapped_view
-
-    @app.after_request
-    def track_public_activity(response):
-        if should_track_request(response):
-            record_activity_event(
-                app.config,
-                "page_view",
-                request.path,
-                title_for_request(content, request.endpoint, request.view_args or {}),
-                {
-                    "query": public_query_args(request.args),
-                    "referrer": request.referrer or "",
-                    "user_agent": (request.user_agent.string or "")[:240],
-                },
-            )
-        return response
 
     def render_cms_content(item, preview=False):
         rendered_blocks = cms.render_blocks(
@@ -429,14 +428,23 @@ def create_app(test_config=None):
                 source=source,
             ), 502
 
-        record_activity_event(
+        record_server_analytics_event(
             app.config,
+            content,
             "newsletter_signup",
-            request.path,
-            "Newsletter signup",
-            {
-                "source": source,
-                "email_domain": email.rsplit("@", 1)[1].lower() if "@" in email else "",
+            page_path=request.form.get("page_path") or request.path,
+            page_title="Newsletter signup",
+            element_id=request.form.get("analytics_element_id", ""),
+            element_label="Newsletter signup",
+            element_type="form",
+            element_position=request.form.get("analytics_position", source or "newsletter"),
+            source=source,
+            anonymous_session_id=request.form.get("analytics_session_id", ""),
+            metadata={
+                "signup_form_id": request.form.get("analytics_form_id") or source or "newsletter",
+                "provider_outcome": "accepted",
+                "subscriber_status": "accepted",
+                "accepted": True,
             },
         )
 
@@ -563,8 +571,80 @@ def create_app(test_config=None):
     @app.get("/admin/")
     @admin_required
     def admin_dashboard():
-        dashboard = build_admin_dashboard(app.config)
+        dashboard = build_admin_dashboard(app.config, request.args)
         return render_template("admin_dashboard.html", dashboard=dashboard, admin_email=app.config["ADMIN_EMAIL"])
+
+    @app.get("/admin/analytics/")
+    @admin_required
+    def admin_analytics():
+        dashboard = build_admin_dashboard(app.config, request.args)
+        return render_template("admin_dashboard.html", dashboard=dashboard, admin_email=app.config["ADMIN_EMAIL"], analytics_page=True)
+
+    @app.get("/admin/analytics/events/")
+    @admin_required
+    def admin_analytics_events():
+        start, end, range_name = analytics.date_range_from_args(request.args)
+        filters = analytics.filters_from_args(request.args)
+        result = analytics.analytics_store(app.config).query_events(start, end, filters, page=request.args.get("page", 1), page_size=50)
+        return render_template(
+            "admin/analytics_events.html",
+            result=result,
+            filters=filters,
+            range_name=range_name,
+            start=start.date().isoformat(),
+            end=(end - timedelta(days=1)).date().isoformat(),
+            storage=analytics.storage_health(app.config),
+            temporary_storage=analytics.temporary_storage_active(app.config),
+        )
+
+    @app.get("/admin/analytics/export.csv")
+    @admin_required
+    def admin_analytics_export():
+        start, end, _range_name = analytics.date_range_from_args(request.args)
+        filters = analytics.filters_from_args(request.args)
+        body = analytics.analytics_store(app.config).export_events(start, end, filters)
+        filename = f"mindful-diabetes-analytics-{start.date()}-to-{(end - timedelta(days=1)).date()}.csv"
+        return body, {
+            "Content-Type": "text/csv; charset=utf-8",
+            "Content-Disposition": f"attachment; filename={filename}",
+        }
+
+    @app.get("/admin/analytics/page/")
+    @admin_required
+    def admin_analytics_page_report():
+        page_path = request.args.get("page_path", "/")
+        args = request.args.copy()
+        args = args.copy()
+        start, end, range_name = analytics.date_range_from_args(args)
+        summary = analytics.analytics_store(app.config).query_summary(start, end, {"page_path": page_path, "environment": analytics.analytics_environment(app.config)})
+        events = analytics.analytics_store(app.config).query_events(start, end, {"page_path": page_path, "environment": analytics.analytics_environment(app.config)}, page=1, page_size=25)
+        return render_template(
+            "admin/analytics_page.html",
+            page_path=page_path,
+            summary=summary,
+            events=events,
+            range_name=range_name,
+            start=start.date().isoformat(),
+            end=(end - timedelta(days=1)).date().isoformat(),
+        )
+
+    @app.post("/analytics/events")
+    def collect_analytics_events():
+        if not analytics.analytics_enabled(app.config):
+            return jsonify({"ok": True, "stored": 0, "disabled": True}), 202
+        if not same_origin_request(request):
+            return jsonify({"ok": False, "message": "Analytics request was not accepted."}), 403
+        try:
+            events = analytics.parse_event_request(request, app.config)
+            for event in events:
+                analytics.enrich_event_with_request(event, request, content)
+                event["environment"] = analytics.analytics_environment(app.config)
+            result = analytics.analytics_store(app.config).store_events(events)
+        except analytics.AnalyticsValidationError as error:
+            return jsonify({"ok": False, "message": str(error)}), 400
+        except Exception:
+            return jsonify({"ok": False, "message": "Analytics event could not be recorded."}), 202
+        return jsonify({"ok": True, "stored": result["inserted"], "duplicates": result["duplicates"]}), 202
 
     @app.get("/admin/content/")
     @admin_required
@@ -1203,6 +1283,23 @@ def parse_email_identity(raw_value):
 
 
 def send_admin_login_code(config, email, code):
+    return send_brevo_email(
+        config,
+        [email],
+        "Your Mindful Diabetes admin code",
+        (
+            f"Your Mindful Diabetes admin code is {code}. "
+            f"It expires in {ADMIN_CODE_TTL_MINUTES} minutes."
+        ),
+        (
+            "<p>Your Mindful Diabetes admin code is:</p>"
+            f"<p style=\"font-size:28px;font-weight:700;letter-spacing:4px;\">{code}</p>"
+            f"<p>This code expires in {ADMIN_CODE_TTL_MINUTES} minutes.</p>"
+        ),
+    )
+
+
+def send_brevo_email(config, recipients, subject, text_content, html_content):
     api_key = config.get("BREVO_API_KEY") or ""
     if not api_key:
         return False, "Brevo email is not configured yet. Add BREVO_API_KEY in Heroku Config Vars."
@@ -1210,17 +1307,10 @@ def send_admin_login_code(config, email, code):
     sender = parse_email_identity(config.get("ADMIN_EMAIL_FROM"))
     payload = {
         "sender": sender,
-        "to": [{"email": email}],
-        "subject": "Your Mindful Diabetes admin code",
-        "textContent": (
-            f"Your Mindful Diabetes admin code is {code}. "
-            f"It expires in {ADMIN_CODE_TTL_MINUTES} minutes."
-        ),
-        "htmlContent": (
-            "<p>Your Mindful Diabetes admin code is:</p>"
-            f"<p style=\"font-size:28px;font-weight:700;letter-spacing:4px;\">{code}</p>"
-            f"<p>This code expires in {ADMIN_CODE_TTL_MINUTES} minutes.</p>"
-        ),
+        "to": [{"email": email} for email in recipients],
+        "subject": subject,
+        "textContent": text_content,
+        "htmlContent": html_content,
     }
     request_obj = Request(
         config.get("BREVO_SMTP_URL") or "https://api.brevo.com/v3/smtp/email",
@@ -1342,44 +1432,60 @@ def parse_timestamp(value):
     return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
 
 
-def build_admin_dashboard(config):
-    events = fetch_admin_events(config)
-    now = utc_now()
-    since_7_days = now - timedelta(days=7)
-    today = now.date()
-    page_views = [event for event in events if event["event_type"] == "page_view"]
-    newsletter_signups = [event for event in events if event["event_type"] == "newsletter_signup"]
-    admin_logins = [event for event in events if event["event_type"] == "admin_login"]
-    today_events = [event for event in events if event["created_at"].date() == today]
-    recent_page_views = [event for event in page_views if event["created_at"] >= since_7_days]
+def build_admin_dashboard(config, args=None):
+    args = args or {}
+    start, end, range_name = analytics.date_range_from_args(args)
+    filters = analytics.filters_from_args(args)
+    filters.setdefault("environment", analytics.analytics_environment(config))
+    store = analytics.analytics_store(config)
+    try:
+        summary = store.query_summary(start, end, filters)
+        recent = store.query_events(start, end, filters, page=1, page_size=20)
+    except Exception:
+        summary = analytics.build_empty_summary()
+        recent = {"events": [], "total": 0, "page": 1, "pages": 1}
 
-    path_counts = {}
-    for event in page_views:
-        path_counts[event["path"]] = path_counts.get(event["path"], 0) + 1
-
-    top_paths = [
-        {"path": path, "count": count}
-        for path, count in sorted(path_counts.items(), key=lambda item: (-item[1], item[0]))[:8]
+    totals = summary["totals"]
+    page_views = totals.get("page_views", 0)
+    stats = [
+        dashboard_stat("Page views", page_views, summary, "page_views", "Public page loads during the selected period."),
+        dashboard_stat("Anonymous sessions", totals.get("anonymous_sessions", 0), summary, "anonymous_sessions", "Browser sessions, not identified people."),
+        dashboard_stat("Donation CTA clicks", totals.get("donation_cta_clicks", 0), summary, "donation_cta_clicks", "Donation buttons clicked before PayPal opens."),
+        dashboard_stat("PayPal opens", totals.get("paypal_clicks", 0), summary, "paypal_clicks", "PayPal opened; not a confirmed donation."),
+        dashboard_stat("Health-tool clicks", totals.get("health_tool_clicks", 0), summary, "health_tool_clicks", "Clicks to JEIR, Memovela, and related tools."),
+        dashboard_stat("Newsletter signups", totals.get("newsletter_signups", 0), summary, "newsletter_signups", "Successful accepted newsletter signups only."),
     ]
 
     return {
-        "storage_backend": config.get("ADMIN_STORAGE_BACKEND") or "local file",
-        "stats": [
-            {"label": "Visits tracked", "value": len(page_views)},
-            {"label": "Last 7 days", "value": len(recent_page_views)},
-            {"label": "Newsletter signups", "value": len(newsletter_signups)},
-            {"label": "Today", "value": len(today_events)},
-        ],
-        "admin_login_count": len(admin_logins),
-        "top_paths": top_paths,
-        "recent_events": events[:30],
-        "next_widgets": [
-            "Donation and PayPal click tracking",
-            "Newsletter source trends",
-            "Most-read article groups",
-            "Health-tool outbound clicks",
-            "Weekly email summary to the admin",
-        ],
+        "storage_backend": config.get("ANALYTICS_STORAGE_BACKEND") or "local",
+        "storage": analytics.storage_health(config),
+        "temporary_storage": analytics.temporary_storage_active(config),
+        "range_name": range_name,
+        "start": start.date().isoformat(),
+        "end": (end - timedelta(days=1)).date().isoformat(),
+        "filters": filters,
+        "summary": summary,
+        "stats": stats,
+        "recent_events": recent["events"],
+        "top_paths": [{"path": item["label"], "count": item["count"]} for item in summary.get("top_pages", [])],
+        "rates": {
+            "donation_cta": analytics.click_rate(totals.get("donation_cta_clicks", 0), page_views),
+            "paypal": analytics.click_rate(totals.get("paypal_clicks", 0), page_views),
+            "health_tools": analytics.click_rate(totals.get("health_tool_clicks", 0), page_views),
+            "newsletter": analytics.click_rate(totals.get("newsletter_signups", 0), page_views),
+        },
+        "confirmed_donations_available": totals.get("confirmed_donations", 0) > 0,
+    }
+
+
+def dashboard_stat(label, value, summary, key, help_text):
+    comparison = summary.get("comparison", {}).get(key, {})
+    return {
+        "label": label,
+        "value": value,
+        "change": comparison.get("label", "No previous activity"),
+        "direction": comparison.get("direction", "flat"),
+        "help": help_text,
     }
 
 
@@ -1400,6 +1506,70 @@ def should_track_request(response):
         and request.endpoint in tracked_endpoints
         and "text/html" in (response.content_type or "")
     )
+
+
+def browser_analytics_config(config):
+    return {
+        "enabled": analytics.analytics_enabled(config),
+        "endpoint": "/analytics/events",
+        "environment": analytics.analytics_environment(config),
+    }
+
+
+def same_origin_request(request_obj):
+    origin = request_obj.headers.get("Origin")
+    if not origin:
+        return True
+    return origin.rstrip("/") == request_obj.host_url.rstrip("/")
+
+
+def record_server_analytics_event(config, content, event_name, **values):
+    if not analytics.analytics_enabled(config):
+        return False
+    payload = {
+        "event_id": values.pop("event_id", f"server:{event_name}:{secrets.token_urlsafe(24)}"),
+        "event_name": event_name,
+        "environment": analytics.analytics_environment(config),
+        **values,
+    }
+    event = analytics.normalize_event_payload(payload, config)
+    fake_path = event.get("page_path") or "/"
+    context = analytics.content_context_for_path(content, fake_path)
+    for key, value in context.items():
+        event[key] = event.get(key) or value
+    return analytics.analytics_store(config).store_event(event)
+
+
+def register_analytics_commands(app):
+    @app.cli.command("analytics-cleanup")
+    def analytics_cleanup_command():
+        retention_days = int(app.config.get("ANALYTICS_RETENTION_DAYS") or analytics.DEFAULT_RETENTION_DAYS)
+        before = analytics.utc_now() - timedelta(days=retention_days)
+        removed = analytics.analytics_store(app.config).cleanup(before)
+        click.echo(f"Removed {removed} analytics event(s) older than {retention_days} days.")
+
+    @app.cli.command("analytics-send-weekly-summary")
+    def analytics_weekly_summary_command():
+        recipients = [
+            email.strip()
+            for email in (app.config.get("ANALYTICS_REPORT_RECIPIENTS") or app.config.get("ADMIN_EMAIL") or "").split(",")
+            if is_valid_email(email.strip())
+        ]
+        if not recipients:
+            raise click.ClickException("Set ANALYTICS_REPORT_RECIPIENTS to one or more administrator emails.")
+        report = analytics.weekly_summary(app.config)
+        admin_url = os.getenv("SITE_BASE_URL", "https://mindfuldiabetes.org").rstrip("/") + "/admin/analytics/"
+        text = analytics.format_weekly_summary_text(report, admin_url=admin_url)
+        sent, message = send_brevo_email(
+            app.config,
+            recipients,
+            "Mindful Diabetes weekly analytics summary",
+            text,
+            "<pre style=\"font-family:Arial,sans-serif;white-space:pre-wrap;\">" + html_lib.escape(text) + "</pre>",
+        )
+        if not sent:
+            raise click.ClickException(message)
+        click.echo(f"Weekly analytics summary sent to {len(recipients)} recipient(s).")
 
 
 def title_for_request(content, endpoint, view_args):
@@ -1703,6 +1873,7 @@ def clean_article_html(raw_html, paypal_button_id, post_slug=""):
     html = replace_imported_wellness_tools_blocks(html)
     html = promote_chicago_marathon_figure(html)
     html = remove_empty_figures(html)
+    html = wrap_article_tables(html)
     html = wrap_article_sections(html)
     return html
 
@@ -1720,6 +1891,15 @@ def remove_empty_list_items(html):
 
 def remove_empty_figures(html):
     return re.sub(r"<figure>\s*</figure>", "", html, flags=re.IGNORECASE)
+
+
+def wrap_article_tables(html):
+    return re.sub(
+        r"(<table\b.*?</table>)",
+        r'<div class="article-table-wrap">\1</div>',
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
 
 
 def rewrite_upload_urls(html):
@@ -1907,17 +2087,17 @@ def wellness_tools_panel():
         <p>Explore AI-guided learning, daily habit tracking, and a playful nutrition game built around Mindful Diabetes prevention education.</p>
       </div>
       <div class="article-wellness-tools__grid">
-        <a class="article-tool-card article-tool-card--jeir" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">
+        <a class="article-tool-card article-tool-card--jeir" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="JEIR" data-track-id="imported-wellness-jeir" data-track-position="imported-wellness-tools" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">
           <span>JEIR</span>
           <strong>AI Wellness Guide</strong>
           <small>Ask clearer questions about blood sugar, insulin resistance, and brain health.</small>
         </a>
-        <a class="article-tool-card article-tool-card--memovela" href="https://memovela.com/" target="_blank" rel="noopener">
+        <a class="article-tool-card article-tool-card--memovela" href="https://memovela.com/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Memovela" data-track-id="imported-wellness-memovela" data-track-position="imported-wellness-tools" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">
           <span>Memovela</span>
           <strong>Wellness Tracker</strong>
           <small>Build repeatable habits around movement, meals, sleep, hydration, and check-ins.</small>
         </a>
-        <a class="article-tool-card article-tool-card--game" href="https://www.jeir.fun/" target="_blank" rel="noopener">
+        <a class="article-tool-card article-tool-card--game" href="https://www.jeir.fun/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Mindful Eating Game" data-track-id="imported-wellness-game" data-track-position="imported-wellness-tools" data-tool-id="mindful-eating-game" data-tool-name="Mindful Eating Game" data-tool-slug="healthy-eating" data-tool-destination-type="external" data-track-impression="1">
           <span>Game</span>
           <strong>Mindful Eating Game</strong>
           <small>Play a quick nutrition game and make healthy choices feel more memorable.</small>
@@ -1992,7 +2172,7 @@ def top_level_heading_ranges(html):
 def paypal_form(paypal_button_id):
     button_id = escape(paypal_button_id)
     return f"""
-    <form class="paypal-donation-form" action="https://www.paypal.com/donate" method="post" target="_blank">
+    <form class="paypal-donation-form" action="https://www.paypal.com/donate" method="post" target="_blank" data-track-event="paypal_click" data-track-category="donation" data-track-label="Donate with PayPal" data-track-id="wordpress-paypal-donate" data-track-position="imported-content" data-track-destination="https://www.paypal.com/donate" data-provider="paypal" data-campaign-id="general-support" data-track-impression="1">
       <input type="hidden" name="hosted_button_id" value="{button_id}">
       <button class="donate-button" type="submit">Donate with PayPal</button>
     </form>

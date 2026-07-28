@@ -11,7 +11,7 @@
         <h1>Halt the progression before symptoms arise</h1>
         <p>We fund education, prevention, and early intervention work around Type II and Type III Diabetes, with a focus on long-term brain health.</p>
         <div class="button-row">
-          <a class="button-primary" href="{{ url_for('page_detail', slug='donation') }}">Join Our Cause</a>
+          <a class="button-primary" href="{{ url_for('page_detail', slug='donation') }}" data-track-event="donation_cta_click" data-track-category="donation" data-track-label="Join Our Cause" data-track-id="home-hero-donation" data-track-position="hero" data-track-campaign-id="general-support" data-track-impression="1">Join Our Cause</a>
           <a class="button-secondary button-secondary--light" href="#story">Learn More</a>
         </div>
       </div>
@@ -96,7 +96,7 @@
             <p>{{ memovela_post.excerpt_text }}</p>
           {% endif %}
           <div class="button-row">
-            <a class="button-primary" href="https://memovela.com" target="_blank" rel="noopener">Try Memovela</a>
+            <a class="button-primary" href="https://memovela.com" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="home-memovela-tool" data-track-position="home-tools" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">Try Memovela</a>
             {% if memovela_post %}
               <a class="button-secondary" href="{{ memovela_post.canonical_path }}">Read the article</a>
             {% endif %}
@@ -113,7 +113,7 @@
           <h3>JEIR for clearer metabolic brain-health learning</h3>
           <p>JEIR helps explain blood sugar, insulin resistance, brain energy, Alzheimer's education, and Type 3 diabetes research concepts in plain language.</p>
           <div class="button-row">
-            <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Try JEIR</a>
+            <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try JEIR" data-track-id="home-jeir-tool" data-track-position="home-tools" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">Try JEIR</a>
             <a class="button-secondary" href="{{ url_for('page_detail', slug='diabetes-health-jeir-updates') }}">Read JEIR updates</a>
           </div>
         </div>

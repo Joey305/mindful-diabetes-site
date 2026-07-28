@@ -93,6 +93,7 @@
                       <a href="{{ url_for('admin_content_editor', content_id=item.id) }}">Edit</a>
                       {% if item.status == "published" %}
                         <a href="{{ url_for('page_detail', slug=item.slug) }}" target="_blank" rel="noopener">View</a>
+                        <a href="{{ url_for('admin_analytics_page_report', page_path='/' ~ item.slug ~ '/') }}">Analytics</a>
                       {% else %}
                         <a href="{{ url_for('admin_content_preview', content_id=item.id) }}" target="_blank" rel="noopener">Preview</a>
                       {% endif %}

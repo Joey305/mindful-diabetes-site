@@ -30,7 +30,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 98
+    assert len(content.latest_posts) == 99
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -838,6 +838,104 @@ def test_summer_hydration_preview_images_include_seo_metadata():
         assert b'data-description="Hero image for a Mindful Diabetes article' in response.data
 
 
+def test_june_alzheimers_clinical_trials_post_has_snapshot_sources_and_images():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    response = client.get("/alzheimers-clinical-trials-june-2026/")
+    post = app.config["CONTENT"].posts_by_slug["alzheimers-clinical-trials-june-2026"]
+    methodology = app_module.BASE_DIR / "docs" / "research" / "2026-06-10-alzheimers-clinical-trials-methodology.md"
+    summary = app_module.BASE_DIR / "data" / "2026-06-10-alzheimers-clinical-trials-summary.json"
+    csv_snapshot = app_module.BASE_DIR / "data" / "2026-06-10-alzheimers-clinical-trials.csv"
+    csv_excluded = app_module.BASE_DIR / "data" / "2026-06-10-alzheimers-clinical-trials-excluded-after-cutoff.csv"
+    brief = app_module.BASE_DIR / "docs" / "blog-image-briefs" / "2026-06-10-alzheimers-clinical-trials-landscape.md"
+
+    internal_links = [
+        b'href="/amyloid-plaques-alzheimers-research/"',
+        b'href="/tau-microglia-neuronal-stress/"',
+        b'href="/tau-pet-imaging-alzheimers/"',
+        b'href="/microglia-astrocytes-alzheimers/"',
+        b'href="/insulin-resistance-cognitive-decline/"',
+        b'href="/type-3-diabetes/"',
+        b'href="/connecting-diabetes-and-alzheimers/"',
+        b'href="/sleep-aging-brain-dementia-risk/"',
+        b'href="/prevent-type-3-diabetes-with-exercise/"',
+        b'href="/alzheimers-blood-biomarkers/"',
+        b'href="/alzheimers-research-blood-tests-tau-trials/"',
+        b'href="/ipsc-cells-alzheimers-disease-models/"',
+        b'href="/memovela/"',
+        b'href="/diabetes-artificial-intelligence-jeir/"',
+        b'href="/health-tools/"',
+        b'href="/research/"',
+        b'href="/donation/"',
+    ]
+    external_links = [
+        b"https://clinicaltrials.gov/api/v2/studies?query.cond=Alzheimer+Disease",
+        b"https://www.alz.org/news/2026/alzheimers-disease-drug-development-pipeline-is-growing",
+        b"https://clinicaltrials.gov/study/NCT03887455",
+        b"https://clinicaltrials.gov/study/NCT04468659",
+        b"https://clinicaltrials.gov/study/NCT05026866",
+        b"https://clinicaltrials.gov/study/NCT06268886",
+        b"https://clinicaltrials.gov/study/NCT06602258",
+        b"https://clinicaltrials.gov/study/NCT04098666",
+        b"https://clinicaltrials.gov/study/NCT07200622",
+        b"https://clinicaltrials.gov/study/NCT05983575",
+        b"https://clinicaltrials.gov/study/NCT06595511",
+        b"https://clinicaltrials.gov/study/NCT06122415",
+        b"https://clinicaltrials.gov/study/NCT05397639",
+        b"https://clinicaltrials.gov/study/NCT06852326",
+        b"https://www.fda.gov/patients/drug-development-process/step-3-clinical-research",
+        b"https://clinicaltrials.gov/study-basics/glossary",
+        b"https://www.alzheimers.gov/clinical-trials/find-clinical-trials",
+    ]
+    image_assets = [
+        b"/static/uploads/2026/06/alzheimers-clinical-trials-june-2026-hero.webp",
+        b"/static/uploads/2026/06/alzheimers-clinical-trial-landscape-pathways.webp",
+        b"/static/uploads/2026/06/alzheimers-clinical-trial-phases-pathway.webp",
+        b"/static/uploads/2026/06/alzheimers-trial-global-locations-map-concept.webp",
+        b"/static/uploads/2026/06/alzheimers-research-participation-visit.webp",
+        b"/static/uploads/2026/06/alzheimers-research-question-to-evidence.webp",
+    ]
+    blocked_phrases = [
+        "for a lay reader",
+        "in plain english",
+        "the name is a mouthful",
+        "that sounds technical",
+        "it is easier than it sounds",
+        "you do not need to understand",
+        "miracle",
+        "game changer",
+        "cure around the corner",
+    ]
+
+    assert response.status_code == 200
+    assert post["date"] == "2026-06-10 09:00:00"
+    assert app.config["CONTENT"].latest_posts[1]["slug"] == "alzheimers-clinical-trials-june-2026"
+    assert post["content_html"].count("<img ") == 6
+    assert post["content_html"].count("title=") == 6
+    assert post["preview_image_title"] == "Alzheimer’s clinical-trial research visit"
+    assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
+    assert b"878 relevant registered studies" in response.data
+    assert b"592 interventional" in response.data
+    assert b"286 observational" in response.data
+    assert b"671 studies" in response.data
+    assert b"Records updated after that date were preserved in a separate exclusions file" in response.data
+    assert b"Clinical trials are not promises" in response.data
+    assert b'class="article-impact-grid"' in response.data
+    assert response.data.count(b'class="article-table-wrap"') == 4
+    assert b'class="article-wellness-tools"' in response.data
+    assert all(asset in response.data for asset in image_assets)
+    assert all(link in response.data for link in internal_links)
+    assert all(link in response.data for link in external_links)
+    assert all(phrase not in post["content_html"].lower() for phrase in blocked_phrases)
+    assert methodology.exists()
+    assert "Broad June 10 snapshot total: `878`" in methodology.read_text(encoding="utf-8")
+    assert summary.exists()
+    assert csv_snapshot.exists()
+    assert csv_excluded.exists()
+    assert brief.exists()
+    assert brief.read_text(encoding="utf-8").count(".webp`") == 6
+
+
 def test_april_alzheimers_research_post_has_sources_and_generated_images():
     app = create_app({"TESTING": True})
     client = app.test_client()
@@ -1303,26 +1401,287 @@ def test_admin_dashboard_requires_email_code_login(tmp_path, monkeypatch):
 
     dashboard_response = client.get("/admin/")
     assert dashboard_response.status_code == 200
-    assert b"Site activity" in dashboard_response.data
+    assert b"Site analytics" in dashboard_response.data
     assert b"Signed in as jmschulz@mindfuldiabetes.org" in dashboard_response.data
 
 
-def test_admin_activity_tracks_public_page_views(tmp_path):
+def test_admin_activity_uses_first_party_analytics_with_local_override(tmp_path):
     app = create_app(
         {
             "TESTING": True,
             "SECRET_KEY": "test-secret",
             "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "ANALYTICS_LOCAL_PATH": str(tmp_path / "analytics.sqlite3"),
+            "ANALYTICS_ENABLE_LOCAL_TESTING": "1",
         }
     )
     client = app.test_client()
 
-    response = client.get("/guide/")
-    assert response.status_code == 200
+    response = client.post(
+        "/analytics/events",
+        json={
+            "event_id": "client:test-page-view-1",
+            "event_name": "page_view",
+            "page_path": "/guide/",
+            "page_title": "Guide",
+            "anonymous_session_id": "session-1",
+            "device_category": "desktop",
+        },
+    )
+    assert response.status_code == 202
 
     dashboard = app_module.build_admin_dashboard(app.config)
     assert dashboard["stats"][0]["value"] == 1
     assert dashboard["top_paths"][0] == {"path": "/guide/", "count": 1}
+
+
+def analytics_app(tmp_path, extra=None):
+    config = {
+        "TESTING": True,
+        "SECRET_KEY": "test-secret",
+        "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+        "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        "ANALYTICS_LOCAL_PATH": str(tmp_path / "analytics.sqlite3"),
+        "ANALYTICS_ENABLE_LOCAL_TESTING": "1",
+    }
+    if extra:
+        config.update(extra)
+    return create_app(config)
+
+
+def post_analytics_event(client, event_id="client:event-1", event_name="page_view", **extra):
+    payload = {
+        "event_id": event_id,
+        "event_name": event_name,
+        "page_path": "/guide/",
+        "page_title": "Guide",
+        "anonymous_session_id": "session-1",
+        "device_category": "desktop",
+    }
+    payload.update(extra)
+    return client.post("/analytics/events", json=payload)
+
+
+def test_analytics_rejects_unknown_event_name_and_bad_metadata(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+
+    unknown_response = post_analytics_event(client, event_name="made_up_click")
+    metadata_response = post_analytics_event(
+        client,
+        event_id="client:event-2",
+        event_name="health_tool_click",
+        metadata={"email": "visitor@example.com"},
+    )
+
+    assert unknown_response.status_code == 400
+    assert metadata_response.status_code == 400
+
+
+def test_analytics_rejects_oversized_and_invalid_field_payloads(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+
+    oversized = client.post(
+        "/analytics/events",
+        data="{" + '"x":"' + ("a" * 33000) + '"}',
+        content_type="application/json",
+    )
+    invalid_type = client.post(
+        "/analytics/events",
+        json={"event_id": "client:event-3", "event_name": "page_view", "page_path": 12},
+    )
+
+    assert oversized.status_code == 400
+    assert invalid_type.status_code == 400
+
+
+def test_local_development_analytics_is_disabled_by_default(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ANALYTICS_LOCAL_PATH": str(tmp_path / "analytics.sqlite3"),
+        }
+    )
+    client = app.test_client()
+
+    response = post_analytics_event(client)
+    dashboard = app_module.build_admin_dashboard(app.config)
+
+    assert response.status_code == 202
+    assert response.json["disabled"] is True
+    assert dashboard["stats"][0]["value"] == 0
+
+
+def test_analytics_duplicate_event_ids_are_ignored(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+
+    first = post_analytics_event(client, event_id="client:duplicate-1")
+    second = post_analytics_event(client, event_id="client:duplicate-1")
+    dashboard = app_module.build_admin_dashboard(app.config)
+
+    assert first.json["stored"] == 1
+    assert second.json["duplicates"] == 1
+    assert dashboard["stats"][0]["value"] == 1
+
+
+def test_donation_paypal_and_health_tool_events_stay_distinct(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+
+    post_analytics_event(
+        client,
+        event_id="client:donation-cta-1",
+        event_name="donation_cta_click",
+        element_label="Support prevention",
+        element_position="article-hero",
+        destination_url="/donation/",
+        campaign="article-support",
+    )
+    post_analytics_event(
+        client,
+        event_id="client:paypal-1",
+        event_name="paypal_click",
+        element_label="Donate with PayPal",
+        element_position="article-sidebar",
+        destination_url="https://www.paypal.com/donate",
+        metadata={"provider": "paypal"},
+    )
+    post_analytics_event(
+        client,
+        event_id="client:tool-1",
+        event_name="health_tool_click",
+        element_label="JEIR",
+        element_position="article-sidebar",
+        destination_url="https://www.mindfuldiabetes.ai/",
+        metadata={"tool_id": "jeir", "tool_name": "JEIR", "tool_slug": "jeir"},
+    )
+
+    dashboard = app_module.build_admin_dashboard(app.config)
+    totals = dashboard["summary"]["totals"]
+
+    assert totals["donation_cta_clicks"] == 1
+    assert totals["paypal_clicks"] == 1
+    assert totals["confirmed_donations"] == 0
+    assert totals["health_tool_clicks"] == 1
+    assert dashboard["summary"]["health_tools"][0]["label"] == "JEIR"
+
+
+def test_analytics_admin_routes_require_login_and_export_is_safe(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    post_analytics_event(
+        client,
+        event_id="client:csv-1",
+        event_name="content_cta_click",
+        element_label="=danger",
+        page_path="/guide/",
+    )
+
+    protected = client.get("/admin/analytics/events/")
+    sign_in_admin(client)
+    explorer = client.get("/admin/analytics/events/?event_name=content_cta_click")
+    export = client.get("/admin/analytics/export.csv?event_name=content_cta_click")
+
+    assert protected.status_code == 302
+    assert explorer.status_code == 200
+    assert b"Event Explorer" in explorer.data
+    assert export.status_code == 200
+    assert b"'=danger" in export.data
+
+
+def test_analytics_cleanup_uses_retention_interface(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    post_analytics_event(client, event_id="client:cleanup-1")
+    runner = app.test_cli_runner()
+
+    result = runner.invoke(args=["analytics-cleanup"])
+
+    assert result.exit_code == 0
+    assert "Removed 0 analytics event" in result.output
+
+
+def test_weekly_summary_calculations_are_plain_language(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    post_analytics_event(client, event_id="client:weekly-page")
+    post_analytics_event(
+        client,
+        event_id="client:weekly-tool",
+        event_name="health_tool_click",
+        element_label="Memovela",
+        metadata={"tool_id": "memovela", "tool_name": "Memovela"},
+    )
+
+    report = app_module.analytics.weekly_summary(app.config, end=app_module.analytics.utc_now() + app_module.timedelta(days=1))
+    text = app_module.analytics.format_weekly_summary_text(report)
+
+    assert report["summary"]["totals"]["page_views"] == 1
+    assert "Health-tool clicks: 1" in text
+    assert "Donation clicks and PayPal opens indicate interest" in text
+
+
+def test_analytics_dashboard_empty_state_and_storage_warning(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    sign_in_admin(client)
+
+    response = client.get("/admin/analytics/")
+
+    assert response.status_code == 200
+    assert b"Temporary analytics storage is active" in response.data
+    assert b"No health-tool clicks have been recorded yet." in response.data
+
+
+def test_remote_analytics_adapter_uses_randy_api(monkeypatch):
+    calls = []
+
+    def fake_urlopen(request_obj, timeout=0):
+        calls.append(
+            {
+                "url": request_obj.full_url,
+                "method": request_obj.get_method(),
+                "body": json.loads(request_obj.data.decode("utf-8")) if request_obj.data else None,
+                "auth": request_obj.headers.get("Authorization"),
+                "timeout": timeout,
+            }
+        )
+        if request_obj.full_url.endswith("/health"):
+            return StubUrlopenResponse(status=200, body=b'{"ok": true, "backend": "randy-sqlite", "event_count": 0}')
+        return StubUrlopenResponse(status=202, body=b'{"ok": true, "inserted": 1, "duplicates": 0}')
+
+    monkeypatch.setattr(app_module.analytics, "urlopen", fake_urlopen)
+    store = app_module.analytics.RemoteAnalyticsStore(
+        "https://randy.rove-vernier.ts.net/mindful-diabetes/analytics",
+        "remote-test-token",
+        9,
+    )
+
+    inserted = store.store_event({"event_id": "client:remote-1", "event_name": "page_view"})
+    health = store.health_check()
+
+    assert inserted is True
+    assert health["backend"] == "randy-sqlite"
+    assert calls[0]["url"] == "https://randy.rove-vernier.ts.net/mindful-diabetes/analytics/events"
+    assert calls[0]["auth"] == "Bearer remote-test-token"
+    assert calls[0]["timeout"] == 9
+
+
+def test_remote_storage_configuration_does_not_affect_local_mode(tmp_path):
+    app = analytics_app(
+        tmp_path,
+        {
+            "ANALYTICS_REMOTE_BASE_URL": "https://randy.example/mindful-diabetes/analytics",
+            "ANALYTICS_REMOTE_API_TOKEN": "remote-token",
+        },
+    )
+
+    store = app_module.analytics.analytics_store(app.config)
+
+    assert isinstance(store, app_module.analytics.LocalAnalyticsStore)
 
 
 def sign_in_admin(client):
@@ -1347,7 +1706,7 @@ def test_admin_dashboard_links_to_content_studio(tmp_path):
     response = client.get("/admin/")
 
     assert response.status_code == 200
-    assert b"Content studio" in response.data
+    assert b"Content Studio" in response.data
     assert b"Create New Page" in response.data
     assert b"Create New Post" in response.data
     assert b"Manage Content" in response.data
