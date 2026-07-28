@@ -756,6 +756,7 @@ def test_shared_article_css_frames_images_and_videos():
     assert ".article-content .video-frame" in css
     assert ".article-wellness-tools" in css
     assert ".article-tool-card--memovela" in css
+    assert ".article-impact-grid" in css
     assert ".article-impact-card" in css
     assert "var(--secondary) 0 50%" in css
     assert "var(--miami-green) 50% 100%" in css
@@ -1052,6 +1053,16 @@ def test_january_amyloid_plaques_post_has_sources_and_generated_images():
     assert b"Reducing amyloid is a biological achievement" in response.data
     assert b"Hero image for a Mindful Diabetes article explaining amyloid plaque research" in response.data
     assert b"Supporting image for a section about amyloid PET" in response.data
+    assert b'class="article-impact-grid"' in response.data
+    grid_start = response.data.find(b'class="article-impact-grid"')
+    first_card_start = response.data.find(b"What It Can Tell Us", grid_start)
+    second_card_start = response.data.find(b"What It Cannot Tell Us Alone", grid_start)
+    next_section_start = response.data.find(b"Where Translational Research Goes Next", grid_start)
+    grid_section_start = response.data.rfind(b'<section class="article-section', 0, grid_start)
+
+    assert grid_start < first_card_start < second_card_start < next_section_start
+    assert grid_section_start == response.data.rfind(b'<section class="article-section', 0, first_card_start)
+    assert grid_section_start == response.data.rfind(b'<section class="article-section', 0, second_card_start)
     assert all(asset in response.data for asset in image_assets)
     assert all(link in response.data for link in internal_links)
     assert all(link in response.data for link in external_links)

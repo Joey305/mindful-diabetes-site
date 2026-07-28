@@ -39,6 +39,8 @@ ADMIN_CODE_TTL_MINUTES = 10
 ADMIN_SESSION_HOURS = 12
 PRESERVED_CONTENT_CLASSES = {
     "article-image-placeholder",
+    "article-impact-card",
+    "article-impact-grid",
     "article-wellness-tools",
     "article-wellness-tools__intro",
     "article-wellness-tools__title",
@@ -1964,24 +1966,25 @@ def wrap_article_sections(html):
 
 def top_level_heading_ranges(html):
     ranges = []
-    list_depth = 0
+    container_depth = 0
     token_pattern = re.compile(
-        r"(?P<heading><h[2-4]\b[^>]*>.*?</h[2-4]>)|(?P<tag></?(?:ul|ol)\b[^>]*>)",
+        r"(?P<heading><h[2-4]\b[^>]*>.*?</h[2-4]>)|"
+        r"(?P<tag></?(?:aside|blockquote|div|figure|form|ol|section|table|ul)\b[^>]*>)",
         flags=re.IGNORECASE | re.DOTALL,
     )
 
     for match in token_pattern.finditer(html):
         heading_html = match.group("heading")
         if heading_html:
-            if list_depth == 0:
+            if container_depth == 0:
                 ranges.append((match.start(), match.end()))
             continue
 
         tag_html = match.group("tag").lower()
         if tag_html.startswith("</"):
-            list_depth = max(0, list_depth - 1)
+            container_depth = max(0, container_depth - 1)
         else:
-            list_depth += 1
+            container_depth += 1
 
     return ranges
 

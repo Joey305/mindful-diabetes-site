@@ -5942,6 +5942,44 @@ a.article-navigation__link:hover {
   transform: translateY(-1px);
 }
 
+.article-impact-grid {
+  display: grid;
+  max-width: 900px;
+  margin: clamp(1.35rem, 3vw, 2rem) 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 1.35rem);
+}
+
+.article-content > .article-impact-grid,
+.article-content .article-section .article-impact-grid {
+  max-width: 900px;
+}
+
+.article-impact-grid .article-impact-card {
+  display: block;
+  max-width: none;
+  min-height: 100%;
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: var(--white);
+  border: 1px solid rgba(0, 80, 48, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 14px 42px rgba(13, 19, 56, 0.08);
+}
+
+.article-impact-grid .article-impact-card:nth-child(2) {
+  background: var(--miami-green-tint);
+  border-color: rgba(0, 80, 48, 0.2);
+}
+
+.article-impact-grid .article-impact-card h3 {
+  margin-top: 0;
+}
+
+.article-impact-grid .article-impact-card p:last-child {
+  margin-bottom: 0;
+}
+
 .article-wellness-tools {
   max-width: 900px;
   margin: clamp(1.5rem, 4vw, 2.5rem) 0;
@@ -6490,6 +6528,10 @@ a.article-navigation__link:hover {
   }
 
   .article-wellness-tools__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-impact-grid {
     grid-template-columns: 1fr;
   }
 
