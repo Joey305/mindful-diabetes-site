@@ -30,7 +30,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 92
+    assert len(content.latest_posts) == 93
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -958,7 +958,7 @@ def test_february_ipsc_alzheimers_post_has_sources_and_generated_images():
         b"/static/uploads/2026/02/brain-organoid-on-chip-alzheimers-model.webp",
         b"/static/uploads/2026/02/ipsc-microglia-neuron-organoid-model.webp",
         b"/static/uploads/2026/02/ipsc-models-promise-limits-alzheimers.webp",
-        b"/static/uploads/2026/02/ipsc-alzheimers-protein-map.webp",
+        b"/static/uploads/2026/02/key-ipsc-signals.webp",
     ]
 
     assert response.status_code == 200
@@ -969,10 +969,10 @@ def test_february_ipsc_alzheimers_post_has_sources_and_generated_images():
     assert b"How Our Earlier Stem Cells International Review Fits In" in response.data
     assert b"Table 1. Selected genetic iPSC models of Alzheimer" in response.data
     assert b"APOE type can influence APP transcription" in response.data
-    assert b"Where Alzheimer" in response.data
     assert b"Hero image for a Mindful Diabetes article explaining how induced pluripotent stem cells" in response.data
     assert b"Supporting image for a section about iPSC-derived microglia" in response.data
     assert b"Educational figure showing where key Alzheimer" in response.data
+    assert b"Where key Alzheimer" in response.data
     assert all(asset in response.data for asset in image_assets)
     assert all(link in response.data for link in internal_links)
     assert all(link in response.data for link in external_links)
@@ -993,6 +993,98 @@ def test_february_ipsc_alzheimers_preview_image_includes_seo_metadata():
         assert b"/static/uploads/2026/02/ipsc-alzheimers-modeling-hero.webp" in response.data
         assert b'title="iPSC models help researchers study Alzheimer\xe2\x80\x99s disease in human cells"' in response.data
         assert b'data-description="Hero image for a Mindful Diabetes article explaining how induced pluripotent stem cells' in response.data
+
+
+def test_january_amyloid_plaques_post_has_sources_and_generated_images():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    response = client.get("/amyloid-plaques-alzheimers-research/")
+    post = app.config["CONTENT"].posts_by_slug["amyloid-plaques-alzheimers-research"]
+
+    internal_links = [
+        b'href="/type-3-diabetes/"',
+        b'href="/connecting-diabetes-and-alzheimers/"',
+        b'href="/insulin-resistance-cognitive-decline/"',
+        b'href="/glucose-metabolism-and-brain-health/"',
+        b'href="/blood-sugar-body/"',
+        b'href="/daily-wellness-habits/"',
+        b'href="/walking-health/"',
+        b'href="/prevent-type-3-diabetes-with-exercise/"',
+        b'href="/mental-health/"',
+        b'href="/stress-in-diabetes-and-strategies-for-stress-management/"',
+        b'href="/mind-diet/"',
+        b'href="/food-sequencing-diabetes/"',
+        b'href="/mindful-eating/"',
+        b'href="/healthy-eating/"',
+        b'href="/memovela/"',
+        b'href="/diabetes-artificial-intelligence-jeir/"',
+        b'href="/guide/"',
+        b'href="/donation/"',
+    ]
+    external_links = [
+        b"https://www.nia.nih.gov/health/what-happens-brain-alzheimers-disease",
+        b"https://www.nia.nih.gov/health/alzheimers-causes-and-risk-factors/what-causes-alzheimers-disease",
+        b"https://www.nature.com/articles/s41467-025-59085-7",
+        b"https://www.nature.com/articles/s41467-025-63328-y",
+        b"https://www.nature.com/articles/s41591-025-03574-1",
+        b"https://jnm.snmjournals.org/content/early/2025/01/07/jnumed.124.268756",
+        b"https://pubmed.ncbi.nlm.nih.gov/36449413/",
+        b"https://pubmed.ncbi.nlm.nih.gov/37459141/",
+        b"https://pubmed.ncbi.nlm.nih.gov/37966285/",
+        b"https://www.nejm.org/doi/full/10.1056/NEJMoa2305032",
+        b"https://clinicaltrials.gov/study/NCT04468659",
+        b"https://www.alzheimers.gov/clinical-trials",
+    ]
+    image_assets = [
+        b"/static/uploads/2026/01/amyloid-plaques-alzheimers-research-hero.webp",
+        b"/static/uploads/2026/01/amyloid-soluble-fibrils-plaque-comparison.webp",
+        b"/static/uploads/2026/01/microglia-amyloid-clearance-research.webp",
+        b"/static/uploads/2026/01/amyloid-pet-biomarker-research-scene.webp",
+        b"/static/uploads/2026/01/amyloid-tau-inflammation-vascular-map.webp",
+        b"/static/uploads/2026/01/amyloid-research-translation-pathway.webp",
+    ]
+
+    assert response.status_code == 200
+    assert post["date"] == "2026-01-15 09:00:00"
+    assert post["content_html"].count("<img ") == 6
+    assert b"Amyloid Plaques Are Not the Whole Story" in response.data
+    assert b"What We Can Honestly Say" in response.data
+    assert b"Reducing amyloid is a biological achievement" in response.data
+    assert b"Hero image for a Mindful Diabetes article explaining amyloid plaque research" in response.data
+    assert b"Supporting image for a section about amyloid PET" in response.data
+    assert all(asset in response.data for asset in image_assets)
+    assert all(link in response.data for link in internal_links)
+    assert all(link in response.data for link in external_links)
+
+
+def test_january_amyloid_plaques_preview_image_and_tone_guardrails():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    post = app.config["CONTENT"].posts_by_slug["amyloid-plaques-alzheimers-research"]
+    content = post["content_html"].lower()
+    blocked_phrases = [
+        "for a lay reader",
+        "in plain english",
+        "the name is a mouthful",
+        "it is easier than it sounds",
+        "that sounds technical",
+        "the important thing for readers",
+        "you do not need to know",
+        "miracle",
+        "breakthrough",
+    ]
+
+    assert post["preview_image_title"] == "Amyloid plaques in Alzheimer’s research"
+    assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
+    assert all(phrase not in content for phrase in blocked_phrases)
+
+    for path in ["/guide/", "/amyloid-plaques-alzheimers-research/"]:
+        response = client.get(path)
+
+        assert response.status_code == 200
+        assert b"/static/uploads/2026/01/amyloid-plaques-alzheimers-research-hero.webp" in response.data
+        assert b'title="Amyloid plaques in Alzheimer\xe2\x80\x99s research"' in response.data
+        assert b'data-description="Hero image for a Mindful Diabetes article explaining amyloid plaque research' in response.data
 
 
 def test_articles_do_not_expose_mailchimp_api_key():
@@ -1130,7 +1222,7 @@ def test_admin_content_flow_saves_publishes_and_renders_sanitized_blocks(tmp_pat
 
     editor_response = client.get(editor_path)
     assert editor_response.status_code == 200
-    assert b"Blocks" in editor_response.data
+    assert b"Block inserter" in editor_response.data
     assert b"Save Draft" in editor_response.data
     assert b"Publish" in editor_response.data
 
@@ -1216,6 +1308,75 @@ def test_admin_content_state_changes_require_csrf(tmp_path):
     response = client.post("/admin/pages/new/")
 
     assert response.status_code == 400
+
+
+def test_admin_editor_uses_fullscreen_gutenberg_style_shell(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        }
+    )
+    client = app.test_client()
+    csrf_token = sign_in_admin(client)
+    create_response = client.post("/admin/pages/new/", data={"csrf_token": csrf_token})
+    editor_path = create_response.headers["Location"]
+
+    response = client.get(editor_path)
+
+    assert response.status_code == 200
+    assert b"class=\"site-header\"" not in response.data
+    assert b"site-nav" not in response.data
+    assert b"header-search" not in response.data
+    assert b"Back to Content" in response.data
+    assert b"Document outline" in response.data
+    assert b"data-inserter" in response.data
+    assert b'aria-hidden="true" data-inserter' in response.data
+    assert b"data-settings-drawer" in response.data
+    assert b'aria-hidden="true" data-settings-drawer' in response.data
+    assert b"data-insert-zone" in response.data
+    assert b"data-document-title" in response.data
+    assert b"data-settings-tab=\"block\"" in response.data
+    assert b"data-settings-tab=\"document\"" in response.data
+    assert b"data-settings-tab=\"seo\"" not in response.data
+    assert b"Content JSON" not in response.data
+    assert b"Settings JSON" not in response.data
+    assert b"Advanced Developer Mode" in response.data
+
+
+def test_admin_editor_block_inserter_groups_blocks_by_category(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        }
+    )
+    client = app.test_client()
+    csrf_token = sign_in_admin(client)
+    create_response = client.post("/admin/posts/new/", data={"csrf_token": csrf_token})
+
+    response = client.get(create_response.headers["Location"])
+
+    assert response.status_code == 200
+    for label in [
+        b"Frequently Used",
+        b"Basic",
+        b"Layout",
+        b"Media",
+        b"Article",
+        b"Education",
+        b"Research",
+        b"Health and Nutrition",
+        b"Nonprofit",
+    ]:
+        assert label in response.data
+    assert b'data-block-type="heading"' in response.data
+    assert b'data-block-type="faq"' in response.data
+    assert b'data-block-type="research_summary"' in response.data
 
 
 def test_cms_new_mindful_diabetes_blocks_render_and_sanitize(tmp_path):

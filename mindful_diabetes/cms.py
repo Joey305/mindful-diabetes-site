@@ -1392,7 +1392,7 @@ def timestamp_to_iso(value):
 
 
 def block_library():
-    return [
+    blocks = [
         {"type": "heading", "label": "Heading", "description": "H1-H4 section heading"},
         {"type": "rich_text", "label": "Rich Text", "description": "Paragraphs, lists, links, quotes"},
         {"type": "image", "label": "Image", "description": "Image, alt text, caption"},
@@ -1450,6 +1450,62 @@ def block_library():
         {"type": "study_snapshot", "label": "Study Snapshot", "description": "Compact research facts"},
         {"type": "community_story", "label": "Community Story", "description": "Consent-aware story"},
     ]
+    categories = {
+        "basic": {"heading", "rich_text", "image", "button", "quote", "divider", "spacer"},
+        "layout": {"section_container", "two_columns", "three_columns", "image_text", "card_grid", "tabs"},
+        "media": {"image_gallery", "video", "embed", "resource_download"},
+        "article": {
+            "hero_section",
+            "table_of_contents",
+            "article_metadata",
+            "author_bio",
+            "medical_reviewer",
+            "citation",
+            "footnotes",
+            "related_posts",
+            "social_sharing",
+            "post_navigation",
+        },
+        "education": {"faq", "definition", "process_steps", "comparison_table", "myth_fact", "quiz", "alert_notice"},
+        "research": {"research_summary", "study_snapshot", "featured_content"},
+        "health": {"recipe_card", "nutrition_facts", "glucose_tip", "meal_swap", "health_tool_card"},
+        "nonprofit": {
+            "donation_cta",
+            "donation_progress",
+            "volunteer_cta",
+            "sponsor_logo_grid",
+            "team_profile",
+            "community_story",
+            "event",
+            "newsletter_signup",
+            "newsletter_archive",
+            "logo_badge_row",
+            "statistics",
+            "icon_list",
+        },
+    }
+    icons = {
+        "heading": "H",
+        "rich_text": "¶",
+        "image": "Img",
+        "button": "Btn",
+        "quote": "“”",
+        "section_container": "Sec",
+        "faq": "FAQ",
+        "card_grid": "Grid",
+        "statistics": "#",
+        "research_summary": "Rx",
+        "recipe_card": "Rec",
+        "donation_cta": "$",
+    }
+    category_for_type = {}
+    for category, block_types in categories.items():
+        for block_type in block_types:
+            category_for_type[block_type] = category
+    for block in blocks:
+        block["category"] = category_for_type.get(block["type"], "basic")
+        block["icon"] = icons.get(block["type"], "+")
+    return blocks
 
 
 def render_blocks(blocks, config, renderer):

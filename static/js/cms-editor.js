@@ -26,12 +26,21 @@
   let slugTouched = Boolean(state.slug && !state.slug.startsWith("untitled"));
 
   const canvas = root.querySelector("[data-canvas]");
+  const blockRoot = root.querySelector("[data-block-root]");
   const canvasShell = root.querySelector("[data-canvas-shell]");
   const blockSettings = root.querySelector("[data-block-settings]");
+  const advancedJson = root.querySelector("[data-advanced-json]");
   const noBlockMessage = root.querySelector("[data-no-block-message]");
   const saveState = root.querySelector("[data-save-state]");
   const statusLabel = root.querySelector("[data-status-label]");
   const previewLink = root.querySelector("[data-preview-link]");
+  const inserter = root.querySelector("[data-inserter]");
+  const settingsDrawer = root.querySelector("[data-settings-drawer]");
+  const outlinePanel = root.querySelector("[data-outline-panel]");
+  const outlineList = root.querySelector("[data-outline-list]");
+  const documentTitle = root.querySelector("[data-document-title]");
+  const documentExcerpt = root.querySelector("[data-document-excerpt]");
+  let pendingInsert = { zoneId: "root", beforeId: "" };
 
   const defaults = {
     heading: () => ({ settings: { level: 2, alignment: "left", accent: false, color: "navy" }, content: { text: "New heading" } }),
@@ -217,6 +226,8 @@
     }
     selectedBlockId = block.id;
     render();
+    closeInserter();
+    openSettings("block");
   }
 
   function targetBlocks(zoneId) {
@@ -263,15 +274,66 @@
     render();
   }
 
+  function setDrawer(drawer, open) {
+    if (!drawer) return;
+    drawer.classList.toggle("is-open", open);
+    drawer.setAttribute("aria-hidden", open ? "false" : "true");
+  }
+
+  function openInserter(zoneId = "root", beforeId = "") {
+    pendingInsert = { zoneId, beforeId };
+    setDrawer(inserter, true);
+    root.querySelector("[data-action='toggle-inserter']")?.setAttribute("aria-expanded", "true");
+    root.querySelector("[data-block-search]")?.focus();
+  }
+
+  function closeInserter() {
+    setDrawer(inserter, false);
+    root.querySelector("[data-action='toggle-inserter']")?.setAttribute("aria-expanded", "false");
+  }
+
+  function openSettings(tab = "block") {
+    setDrawer(settingsDrawer, true);
+    selectSettingsTab(tab);
+  }
+
+  function closeSettings() {
+    setDrawer(settingsDrawer, false);
+  }
+
+  function toggleOutline(open) {
+    const next = open ?? !outlinePanel.classList.contains("is-open");
+    setDrawer(outlinePanel, next);
+    root.querySelector("[data-action='toggle-outline']")?.setAttribute("aria-expanded", next ? "true" : "false");
+  }
+
+  function insertionControl(zoneId = "root", beforeId = "", label = "Add block") {
+    const wrapper = document.createElement("div");
+    wrapper.className = "cms-insertion-point";
+    wrapper.innerHTML = `<button type="button" data-insert-zone="${zoneId}" data-insert-before="${beforeId}" aria-label="${label}">+</button>`;
+    return wrapper;
+  }
+
   function render() {
-    canvas.innerHTML = "";
+    blockRoot.innerHTML = "";
     canvas.classList.toggle("is-empty", state.blocks.length === 0);
     if (state.blocks.length === 0) {
-      canvas.innerHTML = "<p>Drag a block here to start building.</p>";
+      const empty = document.createElement("div");
+      empty.className = "cms-empty-canvas";
+      empty.innerHTML = "<h2>Start building this page</h2><p>Add a block to shape the content.</p><button type='button' data-insert-zone='root'>Add your first block</button>";
+      blockRoot.appendChild(empty);
     } else {
-      state.blocks.forEach((block) => canvas.appendChild(renderEditorBlock(block)));
+      blockRoot.appendChild(insertionControl("root", state.blocks[0].id, "Add block before first block"));
+      state.blocks.forEach((block, index) => {
+        blockRoot.appendChild(renderEditorBlock(block));
+        blockRoot.appendChild(insertionControl("root", state.blocks[index + 1]?.id || "", "Add block here"));
+      });
     }
+    documentTitle.textContent = state.title || "Untitled";
+    documentExcerpt.textContent = state.excerpt || "Add a short summary for this page or post.";
+    root.querySelector("[data-canvas-status]").textContent = state.status.charAt(0).toUpperCase() + state.status.slice(1);
     syncSettingsPanel();
+    renderOutline();
   }
 
   function renderEditorBlock(block) {
@@ -280,7 +342,7 @@
     wrapper.dataset.blockId = block.id;
     wrapper.innerHTML = toolbarHtml(block) + renderBlockBody(block);
     wrapper.addEventListener("click", (event) => {
-      if (!event.target.closest("[data-block-command]")) {
+      if (!event.target.closest("[data-block-command], .cms-block-toolbar details")) {
         selectedBlockId = block.id;
         render();
       }
@@ -291,14 +353,19 @@
   }
 
   function toolbarHtml(block) {
+    const blockName = block.type.replace(/_/g, " ");
     return `
       <div class="cms-block-toolbar" aria-label="Block controls">
         <button type="button" data-drag-handle draggable="true" data-drag-block-id="${block.id}">Move</button>
-        <button type="button" data-block-command="select">Edit</button>
+        <span>${escapeHtml(blockName)}</span>
         <button type="button" data-block-command="duplicate">Duplicate</button>
         <button type="button" data-block-command="up">Up</button>
         <button type="button" data-block-command="down">Down</button>
-        <button type="button" data-block-command="delete">Delete</button>
+        <button type="button" data-block-command="settings">Settings</button>
+        <details>
+          <summary>More</summary>
+          <button type="button" data-block-command="delete">Delete block</button>
+        </details>
       </div>
     `;
   }
@@ -424,11 +491,16 @@
     blockSettings.hidden = !block;
     if (!block) {
       blockSettings.innerHTML = "";
+      advancedJson.innerHTML = "";
       return;
     }
     blockSettings.innerHTML = settingsHtml(block);
-    blockSettings.querySelectorAll("[data-block-content], [data-block-setting], [data-block-json]").forEach((field) => {
+    advancedJson.innerHTML = advancedSettingsHtml(block);
+    blockSettings.querySelectorAll("[data-block-content], [data-block-setting]").forEach((field) => {
       field.addEventListener("input", () => updateBlockFromField(block, field));
+      field.addEventListener("change", () => updateBlockFromField(block, field));
+    });
+    advancedJson.querySelectorAll("[data-block-json]").forEach((field) => {
       field.addEventListener("change", () => updateBlockFromField(block, field));
     });
   }
@@ -471,10 +543,37 @@
     if (block.type === "quote") return [textArea("Quote", "quote", c.quote), textInput("Author", "author", c.author), textInput("Role or organization", "role", c.role)].join("");
     if (block.type === "donation_cta") return [textInput("Heading", "heading", c.heading), textArea("Body", "body", c.body), textInput("Button", "button", c.button)].join("");
     if (block.type === "newsletter_signup") return [textInput("Heading", "heading", c.heading), textArea("Description", "description", c.description)].join("");
+    return genericSettingsHtml(block);
+  }
+
+  function genericSettingsHtml(block) {
+    const fields = [];
+    Object.entries(block.content || {}).forEach(([key, value]) => {
+      if (typeof value === "string" || typeof value === "number") {
+        const label = key.replace(/_/g, " ");
+        fields.push(`<label>${escapeHtml(label)}<textarea rows="3" data-block-content="${escapeHtml(key)}">${escapeHtml(value)}</textarea></label>`);
+      } else if (typeof value === "boolean") {
+        const label = key.replace(/_/g, " ");
+        fields.push(`<label class="cms-checkbox-label"><input type="checkbox" ${value ? "checked" : ""} data-block-content="${escapeHtml(key)}">${escapeHtml(label)}</label>`);
+      }
+    });
+    Object.entries(block.settings || {}).forEach(([key, value]) => {
+      if (typeof value === "string" || typeof value === "number") {
+        const label = key.replace(/_/g, " ");
+        fields.push(`<label>${escapeHtml(label)}<input type="text" value="${escapeHtml(value)}" data-block-setting="${escapeHtml(key)}"></label>`);
+      } else if (typeof value === "boolean") {
+        const label = key.replace(/_/g, " ");
+        fields.push(`<label class="cms-checkbox-label"><input type="checkbox" ${value ? "checked" : ""} data-block-setting="${escapeHtml(key)}">${escapeHtml(label)}</label>`);
+      }
+    });
+    if (!fields.length) return "<p class='admin-muted'>This block uses structured repeatable fields. Use inline editing where available or Advanced Developer Mode for detailed recovery edits.</p>";
+    return fields.join("") + "<p class='admin-muted'>Repeatable items stay structured internally and can be refined in a later custom-control pass.</p>";
+  }
+
+  function advancedSettingsHtml(block) {
     return [
-      "<p class='admin-muted'>Edit this structured block as JSON for now. Keep field names intact.</p>",
-      `<label>Content JSON<textarea rows="10" data-block-json="content">${escapeHtml(JSON.stringify(c, null, 2))}</textarea></label>`,
-      `<label>Settings JSON<textarea rows="6" data-block-json="settings">${escapeHtml(JSON.stringify(s, null, 2))}</textarea></label>`,
+      `<label>Content data<textarea rows="10" data-block-json="content">${escapeHtml(JSON.stringify(block.content || {}, null, 2))}</textarea></label>`,
+      `<label>Settings data<textarea rows="6" data-block-json="settings">${escapeHtml(JSON.stringify(block.settings || {}, null, 2))}</textarea></label>`,
     ].join("");
   }
 
@@ -511,6 +610,40 @@
     });
     statusLabel.textContent = state.status.charAt(0).toUpperCase() + state.status.slice(1);
     statusLabel.className = `admin-status admin-status--${state.status}`;
+    if (documentTitle && documentTitle.textContent !== state.title) documentTitle.textContent = state.title;
+    if (documentExcerpt && documentExcerpt.textContent !== state.excerpt) {
+      documentExcerpt.textContent = state.excerpt || "Add a short summary for this page or post.";
+    }
+    const canvasStatus = root.querySelector("[data-canvas-status]");
+    if (canvasStatus) canvasStatus.textContent = state.status.charAt(0).toUpperCase() + state.status.slice(1);
+  }
+
+  function selectSettingsTab(tab) {
+    root.querySelectorAll("[data-settings-tab]").forEach((item) => {
+      item.setAttribute("aria-pressed", item.dataset.settingsTab === tab ? "true" : "false");
+    });
+    root.querySelectorAll("[data-settings-panel]").forEach((panel) => {
+      panel.hidden = panel.dataset.settingsPanel !== tab;
+    });
+  }
+
+  function renderOutline() {
+    if (!outlineList) return;
+    if (!state.blocks.length) {
+      outlineList.innerHTML = "<p class='admin-muted'>Add blocks to build the outline.</p>";
+      return;
+    }
+    function blockList(blocks, depth = 0) {
+      return `<ol>${blocks.map((block) => {
+        const nestedColumns = (block.content?.columns || []).flatMap((column) => column.blocks || []);
+        const nestedBlocks = [...nestedColumns, ...(block.content?.blocks || [])];
+        return `<li style="--depth:${depth}">
+          <button type="button" data-outline-block="${block.id}">${escapeHtml(block.type.replace(/_/g, " "))}</button>
+          ${nestedBlocks.length ? blockList(nestedBlocks, depth + 1) : ""}
+        </li>`;
+      }).join("")}</ol>`;
+    }
+    outlineList.innerHTML = blockList(state.blocks);
   }
 
   async function saveDraft(showMessage = true) {
@@ -554,6 +687,20 @@
   }
 
   root.addEventListener("click", (event) => {
+    const insertButton = event.target.closest("[data-insert-zone]");
+    if (insertButton) {
+      openInserter(insertButton.dataset.insertZone || "root", insertButton.dataset.insertBefore || "");
+      return;
+    }
+
+    const outlineButton = event.target.closest("[data-outline-block]");
+    if (outlineButton) {
+      selectedBlockId = outlineButton.dataset.outlineBlock;
+      render();
+      openSettings("block");
+      return;
+    }
+
     const commandButton = event.target.closest("[data-block-command]");
     if (commandButton) {
       const blockId = commandButton.closest("[data-block-id]").dataset.blockId;
@@ -569,10 +716,19 @@
       } else if (command === "up") moveSelected(-1);
       else if (command === "down") moveSelected(1);
       else if (command === "delete") deleteSelected();
+      else if (command === "settings") openSettings("block");
       else render();
       return;
     }
     const action = event.target.closest("[data-action]")?.dataset.action;
+    if (action === "toggle-inserter") {
+      if (inserter.classList.contains("is-open")) closeInserter();
+      else openInserter("root", "");
+    }
+    if (action === "close-inserter") closeInserter();
+    if (action === "toggle-outline") toggleOutline();
+    if (action === "close-outline") toggleOutline(false);
+    if (action === "close-settings") closeSettings();
     if (action === "save") saveDraft();
     if (action === "publish") publish();
     if (action === "undo" && history.undo.length) {
@@ -658,7 +814,7 @@
   });
 
   root.querySelectorAll(".cms-block-library button").forEach((button) => {
-    button.addEventListener("click", () => addBlock(button.dataset.blockType));
+    button.addEventListener("click", () => addBlock(button.dataset.blockType, pendingInsert.zoneId, pendingInsert.beforeId));
     button.addEventListener("dragstart", () => {
       draggedBlockType = button.dataset.blockType;
       draggedExistingBlockId = "";
@@ -673,13 +829,25 @@
   });
 
   root.querySelectorAll("[data-settings-tab]").forEach((button) => {
-    button.addEventListener("click", () => {
-      root.querySelectorAll("[data-settings-tab]").forEach((item) => item.setAttribute("aria-pressed", "false"));
-      button.setAttribute("aria-pressed", "true");
-      root.querySelectorAll("[data-settings-panel]").forEach((panel) => {
-        panel.hidden = panel.dataset.settingsPanel !== button.dataset.settingsTab;
-      });
-    });
+    button.addEventListener("click", () => selectSettingsTab(button.dataset.settingsTab));
+  });
+
+  documentTitle?.addEventListener("focus", () => commitChange(), { once: true });
+  documentTitle?.addEventListener("input", () => {
+    state.title = documentTitle.textContent.trim() || "Untitled";
+    root.querySelector("[data-field='title']").value = state.title;
+    if (!slugTouched) {
+      state.slug = slugify(state.title);
+      root.querySelector("[data-field='slug']").value = state.slug;
+    }
+    markUnsaved();
+  });
+
+  documentExcerpt?.addEventListener("focus", () => commitChange(), { once: true });
+  documentExcerpt?.addEventListener("input", () => {
+    state.excerpt = documentExcerpt.textContent.trim();
+    root.querySelector("[data-field='excerpt']").value = state.excerpt;
+    markUnsaved();
   });
 
   window.addEventListener("beforeunload", (event) => {

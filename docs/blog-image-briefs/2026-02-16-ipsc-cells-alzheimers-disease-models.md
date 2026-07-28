@@ -70,13 +70,13 @@ Description: Closing educational image for a section explaining both the promise
 
 Prompt: Create a balanced editorial research image showing a cell culture dish, a small organoid, a data notebook, and a careful checklist on a lab desk. The mood should be hopeful but restrained, representing both promise and limits of iPSC Alzheimer's models. No readable text, no logos, no cure language, no dramatic breakthrough imagery, no scary medical scene.
 
-## 7. Protein Location Map
+## 7. Key iPSC Signals Map
 
-Filename: `ipsc-alzheimers-protein-map.webp`
-Size: 1400 x 933
-Alt text: A labeled neuron and glia diagram showing APP, amyloid beta, tau, PSEN1, GSK3 beta, APOE, calcium signaling, astrocytes, and microglia in an Alzheimer's iPSC model.
-Title: Where Alzheimer's iPSC model proteins appear in neurons and glia
-Caption: In simplified form: APP and PSEN1 sit close to amyloid processing, tau and GSK3β connect to neuron and axon stress, and APOE shapes lipid handling and amyloid cleanup in astrocytes and microglia.
-Description: Educational figure showing where key Alzheimer's iPSC model proteins and signals can appear across neurons, astrocytes, and microglia.
+Filename: `key-ipsc-signals.webp`
+Size: 1600 x 1000
+Alt text: A labeled educational neuron and glia map showing APP, amyloid beta, tau and p-tau, PSEN1, GSK3 beta, APOE, calcium signaling, astrocytes, and microglia in Alzheimer's iPSC models.
+Title: Where key Alzheimer's iPSC signals show up
+Caption: APP, amyloid beta, tau, PSEN1, GSK3β, APOE, calcium signaling, astrocytes, and microglia can all appear in iPSC model readouts, but their exact behavior depends on the model, mutation, and experiment.
+Description: Educational figure showing where key Alzheimer's iPSC model signals appear across neurons, astrocytes, and microglia.
 
-Implementation note: This figure was hand-built as `ipsc-alzheimers-protein-map.svg` because the protein and cell labels need to stay accurate and readable, then rendered into the optimized WebP used by the article.
+Implementation note: The article now uses the clearer `key-ipsc-signals.webp` figure in place of the earlier `ipsc-alzheimers-protein-map.webp` diagram because the labels are more readable and the layout is more polished. The source PNG remains in the same folder, and the WebP is the site-facing asset.
