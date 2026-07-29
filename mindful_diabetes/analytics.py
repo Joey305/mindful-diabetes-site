@@ -141,6 +141,19 @@ EVENT_COLUMNS = [
     "metadata_json",
 ]
 
+CTA_CLICK_EVENTS = {
+    "donation_cta_click",
+    "paypal_click",
+    "health_tool_click",
+    "content_cta_click",
+    "resource_download_click",
+    "sponsor_click",
+    "event_registration_click",
+    "volunteer_cta_click",
+}
+
+EXCLUDED_PUBLIC_PATH_PREFIXES = ("/admin", "/analytics", "/static")
+
 
 class AnalyticsValidationError(ValueError):
     pass
@@ -313,6 +326,8 @@ class LocalAnalyticsStore(AnalyticsStore):
             "newsletter_referrers": self._group_counts(start, end, filters, "referrer_domain", event_name="newsletter_signup", limit=8),
             "newsletter_sources": self._group_counts(start, end, filters, "source", event_name="newsletter_signup", limit=8),
             "device_categories": self._group_counts(start, end, filters, "device_category", limit=8),
+            "traffic_sources": self._traffic_sources(start, end, filters),
+            "cta_performance": self._cta_performance(start, end, filters),
             "daily_trend": self._daily_trend(start, end, filters),
         }
 
@@ -472,9 +487,63 @@ class LocalAnalyticsStore(AnalyticsStore):
             ).fetchall()
         return [dict(row) for row in rows]
 
+    def _traffic_sources(self, start, end, filters):
+        where_filters = dict(filters or {})
+        where_filters["event_name"] = "page_view"
+        where, params = self._where(start, end, where_filters)
+        with self.connect() as connection:
+            rows = connection.execute(
+                f"""
+                SELECT CASE
+                         WHEN source != '' THEN source
+                         WHEN referrer_domain != '' THEN referrer_domain
+                         ELSE 'Direct / unknown'
+                       END AS label,
+                       COUNT(*) AS count,
+                       COUNT(DISTINCT anonymous_session_id) AS sessions
+                FROM analytics_events
+                {where}
+                GROUP BY label
+                ORDER BY count DESC, label ASC
+                LIMIT 10
+                """,
+                params,
+            ).fetchall()
+        return [dict(row) for row in rows]
+
+    def _cta_performance(self, start, end, filters):
+        where, params = self._where(start, end, filters)
+        click_events = sorted(CTA_CLICK_EVENTS)
+        events = ["cta_impression", *click_events]
+        placeholders = ",".join("?" for _ in events)
+        with self.connect() as connection:
+            rows = connection.execute(
+                f"""
+                SELECT COALESCE(NULLIF(element_id, ''), NULLIF(element_label, ''), page_path) AS element_key,
+                       MAX(element_label) AS label,
+                       page_path AS page,
+                       element_position AS position,
+                       COUNT(CASE WHEN event_name = 'cta_impression' THEN 1 END) AS impressions,
+                       COUNT(CASE WHEN event_name IN ({','.join('?' for _ in click_events)}) THEN 1 END) AS clicks,
+                       COUNT(DISTINCT CASE WHEN event_name IN ({','.join('?' for _ in click_events)}) THEN anonymous_session_id END) AS sessions
+                FROM analytics_events
+                {where} AND event_name IN ({placeholders})
+                GROUP BY element_key, page_path, element_position
+                HAVING impressions > 0 OR clicks > 0
+                ORDER BY clicks DESC, impressions DESC, label ASC
+                LIMIT 25
+                """,
+                [*click_events, *click_events, *params, *events],
+            ).fetchall()
+        performance = [dict(row) for row in rows]
+        for row in performance:
+            row["click_rate"] = numeric_rate(row.get("clicks", 0), row.get("impressions", 0))
+            row["click_rate_label"] = percent_label(row["click_rate"])
+        return performance
+
     def _where(self, start, end, filters=None):
         filters = filters or {}
-        clauses = ["occurred_at >= ?", "occurred_at < ?"]
+        clauses = ["occurred_at >= ?", "occurred_at < ?", "COALESCE(page_path, '') NOT LIKE '/admin%'", "COALESCE(page_path, '') NOT LIKE '/analytics%'", "COALESCE(page_path, '') NOT LIKE '/static%'"]
         params = [to_utc_iso(start), to_utc_iso(end)]
         column_filters = {
             "event_name",
@@ -617,6 +686,8 @@ def normalize_event_payload(payload, config, now=None):
     clean_event["destination_domain"] = clean_event["destination_domain"] or domain_for(clean_event["destination_url"])
     clean_event["referrer_domain"] = clean_event["referrer_domain"] or domain_for(clean_event["referrer_url"])
     clean_event["environment"] = clean_event["environment"] or analytics_environment(config)
+    if not is_public_analytics_path(clean_event["page_path"]):
+        raise AnalyticsValidationError("Analytics event path is not public.")
     return clean_event
 
 
@@ -742,10 +813,33 @@ def parse_date_arg(value):
         return None
 
 
+ARTICLE_GROUP_OVERRIDES = {
+    "fats-guide": "nutrition",
+    "dash-diet": "nutrition",
+    "indian-cuisine-for-diabetes-wellness": "nutrition",
+    "healthy-eating": "nutrition",
+    "glycemix-index-and-diabetes": "nutrition",
+    "diabetes-management-and-diet": "nutrition",
+    "eating-right-dietary-path-type-ii-type-iii-diabetes-prevention": "nutrition",
+    "summer-diabetes": "diabetes management",
+    "summer-diabetes-management": "diabetes management",
+    "mounjaro-and-ozempic": "diabetes management",
+    "community-support-for-type-3-diabetes": "diabetes management",
+    "alzheimers-clinical-trials-june-2026": "Alzheimer's disease",
+    "ipsc-alzheimers-modeling": "Alzheimer's disease",
+    "diabetes-health-jeir-updates": "health tools",
+    "diabetes-artificial-intelligence-jeir": "health tools",
+    "memovela": "health tools",
+    "daily-wellness-habits": "health tools",
+}
+
+
 def article_group_for_path(content, path):
     path = (path or "").strip("/")
     if not path:
         return "nonprofit updates"
+    if path in ARTICLE_GROUP_OVERRIDES:
+        return ARTICLE_GROUP_OVERRIDES[path]
     if path in {"research"}:
         return "research"
     if path in {"health-tools"}:
@@ -767,6 +861,11 @@ def article_group_for_path(content, path):
     if "diabetes" in haystack:
         return "diabetes management"
     return "nonprofit updates"
+
+
+def is_public_analytics_path(path):
+    path = path or "/"
+    return not any(path.startswith(prefix) for prefix in EXCLUDED_PUBLIC_PATH_PREFIXES)
 
 
 def content_context_for_path(content, path):
@@ -828,6 +927,8 @@ def build_empty_summary():
         "newsletter_referrers": [],
         "newsletter_sources": [],
         "device_categories": [],
+        "traffic_sources": [],
+        "cta_performance": [],
         "daily_trend": [],
     }
 
@@ -852,6 +953,19 @@ def click_rate(clicks, views):
     return f"{(clicks / views) * 100:.1f}%"
 
 
+def numeric_rate(numerator, denominator):
+    denominator = int(denominator or 0)
+    if denominator <= 0:
+        return None
+    return (int(numerator or 0) / denominator) * 100
+
+
+def percent_label(value):
+    if value is None:
+        return "No impressions"
+    return f"{value:.1f}%"
+
+
 def weekly_summary(config, end=None):
     end = end or datetime.combine(utc_now().date(), datetime.min.time(), tzinfo=timezone.utc)
     start = end - timedelta(days=7)
@@ -861,6 +975,8 @@ def weekly_summary(config, end=None):
     top_group = (summary["article_groups"] or [{"label": "No article group", "count": 0}])[0]
     top_tool = (summary["health_tools"] or [{"label": "No health-tool clicks", "count": 0}])[0]
     top_source = (summary["newsletter_sources"] or summary["newsletter_referrers"] or [{"label": "No source activity", "count": 0}])[0]
+    top_traffic_source = (summary.get("traffic_sources") or [{"label": "No traffic source activity", "count": 0}])[0]
+    top_cta = (summary.get("cta_performance") or [{"label": "No CTA activity", "clicks": 0, "impressions": 0, "click_rate_label": "No impressions"}])[0]
     return {
         "start": start,
         "end": end,
@@ -869,11 +985,14 @@ def weekly_summary(config, end=None):
         "top_group": top_group,
         "top_tool": top_tool,
         "top_source": top_source,
+        "top_traffic_source": top_traffic_source,
+        "top_cta": top_cta,
     }
 
 
 def format_weekly_summary_text(report, admin_url="/admin/analytics/"):
     totals = report["summary"]["totals"]
+    changes = meaningful_changes(report["summary"].get("comparison", {}))
     return "\n".join(
         [
             "Mindful Diabetes weekly analytics summary",
@@ -888,13 +1007,34 @@ def format_weekly_summary_text(report, admin_url="/admin/analytics/"):
             f"Health-tool clicks: {totals.get('health_tool_clicks', 0)}",
             f"Top health tool: {report['top_tool']['label']} ({report['top_tool']['count']})",
             f"Newsletter signups: {totals.get('newsletter_signups', 0)}",
-            f"Strongest traffic source: {report['top_source']['label']} ({report['top_source']['count']})",
+            f"Strongest traffic source: {report['top_traffic_source']['label']} ({report['top_traffic_source']['count']})",
+            f"Top CTA: {report['top_cta'].get('label') or report['top_cta'].get('element_key')} ({report['top_cta'].get('clicks', 0)} clicks, {report['top_cta'].get('click_rate_label', 'No impressions')})",
+            "",
+            "Notable changes:",
+            *(changes or ["No meaningful previous-period changes yet."]),
             "",
             f"Open the dashboard: {admin_url}",
             "",
             "Donation clicks and PayPal opens indicate interest, not confirmed donations.",
         ]
     )
+
+
+def meaningful_changes(comparison):
+    labels = {
+        "page_views": "Page views",
+        "anonymous_sessions": "Anonymous sessions",
+        "donation_cta_clicks": "Donation CTA clicks",
+        "paypal_clicks": "PayPal opens",
+        "health_tool_clicks": "Health-tool clicks",
+        "newsletter_signups": "Newsletter signups",
+    }
+    changes = []
+    for key, label in labels.items():
+        item = comparison.get(key) or {}
+        if item.get("direction") in {"up", "down"}:
+            changes.append(f"- {label}: {item.get('label')}")
+    return changes[:4]
 
 
 def csv_safe(value):

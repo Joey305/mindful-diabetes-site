@@ -57,6 +57,18 @@
       {% endfor %}
     </div>
 
+    <section class="admin-panel admin-panel--wide admin-insight-panel" aria-labelledby="admin-insights-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-insights-heading">What changed?</h2>
+        <span>Plain-language readout</span>
+      </div>
+      <ul class="admin-insight-list">
+        {% for insight in dashboard.insights %}
+          <li>{{ insight }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
     <nav class="admin-analytics-tabs" aria-label="Analytics sections">
       <a href="#overview">Overview</a>
       <a href="#donation">Donation Activity</a>
@@ -113,7 +125,85 @@
           <p class="admin-empty">No article-group activity has been recorded during this period.</p>
         {% endif %}
       </section>
+
+      <section class="admin-panel" aria-labelledby="admin-traffic-heading">
+        <h2 id="admin-traffic-heading">Traffic sources</h2>
+        {% if dashboard.summary.traffic_sources %}
+          <ol class="admin-ranked-list">
+            {% for item in dashboard.summary.traffic_sources %}
+              <li><span>{{ item.label }}</span><span>{{ item.count }}</span></li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <p class="admin-empty">Traffic sources will appear after public page views are recorded.</p>
+        {% endif %}
+      </section>
     </div>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-trend-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-trend-heading">30-day trend</h2>
+        <span>Views and action clicks</span>
+      </div>
+      {% if dashboard.summary.daily_trend %}
+        <div class="admin-trend-chart" role="img" aria-label="Daily page views, health-tool clicks, donation clicks, PayPal opens, and newsletter signups">
+          {% for row in dashboard.summary.daily_trend %}
+            <div class="admin-trend-day">
+              <span class="admin-trend-day__label">{{ row.day[5:] }}</span>
+              <span class="admin-trend-bar admin-trend-bar--views" style="height: {{ ((row.page_views or 0) / dashboard.trend_max * 100)|round(1) }}%" title="{{ row.day }} page views: {{ row.page_views }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--tools" style="height: {{ ((row.tool_clicks or 0) / dashboard.trend_max * 100)|round(1) }}%" title="{{ row.day }} health-tool clicks: {{ row.tool_clicks }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--donation" style="height: {{ (((row.donation_clicks or 0) + (row.paypal_clicks or 0)) / dashboard.trend_max * 100)|round(1) }}%" title="{{ row.day }} donation interest: {{ (row.donation_clicks or 0) + (row.paypal_clicks or 0) }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--newsletter" style="height: {{ ((row.newsletter_signups or 0) / dashboard.trend_max * 100)|round(1) }}%" title="{{ row.day }} newsletter signups: {{ row.newsletter_signups }}"></span>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="admin-chart-legend">
+          <span><i class="admin-legend admin-legend--views"></i>Views</span>
+          <span><i class="admin-legend admin-legend--tools"></i>Health tools</span>
+          <span><i class="admin-legend admin-legend--donation"></i>Donation intent</span>
+          <span><i class="admin-legend admin-legend--newsletter"></i>Newsletter</span>
+        </div>
+      {% else %}
+        <p class="admin-empty">Trend lines will appear after more public events are recorded.</p>
+      {% endif %}
+    </section>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-cta-performance-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-cta-performance-heading">CTA performance</h2>
+        <span>Impressions to clicks</span>
+      </div>
+      {% if dashboard.summary.cta_performance %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>CTA</th>
+                <th>Page</th>
+                <th>Position</th>
+                <th>Impressions</th>
+                <th>Clicks</th>
+                <th>Click rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.summary.cta_performance %}
+                <tr>
+                  <td>{{ row.label or row.element_key or "Untitled CTA" }}</td>
+                  <td><a href="{{ url_for('admin_analytics_page_report', page_path=row.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ row.page or "-" }}</a></td>
+                  <td>{{ row.position or "-" }}</td>
+                  <td>{{ row.impressions }}</td>
+                  <td>{{ row.clicks }}</td>
+                  <td>{{ row.click_rate_label }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">CTA performance will appear after tracked CTAs are visible or clicked.</p>
+      {% endif %}
+    </section>
 
     <section class="admin-panel admin-panel--wide" id="donation" aria-labelledby="admin-donation-heading">
       <div class="admin-panel__header">
@@ -198,6 +288,39 @@
         </div>
       {% else %}
         <p class="admin-empty">No content analytics exist for this period. Visit a public page with local analytics testing enabled to generate test events.</p>
+      {% endif %}
+    </section>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-missed-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-missed-heading">Pages with missed opportunity</h2>
+        <span>Traffic without action</span>
+      </div>
+      {% if dashboard.missed_opportunities %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>Views</th>
+                <th>Missing</th>
+                <th>Suggested next move</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.missed_opportunities %}
+                <tr>
+                  <td><a href="{{ url_for('admin_analytics_page_report', page_path=row.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ row.title }}</a></td>
+                  <td>{{ row.views }}</td>
+                  <td>{{ row.missing }}</td>
+                  <td>{{ row.recommendation }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">No missed-opportunity pages stand out in this period.</p>
       {% endif %}
     </section>
 

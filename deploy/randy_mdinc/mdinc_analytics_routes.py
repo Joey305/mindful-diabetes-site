@@ -144,6 +144,19 @@ EVENT_COLUMNS = [
     "metadata_json",
 ]
 
+CTA_CLICK_EVENTS = {
+    "donation_cta_click",
+    "paypal_click",
+    "health_tool_click",
+    "content_cta_click",
+    "resource_download_click",
+    "sponsor_click",
+    "event_registration_click",
+    "volunteer_cta_click",
+}
+
+EXCLUDED_PUBLIC_PATH_PREFIXES = ("/admin", "/analytics", "/static")
+
 
 class ValidationError(ValueError):
     pass
@@ -351,6 +364,8 @@ def normalize_event(payload: dict[str, Any]) -> dict[str, Any]:
         event[field] = clean_string(payload.get(field), field)
     if event["device_category"] and event["device_category"] not in {"desktop", "tablet", "mobile"}:
         raise ValidationError("Device category is not valid.")
+    if not is_public_analytics_path(event["page_path"]):
+        raise ValidationError("Analytics event path is not public.")
     return event
 
 
@@ -458,7 +473,7 @@ def filters_from_args(args) -> dict[str, str]:
 
 
 def where_clause(start: datetime, end: datetime, filters: dict[str, str]) -> tuple[str, list[Any]]:
-    clauses = ["occurred_at >= ?", "occurred_at < ?"]
+    clauses = ["occurred_at >= ?", "occurred_at < ?", "COALESCE(page_path, '') NOT LIKE '/admin%'", "COALESCE(page_path, '') NOT LIKE '/analytics%'", "COALESCE(page_path, '') NOT LIKE '/static%'"]
     params = [to_iso(start), to_iso(end)]
     for key in sorted(filters):
         clauses.append(f"{key} = ?")
@@ -507,6 +522,8 @@ def period_summary(start: datetime, end: datetime, filters: dict[str, str]) -> d
         "newsletter_referrers": group_counts(start, end, filters, "referrer_domain", event_name="newsletter_signup"),
         "newsletter_sources": group_counts(start, end, filters, "source", event_name="newsletter_signup"),
         "device_categories": group_counts(start, end, filters, "device_category"),
+        "traffic_sources": traffic_sources(start, end, filters),
+        "cta_performance": cta_performance(start, end, filters),
         "daily_trend": daily_trend(start, end, filters),
     }
 
@@ -595,6 +612,61 @@ def daily_trend(start, end, filters) -> list[dict[str, Any]]:
             params,
         ).fetchall()
     return [dict(row) for row in rows]
+
+
+def traffic_sources(start, end, filters) -> list[dict[str, Any]]:
+    filters = dict(filters)
+    filters["event_name"] = "page_view"
+    where, params = where_clause(start, end, filters)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT CASE
+                     WHEN source != '' THEN source
+                     WHEN referrer_domain != '' THEN referrer_domain
+                     ELSE 'Direct / unknown'
+                   END AS label,
+                   COUNT(*) AS count,
+                   COUNT(DISTINCT anonymous_session_id) AS sessions
+            FROM analytics_events
+            {where}
+            GROUP BY label
+            ORDER BY count DESC, label ASC
+            LIMIT 10
+            """,
+            params,
+        ).fetchall()
+    return [dict(row) for row in rows]
+
+
+def cta_performance(start, end, filters) -> list[dict[str, Any]]:
+    where, params = where_clause(start, end, filters)
+    click_events = sorted(CTA_CLICK_EVENTS)
+    all_events = ["cta_impression", *click_events]
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT COALESCE(NULLIF(element_id, ''), NULLIF(element_label, ''), page_path) AS element_key,
+                   MAX(element_label) AS label,
+                   page_path AS page,
+                   element_position AS position,
+                   COUNT(CASE WHEN event_name = 'cta_impression' THEN 1 END) AS impressions,
+                   COUNT(CASE WHEN event_name IN ({','.join('?' for _ in click_events)}) THEN 1 END) AS clicks,
+                   COUNT(DISTINCT CASE WHEN event_name IN ({','.join('?' for _ in click_events)}) THEN anonymous_session_id END) AS sessions
+            FROM analytics_events
+            {where} AND event_name IN ({','.join('?' for _ in all_events)})
+            GROUP BY element_key, page_path, element_position
+            HAVING impressions > 0 OR clicks > 0
+            ORDER BY clicks DESC, impressions DESC, label ASC
+            LIMIT 25
+            """,
+            [*click_events, *click_events, *params, *all_events],
+        ).fetchall()
+    rows = [dict(row) for row in rows]
+    for row in rows:
+        row["click_rate"] = numeric_rate(row.get("clicks", 0), row.get("impressions", 0))
+        row["click_rate_label"] = percent_label(row["click_rate"])
+    return rows
 
 
 def events_for(start, end, filters, page, page_size) -> dict[str, Any]:
@@ -710,6 +782,24 @@ def label_for_timestamp(value: Any) -> str:
     if not parsed:
         return ""
     return parsed.astimezone().strftime("%b %-d, %Y %-I:%M %p")
+
+
+def numeric_rate(numerator: Any, denominator: Any) -> float | None:
+    denominator = int(denominator or 0)
+    if denominator <= 0:
+        return None
+    return (int(numerator or 0) / denominator) * 100
+
+
+def percent_label(value: float | None) -> str:
+    if value is None:
+        return "No impressions"
+    return f"{value:.1f}%"
+
+
+def is_public_analytics_path(path: str) -> bool:
+    path = path or "/"
+    return not any(path.startswith(prefix) for prefix in EXCLUDED_PUBLIC_PATH_PREFIXES)
 
 
 def csv_safe(value: Any) -> str:

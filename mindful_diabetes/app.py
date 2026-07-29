@@ -623,6 +623,7 @@ def create_app(test_config=None):
             page_path=page_path,
             summary=summary,
             events=events,
+            recommendations=page_analytics_recommendations(summary),
             range_name=range_name,
             start=start.date().isoformat(),
             end=(end - timedelta(days=1)).date().isoformat(),
@@ -1446,7 +1447,10 @@ def build_admin_dashboard(config, args=None):
         recent = {"events": [], "total": 0, "page": 1, "pages": 1}
 
     totals = summary["totals"]
+    normalize_dashboard_groups(summary)
     page_views = totals.get("page_views", 0)
+    missed_opportunities = dashboard_missed_opportunities(summary)
+    insights = dashboard_insights(summary, missed_opportunities)
     stats = [
         dashboard_stat("Page views", page_views, summary, "page_views", "Public page loads during the selected period."),
         dashboard_stat("Anonymous sessions", totals.get("anonymous_sessions", 0), summary, "anonymous_sessions", "Browser sessions, not identified people."),
@@ -1465,6 +1469,9 @@ def build_admin_dashboard(config, args=None):
         "end": (end - timedelta(days=1)).date().isoformat(),
         "filters": filters,
         "summary": summary,
+        "insights": insights,
+        "missed_opportunities": missed_opportunities,
+        "trend_max": dashboard_trend_max(summary.get("daily_trend", [])),
         "stats": stats,
         "recent_events": recent["events"],
         "top_paths": [{"path": item["label"], "count": item["count"]} for item in summary.get("top_pages", [])],
@@ -1489,6 +1496,114 @@ def dashboard_stat(label, value, summary, key, help_text):
     }
 
 
+def normalize_dashboard_groups(summary):
+    for row in summary.get("top_content", []):
+        page = row.get("page") or ""
+        mapped = analytics.ARTICLE_GROUP_OVERRIDES.get(page.strip("/"))
+        if mapped:
+            row["article_group"] = mapped
+    grouped = {}
+    for row in summary.get("top_content", []):
+        group = row.get("article_group") or "Unknown"
+        grouped[group] = grouped.get(group, 0) + int(row.get("views") or 0)
+    if grouped:
+        summary["article_groups"] = [
+            {"label": label, "count": count, "sessions": 0}
+            for label, count in sorted(grouped.items(), key=lambda item: (-item[1], item[0]))[:10]
+        ]
+
+
+def dashboard_missed_opportunities(summary):
+    rows = []
+    for row in summary.get("top_content", []):
+        views = int(row.get("views") or 0)
+        if views < 2:
+            continue
+        missing = []
+        if int(row.get("donation_clicks") or 0) == 0 and int(row.get("paypal_clicks") or 0) == 0:
+            missing.append("donation")
+        if int(row.get("tool_clicks") or 0) == 0:
+            missing.append("health tool")
+        if int(row.get("newsletter_signups") or 0) == 0:
+            missing.append("newsletter")
+        if missing:
+            rows.append(
+                {
+                    "page": row.get("page") or "",
+                    "title": row.get("title") or row.get("page") or "Untitled page",
+                    "views": views,
+                    "missing": ", ".join(missing),
+                    "recommendation": missed_opportunity_recommendation(missing),
+                }
+            )
+    return rows[:8]
+
+
+def missed_opportunity_recommendation(missing):
+    if "donation" in missing:
+        return "Try a clearer support CTA near the first useful section."
+    if "health tool" in missing:
+        return "Add a tool CTA that matches the article topic."
+    if "newsletter" in missing:
+        return "Place the newsletter form closer to the article body."
+    return "Review CTA placement."
+
+
+def dashboard_insights(summary, missed_opportunities):
+    totals = summary.get("totals", {})
+    insights = []
+    top_page = first_item(summary.get("top_pages"))
+    if top_page:
+        insights.append(f"{top_page['label']} is the top page in this period with {top_page['count']} views.")
+    top_tool = first_item(summary.get("health_tools"))
+    if top_tool:
+        insights.append(f"{top_tool['label']} is the most-clicked health tool.")
+    if totals.get("cta_impressions", 0) and not totals.get("donation_cta_clicks", 0) and not totals.get("paypal_clicks", 0):
+        insights.append("Donation CTAs are being seen, but no donation or PayPal clicks are recorded yet.")
+    if totals.get("newsletter_views", 0) and not totals.get("newsletter_signups", 0):
+        insights.append("Newsletter forms are visible, but successful signups are not recorded yet.")
+    if missed_opportunities:
+        insights.append(f"{missed_opportunities[0]['title']} has traffic but missing {missed_opportunities[0]['missing']} engagement.")
+    if not insights:
+        insights.append("Analytics are collecting cleanly. More insights will appear as visitors interact with CTAs.")
+    return insights[:5]
+
+
+def first_item(rows):
+    return rows[0] if rows else None
+
+
+def dashboard_trend_max(rows):
+    values = []
+    for row in rows:
+        values.extend(
+            [
+                int(row.get("page_views") or 0),
+                int(row.get("donation_clicks") or 0),
+                int(row.get("paypal_clicks") or 0),
+                int(row.get("tool_clicks") or 0),
+                int(row.get("newsletter_signups") or 0),
+            ]
+        )
+    return max(values, default=1)
+
+
+def page_analytics_recommendations(summary):
+    totals = summary.get("totals", {})
+    recommendations = []
+    if totals.get("page_views", 0) and not totals.get("cta_impressions", 0):
+        recommendations.append("This page has views but no tracked CTA impressions. Add or label at least one clear CTA.")
+    if totals.get("cta_impressions", 0) and not totals.get("donation_cta_clicks", 0) and not totals.get("paypal_clicks", 0):
+        recommendations.append("Donation/support CTAs are visible but not clicked. Try a more specific support message or a higher placement.")
+    if totals.get("page_views", 0) >= 2 and not totals.get("health_tool_clicks", 0):
+        recommendations.append("Readers are arriving here, but no health-tool clicks are recorded. Add a relevant JEIR, Memovela, or game CTA.")
+    if totals.get("newsletter_views", 0) and not totals.get("newsletter_interactions", 0):
+        recommendations.append("Newsletter forms are visible but not interacted with. Move the form closer to the main article content.")
+    if not recommendations:
+        recommendations.append("No urgent recommendation yet. Keep collecting data for this page.")
+    return recommendations
+
+
 def should_track_request(response):
     tracked_endpoints = {
         "home",
@@ -1509,8 +1624,11 @@ def should_track_request(response):
 
 
 def browser_analytics_config(config):
+    enabled = analytics.analytics_enabled(config)
+    if request.path.startswith(("/admin", "/analytics", "/static")):
+        enabled = False
     return {
-        "enabled": analytics.analytics_enabled(config),
+        "enabled": enabled,
         "endpoint": "/analytics/events",
         "environment": analytics.analytics_environment(config),
     }

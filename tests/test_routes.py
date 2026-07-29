@@ -408,7 +408,7 @@ def test_newsletter_forms_render_on_key_pages():
     expected_form_counts = {
         "/": 2,
         "/guide/": 2,
-        "/memovela/": 2,
+        "/memovela/": 3,
     }
 
     for path, form_count in expected_form_counts.items():
@@ -637,8 +637,18 @@ def test_every_post_uses_shared_article_template():
         assert b'class="wp-content article-content"' in response.data, post["canonical_path"]
         assert response.data.count(b'class="article-sidebar-card"') == 4, post["canonical_path"]
         assert b'action="/subscribe/"' in response.data, post["canonical_path"]
+        assert b'class="mobile-blog-subscribe"' in response.data, post["canonical_path"]
+        assert f"mobile-blog-newsletter-email-{post['slug']}".encode() in response.data, post["canonical_path"]
         assert b'class="article-callout"></section>' not in response.data, post["canonical_path"]
         assert b'<div class="article-callout"><section' not in response.data, post["canonical_path"]
+
+
+def test_mobile_blog_subscribe_styles_are_mobile_only():
+    css = (app_module.BASE_DIR / "static" / "css" / "site.css").read_text(encoding="utf-8")
+
+    assert ".mobile-blog-subscribe {\n  display: none;\n}" in css
+    assert "@media (max-width: 760px)" in css
+    assert ".mobile-blog-subscribe {\n    position: fixed;" in css
 
 
 def test_article_section_wrapping_does_not_split_list_items():
@@ -1527,6 +1537,37 @@ def test_analytics_duplicate_event_ids_are_ignored(tmp_path):
     assert dashboard["stats"][0]["value"] == 1
 
 
+def test_analytics_excludes_admin_paths_from_collection_and_dashboard(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    sign_in_admin(client)
+
+    admin_event = post_analytics_event(
+        client,
+        event_id="client:admin-page-1",
+        event_name="page_view",
+        page_path="/admin/login/",
+        page_title="Admin Login",
+    )
+    public_event = post_analytics_event(client, event_id="client:public-page-1", page_path="/guide/")
+    dashboard_response = client.get("/admin/analytics/")
+
+    assert admin_event.status_code == 400
+    assert public_event.status_code == 202
+    assert b"/admin/login/" not in dashboard_response.data
+
+
+def test_admin_pages_do_not_enable_browser_analytics(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+
+    login_response = client.get("/admin/login/")
+    public_response = client.get("/")
+
+    assert b'data-enabled="0"' in login_response.data
+    assert b'data-enabled="1"' in public_response.data
+
+
 def test_donation_paypal_and_health_tool_events_stay_distinct(tmp_path):
     app = analytics_app(tmp_path)
     client = app.test_client()
@@ -1567,6 +1608,44 @@ def test_donation_paypal_and_health_tool_events_stay_distinct(tmp_path):
     assert totals["confirmed_donations"] == 0
     assert totals["health_tool_clicks"] == 1
     assert dashboard["summary"]["health_tools"][0]["label"] == "JEIR"
+
+
+def test_dashboard_renders_insights_cta_performance_and_missed_opportunities(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    sign_in_admin(client)
+
+    post_analytics_event(client, event_id="client:missed-page-1", page_path="/fats-guide/", page_title="Fats Guide", anonymous_session_id="s1")
+    post_analytics_event(client, event_id="client:missed-page-2", page_path="/fats-guide/", page_title="Fats Guide", anonymous_session_id="s2")
+    post_analytics_event(
+        client,
+        event_id="client:cta-impression-1",
+        event_name="cta_impression",
+        page_path="/fats-guide/",
+        page_title="Fats Guide",
+        element_id="support-cta",
+        element_label="Support prevention",
+        element_position="article-hero",
+    )
+    post_analytics_event(
+        client,
+        event_id="client:cta-click-1",
+        event_name="content_cta_click",
+        page_path="/fats-guide/",
+        page_title="Fats Guide",
+        element_id="support-cta",
+        element_label="Support prevention",
+        element_position="article-hero",
+    )
+
+    response = client.get("/admin/analytics/")
+
+    assert response.status_code == 200
+    assert b"What changed?" in response.data
+    assert b"CTA performance" in response.data
+    assert b"Support prevention" in response.data
+    assert b"Pages with missed opportunity" in response.data
+    assert b"nutrition" in response.data
 
 
 def test_analytics_admin_routes_require_login_and_export_is_safe(tmp_path):
@@ -1800,6 +1879,57 @@ def test_admin_content_flow_saves_publishes_and_renders_sanitized_blocks(tmp_pat
     assert b"<script>" not in public_response.data
     assert b"javascript:alert" not in public_response.data
     assert b'href="/donation/"' in public_response.data
+
+
+def test_cms_posts_include_mobile_blog_subscribe(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        }
+    )
+    client = app.test_client()
+    csrf_token = sign_in_admin(client)
+
+    create_response = client.post("/admin/posts/new/", data={"csrf_token": csrf_token})
+    assert create_response.status_code == 302
+    editor_path = create_response.headers["Location"]
+    content_id = editor_path.split("/admin/content/", 1)[1].split("/edit/", 1)[0]
+    payload = {
+        "id": content_id,
+        "content_type": "post",
+        "title": "CMS Research Post",
+        "slug": "cms-research-post",
+        "status": "published",
+        "excerpt": "A CMS post about research.",
+        "blocks": [
+            {
+                "id": "body-copy",
+                "type": "rich_text",
+                "version": 1,
+                "settings": {},
+                "content": {"html": "<p>Research update body.</p>"},
+            }
+        ],
+        "settings": {"template": "standard"},
+        "seo": {"seo_title": "CMS Research Post", "meta_description": "A CMS research post."},
+    }
+
+    publish_response = client.post(
+        f"/admin/content/{content_id}/publish/",
+        data=json.dumps(payload),
+        content_type="application/json",
+        headers={"X-CSRF-Token": csrf_token},
+    )
+    public_response = client.get("/cms-research-post/")
+
+    assert publish_response.status_code == 200
+    assert public_response.status_code == 200
+    assert b'class="mobile-blog-subscribe"' in public_response.data
+    assert b"mobile-blog-newsletter-email-cms-research-post" in public_response.data
+    assert b"Stay close to the research" in public_response.data
 
 
 def test_admin_content_state_changes_require_csrf(tmp_path):

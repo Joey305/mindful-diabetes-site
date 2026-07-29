@@ -1,0 +1,18 @@
+<aside class="mobile-blog-subscribe" aria-label="Research newsletter signup">
+  <details class="mobile-blog-subscribe__details">
+    <summary class="mobile-blog-subscribe__trigger">
+      <span class="mobile-blog-subscribe__trigger-icon" aria-hidden="true"></span>
+      <span>Research notes</span>
+    </summary>
+    <div class="mobile-blog-subscribe__popup">
+      <p class="eyebrow">Free guides</p>
+      <h2>Stay close to the research</h2>
+      <p>Stay up to date on the latest in Alzheimer's and diabetes research with practical guides from Mindful Diabetes.</p>
+      {% set newsletter_id = mobile_newsletter_id|default("mobile-blog-newsletter-email") %}
+      {% set newsletter_source = mobile_newsletter_source|default("mobile-blog") %}
+      {% set newsletter_class = "newsletter-form--mobile-blog" %}
+      {% include "_newsletter_form.html" %}
+      {% set newsletter_class = "" %}
+    </div>
+  </details>
+</aside>

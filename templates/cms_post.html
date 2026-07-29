@@ -26,4 +26,8 @@
       {{ rendered_blocks }}
     </div>
   </article>
+
+  {% set mobile_newsletter_id = "mobile-blog-newsletter-email-" ~ item.slug %}
+  {% set mobile_newsletter_source = "mobile-blog-" ~ item.slug %}
+  {% include "_mobile_blog_subscribe.html" %}
 {% endblock %}

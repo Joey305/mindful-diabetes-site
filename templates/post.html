@@ -100,4 +100,8 @@
       </div>
     </section>
   {% endif %}
+
+  {% set mobile_newsletter_id = "mobile-blog-newsletter-email-" ~ post.slug %}
+  {% set mobile_newsletter_source = "mobile-blog-" ~ post.slug %}
+  {% include "_mobile_blog_subscribe.html" %}
 {% endblock %}
