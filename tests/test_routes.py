@@ -639,16 +639,21 @@ def test_every_post_uses_shared_article_template():
         assert b'action="/subscribe/"' in response.data, post["canonical_path"]
         assert b'class="mobile-blog-subscribe"' in response.data, post["canonical_path"]
         assert f"mobile-blog-newsletter-email-{post['slug']}".encode() in response.data, post["canonical_path"]
+        assert b"/static/js/mobile-blog-subscribe.js" in response.data, post["canonical_path"]
         assert b'class="article-callout"></section>' not in response.data, post["canonical_path"]
         assert b'<div class="article-callout"><section' not in response.data, post["canonical_path"]
 
 
 def test_mobile_blog_subscribe_styles_are_mobile_only():
     css = (app_module.BASE_DIR / "static" / "css" / "site.css").read_text(encoding="utf-8")
+    script = (app_module.BASE_DIR / "static" / "js" / "mobile-blog-subscribe.js").read_text(encoding="utf-8")
 
     assert ".mobile-blog-subscribe {\n  display: none;\n}" in css
     assert "@media (max-width: 760px)" in css
     assert ".mobile-blog-subscribe {\n    position: fixed;" in css
+    assert "--mobile-blog-subscribe-color-a" in css
+    assert 'document.addEventListener("pointerdown", closeOpenDetails)' in script
+    assert 'window.addEventListener("scroll", requestPaint, { passive: true })' in script
 
 
 def test_article_section_wrapping_does_not_split_list_items():
