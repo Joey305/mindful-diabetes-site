@@ -61,6 +61,7 @@
       <button class="admin-tab-button" type="button" data-admin-tab="overview" aria-controls="admin-tab-overview">Overview</button>
       <button class="admin-tab-button" type="button" data-admin-tab="growth" aria-controls="admin-tab-growth">Growth</button>
       <button class="admin-tab-button" type="button" data-admin-tab="engagement" aria-controls="admin-tab-engagement">Engagement</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="resources" aria-controls="admin-tab-resources">Resources</button>
       <button class="admin-tab-button" type="button" data-admin-tab="search" aria-controls="admin-tab-search">Search</button>
       <button class="admin-tab-button" type="button" data-admin-tab="campaigns" aria-controls="admin-tab-campaigns">Campaigns</button>
       <button class="admin-tab-button" type="button" data-admin-tab="content" aria-controls="admin-tab-content">Content</button>
@@ -422,6 +423,68 @@
     </section>
     </div>
 
+    <div class="admin-tab-panel" id="admin-tab-resources" data-admin-tab-panel="resources">
+    <section class="admin-panel admin-panel--wide" id="resources" aria-labelledby="admin-resources-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-resources-heading">Free Guides</h2>
+        <span>{{ dashboard.resource_insights.downloads }} downloads, {{ dashboard.resource_insights.shares }} shares</span>
+      </div>
+      <ul class="admin-insight-list">
+        {% for note in dashboard.resource_insights.notes %}
+          <li>{{ note }}</li>
+        {% endfor %}
+      </ul>
+      <div class="admin-mini-grid">
+        <article><span>Guide cards seen</span><strong>{{ dashboard.resource_insights.cards_seen }}</strong></article>
+        <article><span>Detail page views</span><strong>{{ dashboard.resource_insights.detail_views }}</strong></article>
+        <article><span>PDF opens</span><strong>{{ dashboard.resource_insights.pdf_views }}</strong></article>
+        <article><span>PDF downloads</span><strong>{{ dashboard.resource_insights.downloads }}</strong><small>Rate: {{ dashboard.resource_insights.download_rate }}</small></article>
+      </div>
+      {% if dashboard.resource_insights.top_guides %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Guide</th>
+                <th>Category</th>
+                <th>Cards seen</th>
+                <th>Details</th>
+                <th>PDF opens</th>
+                <th>Downloads</th>
+                <th>Shares</th>
+                <th>Related clicks</th>
+                <th>Support clicks</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.resource_insights.top_guides %}
+                <tr>
+                  <td>{{ row.title }}</td>
+                  <td>{{ row.category }}</td>
+                  <td>{{ row.card_views }}</td>
+                  <td>{{ row.detail_views }}</td>
+                  <td>{{ row.pdf_views }}</td>
+                  <td>{{ row.downloads }}</td>
+                  <td>{{ row.shares }}</td>
+                  <td>{{ row.related_clicks }}</td>
+                  <td>{{ row.donation_clicks }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">Free Guide performance will appear after visitors view, download, or share a guide.</p>
+      {% endif %}
+      <div class="admin-dashboard__grid">
+        {{ analytics_list("Guide action mix", dashboard.resource_insights.action_mix, "No guide actions have been recorded yet.") }}
+        {{ analytics_list("Share platforms", dashboard.resource_insights.share_platforms, "No guide shares have been recorded yet.") }}
+        {{ analytics_list("Source pages", dashboard.resource_insights.source_pages, "No guide source pages have been recorded yet.") }}
+        {{ analytics_list("Related guide clicks", dashboard.resource_insights.related_clicks, "No related guide clicks have been recorded yet.") }}
+      </div>
+    </section>
+    </div>
+
     <div class="admin-tab-panel" id="admin-tab-search" data-admin-tab-panel="search">
     <section class="admin-panel admin-panel--wide" id="search-insights" aria-labelledby="admin-search-insights-heading">
       <div class="admin-panel__header">
@@ -686,6 +749,8 @@
           donation: "engagement",
           "health-tools": "engagement",
           newsletter: "engagement",
+          resources: "resources",
+          "free-guides": "resources",
           "search-insights": "search",
           content: "content",
           campaigns: "campaigns",

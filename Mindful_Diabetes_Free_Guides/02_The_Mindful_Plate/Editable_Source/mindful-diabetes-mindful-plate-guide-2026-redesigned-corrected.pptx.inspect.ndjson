@@ -1,0 +1,729 @@
+{"kind":"deck","id":"pr/1tkty8","name":"Deck"}
+{"kind":"layout","layoutId":"4237063b-6a46-4da7-957c-19d1f6e15a5c","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"f0930ad3-ec45-405f-89c7-992327d49d91","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/pw6vxi","slide":1,"title":"Mindful Diabetes Free Guides","textShapes":10}
+{"kind":"shape","id":"sh/natof2xg","slide":1,"bbox":[0,0,816,596]}
+{"kind":"textbox","id":"sh/18b6dcfq","slide":1,"text":"Mindful Diabetes Free Guides","textPreview":"Mindful Diabetes Free Guides","textChars":28,"textLines":1,"bbox":[128,65,340,24]}
+{"kind":"textbox","id":"sh/072547y5","slide":1,"text":"501(c)(3) nonprofit health education","textPreview":"501(c)(3) nonprofit health education","textChars":36,"textLines":1,"bbox":[128,91,310,20]}
+{"kind":"shape","id":"sh/f6tob2xk","slide":1,"bbox":[62,484,102,32]}
+{"kind":"textbox","id":"sh/e5kn2xgz","slide":1,"text":"FREE GUIDE","textPreview":"FREE GUIDE","textChars":10,"textLines":1,"bbox":[76,492,78,16]}
+{"kind":"textbox","id":"sh/l4f6pwfu","slide":1,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[62,625,660,78]}
+{"kind":"textbox","id":"sh/k36pgry9","slide":1,"text":"A Simple Guide to Blood Sugar-Friendly Eating","textPreview":"A Simple Guide to Blood Sugar-Friendly Eating","textChars":45,"textLines":1,"bbox":[66,720,610,34]}
+{"kind":"textbox","id":"sh/q50je183","slide":1,"text":"Use a flexible plate pattern to build meals with vegetables, protein, carbohydrate, flavor, and a lower-sugar drink - without turning food into a math problem.","textPreview":"Use a flexible plate pattern to build meals with vegetables, protein, carbohydrate, flavor, and a lower-sugar drink - without turning foo...","textChars":159,"textLines":1,"bbox":[66,774,650,78]}
+{"kind":"shape","id":"sh/r690n69o","slide":1,"bbox":[66,878,660,82]}
+{"kind":"textbox","id":"sh/s721gbq9","slide":1,"text":"Inside","textPreview":"Inside","textChars":6,"textLines":1,"bbox":[83,892,626,22]}
+{"kind":"textbox","id":"sh/d8bipgru","slide":1,"text":"Quick-start plate visual, food examples, drink comparison, grocery starter list, printable worksheet, safety notes, and references.","textPreview":"Quick-start plate visual, food examples, drink comparison, grocery starter list, printable worksheet, safety notes, and references.","textChars":131,"textLines":1,"bbox":[83,920,626,30]}
+{"kind":"textbox","id":"sh/i10jq187","slide":1,"text":"Published July 30, 2026 | Medical review: pending","textPreview":"Published July 30, 2026 | Medical review: pending","textChars":49,"textLines":1,"bbox":[66,988,500,18]}
+{"kind":"textbox","id":"sh/3290j69c","slide":1,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[594,988,140,18]}
+{"kind":"image","id":"im/18r218zu","slide":1,"name":"","geometry":"roundRect","alt":"Balanced meal with vegetables, protein, carbohydrate, and water","bbox":[0,0,816,596]}
+{"kind":"image","id":"im/zmpkzyho","slide":1,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[62,60,54,58]}
+{"kind":"notes","id":"nt/pw6vxi","slide":1,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/krrcdr","slide":2,"title":"The Mindful Plate","textShapes":17}
+{"kind":"textbox","id":"sh/9wfe1gny","slide":2,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/8vmd8bmd","slide":2,"text":"Welcome","textPreview":"Welcome","textChars":7,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/z6dcv65w","slide":2,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/y54v214b","slide":2,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/lsvexgnm","slide":2,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/k7md4bm1","slide":2,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/j2xw7ql0","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/i1ovel4f","slide":2,"text":"WELCOME","textPreview":"WELCOME","textChars":7,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/kf6l07u9","slide":2,"text":"A calmer way to build a meal","textPreview":"A calmer way to build a meal","textChars":28,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/lgfmtcvu","slide":2,"text":"This guide is for real kitchens, busy schedules, mixed dishes, familiar foods, and small changes that can actually happen.","textPreview":"This guide is for real kitchens, busy schedules, mixed dishes, familiar foods, and small changes that can actually happen.","textChars":122,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/zex4r2do","slide":2,"bbox":[66,586,205,92]}
+{"kind":"textbox","id":"sh/cr6lwnux","slide":2,"text":"Flexible","textPreview":"Flexible","textChars":8,"textLines":1,"bbox":[86,606,165,22]}
+{"kind":"textbox","id":"sh/xsfmpsvi","slide":2,"text":"Use the plate as a starting point.","textPreview":"Use the plate as a starting point.","textChars":34,"textLines":1,"bbox":[86,636,160,36]}
+{"kind":"shape","id":"sh/qp43uxc7","slide":2,"bbox":[294,586,205,92]}
+{"kind":"textbox","id":"sh/bqd4nidc","slide":2,"text":"Practical","textPreview":"Practical","textChars":9,"textLines":1,"bbox":[314,606,165,22]}
+{"kind":"textbox","id":"sh/onmlsnu1","slide":2,"text":"Frozen, canned, dried, and store-brand foods count.","textPreview":"Frozen, canned, dried, and store-brand foods count.","textChars":51,"textLines":1,"bbox":[314,636,160,36]}
+{"kind":"shape","id":"sh/pov2lsvm","slide":2,"bbox":[522,586,205,92]}
+{"kind":"textbox","id":"sh/5kn2p4na","slide":2,"text":"Personal","textPreview":"Personal","textChars":8,"textLines":1,"bbox":[542,606,165,22]}
+{"kind":"textbox","id":"sh/4je1wj6p","slide":2,"text":"Culture, budget, appetite, and medical needs still matter.","textPreview":"Culture, budget, appetite, and medical needs still matter.","textChars":58,"textLines":1,"bbox":[542,636,160,36]}
+{"kind":"textbox","id":"sh/3i50ne54","slide":2,"text":"If food advice has started to feel like a stack of rules, let this guide lower the noise. The Mindful Plate is a simple way to assemble a meal: vegetables, protein, carbohydrate, drink, and flavor. You do not have to weigh everything or give up foods that matter to you.","textPreview":"If food advice has started to feel like a stack of rules, let this guide lower the noise. The Mindful Plate is a simple way to assemble a...","textChars":270,"textLines":1,"bbox":[76,722,640,102]}
+{"kind":"shape","id":"sh/ihwju9oj","slide":2,"bbox":[66,866,684,82]}
+{"kind":"textbox","id":"sh/hgnil4ne","slide":2,"text":"This guide cannot replace","textPreview":"This guide cannot replace","textChars":25,"textLines":1,"bbox":[83,880,650,22]}
+{"kind":"textbox","id":"sh/gfe1sz6t","slide":2,"text":"Medical nutrition therapy, medication guidance, glucose targets, insulin changes, pregnancy care, eating-disorder care, or urgent medical attention.","textPreview":"Medical nutrition therapy, medication guidance, glucose targets, insulin changes, pregnancy care, eating-disorder care, or urgent medical...","textChars":148,"textLines":1,"bbox":[83,908,650,30]}
+{"kind":"image","id":"im/zmdozy9c","slide":2,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/tsrilcni","slide":2,"name":"","geometry":"roundRect","alt":"People sharing a simple meal at a kitchen table","bbox":[66,250,684,298]}
+{"kind":"notes","id":"nt/krrcdr","slide":2,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/xqjiio","slide":3,"title":"The Mindful Plate","textShapes":18}
+{"kind":"textbox","id":"sh/32hsni1w","slide":3,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/i18rud0b","slide":3,"text":"Quick start","textPreview":"Quick start","textChars":11,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/d8jatsjy","slide":3,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/s7at0nid","slide":3,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/r61sr21s","slide":3,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/q5sbyx0n","slide":3,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/9czah8ju","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/8b69o3i9","slide":3,"text":"QUICK START","textPreview":"QUICK START","textChars":11,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/e1sfydcf","slide":3,"text":"Start here tonight","textPreview":"Start here tonight","textChars":18,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/f21gridk","slide":3,"text":"Choose one meal, not your whole life. Use the plate as a quick visual check, then adapt it to the food you actually have.","textPreview":"Choose one meal, not your whole life. Use the plate as a quick visual check, then adapt it to the food you actually have.","textChars":121,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/03ax0nu5","slide":3,"bbox":[108,270,420,420]}
+{"kind":"shape","id":"sh/14jytsvq","slide":3,"bbox":[318,278,0,404]}
+{"kind":"shape","id":"sh/25cf2dcb","slide":3,"bbox":[318,480,202,0]}
+{"kind":"textbox","id":"sh/n6lgvidw","slide":3,"text":"1/2 plate\nnon-starchy\nvegetables","textPreview":"1/2 plate | non-starchy | vegetables","textChars":32,"textLines":3,"bbox":[136,437,160,88]}
+{"kind":"textbox","id":"sh/o7ux4nuh","slide":3,"text":"1/4 plate\nprotein","textPreview":"1/4 plate | protein","textChars":17,"textLines":2,"bbox":[348,340,158,52]}
+{"kind":"textbox","id":"sh/983yxsv2","slide":3,"text":"1/4 plate\ncarbohydrate","textPreview":"1/4 plate | carbohydrate","textChars":22,"textLines":2,"bbox":[344,530,158,58]}
+{"kind":"shape","id":"sh/a9cz6xcn","slide":3,"bbox":[523,592,100,58]}
+{"kind":"textbox","id":"sh/balgz2ds","slide":3,"text":"lower-sugar\ndrink","textPreview":"lower-sugar | drink","textChars":17,"textLines":2,"bbox":[535,605,76,34]}
+{"kind":"shape","id":"sh/7e5wn2t0","slide":3,"bbox":[80,747,10,10]}
+{"kind":"textbox","id":"sh/6dwfuxsf","slide":3,"text":"Half the plate: non-starchy vegetables when available.","textPreview":"Half the plate: non-starchy vegetables when available.","textChars":54,"textLines":1,"bbox":[102,742,628,34]}
+{"kind":"shape","id":"sh/t0nepcb6","slide":3,"bbox":[80,785,10,10]}
+{"kind":"textbox","id":"sh/8zexw7al","slide":3,"text":"One quarter: protein such as eggs, fish, tofu, beans, yogurt, chicken, or lean meat.","textPreview":"One quarter: protein such as eggs, fish, tofu, beans, yogurt, chicken, or lean meat.","textChars":84,"textLines":1,"bbox":[102,780,628,34]}
+{"kind":"shape","id":"sh/jalwjit4","slide":3,"bbox":[80,823,10,10]}
+{"kind":"textbox","id":"sh/y9cfqxsj","slide":3,"text":"One quarter: carbohydrate such as rice, oats, bread, fruit, beans, potato, or tortilla.","textPreview":"One quarter: carbohydrate such as rice, oats, bread, fruit, beans, potato, or tortilla.","textChars":87,"textLines":1,"bbox":[102,818,628,34]}
+{"kind":"shape","id":"sh/lcnelsbu","slide":3,"bbox":[80,861,10,10]}
+{"kind":"textbox","id":"sh/kbuxsnap","slide":3,"text":"Drink: water, unsweet tea, or another lower-sugar choice.","textPreview":"Drink: water, unsweet tea, or another lower-sugar choice.","textChars":57,"textLines":1,"bbox":[102,856,628,34]}
+{"kind":"shape","id":"sh/b6lwfits","slide":3,"bbox":[66,900,684,72]}
+{"kind":"textbox","id":"sh/a5cfmds7","slide":3,"text":"No all-or-nothing test","textPreview":"No all-or-nothing test","textChars":22,"textLines":1,"bbox":[83,914,650,22]}
+{"kind":"textbox","id":"sh/gz6l0fmt","slide":3,"text":"If dinner is pizza, add a salad or vegetable side. If breakfast is rushed, improve the drink. One useful change is enough.","textPreview":"If dinner is pizza, add a salad or vegetable side. If breakfast is rushed, improve the drink. One useful change is enough.","textChars":122,"textLines":1,"bbox":[83,942,650,20]}
+{"kind":"image","id":"im/pwnal8bu","slide":3,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/xqjiio","slide":3,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/ikkhke","slide":4,"title":"The Mindful Plate","textShapes":21}
+{"kind":"textbox","id":"sh/4vmps7ux","slide":4,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/5wvqlcv2","slide":4,"text":"Food and blood sugar","textPreview":"Food and blood sugar","textChars":20,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/qx47uhcn","slide":4,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/ryx8nmd8","slide":4,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/sz6pwrut","slide":4,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/dkfqpwve","slide":4,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/61k7ixcj","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/72tobid4","slide":4,"text":"FOOD AND BLOOD SUGAR","textPreview":"FOOD AND BLOOD SUGAR","textChars":20,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/re50nid8","slide":4,"text":"What happens after we eat?","textPreview":"What happens after we eat?","textChars":26,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/6dwjudwn","slide":4,"text":"The short version: food is digested, some foods become glucose, insulin helps glucose move into cells, and many everyday factors affect the pattern.","textPreview":"The short version: food is digested, some foods become glucose, insulin helps glucose move into cells, and many everyday factors affect t...","textChars":148,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/tgnipsve","slide":4,"bbox":[78,292,130,112]}
+{"kind":"shape","id":"sh/sfe1wnet","slide":4,"bbox":[127,309,32,32]}
+{"kind":"textbox","id":"sh/jal0jixw","slide":4,"text":"Food","textPreview":"Food","textChars":4,"textLines":1,"bbox":[90,349,106,22]}
+{"kind":"textbox","id":"sh/i9czqdwr","slide":4,"text":"Meal or snack","textPreview":"Meal or snack","textChars":13,"textLines":1,"bbox":[92,372,102,25]}
+{"kind":"shape","id":"sh/5cnilsv2","slide":4,"bbox":[204,347,56,0]}
+{"kind":"shape","id":"sh/4be1sneh","slide":4,"bbox":[246,292,130,112]}
+{"kind":"shape","id":"sh/vml0fyx0","slide":4,"bbox":[295,309,32,32]}
+{"kind":"textbox","id":"sh/ulczmtwf","slide":4,"text":"Digestion","textPreview":"Digestion","textChars":9,"textLines":1,"bbox":[258,349,106,22]}
+{"kind":"textbox","id":"sh/yhsjytg7","slide":4,"text":"Carbs break into glucose","textPreview":"Carbs break into glucose","textChars":24,"textLines":1,"bbox":[260,372,102,25]}
+{"kind":"shape","id":"sh/zi1k7yhs","slide":4,"bbox":[372,347,56,0]}
+{"kind":"shape","id":"sh/0ju103yd","slide":4,"bbox":[414,292,130,112]}
+{"kind":"shape","id":"sh/lk3298zy","slide":4,"bbox":[463,309,32,32]}
+{"kind":"textbox","id":"sh/mlcj2dgj","slide":4,"text":"Insulin","textPreview":"Insulin","textChars":7,"textLines":1,"bbox":[426,349,106,22]}
+{"kind":"textbox","id":"sh/76lkbih4","slide":4,"text":"Helps cells use glucose","textPreview":"Helps cells use glucose","textChars":23,"textLines":1,"bbox":[428,372,102,25]}
+{"kind":"shape","id":"sh/87u14ny9","slide":4,"bbox":[540,347,56,0]}
+{"kind":"shape","id":"sh/9832d8zu","slide":4,"bbox":[582,292,130,112]}
+{"kind":"shape","id":"sh/u9cj6dgf","slide":4,"bbox":[631,309,32,32]}
+{"kind":"textbox","id":"sh/valkfih0","slide":4,"text":"Energy","textPreview":"Energy","textChars":6,"textLines":1,"bbox":[594,349,106,22]}
+{"kind":"textbox","id":"sh/547m5cj2","slide":4,"text":"Use now or store","textPreview":"Use now or store","textChars":16,"textLines":1,"bbox":[596,372,102,25]}
+{"kind":"textbox","id":"sh/43ylw7ih","slide":4,"text":"During digestion, the body breaks food into smaller parts. Carbohydrate foods usually have the most direct effect on blood glucose because many carbohydrates break down into glucose. Insulin helps move glucose from the blood into cells so it can be used for energy.","textPreview":"During digestion, the body breaks food into smaller parts. Carbohydrate foods usually have the most direct effect on blood glucose becaus...","textChars":265,"textLines":1,"bbox":[76,474,640,98]}
+{"kind":"shape","id":"sh/j2543m1c","slide":4,"bbox":[80,611,10,10]}
+{"kind":"textbox","id":"sh/i1w3uh0r","slide":4,"text":"Protein, fiber, fat, portion, activity, timing, stress, illness, sleep, alcohol, and medicines can all influence glucose patterns.","textPreview":"Protein, fiber, fat, portion, activity, timing, stress, illness, sleep, alcohol, and medicines can all influence glucose patterns.","textChars":130,"textLines":1,"bbox":[102,606,628,34]}
+{"kind":"shape","id":"sh/t87m9wje","slide":4,"bbox":[80,663,10,10]}
+{"kind":"textbox","id":"sh/s7y50rit","slide":4,"text":"Two people can eat a similar meal and see different results.","textPreview":"Two people can eat a similar meal and see different results.","textChars":60,"textLines":1,"bbox":[102,658,628,34]}
+{"kind":"shape","id":"sh/r6p47m18","slide":4,"bbox":[66,832,684,92]}
+{"kind":"textbox","id":"sh/65gnyh0n","slide":4,"text":"Safety note","textPreview":"Safety note","textChars":11,"textLines":1,"bbox":[83,846,650,22]}
+{"kind":"textbox","id":"sh/1wrmdwja","slide":4,"text":"Do not change insulin, diabetes medicine, or glucose targets because of this guide. If readings are often high or low, ask your care team what changes are safest for you.","textPreview":"Do not change insulin, diabetes medicine, or glucose targets because of this guide. If readings are often high or low, ask your care team...","textChars":170,"textLines":1,"bbox":[83,874,650,40]}
+{"kind":"image","id":"im/qd4vqls3","slide":4,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/ikkhke","slide":4,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/dur8gr","slide":5,"title":"The Mindful Plate","textShapes":19}
+{"kind":"textbox","id":"sh/tk3ydwb2","slide":5,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/8jaxkrah","slide":5,"text":"Plate method","textPreview":"Plate method","textChars":12,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/vmlgf6ts","slide":5,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/ulcfm1s7","slide":5,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/h83yhgby","slide":5,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/g7uxobad","slide":5,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/bqhw32to","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/ap8faxs3","slide":5,"text":"PLATE METHOD","textPreview":"PLATE METHOD","textChars":12,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/8vi10zul","slide":5,"text":"The Mindful Plate method","textPreview":"The Mindful Plate method","textChars":24,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/9wbi94v6","slide":5,"text":"A common diabetes plate pattern uses about one-half non-starchy vegetables, one-quarter protein, one-quarter carbohydrate, and water or another low-calorie drink.","textPreview":"A common diabetes plate pattern uses about one-half non-starchy vegetables, one-quarter protein, one-quarter carbohydrate, and water or a...","textChars":162,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"textbox","id":"sh/mt0jypcv","slide":5,"text":"It can fit bowls, soups, tacos, dal, stir-fries, sandwiches, and leftovers. Mixed dishes can still be balanced by thinking about what is inside them.","textPreview":"It can fit bowls, soups, tacos, dal, stir-fries, sandwiches, and leftovers. Mixed dishes can still be balanced by thinking about what is ...","textChars":149,"textLines":1,"bbox":[66,250,320,96]}
+{"kind":"shape","id":"sh/nu907ud0","slide":5,"bbox":[70,385,10,10]}
+{"kind":"textbox","id":"sh/wz214jux","slide":5,"text":"Vegetables add volume, color, fiber, and nutrients.","textPreview":"Vegetables add volume, color, fiber, and nutrients.","textChars":51,"textLines":1,"bbox":[92,380,308,34]}
+{"kind":"shape","id":"sh/x0b2dovi","slide":5,"bbox":[70,430,10,10]}
+{"kind":"textbox","id":"sh/axkj29cr","slide":5,"text":"Protein can help a meal feel more satisfying.","textPreview":"Protein can help a meal feel more satisfying.","textChars":45,"textLines":1,"bbox":[92,425,308,34]}
+{"kind":"shape","id":"sh/vytkbedc","slide":5,"bbox":[70,475,10,10]}
+{"kind":"textbox","id":"sh/c3y18fed","slide":5,"text":"Carbohydrate foods can fit with attention to portion and pairing.","textPreview":"Carbohydrate foods can fit with attention to portion and pairing.","textChars":65,"textLines":1,"bbox":[92,470,308,34]}
+{"kind":"shape","id":"sh/d4ri1kvy","slide":5,"bbox":[70,520,10,10]}
+{"kind":"textbox","id":"sh/dkjy5gn2","slide":5,"text":"A lower-sugar drink keeps the meal simpler.","textPreview":"A lower-sugar drink keeps the meal simpler.","textChars":43,"textLines":1,"bbox":[92,515,308,34]}
+{"kind":"shape","id":"sh/sjqhwb6h","slide":5,"bbox":[426,302,250,250]}
+{"kind":"shape","id":"sh/ryhg365w","slide":5,"bbox":[551,310,0,234]}
+{"kind":"shape","id":"sh/qx8zu1ob","slide":5,"bbox":[551,427,117,0]}
+{"kind":"textbox","id":"sh/1ojy9gny","slide":5,"text":"1/2 plate\nnon-starchy\nvegetables","textPreview":"1/2 plate | non-starchy | vegetables","textChars":32,"textLines":3,"bbox":[454,384,75,88]}
+{"kind":"textbox","id":"sh/0nah0b6d","slide":5,"text":"1/4 plate\nprotein","textPreview":"1/4 plate | protein","textChars":17,"textLines":2,"bbox":[581,372,73,52]}
+{"kind":"textbox","id":"sh/fm1g7q5s","slide":5,"text":"1/4 plate\ncarbohydrate","textPreview":"1/4 plate | carbohydrate","textChars":22,"textLines":2,"bbox":[577,477,73,58]}
+{"kind":"shape","id":"sh/elszylo7","slide":5,"bbox":[671,539,100,58]}
+{"kind":"textbox","id":"sh/ps3id0nu","slide":5,"text":"lower-sugar\ndrink","textPreview":"lower-sugar | drink","textChars":17,"textLines":2,"bbox":[683,552,76,34]}
+{"kind":"shape","id":"sh/orah4v6p","slide":5,"bbox":[66,842,684,78]}
+{"kind":"textbox","id":"sh/mlknit0v","slide":5,"text":"What this does not mean","textPreview":"What this does not mean","textChars":23,"textLines":1,"bbox":[83,856,650,22]}
+{"kind":"textbox","id":"sh/nmt4byhg","slide":5,"text":"Every meal does not need to look separated on a plate. Culture, appetite, budget, and medical needs still matter.","textPreview":"Every meal does not need to look separated on a plate. Culture, appetite, budget, and medical needs still matter.","textChars":113,"textLines":1,"bbox":[83,884,650,26]}
+{"kind":"image","id":"im/3i9sv2l8","slide":5,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/dur8gr","slide":5,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/bajnwg","slide":6,"title":"The Mindful Plate","textShapes":24}
+{"kind":"textbox","id":"sh/gra5sn25","slide":6,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/1sjm18jq","slide":6,"text":"Carbohydrates","textPreview":"Carbohydrates","textChars":13,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/2tsnudkb","slide":6,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/3ul43i1w","slide":6,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/ovu5wn2h","slide":6,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/pw3m5sj2","slide":6,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/qxcnyxk7","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/byl4721s","slide":6,"text":"CARBOHYDRATES","textPreview":"CARBOHYDRATES","textChars":13,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/neh4j6xg","slide":6,"text":"Carbs without confusion","textPreview":"Carbs without confusion","textChars":23,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/2d83q1wv","slide":6,"text":"Carbohydrates are not automatically forbidden. The type, amount, and what you eat with them matter.","textPreview":"Carbohydrates are not automatically forbidden. The type, amount, and what you eat with them matter.","textChars":99,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/pgzmlwv6","slide":6,"bbox":[66,280,318,82]}
+{"kind":"shape","id":"sh/ofqlsbel","slide":6,"bbox":[82,300,20,20]}
+{"kind":"textbox","id":"sh/fax4fmx4","slide":6,"text":"Grains","textPreview":"Grains","textChars":6,"textLines":1,"bbox":[114,296,254,20]}
+{"kind":"textbox","id":"sh/e9o3mhwj","slide":6,"text":"rice, oats, bread, pasta, tortillas","textPreview":"rice, oats, bread, pasta, tortillas","textChars":35,"textLines":1,"bbox":[114,319,254,38]}
+{"kind":"shape","id":"sh/1czmhwfa","slide":6,"bbox":[412,280,318,82]}
+{"kind":"shape","id":"sh/0bqlorep","slide":6,"bbox":[428,300,20,20]}
+{"kind":"textbox","id":"sh/j614rqdo","slide":6,"text":"Starchy vegetables","textPreview":"Starchy vegetables","textChars":18,"textLines":1,"bbox":[460,296,254,20]}
+{"kind":"textbox","id":"sh/y5snylw3","slide":6,"text":"potatoes, corn, peas, winter squash","textPreview":"potatoes, corn, peas, winter squash","textChars":35,"textLines":1,"bbox":[460,319,254,38]}
+{"kind":"shape","id":"sh/udwf69k7","slide":6,"bbox":[66,386,318,82]}
+{"kind":"shape","id":"sh/fe5gfe1s","slide":6,"bbox":[82,406,20,20]}
+{"kind":"textbox","id":"sh/gfyx8j2d","slide":6,"text":"Fruit","textPreview":"Fruit","textChars":5,"textLines":1,"bbox":[114,402,254,20]}
+{"kind":"textbox","id":"sh/hg7yhojy","slide":6,"text":"berries, apples, bananas, mango","textPreview":"berries, apples, bananas, mango","textChars":31,"textLines":1,"bbox":[114,425,254,38]}
+{"kind":"shape","id":"sh/2hgzatkj","slide":6,"bbox":[412,386,318,82]}
+{"kind":"shape","id":"sh/32pgjy14","slide":6,"bbox":[428,406,20,20]}
+{"kind":"textbox","id":"sh/43yhc32p","slide":6,"text":"Milk and yogurt","textPreview":"Milk and yogurt","textChars":15,"textLines":1,"bbox":[460,402,254,20]}
+{"kind":"textbox","id":"sh/p47yloju","slide":6,"text":"plain milk, yogurt, kefir","textPreview":"plain milk, yogurt, kefir","textChars":25,"textLines":1,"bbox":[460,425,254,38]}
+{"kind":"shape","id":"sh/ilcfypkf","slide":6,"bbox":[66,492,318,82]}
+{"kind":"shape","id":"sh/j6lg7ulk","slide":6,"bbox":[82,512,20,20]}
+{"kind":"textbox","id":"sh/10bids32","slide":6,"text":"Beans and lentils","textPreview":"Beans and lentils","textChars":17,"textLines":1,"bbox":[114,508,254,20]}
+{"kind":"textbox","id":"sh/0z21knmx","slide":6,"text":"black beans, chickpeas, dal, lentils","textPreview":"black beans, chickpeas, dal, lentils","textChars":36,"textLines":1,"bbox":[114,531,254,38]}
+{"kind":"shape","id":"sh/zyt0b2lc","slide":6,"bbox":[412,492,318,82]}
+{"kind":"shape","id":"sh/ex0jix4r","slide":6,"bbox":[428,512,20,20]}
+{"kind":"textbox","id":"sh/94b2hc3e","slide":6,"text":"Sweets and drinks","textPreview":"Sweets and drinks","textChars":17,"textLines":1,"bbox":[460,508,254,20]}
+{"kind":"textbox","id":"sh/o321o7mt","slide":6,"text":"desserts, soda, sweet tea, juice","textPreview":"desserts, soda, sweet tea, juice","textChars":32,"textLines":1,"bbox":[460,531,254,38]}
+{"kind":"shape","id":"sh/n2t0f2l8","slide":6,"bbox":[80,821,10,10]}
+{"kind":"textbox","id":"sh/m1kjmx4n","slide":6,"text":"Pair carbohydrate foods with protein, fiber-rich foods, vegetables, and satisfying flavor when possible.","textPreview":"Pair carbohydrate foods with protein, fiber-rich foods, vegetables, and satisfying flavor when possible.","textChars":104,"textLines":1,"bbox":[102,816,598,34]}
+{"kind":"shape","id":"sh/p8ri58na","slide":6,"bbox":[80,861,10,10]}
+{"kind":"textbox","id":"sh/47i1c3mp","slide":6,"text":"Total carbohydrate and added sugar can both be useful label checks.","textPreview":"Total carbohydrate and added sugar can both be useful label checks.","textChars":67,"textLines":1,"bbox":[102,856,598,34]}
+{"kind":"shape","id":"sh/sn6lkb6x","slide":6,"bbox":[66,905,684,62]}
+{"kind":"textbox","id":"sh/tofmdgni","slide":6,"text":"Try this","textPreview":"Try this","textChars":8,"textLines":1,"bbox":[83,919,650,22]}
+{"kind":"textbox","id":"sh/6lo3ilo7","slide":6,"text":"Choose one carbohydrate you eat often. Keep the food, but experiment with portion and pairing.","textPreview":"Choose one carbohydrate you eat often. Keep the food, but experiment with portion and pairing.","textChars":94,"textLines":1,"bbox":[83,947,650,10]}
+{"kind":"image","id":"im/ql8vql0j","slide":6,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/bajnwg","slide":6,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/31utbs","slide":7,"title":"The Mindful Plate","textShapes":23}
+{"kind":"textbox","id":"sh/fu9cz69w","slide":7,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/et0vqlsb","slide":7,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/90bu50ry","slide":7,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/oz2dwvad","slide":7,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/nytc3q9s","slide":7,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/2xkvuls7","slide":7,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/54rutwre","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/43ytkra9","slide":7,"text":"PROTEIN","textPreview":"PROTEIN","textChars":7,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/6pgbi943","slide":7,"text":"Protein helps a meal hold together","textPreview":"Protein helps a meal hold together","textChars":34,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/7qpsre58","slide":7,"text":"Protein foods can support fullness and help make a meal feel more steady. They may come from animal or plant sources, and budget options count.","textPreview":"Protein foods can support fullness and help make a meal feel more steady. They may come from animal or plant sources, and budget options ...","textChars":143,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/8ritkzmt","slide":7,"bbox":[66,280,318,92]}
+{"kind":"shape","id":"sh/tsrat4ne","slide":7,"bbox":[82,300,20,20]}
+{"kind":"textbox","id":"sh/ut0bm94z","slide":7,"text":"Eggs or fish","textPreview":"Eggs or fish","textChars":12,"textLines":1,"bbox":[114,296,254,20]}
+{"kind":"textbox","id":"sh/vu9sve5k","slide":7,"text":"eggs, tuna, salmon, sardines","textPreview":"eggs, tuna, salmon, sardines","textChars":28,"textLines":1,"bbox":[114,319,254,38]}
+{"kind":"shape","id":"sh/gvitojm5","slide":7,"bbox":[412,280,318,92]}
+{"kind":"shape","id":"sh/hwraxonq","slide":7,"bbox":[428,300,20,20]}
+{"kind":"textbox","id":"sh/ih0bqt4v","slide":7,"text":"Poultry or lean meat","textPreview":"Poultry or lean meat","textChars":20,"textLines":1,"bbox":[460,296,254,20]}
+{"kind":"textbox","id":"sh/3i9szy5g","slide":7,"text":"chicken, turkey, lean beef","textPreview":"chicken, turkey, lean beef","textChars":26,"textLines":1,"bbox":[460,319,254,38]}
+{"kind":"shape","id":"sh/zmts7y1o","slide":7,"bbox":[66,394,318,92]}
+{"kind":"shape","id":"sh/elkretk3","slide":7,"bbox":[82,414,20,20]}
+{"kind":"textbox","id":"sh/1oba9oju","slide":7,"text":"Tofu or tempeh","textPreview":"Tofu or tempeh","textChars":14,"textLines":1,"bbox":[114,410,254,20]}
+{"kind":"textbox","id":"sh/0n29g329","slide":7,"text":"soy options, edamame","textPreview":"soy options, edamame","textChars":20,"textLines":1,"bbox":[114,433,254,38]}
+{"kind":"shape","id":"sh/ryts3els","slide":7,"bbox":[412,394,318,92]}
+{"kind":"shape","id":"sh/qx0ra9k7","slide":7,"bbox":[428,414,20,20]}
+{"kind":"textbox","id":"sh/dkba5oji","slide":7,"text":"Beans or lentils","textPreview":"Beans or lentils","textChars":16,"textLines":1,"bbox":[460,410,254,20]}
+{"kind":"textbox","id":"sh/cj29cj2x","slide":7,"text":"also contain carbohydrate","textPreview":"also contain carbohydrate","textChars":25,"textLines":1,"bbox":[460,433,254,38]}
+{"kind":"shape","id":"sh/3u9szelg","slide":7,"bbox":[66,508,318,92]}
+{"kind":"shape","id":"sh/it0r69kv","slide":7,"bbox":[82,528,20,20]}
+{"kind":"textbox","id":"sh/8zypgfit","slide":7,"text":"Plain yogurt","textPreview":"Plain yogurt","textChars":12,"textLines":1,"bbox":[114,524,254,20]}
+{"kind":"textbox","id":"sh/t0769kje","slide":7,"text":"Greek yogurt, cottage cheese","textPreview":"Greek yogurt, cottage cheese","textChars":28,"textLines":1,"bbox":[114,547,254,38]}
+{"kind":"shape","id":"sh/6xw7e50n","slide":7,"bbox":[412,508,318,92]}
+{"kind":"shape","id":"sh/7y5o7a18","slide":7,"bbox":[428,528,20,20]}
+{"kind":"textbox","id":"sh/g3ypkfip","slide":7,"text":"Nuts and seeds","textPreview":"Nuts and seeds","textChars":14,"textLines":1,"bbox":[460,524,254,20]}
+{"kind":"textbox","id":"sh/h476dkza","slide":7,"text":"satisfying add-ins","textPreview":"satisfying add-ins","textChars":18,"textLines":1,"bbox":[460,547,254,38]}
+{"kind":"textbox","id":"sh/u1g7i50z","slide":7,"text":"Beans and lentils are both protein and carbohydrate foods. That does not make them wrong; it just means portion and pairing are useful.","textPreview":"Beans and lentils are both protein and carbohydrate foods. That does not make them wrong; it just means portion and pairing are useful.","textChars":135,"textLines":1,"bbox":[78,776,630,48]}
+{"kind":"shape","id":"sh/v2pobahk","slide":7,"bbox":[66,875,684,70]}
+{"kind":"textbox","id":"sh/w7up8vil","slide":7,"text":"Budget note","textPreview":"Budget note","textChars":11,"textLines":1,"bbox":[83,889,650,22]}
+{"kind":"textbox","id":"sh/x8n61gj6","slide":7,"text":"Canned tuna, eggs, beans, lentils, tofu, and plain yogurt can be practical lower-cost protein anchors.","textPreview":"Canned tuna, eggs, beans, lentils, tofu, and plain yogurt can be practical lower-cost protein anchors.","textChars":102,"textLines":1,"bbox":[83,917,650,18]}
+{"kind":"image","id":"im/1svyhcna","slide":7,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/31utbs","slide":7,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/4751my","slide":8,"title":"The Mindful Plate","textShapes":18}
+{"kind":"textbox","id":"sh/alc3i9w3","slide":8,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/vmlkrexo","slide":8,"text":"Fiber","textPreview":"Fiber","textChars":5,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/kreloje5","slide":8,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/5cnmxovq","slide":8,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/ipw3m9wz","slide":8,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/jq54vedk","slide":8,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/sfylsje1","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/tg7m1ovm","slide":8,"text":"FIBER","textPreview":"FIBER","textChars":5,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/xczqps7q","slide":8,"text":"Fiber is quiet but useful","textPreview":"Fiber is quiet but useful","textChars":25,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/wbqpgn65","slide":8,"text":"Fiber is a type of carbohydrate the body does not fully digest. Many fiber-rich foods can support fullness, bowel regularity, cholesterol patterns, and steadier meals.","textPreview":"Fiber is a type of carbohydrate the body does not fully digest. Many fiber-rich foods can support fullness, bowel regularity, cholesterol...","textChars":167,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/vqh8nipk","slide":8,"bbox":[80,292,320,50]}
+{"kind":"textbox","id":"sh/ap87edoz","slide":8,"text":"Add one vegetable","textPreview":"Add one vegetable","textChars":17,"textLines":1,"bbox":[105,306,270,20]}
+{"kind":"shape","id":"sh/5gjqts7m","slide":8,"bbox":[108,378,320,50]}
+{"kind":"textbox","id":"sh/kfapk761","slide":8,"text":"Add beans or lentils","textPreview":"Add beans or lentils","textChars":20,"textLines":1,"bbox":[133,392,270,20]}
+{"kind":"shape","id":"sh/je18r2pw","slide":8,"bbox":[136,464,320,50]}
+{"kind":"textbox","id":"sh/id87ixob","slide":8,"text":"Choose oats or whole grains","textPreview":"Choose oats or whole grains","textChars":27,"textLines":1,"bbox":[161,478,270,20]}
+{"kind":"shape","id":"sh/lkf6h87i","slide":8,"bbox":[164,550,320,50]}
+{"kind":"textbox","id":"sh/0j6p836x","slide":8,"text":"Add berries, nuts, or seeds","textPreview":"Add berries, nuts, or seeds","textChars":27,"textLines":1,"bbox":[189,564,270,20]}
+{"kind":"shape","id":"sh/c3ap43et","slide":8,"bbox":[192,636,320,50]}
+{"kind":"textbox","id":"sh/d4jqx8fe","slide":8,"text":"Drink fluids and notice comfort","textPreview":"Drink fluids and notice comfort","textChars":31,"textLines":1,"bbox":[217,650,270,20]}
+{"kind":"textbox","id":"sh/q1s72twn","slide":8,"text":"The FDA Daily Value for fiber is 28 grams per day based on a 2,000-calorie diet, but individual needs vary.","textPreview":"The FDA Daily Value for fiber is 28 grams per day based on a 2,000-calorie diet, but individual needs vary.","textChars":107,"textLines":1,"bbox":[452,310,250,84]}
+{"kind":"shape","id":"sh/r218vyx8","slide":8,"bbox":[456,447,10,10]}
+{"kind":"textbox","id":"sh/0rup8nep","slide":8,"text":"Add fiber gradually and drink fluids.","textPreview":"Add fiber gradually and drink fluids.","textChars":37,"textLines":1,"bbox":[478,442,248,34]}
+{"kind":"shape","id":"sh/1s3q1sfa","slide":8,"bbox":[456,509,10,10]}
+{"kind":"textbox","id":"sh/e5s76dwz","slide":8,"text":"Ask for guidance if fiber worsens symptoms or you have a digestive or kidney condition.","textPreview":"Ask for guidance if fiber worsens symptoms or you have a digestive or kidney condition.","textChars":87,"textLines":1,"bbox":[478,504,248,34]}
+{"kind":"shape","id":"sh/zq18zixk","slide":8,"bbox":[66,864,684,66]}
+{"kind":"textbox","id":"sh/ovu9cne1","slide":8,"text":"Gentle pace","textPreview":"Gentle pace","textChars":11,"textLines":1,"bbox":[83,878,650,22]}
+{"kind":"textbox","id":"sh/9w3q5sfm","slide":8,"text":"A sudden jump in fiber can feel uncomfortable. Add one food at a time.","textPreview":"A sudden jump in fiber can feel uncomfortable. Add one food at a time.","textChars":70,"textLines":1,"bbox":[83,906,650,14]}
+{"kind":"image","id":"im/snixs7qp","slide":8,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/4751my","slide":8,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/nztwvx","slide":9,"title":"The Mindful Plate","textShapes":21}
+{"kind":"textbox","id":"sh/sradw3a1","slide":9,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/dsjep8rm","slide":9,"text":"Dietary fat","textPreview":"Dietary fat","textChars":11,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/edsvyd87","slide":9,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/felwri9s","slide":9,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/0fux0nqd","slide":9,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/1g3etsri","slide":9,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/uh8vmts3","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/vihwfe98","slide":9,"text":"DIETARY FAT","textPreview":"DIETARY FAT","textChars":11,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/zehcf218","slide":9,"text":"Fat adds flavor, texture, and staying power","textPreview":"Fat adds flavor, texture, and staying power","textChars":43,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/yd8b6xkn","slide":9,"text":"Dietary fat is an essential nutrient. The type and food source matter.","textPreview":"Dietary fat is an essential nutrient. The type and food source matter.","textChars":70,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/l0zuhcje","slide":9,"bbox":[66,290,318,300]}
+{"kind":"shape","id":"sh/0fqt872t","slide":9,"bbox":[432,290,318,300]}
+{"kind":"textbox","id":"sh/bahcbi1c","slide":9,"text":"Choose more often","textPreview":"Choose more often","textChars":17,"textLines":1,"bbox":[94,324,250,24]}
+{"kind":"shape","id":"sh/q98b2dkr","slide":9,"bbox":[100,379,10,10]}
+{"kind":"textbox","id":"sh/dczudsj2","slide":9,"text":"Avocado","textPreview":"Avocado","textChars":7,"textLines":1,"bbox":[122,374,218,34]}
+{"kind":"shape","id":"sh/cbqt4n2x","slide":9,"bbox":[100,417,10,10]}
+{"kind":"textbox","id":"sh/36xc7i10","slide":9,"text":"Nuts and seeds","textPreview":"Nuts and seeds","textChars":14,"textLines":1,"bbox":[122,412,218,34]}
+{"kind":"shape","id":"sh/25obydkf","slide":9,"bbox":[100,455,10,10]}
+{"kind":"textbox","id":"sh/6h4vad4n","slide":9,"text":"Olive or canola oil","textPreview":"Olive or canola oil","textChars":19,"textLines":1,"bbox":[122,450,218,34]}
+{"kind":"shape","id":"sh/rixcji58","slide":9,"bbox":[100,493,10,10]}
+{"kind":"textbox","id":"sh/s36dc3md","slide":9,"text":"Fish such as salmon or sardines","textPreview":"Fish such as salmon or sardines","textChars":31,"textLines":1,"bbox":[122,488,218,34]}
+{"kind":"textbox","id":"sh/t4ful8ny","slide":9,"text":"Choose less often","textPreview":"Choose less often","textChars":17,"textLines":1,"bbox":[460,324,250,24]}
+{"kind":"shape","id":"sh/e5oved4j","slide":9,"bbox":[466,379,10,10]}
+{"kind":"textbox","id":"sh/f6xcni54","slide":9,"text":"Butter and cream","textPreview":"Butter and cream","textChars":16,"textLines":1,"bbox":[488,374,218,34]}
+{"kind":"shape","id":"sh/g76dgnmp","slide":9,"bbox":[466,417,10,10]}
+{"kind":"textbox","id":"sh/18fepsna","slide":9,"text":"Processed meats","textPreview":"Processed meats","textChars":15,"textLines":1,"bbox":[488,412,218,34]}
+{"kind":"shape","id":"sh/29ovix4v","slide":9,"bbox":[466,455,10,10]}
+{"kind":"textbox","id":"sh/3ahwr250","slide":9,"text":"Deep-fried foods","textPreview":"Deep-fried foods","textChars":16,"textLines":1,"bbox":[488,450,218,34]}
+{"kind":"shape","id":"sh/d4jyhw7i","slide":9,"bbox":[466,493,10,10]}
+{"kind":"textbox","id":"sh/c3ax8r6x","slide":9,"text":"Foods with trans fat","textPreview":"Foods with trans fat","textChars":20,"textLines":1,"bbox":[488,488,218,34]}
+{"kind":"textbox","id":"sh/b21gfmpc","slide":9,"text":"A heart-health pattern usually emphasizes unsaturated fats from nuts, seeds, avocado, fish, and non-tropical liquid plant oils while limiting saturated fat and avoiding trans fat.","textPreview":"A heart-health pattern usually emphasizes unsaturated fats from nuts, seeds, avocado, fish, and non-tropical liquid plant oils while limi...","textChars":179,"textLines":1,"bbox":[84,654,640,66]}
+{"kind":"shape","id":"sh/q1sfmhor","slide":9,"bbox":[66,855,684,70]}
+{"kind":"textbox","id":"sh/lsjylw7e","slide":9,"text":"More detail","textPreview":"More detail","textChars":11,"textLines":1,"bbox":[83,869,650,22]}
+{"kind":"textbox","id":"sh/07axcr6t","slide":9,"text":"Use the Fats Without Fear guide for saturated, unsaturated, and trans fats in plain language.","textPreview":"Use the Fats Without Fear guide for saturated, unsaturated, and trans fats in plain language.","textChars":93,"textLines":1,"bbox":[83,897,650,18]}
+{"kind":"image","id":"im/ahwval4b","slide":9,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/nztwvx","slide":9,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/v3d3sp","slide":10,"title":"The Mindful Plate","textShapes":19}
+{"kind":"textbox","id":"sh/y983q50j","slide":10,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/zahkja14","slide":10,"text":"Breakfasts","textPreview":"Breakfasts","textChars":10,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/c76lofid","slide":10,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/d8f2h0jy","slide":10,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/qlo3m507","slide":10,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/b6xkfa1s","slide":10,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/oj61kvih","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/pkf2d0jm","slide":10,"text":"BREAKFASTS","textPreview":"BREAKFASTS","textChars":10,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/lkjat4zi","slide":10,"text":"Breakfasts, if breakfast fits your day","textPreview":"Breakfasts, if breakfast fits your day","textChars":38,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/0jat0zix","slide":10,"text":"Not everyone wants or needs breakfast. If you do eat it, breakfast can be a useful place to add protein, fiber, and a lower-sugar drink.","textPreview":"Not everyone wants or needs breakfast. If you do eat it, breakfast can be a useful place to add protein, fiber, and a lower-sugar drink.","textChars":136,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/zi1sruhc","slide":10,"bbox":[66,306,318,126]}
+{"kind":"shape","id":"sh/yxsby90r","slide":10,"bbox":[82,326,20,20]}
+{"kind":"textbox","id":"sh/dwjap4z6","slide":10,"text":"Eggs + toast + vegetables","textPreview":"Eggs + toast + vegetables","textChars":25,"textLines":1,"bbox":[114,322,254,20]}
+{"kind":"textbox","id":"sh/cvqtwzil","slide":10,"text":"protein, fiber, color, lower-sugar drink","textPreview":"protein, fiber, color, lower-sugar drink","textChars":40,"textLines":1,"bbox":[114,345,254,38]}
+{"kind":"shape","id":"sh/buhsnuh0","slide":10,"bbox":[412,306,318,126]}
+{"kind":"shape","id":"sh/qt8bup0v","slide":10,"bbox":[428,326,20,20]}
+{"kind":"textbox","id":"sh/pszalkza","slide":10,"text":"Yogurt bowl","textPreview":"Yogurt bowl","textChars":11,"textLines":1,"bbox":[460,322,254,20]}
+{"kind":"textbox","id":"sh/orqtsfip","slide":10,"text":"plain yogurt, berries, nuts, oats","textPreview":"plain yogurt, berries, nuts, oats","textChars":33,"textLines":1,"bbox":[460,345,254,38]}
+{"kind":"shape","id":"sh/gbut8fql","slide":10,"bbox":[66,462,318,126]}
+{"kind":"shape","id":"sh/hc3ahk76","slide":10,"bbox":[82,482,20,20]}
+{"kind":"textbox","id":"sh/u9sb6p8f","slide":10,"text":"Oatmeal","textPreview":"Oatmeal","textChars":7,"textLines":1,"bbox":[114,478,254,20]}
+{"kind":"textbox","id":"sh/valsfup0","slide":10,"text":"oats, fruit, chia, nut butter","textPreview":"oats, fruit, chia, nut butter","textChars":29,"textLines":1,"bbox":[114,501,254,38]}
+{"kind":"shape","id":"sh/87at4fq9","slide":10,"bbox":[412,462,318,126]}
+{"kind":"shape","id":"sh/t8jadk7u","slide":10,"bbox":[428,482,20,20]}
+{"kind":"textbox","id":"sh/65sb258j","slide":10,"text":"Beans + tortilla","textPreview":"Beans + tortilla","textChars":16,"textLines":1,"bbox":[460,478,254,20]}
+{"kind":"textbox","id":"sh/761sbapo","slide":10,"text":"beans, egg or tofu, salsa, corn tortilla","textPreview":"beans, egg or tofu, salsa, corn tortilla","textChars":40,"textLines":1,"bbox":[460,501,254,38]}
+{"kind":"textbox","id":"sh/c3etgzqt","slide":10,"text":"A rushed morning can still count. Keep one shelf-stable backup, one fruit, and one protein option available when you can.","textPreview":"A rushed morning can still count. Keep one shelf-stable backup, one fruit, and one protein option available when you can.","textChars":121,"textLines":1,"bbox":[78,828,630,48]}
+{"kind":"shape","id":"sh/d4nup47e","slide":10,"bbox":[66,895,684,64]}
+{"kind":"textbox","id":"sh/nypwfy9g","slide":10,"text":"Budget-friendly swaps","textPreview":"Budget-friendly swaps","textChars":21,"textLines":1,"bbox":[83,909,650,22]}
+{"kind":"textbox","id":"sh/mxgv6dsv","slide":10,"text":"Use store-brand oats, peanut butter, frozen berries, eggs, beans, tofu, or plain yogurt.","textPreview":"Use store-brand oats, peanut butter, frozen berries, eggs, beans, tofu, or plain yogurt.","textChars":88,"textLines":1,"bbox":[83,937,650,12]}
+{"kind":"image","id":"im/0ju18ful","slide":10,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/v3d3sp","slide":10,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/hdaala","slide":11,"title":"The Mindful Plate","textShapes":20}
+{"kind":"textbox","id":"sh/q5wfqhc3","slide":11,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/r65wjmto","slide":11,"text":"Lunches","textPreview":"Lunches","textChars":7,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/43uxo7ud","slide":11,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/543ehcbi","slide":11,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/i1cfmxc7","slide":11,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/32lwf2ts","slide":11,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/gfudk7u1","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/h03edsvm","slide":11,"text":"LUNCHES","textPreview":"LUNCHES","textChars":7,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/dc72tgny","slide":11,"text":"Lunches that do not require a fresh start","textPreview":"Lunches that do not require a fresh start","textChars":41,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/sby1kbmd","slide":11,"text":"Lunch often happens between work, caregiving, school, appointments, errands, or breaks. It does not need to be a recipe.","textPreview":"Lunch often happens between work, caregiving, school, appointments, errands, or breaks. It does not need to be a recipe.","textChars":120,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/rapkr65s","slide":11,"bbox":[66,286,684,80]}
+{"kind":"shape","id":"sh/q9wjil47","slide":11,"bbox":[82,306,20,20]}
+{"kind":"textbox","id":"sh/58n2pgnm","slide":11,"text":"Balanced leftovers bowl","textPreview":"Balanced leftovers bowl","textChars":23,"textLines":1,"bbox":[114,302,620,20]}
+{"kind":"textbox","id":"sh/47e1gbmh","slide":11,"text":"greens, beans, rice, tofu, salsa","textPreview":"greens, beans, rice, tofu, salsa","textChars":32,"textLines":1,"bbox":[114,325,620,38]}
+{"kind":"shape","id":"sh/3m5kn65w","slide":11,"bbox":[66,384,684,80]}
+{"kind":"shape","id":"sh/ilwje14b","slide":11,"bbox":[82,404,20,20]}
+{"kind":"textbox","id":"sh/hkn2lwnq","slide":11,"text":"Sandwich","textPreview":"Sandwich","textChars":8,"textLines":1,"bbox":[114,400,620,20]}
+{"kind":"textbox","id":"sh/gje1crm5","slide":11,"text":"whole-grain bread, hummus or turkey, vegetables","textPreview":"whole-grain bread, hummus or turkey, vegetables","textChars":47,"textLines":1,"bbox":[114,423,620,38]}
+{"kind":"shape","id":"sh/8nylsru1","slide":11,"bbox":[66,482,684,80]}
+{"kind":"shape","id":"sh/9or21wvm","slide":11,"bbox":[82,502,20,20]}
+{"kind":"textbox","id":"sh/m1gjq1cv","slide":11,"text":"Soup","textPreview":"Soup","textChars":4,"textLines":1,"bbox":[114,498,620,20]}
+{"kind":"textbox","id":"sh/7mpkz6dg","slide":11,"text":"lentil soup, vegetables, fruit","textPreview":"lentil soup, vegetables, fruit","textChars":30,"textLines":1,"bbox":[114,521,620,38]}
+{"kind":"shape","id":"sh/kzy1oru5","slide":11,"bbox":[66,580,684,80]}
+{"kind":"shape","id":"sh/l072xwva","slide":11,"bbox":[82,600,20,20]}
+{"kind":"textbox","id":"sh/yxgjmhcz","slide":11,"text":"No-cook","textPreview":"No-cook","textChars":7,"textLines":1,"bbox":[114,596,620,20]}
+{"kind":"textbox","id":"sh/zypkvmdk","slide":11,"text":"tuna, crackers, cucumber, fruit","textPreview":"tuna, crackers, cucumber, fruit","textChars":31,"textLines":1,"bbox":[114,619,620,38]}
+{"kind":"shape","id":"sh/4v2l0bu9","slide":11,"bbox":[66,678,684,80]}
+{"kind":"shape","id":"sh/5wb29gvu","slide":11,"bbox":[82,698,20,20]}
+{"kind":"textbox","id":"sh/f2xwfe18","slide":11,"text":"Greens upgrade","textPreview":"Greens upgrade","textChars":14,"textLines":1,"bbox":[114,694,620,20]}
+{"kind":"textbox","id":"sh/e1ovm90n","slide":11,"text":"leftovers plus greens and beans","textPreview":"leftovers plus greens and beans","textChars":31,"textLines":1,"bbox":[114,717,620,38]}
+{"kind":"shape","id":"sh/1ofehoje","slide":11,"bbox":[66,868,684,68]}
+{"kind":"textbox","id":"sh/0n6xojit","slide":11,"text":"Restaurant note","textPreview":"Restaurant note","textChars":15,"textLines":1,"bbox":[83,882,650,22]}
+{"kind":"textbox","id":"sh/nqxwjy14","slide":11,"text":"Choose one adjustment: add vegetables, choose water, share fries, or save part for later.","textPreview":"Choose one adjustment: add vegetables, choose water, share fries, or save part for later.","textChars":89,"textLines":1,"bbox":[83,910,650,16]}
+{"kind":"image","id":"im/s3mdcvmh","slide":11,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/hdaala","slide":11,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/f30hk7","slide":12,"title":"The Mindful Plate","textShapes":20}
+{"kind":"textbox","id":"sh/6lwvy5ob","slide":12,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/rm5wra5w","slide":12,"text":"Dinners","textPreview":"Dinners","textChars":7,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/gbed4f6d","slide":12,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/1c7exkny","slide":12,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/epwv25on","slide":12,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/fq5wva5s","slide":12,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/wfudsv69","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/hg3ulgnu","slide":12,"text":"DINNERS","textPreview":"DINNERS","textChars":7,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/lkva98jy","slide":12,"text":"Cultural dinners can still be balanced","textPreview":"Cultural dinners can still be balanced","textChars":38,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/0zm9032d","slide":12,"text":"Healthy eating should not erase family food. Many traditional meals already include vegetables, beans, lentils, fish, lean meats, yogurt, grains, herbs, spices, and shared routines.","textPreview":"Healthy eating should not erase family food. Many traditional meals already include vegetables, beans, lentils, fish, lean meats, yogurt,...","textChars":181,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/zyds7i1s","slide":12,"bbox":[66,306,684,80]}
+{"kind":"shape","id":"sh/yxkrydk7","slide":12,"bbox":[82,326,20,20]}
+{"kind":"textbox","id":"sh/9ovaxsju","slide":12,"text":"Tacos","textPreview":"Tacos","textChars":5,"textLines":1,"bbox":[114,322,620,20]}
+{"kind":"textbox","id":"sh/8nm94n29","slide":12,"text":"beans or grilled protein, cabbage, salsa, avocado, corn tortillas","textPreview":"beans or grilled protein, cabbage, salsa, avocado, corn tortillas","textChars":65,"textLines":1,"bbox":[114,345,620,38]}
+{"kind":"shape","id":"sh/nmdsvi1o","slide":12,"bbox":[66,404,684,80]}
+{"kind":"shape","id":"sh/ml4r2dk3","slide":12,"bbox":[82,424,20,20]}
+{"kind":"textbox","id":"sh/xsfa1sjq","slide":12,"text":"Dal","textPreview":"Dal","textChars":3,"textLines":1,"bbox":[114,420,620,20]}
+{"kind":"textbox","id":"sh/wr698n2l","slide":12,"text":"dal with vegetables, cucumber salad, rice","textPreview":"dal with vegetables, cucumber salad, rice","textChars":41,"textLines":1,"bbox":[114,443,620,38]}
+{"kind":"shape","id":"sh/gvet4bqh","slide":12,"bbox":[66,502,684,80]}
+{"kind":"shape","id":"sh/hwnudgr2","slide":12,"bbox":[82,522,20,20]}
+{"kind":"textbox","id":"sh/utwb218b","slide":12,"text":"Stir-fry","textPreview":"Stir-fry","textChars":8,"textLines":1,"bbox":[114,518,620,20]}
+{"kind":"textbox","id":"sh/vu5cb69w","slide":12,"text":"tofu, chicken, shrimp, or beef, vegetables, rice","textPreview":"tofu, chicken, shrimp, or beef, vegetables, rice","textChars":48,"textLines":1,"bbox":[114,541,620,38]}
+{"kind":"shape","id":"sh/4zed8bqt","slide":12,"bbox":[66,600,684,80]}
+{"kind":"shape","id":"sh/p0nuhgre","slide":12,"bbox":[82,620,20,20]}
+{"kind":"textbox","id":"sh/2xwb6l8n","slide":12,"text":"Mediterranean plate","textPreview":"Mediterranean plate","textChars":19,"textLines":1,"bbox":[114,616,620,20]}
+{"kind":"textbox","id":"sh/3y5cf698","slide":12,"text":"fish, beans, greens, yogurt sauce, whole grains","textPreview":"fish, beans, greens, yogurt sauce, whole grains","textChars":47,"textLines":1,"bbox":[114,639,620,38]}
+{"kind":"shape","id":"sh/k3utwrq9","slide":12,"bbox":[66,698,684,80]}
+{"kind":"shape","id":"sh/l43u5wru","slide":12,"bbox":[82,718,20,20]}
+{"kind":"textbox","id":"sh/ni9wbutc","slide":12,"text":"Pasta night","textPreview":"Pasta night","textChars":11,"textLines":1,"bbox":[114,714,620,20]}
+{"kind":"textbox","id":"sh/mh0f2psr","slide":12,"text":"pasta, vegetables, beans or lean protein","textPreview":"pasta, vegetables, beans or lean protein","textChars":40,"textLines":1,"bbox":[114,737,620,38]}
+{"kind":"shape","id":"sh/9kbed4bi","slide":12,"bbox":[66,886,684,62]}
+{"kind":"textbox","id":"sh/ojix4zax","slide":12,"text":"Pattern over perfection","textPreview":"Pattern over perfection","textChars":23,"textLines":1,"bbox":[83,900,650,22]}
+{"kind":"textbox","id":"sh/zu9w7atg","slide":12,"text":"A higher-carbohydrate food can often fit better when the rest of the plate supports it.","textPreview":"A higher-carbohydrate food can often fit better when the rest of the plate supports it.","textChars":87,"textLines":1,"bbox":[83,928,650,10]}
+{"kind":"image","id":"im/0fe5o3yp","slide":12,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/f30hk7","slide":12,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/e98hq0","slide":13,"title":"The Mindful Plate","textShapes":22}
+{"kind":"textbox","id":"sh/ozqxo7e1","slide":13,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/pkzyxcvm","slide":13,"text":"Snacks","textPreview":"Snacks","textChars":6,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/etofixwz","slide":13,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/fuhwr2dk","slide":13,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/gvqxk7e5","slide":13,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/1wzetcvq","slide":13,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/6pofedw3","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/rqxwnid8","slide":13,"text":"SNACKS","textPreview":"SNACKS","textChars":6,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/jil4bidg","slide":13,"text":"Snacks are optional","textPreview":"Snacks are optional","textChars":19,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/ihcnidcv","slide":13,"text":"Some people feel better with planned snacks. Others do not need them. Snacks may be useful if meals are far apart, activity changes glucose, medication timing matters, or hunger makes the next meal harder.","textPreview":"Some people feel better with planned snacks. Others do not need them. Snacks may be useful if meals are far apart, activity changes gluco...","textChars":205,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/5knmd8vm","slide":13,"bbox":[66,304,318,92]}
+{"kind":"shape","id":"sh/4ju5k3u1","slide":13,"bbox":[82,324,20,20]}
+{"kind":"textbox","id":"sh/rm54fids","slide":13,"text":"Apple + peanut butter","textPreview":"Apple + peanut butter","textChars":21,"textLines":1,"bbox":[114,320,254,20]}
+{"kind":"textbox","id":"sh/qlwnmdc7","slide":13,"text":"fruit plus satisfying fat","textPreview":"fruit plus satisfying fat","textChars":25,"textLines":1,"bbox":[114,343,254,38]}
+{"kind":"shape","id":"sh/d8n6hsby","slide":13,"bbox":[412,304,318,92]}
+{"kind":"shape","id":"sh/sne5onud","slide":13,"bbox":[428,324,20,20]}
+{"kind":"textbox","id":"sh/7q143yd8","slide":13,"text":"Yogurt + berries","textPreview":"Yogurt + berries","textChars":16,"textLines":1,"bbox":[460,320,254,20]}
+{"kind":"textbox","id":"sh/mpsnatc3","slide":13,"text":"plain yogurt and fruit","textPreview":"plain yogurt and fruit","textChars":22,"textLines":1,"bbox":[460,343,254,38]}
+{"kind":"shape","id":"sh/ahkzyl0n","slide":13,"bbox":[66,418,318,92]}
+{"kind":"shape","id":"sh/bitg7q18","slide":13,"bbox":[82,438,20,20]}
+{"kind":"textbox","id":"sh/wj2h0vit","slide":13,"text":"Hummus + vegetables","textPreview":"Hummus + vegetables","textChars":19,"textLines":1,"bbox":[114,434,254,20]}
+{"kind":"textbox","id":"sh/xkby90ze","slide":13,"text":"fiber and flavor","textPreview":"fiber and flavor","textChars":16,"textLines":1,"bbox":[114,457,254,38]}
+{"kind":"shape","id":"sh/md0zul0r","slide":13,"bbox":[412,418,318,92]}
+{"kind":"shape","id":"sh/ne9g3q1c","slide":13,"bbox":[428,438,20,20]}
+{"kind":"textbox","id":"sh/ofihwbih","slide":13,"text":"Egg + fruit","textPreview":"Egg + fruit","textChars":11,"textLines":1,"bbox":[460,434,254,20]}
+{"kind":"textbox","id":"sh/9gry5gj2","slide":13,"text":"simple protein and carbohydrate","textPreview":"simple protein and carbohydrate","textChars":31,"textLines":1,"bbox":[460,457,254,38]}
+{"kind":"shape","id":"sh/ep0zq10f","slide":13,"bbox":[66,532,318,92]}
+{"kind":"shape","id":"sh/zq9gz610","slide":13,"bbox":[82,552,20,20]}
+{"kind":"textbox","id":"sh/h4f254ji","slide":13,"text":"Edamame or chickpeas","textPreview":"Edamame or chickpeas","textChars":20,"textLines":1,"bbox":[114,548,254,20]}
+{"kind":"textbox","id":"sh/g361cz2x","slide":13,"text":"plant-based snack","textPreview":"plant-based snack","textChars":17,"textLines":1,"bbox":[114,571,254,38]}
+{"kind":"shape","id":"sh/v2xk3u1c","slide":13,"bbox":[412,532,318,92]}
+{"kind":"shape","id":"sh/uhoja9k7","slide":13,"bbox":[428,552,20,20]}
+{"kind":"textbox","id":"sh/tgf2143m","slide":13,"text":"Nuts + fruit","textPreview":"Nuts + fruit","textChars":12,"textLines":1,"bbox":[460,548,254,20]}
+{"kind":"textbox","id":"sh/8fm18z21","slide":13,"text":"portable option","textPreview":"portable option","textChars":15,"textLines":1,"bbox":[460,571,254,38]}
+{"kind":"shape","id":"sh/7edkzulg","slide":13,"bbox":[66,872,684,78]}
+{"kind":"textbox","id":"sh/6d4j6pkv","slide":13,"text":"Medication safety","textPreview":"Medication safety","textChars":17,"textLines":1,"bbox":[83,886,650,22]}
+{"kind":"textbox","id":"sh/lcv2xk3a","slide":13,"text":"If you use insulin or medicines that can cause low blood sugar, ask your care team how snacks, activity, and low readings should be handled.","textPreview":"If you use insulin or medicines that can cause low blood sugar, ask your care team how snacks, activity, and low readings should be handled.","textChars":140,"textLines":1,"bbox":[83,914,650,26]}
+{"kind":"image","id":"im/ehs3up0f","slide":13,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/e98hq0","slide":13,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/powr8x","slide":14,"title":"The Mindful Plate","textShapes":20}
+{"kind":"textbox","id":"sh/d8vqh8ju","slide":14,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/c729o3i9","slide":14,"text":"Drinks","textPreview":"Drinks","textChars":6,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/3it8by1s","slide":14,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/ihkritk7","slide":14,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/5kbqd8jy","slide":14,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/4j29k32d","slide":14,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/nedsni1w","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/md4rud0b","slide":14,"text":"DRINKS","textPreview":"DRINKS","textChars":6,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/0vm5o3eh","slide":14,"text":"Drinks and hidden sugars","textPreview":"Drinks and hidden sugars","textChars":24,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/lwvmxov2","slide":14,"text":"Sugary drinks can raise blood glucose quickly because they are easy to drink fast and do not bring much fiber or fullness.","textPreview":"Sugary drinks can raise blood glucose quickly because they are easy to drink fast and do not bring much fiber or fullness.","textChars":122,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/yt43mtwr","slide":14,"bbox":[86,310,114,190]}
+{"kind":"shape","id":"sh/zud4vydw","slide":14,"bbox":[119,352,48,88]}
+{"kind":"textbox","id":"sh/c72lkjel","slide":14,"text":"Water","textPreview":"Water","textChars":5,"textLines":1,"bbox":[76,528,134,22]}
+{"kind":"textbox","id":"sh/dsbmtov6","slide":14,"text":"No added sugar","textPreview":"No added sugar","textChars":14,"textLines":1,"bbox":[76,556,134,34]}
+{"kind":"shape","id":"sh/q5k3i9wf","slide":14,"bbox":[258,310,114,190]}
+{"kind":"shape","id":"sh/b6t4red0","slide":14,"bbox":[291,352,48,88]}
+{"kind":"textbox","id":"sh/o32lgze9","slide":14,"text":"Sparkling water","textPreview":"Sparkling water","textChars":15,"textLines":1,"bbox":[248,528,134,22]}
+{"kind":"textbox","id":"sh/p4bmp4vu","slide":14,"text":"Check labels if flavored","textPreview":"Check labels if flavored","textChars":24,"textLines":1,"bbox":[248,556,134,34]}
+{"kind":"shape","id":"sh/5ojaxgjm","slide":14,"bbox":[430,310,114,190]}
+{"kind":"shape","id":"sh/4nat4b21","slide":14,"bbox":[463,352,48,88]}
+{"kind":"textbox","id":"sh/jm1sv61g","slide":14,"text":"Unsweet tea or coffee","textPreview":"Unsweet tea or coffee","textChars":21,"textLines":1,"bbox":[420,528,134,22]}
+{"kind":"textbox","id":"sh/ilsb21kv","slide":14,"text":"Add-ons can change it","textPreview":"Add-ons can change it","textChars":21,"textLines":1,"bbox":[420,556,134,34]}
+{"kind":"shape","id":"sh/hkjatwja","slide":14,"bbox":[602,310,114,190]}
+{"kind":"shape","id":"sh/wjqt0r25","slide":14,"bbox":[635,352,48,88]}
+{"kind":"textbox","id":"sh/vihsrm1k","slide":14,"text":"Sweet drink","textPreview":"Sweet drink","textChars":11,"textLines":1,"bbox":[592,528,134,22]}
+{"kind":"textbox","id":"sh/uh8byhkz","slide":14,"text":"Try smaller size or less syrup","textPreview":"Try smaller size or less syrup","textChars":30,"textLines":1,"bbox":[592,556,134,34]}
+{"kind":"shape","id":"sh/1g3u50ju","slide":14,"bbox":[80,687,10,10]}
+{"kind":"textbox","id":"sh/gfutcv29","slide":14,"text":"The FDA Daily Value for added sugars is 50 grams per day based on a 2,000-calorie diet.","textPreview":"The FDA Daily Value for added sugars is 50 grams per day based on a 2,000-calorie diet.","textChars":87,"textLines":1,"bbox":[102,682,628,34]}
+{"kind":"shape","id":"sh/ylo7qx0r","slide":14,"bbox":[80,731,10,10]}
+{"kind":"textbox","id":"sh/zmx8zihc","slide":14,"text":"Start by improving one drink you have often.","textPreview":"Start by improving one drink you have often.","textChars":44,"textLines":1,"bbox":[102,726,628,34]}
+{"kind":"shape","id":"sh/0n6psnix","slide":14,"bbox":[66,876,684,74]}
+{"kind":"textbox","id":"sh/lofq1sz2","slide":14,"text":"Try this","textPreview":"Try this","textChars":8,"textLines":1,"bbox":[83,890,650,22]}
+{"kind":"textbox","id":"sh/qx47md0f","slide":14,"text":"Make one drink change: smaller size, less syrup, unsweet tea, sparkling water, infused water, or water beside the drink.","textPreview":"Make one drink change: smaller size, less syrup, unsweet tea, sparkling water, infused water, or water beside the drink.","textChars":120,"textLines":1,"bbox":[83,918,650,22]}
+{"kind":"image","id":"im/nuxk7mp4","slide":14,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/powr8x","slide":14,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/mda0g4","slide":15,"title":"The Mindful Plate","textShapes":18}
+{"kind":"textbox","id":"sh/oryl8fq1","slide":15,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/ps7m1krm","slide":15,"text":"Portions","textPreview":"Portions","textChars":8,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/ulw3258z","slide":15,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/fmp4va9k","slide":15,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/gnyl4fq5","slide":15,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/ho7mxkrq","slide":15,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/yh0ne983","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/zi947epo","slide":15,"text":"PORTIONS","textPreview":"PORTIONS","textChars":8,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/ry90jqd0","slide":15,"text":"Portions without weighing","textPreview":"Portions without weighing","textChars":25,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/qxgjalcf","slide":15,"text":"Portions do not need to be exact to be useful. The plate method gives a visual estimate. Labels give serving sizes. Cups, bowls, and hand-based estimates can help when measuring is not realistic.","textPreview":"Portions do not need to be exact to be useful. The plate method gives a visual estimate. Labels give serving sizes. Cups, bowls, and hand...","textChars":195,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/d0rilgb6","slide":15,"bbox":[84,326,120,120]}
+{"kind":"textbox","id":"sh/szi1cvul","slide":15,"text":"Fist","textPreview":"Fist","textChars":4,"textLines":1,"bbox":[98,362,92,26]}
+{"kind":"textbox","id":"sh/fm9knqtc","slide":15,"text":"rough estimate for about one cup of some foods","textPreview":"rough estimate for about one cup of some foods","textChars":46,"textLines":1,"bbox":[234,356,210,54]}
+{"kind":"shape","id":"sh/e10jelcr","slide":15,"bbox":[430,326,120,120]}
+{"kind":"textbox","id":"sh/1or2p0b2","slide":15,"text":"Palm","textPreview":"Palm","textChars":4,"textLines":1,"bbox":[444,362,92,26]}
+{"kind":"textbox","id":"sh/0ni1gvuh","slide":15,"text":"rough estimate for cooked protein","textPreview":"rough estimate for cooked protein","textChars":33,"textLines":1,"bbox":[580,356,210,54]}
+{"kind":"shape","id":"sh/nqtkrat8","slide":15,"bbox":[84,555,120,120]}
+{"kind":"textbox","id":"sh/2pkji5cn","slide":15,"text":"Thumb","textPreview":"Thumb","textChars":5,"textLines":1,"bbox":[98,591,92,26]}
+{"kind":"textbox","id":"sh/ixov6t07","slide":15,"text":"rough guide for a small amount of fat","textPreview":"rough guide for a small amount of fat","textChars":37,"textLines":1,"bbox":[234,585,210,54]}
+{"kind":"shape","id":"sh/jyxczyhs","slide":15,"bbox":[430,555,120,120]}
+{"kind":"textbox","id":"sh/kz6d83id","slide":15,"text":"Label serving","textPreview":"Label serving","textChars":13,"textLines":1,"bbox":[444,591,92,26]}
+{"kind":"textbox","id":"sh/50fu18zy","slide":15,"text":"the amount used for the numbers on a package label","textPreview":"the amount used for the numbers on a package label","textChars":50,"textLines":1,"bbox":[580,585,210,54]}
+{"kind":"shape","id":"sh/at4v2t0v","slide":15,"bbox":[66,864,684,70]}
+{"kind":"textbox","id":"sh/buxcvy1g","slide":15,"text":"Keep it kind","textPreview":"Keep it kind","textChars":12,"textLines":1,"bbox":[83,878,650,22]}
+{"kind":"textbox","id":"sh/wv6d43i1","slide":15,"text":"Portion awareness is a tool, not a judgment. If measuring food feels stressful or unsafe, ask for support.","textPreview":"Portion awareness is a tool, not a judgment. If measuring food feels stressful or unsafe, ask for support.","textChars":106,"textLines":1,"bbox":[83,906,650,18]}
+{"kind":"image","id":"im/q18rm90f","slide":15,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/mda0g4","slide":15,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/rgjm3v","slide":16,"title":"The Mindful Plate","textShapes":31}
+{"kind":"textbox","id":"sh/svyxcfix","slide":16,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/tw7y50zi","slide":16,"text":"Sample menu","textPreview":"Sample menu","textChars":11,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/exgze50n","slide":16,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/fypg7ah8","slide":16,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/gzyhgfit","slide":16,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/107y9kze","slide":16,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/u1cf2l0j","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/v25gvq14","slide":16,"text":"SAMPLE MENU","textPreview":"SAMPLE MENU","textChars":11,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/bi587mxo","slide":16,"text":"Three days of flexible ideas","textPreview":"Three days of flexible ideas","textChars":28,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/qhwrehw3","slide":16,"text":"These are examples, not a prescription. Your calorie, carbohydrate, protein, sodium, kidney, allergy, pregnancy, medication, and glucose needs may be different.","textPreview":"These are examples, not a prescription. Your calorie, carbohydrate, protein, sodium, kidney, allergy, pregnancy, medication, and glucose ...","textChars":160,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/dknq9cfu","slide":16,"bbox":[66,314,54,42]}
+{"kind":"textbox","id":"sh/cje9g7e9","slide":16,"text":"Day","textPreview":"Day","textChars":3,"textLines":1,"bbox":[74,323,38,28]}
+{"kind":"shape","id":"sh/3el832xc","slide":16,"bbox":[120,314,148,42]}
+{"kind":"textbox","id":"sh/2tcraxw7","slide":16,"text":"Breakfast","textPreview":"Breakfast","textChars":9,"textLines":1,"bbox":[128,323,132,28]}
+{"kind":"shape","id":"sh/pgnq5cfi","slide":16,"bbox":[268,314,148,42]}
+{"kind":"textbox","id":"sh/ofu9c7ex","slide":16,"text":"Lunch","textPreview":"Lunch","textChars":5,"textLines":1,"bbox":[276,323,132,28]}
+{"kind":"shape","id":"sh/fql8z2xg","slide":16,"bbox":[416,314,176,42]}
+{"kind":"textbox","id":"sh/epc76xwv","slide":16,"text":"Dinner","textPreview":"Dinner","textChars":6,"textLines":1,"bbox":[424,323,160,28]}
+{"kind":"shape","id":"sh/ilsrix0n","slide":16,"bbox":[592,314,158,42]}
+{"kind":"textbox","id":"sh/jm1sbih8","slide":16,"text":"Snack","textPreview":"Snack","textChars":5,"textLines":1,"bbox":[600,323,142,28]}
+{"kind":"shape","id":"sh/4na9knit","slide":16,"bbox":[66,356,54,58]}
+{"kind":"textbox","id":"sh/5ojadsze","slide":16,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[74,365,38,44]}
+{"kind":"shape","id":"sh/6pcrmx0z","slide":16,"bbox":[120,356,148,58]}
+{"kind":"textbox","id":"sh/rqlsf2hk","slide":16,"text":"Yogurt bowl","textPreview":"Yogurt bowl","textChars":11,"textLines":1,"bbox":[128,365,132,44]}
+{"kind":"shape","id":"sh/sru9o7yp","slide":16,"bbox":[268,356,148,58]}
+{"kind":"textbox","id":"sh/tc3ahcza","slide":16,"text":"Bean soup","textPreview":"Bean soup","textChars":9,"textLines":1,"bbox":[276,365,132,44]}
+{"kind":"shape","id":"sh/edcrqhgv","slide":16,"bbox":[416,356,176,58]}
+{"kind":"textbox","id":"sh/felsj2hg","slide":16,"text":"Fish, greens,\nrice","textPreview":"Fish, greens, | rice","textChars":18,"textLines":2,"bbox":[424,365,160,44]}
+{"kind":"shape","id":"sh/p87upgji","slide":16,"bbox":[592,356,158,58]}
+{"kind":"textbox","id":"sh/o7edgb2x","slide":16,"text":"Apple +\npeanut butter","textPreview":"Apple + | peanut butter","textChars":21,"textLines":2,"bbox":[600,365,142,44]}
+{"kind":"shape","id":"sh/365cn61s","slide":16,"bbox":[66,414,54,58]}
+{"kind":"textbox","id":"sh/2lwbe1k7","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[74,423,38,44]}
+{"kind":"shape","id":"sh/dc7utgju","slide":16,"bbox":[120,414,148,58]}
+{"kind":"textbox","id":"sh/cbydkbi9","slide":16,"text":"Eggs + toast","textPreview":"Eggs + toast","textChars":12,"textLines":1,"bbox":[128,423,132,44]}
+{"kind":"shape","id":"sh/bapcr61o","slide":16,"bbox":[268,414,148,58]}
+{"kind":"textbox","id":"sh/q9gvi103","slide":16,"text":"Hummus\nsandwich","textPreview":"Hummus | sandwich","textChars":15,"textLines":2,"bbox":[276,423,132,44]}
+{"kind":"shape","id":"sh/lgrux0jq","slide":16,"bbox":[416,414,176,58]}
+{"kind":"textbox","id":"sh/kfidovi5","slide":16,"text":"Tacos with\nbeans","textPreview":"Tacos with | beans","textChars":16,"textLines":2,"bbox":[424,423,160,44]}
+{"kind":"shape","id":"sh/wb2xgz2d","slide":16,"bbox":[592,414,158,58]}
+{"kind":"textbox","id":"sh/hwbyp43y","slide":16,"text":"Yogurt + nuts","textPreview":"Yogurt + nuts","textChars":13,"textLines":1,"bbox":[600,423,142,44]}
+{"kind":"shape","id":"sh/u9kfepkn","slide":16,"bbox":[66,472,54,58]}
+{"kind":"textbox","id":"sh/vatgnuls","slide":16,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[74,481,38,44]}
+{"kind":"shape","id":"sh/872xcfmh","slide":16,"bbox":[120,472,148,58]}
+{"kind":"textbox","id":"sh/98belk32","slide":16,"text":"Oatmeal","textPreview":"Oatmeal","textChars":7,"textLines":1,"bbox":[128,481,132,44]}
+{"kind":"shape","id":"sh/m50fa54b","slide":16,"bbox":[268,472,148,58]}
+{"kind":"textbox","id":"sh/769wjalw","slide":16,"text":"Leftover bowl","textPreview":"Leftover bowl","textChars":13,"textLines":1,"bbox":[276,481,132,44]}
+{"kind":"shape","id":"sh/s3mxoj2l","slide":16,"bbox":[416,472,176,58]}
+{"kind":"textbox","id":"sh/t4vyxo36","slide":16,"text":"Dal with\nvegetables","textPreview":"Dal with | vegetables","textChars":19,"textLines":2,"bbox":[424,481,160,44]}
+{"kind":"shape","id":"sh/nahs329k","slide":16,"bbox":[592,472,158,58]}
+{"kind":"textbox","id":"sh/298rax8z","slide":16,"text":"Carrots +\nhummus","textPreview":"Carrots + | hummus","textChars":16,"textLines":2,"bbox":[600,481,142,44]}
+{"kind":"textbox","id":"sh/pcja5crq","slide":16,"text":"Use this page for ideas, then trade foods in and out. Canned, frozen, dried, and leftover foods can all help build a balanced plate.","textPreview":"Use this page for ideas, then trade foods in and out. Canned, frozen, dried, and leftover foods can all help build a balanced plate.","textChars":132,"textLines":1,"bbox":[78,642,620,52]}
+{"kind":"shape","id":"sh/oba9c7q5","slide":16,"bbox":[66,852,684,68]}
+{"kind":"textbox","id":"sh/by1s7m9w","slide":16,"text":"Vegetarian swap","textPreview":"Vegetarian swap","textChars":15,"textLines":1,"bbox":[83,866,650,22]}
+{"kind":"textbox","id":"sh/axsreh8b","slide":16,"text":"Use beans, lentils, tofu, tempeh, edamame, eggs, yogurt, nuts, and seeds when they fit your needs.","textPreview":"Use beans, lentils, tofu, tempeh, edamame, eggs, yogurt, nuts, and seeds when they fit your needs.","textChars":98,"textLines":1,"bbox":[83,894,650,16]}
+{"kind":"image","id":"im/2xk7eto7","slide":16,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/rgjm3v","slide":16,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/1julgp","slide":17,"title":"The Mindful Plate","textShapes":16}
+{"kind":"textbox","id":"sh/i54vi9sn","slide":17,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/j6dwbut8","slide":17,"text":"Worksheet","textPreview":"Worksheet","textChars":9,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/sb6dojap","slide":17,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/tcfehoba","slide":17,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/694vm9sz","slide":17,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/radwfetk","slide":17,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/0f6dsja1","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/10felobm","slide":17,"text":"WORKSHEET","textPreview":"WORKSHEET","textChars":9,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/5k3e9cbi","slide":17,"text":"Build your own meal","textPreview":"Build your own meal","textChars":19,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/kjud07ux","slide":17,"text":"Choose one meal you already eat. Write down what you could add, reduce, swap, or prepare ahead.","textPreview":"Choose one meal you already eat. Write down what you could add, reduce, swap, or prepare ahead.","textChars":95,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"textbox","id":"sh/jilw7mtc","slide":17,"text":"1/2 plate vegetables","textPreview":"1/2 plate vegetables","textChars":20,"textLines":1,"bbox":[72,282,210,24]}
+{"kind":"shape","id":"sh/ihcvyhcr","slide":17,"bbox":[297,270,445,58]}
+{"kind":"textbox","id":"sh/tonedwbe","slide":17,"text":"1/4 plate protein","textPreview":"1/4 plate protein","textChars":17,"textLines":1,"bbox":[72,362,210,24]}
+{"kind":"shape","id":"sh/sned4rut","slide":17,"bbox":[297,350,445,58]}
+{"kind":"textbox","id":"sh/rmlwbmt8","slide":17,"text":"1/4 plate carbohydrate","textPreview":"1/4 plate carbohydrate","textChars":22,"textLines":1,"bbox":[72,442,210,24]}
+{"kind":"shape","id":"sh/6lcv2hcn","slide":17,"bbox":[297,430,445,58]}
+{"kind":"textbox","id":"sh/9sju1sba","slide":17,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[72,522,210,24]}
+{"kind":"shape","id":"sh/8radsnup","slide":17,"bbox":[297,510,445,58]}
+{"kind":"textbox","id":"sh/07y54r6h","slide":17,"text":"Flavor or fat","textPreview":"Flavor or fat","textChars":13,"textLines":1,"bbox":[72,602,210,24]}
+{"kind":"shape","id":"sh/l87mxwn2","slide":17,"bbox":[297,590,445,58]}
+{"kind":"textbox","id":"sh/y5wn2hor","slide":17,"text":"What I can prep ahead","textPreview":"What I can prep ahead","textChars":21,"textLines":1,"bbox":[72,682,210,24]}
+{"kind":"shape","id":"sh/z654vmpc","slide":17,"bbox":[297,670,445,58]}
+{"kind":"textbox","id":"sh/8by58b6t","slide":17,"text":"One change to try this week","textPreview":"One change to try this week","textChars":27,"textLines":1,"bbox":[72,786,210,24]}
+{"kind":"shape","id":"sh/9c7m1gne","slide":17,"bbox":[297,774,445,86]}
+{"kind":"textbox","id":"sh/m9gn61on","slide":17,"text":"Small enough to try. Useful enough to notice.","textPreview":"Small enough to try. Useful enough to notice.","textChars":45,"textLines":1,"bbox":[72,894,640,32]}
+{"kind":"image","id":"im/4jedkb6x","slide":17,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/1julgp","slide":17,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/1eq6sh","slide":18,"title":"The Mindful Plate","textShapes":25}
+{"kind":"textbox","id":"sh/bmdkvyho","slide":18,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/al4j2t0j","slide":18,"text":"Shopping","textPreview":"Shopping","textChars":8,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/5cf21sz6","slide":18,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/kb6l8nil","slide":18,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/jaxkzih0","slide":18,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/y9oj6d0f","slide":18,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/1gv2pojm","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/0f21wji1","slide":18,"text":"SHOPPING","textPreview":"SHOPPING","textChars":8,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/uhk3ytwv","slide":18,"text":"Grocery starter list","textPreview":"Grocery starter list","textChars":20,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/vidkryxg","slide":18,"text":"Use this as a starter list, not a rule. Frozen, canned, dried, and store-brand foods can be practical.","textPreview":"Use this as a starter list, not a rule. Frozen, canned, dried, and store-brand foods can be practical.","textChars":102,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/wjml03e1","slide":18,"bbox":[66,294,318,86]}
+{"kind":"shape","id":"sh/hkv2t8fm","slide":18,"bbox":[82,314,20,20]}
+{"kind":"textbox","id":"sh/il432dwr","slide":18,"text":"Vegetables","textPreview":"Vegetables","textChars":10,"textLines":1,"bbox":[114,310,254,20]}
+{"kind":"textbox","id":"sh/3md4vixc","slide":18,"text":"fresh, frozen, canned","textPreview":"fresh, frozen, canned","textChars":21,"textLines":1,"bbox":[114,333,254,38]}
+{"kind":"shape","id":"sh/4nml4nex","slide":18,"bbox":[412,294,318,86]}
+{"kind":"shape","id":"sh/5ovmxsfi","slide":18,"bbox":[428,314,20,20]}
+{"kind":"textbox","id":"sh/qpo36dw3","slide":18,"text":"Fruit","textPreview":"Fruit","textChars":5,"textLines":1,"bbox":[460,310,254,20]}
+{"kind":"textbox","id":"sh/rqx4zido","slide":18,"text":"fresh or frozen","textPreview":"fresh or frozen","textChars":15,"textLines":1,"bbox":[460,333,254,38]}
+{"kind":"shape","id":"sh/nuxknitg","slide":18,"bbox":[66,400,318,86]}
+{"kind":"shape","id":"sh/2tojexcb","slide":18,"bbox":[82,420,20,20]}
+{"kind":"textbox","id":"sh/pgz2psbm","slide":18,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[114,416,254,20]}
+{"kind":"textbox","id":"sh/of6lgnu1","slide":18,"text":"eggs, beans, fish, tofu","textPreview":"eggs, beans, fish, tofu","textChars":23,"textLines":1,"bbox":[114,439,254,38]}
+{"kind":"shape","id":"sh/fqxkjitk","slide":18,"bbox":[412,400,318,86]}
+{"kind":"shape","id":"sh/epojadcz","slide":18,"bbox":[428,420,20,20]}
+{"kind":"textbox","id":"sh/1sf2lsbq","slide":18,"text":"Carbs","textPreview":"Carbs","textChars":5,"textLines":1,"bbox":[460,416,254,20]}
+{"kind":"textbox","id":"sh/0r61cnu5","slide":18,"text":"oats, rice, potatoes, bread","textPreview":"oats, rice, potatoes, bread","textChars":27,"textLines":1,"bbox":[460,439,254,38]}
+{"kind":"shape","id":"sh/rmdkfyto","slide":18,"bbox":[66,506,318,86]}
+{"kind":"shape","id":"sh/ql4j6dc3","slide":18,"bbox":[82,526,20,20]}
+{"kind":"textbox","id":"sh/wr2hgzal","slide":18,"text":"Fats","textPreview":"Fats","textChars":4,"textLines":1,"bbox":[114,522,254,20]}
+{"kind":"textbox","id":"sh/hsbip4r6","slide":18,"text":"nuts, seeds, avocado, oils","textPreview":"nuts, seeds, avocado, oils","textChars":26,"textLines":1,"bbox":[114,545,254,38]}
+{"kind":"shape","id":"sh/up0ze9sv","slide":18,"bbox":[412,506,318,86]}
+{"kind":"shape","id":"sh/vqtgne9g","slide":18,"bbox":[428,526,20,20]}
+{"kind":"textbox","id":"sh/4v2hkjax","slide":18,"text":"Flavor","textPreview":"Flavor","textChars":6,"textLines":1,"bbox":[460,522,254,20]}
+{"kind":"textbox","id":"sh/5wbitori","slide":18,"text":"garlic, herbs, vinegar, salsa","textPreview":"garlic, herbs, vinegar, salsa","textChars":29,"textLines":1,"bbox":[460,545,254,38]}
+{"kind":"shape","id":"sh/itkzi9sr","slide":18,"bbox":[80,797,10,10]}
+{"kind":"textbox","id":"sh/jut0re9c","slide":18,"text":"Rinse canned beans or vegetables when you want less sodium.","textPreview":"Rinse canned beans or vegetables when you want less sodium.","textChars":59,"textLines":1,"bbox":[102,792,608,34]}
+{"kind":"shape","id":"sh/kzih8fat","slide":18,"bbox":[80,835,10,10]}
+{"kind":"textbox","id":"sh/l0ryhkry","slide":18,"text":"Frozen produce can reduce waste and cost.","textPreview":"Frozen produce can reduce waste and cost.","textChars":41,"textLines":1,"bbox":[102,830,608,34]}
+{"kind":"shape","id":"sh/dw3qhkri","slide":18,"bbox":[80,873,10,10]}
+{"kind":"textbox","id":"sh/svu9ofax","slide":18,"text":"Store-brand staples can be just as useful.","textPreview":"Store-brand staples can be just as useful.","textChars":42,"textLines":1,"bbox":[102,868,608,34]}
+{"kind":"shape","id":"sh/rul8fa9c","slide":18,"bbox":[66,900,684,60]}
+{"kind":"textbox","id":"sh/qtsrmpsr","slide":18,"text":"Budget note","textPreview":"Budget note","textChars":11,"textLines":1,"bbox":[83,914,650,22]}
+{"kind":"textbox","id":"sh/5sjqdkr6","slide":18,"text":"Frozen, canned, dried, and store-brand foods can reduce waste and cost.","textPreview":"Frozen, canned, dried, and store-brand foods can reduce waste and cost.","textChars":71,"textLines":1,"bbox":[83,942,650,8]}
+{"kind":"image","id":"im/lk3q1sr2","slide":18,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/1eq6sh","slide":18,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/c31o98","slide":19,"title":"The Mindful Plate","textShapes":19}
+{"kind":"textbox","id":"sh/432tsbi1","slide":19,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/p4ba1gjm","slide":19,"text":"Questions and myths","textPreview":"Questions and myths","textChars":19,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/q5kbul07","slide":19,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/r6ds3q1s","slide":19,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/c7mtwbid","slide":19,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/d8va5gjy","slide":19,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/690rihk3","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/7a9srm1o","slide":19,"text":"QUESTIONS AND MYTHS","textPreview":"QUESTIONS AND MYTHS","textChars":19,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/ni18ridw","slide":19,"text":"A few food questions people ask all the time","textPreview":"A few food questions people ask all the time","textChars":44,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/2hs7idcb","slide":19,"text":"Food questions are normal because nutrition advice can be noisy. These short answers are designed to reduce fear, not replace personal guidance.","textPreview":"Food questions are normal because nutrition advice can be noisy. These short answers are designed to reduce fear, not replace personal gu...","textChars":144,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"shape","id":"sh/pkjqtsvm","slide":19,"bbox":[66,300,684,88]}
+{"kind":"shape","id":"sh/ojapknuh","slide":19,"bbox":[82,320,20,20]}
+{"kind":"textbox","id":"sh/feh8nidk","slide":19,"text":"Do I stop carbohydrates?","textPreview":"Do I stop carbohydrates?","textChars":24,"textLines":1,"bbox":[114,316,620,20]}
+{"kind":"textbox","id":"sh/ed87edcz","slide":19,"text":"No. Type, amount, and pairing matter.","textPreview":"No. Type, amount, and pairing matter.","textChars":37,"textLines":1,"bbox":[114,339,620,38]}
+{"kind":"shape","id":"sh/1gjqp8vq","slide":19,"bbox":[66,406,684,88]}
+{"kind":"shape","id":"sh/0fapg3u5","slide":19,"bbox":[82,426,20,20]}
+{"kind":"textbox","id":"sh/rqh8jydo","slide":19,"text":"Is fruit too sugary?","textPreview":"Is fruit too sugary?","textChars":20,"textLines":1,"bbox":[114,422,620,20]}
+{"kind":"textbox","id":"sh/qp87atc3","slide":19,"text":"Whole fruit can fit for many people.","textPreview":"Whole fruit can fit for many people.","textChars":36,"textLines":1,"bbox":[114,445,620,38]}
+{"kind":"shape","id":"sh/ulormtgv","slide":19,"bbox":[66,512,684,88]}
+{"kind":"shape","id":"sh/vmx8vyxg","slide":19,"bbox":[82,532,20,20]}
+{"kind":"textbox","id":"sh/gnq9o3y1","slide":19,"text":"Are potatoes forbidden?","textPreview":"Are potatoes forbidden?","textChars":23,"textLines":1,"bbox":[114,528,620,20]}
+{"kind":"textbox","id":"sh/hozqx8fm","slide":19,"text":"No. Preparation and portion matter.","textPreview":"No. Preparation and portion matter.","textChars":35,"textLines":1,"bbox":[114,551,620,38]}
+{"kind":"shape","id":"sh/ip8rqdg7","slide":19,"bbox":[66,618,684,88]}
+{"kind":"shape","id":"sh/3qh8zyxc","slide":19,"bbox":[82,638,20,20]}
+{"kind":"textbox","id":"sh/4bq9s3yx","slide":19,"text":"Do I need expensive food?","textPreview":"Do I need expensive food?","textChars":25,"textLines":1,"bbox":[114,634,620,20]}
+{"kind":"textbox","id":"sh/5czq18fi","slide":19,"text":"No. Basic pantry foods count.","textPreview":"No. Basic pantry foods count.","textChars":29,"textLines":1,"bbox":[114,657,620,38]}
+{"kind":"shape","id":"sh/qd8rudg3","slide":19,"bbox":[66,724,684,88]}
+{"kind":"shape","id":"sh/rehs3ixo","slide":19,"bbox":[82,744,20,20]}
+{"kind":"textbox","id":"sh/183utczq","slide":19,"text":"Can I keep cultural foods?","textPreview":"Can I keep cultural foods?","textChars":26,"textLines":1,"bbox":[114,740,620,20]}
+{"kind":"textbox","id":"sh/07ut07i5","slide":19,"text":"Yes. Adapt portions, sides, and drinks.","textPreview":"Yes. Adapt portions, sides, and drinks.","textChars":39,"textLines":1,"bbox":[114,763,620,38]}
+{"kind":"textbox","id":"sh/f61cr2hk","slide":19,"text":"If a food question is connected to medication, kidney disease, pregnancy, allergies, gastrointestinal symptoms, or disordered eating, ask for personal guidance.","textPreview":"If a food question is connected to medication, kidney disease, pregnancy, allergies, gastrointestinal symptoms, or disordered eating, ask...","textChars":160,"textLines":1,"bbox":[78,858,630,52]}
+{"kind":"image","id":"im/atgjuhgb","slide":19,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/c31o98","slide":19,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/3g0c76","slide":20,"title":"The Mindful Plate","textShapes":18}
+{"kind":"textbox","id":"sh/jqd03ahg","slide":20,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/ypkza5gv","slide":20,"text":"Next steps","textPreview":"Next steps","textChars":10,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/xobi10zq","slide":20,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/wn2h8fy5","slide":20,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/bmt0zahk","slide":20,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/alkz65gz","slide":20,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/hkfid4zu","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"shape","id":"sh/gj6hkzy9","slide":20,"bbox":[0,0,816,1056]}
+{"kind":"textbox","id":"sh/ve5w7itk","slide":20,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[66,188,640,72]}
+{"kind":"textbox","id":"sh/wfex0nu5","slide":20,"text":"Pick one page to use this week. You might build one balanced dinner, improve one drink, or complete the meal worksheet.","textPreview":"Pick one page to use this week. You might build one balanced dinner, improve one drink, or complete the meal worksheet.","textChars":119,"textLines":1,"bbox":[70,278,620,62]}
+{"kind":"shape","id":"sh/x07e9sbq","slide":20,"bbox":[82,392,560,56]}
+{"kind":"textbox","id":"sh/m9wfudc3","slide":20,"text":"Explore free guides","textPreview":"Explore free guides","textChars":19,"textLines":1,"bbox":[108,406,225,22]}
+{"kind":"textbox","id":"sh/na5w3ydo","slide":20,"text":"mindfuldiabetes.org/free-guides/","textPreview":"mindfuldiabetes.org/free-guides/","textChars":32,"textLines":1,"bbox":[356,407,250,20]}
+{"kind":"shape","id":"sh/obexw3u9","slide":20,"bbox":[82,484,560,56]}
+{"kind":"textbox","id":"sh/9cne58ve","slide":20,"text":"Join the newsletter","textPreview":"Join the newsletter","textChars":19,"textLines":1,"bbox":[108,498,225,22]}
+{"kind":"textbox","id":"sh/65gf6xc7","slide":20,"text":"mindfuldiabetes.org/newsletter/","textPreview":"mindfuldiabetes.org/newsletter/","textChars":31,"textLines":1,"bbox":[356,499,250,20]}
+{"kind":"shape","id":"sh/76pgf2ts","slide":20,"bbox":[82,576,560,56]}
+{"kind":"textbox","id":"sh/3q1c7ut4","slide":20,"text":"Visit Health Tools","textPreview":"Visit Health Tools","textChars":18,"textLines":1,"bbox":[108,590,225,22]}
+{"kind":"textbox","id":"sh/2psbypsj","slide":20,"text":"mindfuldiabetes.org/health-tools/","textPreview":"mindfuldiabetes.org/health-tools/","textChars":33,"textLines":1,"bbox":[356,591,250,20]}
+{"kind":"shape","id":"sh/pcju94ba","slide":20,"bbox":[82,668,560,56]}
+{"kind":"textbox","id":"sh/4bat0zap","slide":20,"text":"Support free education","textPreview":"Support free education","textChars":22,"textLines":1,"bbox":[108,682,225,22]}
+{"kind":"textbox","id":"sh/re1cbetg","slide":20,"text":"mindfuldiabetes.org/donation/","textPreview":"mindfuldiabetes.org/donation/","textChars":29,"textLines":1,"bbox":[356,683,250,20]}
+{"kind":"shape","id":"sh/qdsb29sv","slide":20,"bbox":[82,792,560,88]}
+{"kind":"textbox","id":"sh/dgjud4r6","slide":20,"text":"Medical disclaimer","textPreview":"Medical disclaimer","textChars":18,"textLines":1,"bbox":[99,806,526,22]}
+{"kind":"textbox","id":"sh/cfat4za1","slide":20,"text":"This guide is general education, not medical advice, diagnosis, or treatment. Do not change medication, insulin, or glucose targets based on this guide.","textPreview":"This guide is general education, not medical advice, diagnosis, or treatment. Do not change medication, insulin, or glucose targets based...","textChars":152,"textLines":1,"bbox":[99,834,526,36]}
+{"kind":"textbox","id":"sh/zilcfe9c","slide":20,"text":"Mindful Diabetes Inc. | 501(c)(3) nonprofit | Free to share for education","textPreview":"Mindful Diabetes Inc. | 501(c)(3) nonprofit | Free to share for education","textChars":73,"textLines":1,"bbox":[82,942,600,24]}
+{"kind":"image","id":"im/lkzu1o32","slide":20,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/1wv21kj2","slide":20,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[66,70,58,62]}
+{"kind":"notes","id":"nt/3g0c76","slide":20,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}
+{"kind":"slide","id":"sl/6pfilu","slide":21,"title":"The Mindful Plate","textShapes":14}
+{"kind":"textbox","id":"sh/po3ytgbe","slide":21,"text":"The Mindful Plate","textPreview":"The Mindful Plate","textChars":17,"textLines":1,"bbox":[92,35,200,18]}
+{"kind":"textbox","id":"sh/onuhkvut","slide":21,"text":"References and safety","textPreview":"References and safety","textChars":21,"textLines":1,"bbox":[92,51,230,15]}
+{"kind":"shape","id":"sh/bq50vqt4","slide":21,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/apwzmlcz","slide":21,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/xsnix0ba","slide":21,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/crehovup","slide":21,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/ru1gj6t0","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/qtsza1cf","slide":21,"text":"REFERENCES AND SAFETY","textPreview":"REFERENCES AND SAFETY","textChars":21,"textLines":1,"bbox":[66,83,280,22]}
+{"kind":"textbox","id":"sh/0jql8fqp","slide":21,"text":"References and medical disclaimer","textPreview":"References and medical disclaimer","textChars":33,"textLines":1,"bbox":[62,112,650,76]}
+{"kind":"textbox","id":"sh/lkzmhk7a","slide":21,"text":"Human-readable sources and the boundaries of this guide.","textPreview":"Human-readable sources and the boundaries of this guide.","textChars":56,"textLines":1,"bbox":[66,196,670,58]}
+{"kind":"textbox","id":"sh/yh83658j","slide":21,"text":"Medical disclaimer","textPreview":"Medical disclaimer","textChars":18,"textLines":1,"bbox":[66,230,680,22]}
+{"kind":"textbox","id":"sh/zih4fap4","slide":21,"text":"This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do not change insulin, diabetes medication, glucose targets, pregnancy care, kidney-disease care, or any prescribed medical diet because of this guide. For symptoms of severe low blood sugar, severe high blood sugar, chest pain, trouble breathing, confusion, fainting, or another emergency, seek urgent medical care.","textPreview":"This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do...","textChars":451,"textLines":1,"bbox":[66,256,680,94]}
+{"kind":"textbox","id":"sh/8nalcfql","slide":21,"text":"References","textPreview":"References","textChars":10,"textLines":1,"bbox":[66,382,680,24]}
+{"kind":"textbox","id":"sh/98jmlk76","slide":21,"text":"1. American Diabetes Association. Standards of Care in Diabetes - 2026. Diabetes Care; 2026. https://diabetesjournals.org/care/issue/49/Supplement_1\n2. American Diabetes Association Nutrition & Wellness Team. What is the Diabetes Plate?. ADA Diabetes Food Hub; 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate\n3. U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. FDA; 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n4. U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. FDA; 2026. https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n5. American Heart Association. The Facts on Fats. AHA; 2025. https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n6. Centers for Disease Control and Prevention. About the Lifestyle Change Program. CDC; 2024. https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html","textPreview":"1. American Diabetes Association. Standards of Care in Diabetes - 2026. Diabetes Care; 2026. https://diabetesjournals.org/care/issue/49/S...","textChars":1033,"textLines":6,"bbox":[66,414,680,405]}
+{"kind":"shape","id":"sh/ml83ap8f","slide":21,"bbox":[66,850,680,94]}
+{"kind":"textbox","id":"sh/nm14jap0","slide":21,"text":"Publication information","textPreview":"Publication information","textChars":23,"textLines":1,"bbox":[84,868,220,20]}
+{"kind":"textbox","id":"sh/or6l0vqh","slide":21,"text":"Published: July 30, 2026 | Medical review: pending | Next scheduled review: July 2027\nMindful Diabetes Inc., 501(c)(3) nonprofit | Free to share for education, with attribution.","textPreview":"Published: July 30, 2026 | Medical review: pending | Next scheduled review: July 2027 | Mindful Diabetes Inc., 501(c)(3) nonprofit | Free...","textChars":177,"textLines":2,"bbox":[84,895,620,44]}
+{"kind":"image","id":"im/7y18ryho","slide":21,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/6pfilu","slide":21,"text":"[Sources]\n- ADA Standards of Care in Diabetes - 2026: https://diabetesjournals.org/care/issue/49/Supplement_1\n- ADA Diabetes Food Hub, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- FDA Nutrition Facts Label resources: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label and https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- CDC National Diabetes Prevention Program lifestyle change program: https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n"}

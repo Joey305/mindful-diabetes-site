@@ -1788,11 +1788,94 @@ def test_admin_dashboard_uses_category_tabs(tmp_path):
     response = client.get("/admin/analytics/")
 
     assert response.status_code == 200
-    for label in [b"Overview", b"Growth", b"Engagement", b"Search", b"Campaigns", b"Content", b"Activity"]:
+    for label in [b"Overview", b"Growth", b"Engagement", b"Resources", b"Search", b"Campaigns", b"Content", b"Activity"]:
         assert label in response.data
     assert b'data-admin-tab="overview"' in response.data
+    assert b'data-admin-tab-panel="resources"' in response.data
     assert b'data-admin-tab-panel="engagement"' in response.data
     assert b'data-admin-tab-panel="activity"' in response.data
+
+
+def test_admin_dashboard_renders_free_guide_resource_performance(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    sign_in_admin(client)
+
+    guide_metadata = {
+        "guide_title": "The Mindful Plate",
+        "guide_slug": "mindful-plate",
+        "guide_category": "Nutrition",
+        "file_type": "PDF",
+        "file_size": "3.2 MB",
+        "source_page": "/free-guides",
+    }
+    post_analytics_event(
+        client,
+        event_id="client:resource-card-1",
+        event_name="resource_card_view",
+        page_path="/free-guides/",
+        page_title="Free Health Guides",
+        element_label="The Mindful Plate",
+        metadata=guide_metadata,
+    )
+    post_analytics_event(
+        client,
+        event_id="client:resource-detail-1",
+        event_name="resource_detail_view",
+        page_path="/free-guides/mindful-plate/",
+        page_title="The Mindful Plate",
+        element_label="The Mindful Plate",
+        metadata={**guide_metadata, "source_page": "/free-guides/mindful-plate"},
+    )
+    post_analytics_event(
+        client,
+        event_id="client:resource-view-1",
+        event_name="resource_pdf_view",
+        page_path="/free-guides/mindful-plate/",
+        page_title="The Mindful Plate",
+        element_label="View The Mindful Plate",
+        destination_url="/static/free-guides/pdfs/mindful-diabetes-mindful-plate-guide-2026.pdf",
+        metadata={**guide_metadata, "action": "view"},
+    )
+    post_analytics_event(
+        client,
+        event_id="client:resource-download-1",
+        event_name="resource_pdf_download",
+        page_path="/free-guides/mindful-plate/",
+        page_title="The Mindful Plate",
+        element_label="Download The Mindful Plate",
+        destination_url="/static/free-guides/pdfs/mindful-diabetes-mindful-plate-guide-2026.pdf",
+        metadata={**guide_metadata, "action": "download"},
+    )
+    post_analytics_event(
+        client,
+        event_id="client:resource-share-1",
+        event_name="resource_share_click",
+        page_path="/free-guides/mindful-plate/",
+        page_title="The Mindful Plate",
+        element_label="Share The Mindful Plate",
+        metadata={**guide_metadata, "share_platform": "linkedin"},
+    )
+    post_analytics_event(
+        client,
+        event_id="client:resource-related-1",
+        event_name="resource_related_link_click",
+        page_path="/free-guides/mindful-plate/",
+        page_title="The Mindful Plate",
+        element_label="Fats Without Fear",
+        metadata={**guide_metadata, "action": "related-guide"},
+    )
+
+    response = client.get("/admin/analytics/#resources")
+
+    assert response.status_code == 200
+    assert b"Free Guides" in response.data
+    assert b"Free guide downloads" in response.data
+    assert b"The Mindful Plate" in response.data
+    assert b"PDF downloads" in response.data
+    assert b"Share platforms" in response.data
+    assert b"linkedin" in response.data
+    assert b"Related guide clicks" in response.data
 
 
 def test_dashboard_renders_growth_goals_search_and_campaign_tools(tmp_path):

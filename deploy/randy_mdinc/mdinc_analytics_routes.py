@@ -36,6 +36,16 @@ VALID_EVENT_NAMES = {
     "outbound_link_click",
     "content_cta_click",
     "resource_download_click",
+    "free_guides_page_view",
+    "resource_card_view",
+    "resource_detail_view",
+    "resource_pdf_view",
+    "resource_pdf_download",
+    "resource_share_click",
+    "resource_related_link_click",
+    "resource_newsletter_click",
+    "resource_newsletter_submit",
+    "resource_donation_click",
     "sponsor_click",
     "event_registration_click",
     "volunteer_cta_click",
@@ -57,6 +67,16 @@ EVENT_CATEGORIES = {
     "outbound_link_click": "outbound",
     "content_cta_click": "content",
     "resource_download_click": "resource",
+    "free_guides_page_view": "resource",
+    "resource_card_view": "resource",
+    "resource_detail_view": "resource",
+    "resource_pdf_view": "resource",
+    "resource_pdf_download": "resource",
+    "resource_share_click": "resource",
+    "resource_related_link_click": "resource",
+    "resource_newsletter_click": "resource",
+    "resource_newsletter_submit": "resource",
+    "resource_donation_click": "resource",
     "sponsor_click": "sponsor",
     "event_registration_click": "event",
     "volunteer_cta_click": "volunteer",
@@ -83,6 +103,16 @@ ALLOWED_METADATA_KEYS = {
     "related_article",
     "resource_id",
     "resource_type",
+    "guide_title",
+    "guide_slug",
+    "guide_category",
+    "page_count",
+    "file_type",
+    "file_size",
+    "action",
+    "button_location",
+    "source_page",
+    "share_platform",
     "sponsor_id",
     "event_id",
     "volunteer_role",
@@ -158,10 +188,31 @@ CTA_CLICK_EVENTS = {
     "health_tool_click",
     "content_cta_click",
     "resource_download_click",
+    "resource_pdf_view",
+    "resource_pdf_download",
+    "resource_share_click",
+    "resource_related_link_click",
+    "resource_newsletter_click",
+    "resource_newsletter_submit",
+    "resource_donation_click",
     "sponsor_click",
     "event_registration_click",
     "volunteer_cta_click",
     "search_result_click",
+}
+
+RESOURCE_EVENTS = {
+    "free_guides_page_view",
+    "resource_card_view",
+    "resource_detail_view",
+    "resource_pdf_view",
+    "resource_pdf_download",
+    "resource_share_click",
+    "resource_related_link_click",
+    "resource_newsletter_click",
+    "resource_newsletter_submit",
+    "resource_donation_click",
+    "resource_download_click",
 }
 
 EXCLUDED_PUBLIC_PATH_PREFIXES = ("/admin", "/analytics", "/static")
@@ -518,6 +569,16 @@ def period_summary(start: datetime, end: datetime, filters: dict[str, str]) -> d
         "cta_impressions": count_events(start, end, filters, event_name="cta_impression"),
         "site_searches": count_events(start, end, filters, event_name="site_search"),
         "search_result_clicks": count_events(start, end, filters, event_name="search_result_click"),
+        "free_guides_page_views": count_events(start, end, filters, event_name="free_guides_page_view"),
+        "resource_card_views": count_events(start, end, filters, event_name="resource_card_view"),
+        "resource_detail_views": count_events(start, end, filters, event_name="resource_detail_view"),
+        "resource_pdf_views": count_events(start, end, filters, event_name="resource_pdf_view"),
+        "resource_pdf_downloads": count_events(start, end, filters, event_name="resource_pdf_download"),
+        "resource_share_clicks": count_events(start, end, filters, event_name="resource_share_click"),
+        "resource_related_clicks": count_events(start, end, filters, event_name="resource_related_link_click"),
+        "resource_newsletter_clicks": count_events(start, end, filters, event_name="resource_newsletter_click"),
+        "resource_newsletter_submits": count_events(start, end, filters, event_name="resource_newsletter_submit"),
+        "resource_donation_clicks": count_events(start, end, filters, event_name="resource_donation_click"),
     }
     return {
         "totals": totals,
@@ -540,6 +601,11 @@ def period_summary(start: datetime, end: datetime, filters: dict[str, str]) -> d
         "search_no_results": search_no_results(start, end, filters),
         "search_result_clicks": search_result_clicks(start, end, filters),
         "campaign_performance": campaign_performance(start, end, filters),
+        "resource_guides": resource_guides(start, end, filters),
+        "resource_action_mix": resource_action_mix(start, end, filters),
+        "resource_share_platforms": resource_share_platforms(start, end, filters),
+        "resource_source_pages": resource_source_pages(start, end, filters),
+        "resource_related_clicks": resource_related_clicks(start, end, filters),
         "daily_trend": daily_trend(start, end, filters),
     }
 
@@ -781,6 +847,141 @@ def campaign_performance(start, end, filters) -> list[dict[str, Any]]:
         row["action_rate"] = numeric_rate(row.get("actions", 0), row.get("page_views", 0))
         row["action_rate_label"] = percent_label(row["action_rate"])
     return rows
+
+
+def resource_guides(start, end, filters) -> list[dict[str, Any]]:
+    where, params = where_clause(start, end, filters)
+    resource_events = sorted(RESOURCE_EVENTS)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT COALESCE(NULLIF(json_extract(metadata_json, '$.guide_slug'), ''), NULLIF(element_id, ''), 'unknown') AS slug,
+                   COALESCE(NULLIF(MAX(json_extract(metadata_json, '$.guide_title')), ''), MAX(element_label), 'Unknown guide') AS title,
+                   COALESCE(NULLIF(MAX(json_extract(metadata_json, '$.guide_category')), ''), 'Uncategorized') AS category,
+                   COUNT(CASE WHEN event_name = 'resource_card_view' THEN 1 END) AS card_views,
+                   COUNT(CASE WHEN event_name = 'resource_detail_view' THEN 1 END) AS detail_views,
+                   COUNT(CASE WHEN event_name = 'resource_pdf_view' THEN 1 END) AS pdf_views,
+                   COUNT(CASE WHEN event_name = 'resource_pdf_download' THEN 1 END) AS downloads,
+                   COUNT(CASE WHEN event_name = 'resource_share_click' THEN 1 END) AS shares,
+                   COUNT(CASE WHEN event_name = 'resource_related_link_click' THEN 1 END) AS related_clicks,
+                   COUNT(CASE WHEN event_name = 'resource_newsletter_click' THEN 1 END) AS newsletter_clicks,
+                   COUNT(CASE WHEN event_name = 'resource_newsletter_submit' THEN 1 END) AS newsletter_submits,
+                   COUNT(CASE WHEN event_name = 'resource_donation_click' THEN 1 END) AS donation_clicks,
+                   COUNT(*) AS total_actions,
+                   COUNT(DISTINCT anonymous_session_id) AS sessions
+            FROM analytics_events
+            {where} AND event_name IN ({','.join('?' for _ in resource_events)})
+            GROUP BY slug
+            ORDER BY downloads DESC, pdf_views DESC, shares DESC, total_actions DESC, title ASC
+            LIMIT 12
+            """,
+            [*params, *resource_events],
+        ).fetchall()
+    rows = [dict(row) for row in rows if row["slug"] != "unknown" or int(row.get("total_actions") or 0)]
+    for row in rows:
+        interest = int(row.get("detail_views") or 0) + int(row.get("pdf_views") or 0)
+        row["download_rate"] = numeric_rate(row.get("downloads", 0), interest)
+        row["download_rate_label"] = percent_label(row["download_rate"])
+    return rows
+
+
+def resource_action_mix(start, end, filters) -> list[dict[str, Any]]:
+    where, params = where_clause(start, end, filters)
+    resource_events = sorted(RESOURCE_EVENTS)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT event_name AS label,
+                   COUNT(*) AS count,
+                   COUNT(DISTINCT anonymous_session_id) AS sessions
+            FROM analytics_events
+            {where} AND event_name IN ({','.join('?' for _ in resource_events)})
+            GROUP BY event_name
+            ORDER BY count DESC, label ASC
+            LIMIT 12
+            """,
+            [*params, *resource_events],
+        ).fetchall()
+    return [{"label": resource_event_label(row["label"]), "count": row["count"], "sessions": row["sessions"]} for row in rows]
+
+
+def resource_share_platforms(start, end, filters) -> list[dict[str, Any]]:
+    filters = dict(filters)
+    filters["event_name"] = "resource_share_click"
+    where, params = where_clause(start, end, filters)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT COALESCE(NULLIF(json_extract(metadata_json, '$.share_platform'), ''), 'Unknown') AS label,
+                   COUNT(*) AS count,
+                   COUNT(DISTINCT anonymous_session_id) AS sessions
+            FROM analytics_events
+            {where}
+            GROUP BY label
+            ORDER BY count DESC, label ASC
+            LIMIT 8
+            """,
+            params,
+        ).fetchall()
+    return [dict(row) for row in rows]
+
+
+def resource_source_pages(start, end, filters) -> list[dict[str, Any]]:
+    where, params = where_clause(start, end, filters)
+    resource_events = sorted(RESOURCE_EVENTS)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT COALESCE(NULLIF(json_extract(metadata_json, '$.source_page'), ''), NULLIF(page_path, ''), 'Unknown') AS label,
+                   COUNT(*) AS count,
+                   COUNT(DISTINCT anonymous_session_id) AS sessions
+            FROM analytics_events
+            {where} AND event_name IN ({','.join('?' for _ in resource_events)})
+            GROUP BY label
+            ORDER BY count DESC, label ASC
+            LIMIT 10
+            """,
+            [*params, *resource_events],
+        ).fetchall()
+    return [dict(row) for row in rows if row["label"] != "Unknown"]
+
+
+def resource_related_clicks(start, end, filters) -> list[dict[str, Any]]:
+    filters = dict(filters)
+    filters["event_name"] = "resource_related_link_click"
+    where, params = where_clause(start, end, filters)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT COALESCE(NULLIF(element_label, ''), NULLIF(destination_url, ''), 'Unknown') AS label,
+                   COUNT(*) AS count,
+                   COUNT(DISTINCT anonymous_session_id) AS sessions
+            FROM analytics_events
+            {where}
+            GROUP BY label
+            ORDER BY count DESC, label ASC
+            LIMIT 8
+            """,
+            params,
+        ).fetchall()
+    return [dict(row) for row in rows if row["label"] != "Unknown"]
+
+
+def resource_event_label(event_name):
+    labels = {
+        "free_guides_page_view": "Free Guides page views",
+        "resource_card_view": "Guide cards seen",
+        "resource_detail_view": "Guide detail views",
+        "resource_pdf_view": "PDF opens",
+        "resource_pdf_download": "PDF downloads",
+        "resource_share_click": "Shares",
+        "resource_related_link_click": "Related guide clicks",
+        "resource_newsletter_click": "Newsletter clicks",
+        "resource_newsletter_submit": "Newsletter signups",
+        "resource_donation_click": "Support clicks",
+        "resource_download_click": "Resource downloads",
+    }
+    return labels.get(event_name, str(event_name or "").replace("_", " ").title())
 
 
 def events_for(start, end, filters, page, page_size) -> dict[str, Any]:

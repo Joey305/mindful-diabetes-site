@@ -1851,8 +1851,9 @@ def build_admin_dashboard(config, args=None):
     growth_goals = dashboard_growth_goals(config, summary)
     recommended_actions = dashboard_recommended_actions(summary, missed_opportunities, health_scores)
     search_insights = dashboard_search_insights(summary)
+    resource_insights = dashboard_resource_insights(summary)
     growth_experiments = dashboard_growth_experiments(summary, missed_opportunities, growth_goals, search_insights)
-    weekly_brief = dashboard_weekly_brief(summary, growth_goals, growth_experiments, search_insights)
+    weekly_brief = dashboard_weekly_brief(summary, growth_goals, growth_experiments, search_insights, resource_insights)
     stats = [
         dashboard_stat("Pages read", page_views, summary, "page_views", "Public page loads during the selected period."),
         dashboard_stat("Browser sessions", totals.get("anonymous_sessions", 0), summary, "anonymous_sessions", "Anonymous browser sessions, not identified people."),
@@ -1860,6 +1861,7 @@ def build_admin_dashboard(config, args=None):
         dashboard_stat("PayPal donation page opened", totals.get("paypal_clicks", 0), summary, "paypal_clicks", "PayPal opened; not a confirmed donation."),
         dashboard_stat("Health-tool clicks", totals.get("health_tool_clicks", 0), summary, "health_tool_clicks", "Clicks to JEIR, Memovela, and related tools."),
         dashboard_stat("Newsletter signups", totals.get("newsletter_signups", 0), summary, "newsletter_signups", "Successful accepted newsletter signups only."),
+        dashboard_stat("Free guide downloads", totals.get("resource_pdf_downloads", 0), summary, "resource_pdf_downloads", "Downloads of the public PDF guides."),
     ]
     for event in recent["events"]:
         event["human_label"] = human_event_label(event)
@@ -1879,6 +1881,7 @@ def build_admin_dashboard(config, args=None):
         "recommended_actions": recommended_actions,
         "growth_experiments": growth_experiments,
         "search_insights": search_insights,
+        "resource_insights": resource_insights,
         "weekly_brief": weekly_brief,
         "campaign_builder": dashboard_campaign_builder(config, args),
         "missed_opportunities": missed_opportunities,
@@ -2215,6 +2218,43 @@ def dashboard_search_insights(summary):
     }
 
 
+def dashboard_resource_insights(summary):
+    totals = summary.get("totals", {})
+    pdf_views = int(totals.get("resource_pdf_views") or 0)
+    downloads = int(totals.get("resource_pdf_downloads") or 0)
+    shares = int(totals.get("resource_share_clicks") or 0)
+    detail_views = int(totals.get("resource_detail_views") or 0)
+    cards_seen = int(totals.get("resource_card_views") or 0)
+    guide_rows = summary.get("resource_guides", [])
+    top_guide = first_item(guide_rows)
+    download_rate = analytics.numeric_rate(downloads, pdf_views + detail_views)
+    notes = []
+    if top_guide:
+        notes.append(f"{top_guide['title']} is the strongest free guide so far with {top_guide.get('downloads', 0)} downloads and {top_guide.get('shares', 0)} shares.")
+    if pdf_views and not downloads:
+        notes.append("People are opening PDFs, but download clicks are not showing yet.")
+    if downloads and not shares:
+        notes.append("Guides are being downloaded, but sharing has not started yet.")
+    if cards_seen and not detail_views and not pdf_views:
+        notes.append("Guide cards are being seen, but visitors are not opening guide details or PDFs yet.")
+    if not notes:
+        notes.append("Free Guide insights will appear after visitors view, download, or share the PDFs.")
+    return {
+        "pdf_views": pdf_views,
+        "downloads": downloads,
+        "shares": shares,
+        "detail_views": detail_views,
+        "cards_seen": cards_seen,
+        "download_rate": analytics.percent_label(download_rate) if download_rate is not None else "No PDF/detail views",
+        "top_guides": guide_rows[:8],
+        "action_mix": summary.get("resource_action_mix", [])[:10],
+        "share_platforms": summary.get("resource_share_platforms", [])[:8],
+        "source_pages": summary.get("resource_source_pages", [])[:8],
+        "related_clicks": summary.get("resource_related_clicks", [])[:8],
+        "notes": notes[:4],
+    }
+
+
 def dashboard_growth_experiments(summary, missed_opportunities, goals, search_insights):
     totals = summary.get("totals", {})
     experiments = []
@@ -2294,16 +2334,18 @@ def first_unmet_goal(goals):
     return sorted(pending, key=lambda goal: (goal.get("progress", 0), -goal.get("target", 0)))[0] if pending else None
 
 
-def dashboard_weekly_brief(summary, goals, experiments, search_insights):
+def dashboard_weekly_brief(summary, goals, experiments, search_insights, resource_insights=None):
     totals = summary.get("totals", {})
     top_page = first_item(summary.get("top_pages")) or {"label": "No page activity", "count": 0}
     top_source = first_item(summary.get("traffic_sources")) or {"label": "No traffic source yet", "count": 0}
     top_campaign = first_item(summary.get("campaign_performance")) or {"label": "No campaign activity", "page_views": 0, "actions": 0}
     leading_goal = first_unmet_goal(goals) or (goals[0] if goals else {"label": "Growth", "remaining": 0, "unit": ""})
+    top_resource = first_item((resource_insights or {}).get("top_guides", [])) or {"title": "No guide activity", "downloads": 0, "shares": 0}
     return [
         f"Top page: {top_page['label']} with {top_page['count']} views.",
         f"Strongest traffic source: {top_source['label']} with {top_source['count']} visits.",
         f"Searches: {totals.get('site_searches', 0)} total, with {search_insights.get('click_rate')} clicking into a result.",
+        f"Top free guide: {top_resource['title']} with {top_resource.get('downloads', 0)} downloads and {top_resource.get('shares', 0)} shares.",
         f"Best campaign: {top_campaign['label']} with {top_campaign.get('page_views', 0)} views and {top_campaign.get('actions', 0)} actions.",
         f"Goal focus: {leading_goal['label']} needs {leading_goal.get('remaining', 0)} more {leading_goal.get('unit', 'actions')}.",
         f"Next experiment: {experiments[0]['title'] if experiments else 'Keep collecting baseline data'}.",
@@ -2476,7 +2518,7 @@ def dashboard_trend_max(rows):
                 int(row.get("newsletter_signups") or 0),
             ]
         )
-    return max(values, default=1)
+    return max(1, max(values, default=1))
 
 
 def page_analytics_recommendations(summary):
