@@ -157,7 +157,30 @@ def test_free_guides_redirects_and_nav_links():
     response = client.get("/")
     assert response.status_code == 200
     assert b'href="/free-guides/"' in response.data
-    assert b"Free Guides" in response.data
+    assert b"Free Health Guides" in response.data
+
+
+def test_header_uses_scalable_navigation_groups():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    response = client.get("/guide/")
+
+    assert response.status_code == 200
+    assert b"Pathways to Wellness" in response.data
+    assert b"Practical articles and everyday guidance for living well with diabetes." in response.data
+    assert b"Free Health Guides" in response.data
+    assert b"Downloadable and printable guides, worksheets, and checklists." in response.data
+    assert b"About / Support" in response.data
+    assert b"Support Our Mission" in response.data
+    assert b"nav_learn" in response.data
+    assert b"nav_resources" in response.data
+    assert b"nav_about_support" in response.data
+    assert b"nav_donate" in response.data
+    assert b"nav_search" in response.data
+    assert b'aria-controls="nav-learn-menu"' in response.data
+    assert b'aria-expanded="false"' in response.data
+    assert b">Donate</a>" in response.data
 
 
 def test_subscribe_links_scroll_to_footer_form_on_current_page():
@@ -301,9 +324,9 @@ def test_home_links_research_page_and_nav_promotes_it():
     assert response.status_code == 200
     assert b'href="/research/"' in response.data
     assert b"View Our Research" in response.data
-    assert b">Research</a>" in response.data
+    assert b"Research &amp; Updates" in response.data
     assert b'href="/health-tools/"' in response.data
-    assert b">Health Tools</a>" in response.data
+    assert b"Health Tools" in response.data
 
 
 def test_jeir_article_uses_pilot_layout():

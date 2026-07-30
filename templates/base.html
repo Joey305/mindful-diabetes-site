@@ -14,6 +14,7 @@
     {% endif %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
     <script src="{{ url_for('static', filename='js/site-analytics.js') }}" defer data-enabled="{{ 1 if analytics_browser_config.enabled else 0 }}" data-endpoint="{{ analytics_browser_config.endpoint }}" data-environment="{{ analytics_browser_config.environment }}"></script>
+    <script src="{{ url_for('static', filename='js/site-nav.js') }}" defer></script>
     {% if turnstile_site_key %}
       <script src="{{ url_for('static', filename='js/newsletter-turnstile.js') }}" defer></script>
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -32,34 +33,136 @@
           </span>
         </a>
         <nav class="site-nav" aria-label="Main navigation">
-          {% for page in nav_pages %}
-            <a href="{{ page.canonical_path }}" {% if request.path == page.canonical_path or (page.slug == "free-guides" and request.path.startswith("/free-guides/")) %}aria-current="page"{% endif %}>{{ "Home" if page.slug == "mindful" else page.title }}</a>
-          {% endfor %}
+          <a class="site-nav__link" href="{{ url_for('home') }}" {% if navigation_state.home %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Home" data-track-id="nav_home" data-track-position="header" data-track-destination="{{ url_for('home') }}">Home</a>
+
+          <div class="nav-dropdown" data-nav-menu>
+            <button class="nav-dropdown__trigger" type="button" aria-expanded="false" aria-controls="nav-learn-menu" data-current="{{ 'true' if navigation_state.section == 'learn' else 'false' }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="Learn" data-track-id="nav_learn" data-track-position="header">
+              <span>Learn</span>
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div id="nav-learn-menu" class="nav-dropdown__panel" hidden>
+              <a class="nav-dropdown__item" href="{{ url_for('guide') }}" {% if navigation_state.pathways %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Pathways to Wellness" data-track-id="nav_pathways" data-track-position="header-dropdown" data-track-destination="{{ url_for('guide') }}">
+                <strong>Pathways to Wellness</strong>
+                <span>Practical articles and everyday guidance for living well with diabetes.</span>
+              </a>
+              <a class="nav-dropdown__item" href="{{ url_for('research') }}" {% if navigation_state.research %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Research & Updates" data-track-id="nav_research" data-track-position="header-dropdown" data-track-destination="{{ url_for('research') }}">
+                <strong>Research &amp; Updates</strong>
+                <span>Research summaries, nonprofit updates, and evidence-informed health information.</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="nav-dropdown" data-nav-menu>
+            <button class="nav-dropdown__trigger" type="button" aria-expanded="false" aria-controls="nav-resources-menu" data-current="{{ 'true' if navigation_state.section == 'resources' else 'false' }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="Resources" data-track-id="nav_resources" data-track-position="header">
+              <span>Resources</span>
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div id="nav-resources-menu" class="nav-dropdown__panel" hidden>
+              <a class="nav-dropdown__item nav-dropdown__item--featured" href="{{ url_for('free_guides') }}" {% if navigation_state.free_guides %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Free Health Guides" data-track-id="nav_free_guides" data-track-position="header-dropdown" data-track-destination="{{ url_for('free_guides') }}">
+                <strong>Free Health Guides <span>FREE</span></strong>
+                <span>Downloadable and printable guides, worksheets, and checklists.</span>
+              </a>
+              <a class="nav-dropdown__item" href="{{ url_for('health_tools') }}" {% if navigation_state.health_tools %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Health Tools" data-track-id="nav_health_tools" data-track-position="header-dropdown" data-track-destination="{{ url_for('health_tools') }}">
+                <strong>Health Tools</strong>
+                <span>Simple tools and trusted resources to help you make informed health decisions.</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="nav-dropdown" data-nav-menu>
+            <button class="nav-dropdown__trigger" type="button" aria-expanded="false" aria-controls="nav-about-menu" data-current="{{ 'true' if navigation_state.section == 'about_support' else 'false' }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="About / Support" data-track-id="nav_about_support" data-track-position="header">
+              <span>About / Support</span>
+              <span class="nav-chevron" aria-hidden="true"></span>
+            </button>
+            <div id="nav-about-menu" class="nav-dropdown__panel nav-dropdown__panel--right" hidden>
+              <a class="nav-dropdown__item" href="{{ url_for('page_detail', slug='sponsors') }}" {% if navigation_state.sponsors %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Our Sponsors" data-track-id="nav_sponsors" data-track-position="header-dropdown" data-track-destination="{{ url_for('page_detail', slug='sponsors') }}">
+                <strong>Our Sponsors</strong>
+                <span>Meet the organizations and supporters helping advance our mission.</span>
+              </a>
+              <a class="nav-dropdown__item" href="{{ url_for('page_detail', slug='donation') }}" {% if navigation_state.donation %}aria-current="page"{% endif %} data-track-event="donation_cta_click" data-track-category="donation" data-track-label="Support Our Mission" data-track-id="nav_support_mission" data-track-position="header-dropdown" data-track-destination="{{ url_for('page_detail', slug='donation') }}" data-track-campaign-id="header-support">
+                <strong>Support Our Mission</strong>
+                <span>Learn how your support helps us keep our health resources free.</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="site-nav__donate" href="{{ url_for('page_detail', slug='donation') }}" {% if navigation_state.donation %}aria-current="page"{% endif %} data-track-event="donation_cta_click" data-track-category="donation" data-track-label="Donate" data-track-id="nav_donate" data-track-position="header" data-track-destination="{{ url_for('page_detail', slug='donation') }}" data-track-campaign-id="header-donate">Donate</a>
         </nav>
-        <form class="header-search" action="{{ url_for('search') }}" method="get" role="search">
+        <form class="header-search" action="{{ url_for('search') }}" method="get" role="search" data-track-id="nav_search" data-track-position="header">
           <label class="screen-reader-text" for="site-search">Search the site</label>
           <input id="site-search" name="q" type="search" value="{{ query|default('') }}" placeholder="Search">
           <button type="submit">Search</button>
         </form>
-        <details class="mobile-menu">
-          <summary aria-label="Open navigation menu">
+        <div class="mobile-menu">
+          <button class="mobile-menu__toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu-panel">
             <span class="mobile-menu__bars" aria-hidden="true"></span>
             <span>Menu</span>
-          </summary>
-          <div class="mobile-menu__panel">
+          </button>
+          <div id="mobile-menu-panel" class="mobile-menu__panel" hidden>
             <nav class="mobile-nav" aria-label="Mobile navigation">
-              {% for page in nav_pages %}
-                <a href="{{ page.canonical_path }}" {% if request.path == page.canonical_path or (page.slug == "free-guides" and request.path.startswith("/free-guides/")) %}aria-current="page"{% endif %}>{{ "Home" if page.slug == "mindful" else page.title }}</a>
-              {% endfor %}
+              <a href="{{ url_for('home') }}" {% if navigation_state.home %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Home" data-track-id="nav_home_mobile" data-track-position="mobile-header" data-track-destination="{{ url_for('home') }}">Home</a>
+
+              <div class="mobile-nav-group">
+                <button class="mobile-nav-group__trigger" type="button" aria-expanded="false" aria-controls="mobile-learn-menu" data-current="{{ 'true' if navigation_state.section == 'learn' else 'false' }}" data-track-id="nav_learn_mobile">
+                  <span>Learn</span>
+                  <span class="nav-chevron" aria-hidden="true"></span>
+                </button>
+                <div id="mobile-learn-menu" class="mobile-nav-group__panel" hidden>
+                  <a href="{{ url_for('guide') }}" {% if navigation_state.pathways %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Pathways to Wellness" data-track-id="nav_pathways_mobile" data-track-position="mobile-header" data-track-destination="{{ url_for('guide') }}">
+                    <strong>Pathways to Wellness</strong>
+                    <span>Practical articles and everyday guidance.</span>
+                  </a>
+                  <a href="{{ url_for('research') }}" {% if navigation_state.research %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Research & Updates" data-track-id="nav_research_mobile" data-track-position="mobile-header" data-track-destination="{{ url_for('research') }}">
+                    <strong>Research &amp; Updates</strong>
+                    <span>Research summaries and nonprofit updates.</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="mobile-nav-group">
+                <button class="mobile-nav-group__trigger" type="button" aria-expanded="false" aria-controls="mobile-resources-menu" data-current="{{ 'true' if navigation_state.section == 'resources' else 'false' }}" data-track-id="nav_resources_mobile">
+                  <span>Resources</span>
+                  <span class="nav-chevron" aria-hidden="true"></span>
+                </button>
+                <div id="mobile-resources-menu" class="mobile-nav-group__panel" hidden>
+                  <a href="{{ url_for('free_guides') }}" {% if navigation_state.free_guides %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Free Health Guides" data-track-id="nav_free_guides_mobile" data-track-position="mobile-header" data-track-destination="{{ url_for('free_guides') }}">
+                    <strong>Free Health Guides <span>FREE</span></strong>
+                    <span>Downloadable PDFs, worksheets, and checklists.</span>
+                  </a>
+                  <a href="{{ url_for('health_tools') }}" {% if navigation_state.health_tools %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Health Tools" data-track-id="nav_health_tools_mobile" data-track-position="mobile-header" data-track-destination="{{ url_for('health_tools') }}">
+                    <strong>Health Tools</strong>
+                    <span>Simple tools for informed health decisions.</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="mobile-nav-group">
+                <button class="mobile-nav-group__trigger" type="button" aria-expanded="false" aria-controls="mobile-about-menu" data-current="{{ 'true' if navigation_state.section == 'about_support' else 'false' }}" data-track-id="nav_about_support_mobile">
+                  <span>About / Support</span>
+                  <span class="nav-chevron" aria-hidden="true"></span>
+                </button>
+                <div id="mobile-about-menu" class="mobile-nav-group__panel" hidden>
+                  <a href="{{ url_for('page_detail', slug='sponsors') }}" {% if navigation_state.sponsors %}aria-current="page"{% endif %} data-track-event="content_cta_click" data-track-category="content" data-track-label="Our Sponsors" data-track-id="nav_sponsors_mobile" data-track-position="mobile-header" data-track-destination="{{ url_for('page_detail', slug='sponsors') }}">
+                    <strong>Our Sponsors</strong>
+                    <span>Organizations and supporters advancing our mission.</span>
+                  </a>
+                  <a href="{{ url_for('page_detail', slug='donation') }}" {% if navigation_state.donation %}aria-current="page"{% endif %} data-track-event="donation_cta_click" data-track-category="donation" data-track-label="Support Our Mission" data-track-id="nav_support_mobile" data-track-position="mobile-header" data-track-destination="{{ url_for('page_detail', slug='donation') }}" data-track-campaign-id="mobile-header-support">
+                    <strong>Support Our Mission</strong>
+                    <span>Help keep free health resources available.</span>
+                  </a>
+                </div>
+              </div>
+
+              <a class="mobile-nav__donate" href="{{ url_for('page_detail', slug='donation') }}" {% if navigation_state.donation %}aria-current="page"{% endif %} data-track-event="donation_cta_click" data-track-category="donation" data-track-label="Donate" data-track-id="nav_donate_mobile" data-track-position="mobile-header" data-track-destination="{{ url_for('page_detail', slug='donation') }}" data-track-campaign-id="mobile-header-donate">Donate</a>
               <a href="#subscribe">Subscribe</a>
             </nav>
-            <form class="mobile-search" action="{{ url_for('search') }}" method="get" role="search">
+            <form class="mobile-search" action="{{ url_for('search') }}" method="get" role="search" data-track-id="nav_search_mobile" data-track-position="mobile-header">
               <label class="screen-reader-text" for="mobile-site-search">Search the site</label>
               <input id="mobile-site-search" name="q" type="search" value="{{ query|default('') }}" placeholder="Search">
               <button type="submit">Search</button>
             </form>
           </div>
-        </details>
+        </div>
       </div>
     </header>
 
@@ -97,9 +200,9 @@
         <nav class="footer-links" aria-label="Explore">
           <h2>Explore</h2>
           <a href="{{ url_for('home') }}">Home</a>
-          <a href="{{ url_for('guide') }}">Guide</a>
-          <a href="{{ url_for('free_guides') }}">Free Guides</a>
-          <a href="{{ url_for('research') }}">Research</a>
+          <a href="{{ url_for('guide') }}">Pathways to Wellness</a>
+          <a href="{{ url_for('free_guides') }}">Free Health Guides</a>
+          <a href="{{ url_for('research') }}">Research &amp; Updates</a>
           <a href="{{ url_for('page_detail', slug='sponsors') }}">Sponsors</a>
           <a href="{{ url_for('pages_index') }}">All Pages</a>
         </nav>

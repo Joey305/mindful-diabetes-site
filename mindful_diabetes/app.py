@@ -449,6 +449,7 @@ def create_app(test_config=None):
     def inject_site_data():
         return {
             "nav_pages": content.nav_pages,
+            "navigation_state": navigation_state_for_request(content),
             "paypal_button_id": app.config["PAYPAL_HOSTED_BUTTON_ID"],
             "site_description": app.config["SITE_DESCRIPTION"],
             "newsletter_enabled": is_mailchimp_configured(app.config),
@@ -2588,6 +2589,33 @@ def title_for_request(content, endpoint, view_args):
         item = content.pages_by_slug.get(slug) or content.posts_by_slug.get(slug)
         return item.get("title", slug) if item else slug
     return endpoint or ""
+
+
+def navigation_state_for_request(content):
+    endpoint = request.endpoint or ""
+    slug = (request.view_args or {}).get("slug", "")
+    is_post = endpoint == "page_detail" and slug in content.posts_by_slug
+    is_page = endpoint == "page_detail" and slug in content.pages_by_slug
+    path = request.path or "/"
+    state = {
+        "section": "",
+        "home": endpoint == "home",
+        "pathways": endpoint == "guide" or is_post,
+        "research": endpoint == "research",
+        "free_guides": endpoint in {"free_guides", "free_guide_detail", "free_guides_no_slash", "free_guide_detail_no_slash"} or path.startswith("/free-guides"),
+        "health_tools": endpoint == "health_tools",
+        "sponsors": is_page and slug == "sponsors",
+        "donation": is_page and slug == "donation",
+    }
+    if state["pathways"] or state["research"]:
+        state["section"] = "learn"
+    elif state["free_guides"] or state["health_tools"]:
+        state["section"] = "resources"
+    elif state["sponsors"] or state["donation"]:
+        state["section"] = "about_support"
+    elif state["home"]:
+        state["section"] = "home"
+    return state
 
 
 def public_query_args(args):
