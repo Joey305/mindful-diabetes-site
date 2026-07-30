@@ -1,0 +1,58 @@
+[
+  {
+    "n": 1,
+    "label": "American Diabetes Association",
+    "source": "Standards of Care in Diabetes - 2026",
+    "year": "2026",
+    "url": "https://diabetesjournals.org/care/issue/49/Supplement_1"
+  },
+  {
+    "n": 2,
+    "label": "American Diabetes Association Nutrition & Wellness Team",
+    "source": "What is the Diabetes Plate?",
+    "year": "2026",
+    "url": "https://diabetesfoodhub.org/blog/what-diabetes-plate"
+  },
+  {
+    "n": 3,
+    "label": "U.S. Food and Drug Administration",
+    "source": "How to Understand and Use the Nutrition Facts Label",
+    "year": "2024",
+    "url": "https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label"
+  },
+  {
+    "n": 4,
+    "label": "U.S. Food and Drug Administration",
+    "source": "Added Sugars on the Nutrition Facts Label",
+    "year": "2026",
+    "url": "https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label"
+  },
+  {
+    "n": 5,
+    "label": "Centers for Disease Control and Prevention",
+    "source": "What Is the National Diabetes Prevention Program?",
+    "year": "2024",
+    "url": "https://www.cdc.gov/diabetes-prevention/programs/what-is-the-national-dpp.html"
+  },
+  {
+    "n": 6,
+    "label": "Centers for Disease Control and Prevention",
+    "source": "Your Brain and Diabetes",
+    "year": "2024",
+    "url": "https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html"
+  },
+  {
+    "n": 7,
+    "label": "American Heart Association",
+    "source": "Fats in Foods",
+    "year": "2026",
+    "url": "https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods"
+  },
+  {
+    "n": 8,
+    "label": "American Heart Association",
+    "source": "Saturated Fats",
+    "year": "2024",
+    "url": "https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/saturated-fats"
+  }
+]

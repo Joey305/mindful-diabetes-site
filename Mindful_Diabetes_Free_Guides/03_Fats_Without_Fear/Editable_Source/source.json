@@ -1,0 +1,307 @@
+{
+  "folder": "03_Fats_Without_Fear",
+  "slug": "fats-without-fear",
+  "file": "mindful-diabetes-fats-without-fear-2026.pdf",
+  "title": "Fats Without Fear",
+  "subtitle": "A Plain-English Guide to Dietary Fats, Heart Health, and Brain Health",
+  "accent": "coral",
+  "description": "A clear, nonjudgmental guide to saturated, unsaturated, and trans fats, with practical swaps for everyday meals.",
+  "who": "For readers confused by fat advice who want heart-conscious choices without food fear.",
+  "tags": [
+    "Dietary fats",
+    "Heart health",
+    "Food swaps"
+  ],
+  "refs": [
+    [
+      "American Heart Association",
+      "Fats in Foods",
+      "2026",
+      "https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods"
+    ],
+    [
+      "American Heart Association",
+      "Saturated Fats",
+      "2024",
+      "https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/saturated-fats"
+    ],
+    [
+      "American Heart Association",
+      "Diet and Lifestyle Recommendations",
+      "2026",
+      "https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/nutrition-basics/aha-diet-and-lifestyle-recommendations"
+    ],
+    [
+      "U.S. Food and Drug Administration",
+      "How to Understand and Use the Nutrition Facts Label",
+      "2024",
+      "https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label"
+    ],
+    [
+      "American Diabetes Association",
+      "Standards of Care in Diabetes - 2026",
+      "2026",
+      "https://diabetesjournals.org/care/issue/49/Supplement_1"
+    ]
+  ],
+  "visuals": [
+    [
+      "cover-foods",
+      "Fats in everyday foods",
+      [
+        "olive oil",
+        "nuts",
+        "fish",
+        "avocado",
+        "butter",
+        "fried foods",
+        "seeds",
+        "labels"
+      ]
+    ],
+    [
+      "fat-family-tree",
+      "The fat family tree",
+      [
+        "saturated",
+        "monounsaturated",
+        "polyunsaturated",
+        "trans fat",
+        "omega-3",
+        "omega-6",
+        "food source",
+        "pattern"
+      ]
+    ],
+    [
+      "replacement-pathway",
+      "Replacement matters",
+      [
+        "less often",
+        "swap",
+        "replace",
+        "pattern",
+        "LDL",
+        "heart",
+        "brain",
+        "daily meals"
+      ]
+    ],
+    [
+      "oil-chart",
+      "Cooking oil comparison",
+      [
+        "olive",
+        "canola",
+        "soybean",
+        "sunflower",
+        "avocado",
+        "corn",
+        "peanut",
+        "tropical oils"
+      ]
+    ],
+    [
+      "food-source-chart",
+      "Food sources of fats",
+      [
+        "nuts",
+        "seeds",
+        "fish",
+        "avocado",
+        "dairy",
+        "meat",
+        "baked foods",
+        "fried foods"
+      ]
+    ],
+    [
+      "label-annotation",
+      "Read the fat line",
+      [
+        "serving size",
+        "total fat",
+        "saturated fat",
+        "trans fat",
+        "%DV",
+        "ingredients",
+        "portion",
+        "context"
+      ]
+    ],
+    [
+      "swap-ladder",
+      "Swap ladder",
+      [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack",
+        "cook",
+        "spread",
+        "crunch",
+        "flavor"
+      ]
+    ],
+    [
+      "planner",
+      "Personal fat-swap planner",
+      [
+        "meal",
+        "current choice",
+        "possible swap",
+        "why",
+        "budget",
+        "taste",
+        "repeat",
+        "notes"
+      ]
+    ]
+  ],
+  "pages": [
+    [
+      "Welcome",
+      "Fat is not something to fear. Your body needs fat, and food would be dull without it. The useful question is not whether fat is allowed, but which foods show up most often and what they replace.",
+      [
+        "Use this guide to spot fat types, read labels, and try one swap at a time.",
+        "If you have pancreatitis, gallbladder disease, kidney disease, high triglycerides, or a prescribed diet, ask for individual advice."
+      ]
+    ],
+    [
+      "What dietary fat does",
+      "Fat helps build cell membranes, carries flavor, supports fullness, and helps the body absorb vitamins A, D, E, and K. It also provides more energy per gram than carbohydrate or protein, so portions can add up quickly without being wrong.",
+      [
+        "Food source matters more than one isolated number.",
+        "Nuts, oils, fish, dairy, meats, and fried foods are not nutritionally identical."
+      ]
+    ],
+    [
+      "The main fat types",
+      "Saturated, monounsaturated, polyunsaturated, and trans fats behave differently in the body. The American Heart Association recommends limiting saturated fat and avoiding trans fat, while choosing unsaturated fats in place of saturated fat when possible. [1]",
+      [
+        "Saturated fats are common in butter, cheese, fatty meats, and tropical oils.",
+        "Unsaturated fats are common in non-tropical liquid oils, nuts, seeds, avocado, and fish."
+      ]
+    ],
+    [
+      "Why replacement matters",
+      "A lower-saturated-fat pattern works best when saturated fat is replaced by unsaturated fat sources, vegetables, beans, fruit, and whole grains, not simply by refined starches or added sugar. [3]",
+      [
+        "Swap butter for olive oil in a recipe where the flavor still works.",
+        "Add beans or fish more often instead of making every meal meat-centered."
+      ]
+    ],
+    [
+      "LDL, HDL, and triglycerides",
+      "LDL cholesterol is often called 'bad' cholesterol because higher levels can contribute to plaque in arteries. HDL and triglycerides are also part of cardiovascular risk, but no single number tells the whole story.",
+      [
+        "Ask your clinician what your personal numbers mean.",
+        "Do not start supplements for cholesterol or triglycerides without guidance."
+      ]
+    ],
+    [
+      "Cooking oils",
+      "Non-tropical liquid plant oils such as olive, canola, soybean, sunflower, avocado, corn, and peanut oils are generally useful options. Coconut and palm oils are higher in saturated fat and should not be treated as miracle foods. [2]",
+      [
+        "Choose an oil that fits the recipe and budget.",
+        "Use measured amounts when portions are a concern."
+      ]
+    ],
+    [
+      "Nuts, seeds, and avocado",
+      "These foods can add unsaturated fats, fiber, minerals, texture, and satisfaction. They are calorie-dense, which is a neutral fact, not a moral warning.",
+      [
+        "Try peanuts, walnuts, sunflower seeds, pumpkin seeds, chia, flax, or avocado.",
+        "Buy small bags or store-brand options if cost matters."
+      ]
+    ],
+    [
+      "Fish and omega-3 fats",
+      "Fish can be a useful protein source and fatty fish provides omega-3 fats. Eating fish is different from assuming everyone needs an omega-3 supplement.",
+      [
+        "Canned salmon, sardines, or tuna may be budget options.",
+        "Pregnancy, allergies, mercury concerns, and medications require individualized advice."
+      ]
+    ],
+    [
+      "Butter, cheese, and dairy",
+      "Butter, cream, cheese, and many full-fat dairy foods can be higher in saturated fat. You do not have to ban them, but it helps to notice frequency and portion.",
+      [
+        "Use strong flavors in smaller amounts.",
+        "Try yogurt, lower-fat dairy, or plant options when they fit your needs."
+      ]
+    ],
+    [
+      "Coconut and palm oils",
+      "Natural does not automatically mean heart-supportive. Coconut and palm oils are plant-based but still high in saturated fat. [2]",
+      [
+        "Use them less often if LDL cholesterol is a concern.",
+        "Avoid miracle-food claims."
+      ]
+    ],
+    [
+      "Fried and ultra-processed foods",
+      "Fried foods and many packaged snacks can combine refined starch, sodium, saturated fat, and large portions. The issue is the pattern, not a single food.",
+      [
+        "Choose less often, share a portion, or pair with vegetables.",
+        "Read labels on packaged foods."
+      ]
+    ],
+    [
+      "Reading the label",
+      "The Nutrition Facts label lists total fat, saturated fat, trans fat, serving size, and Percent Daily Value. The FDA notes that 5% DV or less is low and 20% DV or more is high for a nutrient. [4]",
+      [
+        "Start with serving size.",
+        "Compare saturated fat across similar foods."
+      ]
+    ],
+    [
+      "Breakfast swaps",
+      "A swap should still taste like breakfast. Try avocado on toast instead of butter sometimes, plain yogurt with nuts instead of sweetened pastry, or eggs with vegetables instead of a fried-meat side.",
+      [
+        "Keep one familiar food.",
+        "Change the fat source or add fiber."
+      ]
+    ],
+    [
+      "Lunch and dinner swaps",
+      "Try beans, fish, tofu, or lean poultry more often. Use olive oil vinaigrette instead of creamy dressing sometimes. Add vegetables before deciding you need a bigger entree.",
+      [
+        "Swap frequency, not identity.",
+        "Make the meal satisfying enough to repeat."
+      ]
+    ],
+    [
+      "Snack swaps",
+      "For crunch, try nuts, roasted chickpeas, popcorn, vegetables with hummus, or whole-grain crackers with tuna. For sweet snacks, pair fruit with yogurt, nuts, or nut butter.",
+      [
+        "Portions matter because fats are dense.",
+        "Planned snacks can prevent grazing for some people."
+      ]
+    ],
+    [
+      "Budget-friendly fats",
+      "Healthy fat choices do not have to be expensive. Peanuts, sunflower seeds, canola oil, canned fish, eggs, and store-brand nut butters can all fit.",
+      [
+        "Buy what you will actually use.",
+        "Avoid letting premium wellness foods define health."
+      ]
+    ],
+    [
+      "Myths",
+      "Fat-free does not always mean healthier, keto does not automatically mean heart-supportive, and coconut oil is not a cure-all. Food choices work through patterns over time.",
+      [
+        "Look past front-package claims.",
+        "Use your lab numbers and clinician guidance."
+      ]
+    ],
+    [
+      "Personal swap planner",
+      "Choose one meal where a fat swap feels realistic. Write the current choice, one possible replacement, cost, taste, and whether you would repeat it.",
+      [
+        "A good swap is one you can live with.",
+        "One repeatable change beats ten abandoned ideas."
+      ]
+    ]
+  ]
+}

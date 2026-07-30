@@ -57,6 +57,17 @@
       {% endfor %}
     </div>
 
+    <nav class="admin-analytics-tabs" aria-label="Admin dashboard sections" data-admin-tabs>
+      <button class="admin-tab-button" type="button" data-admin-tab="overview" aria-controls="admin-tab-overview">Overview</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="growth" aria-controls="admin-tab-growth">Growth</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="engagement" aria-controls="admin-tab-engagement">Engagement</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="search" aria-controls="admin-tab-search">Search</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="campaigns" aria-controls="admin-tab-campaigns">Campaigns</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="content" aria-controls="admin-tab-content">Content</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="activity" aria-controls="admin-tab-activity">Activity</button>
+    </nav>
+
+    <div class="admin-tab-panel" id="admin-tab-overview" data-admin-tab-panel="overview">
     <section class="admin-panel admin-panel--wide admin-insight-panel" aria-labelledby="admin-insights-heading">
       <div class="admin-panel__header">
         <h2 id="admin-insights-heading">What changed?</h2>
@@ -68,7 +79,9 @@
         {% endfor %}
       </ul>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" id="admin-tab-growth" data-admin-tab-panel="growth">
     <section class="admin-panel admin-panel--wide" id="growth" aria-labelledby="admin-growth-goals-heading">
       <div class="admin-panel__header">
         <h2 id="admin-growth-goals-heading">Growth goals</h2>
@@ -91,7 +104,9 @@
         {% endfor %}
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-weekly-brief-heading">
       <div class="admin-panel__header">
         <h2 id="admin-weekly-brief-heading">Weekly growth brief</h2>
@@ -103,7 +118,9 @@
         {% endfor %}
       </ul>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="growth">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-actions-heading">
       <div class="admin-panel__header">
         <h2 id="admin-actions-heading">Recommended next actions</h2>
@@ -123,7 +140,9 @@
         {% endfor %}
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="growth">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-experiments-heading">
       <div class="admin-panel__header">
         <h2 id="admin-experiments-heading">Growth experiments</h2>
@@ -141,7 +160,9 @@
         {% endfor %}
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-health-score-heading">
       <div class="admin-panel__header">
         <h2 id="admin-health-score-heading">Site health score</h2>
@@ -157,18 +178,9 @@
         {% endfor %}
       </div>
     </section>
+    </div>
 
-    <nav class="admin-analytics-tabs" aria-label="Analytics sections">
-      <a href="#overview">Overview</a>
-      <a href="#donation">Donation Activity</a>
-      <a href="#health-tools">Health Tools</a>
-      <a href="#newsletter">Newsletter</a>
-      <a href="#search-insights">Search</a>
-      <a href="#campaigns">Campaigns</a>
-      <a href="#content">Content</a>
-      <a href="{{ url_for('admin_analytics_events', range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">Event Explorer</a>
-    </nav>
-
+    <div class="admin-tab-panel" id="admin-tab-content" data-admin-tab-panel="content">
     <section class="admin-panel admin-panel--wide admin-cms-actions" aria-labelledby="admin-cms-heading">
       <div>
         <h2 id="admin-cms-heading">Content Studio</h2>
@@ -186,7 +198,9 @@
         <a href="{{ url_for('admin_content_index') }}">Manage Content</a>
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
     <div class="admin-dashboard__grid" id="overview">
       <section class="admin-panel" aria-labelledby="admin-top-pages-heading">
         <h2 id="admin-top-pages-heading">Top pages</h2>
@@ -230,7 +244,9 @@
         {% endif %}
       </section>
     </div>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-benchmarks-heading">
       <div class="admin-panel__header">
         <h2 id="admin-benchmarks-heading">Simple benchmarks</h2>
@@ -247,7 +263,9 @@
         {% endfor %}
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-trend-heading">
       <div class="admin-panel__header">
         <h2 id="admin-trend-heading">30-day trend</h2>
@@ -275,7 +293,9 @@
         <p class="admin-empty">Trend lines will appear after more public events are recorded.</p>
       {% endif %}
     </section>
+    </div>
 
+    <div class="admin-tab-panel" id="admin-tab-engagement" data-admin-tab-panel="engagement">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-cta-performance-heading">
       <div class="admin-panel__header">
         <h2 id="admin-cta-performance-heading">CTA performance</h2>
@@ -312,7 +332,9 @@
         <p class="admin-empty">CTA performance will appear after tracked CTAs are visible or clicked.</p>
       {% endif %}
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="engagement">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-journey-heading">
       <div class="admin-panel__header">
         <h2 id="admin-journey-heading">Visitor paths</h2>
@@ -347,7 +369,9 @@
         <p class="admin-empty">Visitor paths will appear after tracked buttons are clicked.</p>
       {% endif %}
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="engagement">
     <section class="admin-panel admin-panel--wide" id="donation" aria-labelledby="admin-donation-heading">
       <div class="admin-panel__header">
         <h2 id="admin-donation-heading">Donation activity</h2>
@@ -365,7 +389,9 @@
         {{ analytics_list("CTA positions", dashboard.summary.donation_positions, "No CTA positions have been recorded yet.") }}
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="engagement">
     <section class="admin-panel admin-panel--wide" id="health-tools" aria-labelledby="admin-tools-heading">
       <div class="admin-panel__header">
         <h2 id="admin-tools-heading">Health-tool engagement</h2>
@@ -376,7 +402,9 @@
         {{ analytics_list("Source pages", dashboard.summary.health_tool_pages, "No pages have sent traffic to health tools yet.") }}
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="engagement">
     <section class="admin-panel admin-panel--wide" id="newsletter" aria-labelledby="admin-newsletter-heading">
       <div class="admin-panel__header">
         <h2 id="admin-newsletter-heading">Newsletter growth</h2>
@@ -392,7 +420,9 @@
         {{ analytics_list("Campaign sources", dashboard.summary.newsletter_sources, "No campaign source has been recorded yet.") }}
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" id="admin-tab-search" data-admin-tab-panel="search">
     <section class="admin-panel admin-panel--wide" id="search-insights" aria-labelledby="admin-search-insights-heading">
       <div class="admin-panel__header">
         <h2 id="admin-search-insights-heading">Search insights</h2>
@@ -409,7 +439,9 @@
         {{ analytics_list("Clicked search results", dashboard.search_insights.result_clicks, "No search-result clicks have been recorded yet.") }}
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" id="admin-tab-campaigns" data-admin-tab-panel="campaigns">
     <section class="admin-panel admin-panel--wide" id="campaigns" aria-labelledby="admin-campaigns-heading">
       <div class="admin-panel__header">
         <h2 id="admin-campaigns-heading">Campaign links</h2>
@@ -463,7 +495,9 @@
         <p class="admin-empty">Campaign performance will appear after people visit links with UTM tracking.</p>
       {% endif %}
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="content">
     <section class="admin-panel admin-panel--wide" id="content" aria-labelledby="admin-content-analytics-heading">
       <div class="admin-panel__header">
         <h2 id="admin-content-analytics-heading">Most-read content</h2>
@@ -504,7 +538,9 @@
         <p class="admin-empty">No content analytics exist for this period. Visit a public page with local analytics testing enabled to generate test events.</p>
       {% endif %}
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="content">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-purpose-heading">
       <div class="admin-panel__header">
         <h2 id="admin-purpose-heading">Top pages by purpose</h2>
@@ -530,7 +566,9 @@
         {% endfor %}
       </div>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="content">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-missed-heading">
       <div class="admin-panel__header">
         <h2 id="admin-missed-heading">Pages with missed opportunity</h2>
@@ -565,7 +603,9 @@
         <p class="admin-empty">No missed-opportunity pages stand out in this period.</p>
       {% endif %}
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="content">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-device-heading">
       <div class="admin-panel__header">
         <h2 id="admin-device-heading">Device notes</h2>
@@ -577,7 +617,9 @@
         {% endfor %}
       </ul>
     </section>
+    </div>
 
+    <div class="admin-tab-panel" id="admin-tab-activity" data-admin-tab-panel="activity">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-recent-heading">
       <div class="admin-panel__header">
         <h2 id="admin-recent-heading">Recent activity</h2>
@@ -612,7 +654,9 @@
         <p class="admin-empty">No activity yet. Public browser events will appear here after analytics is enabled.</p>
       {% endif %}
     </section>
+    </div>
 
+    <div class="admin-tab-panel" data-admin-tab-panel="activity">
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-how-heading">
       <h2 id="admin-how-heading">How these numbers work</h2>
       <ul class="admin-next-list">
@@ -623,7 +667,62 @@
         <li>Temporary storage may reset after a restart or deployment.</li>
       </ul>
     </section>
+    </div>
   </section>
+
+  <script>
+    (function () {
+      var root = document.querySelector(".admin-analytics-dashboard");
+      if (!root) {
+        return;
+      }
+      var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-admin-tab]"));
+      var panels = Array.prototype.slice.call(root.querySelectorAll("[data-admin-tab-panel]"));
+      var allowedTabs = tabs.map(function (tab) { return tab.dataset.adminTab; });
+
+      function selectedTab() {
+        var hash = (window.location.hash || "").replace("#", "");
+        var aliases = {
+          donation: "engagement",
+          "health-tools": "engagement",
+          newsletter: "engagement",
+          "search-insights": "search",
+          content: "content",
+          campaigns: "campaigns",
+          overview: "overview",
+          growth: "growth",
+        };
+        hash = aliases[hash] || hash;
+        return allowedTabs.indexOf(hash) !== -1 ? hash : "overview";
+      }
+
+      function activate(name) {
+        tabs.forEach(function (tab) {
+          var active = tab.dataset.adminTab === name;
+          tab.classList.toggle("is-active", active);
+          tab.setAttribute("aria-selected", active ? "true" : "false");
+        });
+        panels.forEach(function (panel) {
+          panel.hidden = panel.dataset.adminTabPanel !== name;
+        });
+      }
+
+      root.classList.add("admin-tabs-ready");
+      tabs.forEach(function (tab) {
+        tab.setAttribute("role", "tab");
+        tab.addEventListener("click", function () {
+          var name = tab.dataset.adminTab;
+          history.replaceState(null, "", "#" + name);
+          activate(name);
+        });
+      });
+      root.querySelector("[data-admin-tabs]").setAttribute("role", "tablist");
+      window.addEventListener("hashchange", function () {
+        activate(selectedTab());
+      });
+      activate(selectedTab());
+    })();
+  </script>
 {% endblock %}
 
 {% macro analytics_list(title, rows, empty_text) %}

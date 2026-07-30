@@ -1684,6 +1684,21 @@ def test_dashboard_renders_action_center_scores_and_plain_language_activity(tmp_
     assert b"Browser sessions" in response.data
 
 
+def test_admin_dashboard_uses_category_tabs(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    sign_in_admin(client)
+
+    response = client.get("/admin/analytics/")
+
+    assert response.status_code == 200
+    for label in [b"Overview", b"Growth", b"Engagement", b"Search", b"Campaigns", b"Content", b"Activity"]:
+        assert label in response.data
+    assert b'data-admin-tab="overview"' in response.data
+    assert b'data-admin-tab-panel="engagement"' in response.data
+    assert b'data-admin-tab-panel="activity"' in response.data
+
+
 def test_dashboard_renders_growth_goals_search_and_campaign_tools(tmp_path):
     app = analytics_app(tmp_path)
     client = app.test_client()
