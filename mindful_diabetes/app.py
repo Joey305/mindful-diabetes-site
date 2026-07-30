@@ -488,6 +488,18 @@ def create_app(test_config=None):
             )
         )
 
+    @app.errorhandler(404)
+    def not_found(error):
+        search_hint = " ".join(re.findall(r"[A-Za-z0-9]+", request.path.strip("/").replace("-", " ")))[:80]
+        return (
+            render_template(
+                "404.html",
+                search_hint=search_hint,
+                latest_posts=content.latest_posts[:3],
+            ),
+            404,
+        )
+
     def admin_required(view):
         @wraps(view)
         def wrapped_view(*args, **kwargs):

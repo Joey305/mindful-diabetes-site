@@ -47,6 +47,24 @@ def test_wordpress_home_slug_redirects_to_root():
     assert response.headers["Location"].endswith("/")
 
 
+def test_custom_404_page_uses_branded_recovery_layout():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    response = client.get("/404/")
+
+    assert response.status_code == 404
+    assert b"Page Not Found | Mindful Diabetes Inc" in response.data
+    assert b"This page wandered off the path." in response.data
+    assert b'class="site-header"' in response.data
+    assert b'action="/search/"' in response.data
+    assert b"Pathways to Wellness" in response.data
+    assert b"Free Health Guides" in response.data
+    assert b"Health Tools" in response.data
+    assert b"Research &amp; Updates" in response.data
+    assert b"The requested URL was not found on the server" not in response.data
+
+
 def test_givewp_shortcode_is_replaced_by_paypal():
     app = create_app({"TESTING": True})
     client = app.test_client()
