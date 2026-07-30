@@ -1,0 +1,4 @@
+Blood Sugar & Brain Health rebuilt asset folder
+Newly created visuals are editable PowerPoint shapes and diagrams inside the PPTX.
+Only reused raster asset: Mindful Diabetes logo at /Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/Mindful_Diabetes_Free_Guides/01_Brand_Assets/Logos/mdi-logo.jpg
+No generated-image bitmap assets were used.

@@ -1,0 +1,13 @@
+Mindful Diabetes 7-Day Prevention Reset redesigned editable workbook.
+Input inspected: mindful-diabetes-7-day-prevention-reset-2026-print 2.pdf rendered page-by-page at 180 DPI.
+Final PPTX built from editable PowerPoint text, shapes, diagrams, tracker fields, checkboxes, buttons, headers, footers, and page numbers.
+No AI-generated bitmap imagery was inserted. The only embedded image is the Mindful Diabetes logo source file copied to Assets/.
+
+Reference system:
+[1] Centers for Disease Control and Prevention. About the Lifestyle Change Program. 2024. https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html
+[2] American Diabetes Association, Diabetes Care. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes--2026. 2026. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well
+[3] American Diabetes Association Diabetes Food Hub. What is the Diabetes Plate?. 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate
+[4] U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label
+[5] U.S. Department of Health and Human Services. Physical Activity Guidelines for Americans, 2nd edition. 2018. https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf
+[6] National Heart, Lung, and Blood Institute. Sleep Deprivation and Deficiency: Healthy Sleep Habits. 2022. https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits
+[7] U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. 2026. https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label

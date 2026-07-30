@@ -1,0 +1,1084 @@
+{"kind":"deck","id":"pr/h5iqsy","name":"Deck"}
+{"kind":"layout","layoutId":"942aebbf-5628-44e3-a92e-d103ed412806","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"c185334e-2476-47cf-addf-07a47e16fbd7","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/mzmwnn","slide":1,"title":"MINDFUL DIABETES FREE GUIDES","textShapes":9}
+{"kind":"shape","id":"sh/jeh476hw","slide":1,"bbox":[0,0,816,240]}
+{"kind":"shape","id":"sh/4fql0bih","slide":1,"bbox":[0,240,816,816]}
+{"kind":"textbox","id":"sh/upo3uh0f","slide":1,"text":"MINDFUL DIABETES FREE GUIDES","textPreview":"MINDFUL DIABETES FREE GUIDES","textChars":28,"textLines":1,"bbox":[150,58,420,22]}
+{"kind":"textbox","id":"sh/vaxk3mh0","slide":1,"text":"Simple, practical guidance for metabolic and brain health.","textPreview":"Simple, practical guidance for metabolic and brain health.","textChars":58,"textLines":1,"bbox":[150,86,420,26]}
+{"kind":"shape","id":"sh/wb6lwril","slide":1,"bbox":[638,58,120,34]}
+{"kind":"textbox","id":"sh/hcz25wzq","slide":1,"text":"FREE GUIDE","textPreview":"FREE GUIDE","textChars":10,"textLines":1,"bbox":[638,65,120,20]}
+{"kind":"textbox","id":"sh/els36l0j","slide":1,"text":"Blood Sugar &\nBrain Health","textPreview":"Blood Sugar & | Brain Health","textChars":26,"textLines":2,"bbox":[58,292,480,150]}
+{"kind":"textbox","id":"sh/f614fqh4","slide":1,"text":"Understanding the Everyday Connection","textPreview":"Understanding the Everyday Connection","textChars":37,"textLines":1,"bbox":[58,452,480,38]}
+{"kind":"shape","id":"sh/nup8rid0","slide":1,"bbox":[475.8,324.5,194.4,135]}
+{"kind":"shape","id":"sh/mtgrydwf","slide":1,"bbox":[483.9,335.3,64.8,64.8]}
+{"kind":"shape","id":"sh/9wrqtsv6","slide":1,"bbox":[540.6,327.2,75.6,75.6]}
+{"kind":"shape","id":"sh/ovy90nel","slide":1,"bbox":[600,367.7,59.4,59.4]}
+{"kind":"shape","id":"sh/by9sv2dw","slide":1,"bbox":[514.95,385.25,67.5,67.5]}
+{"kind":"shape","id":"sh/ax0r2xwr","slide":1,"bbox":[567.6,335.3,0,113.4]}
+{"kind":"shape","id":"sh/x0raxsv2","slide":1,"bbox":[500,602,172,172]}
+{"kind":"shape","id":"sh/wzi94neh","slide":1,"bbox":[514,616,144,144]}
+{"kind":"shape","id":"sh/jm9sz2d8","slide":1,"bbox":[514,616,144,144]}
+{"kind":"shape","id":"sh/y10r6xwn","slide":1,"bbox":[538,644,36,36]}
+{"kind":"shape","id":"sh/uh4by1gv","slide":1,"bbox":[589,640,42,42]}
+{"kind":"shape","id":"sh/fidcr6xg","slide":1,"bbox":[552,320,50,50]}
+{"kind":"shape","id":"sh/gjmt0by1","slide":1,"bbox":[465.5,481.5,232,9]}
+{"kind":"shape","id":"sh/hkvutgfm","slide":1,"bbox":[58,650,372,116]}
+{"kind":"shape","id":"sh/6tkbu1gz","slide":1,"bbox":[58,650,8,116]}
+{"kind":"textbox","id":"sh/7utcnmx4","slide":1,"text":"A calm guide to connected care","textPreview":"A calm guide to connected care","textChars":30,"textLines":1,"bbox":[76,662,336,22]}
+{"kind":"textbox","id":"sh/sv2twryp","slide":1,"text":"Glucose, blood vessels, daily routines, sensory health, and clinical care all fit into the same bigger conversation.","textPreview":"Glucose, blood vessels, daily routines, sensory health, and clinical care all fit into the same bigger conversation.","textChars":116,"textLines":1,"bbox":[76,688,336,68]}
+{"kind":"textbox","id":"sh/tgvupwfa","slide":1,"text":"Mindful Diabetes Inc. | 501(c)(3) nonprofit","textPreview":"Mindful Diabetes Inc. | 501(c)(3) nonprofit","textChars":43,"textLines":1,"bbox":[58,940,420,24]}
+{"kind":"textbox","id":"sh/qpov6lg3","slide":1,"text":"Published: July 31, 2026 | Medical review: pending","textPreview":"Published: July 31, 2026 | Medical review: pending","textChars":50,"textLines":1,"bbox":[58,968,420,22]}
+{"kind":"image","id":"im/0vu1grax","slide":1,"name":"","alt":"Mindful Diabetes Inc. logo","bbox":[58,38,72,72]}
+{"kind":"notes","id":"nt/mzmwnn","slide":1,"text":"[Sources]\nCover uses Mindful Diabetes brand assets and original editable shapes."}
+{"kind":"slide","id":"sl/oyie9w","slide":2,"title":"MISSION","textShapes":22}
+{"kind":"textbox","id":"sh/svedcnyh","slide":2,"text":"MISSION","textPreview":"MISSION","textChars":7,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/7ulc3ihc","slide":2,"text":"The everyday connection","textPreview":"The everyday connection","textChars":23,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/6tcvadgr","slide":2,"text":"This guide is for people with and without diabetes, families, caregivers, and educators.","textPreview":"This guide is for people with and without diabetes, families, caregivers, and educators.","textChars":88,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"textbox","id":"sh/h0ne9sze","slide":2,"text":"Brain health is not controlled by one number or one habit. It is shaped by a wider pattern of metabolic health, vascular health, sensory access, sleep, mood, connection, and qualified care. [4,6-8]","textPreview":"Brain health is not controlled by one number or one habit. It is shaped by a wider pattern of metabolic health, vascular health, sensory ...","textChars":197,"textLines":1,"bbox":[58,148,700,70]}
+{"kind":"shape","id":"sh/gzedgnyt","slide":2,"bbox":[326,418,164,164]}
+{"kind":"textbox","id":"sh/fy5c7ih8","slide":2,"text":"Whole-person\nbrain health","textPreview":"Whole-person | brain health","textChars":25,"textLines":2,"bbox":[338,472,140,62]}
+{"kind":"shape","id":"sh/uxwvexgn","slide":2,"bbox":[344,255,138,48]}
+{"kind":"textbox","id":"sh/po7edcza","slide":2,"text":"Glucose care","textPreview":"Glucose care","textChars":12,"textLines":1,"bbox":[352,268,122,20]}
+{"kind":"shape","id":"sh/onydk7yp","slide":2,"bbox":[408,303,5,115]}
+{"kind":"shape","id":"sh/e1kvud4r","slide":2,"bbox":[558,316,138,48]}
+{"kind":"textbox","id":"sh/f2tw3ilc","slide":2,"text":"Blood pressure","textPreview":"Blood pressure","textChars":14,"textLines":1,"bbox":[566,329,122,20]}
+{"kind":"shape","id":"sh/g32dwnmx","slide":2,"bbox":[465.98,340,92.02,102.02]}
+{"kind":"shape","id":"sh/1obe5s3i","slide":2,"bbox":[616,518,138,48]}
+{"kind":"textbox","id":"sh/2p4vyd43","slide":2,"text":"Cholesterol","textPreview":"Cholesterol","textChars":11,"textLines":1,"bbox":[624,531,122,20]}
+{"kind":"shape","id":"sh/3qdw7il8","slide":2,"bbox":[490,500,126,42]}
+{"kind":"shape","id":"sh/ormd0nmt","slide":2,"bbox":[488,688,138,48]}
+{"kind":"textbox","id":"sh/psve9s3e","slide":2,"text":"Movement","textPreview":"Movement","textChars":8,"textLines":1,"bbox":[496,701,122,20]}
+{"kind":"shape","id":"sh/it0vmt4j","slide":2,"bbox":[408,582,80,130]}
+{"kind":"shape","id":"sh/ju9cvy54","slide":2,"bbox":[296,702,138,48]}
+{"kind":"textbox","id":"sh/7yps3ulw","slide":2,"text":"Sleep","textPreview":"Sleep","textChars":5,"textLines":1,"bbox":[304,715,122,20]}
+{"kind":"shape","id":"sh/mdwbupkb","slide":2,"bbox":[365,582,43,120]}
+{"kind":"shape","id":"sh/907a5432","slide":2,"bbox":[130,582,138,48]}
+{"kind":"textbox","id":"sh/8zytwz2h","slide":2,"text":"Hearing","textPreview":"Hearing","textChars":7,"textLines":1,"bbox":[138,595,122,20]}
+{"kind":"shape","id":"sh/za5szal0","slide":2,"bbox":[268,557.98,82.02,48.02]}
+{"kind":"shape","id":"sh/y9wrq5kf","slide":2,"bbox":[120,396,138,48]}
+{"kind":"textbox","id":"sh/lcna1k3q","slide":2,"text":"Vision","textPreview":"Vision","textChars":6,"textLines":1,"bbox":[128,409,122,20]}
+{"kind":"shape","id":"sh/0betsf2l","slide":2,"bbox":[258,420,92.02,22.02]}
+{"kind":"shape","id":"sh/j69sbe14","slide":2,"bbox":[244,256,138,48]}
+{"kind":"textbox","id":"sh/i5gb29kj","slide":2,"text":"Mood","textPreview":"Mood","textChars":4,"textLines":1,"bbox":[252,269,122,20]}
+{"kind":"shape","id":"sh/gzqhg7ep","slide":2,"bbox":[382,280,26,138]}
+{"kind":"shape","id":"sh/h0zy9cfa","slide":2,"bbox":[426,196,138,48]}
+{"kind":"textbox","id":"sh/ux8zexwz","slide":2,"text":"Social connection","textPreview":"Social connection","textChars":17,"textLines":1,"bbox":[434,209,122,20]}
+{"kind":"shape","id":"sh/fyhg72x4","slide":2,"bbox":[408,244,87,174]}
+{"kind":"shape","id":"sh/43ahkre1","slide":2,"bbox":[658,432,138,48]}
+{"kind":"textbox","id":"sh/p4jydwfm","slide":2,"text":"Medical care","textPreview":"Medical care","textChars":12,"textLines":1,"bbox":[666,445,122,20]}
+{"kind":"shape","id":"sh/218zihwv","slide":2,"bbox":[490,456,168,44]}
+{"kind":"shape","id":"sh/321gbmxg","slide":2,"bbox":[58,820,700,88]}
+{"kind":"shape","id":"sh/c7ahorex","slide":2,"bbox":[58,820,8,88]}
+{"kind":"textbox","id":"sh/d8jyhwvi","slide":2,"text":"Risk can sometimes be influenced, but it cannot be perfectly controlled.","textPreview":"Risk can sometimes be influenced, but it cannot be perfectly controlled.","textChars":72,"textLines":1,"bbox":[76,832,664,22]}
+{"kind":"textbox","id":"sh/xgbyxwji","slide":2,"text":"Use this guide to organize questions, not to predict the future. Memory concerns deserve qualified evaluation.","textPreview":"Use this guide to organize questions, not to predict the future. Memory concerns deserve qualified evaluation.","textChars":110,"textLines":1,"bbox":[76,858,664,40]}
+{"kind":"shape","id":"sh/cf2h4rid","slide":2,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/betgvm1s","slide":2,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/adkz2h07","slide":2,"text":"Everyday connection","textPreview":"Everyday connection","textChars":19,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/pcbytcjm","slide":2,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/obih07i1","slide":2,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/na9gr21g","slide":2,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/290zyx0v","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/oyie9w","slide":2,"text":"[Sources]\n[4] Centers for Disease Control and Prevention. Your Brain and Diabetes. Updated May 15, 2024. https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n[7] Livingston G, Huntley J, Liu KY, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. The Lancet. 2024;404(10452):572-628. doi:10.1016/S0140-6736(24)01296-0. https://www.thelancet.com/article/S0140-6736(24)01296-0/fulltext\n[8] Centers for Disease Control and Prevention. Reducing Risk for Dementia. Updated May 15, 2024. https://www.cdc.gov/alzheimers-dementia/prevention/index.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/l7q0d1","slide":3,"title":"GLUCOSE BASICS","textShapes":23}
+{"kind":"textbox","id":"sh/rq9gnixc","slide":3,"text":"GLUCOSE BASICS","textPreview":"GLUCOSE BASICS","textChars":14,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/srixgnex","slide":3,"text":"What glucose does","textPreview":"What glucose does","textChars":17,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/dsrypsfi","slide":3,"text":"Glucose is one useful energy source. Diabetes care is not about eliminating glucose.","textPreview":"Glucose is one useful energy source. Diabetes care is not about eliminating glucose.","textChars":84,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"textbox","id":"sh/et0fixwn","slide":3,"text":"During digestion, many carbohydrate-containing foods are broken into glucose, which enters the bloodstream. Fiber is not fully digested into glucose, and different carbohydrate foods can affect people differently. [1,2,10]","textPreview":"During digestion, many carbohydrate-containing foods are broken into glucose, which enters the bloodstream. Fiber is not fully digested i...","textChars":222,"textLines":1,"bbox":[58,148,700,62]}
+{"kind":"shape","id":"sh/fu9gr2x8","slide":3,"bbox":[58,260,296,78]}
+{"kind":"shape","id":"sh/0v2xk7et","slide":3,"bbox":[74,278,38,38]}
+{"kind":"textbox","id":"sh/1wbytcve","slide":3,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[74,285,38,20]}
+{"kind":"textbox","id":"sh/uxgf6twj","slide":3,"text":"A meal is eaten","textPreview":"A meal is eaten","textChars":15,"textLines":1,"bbox":[124,280,210,40]}
+{"kind":"shape","id":"sh/vypwfyx4","slide":3,"bbox":[408,260,296,78]}
+{"kind":"shape","id":"sh/f210jepc","slide":3,"bbox":[424,278,38,38]}
+{"kind":"textbox","id":"sh/u1sza9or","slide":3,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[424,285,38,20]}
+{"kind":"textbox","id":"sh/h43ilo7i","slide":3,"text":"Food is digested","textPreview":"Food is digested","textChars":16,"textLines":1,"bbox":[474,280,210,40]}
+{"kind":"shape","id":"sh/g3ahcj6x","slide":3,"bbox":[354,299,54,0]}
+{"kind":"shape","id":"sh/7e10fepg","slide":3,"bbox":[58,382,296,78]}
+{"kind":"shape","id":"sh/6dsz69ov","slide":3,"bbox":[74,400,38,38]}
+{"kind":"textbox","id":"sh/tgjiho76","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[74,407,38,20]}
+{"kind":"textbox","id":"sh/sfah8j6l","slide":3,"text":"Many carbohydrates are broken into glucose","textPreview":"Many carbohydrates are broken into glucose","textChars":42,"textLines":1,"bbox":[124,402,210,40]}
+{"kind":"shape","id":"sh/jahgbup4","slide":3,"bbox":[354,299,54,122]}
+{"kind":"shape","id":"sh/y98z2p8j","slide":3,"bbox":[408,382,296,78]}
+{"kind":"shape","id":"sh/m5ojupsb","slide":3,"bbox":[424,400,38,38]}
+{"kind":"textbox","id":"sh/n6h0nu9w","slide":3,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[424,407,38,20]}
+{"kind":"textbox","id":"sh/o7q1wzah","slide":3,"text":"Glucose enters the bloodstream","textPreview":"Glucose enters the bloodstream","textChars":30,"textLines":1,"bbox":[474,402,210,40]}
+{"kind":"shape","id":"sh/98zip4r2","slide":3,"bbox":[354,421,54,0]}
+{"kind":"shape","id":"sh/a98jy9sn","slide":3,"bbox":[58,504,296,78]}
+{"kind":"shape","id":"sh/bah0re98","slide":3,"bbox":[74,522,38,38]}
+{"kind":"textbox","id":"sh/wbq1kjat","slide":3,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[74,529,38,20]}
+{"kind":"textbox","id":"sh/xczit4re","slide":3,"text":"Insulin helps regulate use and storage","textPreview":"Insulin helps regulate use and storage","textChars":38,"textLines":1,"bbox":[124,524,210,40]}
+{"kind":"shape","id":"sh/ydsjm9sj","slide":3,"bbox":[354,421,54,122]}
+{"kind":"shape","id":"sh/je10ve94","slide":3,"bbox":[408,504,296,78]}
+{"kind":"shape","id":"sh/t83ml8bm","slide":3,"bbox":[424,522,38,38]}
+{"kind":"textbox","id":"sh/s7uls3u1","slide":3,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[424,529,38,20]}
+{"kind":"textbox","id":"sh/76lkjitg","slide":3,"text":"Cells use available energy","textPreview":"Cells use available energy","textChars":26,"textLines":1,"bbox":[474,524,210,40]}
+{"kind":"shape","id":"sh/65c3qdcv","slide":3,"bbox":[354,543,54,0]}
+{"kind":"shape","id":"sh/hwnmpsbi","slide":3,"bbox":[58,760,700,92]}
+{"kind":"shape","id":"sh/gvulwnux","slide":3,"bbox":[58,760,8,92]}
+{"kind":"textbox","id":"sh/ful4nitc","slide":3,"text":"The brain needs more than glucose.","textPreview":"The brain needs more than glucose.","textChars":34,"textLines":1,"bbox":[76,772,664,22]}
+{"kind":"textbox","id":"sh/utc3udcr","slide":3,"text":"Thinking and memory also depend on oxygen, blood flow, sleep, medications, sensory access, mood, and broader health. [4,6]","textPreview":"Thinking and memory also depend on oxygen, blood flow, sleep, medications, sensory access, mood, and broader health. [4,6]","textChars":122,"textLines":1,"bbox":[76,798,664,44]}
+{"kind":"shape","id":"sh/p0nmtsbe","slide":3,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/4zel07u9","slide":3,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/07ix8vid","slide":3,"text":"Glucose basics","textPreview":"Glucose basics","textChars":14,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/l8ryh0zy","slide":3,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/y50f6l0n","slide":3,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/z69wfqhs","slide":3,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/c3ix4bih","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/l7q0d1","slide":3,"text":"[Sources]\n[1] National Institute of Diabetes and Digestive and Kidney Diseases. Symptoms & Causes of Diabetes. Last reviewed October 2024. https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[4] Centers for Disease Control and Prevention. Your Brain and Diabetes. Updated May 15, 2024. https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/sl7ky0","slide":4,"title":"INSULIN","textShapes":20}
+{"kind":"textbox","id":"sh/ilk7il4j","slide":4,"text":"INSULIN","textPreview":"INSULIN","textChars":7,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/5obqt03u","slide":4,"text":"How insulin helps regulate glucose","textPreview":"How insulin helps regulate glucose","textChars":34,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/4n2pkvm9","slide":4,"text":"Insulin is a hormone. For some people, it is also a prescribed medicine.","textPreview":"Insulin is a hormone. For some people, it is also a prescribed medicine.","textChars":72,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"textbox","id":"sh/rat8val0","slide":4,"text":"Insulin helps regulate how glucose moves from the bloodstream into cells and how the body stores energy in tissues such as muscle and liver. Personal glucose targets vary; medicine decisions belong with the care team. [1,2]","textPreview":"Insulin helps regulate how glucose moves from the bloodstream into cells and how the body stores energy in tissues such as muscle and liv...","textChars":223,"textLines":1,"bbox":[58,146,700,70]}
+{"kind":"shape","id":"sh/6pk7m54f","slide":4,"bbox":[88,330,92,72]}
+{"kind":"textbox","id":"sh/tcvqx036","slide":4,"text":"Pancreas","textPreview":"Pancreas","textChars":8,"textLines":1,"bbox":[78,410,112,22]}
+{"kind":"shape","id":"sh/sb2pof2l","slide":4,"bbox":[222,310,360,96]}
+{"kind":"textbox","id":"sh/ne98j6lw","slide":4,"text":"Bloodstream","textPreview":"Bloodstream","textChars":11,"textLines":1,"bbox":[332,328,140,20]}
+{"kind":"shape","id":"sh/mt07a14b","slide":4,"bbox":[246,362,20,20]}
+{"kind":"shape","id":"sh/o7axcb2h","slide":4,"bbox":[284,374,20,20]}
+{"kind":"shape","id":"sh/98je5gj2","slide":4,"bbox":[322,362,20,20]}
+{"kind":"shape","id":"sh/m5sfa1kr","slide":4,"bbox":[360,374,20,20]}
+{"kind":"shape","id":"sh/n61w361c","slide":4,"bbox":[398,362,20,20]}
+{"kind":"shape","id":"sh/wbuxgb2t","slide":4,"bbox":[436,374,20,20]}
+{"kind":"shape","id":"sh/xc3y9gje","slide":4,"bbox":[474,362,20,20]}
+{"kind":"shape","id":"sh/a9sfelkn","slide":4,"bbox":[512,374,20,20]}
+{"kind":"shape","id":"sh/ba1w7618","slide":4,"bbox":[348,463,86,46]}
+{"kind":"textbox","id":"sh/sfqx4r29","slide":4,"text":"Insulin\nsignal","textPreview":"Insulin | signal","textChars":14,"textLines":2,"bbox":[356,470,70,30]}
+{"kind":"shape","id":"sh/dgzexwju","slide":4,"bbox":[586,272,150,128]}
+{"kind":"textbox","id":"sh/t07mlorm","slide":4,"text":"Muscle cells","textPreview":"Muscle cells","textChars":12,"textLines":1,"bbox":[604,292,114,22]}
+{"kind":"textbox","id":"sh/8zylcjq1","slide":4,"text":"Glucose can be used for energy.","textPreview":"Glucose can be used for energy.","textChars":31,"textLines":1,"bbox":[606,326,110,46]}
+{"kind":"shape","id":"sh/7yp4je9g","slide":4,"bbox":[586,448,150,128]}
+{"kind":"textbox","id":"sh/6xg3a98v","slide":4,"text":"Liver","textPreview":"Liver","textChars":5,"textLines":1,"bbox":[604,468,114,22]}
+{"kind":"textbox","id":"sh/hormpo7i","slide":4,"text":"Glucose can be stored and released as needed.","textPreview":"Glucose can be stored and released as needed.","textChars":45,"textLines":1,"bbox":[606,502,110,46]}
+{"kind":"shape","id":"sh/gnilg3qx","slide":4,"bbox":[180,358,42,8]}
+{"kind":"shape","id":"sh/v294nyps","slide":4,"bbox":[391,406,11,57]}
+{"kind":"shape","id":"sh/u1g3et87","slide":4,"bbox":[434,336,152,150]}
+{"kind":"shape","id":"sh/5srmt87u","slide":4,"bbox":[434,486,152,26]}
+{"kind":"shape","id":"sh/4rilk3q9","slide":4,"bbox":[58,682,338,168]}
+{"kind":"shape","id":"sh/mxcje5or","slide":4,"bbox":[72,698,18,18]}
+{"kind":"textbox","id":"sh/nyl0napc","slide":4,"text":"What is personal","textPreview":"What is personal","textChars":16,"textLines":1,"bbox":[100,695,282,24]}
+{"kind":"shape","id":"sh/ozu1gf6x","slide":4,"bbox":[76,727,302,110]}
+{"kind":"textbox","id":"sh/903ip072","slide":4,"text":"Glucose targets vary by age, diabetes type, medicines, pregnancy status, health history, and hypoglycemia risk.\nA target range is a care-plan decision, not a moral score.","textPreview":"Glucose targets vary by age, diabetes type, medicines, pregnancy status, health history, and hypoglycemia risk. | A target range is a car...","textChars":170,"textLines":2,"bbox":[76,736,302,98]}
+{"kind":"shape","id":"sh/a1cji5on","slide":4,"bbox":[420,682,338,168]}
+{"kind":"shape","id":"sh/b2l0rap8","slide":4,"bbox":[434,698,18,18]}
+{"kind":"textbox","id":"sh/w3e1kf6t","slide":4,"text":"What insulin is not","textPreview":"What insulin is not","textChars":19,"textLines":1,"bbox":[462,695,282,24]}
+{"kind":"shape","id":"sh/x4nitkne","slide":4,"bbox":[438,727,302,110]}
+{"kind":"textbox","id":"sh/y5wjmpoz","slide":4,"text":"Insulin is not a punishment or failure.\nPeople with diabetes do not all have the same insulin needs or the same treatment plan.","textPreview":"Insulin is not a punishment or failure. | People with diabetes do not all have the same insulin needs or the same treatment plan.","textChars":127,"textLines":2,"bbox":[438,736,302,98]}
+{"kind":"shape","id":"sh/j65kvu5k","slide":4,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/7m10fuxo","slide":4,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/6lsj6pg3","slide":4,"text":"Insulin","textPreview":"Insulin","textChars":7,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/tojihkfe","slide":4,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/sna18fy9","slide":4,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/fql0juxk","slide":4,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/upcjapgz","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/sl7ky0","slide":4,"text":"[Sources]\n[1] National Institute of Diabetes and Digestive and Kidney Diseases. Symptoms & Causes of Diabetes. Last reviewed October 2024. https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/a1ys1m","slide":5,"title":"INSULIN RESISTANCE","textShapes":25}
+{"kind":"textbox","id":"sh/qlkrm5kv","slide":5,"text":"INSULIN RESISTANCE","textPreview":"INSULIN RESISTANCE","textChars":18,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/dovahkj6","slide":5,"text":"Insulin resistance is biology, not blame","textPreview":"Insulin resistance is biology, not blame","textChars":40,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/cnm9of2l","slide":5,"text":"Certain tissues may respond less effectively to insulin signals.","textPreview":"Certain tissues may respond less effectively to insulin signals.","textChars":64,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/3itsbq14","slide":5,"bbox":[58,230,204,104]}
+{"kind":"textbox","id":"sh/2hkrilkj","slide":5,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[70,242,24,22]}
+{"kind":"textbox","id":"sh/pkbad0ja","slide":5,"text":"Insulin sends a signal.","textPreview":"Insulin sends a signal.","textChars":23,"textLines":1,"bbox":[102,254,142,54]}
+{"kind":"shape","id":"sh/4j29kv2p","slide":5,"bbox":[290,230,204,104]}
+{"kind":"textbox","id":"sh/ve987q18","slide":5,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[302,242,24,22]}
+{"kind":"textbox","id":"sh/ut0relkn","slide":5,"text":"Certain tissues respond less effectively.","textPreview":"Certain tissues respond less effectively.","textChars":41,"textLines":1,"bbox":[334,254,142,54]}
+{"kind":"shape","id":"sh/o3idozah","slide":5,"bbox":[262,282,28,0]}
+{"kind":"shape","id":"sh/p4rex4r2","slide":5,"bbox":[522,230,204,104]}
+{"kind":"textbox","id":"sh/2hgvmpsb","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[534,242,24,22]}
+{"kind":"textbox","id":"sh/3ipwvu9w","slide":5,"text":"The body may produce more insulin for a time.","textPreview":"The body may produce more insulin for a time.","textChars":45,"textLines":1,"bbox":[566,254,142,54]}
+{"kind":"shape","id":"sh/gfydkfa5","slide":5,"bbox":[494,282,28,0]}
+{"kind":"shape","id":"sh/1g7etkrq","slide":5,"bbox":[58,382,204,104]}
+{"kind":"textbox","id":"sh/edgvipsf","slide":5,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[70,394,24,22]}
+{"kind":"textbox","id":"sh/fepwratk","slide":5,"text":"Glucose may remain elevated when compensation is not enough.","textPreview":"Glucose may remain elevated when compensation is not enough.","textChars":60,"textLines":1,"bbox":[102,406,142,54]}
+{"kind":"shape","id":"sh/kb2xwjap","slide":5,"bbox":[262,282,260,152]}
+{"kind":"shape","id":"sh/lcbe5oru","slide":5,"bbox":[290,382,204,104]}
+{"kind":"textbox","id":"sh/ts7e9oje","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[302,394,24,22]}
+{"kind":"textbox","id":"sh/8rydgj2t","slide":5,"text":"Clinical support and sustainable changes may help manage risk.","textPreview":"Clinical support and sustainable changes may help manage risk.","textChars":62,"textLines":1,"bbox":[334,406,142,54]}
+{"kind":"shape","id":"sh/7qpw7e18","slide":5,"bbox":[262,434,28,0]}
+{"kind":"shape","id":"sh/6pgve9kn","slide":5,"bbox":[58,560,700,102]}
+{"kind":"shape","id":"sh/lone54j2","slide":5,"bbox":[58,560,8,102]}
+{"kind":"textbox","id":"sh/knedcz2h","slide":5,"text":"Not a character judgment","textPreview":"Not a character judgment","textChars":24,"textLines":1,"bbox":[76,572,664,22]}
+{"kind":"textbox","id":"sh/j25w3u1w","slide":5,"text":"Insulin resistance is influenced by biology, health conditions, medicines, sleep, movement, genetics, aging, and other factors. One food or one habit does not explain the whole picture. [1,17]","textPreview":"Insulin resistance is influenced by biology, health conditions, medicines, sleep, movement, genetics, aging, and other factors. One food ...","textChars":192,"textLines":1,"bbox":[76,598,664,54]}
+{"kind":"textbox","id":"sh/y1wvapkr","slide":5,"text":"Helpful questions are practical: What patterns matter for me? What care-plan changes are appropriate? What support is realistic in my life?","textPreview":"Helpful questions are practical: What patterns matter for me? What care-plan changes are appropriate? What support is realistic in my life?","textChars":139,"textLines":1,"bbox":[58,690,700,42]}
+{"kind":"shape","id":"sh/x0ne1kj6","slide":5,"bbox":[58,766,330,92]}
+{"kind":"shape","id":"sh/wzed8z2l","slide":5,"bbox":[72,782,18,18]}
+{"kind":"textbox","id":"sh/2tsjm1w7","slide":5,"text":"Avoid overpromising","textPreview":"Avoid overpromising","textChars":19,"textLines":1,"bbox":[100,779,274,24]}
+{"kind":"textbox","id":"sh/3u1kv6ds","slide":5,"text":"No routine, food, supplement, or single number guarantees reversal of insulin resistance or prevention of dementia.","textPreview":"No routine, food, supplement, or single number guarantees reversal of insulin resistance or prevention of dementia.","textChars":115,"textLines":1,"bbox":[76,811,294,34]}
+{"kind":"shape","id":"sh/ova1obed","slide":5,"bbox":[428,766,330,92]}
+{"kind":"shape","id":"sh/pwj2xgvi","slide":5,"bbox":[442,782,18,18]}
+{"kind":"textbox","id":"sh/ep8jihwv","slide":5,"text":"Use care support","textPreview":"Use care support","textChars":16,"textLines":1,"bbox":[470,779,274,24]}
+{"kind":"textbox","id":"sh/fqhkrmdg","slide":5,"text":"Care teams can interpret labs, medicines, sleep, activity, symptoms, and goals together.","textPreview":"Care teams can interpret labs, medicines, sleep, activity, symptoms, and goals together.","textChars":88,"textLines":1,"bbox":[446,811,294,34]}
+{"kind":"shape","id":"sh/grq1kre1","slide":5,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/1sz2twvm","slide":5,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/61ojehwz","slide":5,"text":"Insulin resistance","textPreview":"Insulin resistance","textChars":18,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/r2hknmdk","slide":5,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/je1gzih0","slide":5,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/id8zqd0v","slide":5,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/5gjy1sz6","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/a1ys1m","slide":5,"text":"[Sources]\n[1] National Institute of Diabetes and Digestive and Kidney Diseases. Symptoms & Causes of Diabetes. Last reviewed October 2024. https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/8hsjto","slide":6,"title":"BRAIN SUPPORT","textShapes":18}
+{"kind":"textbox","id":"sh/2dwn6pcv","slide":6,"text":"BRAIN SUPPORT","textPreview":"BRAIN SUPPORT","textChars":13,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/p0nm1kvm","slide":6,"text":"The brain needs reliable support","textPreview":"The brain needs reliable support","textChars":32,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/4ze58zu1","slide":6,"text":"Brain function depends on energy delivery, oxygen, blood flow, sleep, and broader health.","textPreview":"Brain function depends on energy delivery, oxygen, blood flow, sleep, and broader health.","textChars":89,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/r2543udc","slide":6,"bbox":[325.2,316.5,165.6,115]}
+{"kind":"shape","id":"sh/q1wnapcr","slide":6,"bbox":[332.1,325.7,55.2,55.2]}
+{"kind":"shape","id":"sh/d47m54vi","slide":6,"bbox":[380.4,318.8,64.4,64.4]}
+{"kind":"shape","id":"sh/c3y5czux","slide":6,"bbox":[431,353.3,50.6,50.6]}
+{"kind":"shape","id":"sh/z6po7edo","slide":6,"bbox":[358.55,368.25,57.5,57.5]}
+{"kind":"shape","id":"sh/e5gne9c3","slide":6,"bbox":[403.4,325.7,0,96.6]}
+{"kind":"shape","id":"sh/4ni5of2l","slide":6,"bbox":[370,334,76,76]}
+{"kind":"shape","id":"sh/5ormxkj6","slide":6,"bbox":[180,234,132,48]}
+{"kind":"textbox","id":"sh/i1gnm5kf","slide":6,"text":"Adequate energy","textPreview":"Adequate energy","textChars":15,"textLines":1,"bbox":[188,247,116,20]}
+{"kind":"shape","id":"sh/jm94va10","slide":6,"bbox":[312,258,69.13,87.13]}
+{"kind":"shape","id":"sh/sri5sf2h","slide":6,"bbox":[500,220,132,48]}
+{"kind":"textbox","id":"sh/tsrm1kj2","slide":6,"text":"Oxygen","textPreview":"Oxygen","textChars":6,"textLines":1,"bbox":[508,233,116,20]}
+{"kind":"shape","id":"sh/6p0nq5kr","slide":6,"bbox":[434.87,244,65.13,101.13]}
+{"kind":"shape","id":"sh/rq94za1c","slide":6,"bbox":[594,388,132,48]}
+{"kind":"textbox","id":"sh/gv25wzit","slide":6,"text":"Blood flow","textPreview":"Blood flow","textChars":10,"textLines":1,"bbox":[602,401,116,20]}
+{"kind":"shape","id":"sh/1wb654je","slide":6,"bbox":[446,372,148,40]}
+{"kind":"shape","id":"sh/p0net076","slide":6,"bbox":[462,560,132,48]}
+{"kind":"textbox","id":"sh/ozed0v6l","slide":6,"text":"Healthy vessels","textPreview":"Healthy vessels","textChars":15,"textLines":1,"bbox":[470,573,116,20]}
+{"kind":"shape","id":"sh/3y5wrqp0","slide":6,"bbox":[408,410,54,174]}
+{"kind":"shape","id":"sh/2xwvylof","slide":6,"bbox":[210,560,132,48]}
+{"kind":"textbox","id":"sh/d47ex07i","slide":6,"text":"Sleep","textPreview":"Sleep","textChars":5,"textLines":1,"bbox":[218,573,116,20]}
+{"kind":"shape","id":"sh/c3yd4f6x","slide":6,"bbox":[342,410,66,174]}
+{"kind":"shape","id":"sh/b2pwvapc","slide":6,"bbox":[95,388,132,48]}
+{"kind":"textbox","id":"sh/q1wv25or","slide":6,"text":"Metabolic health","textPreview":"Metabolic health","textChars":16,"textLines":1,"bbox":[103,401,116,20]}
+{"kind":"shape","id":"sh/t83elg7y","slide":6,"bbox":[227,372,143,40]}
+{"kind":"shape","id":"sh/s7udsbqd","slide":6,"bbox":[58,704,338,162]}
+{"kind":"shape","id":"sh/idsb2h4b","slide":6,"bbox":[72,720,18,18]}
+{"kind":"textbox","id":"sh/je1svm5w","slide":6,"text":"Sudden low glucose","textPreview":"Sudden low glucose","textChars":18,"textLines":1,"bbox":[100,717,282,24]}
+{"kind":"shape","id":"sh/4fat4rmh","slide":6,"bbox":[76,749,302,104]}
+{"kind":"textbox","id":"sh/5gjaxcn2","slide":6,"text":"Can affect attention, speech, judgment, coordination, or consciousness quickly.\nCan become urgent; follow the personal low-glucose plan.","textPreview":"Can affect attention, speech, judgment, coordination, or consciousness quickly. | Can become urgent; follow the personal low-glucose plan.","textChars":136,"textLines":2,"bbox":[76,758,302,92]}
+{"kind":"shape","id":"sh/6hsb6h47","slide":6,"bbox":[420,704,338,162]}
+{"kind":"shape","id":"sh/r21szm5s","slide":6,"bbox":[434,720,18,18]}
+{"kind":"textbox","id":"sh/s3ut8rmd","slide":6,"text":"High glucose patterns","textPreview":"High glucose patterns","textChars":21,"textLines":1,"bbox":[462,717,282,24]}
+{"kind":"shape","id":"sh/t43u1wny","slide":6,"bbox":[438,749,302,104]}
+{"kind":"textbox","id":"sh/ml8buxo3","slide":6,"text":"May contribute to complications over time depending on severity, duration, and individual context.\nPatterns deserve support, not shame.","textPreview":"May contribute to complications over time depending on severity, duration, and individual context. | Patterns deserve support, not shame.","textChars":135,"textLines":2,"bbox":[438,758,302,92]}
+{"kind":"shape","id":"sh/76hsn25o","slide":6,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/n298rexc","slide":6,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/210ritgr","slide":6,"text":"Brain support","textPreview":"Brain support","textChars":13,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/94rqtofi","slide":6,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/o3i9kjyx","slide":6,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/b698vyxo","slide":6,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/a50rmtg3","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/8hsjto","slide":6,"text":"[Sources]\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[3] Centers for Disease Control and Prevention. Low Blood Sugar (Hypoglycemia). Updated May 15, 2024. https://www.cdc.gov/diabetes/about/low-blood-sugar-hypoglycemia.html\n[4] Centers for Disease Control and Prevention. Your Brain and Diabetes. Updated May 15, 2024. https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/ftxs4l","slide":7,"title":"BLOOD VESSELS","textShapes":15}
+{"kind":"textbox","id":"sh/f6hk3yxc","slide":7,"text":"BLOOD VESSELS","textPreview":"BLOOD VESSELS","textChars":13,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/g7qlw3eh","slide":7,"text":"Blood vessels deliver what brain tissue needs","textPreview":"Blood vessels deliver what brain tissue needs","textChars":45,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/1sz258f2","slide":7,"text":"Vascular health is one part of cognitive-health care; it is not a diagnosis.","textPreview":"Vascular health is one part of cognitive-health care; it is not a diagnosis.","textChars":76,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/2t83ydwn","slide":7,"bbox":[82,292,88,76]}
+{"kind":"textbox","id":"sh/3uhk7ix8","slide":7,"text":"Heart","textPreview":"Heart","textChars":5,"textLines":1,"bbox":[72,374,110,20]}
+{"kind":"shape","id":"sh/ovql0net","slide":7,"bbox":[214,312,272,34]}
+{"kind":"textbox","id":"sh/pwz29sfe","slide":7,"text":"Arteries carry blood","textPreview":"Arteries carry blood","textChars":20,"textLines":1,"bbox":[268,319,160,18]}
+{"kind":"shape","id":"sh/qx832dwz","slide":7,"bbox":[542,240,176,210]}
+{"kind":"textbox","id":"sh/by1kbix4","slide":7,"text":"Brain tissue","textPreview":"Brain tissue","textChars":12,"textLines":1,"bbox":[566,258,128,22]}
+{"kind":"shape","id":"sh/bel47adg","slide":7,"bbox":[566,308,0,96]}
+{"kind":"shape","id":"sh/qdc3ypwv","slide":7,"bbox":[554,348,36,0]}
+{"kind":"shape","id":"sh/dg3m9kvm","slide":7,"bbox":[590,308,0,96]}
+{"kind":"shape","id":"sh/cful0fe1","slide":7,"bbox":[578,348,36,0]}
+{"kind":"shape","id":"sh/3q143ad4","slide":7,"bbox":[614,308,0,96]}
+{"kind":"shape","id":"sh/2ps3u5wj","slide":7,"bbox":[602,348,36,0]}
+{"kind":"shape","id":"sh/pc3m5kva","slide":7,"bbox":[638,308,0,96]}
+{"kind":"shape","id":"sh/orulwfep","slide":7,"bbox":[626,348,36,0]}
+{"kind":"shape","id":"sh/nm54zudo","slide":7,"bbox":[662,308,0,96]}
+{"kind":"shape","id":"sh/mlwn69w3","slide":7,"bbox":[650,348,36,0]}
+{"kind":"shape","id":"sh/i1g7ytgb","slide":7,"bbox":[686,308,0,96]}
+{"kind":"shape","id":"sh/j29o7yxw","slide":7,"bbox":[674,348,36,0]}
+{"kind":"shape","id":"sh/k3ip03yh","slide":7,"bbox":[126,311,88,18]}
+{"kind":"shape","id":"sh/54r698fm","slide":7,"bbox":[486,329,56,16]}
+{"kind":"textbox","id":"sh/65072dg7","slide":7,"text":"Oxygen and nutrients","textPreview":"Oxygen and nutrients","textChars":20,"textLines":1,"bbox":[318,360,180,22]}
+{"kind":"textbox","id":"sh/7698bixs","slide":7,"text":"Blood pressure, diabetes, cholesterol, smoking, physical activity, and other clinical or environmental factors can affect vascular health. [4,8,9]\nVascular cognitive impairment is not the same thing as ordinary forgetfulness.","textPreview":"Blood pressure, diabetes, cholesterol, smoking, physical activity, and other clinical or environmental factors can affect vascular health...","textChars":225,"textLines":2,"bbox":[58,538,700,102]}
+{"kind":"shape","id":"sh/s7ip4nyd","slide":7,"bbox":[58,704,700,112]}
+{"kind":"shape","id":"sh/t8rqdsfy","slide":7,"bbox":[58,704,8,112]}
+{"kind":"textbox","id":"sh/m9w7q9g3","slide":7,"text":"Potentially urgent","textPreview":"Potentially urgent","textChars":18,"textLines":1,"bbox":[76,716,664,22]}
+{"kind":"textbox","id":"sh/na5ozexo","slide":7,"text":"Sudden confusion, new weakness, facial drooping, trouble speaking, severe headache, chest pain, or stroke-like symptoms should be treated as urgent.","textPreview":"Sudden confusion, new weakness, facial drooping, trouble speaking, severe headache, chest pain, or stroke-like symptoms should be treated...","textChars":148,"textLines":1,"bbox":[76,742,664,64]}
+{"kind":"shape","id":"sh/p4va5wz6","slide":7,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/o3m9wril","slide":7,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/32ds3mh0","slide":7,"text":"Blood vessels","textPreview":"Blood vessels","textChars":13,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/214ruh0f","slide":7,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/dsva9wz2","slide":7,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/crm90rih","slide":7,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/b6ds7mhc","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/ftxs4l","slide":7,"text":"[Sources]\n[4] Centers for Disease Control and Prevention. Your Brain and Diabetes. Updated May 15, 2024. https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n[8] Centers for Disease Control and Prevention. Reducing Risk for Dementia. Updated May 15, 2024. https://www.cdc.gov/alzheimers-dementia/prevention/index.html\n[9] National Heart, Lung, and Blood Institute. High Blood Pressure - Treatment. Updated May 2024. https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/se8faw","slide":8,"title":"HYPERGLYCEMIA","textShapes":16}
+{"kind":"textbox","id":"sh/s3ed8vat","slide":8,"text":"HYPERGLYCEMIA","textPreview":"HYPERGLYCEMIA","textChars":13,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/r25wfq98","slide":8,"text":"High blood sugar over time","textPreview":"High blood sugar over time","textChars":26,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/qhwv6lsn","slide":8,"text":"Patterns are information, not grades.","textPreview":"Patterns are information, not grades.","textChars":37,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"textbox","id":"sh/187e50ra","slide":8,"text":"One isolated reading does not define a person. Repeated or prolonged high glucose may contribute to vascular and nerve complications over time, depending on severity, duration, and individual circumstances. [2,4]","textPreview":"One isolated reading does not define a person. Repeated or prolonged high glucose may contribute to vascular and nerve complications over...","textChars":212,"textLines":1,"bbox":[58,148,700,68]}
+{"kind":"shape","id":"sh/07edcvap","slide":8,"bbox":[76,250,664,292]}
+{"kind":"shape","id":"sh/f65w3q9k","slide":8,"bbox":[104,504,608,0]}
+{"kind":"shape","id":"sh/e5wvalsz","slide":8,"bbox":[104,284,0,220]}
+{"kind":"textbox","id":"sh/pc7e9krm","slide":8,"text":"time","textPreview":"time","textChars":4,"textLines":1,"bbox":[682,514,60,18]}
+{"kind":"textbox","id":"sh/obyxgfa1","slide":8,"text":"glucose pattern","textPreview":"glucose pattern","textChars":15,"textLines":1,"bbox":[52,264,100,18]}
+{"kind":"shape","id":"sh/utkvelsv","slide":8,"bbox":[99,339,10,10]}
+{"kind":"shape","id":"sh/vutcnqtg","slide":8,"bbox":[169,361,10,10]}
+{"kind":"shape","id":"sh/wv2dgva1","slide":8,"bbox":[109,344,60,22]}
+{"kind":"shape","id":"sh/hwbupgb6","slide":8,"bbox":[244,333,10,10]}
+{"kind":"shape","id":"sh/ixkvilsr","slide":8,"bbox":[179,338,65,28]}
+{"kind":"shape","id":"sh/jytcrqtc","slide":8,"bbox":[329,403,10,10]}
+{"kind":"shape","id":"sh/4zmdkvax","slide":8,"bbox":[252.54,341.54,77.93,62.93]}
+{"kind":"shape","id":"sh/50vut0bi","slide":8,"bbox":[409,411,10,10]}
+{"kind":"shape","id":"sh/y10bm1cn","slide":8,"bbox":[339,408,70,8]}
+{"kind":"shape","id":"sh/z29cf6t8","slide":8,"bbox":[491,381,10,10]}
+{"kind":"shape","id":"sh/n65sn290","slide":8,"bbox":[419,386,72,30]}
+{"kind":"shape","id":"sh/25wrexsf","slide":8,"bbox":[571,427,10,10]}
+{"kind":"shape","id":"sh/p87apcrq","slide":8,"bbox":[499.54,389.54,72.93,38.93]}
+{"kind":"shape","id":"sh/o7e9g7ql","slide":8,"bbox":[659,415,10,10]}
+{"kind":"shape","id":"sh/f258ji9o","slide":8,"bbox":[581,420,78,12]}
+{"kind":"shape","id":"sh/e1wrads3","slide":8,"bbox":[340,322,346,36]}
+{"kind":"textbox","id":"sh/14nqlsru","slide":8,"text":"A repeated pattern deserves care-team review.","textPreview":"A repeated pattern deserves care-team review.","textChars":45,"textLines":1,"bbox":[354,330,318,18]}
+{"kind":"shape","id":"sh/03e9cna9","slide":8,"bbox":[58,750,338,148]}
+{"kind":"shape","id":"sh/zypsvm98","slide":8,"bbox":[72,766,18,18]}
+{"kind":"textbox","id":"sh/yxgrmh8n","slide":8,"text":"Bring the pattern","textPreview":"Bring the pattern","textChars":17,"textLines":1,"bbox":[100,763,282,24]}
+{"kind":"shape","id":"sh/w7qx0fmt","slide":8,"bbox":[76,795,302,90]}
+{"kind":"textbox","id":"sh/x8zytk3e","slide":8,"text":"What do these readings mean in my care plan?\nCould medicines, illness, sleep, stress, food timing, or activity be involved?","textPreview":"What do these readings mean in my care plan? | Could medicines, illness, sleep, stress, food timing, or activity be involved?","textChars":123,"textLines":2,"bbox":[76,804,302,78]}
+{"kind":"shape","id":"sh/a58fy54n","slide":8,"bbox":[420,750,338,148]}
+{"kind":"shape","id":"sh/v6hgral8","slide":8,"bbox":[434,766,18,18]}
+{"kind":"textbox","id":"sh/4bqx4z2p","slide":8,"text":"Keep it nonjudgmental","textPreview":"Keep it nonjudgmental","textChars":21,"textLines":1,"bbox":[462,763,282,24]}
+{"kind":"shape","id":"sh/5wjyx43a","slide":8,"bbox":[438,795,302,90]}
+{"kind":"textbox","id":"sh/i98f2pkz","slide":8,"text":"Do not change medicines from this guide.\nAsk what symptoms or patterns should prompt a call.","textPreview":"Do not change medicines from this guide. | Ask what symptoms or patterns should prompt a call.","textChars":92,"textLines":2,"bbox":[438,804,302,78]}
+{"kind":"shape","id":"sh/jahgvulk","slide":8,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/szax8z21","slide":8,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/t0jy143m","slide":8,"text":"Hyperglycemia","textPreview":"Hyperglycemia","textChars":13,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/d8byhk7m","slide":8,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/c72xozq1","slide":8,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/r6tgfupg","slide":8,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/q50fmp8b","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/se8faw","slide":8,"text":"[Sources]\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[4] Centers for Disease Control and Prevention. Your Brain and Diabetes. Updated May 15, 2024. https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/g281sg","slide":9,"title":"HYPOGLYCEMIA SAFETY","textShapes":25}
+{"kind":"textbox","id":"sh/mdorm5wv","slide":9,"text":"HYPOGLYCEMIA SAFETY","textPreview":"HYPOGLYCEMIA SAFETY","textChars":19,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/9gzqhkv6","slide":9,"text":"Low blood sugar can affect the brain quickly","textPreview":"Low blood sugar can affect the brain quickly","textChars":44,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/ofq9ofe1","slide":9,"text":"Symptoms vary. People using insulin or certain medicines may be at greater risk. [2,3]","textPreview":"Symptoms vary. People using insulin or certain medicines may be at greater risk. [2,3]","textChars":86,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/zax8bqd4","slide":9,"bbox":[58,206,700,128]}
+{"kind":"textbox","id":"sh/e9ori5wj","slide":9,"text":"Early or common warning symptoms","textPreview":"Early or common warning symptoms","textChars":32,"textLines":1,"bbox":[80,222,330,24]}
+{"kind":"shape","id":"sh/1cfqd0va","slide":9,"bbox":[86,261,12,12]}
+{"kind":"textbox","id":"sh/0b69kvep","slide":9,"text":"shaking","textPreview":"shaking","textChars":7,"textLines":1,"bbox":[106,258,250,22]}
+{"kind":"shape","id":"sh/rmd8nqd8","slide":9,"bbox":[386,261,12,12]}
+{"kind":"textbox","id":"sh/ql4relwn","slide":9,"text":"sweating","textPreview":"sweating","textChars":8,"textLines":1,"bbox":[406,258,250,22]}
+{"kind":"shape","id":"sh/gvih0nap","slide":9,"bbox":[86,295,12,12]}
+{"kind":"textbox","id":"sh/hwritsra","slide":9,"text":"hunger","textPreview":"hunger","textChars":6,"textLines":1,"bbox":[106,292,250,22]}
+{"kind":"shape","id":"sh/utgzydsj","slide":9,"bbox":[386,295,12,12]}
+{"kind":"textbox","id":"sh/fu9gri94","slide":9,"text":"dizziness","textPreview":"dizziness","textChars":9,"textLines":1,"bbox":[406,292,250,22]}
+{"kind":"shape","id":"sh/sryhw3at","slide":9,"bbox":[58,368,700,128]}
+{"kind":"textbox","id":"sh/ts7yp8ry","slide":9,"text":"Thinking and coordination symptoms","textPreview":"Thinking and coordination symptoms","textChars":34,"textLines":1,"bbox":[80,384,330,24]}
+{"kind":"shape","id":"sh/6pgzudsn","slide":9,"bbox":[86,423,12,12]}
+{"kind":"textbox","id":"sh/7qpgnyt8","slide":9,"text":"confusion","textPreview":"confusion","textChars":9,"textLines":1,"bbox":[106,420,250,22]}
+{"kind":"shape","id":"sh/cn2h87ax","slide":9,"bbox":[386,423,12,12]}
+{"kind":"textbox","id":"sh/dobi1cri","slide":9,"text":"behavior change","textPreview":"behavior change","textChars":15,"textLines":1,"bbox":[406,420,250,22]}
+{"kind":"shape","id":"sh/l47ylcjm","slide":9,"bbox":[86,457,12,12]}
+{"kind":"textbox","id":"sh/03yhs721","slide":9,"text":"difficulty speaking","textPreview":"difficulty speaking","textChars":19,"textLines":1,"bbox":[106,454,250,22]}
+{"kind":"shape","id":"sh/zipgj21g","slide":9,"bbox":[386,457,12,12]}
+{"kind":"textbox","id":"sh/yhgzqxkv","slide":9,"text":"weakness","textPreview":"weakness","textChars":8,"textLines":1,"bbox":[406,454,250,22]}
+{"kind":"shape","id":"sh/dgnyhsja","slide":9,"bbox":[58,530,700,128]}
+{"kind":"textbox","id":"sh/cfehon25","slide":9,"text":"Severe symptoms","textPreview":"Severe symptoms","textChars":15,"textLines":1,"bbox":[80,546,330,24]}
+{"kind":"shape","id":"sh/be5gfi1k","slide":9,"bbox":[86,585,12,12]}
+{"kind":"textbox","id":"sh/qdwzmdkz","slide":9,"text":"seizure","textPreview":"seizure","textChars":7,"textLines":1,"bbox":[106,582,250,22]}
+{"kind":"shape","id":"sh/pcnydsje","slide":9,"bbox":[386,585,12,12]}
+{"kind":"textbox","id":"sh/obehkn2t","slide":9,"text":"fainting","textPreview":"fainting","textChars":8,"textLines":1,"bbox":[406,582,250,22]}
+{"kind":"shape","id":"sh/ehsvut0r","slide":9,"bbox":[86,619,12,12]}
+{"kind":"textbox","id":"sh/filwnehc","slide":9,"text":"inability to safely self-treat","textPreview":"inability to safely self-treat","textChars":30,"textLines":1,"bbox":[106,616,250,22]}
+{"kind":"shape","id":"sh/gjuxwjix","slide":9,"bbox":[386,619,12,12]}
+{"kind":"textbox","id":"sh/1k3epoz2","slide":9,"text":"loss of consciousness","textPreview":"loss of consciousness","textChars":21,"textLines":1,"bbox":[406,616,250,22]}
+{"kind":"shape","id":"sh/6tsvq90f","slide":9,"bbox":[58,730,700,122]}
+{"kind":"shape","id":"sh/re1wjeh0","slide":9,"bbox":[58,730,8,122]}
+{"kind":"textbox","id":"sh/sfadsjil","slide":9,"text":"Safety actions","textPreview":"Safety actions","textChars":14,"textLines":1,"bbox":[76,742,664,22]}
+{"kind":"textbox","id":"sh/tgjeloz6","slide":9,"text":"Follow your individual low-glucose plan. Do not drive during significant symptoms. Severe confusion, seizure, fainting, or inability to safely self-treat requires appropriate emergency assistance.","textPreview":"Follow your individual low-glucose plan. Do not drive during significant symptoms. Severe confusion, seizure, fainting, or inability to s...","textChars":196,"textLines":1,"bbox":[76,768,664,74]}
+{"kind":"shape","id":"sh/ip8vmp0j","slide":9,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/jq1wfuh4","slide":9,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/b21sralk","slide":9,"text":"Hypoglycemia safety","textPreview":"Hypoglycemia safety","textChars":19,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/a1sbi54f","slide":9,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/x43atk3q","slide":9,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/w3utkfm5","slide":9,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/ne1snqlo","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/g281sg","slide":9,"text":"[Sources]\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[3] Centers for Disease Control and Prevention. Low Blood Sugar (Hypoglycemia). Updated May 15, 2024. https://www.cdc.gov/diabetes/about/low-blood-sugar-hypoglycemia.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/9bwnxe","slide":10,"title":"COGNITIVE RISK","textShapes":14}
+{"kind":"textbox","id":"sh/xw729wre","slide":10,"text":"COGNITIVE RISK","textPreview":"COGNITIVE RISK","textChars":14,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/a9g3yh83","slide":10,"text":"Diabetes is associated with increased risk; it is not destiny","textPreview":"Diabetes is associated with increased risk; it is not destiny","textChars":61,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/vapk7m9o","slide":10,"text":"Dementia has multiple causes and contributors. Risk factors can interact across a life course. [5,7,8]","textPreview":"Dementia has multiple causes and contributors. Risk factors can interact across a life course. [5,7,8]","textChars":102,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/kzyl4bq5","slide":10,"bbox":[58,206,338,306]}
+{"kind":"shape","id":"sh/5072dg7q","slide":10,"bbox":[72,222,18,18]}
+{"kind":"textbox","id":"sh/ixg3218z","slide":10,"text":"Potentially modifiable or treatable","textPreview":"Potentially modifiable or treatable","textChars":35,"textLines":1,"bbox":[100,219,282,24]}
+{"kind":"shape","id":"sh/jypkb69k","slide":10,"bbox":[76,251,302,248]}
+{"kind":"textbox","id":"sh/03e1s7q1","slide":10,"text":"Blood pressure\nCholesterol and vascular risk\nSmoking and excessive alcohol use\nPhysical inactivity\nHearing or vision concerns\nDepression and social isolation","textPreview":"Blood pressure | Cholesterol and vascular risk | Smoking and excessive alcohol use | Physical inactivity | Hearing or vision concerns | D...","textChars":157,"textLines":6,"bbox":[76,260,302,236]}
+{"kind":"shape","id":"sh/14n21cr6","slide":10,"bbox":[420,206,338,306]}
+{"kind":"shape","id":"sh/90buts3a","slide":10,"bbox":[434,222,18,18]}
+{"kind":"textbox","id":"sh/8zidknmp","slide":10,"text":"Not fully controllable","textPreview":"Not fully controllable","textChars":22,"textLines":1,"bbox":[462,219,282,24]}
+{"kind":"shape","id":"sh/ny9cril4","slide":10,"bbox":[438,251,302,248]}
+{"kind":"textbox","id":"sh/mx0vid4j","slide":10,"text":"Age\nGenetics and family history\nEarly-life conditions\nEnvironmental exposures\nAccess to care\nExisting medical history","textPreview":"Age | Genetics and family history | Early-life conditions | Environmental exposures | Access to care | Existing medical history","textChars":117,"textLines":6,"bbox":[438,260,302,236]}
+{"kind":"shape","id":"sh/h4bexs36","slide":10,"bbox":[58,574,700,92]}
+{"kind":"shape","id":"sh/w32don2l","slide":10,"bbox":[58,574,8,92]}
+{"kind":"textbox","id":"sh/v2twv2l0","slide":10,"text":"Important distinction","textPreview":"Important distinction","textChars":21,"textLines":1,"bbox":[76,586,664,22]}
+{"kind":"textbox","id":"sh/u1kvmx4v","slide":10,"text":"Population-level association does not mean every person with diabetes will develop dementia. Memory or thinking changes deserve professional evaluation.","textPreview":"Population-level association does not mean every person with diabetes will develop dementia. Memory or thinking changes deserve professio...","textChars":152,"textLines":1,"bbox":[76,612,664,44]}
+{"kind":"shape","id":"sh/5sve1c3i","slide":10,"bbox":[350.4,752,115.2,80]}
+{"kind":"shape","id":"sh/4rmds72x","slide":10,"bbox":[355.2,758.4,38.4,38.4]}
+{"kind":"shape","id":"sh/o7upkfe5","slide":10,"bbox":[388.8,753.6,44.8,44.8]}
+{"kind":"shape","id":"sh/p8n6dkfq","slide":10,"bbox":[424,777.6,35.2,35.2]}
+{"kind":"shape","id":"sh/2lc7i5wz","slide":10,"bbox":[373.6,788,40,40]}
+{"kind":"shape","id":"sh/3mlobaxk","slide":10,"bbox":[404.8,758.4,0,67.2]}
+{"kind":"shape","id":"sh/cbepofeh","slide":10,"bbox":[586,786,12,12]}
+{"kind":"shape","id":"sh/dcn6hkfm","slide":10,"bbox":[408,792,184,0]}
+{"kind":"shape","id":"sh/q9w7mpwb","slide":10,"bbox":[567.78,821.58,12,12]}
+{"kind":"shape","id":"sh/ba5ofaxw","slide":10,"bbox":[408,792,165.78,35.58]}
+{"kind":"shape","id":"sh/sfa5cvex","slide":10,"bbox":[516.72,850.11,12,12]}
+{"kind":"shape","id":"sh/tgj650fi","slide":10,"bbox":[408,792,114.72,64.11]}
+{"kind":"shape","id":"sh/va9sbyh0","slide":10,"bbox":[442.94,865.94,12,12]}
+{"kind":"shape","id":"sh/a90ritgf","slide":10,"bbox":[408,792,40.94,79.94]}
+{"kind":"shape","id":"sh/xwrad8z6","slide":10,"bbox":[361.06,865.94,12,12]}
+{"kind":"shape","id":"sh/wbi9k3yl","slide":10,"bbox":[367.06,792,40.94,79.94]}
+{"kind":"shape","id":"sh/n6p87eh4","slide":10,"bbox":[287.28,850.11,12,12]}
+{"kind":"shape","id":"sh/m5gre9gj","slide":10,"bbox":[293.28,792,114.72,64.11]}
+{"kind":"shape","id":"sh/98ra9ozu","slide":10,"bbox":[236.22,821.58,12,12]}
+{"kind":"shape","id":"sh/87y9gjyp","slide":10,"bbox":[242.22,792,165.78,35.58]}
+{"kind":"shape","id":"sh/z2p83ehs","slide":10,"bbox":[218,786,12,12]}
+{"kind":"shape","id":"sh/y1gra9g7","slide":10,"bbox":[224,792,184,0]}
+{"kind":"shape","id":"sh/e90vehc7","slide":10,"bbox":[236.22,750.42,12,12]}
+{"kind":"shape","id":"sh/fa9cn2dc","slide":10,"bbox":[242.22,756.42,165.78,35.58]}
+{"kind":"shape","id":"sh/0bidg7ux","slide":10,"bbox":[287.28,721.89,12,12]}
+{"kind":"shape","id":"sh/1crepcvi","slide":10,"bbox":[293.28,727.89,114.72,64.11]}
+{"kind":"shape","id":"sh/qlgvaxcv","slide":10,"bbox":[361.06,706.06,12,12]}
+{"kind":"shape","id":"sh/rm9cj2dg","slide":10,"bbox":[367.06,712.06,40.94,79.94]}
+{"kind":"shape","id":"sh/snidc7u1","slide":10,"bbox":[442.94,706.06,12,12]}
+{"kind":"shape","id":"sh/dorulcvm","slide":10,"bbox":[408,712.06,40.94,79.94]}
+{"kind":"shape","id":"sh/ihgv6xcz","slide":10,"bbox":[516.72,721.89,12,12]}
+{"kind":"shape","id":"sh/3ipcfidk","slide":10,"bbox":[408,727.89,114.72,64.11]}
+{"kind":"shape","id":"sh/lcvyl0f2","slide":10,"bbox":[567.78,750.42,12,12]}
+{"kind":"shape","id":"sh/kbmxcveh","slide":10,"bbox":[408,756.42,165.78,35.58]}
+{"kind":"shape","id":"sh/zadgjqxw","slide":10,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/y94falwb","slide":10,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/x8vyhgfq","slide":10,"text":"Cognitive risk","textPreview":"Cognitive risk","textChars":14,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/c7mx8be5","slide":10,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/b6dgf6xk","slide":10,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/a54f61wf","slide":10,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/p4bydgfu","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/9bwnxe","slide":10,"text":"[Sources]\n[5] American Diabetes Association Professional Practice Committee for Diabetes. 13. Older Adults: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S277-S296. doi:10.2337/dc26-S013. https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026\n[7] Livingston G, Huntley J, Liu KY, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. The Lancet. 2024;404(10452):572-628. doi:10.1016/S0140-6736(24)01296-0. https://www.thelancet.com/article/S0140-6736(24)01296-0/fulltext\n[8] Centers for Disease Control and Prevention. Reducing Risk for Dementia. Updated May 15, 2024. https://www.cdc.gov/alzheimers-dementia/prevention/index.html\n[13] Centers for Disease Control and Prevention. Health Effects of Social Isolation and Loneliness. Updated May 15, 2024. https://www.cdc.gov/social-connectedness/risk-factors/index.html\n[15] National Institute on Deafness and Other Communication Disorders. Age-Related Hearing Loss (Presbycusis). Updated March 2023. https://www.nidcd.nih.gov/health/age-related-hearing-loss\n[16] Centers for Disease Control and Prevention. About Mental Health. Updated May 2026. https://www.cdc.gov/mental-health/about/index.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/0c1i7n","slide":11,"title":"RISK MEANING","textShapes":17}
+{"kind":"textbox","id":"sh/83m54jul","slide":11,"text":"RISK MEANING","textPreview":"RISK MEANING","textChars":12,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/n2d4vet0","slide":11,"text":"Risk information should guide questions, not panic","textPreview":"Risk information should guide questions, not panic","textChars":50,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/m14n29cf","slide":11,"text":"A risk estimate describes patterns in groups; it does not predict one person's future with certainty. [6-8]","textPreview":"A risk estimate describes patterns in groups; it does not predict one person's future with certainty. [6-8]","textChars":107,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/xsf61ob2","slide":11,"bbox":[58,178,338,216]}
+{"kind":"shape","id":"sh/wr658juh","slide":11,"bbox":[72,194,18,18]}
+{"kind":"textbox","id":"sh/vqxozytc","slide":11,"text":"Group-level risk","textPreview":"Group-level risk","textChars":16,"textLines":1,"bbox":[100,191,282,24]}
+{"kind":"shape","id":"sh/apon6tcr","slide":11,"bbox":[76,223,302,158]}
+{"kind":"textbox","id":"sh/dwbmp4vy","slide":11,"text":"Describes patterns across many people.\nSupports public-health planning.\nHelps identify areas for clinical attention.","textPreview":"Describes patterns across many people. | Supports public-health planning. | Helps identify areas for clinical attention.","textChars":116,"textLines":3,"bbox":[76,232,302,146]}
+{"kind":"shape","id":"sh/cv25wzud","slide":11,"bbox":[420,178,338,216]}
+{"kind":"shape","id":"sh/qhc72lwb","slide":11,"bbox":[434,194,18,18]}
+{"kind":"textbox","id":"sh/ril8vqxw","slide":11,"text":"Individual future","textPreview":"Individual future","textChars":17,"textLines":1,"bbox":[462,191,282,24]}
+{"kind":"shape","id":"sh/cjup4veh","slide":11,"bbox":[438,223,302,158]}
+{"kind":"textbox","id":"sh/dknqx0fm","slide":11,"text":"Cannot be predicted from one factor.\nDepends on many interacting circumstances.\nRequires personal medical context.","textPreview":"Cannot be predicted from one factor. | Depends on many interacting circumstances. | Requires personal medical context.","textChars":114,"textLines":3,"bbox":[438,232,302,146]}
+{"kind":"shape","id":"sh/ylw765w7","slide":11,"bbox":[58,452,700,260]}
+{"kind":"textbox","id":"sh/zm58zaxs","slide":11,"text":"Hypothetical: many paths, no single forecast","textPreview":"Hypothetical: many paths, no single forecast","textChars":44,"textLines":1,"bbox":[80,472,400,24]}
+{"kind":"shape","id":"sh/0nep8fed","slide":11,"bbox":[102,528,8,8]}
+{"kind":"shape","id":"sh/l8nq1kfy","slide":11,"bbox":[128,528,8,8]}
+{"kind":"shape","id":"sh/m9w7a5wj","slide":11,"bbox":[154,528,8,8]}
+{"kind":"shape","id":"sh/na583ax4","slide":11,"bbox":[180,528,8,8]}
+{"kind":"shape","id":"sh/jeporutw","slide":11,"bbox":[206,528,8,8]}
+{"kind":"shape","id":"sh/idg7ypcb","slide":11,"bbox":[232,528,8,8]}
+{"kind":"shape","id":"sh/5g76tkb2","slide":11,"bbox":[258,528,8,8]}
+{"kind":"shape","id":"sh/kfyp0fuh","slide":11,"bbox":[284,528,8,8]}
+{"kind":"shape","id":"sh/va5onat0","slide":11,"bbox":[310,528,8,8]}
+{"kind":"shape","id":"sh/a9w7u5cf","slide":11,"bbox":[336,528,8,8]}
+{"kind":"shape","id":"sh/xc76pkb6","slide":11,"bbox":[362,528,8,8]}
+{"kind":"shape","id":"sh/wbypwful","slide":11,"bbox":[388,528,8,8]}
+{"kind":"shape","id":"sh/nm5ojqto","slide":11,"bbox":[414,528,8,8]}
+{"kind":"shape","id":"sh/mlwnq5cj","slide":11,"bbox":[440,528,8,8]}
+{"kind":"shape","id":"sh/sfad4765","slide":11,"bbox":[466,528,8,8]}
+{"kind":"shape","id":"sh/dgjudcna","slide":11,"bbox":[492,528,8,8]}
+{"kind":"shape","id":"sh/qd8v2xoz","slide":11,"bbox":[518,528,8,8]}
+{"kind":"shape","id":"sh/rehcb25k","slide":11,"bbox":[544,528,8,8]}
+{"kind":"shape","id":"sh/0jad8761","slide":11,"bbox":[570,528,8,8]}
+{"kind":"shape","id":"sh/14juhcnm","slide":11,"bbox":[596,528,8,8]}
+{"kind":"shape","id":"sh/ehsv6hov","slide":11,"bbox":[102,562,8,8]}
+{"kind":"shape","id":"sh/fi1cfm5g","slide":11,"bbox":[128,562,8,8]}
+{"kind":"shape","id":"sh/gnqtwn6x","slide":11,"bbox":[154,562,8,8]}
+{"kind":"shape","id":"sh/h8zu5sni","slide":11,"bbox":[180,562,8,8]}
+{"kind":"shape","id":"sh/9gvelcry","slide":11,"bbox":[206,562,8,8]}
+{"kind":"shape","id":"sh/8f2ds7ad","slide":11,"bbox":[232,562,8,8]}
+{"kind":"shape","id":"sh/netcjm9s","slide":11,"bbox":[258,562,8,8]}
+{"kind":"shape","id":"sh/mdkvqhs7","slide":11,"bbox":[284,562,8,8]}
+{"kind":"shape","id":"sh/lcbuhcbm","slide":11,"bbox":[310,562,8,8]}
+{"kind":"shape","id":"sh/0r2do7a1","slide":11,"bbox":[336,562,8,8]}
+{"kind":"shape","id":"sh/zqtcf2tw","slide":11,"bbox":[362,562,8,8]}
+{"kind":"shape","id":"sh/ypkvmxsb","slide":11,"bbox":[388,562,8,8]}
+{"kind":"shape","id":"sh/dorudsbq","slide":11,"bbox":[414,562,8,8]}
+{"kind":"shape","id":"sh/cnidkna5","slide":11,"bbox":[440,562,8,8]}
+{"kind":"shape","id":"sh/2tgbut83","slide":11,"bbox":[466,562,8,8]}
+{"kind":"shape","id":"sh/3upsny9o","slide":11,"bbox":[492,562,8,8]}
+{"kind":"shape","id":"sh/ovytw3qt","slide":11,"bbox":[518,562,8,8]}
+{"kind":"shape","id":"sh/pw7ap87e","slide":11,"bbox":[544,562,8,8]}
+{"kind":"shape","id":"sh/epwrqt8r","slide":11,"bbox":[570,562,8,8]}
+{"kind":"shape","id":"sh/fqpsjy9c","slide":11,"bbox":[596,562,8,8]}
+{"kind":"shape","id":"sh/gry9sjqx","slide":11,"bbox":[102,596,8,8]}
+{"kind":"shape","id":"sh/1s7alori","slide":11,"bbox":[128,596,8,8]}
+{"kind":"shape","id":"sh/61wrm98v","slide":11,"bbox":[154,596,8,8]}
+{"kind":"shape","id":"sh/rm5sfe9g","slide":11,"bbox":[180,596,8,8]}
+{"kind":"shape","id":"sh/vu1g7qlw","slide":11,"bbox":[206,596,8,8]}
+{"kind":"shape","id":"sh/atszylkb","slide":11,"bbox":[232,596,8,8]}
+{"kind":"shape","id":"sh/xwjy9g32","slide":11,"bbox":[258,596,8,8]}
+{"kind":"shape","id":"sh/wvah0b2h","slide":11,"bbox":[284,596,8,8]}
+{"kind":"shape","id":"sh/ji1gbq1s","slide":11,"bbox":[310,596,8,8]}
+{"kind":"shape","id":"sh/ihsz2lkn","slide":11,"bbox":[336,596,8,8]}
+{"kind":"shape","id":"sh/5kjyd0jy","slide":11,"bbox":[362,596,8,8]}
+{"kind":"shape","id":"sh/kjah4v2d","slide":11,"bbox":[388,596,8,8]}
+{"kind":"shape","id":"sh/zmhgz6lo","slide":11,"bbox":[414,596,8,8]}
+{"kind":"shape","id":"sh/elofq1k3","slide":11,"bbox":[440,596,8,8]}
+{"kind":"shape","id":"sh/4rmd07i1","slide":11,"bbox":[466,596,8,8]}
+{"kind":"shape","id":"sh/psve9sjm","slide":11,"bbox":[492,596,8,8]}
+{"kind":"shape","id":"sh/254vyx0v","slide":11,"bbox":[518,596,8,8]}
+{"kind":"shape","id":"sh/36dw721g","slide":11,"bbox":[544,596,8,8]}
+{"kind":"shape","id":"sh/g3mdwnip","slide":11,"bbox":[570,596,8,8]}
+{"kind":"shape","id":"sh/h4vu5sja","slide":11,"bbox":[596,596,8,8]}
+{"kind":"shape","id":"sh/u1kvud0z","slide":11,"bbox":[102,630,8,8]}
+{"kind":"shape","id":"sh/f2dc3i1k","slide":11,"bbox":[128,630,8,8]}
+{"kind":"shape","id":"sh/0z6d8ri9","slide":11,"bbox":[154,630,8,8]}
+{"kind":"shape","id":"sh/10fehczu","slide":11,"bbox":[180,630,8,8]}
+{"kind":"shape","id":"sh/90jq1ory","slide":11,"bbox":[206,630,8,8]}
+{"kind":"shape","id":"sh/8zq98jad","slide":11,"bbox":[232,630,8,8]}
+{"kind":"shape","id":"sh/7yh8ze9s","slide":11,"bbox":[258,630,8,8]}
+{"kind":"shape","id":"sh/mx8r6tsn","slide":11,"bbox":[284,630,8,8]}
+{"kind":"shape","id":"sh/h4ja58ra","slide":11,"bbox":[310,630,8,8]}
+{"kind":"shape","id":"sh/w3a9c3ap","slide":11,"bbox":[336,630,8,8]}
+{"kind":"shape","id":"sh/v2183y94","slide":11,"bbox":[362,630,8,8]}
+{"kind":"shape","id":"sh/u1sratsj","slide":11,"bbox":[388,630,8,8]}
+{"kind":"shape","id":"sh/x8fqt4rq","slide":11,"bbox":[414,630,8,8]}
+{"kind":"shape","id":"sh/c7690za5","slide":11,"bbox":[440,630,8,8]}
+{"kind":"shape","id":"sh/2d4na583","slide":11,"bbox":[466,630,8,8]}
+{"kind":"shape","id":"sh/nedo3apo","slide":11,"bbox":[492,630,8,8]}
+{"kind":"shape","id":"sh/ofm5cfq9","slide":11,"bbox":[518,630,8,8]}
+{"kind":"shape","id":"sh/pgv65k7u","slide":11,"bbox":[544,630,8,8]}
+{"kind":"shape","id":"sh/aho7ep8f","slide":11,"bbox":[570,630,8,8]}
+{"kind":"shape","id":"sh/b2xo7upk","slide":11,"bbox":[596,630,8,8]}
+{"kind":"textbox","id":"sh/c36pgfq5","slide":11,"text":"Group patterns","textPreview":"Group patterns","textChars":14,"textLines":1,"bbox":[100,666,160,20]}
+{"kind":"shape","id":"sh/x4f69k7q","slide":11,"bbox":[540,552,118,72]}
+{"kind":"shape","id":"sh/6lkn2l8v","slide":11,"bbox":[540,506,118,46]}
+{"kind":"shape","id":"sh/r6tovqpg","slide":11,"bbox":[532,544,16,16]}
+{"kind":"textbox","id":"sh/476d0jqp","slide":11,"text":"One person still needs personal context.","textPreview":"One person still needs personal context.","textChars":40,"textLines":1,"bbox":[496,650,230,42]}
+{"kind":"shape","id":"sh/psfutora","slide":11,"bbox":[58,778,700,94]}
+{"kind":"shape","id":"sh/254vy9sj","slide":11,"bbox":[58,778,8,94]}
+{"kind":"textbox","id":"sh/36xcre94","slide":11,"text":"A healthier use of risk","textPreview":"A healthier use of risk","textChars":23,"textLines":1,"bbox":[76,790,664,22]}
+{"kind":"textbox","id":"sh/cv6d43q1","slide":11,"text":"Ask what applies to you, what can be evaluated, and what support is realistic. Avoid using group statistics as a personal forecast.","textPreview":"Ask what applies to you, what can be evaluated, and what support is realistic. Avoid using group statistics as a personal forecast.","textChars":131,"textLines":1,"bbox":[76,816,664,46]}
+{"kind":"shape","id":"sh/dwfux8r6","slide":11,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/qtov2t8v","slide":11,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/ruxcvy9g","slide":11,"text":"Risk meaning","textPreview":"Risk meaning","textChars":12,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/0zqd83qx","slide":11,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/l0ze18ri","slide":11,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/vu1g72tk","slide":11,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/atsfyxsz","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/0c1i7n","slide":11,"text":"[Sources]\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n[7] Livingston G, Huntley J, Liu KY, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. The Lancet. 2024;404(10452):572-628. doi:10.1016/S0140-6736(24)01296-0. https://www.thelancet.com/article/S0140-6736(24)01296-0/fulltext\n[8] Centers for Disease Control and Prevention. Reducing Risk for Dementia. Updated May 15, 2024. https://www.cdc.gov/alzheimers-dementia/prevention/index.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/9acsx7","slide":12,"title":"VASCULAR CARE","textShapes":24}
+{"kind":"textbox","id":"sh/x87uho3m","slide":12,"text":"VASCULAR CARE","textPreview":"VASCULAR CARE","textChars":13,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/alwb69kv","slide":12,"text":"Blood pressure, cholesterol, and glucose are interpreted together","textPreview":"Blood pressure, cholesterol, and glucose are interpreted together","textChars":65,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/bm5cfelg","slide":12,"text":"Targets vary by age, medicines, health history, and overall cardiovascular risk. [2,9,17]","textPreview":"Targets vary by age, medicines, health history, and overall cardiovascular risk. [2,9,17]","textChars":89,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/ojet4z25","slide":12,"bbox":[58,202,318,88]}
+{"kind":"shape","id":"sh/9knud43q","slide":12,"bbox":[72,218,18,18]}
+{"kind":"textbox","id":"sh/mhwb29kz","slide":12,"text":"Blood pressure","textPreview":"Blood pressure","textChars":14,"textLines":1,"bbox":[100,215,262,24]}
+{"kind":"textbox","id":"sh/ni5sbelk","slide":12,"text":"Ask what target applies.","textPreview":"Ask what target applies.","textChars":24,"textLines":1,"bbox":[76,247,282,30]}
+{"kind":"shape","id":"sh/0fut0z2t","slide":12,"bbox":[410,202,318,88]}
+{"kind":"shape","id":"sh/1g3a943e","slide":12,"bbox":[424,218,18,18]}
+{"kind":"textbox","id":"sh/10japsji","slide":12,"text":"Lipids","textPreview":"Lipids","textChars":6,"textLines":1,"bbox":[452,215,262,24]}
+{"kind":"textbox","id":"sh/0za9wnix","slide":12,"text":"Ask which results matter most.","textPreview":"Ask which results matter most.","textChars":30,"textLines":1,"bbox":[428,247,282,30]}
+{"kind":"shape","id":"sh/fy1sn21c","slide":12,"bbox":[58,324,318,88]}
+{"kind":"shape","id":"sh/ex8rux0r","slide":12,"bbox":[72,340,18,18]}
+{"kind":"textbox","id":"sh/dwzalsj6","slide":12,"text":"Glucose or A1C","textPreview":"Glucose or A1C","textChars":14,"textLines":1,"bbox":[100,337,262,24]}
+{"kind":"textbox","id":"sh/sbq9snil","slide":12,"text":"Use clinician-selected measures.","textPreview":"Use clinician-selected measures.","textChars":32,"textLines":1,"bbox":[76,369,282,30]}
+{"kind":"shape","id":"sh/rahsji1g","slide":12,"bbox":[410,324,318,88]}
+{"kind":"shape","id":"sh/q98rqd0v","slide":12,"bbox":[424,340,18,18]}
+{"kind":"textbox","id":"sh/58zah8ja","slide":12,"text":"Medicines","textPreview":"Medicines","textChars":9,"textLines":1,"bbox":[452,337,262,24]}
+{"kind":"textbox","id":"sh/47q9o3ip","slide":12,"text":"Discuss benefits and side effects.","textPreview":"Discuss benefits and side effects.","textChars":34,"textLines":1,"bbox":[428,369,282,30]}
+{"kind":"shape","id":"sh/wra94nql","slide":12,"bbox":[58,446,318,88]}
+{"kind":"shape","id":"sh/hc3axsr6","slide":12,"bbox":[72,462,18,18]}
+{"kind":"textbox","id":"sh/upsr2d8f","slide":12,"text":"Smoking status","textPreview":"Smoking status","textChars":14,"textLines":1,"bbox":[100,459,262,24]}
+{"kind":"textbox","id":"sh/vq1svi90","slide":12,"text":"Ask about support without shame.","textPreview":"Ask about support without shame.","textChars":32,"textLines":1,"bbox":[76,491,282,30]}
+{"kind":"shape","id":"sh/8na903q9","slide":12,"bbox":[410,446,318,88]}
+{"kind":"shape","id":"sh/9ojat8ru","slide":12,"bbox":[424,462,18,18]}
+{"kind":"textbox","id":"sh/mlsryt8j","slide":12,"text":"Family history","textPreview":"Family history","textChars":14,"textLines":1,"bbox":[452,459,262,24]}
+{"kind":"textbox","id":"sh/7m1sry94","slide":12,"text":"Use it to guide questions.","textPreview":"Use it to guide questions.","textChars":26,"textLines":1,"bbox":[428,491,282,30]}
+{"kind":"shape","id":"sh/sjetc7qt","slide":12,"bbox":[58,616,700,126]}
+{"kind":"textbox","id":"sh/tkna5cre","slide":12,"text":"The care question is not \"Which number is good or bad?\"","textPreview":"The care question is not \"Which number is good or bad?\"","textChars":55,"textLines":1,"bbox":[82,638,652,26]}
+{"kind":"textbox","id":"sh/3epcv6tg","slide":12,"text":"It is \"What do my numbers mean together, and what is the next appropriate step for me?\"","textPreview":"It is \"What do my numbers mean together, and what is the next appropriate step for me?\"","textChars":87,"textLines":1,"bbox":[112,678,592,40]}
+{"kind":"shape","id":"sh/2dgv21sv","slide":12,"bbox":[58,790,700,78]}
+{"kind":"shape","id":"sh/pg7uxwbm","slide":12,"bbox":[58,790,8,78]}
+{"kind":"textbox","id":"sh/ofyd4ba1","slide":12,"text":"Do not change treatment from this guide.","textPreview":"Do not change treatment from this guide.","textChars":40,"textLines":1,"bbox":[76,802,664,22]}
+{"kind":"textbox","id":"sh/b29wz6tc","slide":12,"text":"Medication decisions belong with qualified care. Bring questions about targets, side effects, affordability, and follow-up.","textPreview":"Medication decisions belong with qualified care. Bring questions about targets, side effects, affordability, and follow-up.","textChars":123,"textLines":1,"bbox":[76,828,664,30]}
+{"kind":"shape","id":"sh/a1gv61s7","slide":12,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/x4re1gbi","slide":12,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/c3id8bax","slide":12,"text":"Vascular care","textPreview":"Vascular care","textChars":13,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/r65cnmt8","slide":12,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/6lwvuhsn","slide":12,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/ip0vah0j","slide":12,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/jq9cjm14","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/9acsx7","slide":12,"text":"[Sources]\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[9] National Heart, Lung, and Blood Institute. High Blood Pressure - Treatment. Updated May 2024. https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/shuu1y","slide":13,"title":"MOVEMENT","textShapes":24}
+{"kind":"textbox","id":"sh/zqdszmxk","slide":13,"text":"MOVEMENT","textPreview":"MOVEMENT","textChars":8,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/0rm9s7y5","slide":13,"text":"Physical activity can be flexible and mobility-inclusive","textPreview":"Physical activity can be flexible and mobility-inclusive","textChars":56,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/1sva1cfq","slide":13,"text":"Activity may support cardiovascular health, metabolic health, mood, sleep, daily function, and quality of life. [11,17]","textPreview":"Activity may support cardiovascular health, metabolic health, mood, sleep, daily function, and quality of life. [11,17]","textChars":119,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/mt4ruhgb","slide":13,"bbox":[58,198,318,76]}
+{"kind":"shape","id":"sh/nuds3mxw","slide":13,"bbox":[72,214,18,18]}
+{"kind":"textbox","id":"sh/ovm9wryh","slide":13,"text":"Walking","textPreview":"Walking","textChars":7,"textLines":1,"bbox":[100,211,262,24]}
+{"kind":"textbox","id":"sh/9wfa5wf2","slide":13,"text":"Short, safe bouts can count.","textPreview":"Short, safe bouts can count.","textChars":28,"textLines":1,"bbox":[76,243,282,18]}
+{"kind":"shape","id":"sh/axory1g7","slide":13,"bbox":[408,198,318,76]}
+{"kind":"shape","id":"sh/byxs76xs","slide":13,"bbox":[422,214,18,18]}
+{"kind":"textbox","id":"sh/fmpcnuhw","slide":13,"text":"Seated movement","textPreview":"Seated movement","textChars":15,"textLines":1,"bbox":[450,211,262,24]}
+{"kind":"textbox","id":"sh/elgvupgb","slide":13,"text":"Chair routines can support circulation.","textPreview":"Chair routines can support circulation.","textChars":39,"textLines":1,"bbox":[426,243,282,18]}
+{"kind":"shape","id":"sh/1o7up4z2","slide":13,"bbox":[58,306,318,76]}
+{"kind":"shape","id":"sh/gnydwzyh","slide":13,"bbox":[72,322,18,18]}
+{"kind":"textbox","id":"sh/ry5cjuh0","slide":13,"text":"Standing breaks","textPreview":"Standing breaks","textChars":15,"textLines":1,"bbox":[100,319,262,24]}
+{"kind":"textbox","id":"sh/6xwvqpgf","slide":13,"text":"Small interruptions to sitting may help.","textPreview":"Small interruptions to sitting may help.","textChars":40,"textLines":1,"bbox":[76,351,282,18]}
+{"kind":"shape","id":"sh/t0nul4z6","slide":13,"bbox":[408,306,318,76]}
+{"kind":"shape","id":"sh/szedszyl","slide":13,"bbox":[422,322,18,18]}
+{"kind":"textbox","id":"sh/bu9wveh4","slide":13,"text":"Strength activity","textPreview":"Strength activity","textChars":17,"textLines":1,"bbox":[450,319,262,24]}
+{"kind":"textbox","id":"sh/qt0v29gj","slide":13,"text":"Use bands, weights, or body weight if appropriate.","textPreview":"Use bands, weights, or body weight if appropriate.","textChars":50,"textLines":1,"bbox":[426,351,282,18]}
+{"kind":"shape","id":"sh/6147ah43","slide":13,"bbox":[58,414,318,76]}
+{"kind":"shape","id":"sh/7mdojm5o","slide":13,"bbox":[72,430,18,18]}
+{"kind":"textbox","id":"sh/8nmpcrm9","slide":13,"text":"Stretching","textPreview":"Stretching","textChars":10,"textLines":1,"bbox":[100,427,262,24]}
+{"kind":"textbox","id":"sh/tov6lcnu","slide":13,"text":"Can support comfort and function.","textPreview":"Can support comfort and function.","textChars":33,"textLines":1,"bbox":[76,459,282,18]}
+{"kind":"shape","id":"sh/upo7eh4f","slide":13,"bbox":[408,414,318,76]}
+{"kind":"shape","id":"sh/vqx8nm5k","slide":13,"bbox":[422,430,18,18]}
+{"kind":"textbox","id":"sh/gr6pgrm5","slide":13,"text":"Physical therapy","textPreview":"Physical therapy","textChars":16,"textLines":1,"bbox":[450,427,262,24]}
+{"kind":"textbox","id":"sh/hsfqpw3q","slide":13,"text":"Clinical guidance can adapt movement safely.","textPreview":"Clinical guidance can adapt movement safely.","textChars":44,"textLines":1,"bbox":[426,459,282,18]}
+{"kind":"shape","id":"sh/atk72x4v","slide":13,"bbox":[58,522,318,76]}
+{"kind":"shape","id":"sh/butob25g","slide":13,"bbox":[72,538,18,18]}
+{"kind":"textbox","id":"sh/dojah07y","slide":13,"text":"Household movement","textPreview":"Household movement","textChars":18,"textLines":1,"bbox":[100,535,262,24]}
+{"kind":"textbox","id":"sh/snq98v6d","slide":13,"text":"Daily tasks can be part of an activity pattern.","textPreview":"Daily tasks can be part of an activity pattern.","textChars":47,"textLines":1,"bbox":[76,567,282,18]}
+{"kind":"shape","id":"sh/rmhsfqps","slide":13,"bbox":[58,720,700,94]}
+{"kind":"textbox","id":"sh/ql8r6lon","slide":13,"text":"My safest realistic movement option:","textPreview":"My safest realistic movement option:","textChars":36,"textLines":1,"bbox":[80,740,260,22]}
+{"kind":"shape","id":"sh/1cjal0na","slide":13,"bbox":[350,764,370,0]}
+{"kind":"textbox","id":"sh/0ba9cf6p","slide":13,"text":"Walking is one option, not a requirement. Ask about safe options if pain, balance, fatigue, disability, or recovery makes movement complicated.","textPreview":"Walking is one option, not a requirement. Ask about safe options if pain, balance, fatigue, disability, or recovery makes movement compli...","textChars":143,"textLines":1,"bbox":[80,786,656,22]}
+{"kind":"shape","id":"sh/fq1sja54","slide":13,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/epsra5oj","slide":13,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/hgza9g7q","slide":13,"text":"Movement","textPreview":"Movement","textChars":8,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/gv690b65","slide":13,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/kbed8jqt","slide":13,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/lcnuho7e","slide":13,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/y9wv698n","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/shuu1y","slide":13,"text":"[Sources]\n[11] U.S. Department of Health and Human Services. Physical Activity Guidelines for Americans, 2nd edition. 2018. https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/xhmuvw","slide":14,"title":"FOOD PATTERNS","textShapes":23}
+{"kind":"textbox","id":"sh/9kbapgfy","slide":14,"text":"FOOD PATTERNS","textPreview":"FOOD PATTERNS","textChars":13,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/mhkbe1g7","slide":14,"text":"Food patterns matter more than brain-superfood claims","textPreview":"Food patterns matter more than brain-superfood claims","textChars":53,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/7itsn6xs","slide":14,"text":"Mixed dishes, cultural foods, access, budget, and medical nutrition needs all matter. [10,17]","textPreview":"Mixed dishes, cultural foods, access, budget, and medical nutrition needs all matter. [10,17]","textChars":93,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/wn2tkvy9","slide":14,"bbox":[92,232,278,278]}
+{"kind":"shape","id":"sh/hovut0fu","slide":14,"bbox":[106,246,250,250]}
+{"kind":"shape","id":"sh/ulkbilgj","slide":14,"bbox":[106,246,250,250]}
+{"kind":"textbox","id":"sh/vmtsrqx4","slide":14,"text":"Flexible plate visual","textPreview":"Flexible plate visual","textChars":21,"textLines":1,"bbox":[126,520,210,22]}
+{"kind":"shape","id":"sh/4bmtovel","slide":14,"bbox":[408,206,300,62]}
+{"kind":"shape","id":"sh/5cvux0f6","slide":14,"bbox":[422,222,18,18]}
+{"kind":"textbox","id":"sh/107axsfu","slide":14,"text":"Vegetables and fruit","textPreview":"Vegetables and fruit","textChars":20,"textLines":1,"bbox":[450,219,244,24]}
+{"kind":"textbox","id":"sh/gzytone9","slide":14,"text":"fresh, frozen, canned, cooked into dishes","textPreview":"fresh, frozen, canned, cooked into dishes","textChars":41,"textLines":1,"bbox":[426,251,264,4]}
+{"kind":"shape","id":"sh/fypsvixo","slide":14,"bbox":[408,288,300,62]}
+{"kind":"shape","id":"sh/exgbmdw3","slide":14,"bbox":[422,304,18,18]}
+{"kind":"textbox","id":"sh/poralsfq","slide":14,"text":"Beans, lentils, whole grains","textPreview":"Beans, lentils, whole grains","textChars":28,"textLines":1,"bbox":[450,301,244,24]}
+{"kind":"textbox","id":"sh/onitsne5","slide":14,"text":"carbohydrate foods can fit a care plan","textPreview":"carbohydrate foods can fit a care plan","textChars":38,"textLines":1,"bbox":[426,333,264,4]}
+{"kind":"shape","id":"sh/3m9szixk","slide":14,"bbox":[408,370,300,62]}
+{"kind":"shape","id":"sh/2lgbqdwf","slide":14,"bbox":[422,386,18,18]}
+{"kind":"textbox","id":"sh/5snap8fm","slide":14,"text":"Plant or lean proteins","textPreview":"Plant or lean proteins","textChars":22,"textLines":1,"bbox":[450,383,244,24]}
+{"kind":"textbox","id":"sh/4re9g3e1","slide":14,"text":"fish where appropriate, tofu, eggs, poultry, legumes","textPreview":"fish where appropriate, tofu, eggs, poultry, legumes","textChars":52,"textLines":1,"bbox":[426,415,264,4]}
+{"kind":"shape","id":"sh/wn21snq9","slide":14,"bbox":[408,452,300,62]}
+{"kind":"shape","id":"sh/hob2lsre","slide":14,"bbox":[422,468,18,18]}
+{"kind":"textbox","id":"sh/ulkjqx83","slide":14,"text":"Nuts, seeds, unsaturated fats","textPreview":"Nuts, seeds, unsaturated fats","textChars":29,"textLines":1,"bbox":[450,465,244,24]}
+{"kind":"textbox","id":"sh/vmtkj29o","slide":14,"text":"flavor and satiety without cure claims","textPreview":"flavor and satiety without cure claims","textChars":38,"textLines":1,"bbox":[426,497,264,4]}
+{"kind":"shape","id":"sh/4r21w7q5","slide":14,"bbox":[408,534,300,62]}
+{"kind":"shape","id":"sh/5cb2pcrq","slide":14,"bbox":[422,550,18,18]}
+{"kind":"textbox","id":"sh/ipkjux8z","slide":14,"text":"Lower-sugar drink options","textPreview":"Lower-sugar drink options","textChars":25,"textLines":1,"bbox":[450,547,244,24]}
+{"kind":"textbox","id":"sh/jqtkn29k","slide":14,"text":"water, unsweetened drinks, or personal alternatives","textPreview":"water, unsweetened drinks, or personal alternatives","textChars":51,"textLines":1,"bbox":[426,579,264,4]}
+{"kind":"shape","id":"sh/sfml07q1","slide":14,"bbox":[408,616,300,62]}
+{"kind":"shape","id":"sh/tgv2tcrm","slide":14,"bbox":[422,632,18,18]}
+{"kind":"textbox","id":"sh/nax4j6t4","slide":14,"text":"Culture and access","textPreview":"Culture and access","textChars":18,"textLines":1,"bbox":[450,629,244,24]}
+{"kind":"textbox","id":"sh/29onqlsj","slide":14,"text":"a useful pattern should fit real life","textPreview":"a useful pattern should fit real life","textChars":37,"textLines":1,"bbox":[426,661,264,4]}
+{"kind":"shape","id":"sh/pczmlgbu","slide":14,"bbox":[58,792,700,92]}
+{"kind":"shape","id":"sh/ob65sba9","slide":14,"bbox":[58,792,8,92]}
+{"kind":"textbox","id":"sh/f6x4f6ts","slide":14,"text":"No single food is a brain-health cure.","textPreview":"No single food is a brain-health cure.","textChars":38,"textLines":1,"bbox":[76,804,664,22]}
+{"kind":"textbox","id":"sh/e5onm1s7","slide":14,"text":"The plate method is a flexible visual tool, not a prescription. Medical nutrition needs vary; carbohydrate removal is not the goal of brain health.","textPreview":"The plate method is a flexible visual tool, not a prescription. Medical nutrition needs vary; carbohydrate removal is not the goal of bra...","textChars":147,"textLines":1,"bbox":[76,830,664,44]}
+{"kind":"shape","id":"sh/18fmhgby","slide":14,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/g765obad","slide":14,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/z2horatw","slide":14,"text":"Food patterns","textPreview":"Food patterns","textChars":13,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/y18ny5sr","slide":14,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/6pormp8v","slide":14,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/7qh8fupg","slide":14,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/8rq9oz61","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/xhmuvw","slide":14,"text":"[Sources]\n[10] Centers for Disease Control and Prevention. Diabetes Meal Planning. Updated May 15, 2024. https://www.cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/x1nnzc","slide":15,"title":"SLEEP","textShapes":26}
+{"kind":"textbox","id":"sh/i1gnml4r","slide":15,"text":"SLEEP","textPreview":"SLEEP","textChars":5,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/5476h0ni","slide":15,"text":"Sleep problems deserve care, not blame","textPreview":"Sleep problems deserve care, not blame","textChars":38,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/k3y5ovmx","slide":15,"text":"Sleep can interact with mood, attention, glucose patterns, blood pressure, decision-making, and quality of life. [12,17]","textPreview":"Sleep can interact with mood, attention, glucose patterns, blood pressure, decision-making, and quality of life. [12,17]","textChars":120,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/7qpojq58","slide":15,"bbox":[58,268,76,76]}
+{"kind":"textbox","id":"sh/6pgnq54n","slide":15,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[84,286,24,18]}
+{"kind":"textbox","id":"sh/tsr6l0ne","slide":15,"text":"Morning light","textPreview":"Morning light","textChars":13,"textLines":1,"bbox":[50,354,92,36]}
+{"kind":"shape","id":"sh/sri5svmt","slide":15,"bbox":[136,306,32,0]}
+{"kind":"shape","id":"sh/fu9ona5k","slide":15,"bbox":[169,268,76,76]}
+{"kind":"textbox","id":"sh/ut07u54z","slide":15,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[195,286,24,18]}
+{"kind":"textbox","id":"sh/gr6lknqx","slide":15,"text":"Daytime activity","textPreview":"Daytime activity","textChars":16,"textLines":1,"bbox":[161,354,92,36]}
+{"kind":"shape","id":"sh/hsf2dsri","slide":15,"bbox":[247,306,32,0]}
+{"kind":"shape","id":"sh/up43id8r","slide":15,"bbox":[280,268,76,76]}
+{"kind":"textbox","id":"sh/fqxkbi9c","slide":15,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[306,286,24,18]}
+{"kind":"textbox","id":"sh/4f6lo7qt","slide":15,"text":"Caffeine timing","textPreview":"Caffeine timing","textChars":15,"textLines":1,"bbox":[272,354,92,36]}
+{"kind":"shape","id":"sh/pgf2hsre","slide":15,"bbox":[358,306,32,0]}
+{"kind":"shape","id":"sh/2do3mx8n","slide":15,"bbox":[391,268,76,76]}
+{"kind":"textbox","id":"sh/3exkf298","slide":15,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[417,286,24,18]}
+{"kind":"textbox","id":"sh/cjqls7q5","slide":15,"text":"Wind-down cue","textPreview":"Wind-down cue","textChars":13,"textLines":1,"bbox":[383,354,92,36]}
+{"kind":"shape","id":"sh/dkzmlcra","slide":15,"bbox":[469,306,32,0]}
+{"kind":"shape","id":"sh/l0v25cju","slide":15,"bbox":[502,268,76,76]}
+{"kind":"textbox","id":"sh/0zmlc7i9","slide":15,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[528,286,24,18]}
+{"kind":"textbox","id":"sh/zydk321o","slide":15,"text":"Dimmer light","textPreview":"Dimmer light","textChars":12,"textLines":1,"bbox":[494,354,92,36]}
+{"kind":"shape","id":"sh/yx43ax03","slide":15,"bbox":[580,306,32,0]}
+{"kind":"shape","id":"sh/94f29czq","slide":15,"bbox":[613,268,76,76]}
+{"kind":"textbox","id":"sh/83mlg7i5","slide":15,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[639,286,24,18]}
+{"kind":"textbox","id":"sh/n2dk721k","slide":15,"text":"Comfortable environment","textPreview":"Comfortable environment","textChars":23,"textLines":1,"bbox":[605,354,92,36]}
+{"kind":"shape","id":"sh/m143eh0z","slide":15,"bbox":[58,472,338,236]}
+{"kind":"shape","id":"sh/p8b2xsjm","slide":15,"bbox":[72,488,18,18]}
+{"kind":"textbox","id":"sh/o7214ni1","slide":15,"text":"Life can complicate sleep","textPreview":"Life can complicate sleep","textChars":25,"textLines":1,"bbox":[100,485,282,24]}
+{"kind":"shape","id":"sh/ed0zytgz","slide":15,"bbox":[76,517,302,178]}
+{"kind":"textbox","id":"sh/fe907yh4","slide":15,"text":"Shift work\nCaregiving\nPain\nMedicines\nInsomnia\nRestless legs","textPreview":"Shift work | Caregiving | Pain | Medicines | Insomnia | Restless legs","textChars":59,"textLines":6,"bbox":[76,526,302,166]}
+{"kind":"shape","id":"sh/gfih0jyp","slide":15,"bbox":[420,472,338,236]}
+{"kind":"shape","id":"sh/1gri9oza","slide":15,"bbox":[434,488,18,18]}
+{"kind":"textbox","id":"sh/2h0z2tgv","slide":15,"text":"Ask about evaluation","textPreview":"Ask about evaluation","textChars":20,"textLines":1,"bbox":[462,485,282,24]}
+{"kind":"shape","id":"sh/3i90byhg","slide":15,"bbox":[438,517,302,178]}
+{"kind":"textbox","id":"sh/o3ih43y1","slide":15,"text":"Loud snoring\nBreathing pauses\nGasping during sleep\nDaytime sleepiness\nMorning headaches\nSleep that stays unrefreshing","textPreview":"Loud snoring | Breathing pauses | Gasping during sleep | Daytime sleepiness | Morning headaches | Sleep that stays unrefreshing","textChars":117,"textLines":6,"bbox":[438,526,302,166]}
+{"kind":"shape","id":"sh/p4rid8fm","slide":15,"bbox":[58,774,700,92]}
+{"kind":"shape","id":"sh/ilwzq9gr","slide":15,"bbox":[58,774,8,92]}
+{"kind":"textbox","id":"sh/jmpgzehw","slide":15,"text":"Sleep hygiene is not a full treatment plan.","textPreview":"Sleep hygiene is not a full treatment plan.","textChars":43,"textLines":1,"bbox":[76,786,664,22]}
+{"kind":"textbox","id":"sh/zqxo765o","slide":15,"text":"Breathing pauses, severe insomnia, restless legs, medication effects, pain, and caregiving stress may need clinical support.","textPreview":"Breathing pauses, severe insomnia, restless legs, medication effects, pain, and caregiving stress may need clinical support.","textChars":124,"textLines":1,"bbox":[76,812,664,44]}
+{"kind":"shape","id":"sh/y5o7e143","slide":15,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/lsf69wnu","slide":15,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/0r6pgbm9","slide":15,"text":"Sleep","textPreview":"Sleep","textChars":5,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/7uxob650","slide":15,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/mto7i14f","slide":15,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/9wz6dgnq","slide":15,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/8v6pkbm5","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/x1nnzc","slide":15,"text":"[Sources]\n[12] National Heart, Lung, and Blood Institute. What Is Sleep Apnea? Updated November 2024. https://www.nhlbi.nih.gov/health/sleep-apnea\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/da20vj","slide":16,"title":"TOBACCO AND ALCOHOL","textShapes":16}
+{"kind":"textbox","id":"sh/dofe5kfi","slide":16,"text":"TOBACCO AND ALCOHOL","textPreview":"TOBACCO AND ALCOHOL","textChars":19,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/qlovapgr","slide":16,"text":"Support works better than shame","textPreview":"Support works better than shame","textChars":31,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/bmxw3uxc","slide":16,"text":"Tobacco avoidance and alcohol decisions fit within overall cardiovascular, metabolic, and cognitive-health care. [7,8,17,18]","textPreview":"Tobacco avoidance and alcohol decisions fit within overall cardiovascular, metabolic, and cognitive-health care. [7,8,17,18]","textChars":124,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/oj6d8fyl","slide":16,"bbox":[58,190,338,350]}
+{"kind":"shape","id":"sh/pkfe1kf6","slide":16,"bbox":[72,206,18,18]}
+{"kind":"textbox","id":"sh/2x4v65gv","slide":16,"text":"Tobacco","textPreview":"Tobacco","textChars":7,"textLines":1,"bbox":[100,203,282,24]}
+{"kind":"shape","id":"sh/3idczax0","slide":16,"bbox":[76,235,302,292]}
+{"kind":"textbox","id":"sh/8fqdkze5","slide":16,"text":"Avoiding tobacco supports overall and cardiovascular health.\nQuitting can require repeated attempts.\nCounseling, medicines, and practical support may help.\nCurrent tobacco use is not a character flaw.","textPreview":"Avoiding tobacco supports overall and cardiovascular health. | Quitting can require repeated attempts. | Counseling, medicines, and pract...","textChars":200,"textLines":4,"bbox":[76,244,302,280]}
+{"kind":"shape","id":"sh/9gzed4fa","slide":16,"bbox":[420,190,338,350]}
+{"kind":"shape","id":"sh/tob6d47e","slide":16,"bbox":[434,206,18,18]}
+{"kind":"textbox","id":"sh/8n25kz69","slide":16,"text":"Alcohol","textPreview":"Alcohol","textChars":7,"textLines":1,"bbox":[462,203,282,24]}
+{"kind":"shape","id":"sh/7m9obupo","slide":16,"bbox":[438,235,302,292]}
+{"kind":"textbox","id":"sh/6l0ni9o3","slide":16,"text":"Excessive use can create health risks.\nAlcohol may interact with medicines and glucose risk.\nPeople who do not drink should not start for health.\nIndividual guidance may be appropriate.","textPreview":"Excessive use can create health risks. | Alcohol may interact with medicines and glucose risk. | People who do not drink should not start...","textChars":185,"textLines":4,"bbox":[438,244,302,280]}
+{"kind":"shape","id":"sh/lkrm947i","slide":16,"bbox":[58,608,700,160]}
+{"kind":"textbox","id":"sh/kji5gz6x","slide":16,"text":"A calmer question","textPreview":"A calmer question","textChars":17,"textLines":1,"bbox":[86,632,230,24]}
+{"kind":"textbox","id":"sh/ji947upc","slide":16,"text":"What kind of support would make the next step more realistic: counseling, medication options, a safety plan around alcohol and glucose, or a referral?","textPreview":"What kind of support would make the next step more realistic: counseling, medication options, a safety plan around alcohol and glucose, o...","textChars":150,"textLines":1,"bbox":[86,666,644,56]}
+{"kind":"shape","id":"sh/yh0nepor","slide":16,"bbox":[58,812,700,64]}
+{"kind":"shape","id":"sh/5gv6lonm","slide":16,"bbox":[58,812,8,64]}
+{"kind":"textbox","id":"sh/4fm5sj61","slide":16,"text":"No universal safe amount is set here.","textPreview":"No universal safe amount is set here.","textChars":37,"textLines":1,"bbox":[76,824,664,22]}
+{"kind":"textbox","id":"sh/ovuh4rip","slide":16,"text":"This guide does not define a personal alcohol limit or recommend medication changes.","textPreview":"This guide does not define a personal alcohol limit or recommend medication changes.","textChars":84,"textLines":1,"bbox":[76,850,664,16]}
+{"kind":"shape","id":"sh/pwnydwza","slide":16,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/2tcz2h0j","slide":16,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/nulgbmh4","slide":16,"text":"Tobacco and alcohol","textPreview":"Tobacco and alcohol","textChars":19,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/07uh0rid","slide":16,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/183y9wzy","slide":16,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/e5czyh0n","slide":16,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/f6lg7mh8","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/da20vj","slide":16,"text":"[Sources]\n[7] Livingston G, Huntley J, Liu KY, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. The Lancet. 2024;404(10452):572-628. doi:10.1016/S0140-6736(24)01296-0. https://www.thelancet.com/article/S0140-6736(24)01296-0/fulltext\n[8] Centers for Disease Control and Prevention. Reducing Risk for Dementia. Updated May 15, 2024. https://www.cdc.gov/alzheimers-dementia/prevention/index.html\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n[18] Centers for Disease Control and Prevention. Manage Blood Sugar. Updated May 15, 2024. https://www.cdc.gov/diabetes/treatment/index.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/frbifb","slide":17,"title":"COMMUNICATION AND CONNECTION","textShapes":18}
+{"kind":"textbox","id":"sh/t4fudk7e","slide":17,"text":"COMMUNICATION AND CONNECTION","textPreview":"COMMUNICATION AND CONNECTION","textChars":28,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/6h4bip8n","slide":17,"text":"Hearing, vision, mood, and connection affect daily function","textPreview":"Hearing, vision, mood, and connection affect daily function","textChars":59,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/rixcbup8","slide":17,"text":"These factors may affect communication, cognitive load, safety, quality of life, and access to care. [13-16]","textPreview":"These factors may affect communication, cognitive load, safety, quality of life, and access to care. [13-16]","textChars":108,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/4fmtgfqh","slide":17,"bbox":[58,190,318,174]}
+{"kind":"shape","id":"sh/5gvu9k72","slide":17,"bbox":[72,206,18,18]}
+{"kind":"textbox","id":"sh/id4be58r","slide":17,"text":"Hearing","textPreview":"Hearing","textChars":7,"textLines":1,"bbox":[100,203,262,24]}
+{"kind":"textbox","id":"sh/jedc7apc","slide":17,"text":"Ask about testing when communication changes. Improve access with quieter rooms, captions, hearing devices, or face-to-face conversation.","textPreview":"Ask about testing when communication changes. Improve access with quieter rooms, captions, hearing devices, or face-to-face conversation.","textChars":137,"textLines":1,"bbox":[76,235,282,116]}
+{"kind":"shape","id":"sh/wbmtcvql","slide":17,"bbox":[410,190,318,174]}
+{"kind":"shape","id":"sh/xcvu5076","slide":17,"bbox":[424,206,18,18]}
+{"kind":"textbox","id":"sh/9sjql07q","slide":17,"text":"Vision","textPreview":"Vision","textChars":6,"textLines":1,"bbox":[452,203,262,24]}
+{"kind":"textbox","id":"sh/8rqpcvq5","slide":17,"text":"Address correctable or treatable problems. Diabetes eye care can support safe daily function.","textPreview":"Address correctable or treatable problems. Diabetes eye care can support safe daily function.","textChars":93,"textLines":1,"bbox":[428,235,282,116]}
+{"kind":"shape","id":"sh/7qh8jqp0","slide":17,"bbox":[58,414,318,174]}
+{"kind":"shape","id":"sh/mp87al8f","slide":17,"bbox":[72,430,18,18]}
+{"kind":"textbox","id":"sh/lozqhg7u","slide":17,"text":"Mood","textPreview":"Mood","textChars":4,"textLines":1,"bbox":[100,427,262,24]}
+{"kind":"textbox","id":"sh/knqp8bq9","slide":17,"text":"Depression deserves assessment and care. Mood changes should not be dismissed as just aging.","textPreview":"Depression deserves assessment and care. Mood changes should not be dismissed as just aging.","textChars":92,"textLines":1,"bbox":[76,459,282,116]}
+{"kind":"shape","id":"sh/zmh8f6po","slide":17,"bbox":[410,414,318,174]}
+{"kind":"shape","id":"sh/y1876l83","slide":17,"bbox":[424,430,18,18]}
+{"kind":"textbox","id":"sh/x0fqdg7i","slide":17,"text":"Social connection","textPreview":"Social connection","textChars":17,"textLines":1,"bbox":[452,427,262,24]}
+{"kind":"textbox","id":"sh/cz6p4bqx","slide":17,"text":"Connection can be family, friends, neighbors, faith, support groups, community programs, or routine contact.","textPreview":"Connection can be family, friends, neighbors, faith, support groups, community programs, or routine contact.","textChars":108,"textLines":1,"bbox":[428,459,282,116]}
+{"kind":"shape","id":"sh/o3apkbyt","slide":17,"bbox":[58,704,700,92]}
+{"kind":"shape","id":"sh/p4jqtgfe","slide":17,"bbox":[58,704,8,92]}
+{"kind":"textbox","id":"sh/2hs7i1g3","slide":17,"text":"Nuance matters","textPreview":"Nuance matters","textChars":14,"textLines":1,"bbox":[76,716,664,22]}
+{"kind":"textbox","id":"sh/3218r6ho","slide":17,"text":"Treating hearing, vision, mood, or isolation may reduce strain and improve function. No single intervention guarantees dementia prevention.","textPreview":"Treating hearing, vision, mood, or isolation may reduce strain and improve function. No single intervention guarantees dementia prevention.","textChars":139,"textLines":1,"bbox":[76,742,664,44]}
+{"kind":"shape","id":"sh/gfapgryx","slide":17,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/1gjqpwzi","slide":17,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/ed87e1gr","slide":17,"text":"Hearing, vision, mood","textPreview":"Hearing, vision, mood","textChars":21,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/fe18n6hc","slide":17,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/0bu9svy1","slide":17,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/lc3q10fm","slide":17,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/vi9k7yl0","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/frbifb","slide":17,"text":"[Sources]\n[13] Centers for Disease Control and Prevention. Health Effects of Social Isolation and Loneliness. Updated May 15, 2024. https://www.cdc.gov/social-connectedness/risk-factors/index.html\n[14] National Eye Institute. Diabetic Retinopathy. Updated September 2025. https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy\n[15] National Institute on Deafness and Other Communication Disorders. Age-Related Hearing Loss (Presbycusis). Updated March 2023. https://www.nidcd.nih.gov/health/age-related-hearing-loss\n[16] Centers for Disease Control and Prevention. About Mental Health. Updated May 2026. https://www.cdc.gov/mental-health/about/index.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/fonm7z","slide":18,"title":"WORKSHEET","textShapes":25}
+{"kind":"textbox","id":"sh/nm14ju9c","slide":18,"text":"WORKSHEET","textPreview":"WORKSHEET","textChars":9,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/ona5szqx","slide":18,"text":"Questions for your clinician","textPreview":"Questions for your clinician","textChars":28,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/9ojml4ri","slide":18,"text":"Bring the guide or a completed worksheet if it helps organize the visit. Leave blanks if something does not apply.","textPreview":"Bring the guide or a completed worksheet if it helps organize the visit. Leave blanks if something does not apply.","textChars":114,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/apsnu983","slide":18,"bbox":[58,169,12,12]}
+{"kind":"textbox","id":"sh/bql4nu9o","slide":18,"text":"My A1C or glucose targets","textPreview":"My A1C or glucose targets","textChars":25,"textLines":1,"bbox":[76,167,282,22]}
+{"kind":"shape","id":"sh/wru5wzqt","slide":18,"bbox":[388,169,12,12]}
+{"kind":"textbox","id":"sh/xs36p4re","slide":18,"text":"Low-glucose risk","textPreview":"Low-glucose risk","textChars":16,"textLines":1,"bbox":[406,167,282,22]}
+{"kind":"shape","id":"sh/qt8ni5sj","slide":18,"bbox":[58,201,12,12]}
+{"kind":"textbox","id":"sh/ruh4ba94","slide":18,"text":"Blood pressure","textPreview":"Blood pressure","textChars":14,"textLines":1,"bbox":[76,199,282,22]}
+{"kind":"shape","id":"sh/3u9gzypg","slide":18,"bbox":[388,201,12,12]}
+{"kind":"textbox","id":"sh/2tgzqtov","slide":18,"text":"Cholesterol","textPreview":"Cholesterol","textChars":11,"textLines":1,"bbox":[406,199,282,22]}
+{"kind":"shape","id":"sh/pgril87m","slide":18,"bbox":[58,233,12,12]}
+{"kind":"textbox","id":"sh/4vihs361","slide":18,"text":"Medicines and side effects","textPreview":"Medicines and side effects","textChars":26,"textLines":1,"bbox":[76,231,282,22]}
+{"kind":"shape","id":"sh/fqpgvyp4","slide":18,"bbox":[388,233,12,12]}
+{"kind":"textbox","id":"sh/upgzmtoj","slide":18,"text":"Memory or thinking changes","textPreview":"Memory or thinking changes","textChars":26,"textLines":1,"bbox":[406,231,282,22]}
+{"kind":"shape","id":"sh/hs7yxo7a","slide":18,"bbox":[58,265,12,12]}
+{"kind":"textbox","id":"sh/gryhoj6p","slide":18,"text":"Sleep","textPreview":"Sleep","textChars":5,"textLines":1,"bbox":[76,263,282,22]}
+{"kind":"shape","id":"sh/7m5grep8","slide":18,"bbox":[388,265,12,12]}
+{"kind":"textbox","id":"sh/6lwzi98n","slide":18,"text":"Hearing","textPreview":"Hearing","textChars":7,"textLines":1,"bbox":[406,263,282,22]}
+{"kind":"shape","id":"sh/axwzu9sf","slide":18,"bbox":[58,297,12,12]}
+{"kind":"textbox","id":"sh/vy503e90","slide":18,"text":"Vision","textPreview":"Vision","textChars":6,"textLines":1,"bbox":[76,295,282,22]}
+{"kind":"shape","id":"sh/wjehwjal","slide":18,"bbox":[388,297,12,12]}
+{"kind":"textbox","id":"sh/xkni5or6","slide":18,"text":"Mood","textPreview":"Mood","textChars":4,"textLines":1,"bbox":[406,295,282,22]}
+{"kind":"shape","id":"sh/ilwzytsr","slide":18,"bbox":[58,329,12,12]}
+{"kind":"textbox","id":"sh/jm507e9c","slide":18,"text":"Family history","textPreview":"Family history","textChars":14,"textLines":1,"bbox":[76,327,282,22]}
+{"kind":"shape","id":"sh/kny10jah","slide":18,"bbox":[388,329,12,12]}
+{"kind":"textbox","id":"sh/5o7i9or2","slide":18,"text":"Referrals or testing","textPreview":"Referrals or testing","textChars":20,"textLines":1,"bbox":[406,327,282,22]}
+{"kind":"textbox","id":"sh/6pgj2tsn","slide":18,"text":"My most important question","textPreview":"My most important question","textChars":26,"textLines":1,"bbox":[58,372,700,16]}
+{"kind":"shape","id":"sh/7qp0by98","slide":18,"bbox":[58,390,700,96]}
+{"kind":"textbox","id":"sh/hkr21sba","slide":18,"text":"What I want to understand before leaving","textPreview":"What I want to understand before leaving","textChars":40,"textLines":1,"bbox":[58,514,700,16]}
+{"kind":"shape","id":"sh/gjilsnup","slide":18,"bbox":[58,532,700,96]}
+{"kind":"textbox","id":"sh/fi9kzitk","slide":18,"text":"Next step or referral discussed","textPreview":"Next step or referral discussed","textChars":31,"textLines":1,"bbox":[58,656,700,16]}
+{"kind":"shape","id":"sh/uh03qdcz","slide":18,"bbox":[58,674,700,96]}
+{"kind":"shape","id":"sh/p8b25cbm","slide":18,"bbox":[58,820,700,58]}
+{"kind":"shape","id":"sh/4n2lw7u1","slide":18,"bbox":[58,820,8,58]}
+{"kind":"textbox","id":"sh/3m9k32tg","slide":18,"text":"Privacy reminder","textPreview":"Privacy reminder","textChars":16,"textLines":1,"bbox":[76,832,664,22]}
+{"kind":"textbox","id":"sh/2l03uxcv","slide":18,"text":"This page may include personal health information. Store completed worksheets in a place you choose.","textPreview":"This page may include personal health information. Store completed worksheets in a place you choose.","textChars":100,"textLines":1,"bbox":[76,858,664,10]}
+{"kind":"shape","id":"sh/dcbm9cbi","slide":18,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/cb2l07ux","slide":18,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/o7658be5","slide":18,"text":"Clinician questions","textPreview":"Clinician questions","textChars":19,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/98f61gvq","slide":18,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/m54n61wf","slide":18,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/n6xoz6dk","slide":18,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/03m54be9","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/fonm7z","slide":18,"text":"[Sources]\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[5] American Diabetes Association Professional Practice Committee for Diabetes. 13. Older Adults: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S277-S296. doi:10.2337/dc26-S013. https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/g05trz","slide":19,"title":"WORKSHEET","textShapes":23}
+{"kind":"textbox","id":"sh/gr25s32h","slide":19,"text":"WORKSHEET","textPreview":"WORKSHEET","textChars":9,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/vq9ozylw","slide":19,"text":"Family-history worksheet","textPreview":"Family-history worksheet","textChars":24,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/up0nqtkb","slide":19,"text":"Family history can guide questions. It does not determine your future.","textPreview":"Family history can guide questions. It does not determine your future.","textChars":70,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"textbox","id":"sh/tor6x83q","slide":19,"text":"Write what you know. Leave blanks where you are unsure. Approximate ages, relationships, and uncertainty are acceptable.","textPreview":"Write what you know. Leave blanks where you are unsure. Approximate ages, relationships, and uncertainty are acceptable.","textChars":120,"textLines":1,"bbox":[58,144,700,40]}
+{"kind":"shape","id":"sh/8ni5o3ml","slide":19,"bbox":[58,214,118,34]}
+{"kind":"textbox","id":"sh/7m9ovyl0","slide":19,"text":"Condition or concern","textPreview":"Condition or concern","textChars":20,"textLines":1,"bbox":[63,222,108,18]}
+{"kind":"shape","id":"sh/6l0nmt4f","slide":19,"bbox":[176,214,84,34]}
+{"kind":"textbox","id":"sh/lkr6to3u","slide":19,"text":"Relative","textPreview":"Relative","textChars":8,"textLines":1,"bbox":[181,222,74,18]}
+{"kind":"shape","id":"sh/kji5kjm9","slide":19,"bbox":[260,214,82,34]}
+{"kind":"textbox","id":"sh/it0zq503","slide":19,"text":"Side if known","textPreview":"Side if known","textChars":13,"textLines":1,"bbox":[265,222,72,18]}
+{"kind":"shape","id":"sh/ju90zaho","slide":19,"bbox":[342,214,66,34]}
+{"kind":"textbox","id":"sh/4vihsfy9","slide":19,"text":"Approx. age","textPreview":"Approx. age","textChars":11,"textLines":1,"bbox":[347,222,56,18]}
+{"kind":"shape","id":"sh/5wri1kzu","slide":19,"bbox":[408,214,218,34]}
+{"kind":"textbox","id":"sh/u5gzm507","slide":19,"text":"What I know / what I am unsure about","textPreview":"What I know / what I am unsure about","textChars":36,"textLines":1,"bbox":[413,222,208,18]}
+{"kind":"shape","id":"sh/v690vahc","slide":19,"bbox":[626,214,132,34]}
+{"kind":"textbox","id":"sh/w7ihofix","slide":19,"text":"Question for my clinician","textPreview":"Question for my clinician","textChars":25,"textLines":1,"bbox":[631,222,122,18]}
+{"kind":"shape","id":"sh/hsrix0zi","slide":19,"bbox":[58,248,118,82]}
+{"kind":"textbox","id":"sh/m1gzil0v","slide":19,"text":"Diabetes","textPreview":"Diabetes","textChars":8,"textLines":1,"bbox":[64,258,106,36]}
+{"kind":"shape","id":"sh/n2p0rqhg","slide":19,"bbox":[176,248,84,82]}
+{"kind":"shape","id":"sh/rulo32tw","slide":19,"bbox":[260,248,82,82]}
+{"kind":"shape","id":"sh/qtcnaxcb","slide":19,"bbox":[342,248,66,82]}
+{"kind":"shape","id":"sh/dw365sb2","slide":19,"bbox":[408,248,218,82]}
+{"kind":"shape","id":"sh/cvu5c7uh","slide":19,"bbox":[626,248,132,82]}
+{"kind":"shape","id":"sh/zylo72t8","slide":19,"bbox":[58,330,118,82]}
+{"kind":"textbox","id":"sh/excnexcn","slide":19,"text":"Stroke","textPreview":"Stroke","textChars":6,"textLines":1,"bbox":[64,340,106,36]}
+{"kind":"shape","id":"sh/10369cby","slide":19,"bbox":[176,330,84,82]}
+{"kind":"shape","id":"sh/0zupg7ad","slide":19,"bbox":[260,330,82,82]}
+{"kind":"shape","id":"sh/f21ovito","slide":19,"bbox":[342,330,66,82]}
+{"kind":"shape","id":"sh/u18n2dc3","slide":19,"bbox":[408,330,218,82]}
+{"kind":"shape","id":"sh/k76lcja1","slide":19,"bbox":[626,330,132,82]}
+{"kind":"shape","id":"sh/58f25orm","slide":19,"bbox":[58,412,118,82]}
+{"kind":"textbox","id":"sh/i5o3a9sv","slide":19,"text":"High blood pressure","textPreview":"High blood pressure","textChars":19,"textLines":1,"bbox":[64,422,106,36]}
+{"kind":"shape","id":"sh/j6xk3e9g","slide":19,"bbox":[176,412,84,82]}
+{"kind":"shape","id":"sh/w36l8za5","slide":19,"bbox":[260,412,82,82]}
+{"kind":"shape","id":"sh/x4f214rq","slide":19,"bbox":[342,412,66,82]}
+{"kind":"shape","id":"sh/a1436psz","slide":19,"bbox":[408,412,218,82]}
+{"kind":"shape","id":"sh/v2xkzu9k","slide":19,"bbox":[626,412,132,82]}
+{"kind":"shape","id":"sh/gzql43a9","slide":19,"bbox":[58,494,118,82]}
+{"kind":"textbox","id":"sh/h0zmd8ru","slide":19,"text":"High cholesterol","textPreview":"High cholesterol","textChars":16,"textLines":1,"bbox":[64,504,106,36]}
+{"kind":"shape","id":"sh/dkbi5076","slide":19,"bbox":[176,494,84,82]}
+{"kind":"shape","id":"sh/cj2hwvql","slide":19,"bbox":[260,494,82,82]}
+{"kind":"shape","id":"sh/ri903qp0","slide":19,"bbox":[342,494,66,82]}
+{"kind":"shape","id":"sh/qh0zul8v","slide":19,"bbox":[408,494,218,82]}
+{"kind":"shape","id":"sh/18bi907i","slide":19,"bbox":[626,494,132,82]}
+{"kind":"shape","id":"sh/072h0vqx","slide":19,"bbox":[58,576,118,82]}
+{"kind":"textbox","id":"sh/zmt07qpc","slide":19,"text":"Heart disease","textPreview":"Heart disease","textChars":13,"textLines":1,"bbox":[64,586,106,36]}
+{"kind":"shape","id":"sh/elkzyl8r","slide":19,"bbox":[176,576,84,82]}
+{"kind":"shape","id":"sh/9cvidk7e","slide":19,"bbox":[260,576,82,82]}
+{"kind":"shape","id":"sh/obm14fqt","slide":19,"bbox":[342,576,66,82]}
+{"kind":"shape","id":"sh/6xwfyhob","slide":19,"bbox":[408,576,218,82]}
+{"kind":"shape","id":"sh/7i5w725w","slide":19,"bbox":[626,576,132,82]}
+{"kind":"shape","id":"sh/sjex076h","slide":19,"bbox":[58,658,118,82]}
+{"kind":"textbox","id":"sh/tk7y9cn2","slide":19,"text":"Dementia or significant memory problems","textPreview":"Dementia or significant memory problems","textChars":39,"textLines":1,"bbox":[64,668,106,36]}
+{"kind":"shape","id":"sh/ulgf2hon","slide":19,"bbox":[176,658,84,82]}
+{"kind":"shape","id":"sh/fmpgbm5s","slide":19,"bbox":[260,658,82,82]}
+{"kind":"shape","id":"sh/gnyx4r6d","slide":19,"bbox":[342,658,66,82]}
+{"kind":"shape","id":"sh/ho7ydwny","slide":19,"bbox":[408,658,218,82]}
+{"kind":"shape","id":"sh/2pgf61oj","slide":19,"bbox":[626,658,132,82]}
+{"kind":"shape","id":"sh/3qpgfm54","slide":19,"bbox":[58,820,700,56]}
+{"kind":"shape","id":"sh/zu9wn6lc","slide":19,"bbox":[58,820,8,56]}
+{"kind":"textbox","id":"sh/et0vu1kr","slide":19,"text":"Privacy reminder","textPreview":"Privacy reminder","textChars":16,"textLines":1,"bbox":[76,832,664,22]}
+{"kind":"textbox","id":"sh/1grepw32","slide":19,"text":"Completed family-history pages may contain private information. Share only with people you choose.","textPreview":"Completed family-history pages may contain private information. Share only with people you choose.","textChars":98,"textLines":1,"bbox":[76,858,664,8]}
+{"kind":"shape","id":"sh/0fixwb2h","slide":19,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/rqpwjml0","slide":19,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/qpgvqhkf","slide":19,"text":"Family history","textPreview":"Family history","textChars":14,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/dsrelw36","slide":19,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/cridsr2l","slide":19,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/3mpwfml4","slide":19,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/2lgvmhkj","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/g05trz","slide":19,"text":"[Sources]\n[5] American Diabetes Association Professional Practice Committee for Diabetes. 13. Older Adults: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S277-S296. doi:10.2337/dc26-S013. https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/1zv8at","slide":20,"title":"ORGANIZER","textShapes":35}
+{"kind":"textbox","id":"sh/aloryhgn","slide":20,"text":"ORGANIZER","textPreview":"ORGANIZER","textChars":9,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/x8fq9czy","slide":20,"text":"Health Numbers and Care-Plan Organizer","textPreview":"Health Numbers and Care-Plan Organizer","textChars":38,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/wn6907yd","slide":20,"text":"Use this page to keep clinician-selected targets and next steps in one place.","textPreview":"Use this page to keep clinician-selected targets and next steps in one place.","textChars":77,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"textbox","id":"sh/jax8bmh4","slide":20,"text":"Do not change treatment based on this organizer. Ask your care team which numbers matter for you and how often to review them.","textPreview":"Do not change treatment based on this organizer. Ask your care team which numbers matter for you and how often to review them.","textChars":126,"textLines":1,"bbox":[58,144,700,42]}
+{"kind":"shape","id":"sh/y9or2hgj","slide":20,"bbox":[58,220,700,162]}
+{"kind":"textbox","id":"sh/lczqdwza","slide":20,"text":"Appointment 1","textPreview":"Appointment 1","textChars":13,"textLines":1,"bbox":[76,232,150,22]}
+{"kind":"textbox","id":"sh/kbq94ryp","slide":20,"text":"Date","textPreview":"Date","textChars":4,"textLines":1,"bbox":[76,246,112,16]}
+{"kind":"shape","id":"sh/zed8zihk","slide":20,"bbox":[76,264,112,34]}
+{"kind":"textbox","id":"sh/ed47qxgf","slide":20,"text":"A1C or glucose measure selected by clinician","textPreview":"A1C or glucose measure selected by clinician","textChars":44,"textLines":1,"bbox":[208,246,238,16]}
+{"kind":"shape","id":"sh/4nixk329","slide":20,"bbox":[208,264,238,34]}
+{"kind":"textbox","id":"sh/poret83u","slide":20,"text":"Blood pressure","textPreview":"Blood pressure","textChars":14,"textLines":1,"bbox":[468,246,116,16]}
+{"kind":"shape","id":"sh/2lgfitk3","slide":20,"bbox":[468,264,116,34]}
+{"kind":"textbox","id":"sh/3m9wrylo","slide":20,"text":"Lipid result or clinician summary","textPreview":"Lipid result or clinician summary","textChars":33,"textLines":1,"bbox":[604,246,138,16]}
+{"kind":"shape","id":"sh/cbixon2l","slide":20,"bbox":[604,264,138,34]}
+{"kind":"textbox","id":"sh/dcryx83q","slide":20,"text":"Medicine changes made by care team","textPreview":"Medicine changes made by care team","textChars":34,"textLines":1,"bbox":[76,302,220,16]}
+{"kind":"shape","id":"sh/q90fmdkf","slide":20,"bbox":[76,320,220,34]}
+{"kind":"textbox","id":"sh/ra9gvil0","slide":20,"text":"Sleep, activity, or symptom note","textPreview":"Sleep, activity, or symptom note","textChars":32,"textLines":1,"bbox":[316,302,210,16]}
+{"kind":"shape","id":"sh/sfyxcj21","slide":20,"bbox":[316,320,210,34]}
+{"kind":"textbox","id":"sh/tg7elo3m","slide":20,"text":"Target or next step","textPreview":"Target or next step","textChars":19,"textLines":1,"bbox":[548,302,194,16]}
+{"kind":"shape","id":"sh/90fmtgre","slide":20,"bbox":[548,320,194,34]}
+{"kind":"shape","id":"sh/oz6l0bqt","slide":20,"bbox":[58,416,700,162]}
+{"kind":"textbox","id":"sh/nyx4r698","slide":20,"text":"Appointment 2","textPreview":"Appointment 2","textChars":13,"textLines":1,"bbox":[76,428,150,22]}
+{"kind":"textbox","id":"sh/mx43y1sn","slide":20,"text":"Date","textPreview":"Date","textChars":4,"textLines":1,"bbox":[76,442,112,16]}
+{"kind":"shape","id":"sh/x4fmx0ra","slide":20,"bbox":[76,460,112,34]}
+{"kind":"textbox","id":"sh/w36l4vqp","slide":20,"text":"A1C or glucose measure selected by clinician","textPreview":"A1C or glucose measure selected by clinician","textChars":44,"textLines":1,"bbox":[208,442,238,16]}
+{"kind":"shape","id":"sh/b2x4vq94","slide":20,"bbox":[208,460,238,34]}
+{"kind":"textbox","id":"sh/a1o32l8j","slide":20,"text":"Blood pressure","textPreview":"Blood pressure","textChars":14,"textLines":1,"bbox":[468,442,116,16]}
+{"kind":"shape","id":"sh/5szm10rm","slide":20,"bbox":[468,460,116,34]}
+{"kind":"textbox","id":"sh/krq58vq1","slide":20,"text":"Lipid result or clinician summary","textPreview":"Lipid result or clinician summary","textChars":33,"textLines":1,"bbox":[604,442,138,16]}
+{"kind":"shape","id":"sh/2d0j2x8j","slide":20,"bbox":[604,460,138,34]}
+{"kind":"textbox","id":"sh/3et0v2po","slide":20,"text":"Medicine changes made by care team","textPreview":"Medicine changes made by care team","textChars":34,"textLines":1,"bbox":[76,498,220,16]}
+{"kind":"shape","id":"sh/4f2147q9","slide":20,"bbox":[76,516,220,34]}
+{"kind":"textbox","id":"sh/pgbixc7u","slide":20,"text":"Sleep, activity, or symptom note","textPreview":"Sleep, activity, or symptom note","textChars":32,"textLines":1,"bbox":[316,498,210,16]}
+{"kind":"shape","id":"sh/q1kj6hof","slide":20,"bbox":[316,516,210,34]}
+{"kind":"textbox","id":"sh/r2t0z2p0","slide":20,"text":"Target or next step","textPreview":"Target or next step","textChars":19,"textLines":1,"bbox":[548,498,194,16]}
+{"kind":"shape","id":"sh/c321876l","slide":20,"bbox":[548,516,194,34]}
+{"kind":"shape","id":"sh/d4b21c76","slide":20,"bbox":[58,612,700,162]}
+{"kind":"textbox","id":"sh/e5kjahob","slide":20,"text":"Appointment 3","textPreview":"Appointment 3","textChars":13,"textLines":1,"bbox":[76,624,150,22]}
+{"kind":"textbox","id":"sh/z6dk3mpw","slide":20,"text":"Date","textPreview":"Date","textChars":4,"textLines":1,"bbox":[76,638,112,16]}
+{"kind":"shape","id":"sh/nm90nmh0","slide":20,"bbox":[76,656,112,34]}
+{"kind":"textbox","id":"sh/m10jehgv","slide":20,"text":"A1C or glucose measure selected by clinician","textPreview":"A1C or glucose measure selected by clinician","textChars":44,"textLines":1,"bbox":[208,638,238,16]}
+{"kind":"shape","id":"sh/9oripcz6","slide":20,"bbox":[208,656,238,34]}
+{"kind":"textbox","id":"sh/8ni1gryl","slide":20,"text":"Blood pressure","textPreview":"Blood pressure","textChars":14,"textLines":1,"bbox":[468,638,116,16]}
+{"kind":"shape","id":"sh/vq90rmhc","slide":20,"bbox":[468,656,116,34]}
+{"kind":"textbox","id":"sh/ap0jihgr","slide":20,"text":"Lipid result or clinician summary","textPreview":"Lipid result or clinician summary","textChars":33,"textLines":1,"bbox":[604,638,138,16]}
+{"kind":"shape","id":"sh/xsbitwzi","slide":20,"bbox":[604,656,138,34]}
+{"kind":"textbox","id":"sh/wri1kryx","slide":20,"text":"Medicine changes made by care team","textPreview":"Medicine changes made by care team","textChars":34,"textLines":1,"bbox":[76,694,220,16]}
+{"kind":"shape","id":"sh/bup0f2h8","slide":20,"bbox":[76,712,220,34]}
+{"kind":"textbox","id":"sh/qtgz6x0n","slide":20,"text":"Sleep, activity, or symptom note","textPreview":"Sleep, activity, or symptom note","textChars":32,"textLines":1,"bbox":[316,694,210,16]}
+{"kind":"shape","id":"sh/gnap0za9","slide":20,"bbox":[316,712,210,34]}
+{"kind":"textbox","id":"sh/ho36t4bu","slide":20,"text":"Target or next step","textPreview":"Target or next step","textChars":19,"textLines":1,"bbox":[548,694,194,16]}
+{"kind":"shape","id":"sh/uls7yps3","slide":20,"bbox":[548,712,194,34]}
+{"kind":"shape","id":"sh/fm1oruto","slide":20,"bbox":[58,834,700,52]}
+{"kind":"shape","id":"sh/szapwzax","slide":20,"bbox":[58,834,8,52]}
+{"kind":"textbox","id":"sh/t0j6pkbi","slide":20,"text":"Privacy reminder","textPreview":"Privacy reminder","textChars":16,"textLines":1,"bbox":[76,846,664,22]}
+{"kind":"textbox","id":"sh/6xs7upsr","slide":20,"text":"Store completed health information securely. It is okay to leave fields blank.","textPreview":"Store completed health information securely. It is okay to leave fields blank.","textChars":78,"textLines":1,"bbox":[76,872,664,4]}
+{"kind":"shape","id":"sh/7y1onutc","slide":20,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/cvup8jah","slide":20,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/dgnq1obm","slide":20,"text":"Care-plan organizer","textPreview":"Care-plan organizer","textChars":19,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/lcj6lo36","slide":20,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/0bapsj2l","slide":20,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/zahojel0","slide":20,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/y987q9kf","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/1zv8at","slide":20,"text":"[Sources]\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[9] National Heart, Lung, and Blood Institute. High Blood Pressure - Treatment. Updated May 2024. https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/ikzura","slide":21,"title":"CAREFUL HOPE","textShapes":16}
+{"kind":"textbox","id":"sh/at0n2lkj","slide":21,"text":"CAREFUL HOPE","textPreview":"CAREFUL HOPE","textChars":12,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/xwbmd03a","slide":21,"text":"What risk reduction can and cannot promise","textPreview":"What risk reduction can and cannot promise","textChars":42,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/wv254v2p","slide":21,"text":"Healthy routines and medical care may support health, but they do not guarantee a specific cognitive outcome. [6-8,17]","textPreview":"Healthy routines and medical care may support health, but they do not guarantee a specific cognitive outcome. [6-8,17]","textChars":118,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/jytofq10","slide":21,"bbox":[58,196,338,318]}
+{"kind":"shape","id":"sh/ixkn6lkf","slide":21,"bbox":[72,212,18,18]}
+{"kind":"textbox","id":"sh/50b6h0j6","slide":21,"text":"May support","textPreview":"May support","textChars":11,"textLines":1,"bbox":[100,209,282,24]}
+{"kind":"shape","id":"sh/kz258v2l","slide":21,"bbox":[76,241,302,260]}
+{"kind":"textbox","id":"sh/z2p436lw","slide":21,"text":"Vascular health\nDaily function\nBetter clinical questions\nIdentification of treatable problems\nRisk reduction in a broader care plan\nQuality of life","textPreview":"Vascular health | Daily function | Better clinical questions | Identification of treatable problems | Risk reduction in a broader care pl...","textChars":147,"textLines":6,"bbox":[76,250,302,248]}
+{"kind":"shape","id":"sh/y1gnu1kb","slide":21,"bbox":[420,196,338,318]}
+{"kind":"shape","id":"sh/kru1krqt","slide":21,"bbox":[434,212,18,18]}
+{"kind":"textbox","id":"sh/ls3idwre","slide":21,"text":"Cannot guarantee","textPreview":"Cannot guarantee","textChars":16,"textLines":1,"bbox":[462,209,282,24]}
+{"kind":"shape","id":"sh/ypsjih83","slide":21,"bbox":[438,241,302,260]}
+{"kind":"textbox","id":"sh/zq10bm9o","slide":21,"text":"Prevention of Alzheimer's disease\nPrevention of every dementia\nReversal of every diabetes complication\nA specific cognitive outcome\nReplacement for screening or care\nPerfect control over risk","textPreview":"Prevention of Alzheimer's disease | Prevention of every dementia | Reversal of every diabetes complication | A specific cognitive outcome...","textChars":191,"textLines":6,"bbox":[438,250,302,248]}
+{"kind":"shape","id":"sh/8vu1obq5","slide":21,"bbox":[58,598,700,132]}
+{"kind":"textbox","id":"sh/9w3ihgrq","slide":21,"text":"Use careful hope.","textPreview":"Use careful hope.","textChars":17,"textLines":1,"bbox":[82,624,652,42]}
+{"kind":"textbox","id":"sh/mtcjm18z","slide":21,"text":"Care can be meaningful even when it cannot promise certainty.","textPreview":"Care can be meaningful even when it cannot promise certainty.","textChars":61,"textLines":1,"bbox":[122,678,572,30]}
+{"kind":"shape","id":"sh/7ul0f69k","slide":21,"bbox":[58,786,700,76]}
+{"kind":"shape","id":"sh/ozahc7a1","slide":21,"bbox":[58,786,8,76]}
+{"kind":"textbox","id":"sh/p0ji5cr6","slide":21,"text":"The goal is not panic.","textPreview":"The goal is not panic.","textChars":22,"textLines":1,"bbox":[76,798,664,22]}
+{"kind":"textbox","id":"sh/5krqt4fy","slide":21,"text":"Use the guide to plan questions, notice concerning changes, and build support that fits your life.","textPreview":"Use the guide to plan questions, notice concerning changes, and build support that fits your life.","textChars":98,"textLines":1,"bbox":[76,824,664,28]}
+{"kind":"shape","id":"sh/4jipkzyd","slide":21,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/ji9oruxs","slide":21,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/ihg7i9g7","slide":21,"text":"Careful hope","textPreview":"Careful hope","textChars":12,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/t8rqxofu","slide":21,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/s7ipojyp","slide":21,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/rm98vex4","slide":21,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/6l07m9gj","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/ikzura","slide":21,"text":"[Sources]\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n[7] Livingston G, Huntley J, Liu KY, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. The Lancet. 2024;404(10452):572-628. doi:10.1016/S0140-6736(24)01296-0. https://www.thelancet.com/article/S0140-6736(24)01296-0/fulltext\n[8] Centers for Disease Control and Prevention. Reducing Risk for Dementia. Updated May 15, 2024. https://www.cdc.gov/alzheimers-dementia/prevention/index.html\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/1fm5vh","slide":22,"title":"RESOURCES","textShapes":19}
+{"kind":"textbox","id":"sh/zuh4ni1s","slide":22,"text":"RESOURCES","textPreview":"RESOURCES","textChars":9,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/0vq5gnix","slide":22,"text":"Next steps","textPreview":"Next steps","textChars":10,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/1wzmp8ji","slide":22,"text":"Use this guide to prepare questions rather than predict the future.","textPreview":"Use this guide to prepare questions rather than predict the future.","textChars":67,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"textbox","id":"sh/mx8nid03","slide":22,"text":"Share memory or thinking concerns with qualified care. [6]\nFollow your personal glucose plan and low-glucose instructions. [2,3]\nAsk what blood-pressure and cholesterol targets apply to you. [9]\nAddress hearing, vision, sleep, and mood concerns when they affect daily life. [12,14-16]","textPreview":"Share memory or thinking concerns with qualified care. [6] | Follow your personal glucose plan and low-glucose instructions. [2,3] | Ask ...","textChars":284,"textLines":4,"bbox":[58,166,700,134]}
+{"kind":"textbox","id":"sh/nyh4ri1o","slide":22,"text":"Explore the Guide","textPreview":"Explore the Guide","textChars":17,"textLines":1,"bbox":[58,358,318,48]}
+{"kind":"textbox","id":"sh/ozq5kni9","slide":22,"text":"Visit Health Tools","textPreview":"Visit Health Tools","textChars":18,"textLines":1,"bbox":[410,358,318,48]}
+{"kind":"textbox","id":"sh/90zmtsju","slide":22,"text":"Try JEIR","textPreview":"Try JEIR","textChars":8,"textLines":1,"bbox":[58,430,318,48]}
+{"kind":"textbox","id":"sh/a1snmx0f","slide":22,"text":"Support Free Education","textPreview":"Support Free Education","textChars":22,"textLines":1,"bbox":[410,430,318,48]}
+{"kind":"shape","id":"sh/b214v21k","slide":22,"bbox":[58,554,700,170]}
+{"kind":"textbox","id":"sh/32lcvehw","slide":22,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[82,580,300,26]}
+{"kind":"textbox","id":"sh/i1cv290b","slide":22,"text":"501(c)(3) nonprofit | mindfuldiabetes.org","textPreview":"501(c)(3) nonprofit | mindfuldiabetes.org","textChars":41,"textLines":1,"bbox":[82,612,330,24]}
+{"kind":"textbox","id":"sh/54nuxoz2","slide":22,"text":"Free sharing statement: You may share this guide for education if it is kept intact and not sold.","textPreview":"Free sharing statement: You may share this guide for education if it is kept intact and not sold.","textChars":97,"textLines":1,"bbox":[82,650,652,28]}
+{"kind":"textbox","id":"sh/43ud4jih","slide":22,"text":"Medical disclaimer: This guide is general education. It does not diagnose, treat, or replace qualified medical care.","textPreview":"Medical disclaimer: This guide is general education. It does not diagnose, treat, or replace qualified medical care.","textChars":116,"textLines":1,"bbox":[82,684,652,28]}
+{"kind":"shape","id":"sh/vylcruhk","slide":22,"bbox":[58,780,700,82]}
+{"kind":"shape","id":"sh/uxcvyp0z","slide":22,"bbox":[58,780,8,82]}
+{"kind":"textbox","id":"sh/h03ut4zq","slide":22,"text":"Urgent concerns","textPreview":"Urgent concerns","textChars":15,"textLines":1,"bbox":[76,792,664,22]}
+{"kind":"textbox","id":"sh/gzud0zi5","slide":22,"text":"Sudden confusion, stroke-like symptoms, severe low glucose symptoms, fainting, seizure, chest pain, or major changes require appropriate urgent assistance.","textPreview":"Sudden confusion, stroke-like symptoms, severe low glucose symptoms, fainting, seizure, chest pain, or major changes require appropriate ...","textChars":155,"textLines":1,"bbox":[76,818,664,34]}
+{"kind":"shape","id":"sh/fu5w3yh4","slide":22,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/etwvat0j","slide":22,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/a1k7iho3","slide":22,"text":"Resources","textPreview":"Resources","textChars":9,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/b2torm58","slide":22,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/w32pkr6t","slide":22,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/x4b6twne","slide":22,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/y5k7m1oz","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/1fm5vh","slide":22,"text":"[Sources]\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[3] Centers for Disease Control and Prevention. Low Blood Sugar (Hypoglycemia). Updated May 15, 2024. https://www.cdc.gov/diabetes/about/low-blood-sugar-hypoglycemia.html\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/qqi9tx","slide":23,"title":"REFERENCES AND SAFETY","textShapes":14}
+{"kind":"textbox","id":"sh/6hkbyps7","slide":23,"text":"REFERENCES AND SAFETY","textPreview":"REFERENCES AND SAFETY","textChars":21,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/tkbatkry","slide":23,"text":"Safety notes and references","textPreview":"Safety notes and references","textChars":27,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/sj2t0zad","slide":23,"text":"Medical review status: pending | Next scheduled review: July 2027 | Accessibility status: checked, not PDF/UA certified.","textPreview":"Medical review status: pending | Next scheduled review: July 2027 | Accessibility status: checked, not PDF/UA certified.","textChars":120,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"shape","id":"sh/fmdcvu9o","slide":23,"bbox":[58,150,700,84]}
+{"kind":"shape","id":"sh/el4b2psj","slide":23,"bbox":[58,150,8,84]}
+{"kind":"textbox","id":"sh/18vux4ru","slide":23,"text":"This guide is education, not diagnosis.","textPreview":"This guide is education, not diagnosis.","textChars":39,"textLines":1,"bbox":[76,162,664,22]}
+{"kind":"textbox","id":"sh/g7mt4zq9","slide":23,"text":"It does not provide personal glucose targets, medicine changes, dementia diagnosis, or emergency instructions beyond encouraging appropriate urgent help. Discuss individual questions with qualified care.","textPreview":"It does not provide personal glucose targets, medicine changes, dementia diagnosis, or emergency instructions beyond encouraging appropri...","textChars":203,"textLines":1,"bbox":[76,188,664,36]}
+{"kind":"shape","id":"sh/3adcze90","slide":23,"bbox":[58,250,700,76]}
+{"kind":"shape","id":"sh/294b698f","slide":23,"bbox":[58,250,8,76]}
+{"kind":"textbox","id":"sh/4zqtkr2h","slide":23,"text":"Potentially urgent","textPreview":"Potentially urgent","textChars":18,"textLines":1,"bbox":[76,262,664,22]}
+{"kind":"textbox","id":"sh/50zatwj2","slide":23,"text":"Sudden confusion, stroke-like symptoms, severe low glucose symptoms, fainting, seizure, loss of consciousness, chest pain, or trouble breathing should receive appropriate urgent assistance.","textPreview":"Sudden confusion, stroke-like symptoms, severe low glucose symptoms, fainting, seizure, loss of consciousness, chest pain, or trouble bre...","textChars":189,"textLines":1,"bbox":[76,288,664,28]}
+{"kind":"textbox","id":"sh/ix8bihkb","slide":23,"text":"References","textPreview":"References","textChars":10,"textLines":1,"bbox":[58,360,220,28]}
+{"kind":"textbox","id":"sh/jyhsrm1w","slide":23,"text":"[1] National Institute of Diabetes and Digestive and Kidney Diseases. Symptoms & Causes of Diabetes. Last reviewed October 2024. https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[3] Centers for Disease Control and Prevention. Low Blood Sugar (Hypoglycemia). Updated May 15, 2024. https://www.cdc.gov/diabetes/about/low-blood-sugar-hypoglycemia.html\n[4] Centers for Disease Control and Prevention. Your Brain and Diabetes. Updated May 15, 2024. https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html\n[5] American Diabetes Association Professional Practice Committee for Diabetes. 13. Older Adults: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S277-S296. doi:10.2337/dc26-S013. https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n[7] Livingston G, Huntley J, Liu KY, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. The Lancet. 2024;404(10452):572-628. doi:10.1016/S0140-6736(24)01296-0. https://www.thelancet.com/article/S0140-6736(24)01296-0/fulltext\n[8] Centers for Disease Control and Prevention. Reducing Risk for Dementia. Updated May 15, 2024. https://www.cdc.gov/alzheimers-dementia/prevention/index.html\n[9] National Heart, Lung, and Blood Institute. High Blood Pressure - Treatment. Updated May 2024. https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment","textPreview":"[1] National Institute of Diabetes and Digestive and Kidney Diseases. Symptoms & Causes of Diabetes. Last reviewed October 2024. https://...","textChars":2011,"textLines":9,"bbox":[58,398,700,512]}
+{"kind":"shape","id":"sh/s3atob2d","slide":23,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/t4jaxwjy","slide":23,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/61sbm1kn","slide":23,"text":"References and safety","textPreview":"References and safety","textChars":21,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/r21sv618","slide":23,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/gratsb2p","slide":23,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/1s3a1gja","slide":23,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/pozalgbe","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/qqi9tx","slide":23,"text":"[Sources]\n[1] National Institute of Diabetes and Digestive and Kidney Diseases. Symptoms & Causes of Diabetes. Last reviewed October 2024. https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[3] Centers for Disease Control and Prevention. Low Blood Sugar (Hypoglycemia). Updated May 15, 2024. https://www.cdc.gov/diabetes/about/low-blood-sugar-hypoglycemia.html\n[4] Centers for Disease Control and Prevention. Your Brain and Diabetes. Updated May 15, 2024. https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html\n[5] American Diabetes Association Professional Practice Committee for Diabetes. 13. Older Adults: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S277-S296. doi:10.2337/dc26-S013. https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n[7] Livingston G, Huntley J, Liu KY, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. The Lancet. 2024;404(10452):572-628. doi:10.1016/S0140-6736(24)01296-0. https://www.thelancet.com/article/S0140-6736(24)01296-0/fulltext\n[8] Centers for Disease Control and Prevention. Reducing Risk for Dementia. Updated May 15, 2024. https://www.cdc.gov/alzheimers-dementia/prevention/index.html\n[9] National Heart, Lung, and Blood Institute. High Blood Pressure - Treatment. Updated May 2024. https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment\n[10] Centers for Disease Control and Prevention. Diabetes Meal Planning. Updated May 15, 2024. https://www.cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html\n[11] U.S. Department of Health and Human Services. Physical Activity Guidelines for Americans, 2nd edition. 2018. https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf\n[12] National Heart, Lung, and Blood Institute. What Is Sleep Apnea? Updated November 2024. https://www.nhlbi.nih.gov/health/sleep-apnea\n[13] Centers for Disease Control and Prevention. Health Effects of Social Isolation and Loneliness. Updated May 15, 2024. https://www.cdc.gov/social-connectedness/risk-factors/index.html\n[14] National Eye Institute. Diabetic Retinopathy. Updated September 2025. https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy\n[15] National Institute on Deafness and Other Communication Disorders. Age-Related Hearing Loss (Presbycusis). Updated March 2023. https://www.nidcd.nih.gov/health/age-related-hearing-loss\n[16] Centers for Disease Control and Prevention. About Mental Health. Updated May 2026. https://www.cdc.gov/mental-health/about/index.html\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n[18] Centers for Disease Control and Prevention. Manage Blood Sugar. Updated May 15, 2024. https://www.cdc.gov/diabetes/treatment/index.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
+{"kind":"slide","id":"sl/dzj9h5","slide":24,"title":"REFERENCES","textShapes":11}
+{"kind":"textbox","id":"sh/at0zuhon","slide":24,"text":"REFERENCES","textPreview":"REFERENCES","textChars":10,"textLines":1,"bbox":[58,42,380,22]}
+{"kind":"textbox","id":"sh/xwbipcne","slide":24,"text":"References, continued","textPreview":"References, continued","textChars":21,"textLines":1,"bbox":[58,66,620,48]}
+{"kind":"textbox","id":"sh/wv2hw76t","slide":24,"text":"All in-text citations use sequential numbers that appear in this list.","textPreview":"All in-text citations use sequential numbers that appear in this list.","textChars":70,"textLines":1,"bbox":[58,112,640,32]}
+{"kind":"textbox","id":"sh/n69gj25c","slide":24,"text":"[10] Centers for Disease Control and Prevention. Diabetes Meal Planning. Updated May 15, 2024. https://www.cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html\n[11] U.S. Department of Health and Human Services. Physical Activity Guidelines for Americans, 2nd edition. 2018. https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf\n[12] National Heart, Lung, and Blood Institute. What Is Sleep Apnea? Updated November 2024. https://www.nhlbi.nih.gov/health/sleep-apnea\n[13] Centers for Disease Control and Prevention. Health Effects of Social Isolation and Loneliness. Updated May 15, 2024. https://www.cdc.gov/social-connectedness/risk-factors/index.html\n[14] National Eye Institute. Diabetic Retinopathy. Updated September 2025. https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy\n[15] National Institute on Deafness and Other Communication Disorders. Age-Related Hearing Loss (Presbycusis). Updated March 2023. https://www.nidcd.nih.gov/health/age-related-hearing-loss\n[16] Centers for Disease Control and Prevention. About Mental Health. Updated May 2026. https://www.cdc.gov/mental-health/about/index.html\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n[18] Centers for Disease Control and Prevention. Manage Blood Sugar. Updated May 15, 2024. https://www.cdc.gov/diabetes/treatment/index.html","textPreview":"[10] Centers for Disease Control and Prevention. Diabetes Meal Planning. Updated May 15, 2024. https://www.cdc.gov/diabetes/healthy-eatin...","textChars":1725,"textLines":9,"bbox":[58,152,700,610]}
+{"kind":"shape","id":"sh/m50zqxor","slide":24,"bbox":[58,790,700,88]}
+{"kind":"textbox","id":"sh/9srylcni","slide":24,"text":"Citation check","textPreview":"Citation check","textChars":14,"textLines":1,"bbox":[82,812,180,22]}
+{"kind":"textbox","id":"sh/o7ihs76x","slide":24,"text":"No [12]-[15] orphan citation pattern remains from the draft. Each body citation points to a numbered source in the final list; no references are unused.","textPreview":"No [12]-[15] orphan citation pattern remains from the draft. Each body citation points to a numbered source in the final list; no referen...","textChars":152,"textLines":1,"bbox":[82,842,652,30]}
+{"kind":"shape","id":"sh/z29gfi50","slide":24,"bbox":[58,34,700,1]}
+{"kind":"textbox","id":"sh/e1gzmdof","slide":24,"text":"Blood Sugar & Brain Health","textPreview":"Blood Sugar & Brain Health","textChars":26,"textLines":1,"bbox":[58,16,250,18]}
+{"kind":"textbox","id":"sh/cvyts32x","slide":24,"text":"References","textPreview":"References","textChars":10,"textLines":1,"bbox":[498,16,260,18]}
+{"kind":"shape","id":"sh/dw7u18ji","slide":24,"bbox":[58,1008,700,1]}
+{"kind":"textbox","id":"sh/qtgbqdkr","slide":24,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1021,200,20]}
+{"kind":"textbox","id":"sh/rupszy1c","slide":24,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[313,1021,190,20]}
+{"kind":"textbox","id":"sh/4ryto321","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[718,1021,40,20]}
+{"kind":"notes","id":"nt/dzj9h5","slide":24,"text":"[Sources]\n[1] National Institute of Diabetes and Digestive and Kidney Diseases. Symptoms & Causes of Diabetes. Last reviewed October 2024. https://www.niddk.nih.gov/health-information/diabetes/overview/symptoms-causes\n[2] American Diabetes Association Professional Practice Committee for Diabetes. 6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S132-S149. doi:10.2337/dc26-S006. https://diabetesjournals.org/care/article/49/Supplement_1/S132/163927/6-Glycemic-Goals-Hypoglycemia-and-Hyperglycemic\n[3] Centers for Disease Control and Prevention. Low Blood Sugar (Hypoglycemia). Updated May 15, 2024. https://www.cdc.gov/diabetes/about/low-blood-sugar-hypoglycemia.html\n[4] Centers for Disease Control and Prevention. Your Brain and Diabetes. Updated May 15, 2024. https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html\n[5] American Diabetes Association Professional Practice Committee for Diabetes. 13. Older Adults: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S277-S296. doi:10.2337/dc26-S013. https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026\n[6] National Institute on Aging. Cognitive Health and Older Adults. Last reviewed December 2023. https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults\n[7] Livingston G, Huntley J, Liu KY, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. The Lancet. 2024;404(10452):572-628. doi:10.1016/S0140-6736(24)01296-0. https://www.thelancet.com/article/S0140-6736(24)01296-0/fulltext\n[8] Centers for Disease Control and Prevention. Reducing Risk for Dementia. Updated May 15, 2024. https://www.cdc.gov/alzheimers-dementia/prevention/index.html\n[9] National Heart, Lung, and Blood Institute. High Blood Pressure - Treatment. Updated May 2024. https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment\n[10] Centers for Disease Control and Prevention. Diabetes Meal Planning. Updated May 15, 2024. https://www.cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html\n[11] U.S. Department of Health and Human Services. Physical Activity Guidelines for Americans, 2nd edition. 2018. https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf\n[12] National Heart, Lung, and Blood Institute. What Is Sleep Apnea? Updated November 2024. https://www.nhlbi.nih.gov/health/sleep-apnea\n[13] Centers for Disease Control and Prevention. Health Effects of Social Isolation and Loneliness. Updated May 15, 2024. https://www.cdc.gov/social-connectedness/risk-factors/index.html\n[14] National Eye Institute. Diabetic Retinopathy. Updated September 2025. https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy\n[15] National Institute on Deafness and Other Communication Disorders. Age-Related Hearing Loss (Presbycusis). Updated March 2023. https://www.nidcd.nih.gov/health/age-related-hearing-loss\n[16] Centers for Disease Control and Prevention. About Mental Health. Updated May 2026. https://www.cdc.gov/mental-health/about/index.html\n[17] American Diabetes Association Professional Practice Committee for Diabetes. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes - 2026. Diabetes Care. 2026;49(Suppl. 1):S89-S131. doi:10.2337/dc26-S005. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n[18] Centers for Disease Control and Prevention. Manage Blood Sugar. Updated May 15, 2024. https://www.cdc.gov/diabetes/treatment/index.html\n\nVisible copy was reviewed for patient education, overstatement, and citation support. Medical review status remains pending."}
