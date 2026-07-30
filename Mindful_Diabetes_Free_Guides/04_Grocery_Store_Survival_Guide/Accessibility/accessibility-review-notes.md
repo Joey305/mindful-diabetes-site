@@ -1,5 +1,6 @@
 # Accessibility Review Notes
 
-- Selectable text, metadata, descriptive links, and PDF bookmarks are included.
-- Image alt text is documented in the image license manifest.
-- Full PDF/UA tagging should be completed in a dedicated remediation tool before broad clinical distribution.
+- Selectable text, metadata, descriptive links, and bookmarks are included.
+- Web PDFs include fillable AcroForm fields on worksheet pages where practical.
+- `pdfinfo` still reports `Tagged: no`; full PDF/UA tagging and embedded image alt text remediation are pending.
+- Alt text is documented in the image manifest, but not embedded in the PDF structure.

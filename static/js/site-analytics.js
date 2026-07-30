@@ -122,6 +122,16 @@
       "relatedArticle",
       "resourceId",
       "resourceType",
+      "guideTitle",
+      "guideSlug",
+      "guideCategory",
+      "pageCount",
+      "fileType",
+      "fileSize",
+      "action",
+      "buttonLocation",
+      "sourcePage",
+      "sharePlatform",
       "sponsorId",
       "eventId",
       "volunteerRole",
@@ -145,6 +155,16 @@
       relatedArticle: "related_article",
       resourceId: "resource_id",
       resourceType: "resource_type",
+      guideTitle: "guide_title",
+      guideSlug: "guide_slug",
+      guideCategory: "guide_category",
+      pageCount: "page_count",
+      fileType: "file_type",
+      fileSize: "file_size",
+      action: "action",
+      buttonLocation: "button_location",
+      sourcePage: "source_page",
+      sharePlatform: "share_platform",
       sponsorId: "sponsor_id",
       eventId: "event_id",
       volunteerRole: "volunteer_role",
@@ -202,6 +222,17 @@
     } catch (_error) {}
   }
 
+  window.trackEvent = function (eventName, metadata) {
+    if (!eventName) {
+      return;
+    }
+    var event = baseEvent();
+    event.event_name = eventName;
+    event.event_category = "resource";
+    event.metadata = metadata || {};
+    send(event);
+  };
+
   function trackPageView() {
     if (sentPageView) {
       return;
@@ -251,7 +282,7 @@
                 element,
                 window.setTimeout(function () {
                   impressed.add(element);
-                  send(eventFromElement(element, "cta_impression"));
+                  send(eventFromElement(element, element.dataset.trackImpressionEvent || "cta_impression"));
                   observer.unobserve(element);
                 }, 1000)
               );

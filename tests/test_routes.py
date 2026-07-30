@@ -105,6 +105,61 @@ def test_footer_links_to_all_social_channels():
     assert b"LinkedIn" in response.data
 
 
+def test_free_guides_resource_center_renders_all_guides():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    response = client.get("/free-guides/")
+
+    assert response.status_code == 200
+    assert b"Free Health Guides for Everyday Life" in response.data
+    assert b"The Mindful Plate" in response.data
+    assert b"Fats Without Fear" in response.data
+    assert b"The Grocery Store Survival Guide" in response.data
+    assert b"The 7-Day Prevention Reset" in response.data
+    assert b"Blood Sugar &amp; Brain Health" in response.data
+    assert b"resource_pdf_view" in response.data
+    assert b"resource_pdf_download" in response.data
+    assert b"resource_share_click" in response.data
+    assert b"No signup required" in response.data
+
+
+def test_free_guide_detail_pages_and_static_assets_resolve():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    expected = {
+        "mindful-plate": "21 pages",
+        "fats-without-fear": "21 pages",
+        "grocery-store-survival-guide": "22 pages",
+        "7-day-prevention-reset": "21 pages",
+        "blood-sugar-brain-health": "23 pages",
+    }
+    for slug, page_count in expected.items():
+        response = client.get(f"/free-guides/{slug}/")
+
+        assert response.status_code == 200
+        assert page_count.encode() in response.data
+        assert b"resource_detail_view" in response.data
+        assert b"Educational, Not Personal Medical Advice" in response.data
+        assert b"/static/free-guides/pdfs/" in response.data
+        assert b"/static/free-guides/images/" in response.data
+
+
+def test_free_guides_redirects_and_nav_links():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    assert client.get("/free-guides").status_code == 301
+    assert client.get("/resources").status_code == 301
+    assert client.get("/resources/free-guides/").status_code == 301
+
+    response = client.get("/")
+    assert response.status_code == 200
+    assert b'href="/free-guides/"' in response.data
+    assert b"Free Guides" in response.data
+
+
 def test_subscribe_links_scroll_to_footer_form_on_current_page():
     app = create_app({"TESTING": True})
     client = app.test_client()

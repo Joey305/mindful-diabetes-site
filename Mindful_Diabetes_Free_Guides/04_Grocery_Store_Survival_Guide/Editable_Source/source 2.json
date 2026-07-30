@@ -1,0 +1,308 @@
+{
+  "folder": "04_Grocery_Store_Survival_Guide",
+  "slug": "grocery-store-survival-guide",
+  "file": "mindful-diabetes-grocery-store-guide-2026.pdf",
+  "title": "The Grocery Store Survival Guide",
+  "subtitle": "How to Make Practical, Blood Sugar-Conscious Choices Without Feeling Overwhelmed",
+  "accent": "green",
+  "description": "A practical shopping guide for labels, budget choices, pantry foods, drinks, snacks, and fast meal formulas.",
+  "who": "For anyone who wants to shop with less overwhelm and more confidence.",
+  "tags": [
+    "Grocery shopping",
+    "Food labels",
+    "Budget meals"
+  ],
+  "refs": [
+    [
+      "U.S. Food and Drug Administration",
+      "How to Understand and Use the Nutrition Facts Label",
+      "2024",
+      "https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label"
+    ],
+    [
+      "U.S. Food and Drug Administration",
+      "Added Sugars on the Nutrition Facts Label",
+      "2026",
+      "https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label"
+    ],
+    [
+      "U.S. Food and Drug Administration",
+      "Sodium in Your Diet",
+      "2024",
+      "https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet"
+    ],
+    [
+      "American Diabetes Association",
+      "What is the Diabetes Plate?",
+      "2026",
+      "https://diabetesfoodhub.org/blog/what-diabetes-plate"
+    ],
+    [
+      "USDA",
+      "MyPlate.gov",
+      "2026",
+      "https://www.myplate.gov/"
+    ]
+  ],
+  "visuals": [
+    [
+      "cover-cart",
+      "A smarter grocery cart",
+      [
+        "produce",
+        "protein",
+        "fiber carbs",
+        "healthy fats",
+        "flavor",
+        "freezer",
+        "pantry",
+        "drinks"
+      ]
+    ],
+    [
+      "five-part-cart",
+      "The five-part cart formula",
+      [
+        "vegetables",
+        "protein",
+        "carbs",
+        "fats",
+        "flavor",
+        "freezer",
+        "pantry",
+        "backup"
+      ]
+    ],
+    [
+      "fresh-frozen-canned",
+      "Fresh, frozen, canned, dried",
+      [
+        "fresh",
+        "frozen",
+        "canned",
+        "dried",
+        "rinse",
+        "compare",
+        "store",
+        "use"
+      ]
+    ],
+    [
+      "protein-map",
+      "Protein choices",
+      [
+        "eggs",
+        "beans",
+        "tofu",
+        "fish",
+        "chicken",
+        "yogurt",
+        "nuts",
+        "lentils"
+      ]
+    ],
+    [
+      "label-map",
+      "Nutrition Facts map",
+      [
+        "serving",
+        "carbs",
+        "fiber",
+        "added sugar",
+        "sodium",
+        "sat fat",
+        "%DV",
+        "ingredients"
+      ]
+    ],
+    [
+      "sugar-names",
+      "Added sugar names",
+      [
+        "syrup",
+        "dextrose",
+        "sucrose",
+        "honey",
+        "molasses",
+        "juice concentrate",
+        "maltose",
+        "agave"
+      ]
+    ],
+    [
+      "meal-formula",
+      "Ten-minute meal formula",
+      [
+        "base",
+        "protein",
+        "vegetable",
+        "flavor",
+        "heat",
+        "assemble",
+        "leftovers",
+        "pack"
+      ]
+    ],
+    [
+      "checklist",
+      "Printable grocery checklist",
+      [
+        "produce",
+        "protein",
+        "carbs",
+        "fats",
+        "drinks",
+        "snacks",
+        "pantry",
+        "notes"
+      ]
+    ]
+  ],
+  "pages": [
+    [
+      "Before you shop",
+      "A good grocery trip starts before the store. Check what you already have, choose two or three meals, and pick backup foods for busy days.",
+      [
+        "You do not need a perfect list.",
+        "A short list you use is better than an ideal list left at home."
+      ]
+    ],
+    [
+      "The five-part cart",
+      "Build around vegetables, protein, fiber-rich carbohydrates, healthy fats, and flavor builders. This keeps shopping practical without depending on one brand or diet plan.",
+      [
+        "Fresh, frozen, canned, and dried foods can all fit.",
+        "Perimeter-only shopping misses many useful budget foods."
+      ]
+    ],
+    [
+      "Produce",
+      "Choose vegetables and fruits you will actually eat. Fresh produce is wonderful, but it is not the only way to eat well.",
+      [
+        "Pre-cut vegetables can save energy.",
+        "Frozen vegetables may reduce waste."
+      ]
+    ],
+    [
+      "Frozen foods",
+      "Frozen vegetables and fruit can be affordable, quick, and nutritious. Look for options without heavy sauces or added sugars when possible.",
+      [
+        "Frozen berries work in yogurt or oats.",
+        "Frozen greens can disappear into soups and eggs."
+      ]
+    ],
+    [
+      "Canned foods",
+      "Canned beans, tuna, salmon, vegetables, tomato products, and soups can help on low-energy days. Rinsing canned beans or vegetables can lower sodium.",
+      [
+        "Compare labels when you can.",
+        "Keep emergency meals in the pantry."
+      ]
+    ],
+    [
+      "Protein choices",
+      "Protein can come from eggs, fish, poultry, lean meat, tofu, tempeh, yogurt, cottage cheese, beans, lentils, nuts, and seeds.",
+      [
+        "Beans and lentils also contain carbohydrate.",
+        "Choose based on budget, culture, and medical needs."
+      ]
+    ],
+    [
+      "Plant proteins",
+      "Beans, lentils, tofu, tempeh, and edamame can support filling meals. They are useful in soups, tacos, bowls, stir-fries, curries, and salads.",
+      [
+        "Seasoning matters.",
+        "Start with canned beans if dried beans feel like too much."
+      ]
+    ],
+    [
+      "Breads and grains",
+      "Look for grains and breads that bring fiber and fit your glucose plan. Whole grain, serving size, and total carbohydrate are more useful than marketing claims alone.",
+      [
+        "Multigrain does not always mean whole grain.",
+        "Compare fiber and total carbohydrate."
+      ]
+    ],
+    [
+      "Dairy and alternatives",
+      "Milk and yogurt contain carbohydrate. Plain yogurt, unsweetened fortified soy milk, and lower-sugar options may fit many plans, but allergies and preferences vary.",
+      [
+        "Check added sugar.",
+        "Choose what fits your taste and budget."
+      ]
+    ],
+    [
+      "Snacks",
+      "A snack can be planned or it can become accidental grazing. Pair protein or fat with fiber when you want something that lasts longer.",
+      [
+        "Fruit with nuts.",
+        "Hummus with vegetables.",
+        "Yogurt with berries."
+      ]
+    ],
+    [
+      "Drinks",
+      "Sweet drinks can add sugar quickly. Start by improving one drink you have often rather than overhauling every beverage.",
+      [
+        "Water, unsweet tea, sparkling water, or smaller sweet drinks can all be steps.",
+        "Alcohol needs medication and safety awareness."
+      ]
+    ],
+    [
+      "Nutrition Facts label",
+      "Start with serving size, then check total carbohydrate, fiber, added sugar, saturated fat, and sodium. Percent Daily Value helps compare nutrients. [1]",
+      [
+        "5% DV is low and 20% DV is high.",
+        "Serving size is not a personal portion prescription."
+      ]
+    ],
+    [
+      "Carbs and added sugar",
+      "Total carbohydrate includes starches, fiber, sugars, and added sugars. Added sugars are added during processing or packaging, while naturally occurring sugars can be found in fruit and milk. [2]",
+      [
+        "Total carbohydrate matters for glucose.",
+        "Added sugar helps you judge food quality."
+      ]
+    ],
+    [
+      "Fiber",
+      "Fiber can support fullness and steadier meals. The Nutrition Facts label lists dietary fiber in grams and Percent Daily Value.",
+      [
+        "Compare similar products.",
+        "Increase fiber gradually."
+      ]
+    ],
+    [
+      "Sodium",
+      "The FDA Daily Value for sodium is less than 2,300 mg per day. Many packaged foods vary widely, so comparing labels can help. [3]",
+      [
+        "5% DV or less is low.",
+        "20% DV or more is high."
+      ]
+    ],
+    [
+      "Ingredient lists and claims",
+      "Front labels can be useful, but they are not the whole story. Natural, keto, diabetic-friendly, low-fat, sugar-free, and no sugar added still deserve a label check.",
+      [
+        "Net carbs are not regulated the same way on every label.",
+        "Sugar-free does not always mean carbohydrate-free."
+      ]
+    ],
+    [
+      "Budget strategies",
+      "Use store brands, frozen vegetables, canned beans, oats, eggs, lentils, rice, seasonal produce, and planned leftovers.",
+      [
+        "Shop your kitchen first.",
+        "Let budget be part of the plan, not a source of shame."
+      ]
+    ],
+    [
+      "Ten-minute meals",
+      "Fast meals can still have structure: heat a base, add protein, add vegetables, add flavor, and choose a drink.",
+      [
+        "Beans, salsa, greens, and tortillas.",
+        "Frozen vegetables, tofu, sauce, and rice."
+      ]
+    ]
+  ]
+}

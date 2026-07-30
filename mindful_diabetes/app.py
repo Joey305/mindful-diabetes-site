@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, timezone
 from functools import wraps
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import parse_qs, urlencode, urlparse
+from urllib.parse import parse_qs, quote, urlencode, urlparse
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -112,6 +112,173 @@ load_env_file(BASE_DIR / ".env")
 PAYPAL_HOSTED_BUTTON_ID = os.getenv("PAYPAL_HOSTED_BUTTON_ID", "5BM2YU7LNZDVJ")
 POSTS_PER_GUIDE_PAGE = 9
 DEFAULT_MAILCHIMP_TAGS = ["Mindful Diabetes Subscribers"]
+PUBLIC_SITE_URL = os.getenv("SITE_BASE_URL", "https://mindfuldiabetes.org").rstrip("/")
+FREE_GUIDES_PDF_STATIC_DIR = BASE_DIR / "static" / "free-guides" / "pdfs"
+FREE_GUIDES_IMAGE_STATIC_DIR = BASE_DIR / "static" / "free-guides" / "images"
+FREE_GUIDE_DEFINITIONS = [
+    {
+        "slug": "mindful-plate",
+        "title": "The Mindful Plate",
+        "subtitle": "A Simple Guide to Blood Sugar-Friendly Eating",
+        "description": (
+            "Learn a flexible way to build meals with vegetables, protein, carbohydrates, fiber, healthy fats, and satisfying flavor. "
+            "The guide includes breakfast, lunch, dinner, snack, drink, and grocery examples, plus a printable meal-building worksheet."
+        ),
+        "who": "A practical first guide for people with type 2 diabetes, prediabetes, or an interest in more balanced everyday meals.",
+        "category": "Nutrition",
+        "tags": ["Nutrition", "Meal Planning", "Blood Sugar"],
+        "page_count": 21,
+        "pdf_filename": "mindful-diabetes-mindful-plate-guide-2026.pdf",
+        "cover_filename": "mindful-plate-cover-preview.png",
+        "thumb_filename": "mindful-plate-download-card-thumbnail.png",
+        "banner_filename": "mindful-plate-banner-16x9.png",
+        "square_filename": "mindful-plate-square-promo.png",
+        "alt_text": "Cover preview for The Mindful Plate free guide.",
+        "inside": [
+            "A simple plate method for blood sugar-friendly meals",
+            "How carbohydrates, protein, fat, and fiber work together",
+            "Breakfast, lunch, dinner, snack, and drink examples",
+            "Budget-conscious swaps and culturally flexible meal ideas",
+            "A printable build-a-meal worksheet",
+        ],
+        "topics": ["Plate method", "Carbohydrates", "Fiber", "Protein", "Drinks", "Meal planning"],
+        "related_guide_slugs": ["grocery-store-survival-guide", "fats-without-fear"],
+        "related_links": [
+            {"label": "Diabetes Guide", "endpoint": "guide"},
+            {"label": "Health Tools", "endpoint": "health_tools"},
+        ],
+    },
+    {
+        "slug": "fats-without-fear",
+        "title": "Fats Without Fear",
+        "subtitle": "A Plain-English Guide to Dietary Fats, Heart Health, and Brain Health",
+        "description": (
+            "Understand saturated, unsaturated, and trans fats without the fear or confusing wellness claims. Compare cooking oils, "
+            "learn how to read fat information on food labels, and try realistic swaps that still taste like real food."
+        ),
+        "who": "Anyone confused by conflicting advice about butter, oils, nuts, fish, cholesterol, coconut oil, or dietary fat.",
+        "category": "Heart Health",
+        "tags": ["Healthy Fats", "Heart Health", "Brain Health"],
+        "page_count": 21,
+        "pdf_filename": "mindful-diabetes-fats-without-fear-2026.pdf",
+        "cover_filename": "fats-without-fear-cover-preview.png",
+        "thumb_filename": "fats-without-fear-download-card-thumbnail.png",
+        "banner_filename": "fats-without-fear-banner-16x9.png",
+        "square_filename": "fats-without-fear-square-promo.png",
+        "alt_text": "Cover preview for Fats Without Fear free guide.",
+        "inside": [
+            "The difference between unsaturated, saturated, and trans fats",
+            "Cooking oil comparisons for everyday kitchens",
+            "Food-label cues for heart-health decisions",
+            "Realistic swaps for common meals and snacks",
+            "A printable fat-swap worksheet",
+        ],
+        "topics": ["Unsaturated fats", "Saturated fat", "Trans fat", "Cooking oils", "Cholesterol", "Food swaps"],
+        "related_guide_slugs": ["mindful-plate", "grocery-store-survival-guide", "blood-sugar-brain-health"],
+        "related_links": [
+            {"label": "Health Tools", "endpoint": "health_tools"},
+            {"label": "Research", "endpoint": "research"},
+        ],
+    },
+    {
+        "slug": "grocery-store-survival-guide",
+        "title": "The Grocery Store Survival Guide",
+        "subtitle": "How to Make Practical, Blood Sugar-Conscious Choices Without Feeling Overwhelmed",
+        "description": (
+            "Make grocery shopping easier with a practical cart formula, label-reading guidance, affordable food ideas, pantry backups, "
+            "quick meal combinations, and a printable shopping checklist."
+        ),
+        "who": "People who want to shop more confidently without needing a nutrition degree or an unlimited budget.",
+        "category": "Shopping",
+        "tags": ["Grocery Shopping", "Food Labels", "Budget-Friendly"],
+        "page_count": 22,
+        "pdf_filename": "mindful-diabetes-grocery-store-guide-2026.pdf",
+        "cover_filename": "grocery-store-survival-guide-cover-preview.png",
+        "thumb_filename": "grocery-store-survival-guide-download-card-thumbnail.png",
+        "banner_filename": "grocery-store-survival-guide-banner-16x9.png",
+        "square_filename": "grocery-store-survival-guide-square-promo.png",
+        "alt_text": "Cover preview for The Grocery Store Survival Guide free guide.",
+        "inside": [
+            "A practical cart formula for balanced shopping",
+            "How to use food labels without getting stuck",
+            "Affordable staples and pantry backups",
+            "Quick meal combinations from common ingredients",
+            "A printable shopping checklist",
+        ],
+        "topics": ["Food labels", "Pantry staples", "Budget meals", "Cart planning", "Quick meals", "Shopping checklist"],
+        "related_guide_slugs": ["mindful-plate", "fats-without-fear"],
+        "related_links": [
+            {"label": "Health Tools", "endpoint": "health_tools"},
+            {"label": "Diabetes Guide", "endpoint": "guide"},
+        ],
+    },
+    {
+        "slug": "7-day-prevention-reset",
+        "title": "The 7-Day Prevention Reset",
+        "subtitle": "A Gentle One-Week Plan for Building Healthier Everyday Habits",
+        "description": (
+            "Spend one week noticing your routines and testing small changes related to meals, drinks, fiber, movement, sleep, and planning. "
+            "Printable trackers help you learn what works without turning the week into a crash diet or perfection challenge."
+        ),
+        "who": "Anyone who wants a gentle, structured starting point rather than a dramatic lifestyle overhaul.",
+        "category": "Habits",
+        "tags": ["7-Day Plan", "Healthy Habits", "Printable Trackers"],
+        "page_count": 21,
+        "pdf_filename": "mindful-diabetes-7-day-prevention-reset-2026.pdf",
+        "cover_filename": "7-day-prevention-reset-cover-preview.png",
+        "thumb_filename": "7-day-prevention-reset-download-card-thumbnail.png",
+        "banner_filename": "7-day-prevention-reset-banner-16x9.png",
+        "square_filename": "7-day-prevention-reset-square-promo.png",
+        "alt_text": "Cover preview for The 7-Day Prevention Reset free guide.",
+        "inside": [
+            "A one-week plan for meals, movement, sleep, and planning",
+            "Low-pressure habit experiments instead of perfection goals",
+            "Daily reflection prompts and routine check-ins",
+            "Printable trackers for noticing what helps",
+            "A reset recap worksheet for choosing next steps",
+        ],
+        "topics": ["Habit tracking", "Movement", "Sleep", "Meal routines", "Hydration", "Weekly planning"],
+        "related_guide_slugs": ["mindful-plate", "grocery-store-survival-guide"],
+        "related_links": [
+            {"label": "Health Tools", "endpoint": "health_tools"},
+            {"label": "Newsletter", "url": "#free-guides-newsletter"},
+        ],
+    },
+    {
+        "slug": "blood-sugar-brain-health",
+        "title": "Blood Sugar & Brain Health",
+        "subtitle": "Understanding the Everyday Connection",
+        "description": (
+            "Learn how glucose, insulin resistance, blood vessels, blood pressure, sleep, movement, hearing, social connection, and other "
+            "factors may relate to long-term brain health. The guide explains risk carefully without suggesting that dementia is inevitable."
+        ),
+        "who": "Adults and families interested in the connection between metabolic, cardiovascular, and cognitive health.",
+        "category": "Brain Health",
+        "tags": ["Brain Health", "Diabetes Education", "Prevention"],
+        "page_count": 23,
+        "pdf_filename": "mindful-diabetes-blood-sugar-brain-health-2026.pdf",
+        "cover_filename": "blood-sugar-brain-health-cover-preview.png",
+        "thumb_filename": "blood-sugar-brain-health-download-card-thumbnail.png",
+        "banner_filename": "blood-sugar-brain-health-banner-16x9.png",
+        "square_filename": "blood-sugar-brain-health-square-promo.png",
+        "alt_text": "Cover preview for Blood Sugar & Brain Health free guide.",
+        "inside": [
+            "A careful overview of metabolic and brain-health connections",
+            "How blood vessels, pressure, sleep, and movement fit the picture",
+            "Risk language that avoids fear and false certainty",
+            "Family-friendly conversation prompts",
+            "A printable brain-health action map",
+        ],
+        "topics": ["Insulin resistance", "Blood vessels", "Sleep", "Movement", "Blood pressure", "Cognitive health"],
+        "related_guide_slugs": ["mindful-plate", "fats-without-fear", "7-day-prevention-reset"],
+        "related_links": [
+            {"label": "Research", "endpoint": "research"},
+            {"label": "Health Tools", "endpoint": "health_tools"},
+            {"label": "JEIR", "url": "https://www.mindfuldiabetes.ai/"},
+            {"label": "Memovela", "url": "https://memovela.com"},
+        ],
+    },
+]
 RESEARCH_PUBLICATIONS = [
     {
         "title": "PyMACS: A Python-Based Automation Suite for GROMACS Molecular Dynamics Setup, Simulation, and Analysis",
@@ -394,6 +561,8 @@ def create_app(test_config=None):
                 health_tools_search_item(content),
                 research_search_item(),
                 volunteer_search_item(),
+                free_guides_search_item(),
+                *free_guide_search_items(),
             ],
         )
         if query:
@@ -485,10 +654,13 @@ def create_app(test_config=None):
                 source=source,
             ), 502
 
+        newsletter_success_event = request.form.get("analytics_success_event") or "newsletter_signup"
+        if newsletter_success_event not in analytics.VALID_EVENT_NAMES:
+            newsletter_success_event = "newsletter_signup"
         record_server_analytics_event(
             app.config,
             content,
-            "newsletter_signup",
+            newsletter_success_event,
             page_path=request.form.get("page_path") or request.path,
             page_title="Newsletter signup",
             element_id=request.form.get("analytics_element_id", ""),
@@ -541,6 +713,45 @@ def create_app(test_config=None):
         return render_template(
             "health_tools.html",
             tool_posts={slug: content.posts_by_slug.get(slug) for slug in tool_post_slugs},
+        )
+
+    @app.get("/free-guides")
+    def free_guides_no_slash():
+        return redirect(url_for("free_guides"), code=301)
+
+    @app.get("/free-guides/")
+    def free_guides():
+        guides = build_free_guide_cards(content)
+        return render_template(
+            "free_guides.html",
+            guides=guides,
+            featured_guide=guides[0],
+            canonical_url=f"{PUBLIC_SITE_URL}/free-guides",
+        )
+
+    @app.get("/resources")
+    @app.get("/resources/")
+    @app.get("/resources/free-guides")
+    @app.get("/resources/free-guides/")
+    def resources_redirect():
+        return redirect(url_for("free_guides"), code=301)
+
+    @app.get("/free-guides/<guide_slug>")
+    def free_guide_detail_no_slash(guide_slug):
+        return redirect(url_for("free_guide_detail", guide_slug=guide_slug), code=301)
+
+    @app.get("/free-guides/<guide_slug>/")
+    def free_guide_detail(guide_slug):
+        guides = build_free_guide_cards(content)
+        guide = next((item for item in guides if item["slug"] == guide_slug), None)
+        if not guide:
+            abort(404)
+        related_guides = [item for item in guides if item["slug"] in guide["related_guide_slugs"]]
+        return render_template(
+            "free_guide_detail.html",
+            guide=guide,
+            related_guides=related_guides,
+            canonical_url=f"{PUBLIC_SITE_URL}/free-guides/{guide['slug']}",
         )
 
     @app.get("/volunteer/")
@@ -867,6 +1078,8 @@ def create_app(test_config=None):
             health_tools_search_item(content),
             research_search_item(),
             volunteer_search_item(),
+            free_guides_search_item(),
+            *free_guide_search_items(),
         ]
         return render_template("sitemap.xml", pages=content.published_pages + extra_pages, posts=content.latest_posts), {
             "Content-Type": "application/xml"
@@ -910,6 +1123,7 @@ def create_app(test_config=None):
 class ContentIndex:
     def __init__(self, items):
         nav_order = {"mindful": 0, "guide": 1, "sponsors": 2, "donation": 3}
+        free_guides_nav_page = {"slug": "free-guides", "title": "Free Guides", "canonical_path": "/free-guides/"}
         health_tools_nav_page = {"slug": "health-tools", "title": "Health Tools", "canonical_path": "/health-tools/"}
         research_nav_page = {"slug": "research", "title": "Research", "canonical_path": "/research/"}
         self.items = items
@@ -932,8 +1146,9 @@ class ContentIndex:
             ],
             key=lambda item: nav_order[item["slug"]],
         )
-        self.nav_pages.insert(2, research_nav_page)
-        self.nav_pages.insert(2, health_tools_nav_page)
+        self.nav_pages.insert(2, free_guides_nav_page)
+        self.nav_pages.insert(3, health_tools_nav_page)
+        self.nav_pages.insert(4, research_nav_page)
 
 
 def load_content(path):
@@ -1088,6 +1303,117 @@ def volunteer_search_item():
         "excerpt_text": "Explore volunteer opportunities with Mindful Diabetes, from writing and research summaries to outreach, tool testing, media, fundraising, and partnerships.",
         "search_text": search_text.lower(),
     }
+
+
+def build_free_guide_cards(content):
+    guides_by_slug = {definition["slug"]: definition for definition in FREE_GUIDE_DEFINITIONS}
+    return [build_free_guide_card(definition, content, guides_by_slug) for definition in FREE_GUIDE_DEFINITIONS]
+
+
+def build_free_guide_card(definition, content, guides_by_slug):
+    pdf_static_path = f"free-guides/pdfs/{definition['pdf_filename']}"
+    cover_static_path = f"free-guides/images/{definition['cover_filename']}"
+    thumb_static_path = f"free-guides/images/{definition['thumb_filename']}"
+    banner_static_path = f"free-guides/images/{definition['banner_filename']}"
+    square_static_path = f"free-guides/images/{definition['square_filename']}"
+    detail_path = f"/free-guides/{definition['slug']}/"
+    canonical_url = f"{PUBLIC_SITE_URL}/free-guides/{definition['slug']}"
+    share_text = f"{definition['title']} from Mindful Diabetes"
+    related_links = [resolved_related_link(item, content) for item in definition.get("related_links", [])]
+    related_links = [item for item in related_links if item]
+    related_guides = [
+        {
+            "title": guides_by_slug[slug]["title"],
+            "url": f"/free-guides/{slug}/",
+        }
+        for slug in definition.get("related_guide_slugs", [])
+        if slug in guides_by_slug
+    ]
+    return {
+        **definition,
+        "publication_date": "2026",
+        "review_status": "Medical review pending",
+        "file_type": "PDF",
+        "file_size": file_size_label(FREE_GUIDES_PDF_STATIC_DIR / definition["pdf_filename"]),
+        "pdf_url": url_for("static", filename=pdf_static_path),
+        "cover_url": url_for("static", filename=cover_static_path),
+        "thumb_url": url_for("static", filename=thumb_static_path),
+        "banner_url": url_for("static", filename=banner_static_path),
+        "square_url": url_for("static", filename=square_static_path),
+        "detail_url": detail_path,
+        "canonical_url": canonical_url,
+        "related_links": related_links,
+        "related_guides": related_guides,
+        "share_links": [
+            {"platform": "email", "label": "Email", "url": f"mailto:?subject={quote(share_text)}&body={quote(canonical_url)}"},
+            {"platform": "facebook", "label": "Facebook", "url": f"https://www.facebook.com/sharer/sharer.php?u={quote(canonical_url, safe='')}"},
+            {"platform": "linkedin", "label": "LinkedIn", "url": f"https://www.linkedin.com/sharing/share-offsite/?url={quote(canonical_url, safe='')}"},
+            {"platform": "whatsapp", "label": "WhatsApp", "url": f"https://wa.me/?text={quote(share_text + ' ' + canonical_url)}"},
+        ],
+    }
+
+
+def resolved_related_link(link, content):
+    if link.get("url"):
+        return {"label": link["label"], "url": link["url"], "external": link["url"].startswith("http")}
+    endpoint = link.get("endpoint")
+    if endpoint == "guide":
+        return {"label": link["label"], "url": url_for("guide"), "external": False}
+    if endpoint == "health_tools":
+        return {"label": link["label"], "url": url_for("health_tools"), "external": False}
+    if endpoint == "research":
+        return {"label": link["label"], "url": url_for("research"), "external": False}
+    slug = link.get("slug")
+    if slug and (slug in content.pages_by_slug or slug in content.posts_by_slug):
+        return {"label": link["label"], "url": url_for("page_detail", slug=slug), "external": False}
+    return None
+
+
+def file_size_label(path):
+    if not path.exists():
+        return ""
+    size = path.stat().st_size
+    if size >= 1024 * 1024:
+        return f"{size / (1024 * 1024):.1f} MB"
+    return f"{round(size / 1024)} KB"
+
+
+def free_guides_search_item():
+    search_text = " ".join(
+        [
+            "free health guides mindful diabetes free PDFs resources worksheets download nutrition blood sugar fats grocery prevention brain health",
+            *[
+                " ".join([guide["title"], guide["subtitle"], guide["description"], guide["who"], " ".join(guide["tags"])])
+                for guide in FREE_GUIDE_DEFINITIONS
+            ],
+        ]
+    )
+    return {
+        "type": "page",
+        "title": "Free Health Guides",
+        "canonical_path": "/free-guides/",
+        "date": "",
+        "modified": "2026-07-30",
+        "excerpt_text": "Download free Mindful Diabetes PDF guides with plain-English explanations, visual tools, and printable worksheets.",
+        "search_text": search_text.lower(),
+    }
+
+
+def free_guide_search_items():
+    return [
+        {
+            "type": "page",
+            "title": guide["title"],
+            "canonical_path": f"/free-guides/{guide['slug']}/",
+            "date": "",
+            "modified": "2026-07-30",
+            "excerpt_text": guide["description"],
+            "search_text": " ".join(
+                [guide["title"], guide["subtitle"], guide["description"], guide["who"], " ".join(guide["tags"]), " ".join(guide["topics"])]
+            ).lower(),
+        }
+        for guide in FREE_GUIDE_DEFINITIONS
+    ]
 
 
 def is_valid_email(email):
@@ -2100,6 +2426,16 @@ def human_event_label(event):
         "search_result_click": "Someone clicked a search result",
         "content_cta_click": "Someone clicked a content button",
         "resource_download_click": "Someone clicked a resource download",
+        "free_guides_page_view": "Someone viewed the Free Guides library",
+        "resource_card_view": "Someone saw a guide card",
+        "resource_detail_view": "Someone viewed a guide detail page",
+        "resource_pdf_view": "Someone opened a guide PDF",
+        "resource_pdf_download": "Someone downloaded a guide PDF",
+        "resource_share_click": "Someone shared a guide",
+        "resource_related_link_click": "Someone clicked a related guide link",
+        "resource_newsletter_click": "Someone clicked the Free Guides newsletter form",
+        "resource_newsletter_submit": "Someone joined from the Free Guides page",
+        "resource_donation_click": "Someone clicked Free Guides support",
         "sponsor_click": "Someone clicked a sponsor link",
         "event_registration_click": "Someone clicked event registration",
         "volunteer_cta_click": "Someone clicked a volunteer button",

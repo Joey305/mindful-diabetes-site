@@ -14,6 +14,9 @@
   <input type="hidden" name="analytics_form_id" value="{{ newsletter_id|default('newsletter-email') }}">
   <input type="hidden" name="analytics_element_id" value="{{ newsletter_id|default('newsletter-email') }}">
   <input type="hidden" name="analytics_position" value="{{ newsletter_source|default(request.path) }}">
+  {% if newsletter_success_event is defined %}
+    <input type="hidden" name="analytics_success_event" value="{{ newsletter_success_event }}">
+  {% endif %}
   <input type="hidden" name="analytics_session_id" value="">
   <input type="hidden" name="page_path" value="{{ request.path }}">
   <div class="newsletter-form__bot-field" aria-hidden="true">
@@ -25,5 +28,5 @@
   {% if turnstile_site_key %}
     <div class="cf-turnstile newsletter-form__turnstile" data-sitekey="{{ turnstile_site_key }}" data-size="compact" data-appearance="execute" data-execution="execute" data-action="newsletter" data-callback="onNewsletterTurnstileSuccess" data-error-callback="onNewsletterTurnstileError" data-expired-callback="onNewsletterTurnstileExpired"></div>
   {% endif %}
-  <button type="submit">Subscribe</button>
+  <button type="submit"{% if newsletter_click_event is defined %} data-track-event="{{ newsletter_click_event }}" data-track-category="resource" data-track-label="Newsletter signup" data-track-id="{{ newsletter_id|default('newsletter-email') }}-button" data-track-position="{{ newsletter_source|default(request.path) }}" data-button-location="{{ newsletter_source|default(request.path) }}" data-source-page="{{ request.path }}"{% endif %}>Subscribe</button>
 </form>

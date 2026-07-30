@@ -1,0 +1,306 @@
+{
+  "folder": "06_Blood_Sugar_and_Brain_Health",
+  "slug": "blood-sugar-brain-health",
+  "file": "mindful-diabetes-blood-sugar-brain-health-2026.pdf",
+  "title": "Blood Sugar & Brain Health",
+  "subtitle": "Understanding the Everyday Connection",
+  "accent": "navy",
+  "description": "A careful guide to glucose, insulin resistance, blood vessels, dementia risk, and everyday habits that may support brain health.",
+  "who": "For adults and caregivers who want a calm explanation of diabetes and long-term cognitive health.",
+  "tags": [
+    "Brain health",
+    "Diabetes",
+    "Prevention"
+  ],
+  "refs": [
+    [
+      "Centers for Disease Control and Prevention",
+      "Your Brain and Diabetes",
+      "2024",
+      "https://www.cdc.gov/diabetes/diabetes-complications/effects-of-diabetes-brain.html"
+    ],
+    [
+      "Centers for Disease Control and Prevention",
+      "Reducing Risk for Dementia",
+      "2024",
+      "https://www.cdc.gov/alzheimers-dementia/prevention/index.html"
+    ],
+    [
+      "National Institute on Aging",
+      "Cognitive Health and Older Adults",
+      "2024",
+      "https://www.nia.nih.gov/health/brain-health/cognitive-health-and-older-adults"
+    ],
+    [
+      "Livingston G, et al.",
+      "Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission",
+      "2024",
+      "https://chronicdisease.org/wp-content/uploads/2024/12/Lancet-2024.pdf"
+    ],
+    [
+      "American Diabetes Association",
+      "Standards of Care in Diabetes - 2026",
+      "2026",
+      "https://diabetesjournals.org/care/issue/49/Supplement_1"
+    ]
+  ],
+  "visuals": [
+    [
+      "cover-brain",
+      "Everyday brain health",
+      [
+        "meal",
+        "walk",
+        "sleep",
+        "glucose",
+        "heart",
+        "vessels",
+        "memory",
+        "support"
+      ]
+    ],
+    [
+      "glucose-pathway",
+      "Glucose and insulin pathway",
+      [
+        "food",
+        "glucose",
+        "insulin",
+        "cells",
+        "energy",
+        "storage",
+        "targets",
+        "variation"
+      ]
+    ],
+    [
+      "insulin-resistance",
+      "Insulin resistance",
+      [
+        "cell",
+        "insulin",
+        "signal",
+        "glucose",
+        "resistance",
+        "time",
+        "support",
+        "care"
+      ]
+    ],
+    [
+      "vessel-brain",
+      "Blood vessels and brain",
+      [
+        "heart",
+        "vessels",
+        "brain",
+        "oxygen",
+        "pressure",
+        "cholesterol",
+        "glucose",
+        "flow"
+      ]
+    ],
+    [
+      "high-low",
+      "High and low glucose",
+      [
+        "high",
+        "low",
+        "symptoms",
+        "timing",
+        "urgent",
+        "targets",
+        "medicine",
+        "doctor"
+      ]
+    ],
+    [
+      "risk-wheel",
+      "Brain-health factors wheel",
+      [
+        "diabetes",
+        "blood pressure",
+        "activity",
+        "sleep",
+        "hearing",
+        "smoking",
+        "alcohol",
+        "social"
+      ]
+    ],
+    [
+      "clinician-questions",
+      "Questions for your clinician",
+      [
+        "targets",
+        "meds",
+        "A1C",
+        "BP",
+        "cholesterol",
+        "memory",
+        "sleep",
+        "hearing"
+      ]
+    ],
+    [
+      "number-tracker",
+      "Health-number tracker",
+      [
+        "A1C",
+        "BP",
+        "LDL",
+        "sleep",
+        "activity",
+        "medicine",
+        "notes"
+      ]
+    ]
+  ],
+  "pages": [
+    [
+      "Mindful Diabetes mission",
+      "Mindful Diabetes connects education, prevention, research awareness, and practical tools at the intersection of metabolic and brain health.",
+      [
+        "The goal is clarity, not fear.",
+        "Risk can be influenced, but not perfectly controlled."
+      ]
+    ],
+    [
+      "What glucose does",
+      "Glucose is one of the body's energy sources. The brain uses glucose, but it also depends on steady blood flow, oxygen, sleep, and many other supports.",
+      [
+        "More is not always better.",
+        "Very low glucose can be dangerous."
+      ]
+    ],
+    [
+      "How insulin helps",
+      "Insulin helps move glucose from the blood into cells. Diabetes care often includes supporting glucose levels near a personal target range. [1]",
+      [
+        "Targets are individualized.",
+        "Medication decisions belong with your care team."
+      ]
+    ],
+    [
+      "Insulin resistance",
+      "Insulin resistance means cells do not respond to insulin as easily. The body may need more insulin to move glucose into cells.",
+      [
+        "It can develop gradually.",
+        "Food, movement, sleep, stress, weight, medicines, and genetics can all be involved."
+      ]
+    ],
+    [
+      "The brain needs steady support",
+      "The brain is sensitive to glucose changes. CDC notes that both high and low blood sugar can affect the brain and blood vessels. [1]",
+      [
+        "Repeated lows and prolonged highs both deserve care.",
+        "Ask what patterns matter for you."
+      ]
+    ],
+    [
+      "Blood vessels and brain health",
+      "Blood vessels carry oxygen and nutrients to the brain. Diabetes, high blood pressure, and cholesterol concerns can affect vascular health over time.",
+      [
+        "Vascular dementia is different from ordinary forgetfulness.",
+        "Sudden confusion can be an emergency."
+      ]
+    ],
+    [
+      "High blood sugar over time",
+      "Frequent hyperglycemia can stress blood vessels and nerves. Effects may build slowly and are not always obvious in the moment. [1]",
+      [
+        "This is a reason for support, not shame.",
+        "Patterns are more useful than one isolated reading."
+      ]
+    ],
+    [
+      "Low blood sugar",
+      "Hypoglycemia can cause shakiness, dizziness, confusion, trouble speaking, seizures, or loss of consciousness. It can be urgent, especially for people using insulin or certain medicines. [1]",
+      [
+        "Know your care team's low-glucose plan.",
+        "Do not drive or ignore severe symptoms."
+      ]
+    ],
+    [
+      "Diabetes and cognitive risk",
+      "Diabetes is associated with increased risk for cognitive problems and dementia, but it does not make dementia inevitable. Dementia has many causes and contributors. [2]",
+      [
+        "Risk is not destiny.",
+        "Memory concerns deserve evaluation."
+      ]
+    ],
+    [
+      "What increased risk means",
+      "Risk describes probability across groups. It cannot tell you what will happen to one person. Habits, medical care, social factors, genetics, and environment all interact.",
+      [
+        "Avoid panic.",
+        "Use risk information to guide questions and care."
+      ]
+    ],
+    [
+      "Blood pressure and cholesterol",
+      "Managing blood pressure and cholesterol can support heart and brain health. NIA and CDC identify vascular health as part of cognitive-health protection. [2,3]",
+      [
+        "Ask for your numbers.",
+        "Ask what target range fits your age and health history."
+      ]
+    ],
+    [
+      "Physical activity",
+      "Regular physical activity can support cardiovascular, metabolic, mood, sleep, and brain health. Start with what is safe and possible.",
+      [
+        "Walking is one option, not the only option.",
+        "Chair movement and physical therapy can count."
+      ]
+    ],
+    [
+      "Food patterns",
+      "Food patterns that include vegetables, fruits, legumes, whole grains, lean or plant proteins, and unsaturated fat sources can support metabolic and cardiovascular health.",
+      [
+        "No single brain-protection food is magic.",
+        "Budget and culture matter."
+      ]
+    ],
+    [
+      "Sleep",
+      "Sleep problems can affect mood, energy, glucose patterns, and daily decision-making. A realistic sleep plan may require medical care.",
+      [
+        "Ask about sleep apnea symptoms.",
+        "Caregiving, shift work, pain, and medications matter."
+      ]
+    ],
+    [
+      "Smoking and alcohol",
+      "Smoking and excessive alcohol use are dementia risk factors identified by public-health sources and dementia-prevention research. [2,4]",
+      [
+        "If you do not drink alcohol, do not start for health.",
+        "Ask for support if quitting tobacco feels hard."
+      ]
+    ],
+    [
+      "Hearing, vision, and connection",
+      "Hearing loss, vision problems, depression, and social isolation can affect cognitive health and quality of life. [2,3,4]",
+      [
+        "Treating hearing or vision problems may reduce strain.",
+        "Social contact can be practical, not fancy."
+      ]
+    ],
+    [
+      "Questions for a clinician",
+      "Bring questions about A1C, blood pressure, cholesterol, medicines, low-glucose risk, memory changes, sleep, hearing, and family history.",
+      [
+        "Write questions before the visit.",
+        "Bring a medication list."
+      ]
+    ],
+    [
+      "What prevention can and cannot promise",
+      "Healthy routines may help reduce risk and support daily function. They do not guarantee prevention of Alzheimer's disease, reverse every case of diabetes, or replace medical care.",
+      [
+        "Use careful hope.",
+        "Stay connected to qualified care."
+      ]
+    ]
+  ]
+}

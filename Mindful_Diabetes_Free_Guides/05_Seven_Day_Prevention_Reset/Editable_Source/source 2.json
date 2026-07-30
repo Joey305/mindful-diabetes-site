@@ -1,0 +1,312 @@
+{
+  "folder": "05_Seven_Day_Prevention_Reset",
+  "slug": "7-day-prevention-reset",
+  "file": "mindful-diabetes-7-day-prevention-reset-2026.pdf",
+  "title": "The 7-Day Prevention Reset",
+  "subtitle": "A Gentle One-Week Plan for Building Healthier Everyday Habits",
+  "accent": "green",
+  "description": "A gentle seven-day habit guide for meals, drinks, movement, sleep, tracking, and next-week planning.",
+  "who": "For readers who want a realistic one-week starting point without a crash diet or cleanse.",
+  "tags": [
+    "Habits",
+    "Prevention",
+    "Trackers"
+  ],
+  "refs": [
+    [
+      "Centers for Disease Control and Prevention",
+      "National Diabetes Prevention Program",
+      "2024",
+      "https://www.cdc.gov/diabetes-prevention/programs/what-is-the-national-dpp.html"
+    ],
+    [
+      "Centers for Disease Control and Prevention",
+      "Get Active",
+      "2024",
+      "https://www.cdc.gov/diabetes/living-with/physical-activity.html"
+    ],
+    [
+      "Centers for Disease Control and Prevention",
+      "About Sleep",
+      "2024",
+      "https://www.cdc.gov/sleep/about/index.html"
+    ],
+    [
+      "American Diabetes Association",
+      "Standards of Care in Diabetes - 2026",
+      "2026",
+      "https://diabetesjournals.org/care/issue/49/Supplement_1"
+    ],
+    [
+      "U.S. Food and Drug Administration",
+      "Added Sugars on the Nutrition Facts Label",
+      "2026",
+      "https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label"
+    ]
+  ],
+  "visuals": [
+    [
+      "cover-reset",
+      "A gentle weekly reset",
+      [
+        "notice",
+        "meal",
+        "fiber",
+        "move",
+        "drink",
+        "sleep",
+        "review",
+        "repeat"
+      ]
+    ],
+    [
+      "roadmap",
+      "Seven-day roadmap",
+      [
+        "Day 1",
+        "Day 2",
+        "Day 3",
+        "Day 4",
+        "Day 5",
+        "Day 6",
+        "Day 7",
+        "Next week"
+      ]
+    ],
+    [
+      "habit-loop",
+      "The habit loop",
+      [
+        "cue",
+        "routine",
+        "reward",
+        "repeat",
+        "adjust",
+        "support",
+        "notice",
+        "plan"
+      ]
+    ],
+    [
+      "balanced-meal",
+      "One balanced meal",
+      [
+        "vegetables",
+        "protein",
+        "carb",
+        "drink",
+        "flavor",
+        "fiber",
+        "portion",
+        "repeat"
+      ]
+    ],
+    [
+      "fiber-ladder",
+      "Fiber addition ladder",
+      [
+        "add beans",
+        "add oats",
+        "add fruit",
+        "add greens",
+        "drink water",
+        "pause",
+        "notice",
+        "adjust"
+      ]
+    ],
+    [
+      "movement-menu",
+      "Movement menu",
+      [
+        "walk",
+        "stand",
+        "chair",
+        "stretch",
+        "stairs",
+        "balance",
+        "dance",
+        "break"
+      ]
+    ],
+    [
+      "sleep-timeline",
+      "Sleep routine timeline",
+      [
+        "lights",
+        "caffeine",
+        "screen",
+        "meds",
+        "pain",
+        "wakeup",
+        "routine",
+        "doctor"
+      ]
+    ],
+    [
+      "weekly-tracker",
+      "Weekly tracker",
+      [
+        "Day",
+        "Water",
+        "Meal",
+        "Move",
+        "Sleep",
+        "Mood",
+        "Notes"
+      ]
+    ]
+  ],
+  "pages": [
+    [
+      "Welcome and safety",
+      "This reset is not a detox, cleanse, crash diet, or promise. It means pausing for one week, noticing patterns, and choosing a few routines that can support metabolic health.",
+      [
+        "Do not change medication or insulin without your care team.",
+        "If activity is unsafe for you, ask what movements fit."
+      ]
+    ],
+    [
+      "How habits work",
+      "Habits often need a cue, a routine, and a reward. The smaller the routine, the easier it is to repeat when life gets busy.",
+      [
+        "Tie a new habit to something you already do.",
+        "Make backup plans part of the habit."
+      ]
+    ],
+    [
+      "Seven-day overview",
+      "Each day asks for one main action. You can repeat a day, skip a day, or adapt the plan. The point is learning, not proving anything.",
+      [
+        "Notice.",
+        "Build one meal.",
+        "Add fiber.",
+        "Break up sitting.",
+        "Improve one drink.",
+        "Protect sleep.",
+        "Plan next week."
+      ]
+    ],
+    [
+      "Day 1: notice your starting point",
+      "Record a normal day without judgment. Notice drinks, meals, movement, sleep, energy, mood, and one thing that felt hard.",
+      [
+        "Choose one realistic goal.",
+        "Keep private health notes secure."
+      ]
+    ],
+    [
+      "Day 2: build one balanced meal",
+      "Use the Mindful Plate method for one meal only. Add vegetables, protein, carbohydrate, and a low-sugar drink if possible.",
+      [
+        "One meal is enough.",
+        "Mixed dishes can still count."
+      ]
+    ],
+    [
+      "Day 3: add fiber",
+      "Add one fiber source such as beans, lentils, oats, berries, vegetables, whole grains, nuts, or seeds. Increase gradually and drink fluids.",
+      [
+        "Stop and ask for advice if fiber worsens symptoms.",
+        "People with some medical diets need individual guidance."
+      ]
+    ],
+    [
+      "Day 4: break up sitting time",
+      "Short activity breaks can help many people. Options include walking, standing, chair movement, stretching, or gentle household tasks.",
+      [
+        "The CDC describes 150 minutes per week as a common adult activity goal, but starting slowly is okay. [2]",
+        "Ask your doctor which activities are safest."
+      ]
+    ],
+    [
+      "Day 5: improve one drink",
+      "Choose one drink you have often and adjust it. Try less sugar, a smaller size, unsweet tea, water, sparkling water, or a gradual step-down.",
+      [
+        "You do not need to love plain water overnight.",
+        "Alcohol and diabetes medicine require safety awareness."
+      ]
+    ],
+    [
+      "Day 6: protect sleep",
+      "A realistic sleep routine may include a consistent wake time, dimmer light, less late caffeine, a wind-down cue, and a plan for pain, caregiving, or work shifts.",
+      [
+        "Sleep problems deserve care, not blame.",
+        "Ask about snoring, breathing pauses, insomnia, or restless legs."
+      ]
+    ],
+    [
+      "Day 7: prepare next week",
+      "Look back at what helped, what felt irritating, and what was too much. Pick one habit to repeat for another week.",
+      [
+        "Keep the habit small.",
+        "Write down one question for a clinician if needed."
+      ]
+    ],
+    [
+      "Hydration tracker",
+      "Track drinks for awareness, not judgment. A beverage inventory can reveal one easy place to reduce added sugar.",
+      [
+        "Note water, sweet drinks, coffee additions, juice, alcohol, and timing.",
+        "Ask about fluid limits if you have heart or kidney disease."
+      ]
+    ],
+    [
+      "Movement tracker",
+      "Record any movement that is safe for your body. Chair movement, stretching, physical therapy exercises, and short walks all count as information.",
+      [
+        "Track minutes or checkmarks.",
+        "Pain is a signal to adapt, not push through blindly."
+      ]
+    ],
+    [
+      "Meal and fiber tracker",
+      "Use this page to notice meals that kept you satisfied. Write the vegetable, protein, carbohydrate, and fiber source when you can.",
+      [
+        "Patterns matter more than one meal.",
+        "Use notes, not grades."
+      ]
+    ],
+    [
+      "Sleep check-in",
+      "Sleep is affected by stress, shift work, caregiving, pain, medications, breathing problems, and mental health. This page helps you notice what is changeable.",
+      [
+        "Track bedtime, wake time, naps, caffeine, alcohol, screens, and nighttime waking.",
+        "Bring persistent sleep problems to a clinician."
+      ]
+    ],
+    [
+      "Mood and energy",
+      "Energy can change with meals, sleep, movement, stress, and blood glucose. A simple mood and energy note can help you see patterns.",
+      [
+        "Use words, numbers, or colors.",
+        "Sudden confusion or severe symptoms need urgent care."
+      ]
+    ],
+    [
+      "Optional glucose notes",
+      "If you monitor glucose, use this page only in the way your care team recommends. Do not chase perfect numbers.",
+      [
+        "Record context: meal, medicine, activity, stress, illness, sleep.",
+        "Ask what high or low patterns mean for you."
+      ]
+    ],
+    [
+      "Obstacles and backup plans",
+      "Plan for busy days before they arrive. A backup meal, safe movement option, and lower-sugar drink can protect momentum.",
+      [
+        "Choose the easiest version.",
+        "Ask family or household members for practical support."
+      ]
+    ],
+    [
+      "30-day continuation",
+      "After seven days, continue one or two habits. A prevention plan should fit real life well enough to survive an ordinary month.",
+      [
+        "Repeat what worked.",
+        "Drop what was unrealistic.",
+        "Add one next step only."
+      ]
+    ]
+  ]
+}
