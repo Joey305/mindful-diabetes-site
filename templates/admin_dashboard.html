@@ -69,6 +69,42 @@
       </ul>
     </section>
 
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-actions-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-actions-heading">Recommended next actions</h2>
+        <span>Highest-impact fixes first</span>
+      </div>
+      <div class="admin-action-card-grid">
+        {% for action in dashboard.recommended_actions %}
+          <article class="admin-action-card admin-action-card--{{ action.priority|lower }}">
+            <span>{{ action.priority }} priority</span>
+            <h3>{{ action.title }}</h3>
+            <p>{{ action.why }}</p>
+            <strong>{{ action.next_step }}</strong>
+            {% if action.page %}
+              <a href="{{ url_for('admin_analytics_page_report', page_path=action.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">View page report</a>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-health-score-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-health-score-heading">Site health score</h2>
+        <span>Simple readout</span>
+      </div>
+      <div class="admin-health-score-grid">
+        {% for score in dashboard.health_scores %}
+          <article class="admin-health-score admin-health-score--{{ score.tone }}" title="{{ score.help }}">
+            <span>{{ score.label }}</span>
+            <strong>{{ score.status }}</strong>
+            <small>{{ score.value }}</small>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
     <nav class="admin-analytics-tabs" aria-label="Analytics sections">
       <a href="#overview">Overview</a>
       <a href="#donation">Donation Activity</a>
@@ -140,6 +176,23 @@
       </section>
     </div>
 
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-benchmarks-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-benchmarks-heading">Simple benchmarks</h2>
+        <span>Helpful ranges, not hard rules</span>
+      </div>
+      <div class="admin-benchmark-grid">
+        {% for benchmark in dashboard.benchmarks %}
+          <article>
+            <span>{{ benchmark.label }}</span>
+            <strong>{{ benchmark.value }}</strong>
+            <small>Healthy early range: {{ benchmark.healthy_range }}</small>
+            <p>{{ benchmark.note }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-trend-heading">
       <div class="admin-panel__header">
         <h2 id="admin-trend-heading">30-day trend</h2>
@@ -202,6 +255,41 @@
         </div>
       {% else %}
         <p class="admin-empty">CTA performance will appear after tracked CTAs are visible or clicked.</p>
+      {% endif %}
+    </section>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-journey-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-journey-heading">Visitor paths</h2>
+        <span>Where clicks take people</span>
+      </div>
+      {% if dashboard.summary.journey_paths %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>From</th>
+                <th>Clicked</th>
+                <th>Destination</th>
+                <th>Clicks</th>
+                <th>Sessions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.summary.journey_paths %}
+                <tr>
+                  <td>{{ row.source_page or "-" }}</td>
+                  <td>{{ row.action_label or "CTA" }}</td>
+                  <td>{{ row.destination }}</td>
+                  <td>{{ row.count }}</td>
+                  <td>{{ row.sessions }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">Visitor paths will appear after tracked buttons are clicked.</p>
       {% endif %}
     </section>
 
@@ -291,6 +379,32 @@
       {% endif %}
     </section>
 
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-purpose-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-purpose-heading">Top pages by purpose</h2>
+        <span>Different pages have different jobs</span>
+      </div>
+      <div class="admin-purpose-grid">
+        {% for bucket in dashboard.pages_by_purpose %}
+          <section class="admin-subpanel">
+            <h3>{{ bucket.label }}</h3>
+            {% if bucket["items"] %}
+              <ol class="admin-ranked-list">
+                {% for item in bucket["items"] %}
+                  <li>
+                    <a href="{{ url_for('admin_analytics_page_report', page_path=item.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ item.title }}</a>
+                    <span>{{ item.count }}</span>
+                  </li>
+                {% endfor %}
+              </ol>
+            {% else %}
+              <p class="admin-empty">No pages in this bucket yet.</p>
+            {% endif %}
+          </section>
+        {% endfor %}
+      </div>
+    </section>
+
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-missed-heading">
       <div class="admin-panel__header">
         <h2 id="admin-missed-heading">Pages with missed opportunity</h2>
@@ -303,6 +417,7 @@
               <tr>
                 <th>Page</th>
                 <th>Views</th>
+                <th>Opportunity score</th>
                 <th>Missing</th>
                 <th>Suggested next move</th>
               </tr>
@@ -312,6 +427,7 @@
                 <tr>
                   <td><a href="{{ url_for('admin_analytics_page_report', page_path=row.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ row.title }}</a></td>
                   <td>{{ row.views }}</td>
+                  <td>{{ row.score }}</td>
                   <td>{{ row.missing }}</td>
                   <td>{{ row.recommendation }}</td>
                 </tr>
@@ -322,6 +438,18 @@
       {% else %}
         <p class="admin-empty">No missed-opportunity pages stand out in this period.</p>
       {% endif %}
+    </section>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-device-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-device-heading">Device notes</h2>
+        <span>Mobile and desktop behavior</span>
+      </div>
+      <ul class="admin-insight-list">
+        {% for note in dashboard.device_insights %}
+          <li>{{ note }}</li>
+        {% endfor %}
+      </ul>
     </section>
 
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-recent-heading">
@@ -345,7 +473,7 @@
               {% for event in dashboard.recent_events %}
                 <tr>
                   <td>{{ event.occurred_at_label }}</td>
-                  <td>{{ event.event_name|replace("_", " ")|title }}</td>
+                  <td>{{ event.human_label }}</td>
                   <td>{{ event.page_path }}</td>
                   <td>{{ event.element_label or "-" }}</td>
                   <td>{{ event.device_category or "-" }}</td>

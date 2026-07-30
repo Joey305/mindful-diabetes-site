@@ -1653,6 +1653,37 @@ def test_dashboard_renders_insights_cta_performance_and_missed_opportunities(tmp
     assert b"nutrition" in response.data
 
 
+def test_dashboard_renders_action_center_scores_and_plain_language_activity(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    sign_in_admin(client)
+
+    post_analytics_event(client, event_id="client:action-page-1", page_path="/dash-diet/", page_title="DASH Diet", anonymous_session_id="s1")
+    post_analytics_event(client, event_id="client:action-page-2", page_path="/dash-diet/", page_title="DASH Diet", anonymous_session_id="s2")
+    post_analytics_event(
+        client,
+        event_id="client:action-tool",
+        event_name="health_tool_click",
+        page_path="/dash-diet/",
+        page_title="DASH Diet",
+        element_label="Open JEIR",
+        destination_url="https://www.mindfuldiabetes.ai/",
+        anonymous_session_id="s1",
+    )
+
+    response = client.get("/admin/analytics/")
+
+    assert response.status_code == 200
+    assert b"Recommended next actions" in response.data
+    assert b"Site health score" in response.data
+    assert b"Simple benchmarks" in response.data
+    assert b"Top pages by purpose" in response.data
+    assert b"Visitor paths" in response.data
+    assert b"Someone opened a health tool: Open JEIR" in response.data
+    assert b"Pages read" in response.data
+    assert b"Browser sessions" in response.data
+
+
 def test_analytics_admin_routes_require_login_and_export_is_safe(tmp_path):
     app = analytics_app(tmp_path)
     client = app.test_client()

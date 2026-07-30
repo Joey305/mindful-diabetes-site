@@ -328,6 +328,7 @@ class LocalAnalyticsStore(AnalyticsStore):
             "device_categories": self._group_counts(start, end, filters, "device_category", limit=8),
             "traffic_sources": self._traffic_sources(start, end, filters),
             "cta_performance": self._cta_performance(start, end, filters),
+            "journey_paths": self._journey_paths(start, end, filters),
             "daily_trend": self._daily_trend(start, end, filters),
         }
 
@@ -540,6 +541,27 @@ class LocalAnalyticsStore(AnalyticsStore):
             row["click_rate"] = numeric_rate(row.get("clicks", 0), row.get("impressions", 0))
             row["click_rate_label"] = percent_label(row["click_rate"])
         return performance
+
+    def _journey_paths(self, start, end, filters):
+        where, params = self._where(start, end, filters)
+        click_events = sorted(CTA_CLICK_EVENTS)
+        with self.connect() as connection:
+            rows = connection.execute(
+                f"""
+                SELECT page_path AS source_page,
+                       COALESCE(NULLIF(destination_url, ''), NULLIF(destination_domain, ''), 'Unknown destination') AS destination,
+                       MAX(element_label) AS action_label,
+                       COUNT(*) AS count,
+                       COUNT(DISTINCT anonymous_session_id) AS sessions
+                FROM analytics_events
+                {where} AND event_name IN ({','.join('?' for _ in click_events)})
+                GROUP BY source_page, destination
+                ORDER BY count DESC, source_page ASC
+                LIMIT 12
+                """,
+                [*params, *click_events],
+            ).fetchall()
+        return [dict(row) for row in rows]
 
     def _where(self, start, end, filters=None):
         filters = filters or {}
@@ -929,6 +951,7 @@ def build_empty_summary():
         "device_categories": [],
         "traffic_sources": [],
         "cta_performance": [],
+        "journey_paths": [],
         "daily_trend": [],
     }
 

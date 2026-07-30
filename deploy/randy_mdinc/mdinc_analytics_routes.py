@@ -524,6 +524,7 @@ def period_summary(start: datetime, end: datetime, filters: dict[str, str]) -> d
         "device_categories": group_counts(start, end, filters, "device_category"),
         "traffic_sources": traffic_sources(start, end, filters),
         "cta_performance": cta_performance(start, end, filters),
+        "journey_paths": journey_paths(start, end, filters),
         "daily_trend": daily_trend(start, end, filters),
     }
 
@@ -667,6 +668,28 @@ def cta_performance(start, end, filters) -> list[dict[str, Any]]:
         row["click_rate"] = numeric_rate(row.get("clicks", 0), row.get("impressions", 0))
         row["click_rate_label"] = percent_label(row["click_rate"])
     return rows
+
+
+def journey_paths(start, end, filters) -> list[dict[str, Any]]:
+    where, params = where_clause(start, end, filters)
+    click_events = sorted(CTA_CLICK_EVENTS)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT page_path AS source_page,
+                   COALESCE(NULLIF(destination_url, ''), NULLIF(destination_domain, ''), 'Unknown destination') AS destination,
+                   MAX(element_label) AS action_label,
+                   COUNT(*) AS count,
+                   COUNT(DISTINCT anonymous_session_id) AS sessions
+            FROM analytics_events
+            {where} AND event_name IN ({','.join('?' for _ in click_events)})
+            GROUP BY source_page, destination
+            ORDER BY count DESC, source_page ASC
+            LIMIT 12
+            """,
+            [*params, *click_events],
+        ).fetchall()
+    return [dict(row) for row in rows]
 
 
 def events_for(start, end, filters, page, page_size) -> dict[str, Any]:

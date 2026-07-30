@@ -1450,15 +1450,18 @@ def build_admin_dashboard(config, args=None):
     normalize_dashboard_groups(summary)
     page_views = totals.get("page_views", 0)
     missed_opportunities = dashboard_missed_opportunities(summary)
+    health_scores = dashboard_health_scores(totals, page_views)
     insights = dashboard_insights(summary, missed_opportunities)
     stats = [
-        dashboard_stat("Page views", page_views, summary, "page_views", "Public page loads during the selected period."),
-        dashboard_stat("Anonymous sessions", totals.get("anonymous_sessions", 0), summary, "anonymous_sessions", "Browser sessions, not identified people."),
-        dashboard_stat("Donation CTA clicks", totals.get("donation_cta_clicks", 0), summary, "donation_cta_clicks", "Donation buttons clicked before PayPal opens."),
-        dashboard_stat("PayPal opens", totals.get("paypal_clicks", 0), summary, "paypal_clicks", "PayPal opened; not a confirmed donation."),
+        dashboard_stat("Pages read", page_views, summary, "page_views", "Public page loads during the selected period."),
+        dashboard_stat("Browser sessions", totals.get("anonymous_sessions", 0), summary, "anonymous_sessions", "Anonymous browser sessions, not identified people."),
+        dashboard_stat("Support button clicks", totals.get("donation_cta_clicks", 0), summary, "donation_cta_clicks", "Donation/support buttons clicked before PayPal opens."),
+        dashboard_stat("PayPal donation page opened", totals.get("paypal_clicks", 0), summary, "paypal_clicks", "PayPal opened; not a confirmed donation."),
         dashboard_stat("Health-tool clicks", totals.get("health_tool_clicks", 0), summary, "health_tool_clicks", "Clicks to JEIR, Memovela, and related tools."),
         dashboard_stat("Newsletter signups", totals.get("newsletter_signups", 0), summary, "newsletter_signups", "Successful accepted newsletter signups only."),
     ]
+    for event in recent["events"]:
+        event["human_label"] = human_event_label(event)
 
     return {
         "storage_backend": config.get("ANALYTICS_STORAGE_BACKEND") or "local",
@@ -1470,7 +1473,12 @@ def build_admin_dashboard(config, args=None):
         "filters": filters,
         "summary": summary,
         "insights": insights,
+        "health_scores": health_scores,
+        "recommended_actions": dashboard_recommended_actions(summary, missed_opportunities, health_scores),
         "missed_opportunities": missed_opportunities,
+        "pages_by_purpose": dashboard_pages_by_purpose(summary),
+        "device_insights": dashboard_device_insights(summary),
+        "benchmarks": dashboard_benchmarks(totals, page_views),
         "trend_max": dashboard_trend_max(summary.get("daily_trend", [])),
         "stats": stats,
         "recent_events": recent["events"],
@@ -1532,11 +1540,21 @@ def dashboard_missed_opportunities(summary):
                     "page": row.get("page") or "",
                     "title": row.get("title") or row.get("page") or "Untitled page",
                     "views": views,
+                    "score": missed_opportunity_score(row),
                     "missing": ", ".join(missing),
                     "recommendation": missed_opportunity_recommendation(missing),
                 }
             )
-    return rows[:8]
+    return sorted(rows, key=lambda row: (-row["score"], -row["views"], row["title"]))[:8]
+
+
+def missed_opportunity_score(row):
+    views = int(row.get("views") or 0)
+    missing_count = 0
+    for key in ("donation_clicks", "paypal_clicks", "tool_clicks", "newsletter_signups"):
+        if int(row.get(key) or 0) == 0:
+            missing_count += 1
+    return views * max(1, missing_count)
 
 
 def missed_opportunity_recommendation(missing):
@@ -1567,6 +1585,186 @@ def dashboard_insights(summary, missed_opportunities):
     if not insights:
         insights.append("Analytics are collecting cleanly. More insights will appear as visitors interact with CTAs.")
     return insights[:5]
+
+
+def dashboard_health_scores(totals, page_views):
+    action_clicks = sum(
+        int(totals.get(key) or 0)
+        for key in ("donation_cta_clicks", "paypal_clicks", "health_tool_clicks", "newsletter_signups")
+    )
+    return [
+        score_item("Traffic", page_views, [(100, "Good"), (25, "Growing")], "Quiet", "Pages read in this period."),
+        score_item("Engagement", analytics.numeric_rate(action_clicks, page_views), [(5, "Good"), (2, "Needs attention")], "Quiet", "Action clicks compared with pages read.", suffix="%"),
+        score_item("Donation intent", int(totals.get("donation_cta_clicks", 0)) + int(totals.get("paypal_clicks", 0)), [(5, "Active"), (1, "Starting")], "Low", "Donation/support actions recorded."),
+        score_item("Newsletter growth", int(totals.get("newsletter_signups", 0)), [(5, "Active"), (1, "Starting")], "Not started", "Successful newsletter signups."),
+        score_item("Health-tool interest", int(totals.get("health_tool_clicks", 0)), [(5, "Active"), (1, "Starting")], "Low", "Clicks to JEIR, Memovela, and tools."),
+    ]
+
+
+def score_item(label, value, thresholds, fallback, help_text, suffix=""):
+    numeric = 0 if value is None else float(value)
+    status = fallback
+    for threshold, status_label in thresholds:
+        if numeric >= threshold:
+            status = status_label
+            break
+    return {
+        "label": label,
+        "value": "No data" if value is None else f"{numeric:.1f}{suffix}" if suffix else f"{int(numeric)}",
+        "status": status,
+        "tone": score_tone(status),
+        "help": help_text,
+    }
+
+
+def score_tone(status):
+    if status in {"Good", "Active"}:
+        return "good"
+    if status in {"Growing", "Starting", "Needs attention"}:
+        return "watch"
+    return "low"
+
+
+def dashboard_recommended_actions(summary, missed_opportunities, health_scores):
+    totals = summary.get("totals", {})
+    actions = []
+    top_missed = missed_opportunities[0] if missed_opportunities else None
+    if top_missed:
+        actions.append(
+            {
+                "priority": "High",
+                "title": f"Improve {top_missed['title']}",
+                "why": f"It has {top_missed['views']} views but is missing {top_missed['missing']} engagement.",
+                "next_step": top_missed["recommendation"],
+                "page": top_missed["page"],
+            }
+        )
+    if totals.get("cta_impressions", 0) and not totals.get("donation_cta_clicks", 0) and not totals.get("paypal_clicks", 0):
+        actions.append(
+            {
+                "priority": "High",
+                "title": "Test a clearer donation message",
+                "why": "Visitors are seeing support buttons, but no donation clicks or PayPal opens are recorded.",
+                "next_step": "Try language like 'Support free diabetes tools' on high-traffic articles.",
+                "page": "",
+            }
+        )
+    if totals.get("newsletter_views", 0) and not totals.get("newsletter_signups", 0):
+        actions.append(
+            {
+                "priority": "Medium",
+                "title": "Move newsletter signup closer to the article",
+                "why": "Newsletter forms are visible, but successful signups are not showing yet.",
+                "next_step": "Add a short benefit line and place the form after the first helpful section.",
+                "page": "",
+            }
+        )
+    if int(totals.get("health_tool_clicks", 0) or 0) < 3 and summary.get("top_pages"):
+        actions.append(
+            {
+                "priority": "Medium",
+                "title": "Add a relevant health-tool CTA to top articles",
+                "why": "Health-tool interest is still early, and top articles can send more readers to JEIR or Memovela.",
+                "next_step": "Add a contextual JEIR or Memovela button to the top three most-read articles.",
+                "page": summary["top_pages"][0]["label"],
+            }
+        )
+    if not actions:
+        actions.append(
+            {
+                "priority": "Low",
+                "title": "Keep collecting data",
+                "why": "Nothing urgent stands out in this date range.",
+                "next_step": "Review again after more public traffic arrives.",
+                "page": "",
+            }
+        )
+    return actions[:5]
+
+
+def dashboard_pages_by_purpose(summary):
+    buckets = {
+        "Best education pages": [],
+        "Best health-tool pages": [],
+        "Best donation-interest pages": [],
+        "Best newsletter pages": [],
+        "Traffic but no action": [],
+    }
+    for row in summary.get("top_content", []):
+        item = {
+            "page": row.get("page") or "",
+            "title": row.get("title") or row.get("page") or "Untitled page",
+            "count": int(row.get("views") or 0),
+        }
+        if item["count"]:
+            buckets["Best education pages"].append(item)
+        if int(row.get("tool_clicks") or 0):
+            buckets["Best health-tool pages"].append({**item, "count": int(row.get("tool_clicks") or 0)})
+        if int(row.get("donation_clicks") or 0) or int(row.get("paypal_clicks") or 0):
+            buckets["Best donation-interest pages"].append({**item, "count": int(row.get("donation_clicks") or 0) + int(row.get("paypal_clicks") or 0)})
+        if int(row.get("newsletter_signups") or 0):
+            buckets["Best newsletter pages"].append({**item, "count": int(row.get("newsletter_signups") or 0)})
+        if item["count"] >= 2 and not any(int(row.get(key) or 0) for key in ("donation_clicks", "paypal_clicks", "tool_clicks", "newsletter_signups")):
+            buckets["Traffic but no action"].append(item)
+    return [
+        {"label": label, "items": sorted(items, key=lambda item: (-item["count"], item["title"]))[:5]}
+        for label, items in buckets.items()
+    ]
+
+
+def dashboard_device_insights(summary):
+    devices = summary.get("device_categories", [])
+    total = sum(int(item.get("count") or 0) for item in devices)
+    if not total:
+        return ["Device insights will appear after more visitor activity is recorded."]
+    top = max(devices, key=lambda item: int(item.get("count") or 0))
+    notes = [f"{top.get('label', 'Unknown')} is the most common device category in this period."]
+    if str(top.get("label")).lower() == "mobile":
+        notes.append("Check that CTA buttons and newsletter forms appear high enough on phone screens.")
+    else:
+        notes.append("Compare this with mobile behavior as more traffic arrives.")
+    return notes
+
+
+def dashboard_benchmarks(totals, page_views):
+    return [
+        benchmark_item("Health-tool click rate", totals.get("health_tool_clicks", 0), page_views, "2-5%", "Good early signal when readers try JEIR, Memovela, or the game."),
+        benchmark_item("Newsletter signup rate", totals.get("newsletter_signups", 0), page_views, "1-3%", "Useful for turning article readers into repeat visitors."),
+        benchmark_item("Donation intent rate", int(totals.get("donation_cta_clicks", 0)) + int(totals.get("paypal_clicks", 0)), page_views, "0.5-2%", "Usually lower than tool clicks and needs repeated exposure."),
+    ]
+
+
+def benchmark_item(label, numerator, denominator, healthy_range, note):
+    rate = analytics.numeric_rate(numerator, denominator)
+    return {
+        "label": label,
+        "value": analytics.percent_label(rate),
+        "healthy_range": healthy_range,
+        "note": note,
+    }
+
+
+def human_event_label(event):
+    labels = {
+        "page_view": "Someone viewed a public page",
+        "cta_impression": "Someone saw a call-to-action",
+        "donation_cta_click": "Someone clicked a support button",
+        "paypal_click": "Someone opened PayPal",
+        "health_tool_click": "Someone opened a health tool",
+        "newsletter_form_view": "Someone saw a newsletter form",
+        "newsletter_form_interaction": "Someone interacted with a newsletter form",
+        "newsletter_signup": "Someone joined the newsletter",
+        "content_cta_click": "Someone clicked a content button",
+        "resource_download_click": "Someone clicked a resource download",
+        "sponsor_click": "Someone clicked a sponsor link",
+        "event_registration_click": "Someone clicked event registration",
+        "volunteer_cta_click": "Someone clicked a volunteer button",
+    }
+    event_name = event.get("event_name") or ""
+    label = labels.get(event_name, event_name.replace("_", " ").title())
+    if event.get("element_label"):
+        return f"{label}: {event['element_label']}"
+    return label
 
 
 def first_item(rows):
