@@ -1684,6 +1684,65 @@ def test_dashboard_renders_action_center_scores_and_plain_language_activity(tmp_
     assert b"Browser sessions" in response.data
 
 
+def test_dashboard_renders_growth_goals_search_and_campaign_tools(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    sign_in_admin(client)
+
+    search_response = client.get("/search/?q=rarepreventiontopic")
+    assert search_response.status_code == 200
+
+    post_analytics_event(
+        client,
+        event_id="client:search-click-1",
+        event_name="search_result_click",
+        page_path="/search/",
+        page_title="Search",
+        element_label="DASH Diet",
+        destination_url="/dash-diet/",
+        metadata={"search_query": "dash", "result_rank": "1", "result_path": "/dash-diet/"},
+    )
+    post_analytics_event(
+        client,
+        event_id="client:campaign-view-1",
+        event_name="page_view",
+        page_path="/donation/",
+        page_title="Donation",
+        source="newsletter",
+        medium="email",
+        campaign="august_push",
+        anonymous_session_id="campaign-session",
+    )
+    post_analytics_event(
+        client,
+        event_id="client:campaign-action-1",
+        event_name="donation_cta_click",
+        page_path="/donation/",
+        page_title="Donation",
+        element_label="Support free tools",
+        source="newsletter",
+        medium="email",
+        campaign="august_push",
+        anonymous_session_id="campaign-session",
+    )
+
+    response = client.get(
+        "/admin/analytics/?campaign_page=/guide/&campaign_source=linkedin&campaign_medium=social&campaign_name=partner_push&campaign_content=research_note"
+    )
+
+    assert response.status_code == 200
+    assert b"Growth goals" in response.data
+    assert b"Weekly growth brief" in response.data
+    assert b"Growth experiments" in response.data
+    assert b"Search insights" in response.data
+    assert b"rarepreventiontopic" in response.data
+    assert b"No-result searches" in response.data
+    assert b"Campaign links" in response.data
+    assert b"partner_push" in response.data
+    assert b"august_push" in response.data
+    assert b"utm_source=linkedin" in response.data
+
+
 def test_analytics_admin_routes_require_login_and_export_is_safe(tmp_path):
     app = analytics_app(tmp_path)
     client = app.test_client()

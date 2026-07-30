@@ -28,6 +28,8 @@ VALID_EVENT_NAMES = {
     "newsletter_form_view",
     "newsletter_form_interaction",
     "newsletter_signup",
+    "site_search",
+    "search_result_click",
     "outbound_link_click",
     "content_cta_click",
     "resource_download_click",
@@ -47,6 +49,8 @@ EVENT_CATEGORIES = {
     "newsletter_form_view": "newsletter",
     "newsletter_form_interaction": "newsletter",
     "newsletter_signup": "newsletter",
+    "site_search": "search",
+    "search_result_click": "search",
     "outbound_link_click": "outbound",
     "content_cta_click": "content",
     "resource_download_click": "resource",
@@ -80,6 +84,10 @@ ALLOWED_METADATA_KEYS = {
     "event_id",
     "volunteer_role",
     "link_kind",
+    "search_query",
+    "result_count",
+    "result_rank",
+    "result_path",
 }
 
 STRING_LIMITS = {
@@ -150,6 +158,7 @@ CTA_CLICK_EVENTS = {
     "sponsor_click",
     "event_registration_click",
     "volunteer_cta_click",
+    "search_result_click",
 }
 
 EXCLUDED_PUBLIC_PATH_PREFIXES = ("/admin", "/analytics", "/static")
@@ -311,6 +320,8 @@ class LocalAnalyticsStore(AnalyticsStore):
             "newsletter_views": self._count(start, end, filters, event_name="newsletter_form_view"),
             "newsletter_interactions": self._count(start, end, filters, event_name="newsletter_form_interaction"),
             "cta_impressions": self._count(start, end, filters, event_name="cta_impression"),
+            "site_searches": self._count(start, end, filters, event_name="site_search"),
+            "search_result_clicks": self._count(start, end, filters, event_name="search_result_click"),
         }
         return {
             "totals": totals,
@@ -329,6 +340,10 @@ class LocalAnalyticsStore(AnalyticsStore):
             "traffic_sources": self._traffic_sources(start, end, filters),
             "cta_performance": self._cta_performance(start, end, filters),
             "journey_paths": self._journey_paths(start, end, filters),
+            "search_queries": self._search_queries(start, end, filters),
+            "search_no_results": self._search_no_results(start, end, filters),
+            "search_result_clicks": self._search_result_clicks(start, end, filters),
+            "campaign_performance": self._campaign_performance(start, end, filters),
             "daily_trend": self._daily_trend(start, end, filters),
         }
 
@@ -551,6 +566,7 @@ class LocalAnalyticsStore(AnalyticsStore):
                 SELECT page_path AS source_page,
                        COALESCE(NULLIF(destination_url, ''), NULLIF(destination_domain, ''), 'Unknown destination') AS destination,
                        MAX(element_label) AS action_label,
+                       MAX(event_category) AS category,
                        COUNT(*) AS count,
                        COUNT(DISTINCT anonymous_session_id) AS sessions
                 FROM analytics_events
@@ -562,6 +578,81 @@ class LocalAnalyticsStore(AnalyticsStore):
                 [*params, *click_events],
             ).fetchall()
         return [dict(row) for row in rows]
+
+    def _search_queries(self, start, end, filters):
+        search_filters = dict(filters or {})
+        search_filters["event_name"] = "site_search"
+        where, params = self._where(start, end, search_filters)
+        with self.connect() as connection:
+            rows = connection.execute(
+                f"""
+                SELECT COALESCE(NULLIF(lower(json_extract(metadata_json, '$.search_query')), ''), 'Unknown') AS label,
+                       COUNT(*) AS count,
+                       SUM(CASE WHEN CAST(COALESCE(json_extract(metadata_json, '$.result_count'), 0) AS INTEGER) = 0 THEN 1 ELSE 0 END) AS no_results,
+                       ROUND(AVG(CAST(COALESCE(json_extract(metadata_json, '$.result_count'), 0) AS REAL)), 1) AS avg_results
+                FROM analytics_events
+                {where}
+                GROUP BY label
+                ORDER BY count DESC, label ASC
+                LIMIT 12
+                """,
+                params,
+            ).fetchall()
+        return [dict(row) for row in rows if row["label"] != "Unknown"]
+
+    def _search_no_results(self, start, end, filters):
+        rows = [
+            row
+            for row in self._search_queries(start, end, filters)
+            if int(row.get("no_results") or 0) > 0
+        ]
+        return sorted(rows, key=lambda row: (-int(row.get("no_results") or 0), row["label"]))[:8]
+
+    def _search_result_clicks(self, start, end, filters):
+        search_filters = dict(filters or {})
+        search_filters["event_name"] = "search_result_click"
+        where, params = self._where(start, end, search_filters)
+        with self.connect() as connection:
+            rows = connection.execute(
+                f"""
+                SELECT COALESCE(NULLIF(json_extract(metadata_json, '$.result_path'), ''), NULLIF(destination_url, ''), 'Unknown') AS label,
+                       MAX(element_label) AS title,
+                       COUNT(*) AS count,
+                       COUNT(DISTINCT anonymous_session_id) AS sessions
+                FROM analytics_events
+                {where}
+                GROUP BY label
+                ORDER BY count DESC, label ASC
+                LIMIT 10
+                """,
+                params,
+            ).fetchall()
+        return [dict(row) for row in rows if row["label"] != "Unknown"]
+
+    def _campaign_performance(self, start, end, filters):
+        where, params = self._where(start, end, filters)
+        with self.connect() as connection:
+            rows = connection.execute(
+                f"""
+                SELECT campaign AS label,
+                       MAX(source) AS source,
+                       MAX(medium) AS medium,
+                       COUNT(CASE WHEN event_name = 'page_view' THEN 1 END) AS page_views,
+                       COUNT(DISTINCT CASE WHEN event_name = 'page_view' THEN anonymous_session_id END) AS sessions,
+                       COUNT(CASE WHEN event_name IN ('newsletter_signup', 'donation_cta_click', 'paypal_click', 'health_tool_click', 'content_cta_click', 'volunteer_cta_click') THEN 1 END) AS actions
+                FROM analytics_events
+                {where} AND campaign != ''
+                GROUP BY campaign
+                ORDER BY actions DESC, page_views DESC, label ASC
+                LIMIT 10
+                """,
+                params,
+            ).fetchall()
+        rows = [dict(row) for row in rows]
+        for row in rows:
+            row["action_rate"] = numeric_rate(row.get("actions", 0), row.get("page_views", 0))
+            row["action_rate_label"] = percent_label(row["action_rate"])
+        return rows
 
     def _where(self, start, end, filters=None):
         filters = filters or {}
@@ -952,6 +1043,10 @@ def build_empty_summary():
         "traffic_sources": [],
         "cta_performance": [],
         "journey_paths": [],
+        "search_queries": [],
+        "search_no_results": [],
+        "search_result_clicks": [],
+        "campaign_performance": [],
         "daily_trend": [],
     }
 
@@ -1000,6 +1095,8 @@ def weekly_summary(config, end=None):
     top_source = (summary["newsletter_sources"] or summary["newsletter_referrers"] or [{"label": "No source activity", "count": 0}])[0]
     top_traffic_source = (summary.get("traffic_sources") or [{"label": "No traffic source activity", "count": 0}])[0]
     top_cta = (summary.get("cta_performance") or [{"label": "No CTA activity", "clicks": 0, "impressions": 0, "click_rate_label": "No impressions"}])[0]
+    top_search = (summary.get("search_queries") or [{"label": "No searches yet", "count": 0, "no_results": 0}])[0]
+    top_campaign = (summary.get("campaign_performance") or [{"label": "No campaign activity", "page_views": 0, "actions": 0, "action_rate_label": "No page views"}])[0]
     return {
         "start": start,
         "end": end,
@@ -1010,6 +1107,8 @@ def weekly_summary(config, end=None):
         "top_source": top_source,
         "top_traffic_source": top_traffic_source,
         "top_cta": top_cta,
+        "top_search": top_search,
+        "top_campaign": top_campaign,
     }
 
 
@@ -1032,6 +1131,9 @@ def format_weekly_summary_text(report, admin_url="/admin/analytics/"):
             f"Newsletter signups: {totals.get('newsletter_signups', 0)}",
             f"Strongest traffic source: {report['top_traffic_source']['label']} ({report['top_traffic_source']['count']})",
             f"Top CTA: {report['top_cta'].get('label') or report['top_cta'].get('element_key')} ({report['top_cta'].get('clicks', 0)} clicks, {report['top_cta'].get('click_rate_label', 'No impressions')})",
+            f"Site searches: {totals.get('site_searches', 0)}",
+            f"Top search: {report['top_search'].get('label')} ({report['top_search'].get('count', 0)} searches, {report['top_search'].get('no_results', 0)} with no results)",
+            f"Top campaign: {report['top_campaign'].get('label')} ({report['top_campaign'].get('page_views', 0)} views, {report['top_campaign'].get('actions', 0)} actions)",
             "",
             "Notable changes:",
             *(changes or ["No meaningful previous-period changes yet."]),

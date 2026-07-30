@@ -31,6 +31,8 @@ VALID_EVENT_NAMES = {
     "newsletter_form_view",
     "newsletter_form_interaction",
     "newsletter_signup",
+    "site_search",
+    "search_result_click",
     "outbound_link_click",
     "content_cta_click",
     "resource_download_click",
@@ -50,6 +52,8 @@ EVENT_CATEGORIES = {
     "newsletter_form_view": "newsletter",
     "newsletter_form_interaction": "newsletter",
     "newsletter_signup": "newsletter",
+    "site_search": "search",
+    "search_result_click": "search",
     "outbound_link_click": "outbound",
     "content_cta_click": "content",
     "resource_download_click": "resource",
@@ -83,6 +87,10 @@ ALLOWED_METADATA_KEYS = {
     "event_id",
     "volunteer_role",
     "link_kind",
+    "search_query",
+    "result_count",
+    "result_rank",
+    "result_path",
 }
 
 STRING_LIMITS = {
@@ -153,6 +161,7 @@ CTA_CLICK_EVENTS = {
     "sponsor_click",
     "event_registration_click",
     "volunteer_cta_click",
+    "search_result_click",
 }
 
 EXCLUDED_PUBLIC_PATH_PREFIXES = ("/admin", "/analytics", "/static")
@@ -507,6 +516,8 @@ def period_summary(start: datetime, end: datetime, filters: dict[str, str]) -> d
         "newsletter_views": count_events(start, end, filters, event_name="newsletter_form_view"),
         "newsletter_interactions": count_events(start, end, filters, event_name="newsletter_form_interaction"),
         "cta_impressions": count_events(start, end, filters, event_name="cta_impression"),
+        "site_searches": count_events(start, end, filters, event_name="site_search"),
+        "search_result_clicks": count_events(start, end, filters, event_name="search_result_click"),
     }
     return {
         "totals": totals,
@@ -525,6 +536,10 @@ def period_summary(start: datetime, end: datetime, filters: dict[str, str]) -> d
         "traffic_sources": traffic_sources(start, end, filters),
         "cta_performance": cta_performance(start, end, filters),
         "journey_paths": journey_paths(start, end, filters),
+        "search_queries": search_queries(start, end, filters),
+        "search_no_results": search_no_results(start, end, filters),
+        "search_result_clicks": search_result_clicks(start, end, filters),
+        "campaign_performance": campaign_performance(start, end, filters),
         "daily_trend": daily_trend(start, end, filters),
     }
 
@@ -679,6 +694,7 @@ def journey_paths(start, end, filters) -> list[dict[str, Any]]:
             SELECT page_path AS source_page,
                    COALESCE(NULLIF(destination_url, ''), NULLIF(destination_domain, ''), 'Unknown destination') AS destination,
                    MAX(element_label) AS action_label,
+                   MAX(event_category) AS category,
                    COUNT(*) AS count,
                    COUNT(DISTINCT anonymous_session_id) AS sessions
             FROM analytics_events
@@ -690,6 +706,81 @@ def journey_paths(start, end, filters) -> list[dict[str, Any]]:
             [*params, *click_events],
         ).fetchall()
     return [dict(row) for row in rows]
+
+
+def search_queries(start, end, filters) -> list[dict[str, Any]]:
+    filters = dict(filters)
+    filters["event_name"] = "site_search"
+    where, params = where_clause(start, end, filters)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT COALESCE(NULLIF(lower(json_extract(metadata_json, '$.search_query')), ''), 'Unknown') AS label,
+                   COUNT(*) AS count,
+                   SUM(CASE WHEN CAST(COALESCE(json_extract(metadata_json, '$.result_count'), 0) AS INTEGER) = 0 THEN 1 ELSE 0 END) AS no_results,
+                   ROUND(AVG(CAST(COALESCE(json_extract(metadata_json, '$.result_count'), 0) AS REAL)), 1) AS avg_results
+            FROM analytics_events
+            {where}
+            GROUP BY label
+            ORDER BY count DESC, label ASC
+            LIMIT 12
+            """,
+            params,
+        ).fetchall()
+    return [dict(row) for row in rows if row["label"] != "Unknown"]
+
+
+def search_no_results(start, end, filters) -> list[dict[str, Any]]:
+    rows = [row for row in search_queries(start, end, filters) if int(row.get("no_results") or 0) > 0]
+    return sorted(rows, key=lambda row: (-int(row.get("no_results") or 0), row["label"]))[:8]
+
+
+def search_result_clicks(start, end, filters) -> list[dict[str, Any]]:
+    filters = dict(filters)
+    filters["event_name"] = "search_result_click"
+    where, params = where_clause(start, end, filters)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT COALESCE(NULLIF(json_extract(metadata_json, '$.result_path'), ''), NULLIF(destination_url, ''), 'Unknown') AS label,
+                   MAX(element_label) AS title,
+                   COUNT(*) AS count,
+                   COUNT(DISTINCT anonymous_session_id) AS sessions
+            FROM analytics_events
+            {where}
+            GROUP BY label
+            ORDER BY count DESC, label ASC
+            LIMIT 10
+            """,
+            params,
+        ).fetchall()
+    return [dict(row) for row in rows if row["label"] != "Unknown"]
+
+
+def campaign_performance(start, end, filters) -> list[dict[str, Any]]:
+    where, params = where_clause(start, end, filters)
+    with connect() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT campaign AS label,
+                   MAX(source) AS source,
+                   MAX(medium) AS medium,
+                   COUNT(CASE WHEN event_name = 'page_view' THEN 1 END) AS page_views,
+                   COUNT(DISTINCT CASE WHEN event_name = 'page_view' THEN anonymous_session_id END) AS sessions,
+                   COUNT(CASE WHEN event_name IN ('newsletter_signup', 'donation_cta_click', 'paypal_click', 'health_tool_click', 'content_cta_click', 'volunteer_cta_click') THEN 1 END) AS actions
+            FROM analytics_events
+            {where} AND campaign != ''
+            GROUP BY campaign
+            ORDER BY actions DESC, page_views DESC, label ASC
+            LIMIT 10
+            """,
+            params,
+        ).fetchall()
+    rows = [dict(row) for row in rows]
+    for row in rows:
+        row["action_rate"] = numeric_rate(row.get("actions", 0), row.get("page_views", 0))
+        row["action_rate_label"] = percent_label(row["action_rate"])
+    return rows
 
 
 def events_for(start, end, filters, page, page_size) -> dict[str, Any]:

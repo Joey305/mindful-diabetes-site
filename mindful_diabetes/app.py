@@ -39,6 +39,43 @@ DEFAULT_CONTENT_PATH = (
 DEFAULT_ADMIN_EMAIL = "jmschulz@mindfuldiabetes.org"
 ADMIN_CODE_TTL_MINUTES = 10
 ADMIN_SESSION_HOURS = 12
+DEFAULT_GROWTH_GOALS = [
+    {
+        "metric": "page_views",
+        "label": "Reach more readers",
+        "target": 500,
+        "unit": "pages read",
+        "why": "More reading gives every newsletter, tool, and donation CTA more chances to work.",
+    },
+    {
+        "metric": "anonymous_sessions",
+        "label": "Grow visitor sessions",
+        "target": 250,
+        "unit": "sessions",
+        "why": "Sessions are anonymous, but they show whether the site is reaching more people.",
+    },
+    {
+        "metric": "newsletter_signups",
+        "label": "Build the newsletter list",
+        "target": 25,
+        "unit": "signups",
+        "why": "Email gives Mindful Diabetes a repeat audience instead of one-time visitors.",
+    },
+    {
+        "metric": "health_tool_clicks",
+        "label": "Send readers to tools",
+        "target": 50,
+        "unit": "tool clicks",
+        "why": "Tool clicks show readers are moving from learning into action.",
+    },
+    {
+        "metric": "donation_interest",
+        "label": "Increase support intent",
+        "target": 10,
+        "unit": "support actions",
+        "why": "Donation intent is an early signal before confirmed donations are connected.",
+    },
+]
 PRESERVED_CONTENT_CLASSES = {
     "article-image-placeholder",
     "article-impact-card",
@@ -207,9 +244,11 @@ def create_app(test_config=None):
         ANALYTICS_RETENTION_DAYS=int(os.getenv("ANALYTICS_RETENTION_DAYS", analytics.DEFAULT_RETENTION_DAYS)),
         ANALYTICS_ENABLE_LOCAL_TESTING=os.getenv("ANALYTICS_ENABLE_LOCAL_TESTING", ""),
         ANALYTICS_REPORT_RECIPIENTS=os.getenv("ANALYTICS_REPORT_RECIPIENTS", ""),
+        ANALYTICS_GROWTH_GOALS_JSON=os.getenv("ANALYTICS_GROWTH_GOALS_JSON", ""),
         ANALYTICS_REMOTE_BASE_URL=os.getenv("ANALYTICS_REMOTE_BASE_URL", ""),
         ANALYTICS_REMOTE_API_TOKEN=os.getenv("ANALYTICS_REMOTE_API_TOKEN", ""),
         ANALYTICS_REMOTE_TIMEOUT_SECONDS=os.getenv("ANALYTICS_REMOTE_TIMEOUT_SECONDS", "5"),
+        SITE_BASE_URL=os.getenv("SITE_BASE_URL", "https://mindfuldiabetes.org"),
         BREVO_API_KEY=os.getenv("BREVO_API_KEY", ""),
         BREVO_SMTP_URL=os.getenv("BREVO_SMTP_URL", "https://api.brevo.com/v3/smtp/email"),
         DATABASE_URL=os.getenv("DATABASE_URL", ""),
@@ -357,6 +396,24 @@ def create_app(test_config=None):
                 volunteer_search_item(),
             ],
         )
+        if query:
+            record_server_analytics_event(
+                app.config,
+                content,
+                "site_search",
+                page_path=request.path,
+                page_title="Search",
+                element_id="site-search",
+                element_label=query,
+                element_type="form",
+                element_position="site-search",
+                source=request.args.get("utm_source", ""),
+                medium=request.args.get("utm_medium", ""),
+                campaign=request.args.get("utm_campaign", ""),
+                term=request.args.get("utm_term", ""),
+                campaign_content=request.args.get("utm_content", ""),
+                metadata={"search_query": query.lower(), "result_count": len(results)},
+            )
         return render_template("search.html", query=query, results=results)
 
     @app.get("/favicon.ico")
@@ -1452,6 +1509,11 @@ def build_admin_dashboard(config, args=None):
     missed_opportunities = dashboard_missed_opportunities(summary)
     health_scores = dashboard_health_scores(totals, page_views)
     insights = dashboard_insights(summary, missed_opportunities)
+    growth_goals = dashboard_growth_goals(config, summary)
+    recommended_actions = dashboard_recommended_actions(summary, missed_opportunities, health_scores)
+    search_insights = dashboard_search_insights(summary)
+    growth_experiments = dashboard_growth_experiments(summary, missed_opportunities, growth_goals, search_insights)
+    weekly_brief = dashboard_weekly_brief(summary, growth_goals, growth_experiments, search_insights)
     stats = [
         dashboard_stat("Pages read", page_views, summary, "page_views", "Public page loads during the selected period."),
         dashboard_stat("Browser sessions", totals.get("anonymous_sessions", 0), summary, "anonymous_sessions", "Anonymous browser sessions, not identified people."),
@@ -1474,7 +1536,12 @@ def build_admin_dashboard(config, args=None):
         "summary": summary,
         "insights": insights,
         "health_scores": health_scores,
-        "recommended_actions": dashboard_recommended_actions(summary, missed_opportunities, health_scores),
+        "growth_goals": growth_goals,
+        "recommended_actions": recommended_actions,
+        "growth_experiments": growth_experiments,
+        "search_insights": search_insights,
+        "weekly_brief": weekly_brief,
+        "campaign_builder": dashboard_campaign_builder(config, args),
         "missed_opportunities": missed_opportunities,
         "pages_by_purpose": dashboard_pages_by_purpose(summary),
         "device_insights": dashboard_device_insights(summary),
@@ -1576,6 +1643,12 @@ def dashboard_insights(summary, missed_opportunities):
     top_tool = first_item(summary.get("health_tools"))
     if top_tool:
         insights.append(f"{top_tool['label']} is the most-clicked health tool.")
+    top_search = first_item(summary.get("search_queries"))
+    if top_search:
+        insights.append(f"Visitors are searching for {top_search['label']}, which can guide the next article or page update.")
+    top_campaign = first_item(summary.get("campaign_performance"))
+    if top_campaign:
+        insights.append(f"{top_campaign['label']} is the strongest tracked campaign with {top_campaign.get('page_views', 0)} views.")
     if totals.get("cta_impressions", 0) and not totals.get("donation_cta_clicks", 0) and not totals.get("paypal_clicks", 0):
         insights.append("Donation CTAs are being seen, but no donation or PayPal clicks are recorded yet.")
     if totals.get("newsletter_views", 0) and not totals.get("newsletter_signups", 0):
@@ -1682,6 +1755,275 @@ def dashboard_recommended_actions(summary, missed_opportunities, health_scores):
     return actions[:5]
 
 
+def dashboard_growth_goals(config, summary):
+    goals = load_growth_goals(config)
+    rows = []
+    totals = summary.get("totals", {})
+    for goal in goals:
+        target = max(1, int(goal.get("target") or 1))
+        value = growth_metric_value(totals, goal.get("metric"))
+        progress = min(100, round((value / target) * 100, 1))
+        remaining = max(0, target - value)
+        rows.append(
+            {
+                "metric": goal.get("metric"),
+                "label": goal.get("label") or goal.get("metric", "Goal"),
+                "value": value,
+                "target": target,
+                "unit": goal.get("unit") or "",
+                "why": goal.get("why") or "",
+                "progress": progress,
+                "remaining": remaining,
+                "status": goal_status(progress),
+            }
+        )
+    return rows[:6]
+
+
+def load_growth_goals(config):
+    raw = (config.get("ANALYTICS_GROWTH_GOALS_JSON") or "").strip()
+    if not raw:
+        return DEFAULT_GROWTH_GOALS
+    try:
+        goals = json.loads(raw)
+    except json.JSONDecodeError:
+        return DEFAULT_GROWTH_GOALS
+    if not isinstance(goals, list):
+        return DEFAULT_GROWTH_GOALS
+    cleaned = []
+    allowed_metrics = {
+        "page_views",
+        "anonymous_sessions",
+        "newsletter_signups",
+        "health_tool_clicks",
+        "donation_interest",
+        "site_searches",
+        "search_result_clicks",
+        "action_clicks",
+    }
+    for goal in goals:
+        if not isinstance(goal, dict) or goal.get("metric") not in allowed_metrics:
+            continue
+        try:
+            target = int(goal.get("target") or 0)
+        except (TypeError, ValueError):
+            continue
+        if target <= 0:
+            continue
+        cleaned.append(
+            {
+                "metric": goal["metric"],
+                "label": clamp_plain_text(goal.get("label") or goal["metric"].replace("_", " ").title(), 60),
+                "target": min(target, 1_000_000),
+                "unit": clamp_plain_text(goal.get("unit") or "", 32),
+                "why": clamp_plain_text(goal.get("why") or "", 180),
+            }
+        )
+    return cleaned or DEFAULT_GROWTH_GOALS
+
+
+def growth_metric_value(totals, metric):
+    if metric == "donation_interest":
+        return int(totals.get("donation_cta_clicks") or 0) + int(totals.get("paypal_clicks") or 0)
+    if metric == "action_clicks":
+        return sum(
+            int(totals.get(key) or 0)
+            for key in (
+                "newsletter_signups",
+                "donation_cta_clicks",
+                "paypal_clicks",
+                "health_tool_clicks",
+                "search_result_clicks",
+            )
+        )
+    return int(totals.get(metric) or 0)
+
+
+def goal_status(progress):
+    if progress >= 100:
+        return "Reached"
+    if progress >= 70:
+        return "Close"
+    if progress >= 25:
+        return "Moving"
+    return "Starting"
+
+
+def dashboard_search_insights(summary):
+    totals = summary.get("totals", {})
+    searches = int(totals.get("site_searches") or 0)
+    clicks = int(totals.get("search_result_clicks") or 0)
+    no_result_rows = summary.get("search_no_results") or []
+    click_rate = analytics.numeric_rate(clicks, searches)
+    notes = []
+    top_query = first_item(summary.get("search_queries"))
+    if top_query:
+        notes.append(f"Top search: {top_query['label']} ({top_query['count']} searches).")
+    if no_result_rows:
+        notes.append(f"Content gap: {no_result_rows[0]['label']} was searched with no results.")
+    if searches and not clicks:
+        notes.append("People are searching, but no search-result clicks are recorded yet.")
+    if not notes:
+        notes.append("Search insights will appear after visitors use the site search.")
+    return {
+        "searches": searches,
+        "clicks": clicks,
+        "click_rate": analytics.percent_label(click_rate),
+        "top_queries": summary.get("search_queries", [])[:8],
+        "no_result_queries": no_result_rows[:8],
+        "result_clicks": summary.get("search_result_clicks", [])[:8],
+        "notes": notes[:4],
+    }
+
+
+def dashboard_growth_experiments(summary, missed_opportunities, goals, search_insights):
+    totals = summary.get("totals", {})
+    experiments = []
+    if search_insights.get("no_result_queries"):
+        query = search_insights["no_result_queries"][0]["label"]
+        experiments.append(
+            experiment_item(
+                "Create a page for a searched topic",
+                "Ready to run",
+                f"Visitors searched for '{query}' and did not get a satisfying result.",
+                f"Publish or update content that directly answers '{query}'.",
+                "Watch search-result clicks and page views for the new or updated page.",
+            )
+        )
+    if missed_opportunities:
+        page = missed_opportunities[0]
+        experiments.append(
+            experiment_item(
+                "Add one stronger CTA to a high-traffic page",
+                "Ready to run",
+                f"{page['title']} has traffic but is missing {page['missing']} engagement.",
+                page["recommendation"],
+                "Compare CTA clicks on this page over the next 7 to 14 days.",
+            )
+        )
+    if int(totals.get("newsletter_views") or 0) and not int(totals.get("newsletter_signups") or 0):
+        experiments.append(
+            experiment_item(
+                "Test a clearer newsletter promise",
+                "Ready to run",
+                "Newsletter forms are visible, but signups are not happening yet.",
+                "Try a short promise like 'Get practical prevention notes once a week.'",
+                "Watch newsletter interactions and accepted signups.",
+            )
+        )
+    top_campaign = first_item(summary.get("campaign_performance"))
+    if top_campaign:
+        experiments.append(
+            experiment_item(
+                "Repeat the best campaign source",
+                "Watching",
+                f"{top_campaign['label']} is the strongest tracked campaign so far.",
+                "Reuse the same source and message on one similar outreach channel.",
+                "Compare page views and action rate between campaign links.",
+            )
+        )
+    weak_goal = first_unmet_goal(goals)
+    if weak_goal and len(experiments) < 5:
+        experiments.append(
+            experiment_item(
+                f"Push the '{weak_goal['label']}' goal",
+                "Planning",
+                f"This goal is {weak_goal['progress']}% complete for the selected period.",
+                "Choose one public page and add a single matching next step for readers.",
+                f"Track progress toward {weak_goal['target']} {weak_goal['unit']}.",
+            )
+        )
+    if not experiments:
+        experiments.append(
+            experiment_item(
+                "Keep the baseline running",
+                "Watching",
+                "No urgent growth issue stands out yet.",
+                "Let the tracker collect more behavior before changing multiple pages.",
+                "Review this panel after the next outreach push.",
+            )
+        )
+    return experiments[:5]
+
+
+def experiment_item(title, status, why, action, measure):
+    return {"title": title, "status": status, "why": why, "action": action, "measure": measure}
+
+
+def first_unmet_goal(goals):
+    pending = [goal for goal in goals if goal.get("progress", 0) < 100]
+    return sorted(pending, key=lambda goal: (goal.get("progress", 0), -goal.get("target", 0)))[0] if pending else None
+
+
+def dashboard_weekly_brief(summary, goals, experiments, search_insights):
+    totals = summary.get("totals", {})
+    top_page = first_item(summary.get("top_pages")) or {"label": "No page activity", "count": 0}
+    top_source = first_item(summary.get("traffic_sources")) or {"label": "No traffic source yet", "count": 0}
+    top_campaign = first_item(summary.get("campaign_performance")) or {"label": "No campaign activity", "page_views": 0, "actions": 0}
+    leading_goal = first_unmet_goal(goals) or (goals[0] if goals else {"label": "Growth", "remaining": 0, "unit": ""})
+    return [
+        f"Top page: {top_page['label']} with {top_page['count']} views.",
+        f"Strongest traffic source: {top_source['label']} with {top_source['count']} visits.",
+        f"Searches: {totals.get('site_searches', 0)} total, with {search_insights.get('click_rate')} clicking into a result.",
+        f"Best campaign: {top_campaign['label']} with {top_campaign.get('page_views', 0)} views and {top_campaign.get('actions', 0)} actions.",
+        f"Goal focus: {leading_goal['label']} needs {leading_goal.get('remaining', 0)} more {leading_goal.get('unit', 'actions')}.",
+        f"Next experiment: {experiments[0]['title'] if experiments else 'Keep collecting baseline data'}.",
+    ]
+
+
+def dashboard_campaign_builder(config, args):
+    site_base_url = (config.get("SITE_BASE_URL") or "https://mindfuldiabetes.org").rstrip("/")
+    page_path = clean_campaign_page(args.get("campaign_page") or "/donation/")
+    source = clean_campaign_value(args.get("campaign_source") or "newsletter")
+    medium = clean_campaign_value(args.get("campaign_medium") or "email")
+    campaign = clean_campaign_value(args.get("campaign_name") or "growth_push")
+    content = clean_campaign_value(args.get("campaign_content") or "support_cta")
+    term = clean_campaign_value(args.get("campaign_term") or "")
+    params = {
+        "utm_source": source,
+        "utm_medium": medium,
+        "utm_campaign": campaign,
+        "utm_content": content,
+    }
+    if term:
+        params["utm_term"] = term
+    generated_url = f"{site_base_url}{page_path}?{urlencode(params)}"
+    return {
+        "page_path": page_path,
+        "source": source,
+        "medium": medium,
+        "campaign": campaign,
+        "content": content,
+        "term": term,
+        "url": generated_url,
+    }
+
+
+def clean_campaign_page(value):
+    value = (value or "/").strip()
+    if value.startswith("http://") or value.startswith("https://"):
+        value = urlparse(value).path or "/"
+    if not value.startswith("/"):
+        value = "/" + value
+    value = value.split("?", 1)[0].split("#", 1)[0]
+    value = re.sub(r"[^A-Za-z0-9/_-]", "", value)
+    if not value or value.startswith(("/admin", "/analytics", "/static")):
+        return "/"
+    if not value.endswith("/"):
+        value += "/"
+    return value[:180]
+
+
+def clean_campaign_value(value):
+    value = (value or "").strip().lower().replace(" ", "_")
+    value = re.sub(r"[^a-z0-9_.-]", "", value)
+    return value[:80]
+
+
+def clamp_plain_text(value, limit):
+    return re.sub(r"\s+", " ", str(value or "")).strip()[:limit]
+
+
 def dashboard_pages_by_purpose(summary):
     buckets = {
         "Best education pages": [],
@@ -1754,6 +2096,8 @@ def human_event_label(event):
         "newsletter_form_view": "Someone saw a newsletter form",
         "newsletter_form_interaction": "Someone interacted with a newsletter form",
         "newsletter_signup": "Someone joined the newsletter",
+        "site_search": "Someone searched the site",
+        "search_result_click": "Someone clicked a search result",
         "content_cta_click": "Someone clicked a content button",
         "resource_download_click": "Someone clicked a resource download",
         "sponsor_click": "Someone clicked a sponsor link",

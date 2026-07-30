@@ -69,6 +69,41 @@
       </ul>
     </section>
 
+    <section class="admin-panel admin-panel--wide" id="growth" aria-labelledby="admin-growth-goals-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-growth-goals-heading">Growth goals</h2>
+        <span>Progress for this date range</span>
+      </div>
+      <div class="admin-goal-grid">
+        {% for goal in dashboard.growth_goals %}
+          <article class="admin-goal-card">
+            <div class="admin-goal-card__top">
+              <span>{{ goal.status }}</span>
+              <strong>{{ goal.progress }}%</strong>
+            </div>
+            <h3>{{ goal.label }}</h3>
+            <p>{{ goal.value }} of {{ goal.target }} {{ goal.unit }}</p>
+            <div class="admin-progress" aria-label="{{ goal.label }} progress">
+              <span style="width: {{ goal.progress }}%"></span>
+            </div>
+            <small>{{ goal.why }}</small>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-weekly-brief-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-weekly-brief-heading">Weekly growth brief</h2>
+        <span>Email-ready summary points</span>
+      </div>
+      <ul class="admin-insight-list admin-insight-list--brief">
+        {% for line in dashboard.weekly_brief %}
+          <li>{{ line }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
     <section class="admin-panel admin-panel--wide" aria-labelledby="admin-actions-heading">
       <div class="admin-panel__header">
         <h2 id="admin-actions-heading">Recommended next actions</h2>
@@ -84,6 +119,24 @@
             {% if action.page %}
               <a href="{{ url_for('admin_analytics_page_report', page_path=action.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">View page report</a>
             {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-experiments-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-experiments-heading">Growth experiments</h2>
+        <span>Small tests with a clear measurement</span>
+      </div>
+      <div class="admin-experiment-grid">
+        {% for experiment in dashboard.growth_experiments %}
+          <article class="admin-experiment-card">
+            <span>{{ experiment.status }}</span>
+            <h3>{{ experiment.title }}</h3>
+            <p>{{ experiment.why }}</p>
+            <strong>{{ experiment.action }}</strong>
+            <small>{{ experiment.measure }}</small>
           </article>
         {% endfor %}
       </div>
@@ -110,6 +163,8 @@
       <a href="#donation">Donation Activity</a>
       <a href="#health-tools">Health Tools</a>
       <a href="#newsletter">Newsletter</a>
+      <a href="#search-insights">Search</a>
+      <a href="#campaigns">Campaigns</a>
       <a href="#content">Content</a>
       <a href="{{ url_for('admin_analytics_events', range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">Event Explorer</a>
     </nav>
@@ -336,6 +391,77 @@
         {{ analytics_list("Top signup pages", dashboard.summary.newsletter_pages, "No successful newsletter signups were recorded.") }}
         {{ analytics_list("Campaign sources", dashboard.summary.newsletter_sources, "No campaign source has been recorded yet.") }}
       </div>
+    </section>
+
+    <section class="admin-panel admin-panel--wide" id="search-insights" aria-labelledby="admin-search-insights-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-search-insights-heading">Search insights</h2>
+        <span>{{ dashboard.search_insights.searches }} searches, {{ dashboard.search_insights.click_rate }} clicked a result</span>
+      </div>
+      <ul class="admin-insight-list">
+        {% for note in dashboard.search_insights.notes %}
+          <li>{{ note }}</li>
+        {% endfor %}
+      </ul>
+      <div class="admin-dashboard__grid">
+        {{ analytics_list("Top searches", dashboard.search_insights.top_queries, "No site searches have been recorded yet.") }}
+        {{ analytics_list("No-result searches", dashboard.search_insights.no_result_queries, "No search content gaps have appeared yet.") }}
+        {{ analytics_list("Clicked search results", dashboard.search_insights.result_clicks, "No search-result clicks have been recorded yet.") }}
+      </div>
+    </section>
+
+    <section class="admin-panel admin-panel--wide" id="campaigns" aria-labelledby="admin-campaigns-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-campaigns-heading">Campaign links</h2>
+        <span>Track outreach from email, social, partners, and events</span>
+      </div>
+      <form class="admin-filter-form admin-filter-form--campaign" action="{{ url_for('admin_analytics') }}" method="get">
+        <input type="hidden" name="range" value="{{ dashboard.range_name }}">
+        <input type="hidden" name="start" value="{{ dashboard.start }}">
+        <input type="hidden" name="end" value="{{ dashboard.end }}">
+        <label>Page <input name="campaign_page" type="text" value="{{ dashboard.campaign_builder.page_path }}" placeholder="/donation/"></label>
+        <label>Source <input name="campaign_source" type="text" value="{{ dashboard.campaign_builder.source }}" placeholder="newsletter"></label>
+        <label>Medium <input name="campaign_medium" type="text" value="{{ dashboard.campaign_builder.medium }}" placeholder="email"></label>
+        <label>Campaign <input name="campaign_name" type="text" value="{{ dashboard.campaign_builder.campaign }}" placeholder="august_push"></label>
+        <label>Content <input name="campaign_content" type="text" value="{{ dashboard.campaign_builder.content }}" placeholder="support_cta"></label>
+        <button type="submit">Build link</button>
+      </form>
+      <div class="admin-copy-box">
+        <strong>Trackable link</strong>
+        <code>{{ dashboard.campaign_builder.url }}</code>
+      </div>
+      {% if dashboard.summary.campaign_performance %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Campaign</th>
+                <th>Source</th>
+                <th>Medium</th>
+                <th>Views</th>
+                <th>Sessions</th>
+                <th>Actions</th>
+                <th>Action rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.summary.campaign_performance %}
+                <tr>
+                  <td>{{ row.label }}</td>
+                  <td>{{ row.source or "-" }}</td>
+                  <td>{{ row.medium or "-" }}</td>
+                  <td>{{ row.page_views }}</td>
+                  <td>{{ row.sessions }}</td>
+                  <td>{{ row.actions }}</td>
+                  <td>{{ row.action_rate_label }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">Campaign performance will appear after people visit links with UTM tracking.</p>
+      {% endif %}
     </section>
 
     <section class="admin-panel admin-panel--wide" id="content" aria-labelledby="admin-content-analytics-heading">

@@ -126,6 +126,8 @@
       "eventId",
       "volunteerRole",
       "linkKind",
+      "resultRank",
+      "resultPath",
     ];
     var keyMap = {
       campaignId: "campaign_id",
@@ -147,6 +149,8 @@
       eventId: "event_id",
       volunteerRole: "volunteer_role",
       linkKind: "link_kind",
+      resultRank: "result_rank",
+      resultPath: "result_path",
     };
     var metadata = {};
     allowed.forEach(function (name) {

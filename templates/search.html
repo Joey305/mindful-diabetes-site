@@ -27,7 +27,20 @@
             {% for item in results %}
               <article class="search-result-card">
                 <p class="eyebrow">{{ "Page" if item.type == "page" else "Article" }}{% if item.date %} · {{ item.date | date_label }}{% endif %}</p>
-                <h3><a href="{{ item.canonical_path }}">{{ item.title }}</a></h3>
+                <h3>
+                  <a
+                    href="{{ item.canonical_path }}"
+                    data-track-event="search_result_click"
+                    data-track-category="search"
+                    data-track-label="{{ item.title }}"
+                    data-track-id="search-result-{{ loop.index }}"
+                    data-track-position="site-search-results"
+                    data-track-destination="{{ item.canonical_path }}"
+                    data-result-rank="{{ loop.index }}"
+                    data-result-path="{{ item.canonical_path }}"
+                    data-attribution-source="site-search"
+                  >{{ item.title }}</a>
+                </h3>
                 {% if item.excerpt_text %}
                   <p>{{ item.excerpt_text }}</p>
                 {% endif %}
