@@ -1,0 +1,763 @@
+{"kind":"deck","id":"pr/byem7j","name":"Deck"}
+{"kind":"layout","layoutId":"4ccd2126-0d57-42e1-976d-8dd0882a2395","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"01c07b15-535f-4d3f-813f-c910969c0a8b","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/s95tpw","slide":1,"title":"Mindful Diabetes Free Guides","textShapes":10}
+{"kind":"shape","id":"sh/9gbyxovm","slide":1,"bbox":[0,0,816,590]}
+{"kind":"textbox","id":"sh/zqtgred4","slide":1,"text":"Mindful Diabetes Free Guides","textPreview":"Mindful Diabetes Free Guides","textChars":28,"textLines":1,"bbox":[128,65,340,24]}
+{"kind":"textbox","id":"sh/ep0fi9wz","slide":1,"text":"501(c)(3) nonprofit health education","textPreview":"501(c)(3) nonprofit health education","textChars":36,"textLines":1,"bbox":[128,91,320,20]}
+{"kind":"shape","id":"sh/1cbytova","slide":1,"bbox":[62,484,102,32]}
+{"kind":"textbox","id":"sh/0r2xkjep","slide":1,"text":"FREE GUIDE","textPreview":"FREE GUIDE","textChars":10,"textLines":1,"bbox":[76,492,78,16]}
+{"kind":"textbox","id":"sh/jmdg3ido","slide":1,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[62,625,660,78]}
+{"kind":"textbox","id":"sh/yl4fudw3","slide":1,"text":"A Plain-English Guide to Dietary Fats, Heart Health, and Brain Health","textPreview":"A Plain-English Guide to Dietary Fats, Heart Health, and Brain Health","textChars":69,"textLines":1,"bbox":[66,716,630,54]}
+{"kind":"textbox","id":"sh/wz6dsv2p","slide":1,"text":"Learn which fat sources appear most often, what they replace, and how the overall eating pattern fits your health needs.","textPreview":"Learn which fat sources appear most often, what they replace, and how the overall eating pattern fits your health needs.","textChars":120,"textLines":1,"bbox":[66,792,650,58]}
+{"kind":"shape","id":"sh/x0fe1gja","slide":1,"bbox":[66,878,660,82]}
+{"kind":"textbox","id":"sh/axovqlkj","slide":1,"text":"Inside","textPreview":"Inside","textChars":6,"textLines":1,"bbox":[83,892,626,22]}
+{"kind":"textbox","id":"sh/vyxwzql4","slide":1,"text":"Fat types, heart and brain context, oil choices, fish and omega-3 notes, label reading, realistic swaps, budget tips, and a printable planner.","textPreview":"Fat types, heart and brain context, oil choices, fish and omega-3 notes, label reading, realistic swaps, budget tips, and a printable pla...","textChars":142,"textLines":1,"bbox":[83,920,626,30]}
+{"kind":"textbox","id":"sh/8b6dob2d","slide":1,"text":"Published July 30, 2026 | Next review July 2027","textPreview":"Published July 30, 2026 | Next review July 2027","textChars":47,"textLines":1,"bbox":[66,988,500,18]}
+{"kind":"textbox","id":"sh/9wfexg3y","slide":1,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[594,988,140,18]}
+{"kind":"image","id":"im/jq54jux8","slide":1,"name":"","geometry":"roundRect","alt":"Unsaturated fat food sources including salmon, avocado, nuts, seeds, and olive oil","bbox":[0,0,816,590]}
+{"kind":"image","id":"im/lsnml4fy","slide":1,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[62,60,54,58]}
+{"kind":"notes","id":"nt/s95tpw","slide":1,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/7ld56w","slide":2,"title":"Fats Without Fear","textShapes":18}
+{"kind":"textbox","id":"sh/wjy1wr25","slide":2,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/hk7ipwjq","slide":2,"text":"Welcome","textPreview":"Welcome","textChars":7,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/il0jy1kb","slide":2,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/jm9kr61w","slide":2,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/4ni10b2h","slide":2,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/5or2tgjm","slide":2,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/ypwjmhk7","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/zq50f21c","slide":2,"text":"WELCOME","textPreview":"WELCOME","textChars":7,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/ry9w36xc","slide":2,"text":"Fat is not something to fear","textPreview":"Fat is not something to fear","textChars":28,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/6x0va1w7","slide":2,"text":"The useful question is not whether fat is allowed. It is which sources show up most often, what they replace, and how the overall pattern fits your needs.","textPreview":"The useful question is not whether fat is allowed. It is which sources show up most often, what they replace, and how the overall pattern...","textChars":154,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/szidcbex","slide":2,"bbox":[66,536,318,88]}
+{"kind":"shape","id":"sh/japwz6xg","slide":2,"bbox":[82,554,18,18]}
+{"kind":"textbox","id":"sh/i9gv61wv","slide":2,"text":"Know the types","textPreview":"Know the types","textChars":14,"textLines":1,"bbox":[114,550,254,22]}
+{"kind":"textbox","id":"sh/5wre1wfm","slide":2,"text":"Saturated, monounsaturated, polyunsaturated, and trans fats.","textPreview":"Saturated, monounsaturated, polyunsaturated, and trans fats.","textChars":60,"textLines":1,"bbox":[114,576,254,40]}
+{"kind":"shape","id":"sh/4vid8re1","slide":2,"bbox":[412,536,318,88]}
+{"kind":"shape","id":"sh/v6pwvmxk","slide":2,"bbox":[428,554,18,18]}
+{"kind":"textbox","id":"sh/u5gv2hwz","slide":2,"text":"Read labels","textPreview":"Read labels","textChars":11,"textLines":1,"bbox":[460,550,254,22]}
+{"kind":"textbox","id":"sh/y1wfeh0r","slide":2,"text":"Serving size, saturated fat, trans fat, sodium, added sugar, and %DV.","textPreview":"Serving size, saturated fat, trans fat, sodium, added sugar, and %DV.","textChars":69,"textLines":1,"bbox":[460,576,254,40]}
+{"kind":"shape","id":"sh/z25wnmhc","slide":2,"bbox":[66,646,318,88]}
+{"kind":"shape","id":"sh/k3exgrix","slide":2,"bbox":[82,664,18,18]}
+{"kind":"textbox","id":"sh/l47epwzi","slide":2,"text":"Try swaps","textPreview":"Try swaps","textChars":9,"textLines":1,"bbox":[114,660,254,22]}
+{"kind":"textbox","id":"sh/m5gfi10n","slide":2,"text":"Replace more often, rather than simply subtracting.","textPreview":"Replace more often, rather than simply subtracting.","textChars":51,"textLines":1,"bbox":[114,686,254,40]}
+{"kind":"shape","id":"sh/76pwrmh8","slide":2,"bbox":[412,646,318,88]}
+{"kind":"shape","id":"sh/87yxkrit","slide":2,"bbox":[428,664,18,18]}
+{"kind":"textbox","id":"sh/987etwze","slide":2,"text":"Stay personal","textPreview":"Stay personal","textChars":13,"textLines":1,"bbox":[460,660,254,22]}
+{"kind":"textbox","id":"sh/u9gfm10z","slide":2,"text":"Health conditions, culture, access, and taste all matter.","textPreview":"Health conditions, culture, access, and taste all matter.","textChars":57,"textLines":1,"bbox":[460,686,254,40]}
+{"kind":"shape","id":"sh/vupgv6hk","slide":2,"bbox":[66,874,684,82]}
+{"kind":"textbox","id":"sh/5obil0jm","slide":2,"text":"Individual guidance matters","textPreview":"Individual guidance matters","textChars":27,"textLines":1,"bbox":[83,888,650,22]}
+{"kind":"textbox","id":"sh/43ihcv21","slide":2,"text":"Ask for personalized advice if you have pancreatitis, gallbladder disease, very high triglycerides, kidney disease, pregnancy, allergies, an eating disorder history, or a prescribed diet.","textPreview":"Ask for personalized advice if you have pancreatitis, gallbladder disease, very high triglycerides, kidney disease, pregnancy, allergies,...","textChars":187,"textLines":1,"bbox":[83,916,650,30]}
+{"kind":"image","id":"im/ato7qhg3","slide":2,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/q187mxwr","slide":2,"name":"","geometry":"roundRect","alt":"Food sources of dietary fat on a table","bbox":[66,270,684,230]}
+{"kind":"notes","id":"nt/7ld56w","slide":2,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/ryxle0","slide":3,"title":"Fats Without Fear","textShapes":20}
+{"kind":"textbox","id":"sh/hgzmhwb2","slide":3,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/gfql8rah","slide":3,"text":"What fat does","textPreview":"What fat does","textChars":13,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/7qh4bmt0","slide":3,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/6po32hcf","slide":3,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/tszmdwb6","slide":3,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/8rql4rul","slide":3,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/jmx472to","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/ylo3yhcj","slide":3,"text":"WHAT FAT DOES","textPreview":"WHAT FAT DOES","textChars":13,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/4nu1sfm1","slide":3,"text":"What dietary fat does in the body","textPreview":"What dietary fat does in the body","textChars":33,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/5o3i103m","slide":3,"text":"Fat is an essential nutrient, but it does not act alone. Source, portion, and the rest of the meal still matter.","textPreview":"Fat is an essential nutrient, but it does not act alone. Source, portion, and the rest of the meal still matter.","textChars":112,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/ilsjq54b","slide":3,"bbox":[66,300,318,95]}
+{"kind":"shape","id":"sh/3m10zalw","slide":3,"bbox":[82,318,18,18]}
+{"kind":"textbox","id":"sh/gja1ovm5","slide":3,"text":"Cell membranes","textPreview":"Cell membranes","textChars":14,"textLines":1,"bbox":[114,314,254,22]}
+{"kind":"textbox","id":"sh/hkjix03q","slide":3,"text":"Fats help form flexible cell structures.","textPreview":"Fats help form flexible cell structures.","textChars":40,"textLines":1,"bbox":[114,340,254,47]}
+{"kind":"shape","id":"sh/uhszml4z","slide":3,"bbox":[412,300,318,95]}
+{"kind":"shape","id":"sh/vi10vqlk","slide":3,"bbox":[428,318,18,18]}
+{"kind":"textbox","id":"sh/0fe10z29","slide":3,"text":"Vitamins A, D, E, K","textPreview":"Vitamins A, D, E, K","textChars":19,"textLines":1,"bbox":[460,314,254,22]}
+{"kind":"textbox","id":"sh/1gni943u","slide":3,"text":"Fat helps absorb these fat-soluble vitamins.","textPreview":"Fat helps absorb these fat-soluble vitamins.","textChars":44,"textLines":1,"bbox":[460,340,254,47]}
+{"kind":"shape","id":"sh/pkzax0r2","slide":3,"bbox":[66,417,318,95]}
+{"kind":"shape","id":"sh/ojq94vqh","slide":3,"bbox":[82,435,18,18]}
+{"kind":"textbox","id":"sh/nihsvq9w","slide":3,"text":"Flavor and texture","textPreview":"Flavor and texture","textChars":18,"textLines":1,"bbox":[114,431,254,22]}
+{"kind":"textbox","id":"sh/2x8r2l8b","slide":3,"text":"Fat carries flavor and changes mouthfeel.","textPreview":"Fat carries flavor and changes mouthfeel.","textChars":41,"textLines":1,"bbox":[114,457,254,47]}
+{"kind":"shape","id":"sh/1wzatgrq","slide":3,"bbox":[412,417,318,95]}
+{"kind":"shape","id":"sh/0v690bq5","slide":3,"bbox":[428,435,18,18]}
+{"kind":"textbox","id":"sh/fux8r69k","slide":3,"text":"Meal satisfaction","textPreview":"Meal satisfaction","textChars":17,"textLines":1,"bbox":[460,431,254,22]}
+{"kind":"textbox","id":"sh/etoryl8f","slide":3,"text":"Fat can help a meal feel satisfying, especially with fiber and protein.","textPreview":"Fat can help a meal feel satisfying, especially with fiber and protein.","textChars":71,"textLines":1,"bbox":[460,457,254,47]}
+{"kind":"shape","id":"sh/dsfqpgru","slide":3,"bbox":[66,534,318,95]}
+{"kind":"shape","id":"sh/sr69wbq9","slide":3,"bbox":[82,552,18,18]}
+{"kind":"textbox","id":"sh/ix476ho7","slide":3,"text":"Essential fats","textPreview":"Essential fats","textChars":14,"textLines":1,"bbox":[114,548,254,22]}
+{"kind":"textbox","id":"sh/3ydozmpc","slide":3,"text":"Some fatty acids must come from food.","textPreview":"Some fatty acids must come from food.","textChars":37,"textLines":1,"bbox":[114,574,254,47]}
+{"kind":"shape","id":"sh/4zmp876x","slide":3,"bbox":[66,870,684,70]}
+{"kind":"textbox","id":"sh/50v61c7i","slide":3,"text":"Simple takeaway","textPreview":"Simple takeaway","textChars":15,"textLines":1,"bbox":[83,884,650,22]}
+{"kind":"textbox","id":"sh/utk72xov","slide":3,"text":"Fat is useful. The pattern is the point: food source, replacement, frequency, and personal medical needs.","textPreview":"Fat is useful. The pattern is the point: food source, replacement, frequency, and personal medical needs.","textChars":105,"textLines":1,"bbox":[83,912,650,18]}
+{"kind":"image","id":"im/f6hwrqhw","slide":3,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/ryxle0","slide":3,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/ogukin","slide":4,"title":"Fats Without Fear","textShapes":18}
+{"kind":"textbox","id":"sh/m5gju947","slide":4,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/n6p0ne5s","slide":4,"text":"Fat types","textPreview":"Fat types","textChars":9,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/03y1sz61","slide":4,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/147il4nm","slide":4,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/ehwzqpob","slide":4,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/z250ju5g","slide":4,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/kzi143ml","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/l0r2xonq","slide":4,"text":"FAT TYPES","textPreview":"FAT TYPES","textChars":9,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/x4fi5cn2","slide":4,"text":"Saturated, unsaturated, and trans fats","textPreview":"Saturated, unsaturated, and trans fats","textChars":38,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/w36hcrmx","slide":4,"text":"Foods usually contain mixtures of fats, but their main fat sources can guide everyday choices.","textPreview":"Foods usually contain mixtures of fats, but their main fat sources can guide everyday choices.","textChars":94,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/v2x03m5c","slide":4,"bbox":[66,300,318,132]}
+{"kind":"shape","id":"sh/a1ozah4r","slide":4,"bbox":[82,318,18,18]}
+{"kind":"textbox","id":"sh/90vi1cn6","slide":4,"text":"Saturated fat","textPreview":"Saturated fat","textChars":13,"textLines":1,"bbox":[114,314,254,22]}
+{"kind":"textbox","id":"sh/8zmh87ml","slide":4,"text":"Common in butter, cheese, fatty meats, coconut oil, and palm oil. Limit where appropriate. [1]","textPreview":"Common in butter, cheese, fatty meats, coconut oil, and palm oil. Limit where appropriate. [1]","textChars":94,"textLines":1,"bbox":[114,340,254,84]}
+{"kind":"shape","id":"sh/ned0z250","slide":4,"bbox":[412,300,318,132]}
+{"kind":"shape","id":"sh/md4z6x4f","slide":4,"bbox":[428,318,18,18]}
+{"kind":"textbox","id":"sh/twzidw3a","slide":4,"text":"Monounsaturated fat","textPreview":"Monounsaturated fat","textChars":19,"textLines":1,"bbox":[460,314,254,22]}
+{"kind":"textbox","id":"sh/svq1kbm5","slide":4,"text":"Common in olive oil, avocado, peanuts, and some nuts. Choose more often. [1]","textPreview":"Common in olive oil, avocado, peanuts, and some nuts. Choose more often. [1]","textChars":76,"textLines":1,"bbox":[460,340,254,84]}
+{"kind":"shape","id":"sh/critwzyd","slide":4,"bbox":[66,454,318,132]}
+{"kind":"shape","id":"sh/dsru54fy","slide":4,"bbox":[82,472,18,18]}
+{"kind":"textbox","id":"sh/qpgbu9g7","slide":4,"text":"Polyunsaturated fat","textPreview":"Polyunsaturated fat","textChars":19,"textLines":1,"bbox":[114,468,254,22]}
+{"kind":"textbox","id":"sh/rq9c3exs","slide":4,"text":"Common in walnuts, seeds, soybean oil, and fatty fish. Choose more often. [1]","textPreview":"Common in walnuts, seeds, soybean oil, and fatty fish. Choose more often. [1]","textChars":77,"textLines":1,"bbox":[114,494,254,84]}
+{"kind":"shape","id":"sh/4nytszyh","slide":4,"bbox":[412,454,318,132]}
+{"kind":"shape","id":"sh/po7u14fm","slide":4,"bbox":[428,472,18,18]}
+{"kind":"textbox","id":"sh/2lgbqpgb","slide":4,"text":"Industrial trans fat","textPreview":"Industrial trans fat","textChars":20,"textLines":1,"bbox":[460,468,254,22]}
+{"kind":"textbox","id":"sh/3mpszuxw","slide":4,"text":"Avoid partially hydrogenated oils. Check labels and ingredients. [2]","textPreview":"Avoid partially hydrogenated oils. Check labels and ingredients. [2]","textChars":68,"textLines":1,"bbox":[460,494,254,84]}
+{"kind":"shape","id":"sh/gjytofy5","slide":4,"bbox":[66,872,684,78]}
+{"kind":"textbox","id":"sh/hk7axkfq","slide":4,"text":"Nuance","textPreview":"Nuance","textChars":6,"textLines":1,"bbox":[83,886,650,22]}
+{"kind":"textbox","id":"sh/ju5c7a1c","slide":4,"text":"This is not a food purity list. It is a practical pattern: choose unsaturated-fat sources more often, limit saturated-fat sources where appropriate, and avoid trans fat.","textPreview":"This is not a food purity list. It is a practical pattern: choose unsaturated-fat sources more often, limit saturated-fat sources where a...","textChars":169,"textLines":1,"bbox":[83,914,650,26]}
+{"kind":"image","id":"im/o3q5creh","slide":4,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/ogukin","slide":4,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/sosyoo","slide":5,"title":"Fats Without Fear","textShapes":20}
+{"kind":"textbox","id":"sh/d07a94re","slide":5,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/szytgzat","slide":5,"text":"Replacement","textPreview":"Replacement","textChars":11,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/3u5s3a9c","slide":5,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/i9wra5sr","slide":5,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/5wna5kri","slide":5,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/4vetcfax","slide":5,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/v65sza9g","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/u5cr65sv","slide":5,"text":"REPLACEMENT","textPreview":"REPLACEMENT","textChars":11,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/wv69kbi1","slide":5,"text":"Swap, do not simply subtract","textPreview":"Swap, do not simply subtract","textChars":28,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/xgfqdgzm","slide":5,"text":"Reducing saturated fat helps most when it is replaced with unsaturated fats or fiber-rich foods, rather than refined starch or added sugar. [1]","textPreview":"Reducing saturated fat helps most when it is replaced with unsaturated fats or fiber-rich foods, rather than refined starch or added suga...","textChars":143,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/atori10b","slide":5,"bbox":[66,310,310,365]}
+{"kind":"shape","id":"sh/bux8b6hg","slide":5,"bbox":[438,310,310,365]}
+{"kind":"textbox","id":"sh/or69gri5","slide":5,"text":"Less supportive default","textPreview":"Less supportive default","textChars":23,"textLines":1,"bbox":[94,338,250,24]}
+{"kind":"shape","id":"sh/9sfq9wzq","slide":5,"bbox":[100,395,10,10]}
+{"kind":"textbox","id":"sh/mp47e10z","slide":5,"text":"Butter-heavy cooking","textPreview":"Butter-heavy cooking","textChars":20,"textLines":1,"bbox":[122,390,213,34]}
+{"kind":"shape","id":"sh/nqd876hk","slide":5,"bbox":[100,437,10,10]}
+{"kind":"textbox","id":"sh/8nq9svy9","slide":5,"text":"Fatty processed meat","textPreview":"Fatty processed meat","textChars":20,"textLines":1,"bbox":[122,432,213,34]}
+{"kind":"shape","id":"sh/tozal0zu","slide":5,"bbox":[100,479,10,10]}
+{"kind":"textbox","id":"sh/h4vq50ry","slide":5,"text":"Creamy dressing","textPreview":"Creamy dressing","textChars":15,"textLines":1,"bbox":[122,474,213,34]}
+{"kind":"shape","id":"sh/g3m9wvqd","slide":5,"bbox":[100,521,10,10]}
+{"kind":"textbox","id":"sh/f2d83q9s","slide":5,"text":"Refined snack alone","textPreview":"Refined snack alone","textChars":19,"textLines":1,"bbox":[122,516,213,34]}
+{"kind":"textbox","id":"sh/u14rul8n","slide":5,"text":"More supportive replacement","textPreview":"More supportive replacement","textChars":27,"textLines":1,"bbox":[466,338,250,24]}
+{"kind":"shape","id":"sh/tgvq1gr2","slide":5,"bbox":[472,395,10,10]}
+{"kind":"textbox","id":"sh/sfmpsbqh","slide":5,"text":"Olive oil or avocado when it fits","textPreview":"Olive oil or avocado when it fits","textChars":33,"textLines":1,"bbox":[494,390,213,34]}
+{"kind":"shape","id":"sh/7ed8z69w","slide":5,"bbox":[472,437,10,10]}
+{"kind":"textbox","id":"sh/6dk7q18b","slide":5,"text":"Beans, fish, tofu, poultry","textPreview":"Beans, fish, tofu, poultry","textChars":26,"textLines":1,"bbox":[494,432,213,34]}
+{"kind":"shape","id":"sh/5cbqxgrq","slide":5,"bbox":[472,479,10,10]}
+{"kind":"textbox","id":"sh/kb2pobq5","slide":5,"text":"Vinaigrette or yogurt-based option","textPreview":"Vinaigrette or yogurt-based option","textChars":34,"textLines":1,"bbox":[494,474,213,34]}
+{"kind":"shape","id":"sh/ah0nyho3","slide":5,"bbox":[472,521,10,10]}
+{"kind":"textbox","id":"sh/vi9o72po","slide":5,"text":"Nuts and fruit or hummus and vegetables","textPreview":"Nuts and fruit or hummus and vegetables","textChars":39,"textLines":1,"bbox":[494,516,213,34]}
+{"kind":"shape","id":"sh/wji50769","slide":5,"bbox":[66,742,682,80]}
+{"kind":"textbox","id":"sh/xkr69c7u","slide":5,"text":"Pattern message","textPreview":"Pattern message","textChars":15,"textLines":1,"bbox":[83,756,648,22]}
+{"kind":"textbox","id":"sh/mdgnuxo7","slide":5,"text":"The replacement is the intervention. A meal should still be satisfying enough to repeat.","textPreview":"The replacement is the intervention. A meal should still be satisfying enough to repeat.","textChars":88,"textLines":1,"bbox":[83,784,648,28]}
+{"kind":"image","id":"im/jm1k7q1c","slide":5,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/sosyoo","slide":5,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/fctgze","slide":6,"title":"Fats Without Fear","textShapes":17}
+{"kind":"textbox","id":"sh/4bidknih","slide":6,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/5credsj2","slide":6,"text":"Blood fats","textPreview":"Blood fats","textChars":10,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/ulgvet0f","slide":6,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/vm9w7y10","slide":6,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/gnidg3il","slide":6,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/h8re98j6","slide":6,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/6hgvat0j","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/7ipc3y1o","slide":6,"text":"BLOOD FATS","textPreview":"BLOOD FATS","textChars":10,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/765c3yp4","slide":6,"text":"LDL, HDL, and triglycerides","textPreview":"LDL, HDL, and triglycerides","textChars":27,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/m5wvutoz","slide":6,"text":"Lab numbers are useful clues, not a complete story. Ask your clinician what your own results mean.","textPreview":"Lab numbers are useful clues, not a complete story. Ask your clinician what your own results mean.","textChars":98,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/98nu5o7a","slide":6,"bbox":[70,310,210,220]}
+{"kind":"textbox","id":"sh/87edw36p","slide":6,"text":"LDL cholesterol","textPreview":"LDL cholesterol","textChars":15,"textLines":1,"bbox":[84,323,182,22]}
+{"kind":"textbox","id":"sh/vapc7ypg","slide":6,"text":"An important cardiovascular-risk marker. Lower targets may be recommended for some people.","textPreview":"An important cardiovascular-risk marker. Lower targets may be recommended for some people.","textChars":90,"textLines":1,"bbox":[84,350,182,172]}
+{"kind":"shape","id":"sh/u9wvytov","slide":6,"bbox":[303,310,210,220]}
+{"kind":"textbox","id":"sh/hc7u987m","slide":6,"text":"HDL cholesterol","textPreview":"HDL cholesterol","textChars":15,"textLines":1,"bbox":[317,323,182,22]}
+{"kind":"textbox","id":"sh/gbyd0361","slide":6,"text":"Part of the overall picture. It should not be treated as a simple protective score.","textPreview":"Part of the overall picture. It should not be treated as a simple protective score.","textChars":83,"textLines":1,"bbox":[317,350,182,172]}
+{"kind":"shape","id":"sh/belcvepc","slide":6,"bbox":[536,310,210,220]}
+{"kind":"textbox","id":"sh/adcbm98r","slide":6,"text":"Triglycerides","textPreview":"Triglycerides","textChars":13,"textLines":1,"bbox":[550,323,182,22]}
+{"kind":"textbox","id":"sh/e90fuh8f","slide":6,"text":"Can be influenced by genetics, diabetes, alcohol, medicines, weight, and dietary pattern.","textPreview":"Can be influenced by genetics, diabetes, alcohol, medicines, weight, and dietary pattern.","textChars":89,"textLines":1,"bbox":[550,350,182,172]}
+{"kind":"textbox","id":"sh/futg3m9k","slide":6,"text":"No single lab value explains all cardiovascular risk. Blood pressure, smoking status, kidney health, age, family history, glucose, medications, and other factors matter too.","textPreview":"No single lab value explains all cardiovascular risk. Blood pressure, smoking status, kidney health, age, family history, glucose, medica...","textChars":173,"textLines":1,"bbox":[80,615,640,58]}
+{"kind":"shape","id":"sh/0v2xw7q5","slide":6,"bbox":[66,850,684,70]}
+{"kind":"textbox","id":"sh/1wby5crq","slide":6,"text":"Medication safety","textPreview":"Medication safety","textChars":17,"textLines":1,"bbox":[83,864,650,22]}
+{"kind":"textbox","id":"sh/q50fqx83","slide":6,"text":"Do not change cholesterol treatment, diabetes medicine, insulin, or supplements because of this guide.","textPreview":"Do not change cholesterol treatment, diabetes medicine, insulin, or supplements because of this guide.","textChars":102,"textLines":1,"bbox":[83,892,650,18]}
+{"kind":"image","id":"im/2d83qxor","slide":6,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/fctgze","slide":6,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/uhjzl8","slide":7,"title":"Fats Without Fear","textShapes":50}
+{"kind":"textbox","id":"sh/itk7mtkv","slide":7,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/jut8fylg","slide":7,"text":"Cooking oils","textPreview":"Cooking oils","textChars":12,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/wr2pkj25","slide":7,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/hsbqdo3a","slide":7,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/up07i9kz","slide":7,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/vq98belk","slide":7,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/83ipgz2t","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/94r6943e","slide":7,"text":"COOKING OILS","textPreview":"COOKING OILS","textChars":12,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/lo7ut8je","slide":7,"text":"Cooking oils are tools, not trophies","textPreview":"Cooking oils are tools, not trophies","textChars":36,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/knyt032t","slide":7,"text":"No oil is perfect for every recipe, budget, allergy, or health need. Non-tropical liquid plant oils are generally useful unsaturated-fat sources. [2]","textPreview":"No oil is perfect for every recipe, budget, allergy, or health need. Non-tropical liquid plant oils are generally useful unsaturated-fat ...","textChars":149,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/jmpcry18","slide":7,"bbox":[66,300,112,38]}
+{"kind":"textbox","id":"sh/ylgbytkn","slide":7,"text":"Oil","textPreview":"Oil","textChars":3,"textLines":1,"bbox":[74,309,96,26]}
+{"kind":"shape","id":"sh/xk7up8j2","slide":7,"bbox":[178,300,150,38]}
+{"kind":"textbox","id":"sh/wjytw32h","slide":7,"text":"Common fit","textPreview":"Common fit","textChars":10,"textLines":1,"bbox":[186,309,134,26]}
+{"kind":"shape","id":"sh/bipsny1c","slide":7,"bbox":[328,300,208,38]}
+{"kind":"textbox","id":"sh/ahwbutkr","slide":7,"text":"Notes","textPreview":"Notes","textChars":5,"textLines":1,"bbox":[336,309,192,26]}
+{"kind":"shape","id":"sh/pgnaloj6","slide":7,"bbox":[536,300,214,38]}
+{"kind":"textbox","id":"sh/ofetsj2l","slide":7,"text":"Remember","textPreview":"Remember","textChars":8,"textLines":1,"bbox":[544,309,198,26]}
+{"kind":"shape","id":"sh/gzit8jah","slide":7,"bbox":[66,338,112,42]}
+{"kind":"textbox","id":"sh/10ru1ob2","slide":7,"text":"Olive","textPreview":"Olive","textChars":5,"textLines":1,"bbox":[74,347,96,30]}
+{"kind":"shape","id":"sh/ex0b6tsb","slide":7,"bbox":[178,338,150,42]}
+{"kind":"textbox","id":"sh/fy9czytw","slide":7,"text":"dressings, saute","textPreview":"dressings, saute","textChars":16,"textLines":1,"bbox":[186,347,134,30]}
+{"kind":"shape","id":"sh/svyt4ja5","slide":7,"bbox":[328,338,208,42]}
+{"kind":"textbox","id":"sh/twruxobq","slide":7,"text":"flavor varies; often unsaturated","textPreview":"flavor varies; often unsaturated","textChars":32,"textLines":1,"bbox":[336,347,192,30]}
+{"kind":"shape","id":"sh/6tgb29sf","slide":7,"bbox":[536,338,214,42]}
+{"kind":"textbox","id":"sh/rupcvet0","slide":7,"text":"measure if portions matter","textPreview":"measure if portions matter","textChars":26,"textLines":1,"bbox":[544,347,198,30]}
+{"kind":"shape","id":"sh/cr2tg3ap","slide":7,"bbox":[66,380,112,42]}
+{"kind":"textbox","id":"sh/xsbu98ra","slide":7,"text":"Canola","textPreview":"Canola","textChars":6,"textLines":1,"bbox":[74,389,96,30]}
+{"kind":"shape","id":"sh/7mxwf2tc","slide":7,"bbox":[178,380,150,42]}
+{"kind":"textbox","id":"sh/ml4f6hcr","slide":7,"text":"baking, saute","textPreview":"baking, saute","textChars":13,"textLines":1,"bbox":[186,389,134,30]}
+{"kind":"shape","id":"sh/9ofehcbi","slide":7,"bbox":[328,380,208,42]}
+{"kind":"textbox","id":"sh/8n6x87ux","slide":7,"text":"neutral taste; usually lower cost","textPreview":"neutral taste; usually lower cost","textChars":33,"textLines":1,"bbox":[336,389,192,30]}
+{"kind":"shape","id":"sh/vqxwjmt8","slide":7,"bbox":[536,380,214,42]}
+{"kind":"textbox","id":"sh/upofahc3","slide":7,"text":"recipe and access count","textPreview":"recipe and access count","textChars":23,"textLines":1,"bbox":[544,389,198,30]}
+{"kind":"shape","id":"sh/hsfelwbe","slide":7,"bbox":[66,422,112,42]}
+{"kind":"textbox","id":"sh/wr6xcrut","slide":7,"text":"Soybean/corn","textPreview":"Soybean/corn","textChars":12,"textLines":1,"bbox":[74,431,96,30]}
+{"kind":"shape","id":"sh/butw7id4","slide":7,"bbox":[178,422,150,42]}
+{"kind":"textbox","id":"sh/atkvyxcj","slide":7,"text":"everyday cooking","textPreview":"everyday cooking","textChars":16,"textLines":1,"bbox":[186,431,134,30]}
+{"kind":"shape","id":"sh/298nahor","slide":7,"bbox":[328,422,208,42]}
+{"kind":"textbox","id":"sh/naho3mpc","slide":7,"text":"common liquid plant oils","textPreview":"common liquid plant oils","textChars":24,"textLines":1,"bbox":[336,431,192,30]}
+{"kind":"shape","id":"sh/obq5cr6x","slide":7,"bbox":[536,422,214,42]}
+{"kind":"textbox","id":"sh/pcz65w72","slide":7,"text":"not all oils taste alike","textPreview":"not all oils taste alike","textChars":24,"textLines":1,"bbox":[544,431,198,30]}
+{"kind":"shape","id":"sh/adsne1on","slide":7,"bbox":[66,464,112,42]}
+{"kind":"textbox","id":"sh/be1o76p8","slide":7,"text":"Sunflower","textPreview":"Sunflower","textChars":9,"textLines":1,"bbox":[74,473,96,30]}
+{"kind":"shape","id":"sh/cfa5gb6t","slide":7,"bbox":[178,464,150,42]}
+{"kind":"textbox","id":"sh/xgj69w7e","slide":7,"text":"saute, dressings","textPreview":"saute, dressings","textChars":16,"textLines":1,"bbox":[186,473,134,30]}
+{"kind":"shape","id":"sh/yhsni1oz","slide":7,"bbox":[328,464,208,42]}
+{"kind":"textbox","id":"sh/zi1ob6pk","slide":7,"text":"varies by type","textPreview":"varies by type","textChars":14,"textLines":1,"bbox":[336,473,192,30]}
+{"kind":"shape","id":"sh/9cnq10rm","slide":7,"bbox":[536,464,214,42]}
+{"kind":"textbox","id":"sh/8bu98vq1","slide":7,"text":"check label if needed","textPreview":"check label if needed","textChars":21,"textLines":1,"bbox":[544,473,198,30]}
+{"kind":"shape","id":"sh/7al8za9g","slide":7,"bbox":[66,506,112,42]}
+{"kind":"textbox","id":"sh/m9cr658v","slide":7,"text":"Avocado","textPreview":"Avocado","textChars":7,"textLines":1,"bbox":[74,515,96,30]}
+{"kind":"shape","id":"sh/h0nq5kri","slide":7,"bbox":[178,506,150,42]}
+{"kind":"textbox","id":"sh/wze9cfqx","slide":7,"text":"higher-heat cooking","textPreview":"higher-heat cooking","textChars":19,"textLines":1,"bbox":[186,515,134,30]}
+{"kind":"shape","id":"sh/ve583a9s","slide":7,"bbox":[328,506,208,42]}
+{"kind":"textbox","id":"sh/udwra587","slide":7,"text":"often higher cost","textPreview":"often higher cost","textChars":17,"textLines":1,"bbox":[336,515,192,30]}
+{"kind":"shape","id":"sh/547q9k7u","slide":7,"bbox":[536,506,214,42]}
+{"kind":"textbox","id":"sh/43e9gzq9","slide":7,"text":"not required","textPreview":"not required","textChars":12,"textLines":1,"bbox":[544,515,198,30]}
+{"kind":"shape","id":"sh/47mtc3yl","slide":7,"bbox":[66,548,112,42]}
+{"kind":"textbox","id":"sh/p8fa58fq","slide":7,"text":"Peanut","textPreview":"Peanut","textChars":6,"textLines":1,"bbox":[74,557,96,30]}
+{"kind":"shape","id":"sh/254batgf","slide":7,"bbox":[178,548,150,42]}
+{"kind":"textbox","id":"sh/36ds3yx0","slide":7,"text":"stir-fry","textPreview":"stir-fry","textChars":8,"textLines":1,"bbox":[186,557,134,30]}
+{"kind":"shape","id":"sh/cb6tg3yh","slide":7,"bbox":[328,548,208,42]}
+{"kind":"textbox","id":"sh/dcfu98f2","slide":7,"text":"allergy issue for some people","textPreview":"allergy issue for some people","textChars":29,"textLines":1,"bbox":[336,557,192,30]}
+{"kind":"shape","id":"sh/q9obedgb","slide":7,"bbox":[536,548,214,42]}
+{"kind":"textbox","id":"sh/raxs7yxw","slide":7,"text":"choose safely","textPreview":"choose safely","textChars":13,"textLines":1,"bbox":[544,557,198,30]}
+{"kind":"shape","id":"sh/sf2t4jyd","slide":7,"bbox":[66,590,112,42]}
+{"kind":"textbox","id":"sh/tgvaxofy","slide":7,"text":"Coconut","textPreview":"Coconut","textChars":7,"textLines":1,"bbox":[74,599,96,30]}
+{"kind":"shape","id":"sh/v6l4z6lc","slide":7,"bbox":[178,590,150,42]}
+{"kind":"textbox","id":"sh/ulcnq147","slide":7,"text":"traditional uses","textPreview":"traditional uses","textChars":16,"textLines":1,"bbox":[186,599,134,30]}
+{"kind":"shape","id":"sh/h83m1g3i","slide":7,"bbox":[328,590,208,42]}
+{"kind":"textbox","id":"sh/w7u5sbmx","slide":7,"text":"higher in saturated fat","textPreview":"higher in saturated fat","textChars":23,"textLines":1,"bbox":[336,599,192,30]}
+{"kind":"shape","id":"sh/7i14v6lg","slide":7,"bbox":[536,590,214,42]}
+{"kind":"textbox","id":"sh/mhsnm14v","slide":7,"text":"not a miracle food","textPreview":"not a miracle food","textChars":18,"textLines":1,"bbox":[544,599,198,30]}
+{"kind":"shape","id":"sh/9k3mxg3m","slide":7,"bbox":[66,632,112,42]}
+{"kind":"textbox","id":"sh/8ja5obm1","slide":7,"text":"Palm","textPreview":"Palm","textChars":4,"textLines":1,"bbox":[74,641,96,30]}
+{"kind":"shape","id":"sh/ze14rml4","slide":7,"bbox":[178,632,150,42]}
+{"kind":"textbox","id":"sh/ydsnih4z","slide":7,"text":"packaged foods","textPreview":"packaged foods","textChars":14,"textLines":1,"bbox":[186,641,134,30]}
+{"kind":"shape","id":"sh/qxcne1cv","slide":7,"bbox":[328,632,208,42]}
+{"kind":"textbox","id":"sh/by5476t0","slide":7,"text":"higher in saturated fat","textPreview":"higher in saturated fat","textChars":23,"textLines":1,"bbox":[336,641,192,30]}
+{"kind":"shape","id":"sh/cze5grul","slide":7,"bbox":[536,632,214,42]}
+{"kind":"textbox","id":"sh/d0nm9wb6","slide":7,"text":"look at frequency","textPreview":"look at frequency","textChars":17,"textLines":1,"bbox":[544,641,198,30]}
+{"kind":"shape","id":"sh/2tcnahcj","slide":7,"bbox":[66,674,112,42]}
+{"kind":"textbox","id":"sh/3ul43mt4","slide":7,"text":"Any oil","textPreview":"Any oil","textChars":7,"textLines":1,"bbox":[74,683,96,30]}
+{"kind":"shape","id":"sh/ovu5crup","slide":7,"bbox":[178,674,150,42]}
+{"kind":"textbox","id":"sh/pw3m5wba","slide":7,"text":"flavor and cooking","textPreview":"flavor and cooking","textChars":18,"textLines":1,"bbox":[186,683,134,30]}
+{"kind":"shape","id":"sh/mpgnmlcn","slide":7,"bbox":[328,674,208,42]}
+{"kind":"textbox","id":"sh/nqpofqt8","slide":7,"text":"all oils are calorie-dense","textPreview":"all oils are calorie-dense","textChars":26,"textLines":1,"bbox":[336,683,192,30]}
+{"kind":"shape","id":"sh/xkrq5kvq","slide":7,"bbox":[536,674,214,42]}
+{"kind":"textbox","id":"sh/wjipcfe5","slide":7,"text":"use without moralizing","textPreview":"use without moralizing","textChars":22,"textLines":1,"bbox":[544,683,198,30]}
+{"kind":"shape","id":"sh/vi983adk","slide":7,"bbox":[66,866,684,88]}
+{"kind":"textbox","id":"sh/ah07a5wz","slide":7,"text":"Kitchen note","textPreview":"Kitchen note","textChars":12,"textLines":1,"bbox":[83,880,650,22]}
+{"kind":"textbox","id":"sh/9g7q10ve","slide":7,"text":"Coconut and palm oils are plant-based but higher in saturated fat. Natural does not automatically mean heart-supportive.","textPreview":"Coconut and palm oils are plant-based but higher in saturated fat. Natural does not automatically mean heart-supportive.","textChars":120,"textLines":1,"bbox":[83,908,650,36]}
+{"kind":"image","id":"im/gjmd43y9","slide":7,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/uhjzl8","slide":7,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/uligqs","slide":8,"title":"Fats Without Fear","textShapes":19}
+{"kind":"textbox","id":"sh/a9o7mdgf","slide":8,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/vaxofix0","slide":8,"text":"Nuts and avocado","textPreview":"Nuts and avocado","textChars":16,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/kfqpcneh","slide":8,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/5gz6lsf2","slide":8,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/id87qxwb","slide":8,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/jehojixw","slide":8,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/sjapg7ed","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/t4j6pcfy","slide":8,"text":"NUTS AND AVOCADO","textPreview":"NUTS AND AVOCADO","textChars":16,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/x0fypcn2","slide":8,"text":"Nuts, seeds, and avocado add more than fat","textPreview":"Nuts, seeds, and avocado add more than fat","textChars":42,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/cf6xg7mh","slide":8,"text":"These foods can bring unsaturated fats, fiber, minerals, texture, and satisfaction. They are calorie-dense, which is a neutral fact, not a moral warning.","textPreview":"These foods can bring unsaturated fats, fiber, minerals, texture, and satisfaction. They are calorie-dense, which is a neutral fact, not ...","textChars":153,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/adofex4r","slide":8,"bbox":[414,288,150,118]}
+{"kind":"shape","id":"sh/l4fytcne","slide":8,"bbox":[430,306,18,18]}
+{"kind":"textbox","id":"sh/k36xkrmt","slide":8,"text":"Peanuts","textPreview":"Peanuts","textChars":7,"textLines":1,"bbox":[462,302,86,22]}
+{"kind":"textbox","id":"sh/j2xgrm58","slide":8,"text":"Often lower cost than many tree nuts.","textPreview":"Often lower cost than many tree nuts.","textChars":37,"textLines":1,"bbox":[462,328,86,70]}
+{"kind":"shape","id":"sh/y1ofih4n","slide":8,"bbox":[592,288,150,118]}
+{"kind":"shape","id":"sh/18vehsnu","slide":8,"bbox":[608,306,18,18]}
+{"kind":"textbox","id":"sh/07mx8nmp","slide":8,"text":"Walnuts","textPreview":"Walnuts","textChars":7,"textLines":1,"bbox":[640,302,86,22]}
+{"kind":"textbox","id":"sh/srqxonu5","slide":8,"text":"A plant source of omega-3 ALA.","textPreview":"A plant source of omega-3 ALA.","textChars":30,"textLines":1,"bbox":[640,328,86,70]}
+{"kind":"shape","id":"sh/tszyxsvq","slide":8,"bbox":[414,428,150,118]}
+{"kind":"shape","id":"sh/6pofmdcf","slide":8,"bbox":[430,446,18,18]}
+{"kind":"textbox","id":"sh/rqxgvid0","slide":8,"text":"Seeds","textPreview":"Seeds","textChars":5,"textLines":1,"bbox":[462,442,86,22]}
+{"kind":"textbox","id":"sh/gfqxs7uh","slide":8,"text":"Sunflower, pumpkin, chia, and flax can add crunch.","textPreview":"Sunflower, pumpkin, chia, and flax can add crunch.","textChars":50,"textLines":1,"bbox":[462,468,86,70]}
+{"kind":"shape","id":"sh/1gzy1cv2","slide":8,"bbox":[592,428,150,118]}
+{"kind":"shape","id":"sh/et8fqxcb","slide":8,"bbox":[608,446,18,18]}
+{"kind":"textbox","id":"sh/fuhgz2dw","slide":8,"text":"Avocado","textPreview":"Avocado","textChars":7,"textLines":1,"bbox":[640,442,86,22]}
+{"kind":"textbox","id":"sh/ojaxw7ud","slide":8,"text":"Useful in small amounts for texture and flavor.","textPreview":"Useful in small amounts for texture and flavor.","textChars":47,"textLines":1,"bbox":[640,468,86,70]}
+{"kind":"shape","id":"sh/pkjy5cvy","slide":8,"bbox":[82,675,10,10]}
+{"kind":"textbox","id":"sh/zel0v6x0","slide":8,"text":"Buy small amounts if food waste is a concern.","textPreview":"Buy small amounts if food waste is a concern.","textChars":45,"textLines":1,"bbox":[104,670,608,34]}
+{"kind":"shape","id":"sh/ydcj21wv","slide":8,"bbox":[82,717,10,10]}
+{"kind":"textbox","id":"sh/lg3ixgf6","slide":8,"text":"Store nuts and seeds tightly sealed; refrigerate or freeze when needed.","textPreview":"Store nuts and seeds tightly sealed; refrigerate or freeze when needed.","textChars":71,"textLines":1,"bbox":[104,712,608,34]}
+{"kind":"shape","id":"sh/kfu14bel","slide":8,"bbox":[82,759,10,10]}
+{"kind":"textbox","id":"sh/bal0r6x4","slide":8,"text":"Use portions that fit appetite, glucose goals, and overall needs.","textPreview":"Use portions that fit appetite, glucose goals, and overall needs.","textChars":65,"textLines":1,"bbox":[104,754,608,34]}
+{"kind":"image","id":"im/oj2xojq5","slide":8,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/wjylsnq5","slide":8,"name":"","geometry":"roundRect","alt":"Nuts, seeds, avocado, fish, and oil on a table","bbox":[66,282,310,285]}
+{"kind":"notes","id":"nt/uligqs","slide":8,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/ci3s19","slide":9,"title":"Fats Without Fear","textShapes":19}
+{"kind":"textbox","id":"sh/lwbutkr6","slide":9,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/kv2tkfa1","slide":9,"text":"Fish","textPreview":"Fish","textChars":4,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/bq9cna94","slide":9,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/ap0be5sj","slide":9,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/xsrup0ra","slide":9,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/critgvap","slide":9,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/32psjq98","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/21gbalsn","slide":9,"text":"FISH","textPreview":"FISH","textChars":4,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/wvmdojyl","slide":9,"text":"Fish and omega-3 fats need nuance","textPreview":"Fish and omega-3 fats need nuance","textChars":33,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/hwvuxoz6","slide":9,"text":"Fish can be a useful protein source, and fatty fish provides omega-3 fats. Eating fish is different from assuming everyone needs a supplement.","textPreview":"Fish can be a useful protein source, and fatty fish provides omega-3 fats. Eating fish is different from assuming everyone needs a supple...","textChars":142,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/utkvmtgf","slide":9,"bbox":[66,300,318,100]}
+{"kind":"shape","id":"sh/vutcvyh0","slide":9,"bbox":[82,318,18,18]}
+{"kind":"textbox","id":"sh/8r2dkjyp","slide":9,"text":"Salmon","textPreview":"Salmon","textChars":6,"textLines":1,"bbox":[114,314,254,22]}
+{"kind":"textbox","id":"sh/9sbutoza","slide":9,"text":"Fresh, frozen, or canned can fit.","textPreview":"Fresh, frozen, or canned can fit.","textChars":33,"textLines":1,"bbox":[114,340,254,52]}
+{"kind":"shape","id":"sh/mpkvi9gj","slide":9,"bbox":[412,300,318,100]}
+{"kind":"shape","id":"sh/7qtcreh4","slide":9,"bbox":[428,318,18,18]}
+{"kind":"textbox","id":"sh/sn6dw3yt","slide":9,"text":"Sardines","textPreview":"Sardines","textChars":8,"textLines":1,"bbox":[460,314,254,22]}
+{"kind":"textbox","id":"sh/dofe58fe","slide":9,"text":"Often budget-friendly and rich in omega-3 fats.","textPreview":"Often budget-friendly and rich in omega-3 fats.","textChars":47,"textLines":1,"bbox":[460,340,254,52]}
+{"kind":"shape","id":"sh/14bu987i","slide":9,"bbox":[66,422,318,100]}
+{"kind":"shape","id":"sh/032dg3qx","slide":9,"bbox":[82,440,18,18]}
+{"kind":"textbox","id":"sh/zitc7ypc","slide":9,"text":"Tuna","textPreview":"Tuna","textChars":4,"textLines":1,"bbox":[114,436,254,22]}
+{"kind":"textbox","id":"sh/eh0vet8r","slide":9,"text":"Consider mercury guidance, especially in pregnancy. [5]","textPreview":"Consider mercury guidance, especially in pregnancy. [5]","textChars":55,"textLines":1,"bbox":[114,462,254,52]}
+{"kind":"shape","id":"sh/dgru587m","slide":9,"bbox":[412,422,318,100]}
+{"kind":"shape","id":"sh/cfidc3q1","slide":9,"bbox":[428,440,18,18]}
+{"kind":"textbox","id":"sh/re9c3ypg","slide":9,"text":"Plant pattern","textPreview":"Plant pattern","textChars":13,"textLines":1,"bbox":[460,436,254,22]}
+{"kind":"textbox","id":"sh/qd0vat8v","slide":9,"text":"Beans, tofu, nuts, seeds, and oils can support plant-forward meals.","textPreview":"Beans, tofu, nuts, seeds, and oils can support plant-forward meals.","textChars":67,"textLines":1,"bbox":[460,462,254,52]}
+{"kind":"shape","id":"sh/5cru1ora","slide":9,"bbox":[66,808,684,86]}
+{"kind":"textbox","id":"sh/4bid8jqp","slide":9,"text":"Supplement caution","textPreview":"Supplement caution","textChars":18,"textLines":1,"bbox":[83,822,650,22]}
+{"kind":"textbox","id":"sh/uhwripon","slide":9,"text":"Omega-3 supplements are not universally needed and may interact with medicines such as blood thinners. Ask your clinician what is safe for you. [6]","textPreview":"Omega-3 supplements are not universally needed and may interact with medicines such as blood thinners. Ask your clinician what is safe fo...","textChars":147,"textLines":1,"bbox":[83,850,650,34]}
+{"kind":"textbox","id":"sh/vipsbu58","slide":9,"text":"Pregnancy or breastfeeding: FDA/EPA guidance emphasizes lower-mercury seafood choices and individualized advice. [5]","textPreview":"Pregnancy or breastfeeding: FDA/EPA guidance emphasizes lower-mercury seafood choices and individualized advice. [5]","textChars":116,"textLines":1,"bbox":[78,918,620,32]}
+{"kind":"image","id":"im/vi987a5s","slide":9,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/ci3s19","slide":9,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/50davj","slide":10,"title":"Fats Without Fear","textShapes":20}
+{"kind":"textbox","id":"sh/ne1kjixs","slide":10,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/md8jqdg7","slide":10,"text":"Dairy fats","textPreview":"Dairy fats","textChars":10,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/x4j2psfu","slide":10,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/w3a1wny9","slide":10,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/v21kn2xo","slide":10,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/ahsjuxg3","slide":10,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/5832tcfq","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/k7u107e5","slide":10,"text":"DAIRY FATS","textPreview":"DAIRY FATS","textChars":10,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/atgjqtgb","slide":10,"text":"Butter, cheese, cream, and dairy fats","textPreview":"Butter, cheese, cream, and dairy fats","textChars":37,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/vupkjyxw","slide":10,"text":"You do not have to ban familiar foods. It helps to notice frequency, portion, added sugar, and what the food replaces.","textPreview":"You do not have to ban familiar foods. It helps to notice frequency, portion, added sugar, and what the food replaces.","textChars":118,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/wvyls3yh","slide":10,"bbox":[66,310,310,365]}
+{"kind":"shape","id":"sh/xw72lof2","slide":10,"bbox":[438,310,310,365]}
+{"kind":"textbox","id":"sh/ixg3utgn","slide":10,"text":"Current default","textPreview":"Current default","textChars":15,"textLines":1,"bbox":[94,338,250,24]}
+{"kind":"shape","id":"sh/ji9knyx8","slide":10,"bbox":[100,395,10,10]}
+{"kind":"textbox","id":"sh/kjilw3yd","slide":10,"text":"Butter as the only spread","textPreview":"Butter as the only spread","textChars":25,"textLines":1,"bbox":[122,390,213,34]}
+{"kind":"shape","id":"sh/5kr2p8fy","slide":10,"bbox":[100,437,10,10]}
+{"kind":"textbox","id":"sh/y1wji9g3","slide":10,"text":"Cream-heavy sauce","textPreview":"Cream-heavy sauce","textChars":17,"textLines":1,"bbox":[122,432,213,34]}
+{"kind":"shape","id":"sh/zm5kbexo","slide":10,"bbox":[100,479,10,10]}
+{"kind":"textbox","id":"sh/361gjadg","slide":10,"text":"Large mild-cheese portion","textPreview":"Large mild-cheese portion","textChars":25,"textLines":1,"bbox":[122,474,213,34]}
+{"kind":"shape","id":"sh/25szq5wv","slide":10,"bbox":[100,521,10,10]}
+{"kind":"textbox","id":"sh/ps3il0vm","slide":10,"text":"Sweetened dairy item","textPreview":"Sweetened dairy item","textChars":20,"textLines":1,"bbox":[122,516,213,34]}
+{"kind":"textbox","id":"sh/o7ahsfe1","slide":10,"text":"Possible swap","textPreview":"Possible swap","textChars":13,"textLines":1,"bbox":[466,338,250,24]}
+{"kind":"shape","id":"sh/f21gfqdk","slide":10,"bbox":[472,395,10,10]}
+{"kind":"textbox","id":"sh/u1szmlwz","slide":10,"text":"Avocado, olive oil, or nut butter sometimes","textPreview":"Avocado, olive oil, or nut butter sometimes","textChars":43,"textLines":1,"bbox":[494,390,213,34]}
+{"kind":"shape","id":"sh/14jyh0va","slide":10,"bbox":[472,437,10,10]}
+{"kind":"textbox","id":"sh/g3ahove5","slide":10,"text":"Tomato-, broth-, or yogurt-based sauce","textPreview":"Tomato-, broth-, or yogurt-based sauce","textChars":38,"textLines":1,"bbox":[494,432,213,34]}
+{"kind":"shape","id":"sh/zyl0rudo","slide":10,"bbox":[472,479,10,10]}
+{"kind":"textbox","id":"sh/yxczypw3","slide":10,"text":"Smaller amount of stronger cheese","textPreview":"Smaller amount of stronger cheese","textChars":33,"textLines":1,"bbox":[494,474,213,34]}
+{"kind":"shape","id":"sh/w36dsrul","slide":10,"bbox":[472,521,10,10]}
+{"kind":"textbox","id":"sh/x4felwb6","slide":10,"text":"Plain or lower-added-sugar option","textPreview":"Plain or lower-added-sugar option","textChars":33,"textLines":1,"bbox":[494,516,213,34]}
+{"kind":"shape","id":"sh/ahovqhcf","slide":10,"bbox":[66,742,682,80]}
+{"kind":"textbox","id":"sh/vixwjmt0","slide":10,"text":"Keep it realistic","textPreview":"Keep it realistic","textChars":17,"textLines":1,"bbox":[83,756,648,22]}
+{"kind":"textbox","id":"sh/k76xwrux","slide":10,"text":"The point is not to erase pleasure. Use flavor intentionally and choose what fits your health needs.","textPreview":"The point is not to erase pleasure. Use flavor intentionally and choose what fits your health needs.","textChars":100,"textLines":1,"bbox":[83,784,648,28]}
+{"kind":"image","id":"im/dwzaxsbi","slide":10,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/50davj","slide":10,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/omefrg","slide":11,"title":"Fats Without Fear","textShapes":18}
+{"kind":"textbox","id":"sh/xonepcja","slide":11,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/wnedg725","slide":11,"text":"Tropical oils","textPreview":"Tropical oils","textChars":13,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/nilwj218","slide":11,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/mhcvaxkn","slide":11,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/9knelcje","slide":11,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/8jedc72t","slide":11,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/zelwf21c","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/ydcv6xkr","slide":11,"text":"TROPICAL OILS","textPreview":"TROPICAL OILS","textChars":13,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/svalg3qp","slide":11,"text":"Plant-based does not always mean low in saturated fat","textPreview":"Plant-based does not always mean low in saturated fat","textChars":53,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/twjmp87a","slide":11,"text":"Coconut and palm oils are plant-based, but they are higher in saturated fat than many non-tropical liquid plant oils. [2]","textPreview":"Coconut and palm oils are plant-based, but they are higher in saturated fat than many non-tropical liquid plant oils. [2]","textChars":121,"textLines":1,"bbox":[66,218,670,60]}
+{"kind":"shape","id":"sh/6t83et8j","slide":11,"bbox":[66,306,318,126]}
+{"kind":"shape","id":"sh/7uh4nyp4","slide":11,"bbox":[82,324,18,18]}
+{"kind":"textbox","id":"sh/k7qlc3qt","slide":11,"text":"Claims to question","textPreview":"Claims to question","textChars":18,"textLines":1,"bbox":[114,320,254,22]}
+{"kind":"textbox","id":"sh/58zmlo7e","slide":11,"text":"Miracle fat, metabolism booster, detox, or brain cure.","textPreview":"Miracle fat, metabolism booster, detox, or brain cure.","textChars":54,"textLines":1,"bbox":[114,346,254,78]}
+{"kind":"shape","id":"sh/i583at8n","slide":11,"bbox":[412,306,318,126]}
+{"kind":"shape","id":"sh/j6h4jyp8","slide":11,"bbox":[428,324,18,18]}
+{"kind":"textbox","id":"sh/43u5on6x","slide":11,"text":"Context matters","textPreview":"Context matters","textChars":15,"textLines":1,"bbox":[460,320,254,22]}
+{"kind":"textbox","id":"sh/p43mxs7i","slide":11,"text":"Traditional foods can matter culturally. Frequency and amount still count.","textPreview":"Traditional foods can matter culturally. Frequency and amount still count.","textChars":74,"textLines":1,"bbox":[460,346,254,78]}
+{"kind":"shape","id":"sh/d8fulova","slide":11,"bbox":[66,454,318,126]}
+{"kind":"shape","id":"sh/c76dsjup","slide":11,"bbox":[82,472,18,18]}
+{"kind":"textbox","id":"sh/r6xcjed4","slide":11,"text":"When to choose another oil","textPreview":"When to choose another oil","textChars":26,"textLines":1,"bbox":[114,468,254,22]}
+{"kind":"textbox","id":"sh/q5ovqtcz","slide":11,"text":"If LDL cholesterol or heart risk is a concern, ask what fits your plan.","textPreview":"If LDL cholesterol or heart risk is a concern, ask what fits your plan.","textChars":71,"textLines":1,"bbox":[114,494,254,78]}
+{"kind":"shape","id":"sh/p4fuhove","slide":11,"bbox":[412,454,318,126]}
+{"kind":"shape","id":"sh/43mdojut","slide":11,"bbox":[428,472,18,18]}
+{"kind":"textbox","id":"sh/32dcfed8","slide":11,"text":"What to use instead","textPreview":"What to use instead","textChars":19,"textLines":1,"bbox":[460,468,254,22]}
+{"kind":"textbox","id":"sh/2h4vm9wn","slide":11,"text":"Olive, canola, soybean, sunflower, corn, avocado, or peanut oil when appropriate.","textPreview":"Olive, canola, soybean, sunflower, corn, avocado, or peanut oil when appropriate.","textChars":81,"textLines":1,"bbox":[460,494,254,78]}
+{"kind":"shape","id":"sh/hgvud4v2","slide":11,"bbox":[66,878,684,68]}
+{"kind":"textbox","id":"sh/gfmtkzeh","slide":11,"text":"Nonjudgmental note","textPreview":"Nonjudgmental note","textChars":18,"textLines":1,"bbox":[83,892,650,22]}
+{"kind":"textbox","id":"sh/6lkru5sf","slide":11,"text":"No single ingredient defines a whole diet. Look at the pattern, the portion, and what happens most often.","textPreview":"No single ingredient defines a whole diet. Look at the pattern, the portion, and what happens most often.","textChars":105,"textLines":1,"bbox":[83,920,650,16]}
+{"kind":"image","id":"im/zupcritk","slide":11,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/omefrg","slide":11,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/gu24gb","slide":12,"title":"Fats Without Fear","textShapes":20}
+{"kind":"textbox","id":"sh/8fa1knat","slide":12,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/9gjitsby","slide":12,"text":"Fried foods","textPreview":"Fried foods","textChars":11,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/y98zetsb","slide":12,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/zah0nytw","slide":12,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/kba1g3ah","slide":12,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/lcjip8b2","slide":12,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/al8zatsf","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/bmh0jyt0","slide":12,"text":"FRIED FOODS","textPreview":"FRIED FOODS","textChars":11,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/nudkfad4","slide":12,"text":"The issue is the repeated pattern","textPreview":"The issue is the repeated pattern","textChars":33,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/mt4j65wz","slide":12,"text":"Fried and many ultra-processed foods can combine refined starch, sodium, saturated fat, added sugar, and large portions. One meal is not the whole story.","textPreview":"Fried and many ultra-processed foods can combine refined starch, sodium, saturated fat, added sugar, and large portions. One meal is not ...","textChars":153,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/9wv2h0va","slide":12,"bbox":[66,310,310,365]}
+{"kind":"shape","id":"sh/ovm18fep","slide":12,"bbox":[438,310,310,365]}
+{"kind":"textbox","id":"sh/bixkjadg","slide":12,"text":"Frequent pattern","textPreview":"Frequent pattern","textChars":16,"textLines":1,"bbox":[94,338,250,24]}
+{"kind":"shape","id":"sh/axoja5wv","slide":12,"bbox":[100,395,10,10]}
+{"kind":"textbox","id":"sh/xkf2lkvm","slide":12,"text":"Fried entree","textPreview":"Fried entree","textChars":12,"textLines":1,"bbox":[122,390,213,34]}
+{"kind":"shape","id":"sh/wj61cfe1","slide":12,"bbox":[100,437,10,10]}
+{"kind":"textbox","id":"sh/r2tk7qxw","slide":12,"text":"Fries","textPreview":"Fries","textChars":5,"textLines":1,"bbox":[122,432,213,34]}
+{"kind":"shape","id":"sh/q1kjylwr","slide":12,"bbox":[100,479,10,10]}
+{"kind":"textbox","id":"sh/uhsn6tgz","slide":12,"text":"Sugary drink","textPreview":"Sugary drink","textChars":12,"textLines":1,"bbox":[122,474,213,34]}
+{"kind":"shape","id":"sh/vi14fyxk","slide":12,"bbox":[100,521,10,10]}
+{"kind":"textbox","id":"sh/gja58jy5","slide":12,"text":"Few vegetables","textPreview":"Few vegetables","textChars":14,"textLines":1,"bbox":[122,516,213,34]}
+{"kind":"textbox","id":"sh/hkjmhofq","slide":12,"text":"More supportive adjustment","textPreview":"More supportive adjustment","textChars":26,"textLines":1,"bbox":[466,338,250,24]}
+{"kind":"shape","id":"sh/6d8n29g3","slide":12,"bbox":[472,395,10,10]}
+{"kind":"textbox","id":"sh/7eh4bexo","slide":12,"text":"Smaller or shared fried portion","textPreview":"Smaller or shared fried portion","textChars":31,"textLines":1,"bbox":[494,390,213,34]}
+{"kind":"shape","id":"sh/8fq54jy9","slide":12,"bbox":[472,437,10,10]}
+{"kind":"textbox","id":"sh/tgjmdofu","slide":12,"text":"Vegetable side","textPreview":"Vegetable side","textChars":14,"textLines":1,"bbox":[494,432,213,34]}
+{"kind":"shape","id":"sh/yp8ny9g7","slide":12,"bbox":[472,479,10,10]}
+{"kind":"textbox","id":"sh/jqh47exc","slide":12,"text":"Water or lower-sugar drink","textPreview":"Water or lower-sugar drink","textChars":26,"textLines":1,"bbox":[494,474,213,34]}
+{"kind":"shape","id":"sh/lg7ytw36","slide":12,"bbox":[472,521,10,10]}
+{"kind":"textbox","id":"sh/0fyh0rml","slide":12,"text":"Different cooking method next time","textPreview":"Different cooking method next time","textChars":34,"textLines":1,"bbox":[494,516,213,34]}
+{"kind":"shape","id":"sh/zepgr6l0","slide":12,"bbox":[66,742,682,80]}
+{"kind":"textbox","id":"sh/ydgzy14v","slide":12,"text":"No shame","textPreview":"No shame","textChars":8,"textLines":1,"bbox":[83,756,648,22]}
+{"kind":"textbox","id":"sh/dsnypw3a","slide":12,"text":"Food is not a character test. Patterns can change without turning one meal into a failure.","textPreview":"Food is not a character test. Patterns can change without turning one meal into a failure.","textChars":90,"textLines":1,"bbox":[83,784,648,28]}
+{"kind":"image","id":"im/mx4rq5on","slide":12,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/gu24gb","slide":12,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/tbqcc3","slide":13,"title":"Fats Without Fear","textShapes":39}
+{"kind":"textbox","id":"sh/9kbm5sfi","slide":13,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/oj2lw7yx","slide":13,"text":"Label reading","textPreview":"Label reading","textChars":13,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/zu94zix0","slide":13,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/et03qdgv","slide":13,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/1wbm1sf6","slide":13,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/0v2lsnyl","slide":13,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/rq94vih4","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/qp03mdgj","slide":13,"text":"LABEL READING","textPreview":"LABEL READING","textChars":13,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/wn6lwjmp","slide":13,"text":"Reading the Nutrition Facts label","textPreview":"Reading the Nutrition Facts label","textChars":33,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/hof25ona","slide":13,"text":"The fastest label check starts with serving size, then saturated fat, trans fat, sodium, added sugars, carbohydrates, and % Daily Value. [3]","textPreview":"The fastest label check starts with serving size, then saturated fat, trans fat, sodium, added sugars, carbohydrates, and % Daily Value. [3]","textChars":140,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/ulo3u94j","slide":13,"bbox":[94,286,315,500]}
+{"kind":"textbox","id":"sh/vmxk3e54","slide":13,"text":"Nutrition Facts","textPreview":"Nutrition Facts","textChars":15,"textLines":1,"bbox":[106,298,220,34]}
+{"kind":"shape","id":"sh/8j6lszmd","slide":13,"bbox":[104,344,295,0]}
+{"kind":"textbox","id":"sh/9kf214ny","slide":13,"text":"Serving size","textPreview":"Serving size","textChars":12,"textLines":1,"bbox":[106,348,180,22]}
+{"kind":"textbox","id":"sh/mho3qp4n","slide":13,"text":"1 cup","textPreview":"1 cup","textChars":5,"textLines":1,"bbox":[290,348,94,22]}
+{"kind":"shape","id":"sh/7ixkzu5s","slide":13,"bbox":[104,384,295,0]}
+{"kind":"textbox","id":"sh/sfql43mx","slide":13,"text":"Calories","textPreview":"Calories","textChars":8,"textLines":1,"bbox":[106,388,180,22]}
+{"kind":"textbox","id":"sh/tgjmd8ni","slide":13,"text":"240","textPreview":"240","textChars":3,"textLines":1,"bbox":[290,388,94,22]}
+{"kind":"shape","id":"sh/1wf2xofm","slide":13,"bbox":[104,434,295,0]}
+{"kind":"textbox","id":"sh/0v6lo3e1","slide":13,"text":"Total Fat","textPreview":"Total Fat","textChars":9,"textLines":1,"bbox":[106,438,180,22]}
+{"kind":"textbox","id":"sh/fadkvyxg","slide":13,"text":"12g   15%","textPreview":"12g   15%","textChars":9,"textLines":1,"bbox":[290,438,94,22]}
+{"kind":"shape","id":"sh/e943mtwv","slide":13,"bbox":[104,474,295,0]}
+{"kind":"textbox","id":"sh/d8v2tofa","slide":13,"text":"Saturated Fat","textPreview":"Saturated Fat","textChars":13,"textLines":1,"bbox":[124,478,180,22]}
+{"kind":"textbox","id":"sh/s7mlkjep","slide":13,"text":"4g   20%","textPreview":"4g   20%","textChars":8,"textLines":1,"bbox":[290,478,94,22]}
+{"kind":"shape","id":"sh/r6dkrex4","slide":13,"bbox":[104,514,295,0]}
+{"kind":"textbox","id":"sh/q543i9wz","slide":13,"text":"Trans Fat","textPreview":"Trans Fat","textChars":9,"textLines":1,"bbox":[124,518,180,22]}
+{"kind":"textbox","id":"sh/54v2p4fe","slide":13,"text":"0g","textPreview":"0g","textChars":2,"textLines":1,"bbox":[290,518,94,22]}
+{"kind":"shape","id":"sh/4321gjet","slide":13,"bbox":[104,554,295,0]}
+{"kind":"textbox","id":"sh/u90zq5cr","slide":13,"text":"Sodium","textPreview":"Sodium","textChars":6,"textLines":1,"bbox":[106,558,180,22]}
+{"kind":"textbox","id":"sh/va90jadw","slide":13,"text":"480mg   21%","textPreview":"480mg   21%","textChars":11,"textLines":1,"bbox":[290,558,94,22]}
+{"kind":"shape","id":"sh/gbihsfuh","slide":13,"bbox":[104,594,295,0]}
+{"kind":"textbox","id":"sh/hcbilkv2","slide":13,"text":"Total Carbohydrate","textPreview":"Total Carbohydrate","textChars":18,"textLines":1,"bbox":[106,598,180,22]}
+{"kind":"textbox","id":"sh/650zm5cf","slide":13,"text":"34g   12%","textPreview":"34g   12%","textChars":9,"textLines":1,"bbox":[290,598,94,22]}
+{"kind":"shape","id":"sh/7690fad0","slide":13,"bbox":[104,634,295,0]}
+{"kind":"textbox","id":"sh/87ihoful","slide":13,"text":"Dietary Fiber","textPreview":"Dietary Fiber","textChars":13,"textLines":1,"bbox":[124,638,180,22]}
+{"kind":"textbox","id":"sh/t8rihkv6","slide":13,"text":"4g   14%","textPreview":"4g   14%","textChars":8,"textLines":1,"bbox":[290,638,94,22]}
+{"kind":"shape","id":"sh/yhgzilcj","slide":13,"bbox":[104,674,295,0]}
+{"kind":"textbox","id":"sh/jip0bqd4","slide":13,"text":"Added Sugars","textPreview":"Added Sugars","textChars":12,"textLines":1,"bbox":[124,678,180,22]}
+{"kind":"textbox","id":"sh/bu9wn6xk","slide":13,"text":"8g   16%","textPreview":"8g   16%","textChars":8,"textLines":1,"bbox":[290,678,94,22]}
+{"kind":"shape","id":"sh/qt0vu1gz","slide":13,"bbox":[454,306,30,30]}
+{"kind":"textbox","id":"sh/xwrepwfq","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[460,311,18,16]}
+{"kind":"textbox","id":"sh/cvixwby5","slide":13,"text":"Start with serving size.","textPreview":"Start with serving size.","textChars":24,"textLines":1,"bbox":[496,308,232,42]}
+{"kind":"shape","id":"sh/369wjmho","slide":13,"bbox":[454,394,30,30]}
+{"kind":"textbox","id":"sh/25gvqhg3","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[460,399,18,16]}
+{"kind":"textbox","id":"sh/psrelwzu","slide":13,"text":"Compare saturated fat across similar foods.","textPreview":"Compare saturated fat across similar foods.","textChars":43,"textLines":1,"bbox":[496,396,232,42]}
+{"kind":"shape","id":"sh/o7idsry9","slide":13,"bbox":[454,494,30,30]}
+{"kind":"textbox","id":"sh/f2pwfmhc","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[460,499,18,16]}
+{"kind":"textbox","id":"sh/e1gvmhgr","slide":13,"text":"Trans fat has no %DV, but still matters.","textPreview":"Trans fat has no %DV, but still matters.","textChars":40,"textLines":1,"bbox":[496,496,232,42]}
+{"kind":"shape","id":"sh/kvu10jad","slide":13,"bbox":[454,594,30,30]}
+{"kind":"textbox","id":"sh/5w329ory","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[460,599,18,16]}
+{"kind":"textbox","id":"sh/itsjy9sn","slide":13,"text":"Use %DV: 5% is low, 20% is high.","textPreview":"Use %DV: 5% is low, 20% is high.","textChars":32,"textLines":1,"bbox":[496,596,232,42]}
+{"kind":"shape","id":"sh/julk7et8","slide":13,"bbox":[454,696,30,30]}
+{"kind":"textbox","id":"sh/szul43ap","slide":13,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[460,701,18,16]}
+{"kind":"textbox","id":"sh/t032dora","slide":13,"text":"For diabetes, carbs and added sugar may also matter.","textPreview":"For diabetes, carbs and added sugar may also matter.","textChars":52,"textLines":1,"bbox":[496,698,232,42]}
+{"kind":"shape","id":"sh/6xc32tsj","slide":13,"bbox":[66,858,684,78]}
+{"kind":"textbox","id":"sh/7ylkby94","slide":13,"text":"Fast rule of thumb","textPreview":"Fast rule of thumb","textChars":18,"textLines":1,"bbox":[83,872,650,22]}
+{"kind":"textbox","id":"sh/83a1szal","slide":13,"text":"For many nutrients, 5% DV or less is low and 20% DV or more is high. The goal may be lower for saturated fat, sodium, and added sugars. [4]","textPreview":"For many nutrients, 5% DV or less is low and 20% DV or more is high. The goal may be lower for saturated fat, sodium, and added sugars. [4]","textChars":139,"textLines":1,"bbox":[83,900,650,26]}
+{"kind":"image","id":"im/3u1w7i9s","slide":13,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/tbqcc3","slide":13,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/wbwxy1","slide":14,"title":"Fats Without Fear","textShapes":20}
+{"kind":"textbox","id":"sh/9gj2hw76","slide":14,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/8fal8rql","slide":14,"text":"Breakfast swaps","textPreview":"Breakfast swaps","textChars":15,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/vi1kj6pc","slide":14,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/uhs3a18r","slide":14,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/hk32lg72","slide":14,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/wjalcbqx","slide":14,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/j6l4n6p8","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/ilc3e18n","slide":14,"text":"BREAKFAST SWAPS","textPreview":"BREAKFAST SWAPS","textChars":15,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/wbi5wvyp","slide":14,"text":"Try one change while keeping breakfast familiar","textPreview":"Try one change while keeping breakfast familiar","textChars":47,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/hcr6pgza","slide":14,"text":"Swaps work best when the meal still feels like yours.","textPreview":"Swaps work best when the meal still feels like yours.","textChars":53,"textLines":1,"bbox":[66,218,670,60]}
+{"kind":"shape","id":"sh/u90nulgz","slide":14,"bbox":[66,310,310,365]}
+{"kind":"shape","id":"sh/va9onqhk","slide":14,"bbox":[438,310,310,365]}
+{"kind":"textbox","id":"sh/4z250vy1","slide":14,"text":"Current choice","textPreview":"Current choice","textChars":14,"textLines":1,"bbox":[94,338,250,24]}
+{"kind":"shape","id":"sh/50b6t0zm","slide":14,"bbox":[100,395,10,10]}
+{"kind":"textbox","id":"sh/idknylgv","slide":14,"text":"Pastry and sweet coffee","textPreview":"Pastry and sweet coffee","textChars":23,"textLines":1,"bbox":[122,390,213,34]}
+{"kind":"shape","id":"sh/jytorqhg","slide":14,"bbox":[100,437,10,10]}
+{"kind":"textbox","id":"sh/s32p4fyx","slide":14,"text":"Butter-heavy toast","textPreview":"Butter-heavy toast","textChars":18,"textLines":1,"bbox":[122,432,213,34]}
+{"kind":"shape","id":"sh/t4b6xkzi","slide":14,"bbox":[100,479,10,10]}
+{"kind":"textbox","id":"sh/1kr6h0rm","slide":14,"text":"Fried processed-meat side","textPreview":"Fried processed-meat side","textChars":25,"textLines":1,"bbox":[122,474,213,34]}
+{"kind":"shape","id":"sh/0jy58vq1","slide":14,"bbox":[100,521,10,10]}
+{"kind":"textbox","id":"sh/zypofa9w","slide":14,"text":"Sugary cereal","textPreview":"Sugary cereal","textChars":13,"textLines":1,"bbox":[122,516,213,34]}
+{"kind":"textbox","id":"sh/exgn658b","slide":14,"text":"Possible swap","textPreview":"Possible swap","textChars":13,"textLines":1,"bbox":[466,338,250,24]}
+{"kind":"shape","id":"sh/9or6lkry","slide":14,"bbox":[472,395,10,10]}
+{"kind":"textbox","id":"sh/oni5cfqd","slide":14,"text":"Plain yogurt, berries, and nuts","textPreview":"Plain yogurt, berries, and nuts","textChars":31,"textLines":1,"bbox":[494,390,213,34]}
+{"kind":"shape","id":"sh/nm9oja9s","slide":14,"bbox":[472,437,10,10]}
+{"kind":"textbox","id":"sh/ml0na587","slide":14,"text":"Whole-grain avocado or nut-butter toast","textPreview":"Whole-grain avocado or nut-butter toast","textChars":39,"textLines":1,"bbox":[494,432,213,34]}
+{"kind":"shape","id":"sh/5s7m9gre","slide":14,"bbox":[472,479,10,10]}
+{"kind":"textbox","id":"sh/4re50bq9","slide":14,"text":"Eggs with vegetables","textPreview":"Eggs with vegetables","textChars":20,"textLines":1,"bbox":[494,474,213,34]}
+{"kind":"shape","id":"sh/uxc3ahor","slide":14,"bbox":[472,521,10,10]}
+{"kind":"textbox","id":"sh/vylkjmpc","slide":14,"text":"Oats with seeds and fruit","textPreview":"Oats with seeds and fruit","textChars":25,"textLines":1,"bbox":[494,516,213,34]}
+{"kind":"shape","id":"sh/gzulcr6x","slide":14,"bbox":[66,742,682,80]}
+{"kind":"textbox","id":"sh/h032lw7i","slide":14,"text":"Flexible language","textPreview":"Flexible language","textChars":17,"textLines":1,"bbox":[83,756,648,22]}
+{"kind":"textbox","id":"sh/i1w3e1o3","slide":14,"text":"These are ideas, not assignments. Start with one change that feels doable.","textPreview":"These are ideas, not assignments. Start with one change that feels doable.","textChars":74,"textLines":1,"bbox":[83,784,648,28]}
+{"kind":"image","id":"im/vm9032dg","slide":14,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/wbwxy1","slide":14,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/l7t0y3","slide":15,"title":"Fats Without Fear","textShapes":20}
+{"kind":"textbox","id":"sh/ypgjyhsj","slide":15,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/zqp0rm94","slide":15,"text":"Meal swaps","textPreview":"Meal swaps","textChars":10,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/8fi14bal","slide":15,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/9grixgr6","slide":15,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/mt0j21sf","slide":15,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/7u90v690","slide":15,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/ojehs7ah","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/pknilcr2","slide":15,"text":"MEAL SWAPS","textPreview":"MEAL SWAPS","textChars":10,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/5wz6pgru","slide":15,"text":"Swap frequency, not identity","textPreview":"Swap frequency, not identity","textChars":28,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/kv65wba9","slide":15,"text":"Lunch and dinner changes should respect culture, taste, time, and budget.","textPreview":"Lunch and dinner changes should respect culture, taste, time, and budget.","textChars":73,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/juxon69o","slide":15,"bbox":[66,310,310,365]}
+{"kind":"shape","id":"sh/itonu1s3","slide":15,"bbox":[438,310,310,365]}
+{"kind":"textbox","id":"sh/t0z6tgrq","slide":15,"text":"Current choice","textPreview":"Current choice","textChars":14,"textLines":1,"bbox":[94,338,250,24]}
+{"kind":"shape","id":"sh/szq50bal","slide":15,"bbox":[100,395,10,10]}
+{"kind":"textbox","id":"sh/7yhorq90","slide":15,"text":"Creamy dressing most days","textPreview":"Creamy dressing most days","textChars":25,"textLines":1,"bbox":[122,390,213,34]}
+{"kind":"shape","id":"sh/6x8nylsf","slide":15,"bbox":[100,437,10,10]}
+{"kind":"textbox","id":"sh/hoj6x0r2","slide":15,"text":"Meat-centered plate","textPreview":"Meat-centered plate","textChars":19,"textLines":1,"bbox":[122,432,213,34]}
+{"kind":"shape","id":"sh/gnqp4vqh","slide":15,"bbox":[100,479,10,10]}
+{"kind":"textbox","id":"sh/0jihg32p","slide":15,"text":"Fried side","textPreview":"Fried side","textChars":10,"textLines":1,"bbox":[122,474,213,34]}
+{"kind":"shape","id":"sh/14ryp83a","slide":15,"bbox":[100,521,10,10]}
+{"kind":"textbox","id":"sh/eh0zetkz","slide":15,"text":"Heavy cream sauce","textPreview":"Heavy cream sauce","textChars":17,"textLines":1,"bbox":[122,516,213,34]}
+{"kind":"textbox","id":"sh/zi9gnylk","slide":15,"text":"Possible swap","textPreview":"Possible swap","textChars":13,"textLines":1,"bbox":[466,338,250,24]}
+{"kind":"shape","id":"sh/o72hk321","slide":15,"bbox":[472,395,10,10]}
+{"kind":"textbox","id":"sh/98bit83m","slide":15,"text":"Olive-oil vinaigrette sometimes","textPreview":"Olive-oil vinaigrette sometimes","textChars":31,"textLines":1,"bbox":[494,390,213,34]}
+{"kind":"shape","id":"sh/m5kzidkv","slide":15,"bbox":[472,437,10,10]}
+{"kind":"textbox","id":"sh/n6t0rylg","slide":15,"text":"Beans, fish, tofu, or poultry with vegetables","textPreview":"Beans, fish, tofu, or poultry with vegetables","textChars":45,"textLines":1,"bbox":[494,432,213,34]}
+{"kind":"shape","id":"sh/4byh8j2x","slide":15,"bbox":[472,479,10,10]}
+{"kind":"textbox","id":"sh/pc7yho32","slide":15,"text":"Roasted or sauteed vegetable side","textPreview":"Roasted or sauteed vegetable side","textChars":33,"textLines":1,"bbox":[494,474,213,34]}
+{"kind":"shape","id":"sh/76xknm5k","slide":15,"bbox":[472,521,10,10]}
+{"kind":"textbox","id":"sh/65ojeh4f","slide":15,"text":"Tomato-, broth-, or yogurt-based option","textPreview":"Tomato-, broth-, or yogurt-based option","textChars":39,"textLines":1,"bbox":[494,516,213,34]}
+{"kind":"shape","id":"sh/t8f2pwnq","slide":15,"bbox":[66,742,682,80]}
+{"kind":"textbox","id":"sh/s761grm5","slide":15,"text":"Featured idea","textPreview":"Featured idea","textChars":13,"textLines":1,"bbox":[83,756,648,22]}
+{"kind":"textbox","id":"sh/j2dkj25o","slide":15,"text":"You can keep familiar foods while changing what shows up most often.","textPreview":"You can keep familiar foods while changing what shows up most often.","textChars":68,"textLines":1,"bbox":[83,784,648,28]}
+{"kind":"image","id":"im/s3q1kz65","slide":15,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/l7t0y3","slide":15,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/t8ezy3","slide":16,"title":"Fats Without Fear","textShapes":22}
+{"kind":"textbox","id":"sh/8zq1ovm5","slide":16,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/90j2x03a","slide":16,"text":"Snack swaps","textPreview":"Snack swaps","textChars":11,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/u1sjq54v","slide":16,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/v21kzalg","slide":16,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/w3a1sfm1","slide":16,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/h4j21k3m","slide":16,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/a5ojel4r","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/b6x0nq5c","slide":16,"text":"SNACK SWAPS","textPreview":"SNACK SWAPS","textChars":11,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/b2xkbep0","slide":16,"text":"Snacks are optional","textPreview":"Snacks are optional","textChars":19,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/q1o329of","slide":16,"text":"Not everyone needs snacks. If you use them, keep the pairing practical and satisfying.","textPreview":"Not everyone needs snacks. If you use them, keep the pairing practical and satisfying.","textChars":86,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/doz2donq","slide":16,"bbox":[66,300,318,92]}
+{"kind":"shape","id":"sh/c3ql4j65","slide":16,"bbox":[82,318,18,18]}
+{"kind":"textbox","id":"sh/3yxk7epo","slide":16,"text":"Nuts + fruit","textPreview":"Nuts + fruit","textChars":12,"textLines":1,"bbox":[114,314,254,22]}
+{"kind":"textbox","id":"sh/2xo3y9o3","slide":16,"text":"Portable crunch and sweetness.","textPreview":"Portable crunch and sweetness.","textChars":30,"textLines":1,"bbox":[114,340,254,44]}
+{"kind":"shape","id":"sh/p0f29o7u","slide":16,"bbox":[412,300,318,92]}
+{"kind":"shape","id":"sh/oz6l0j69","slide":16,"bbox":[428,318,18,18]}
+{"kind":"textbox","id":"sh/fudk3ups","slide":16,"text":"Hummus + vegetables","textPreview":"Hummus + vegetables","textChars":19,"textLines":1,"bbox":[460,314,254,22]}
+{"kind":"textbox","id":"sh/et43upo7","slide":16,"text":"Fiber, flavor, and texture.","textPreview":"Fiber, flavor, and texture.","textChars":27,"textLines":1,"bbox":[460,340,254,44]}
+{"kind":"shape","id":"sh/i5436p8z","slide":16,"bbox":[66,414,318,92]}
+{"kind":"shape","id":"sh/j6d4fu9k","slide":16,"bbox":[82,432,18,18]}
+{"kind":"textbox","id":"sh/4rml8zq5","slide":16,"text":"Yogurt + berries","textPreview":"Yogurt + berries","textChars":16,"textLines":1,"bbox":[114,428,254,22]}
+{"kind":"textbox","id":"sh/5svmh4rq","slide":16,"text":"Check saturated fat and added sugar.","textPreview":"Check saturated fat and added sugar.","textChars":36,"textLines":1,"bbox":[114,454,254,44]}
+{"kind":"shape","id":"sh/6t43a98b","slide":16,"bbox":[412,414,318,92]}
+{"kind":"shape","id":"sh/rud4je9g","slide":16,"bbox":[428,432,18,18]}
+{"kind":"textbox","id":"sh/svmlczq1","slide":16,"text":"Roasted chickpeas","textPreview":"Roasted chickpeas","textChars":17,"textLines":1,"bbox":[460,428,254,22]}
+{"kind":"textbox","id":"sh/twfml4rm","slide":16,"text":"Shelf-stable crunch.","textPreview":"Shelf-stable crunch.","textChars":20,"textLines":1,"bbox":[460,454,254,44]}
+{"kind":"shape","id":"sh/exo3e987","slide":16,"bbox":[66,528,318,92]}
+{"kind":"shape","id":"sh/fyx4ne9s","slide":16,"bbox":[82,546,18,18]}
+{"kind":"textbox","id":"sh/psz6d8bu","slide":16,"text":"Popcorn","textPreview":"Popcorn","textChars":7,"textLines":1,"bbox":[114,542,254,22]}
+{"kind":"textbox","id":"sh/orqpk3a9","slide":16,"text":"A crunchy option; notice butter and salt.","textPreview":"A crunchy option; notice butter and salt.","textChars":41,"textLines":1,"bbox":[114,568,254,44]}
+{"kind":"shape","id":"sh/3qhobito","slide":16,"bbox":[412,528,318,92]}
+{"kind":"shape","id":"sh/2p87idsj","slide":16,"bbox":[428,546,18,18]}
+{"kind":"textbox","id":"sh/dgj6hsb6","slide":16,"text":"Tuna + crackers","textPreview":"Tuna + crackers","textChars":15,"textLines":1,"bbox":[460,542,254,22]}
+{"kind":"textbox","id":"sh/cvaponal","slide":16,"text":"Protein with carbohydrate.","textPreview":"Protein with carbohydrate.","textChars":26,"textLines":1,"bbox":[460,568,254,44]}
+{"kind":"shape","id":"sh/buhofit0","slide":16,"bbox":[66,888,684,70]}
+{"kind":"textbox","id":"sh/qt87mdsf","slide":16,"text":"Medication safety","textPreview":"Medication safety","textChars":17,"textLines":1,"bbox":[83,902,650,22]}
+{"kind":"textbox","id":"sh/lkj6lsb2","slide":16,"text":"If you use insulin or medicines that can cause low blood sugar, ask your care team how snacks and activity should be handled.","textPreview":"If you use insulin or medicines that can cause low blood sugar, ask your care team how snacks and activity should be handled.","textChars":125,"textLines":1,"bbox":[83,930,650,18]}
+{"kind":"image","id":"im/2d8fyhgj","slide":16,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/t8ezy3","slide":16,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/6fzdo3","slide":17,"title":"Fats Without Fear","textShapes":16}
+{"kind":"textbox","id":"sh/1ozu1wj6","slide":17,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/0nqt8ril","slide":17,"text":"Budget","textPreview":"Budget","textChars":6,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/rixcvm14","slide":17,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/qhob2h0j","slide":17,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/dkfuxwja","slide":17,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/cj6t4rip","slide":17,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/3edsrm1s","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/2t4byh07","slide":17,"text":"BUDGET","textPreview":"BUDGET","textChars":6,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/g36psb29","slide":17,"text":"Budget-friendly fats count","textPreview":"Budget-friendly fats count","textChars":26,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/14z61gju","slide":17,"text":"Wellness branding is not required for nutritious food. Buy foods you will actually use.","textPreview":"Wellness branding is not required for nutritious food. Buy foods you will actually use.","textChars":87,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/f2xoz614","slide":17,"bbox":[66,588,318,100]}
+{"kind":"shape","id":"sh/sf6p4r2d","slide":17,"bbox":[82,606,18,18]}
+{"kind":"textbox","id":"sh/tgf6xw3y","slide":17,"text":"Often practical","textPreview":"Often practical","textChars":15,"textLines":1,"bbox":[114,602,254,22]}
+{"kind":"textbox","id":"sh/6don21k7","slide":17,"text":"Peanuts, sunflower seeds, canola oil, eggs, canned fish, store-brand nut butter.","textPreview":"Peanuts, sunflower seeds, canola oil, eggs, canned fish, store-brand nut butter.","textChars":80,"textLines":1,"bbox":[114,628,254,52]}
+{"kind":"shape","id":"sh/7exovmls","slide":17,"bbox":[412,588,318,100]}
+{"kind":"shape","id":"sh/cbap0v2h","slide":17,"bbox":[428,606,18,18]}
+{"kind":"textbox","id":"sh/dwj690j2","slide":17,"text":"Reduce waste","textPreview":"Reduce waste","textChars":12,"textLines":1,"bbox":[460,602,254,22]}
+{"kind":"textbox","id":"sh/lsf6t0b6","slide":17,"text":"Frozen and canned options may help.","textPreview":"Frozen and canned options may help.","textChars":35,"textLines":1,"bbox":[460,628,254,52]}
+{"kind":"shape","id":"sh/kr6pkvul","slide":17,"bbox":[66,710,318,100]}
+{"kind":"shape","id":"sh/zqxorqtg","slide":17,"bbox":[82,728,18,18]}
+{"kind":"textbox","id":"sh/yp47ilcv","slide":17,"text":"Compare carefully","textPreview":"Compare carefully","textChars":17,"textLines":1,"bbox":[114,724,254,22]}
+{"kind":"textbox","id":"sh/xov6pgba","slide":17,"text":"Use unit price when possible; do not assume premium means better.","textPreview":"Use unit price when possible; do not assume premium means better.","textChars":65,"textLines":1,"bbox":[114,750,254,52]}
+{"kind":"shape","id":"sh/cnm5gbup","slide":17,"bbox":[412,710,318,100]}
+{"kind":"shape","id":"sh/bmdon6t4","slide":17,"bbox":[428,728,18,18]}
+{"kind":"textbox","id":"sh/al4ne1cj","slide":17,"text":"Store well","textPreview":"Store well","textChars":10,"textLines":1,"bbox":[460,724,254,22]}
+{"kind":"textbox","id":"sh/p0v6lwby","slide":17,"text":"Seal nuts and seeds; refrigerate or freeze when needed.","textPreview":"Seal nuts and seeds; refrigerate or freeze when needed.","textChars":55,"textLines":1,"bbox":[460,750,254,52]}
+{"kind":"image","id":"im/rmdwnqp8","slide":17,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/1wn6dofu","slide":17,"name":"","geometry":"roundRect","alt":"Budget-friendly fat sources including peanuts, seeds, eggs, canned fish, oil, nut butter, and beans","bbox":[66,282,684,260]}
+{"kind":"notes","id":"nt/6fzdo3","slide":17,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/c2umsa","slide":18,"title":"Fats Without Fear","textShapes":20}
+{"kind":"textbox","id":"sh/03u1wful","slide":18,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/1432p0b6","slide":18,"text":"Myths","textPreview":"Myths","textChars":5,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/qdsjqlcj","slide":18,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/re1kzqt4","slide":18,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/sfa1svup","slide":18,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/dgj210ba","slide":18,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/i98jmlcn","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/3a10vqt8","slide":18,"text":"MYTHS","textPreview":"MYTHS","textChars":5,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/nq1svat4","slide":18,"text":"Common fat claims need context","textPreview":"Common fat claims need context","textChars":30,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/2psbm5sj","slide":18,"text":"Nutrition claims can be loud. A calmer answer is usually more useful.","textPreview":"Nutrition claims can be loud. A calmer answer is usually more useful.","textChars":69,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"shape","id":"sh/pc3axkbu","slide":18,"bbox":[66,300,318,92]}
+{"kind":"shape","id":"sh/orutofa9","slide":18,"bbox":[82,318,18,18]}
+{"kind":"textbox","id":"sh/belszut0","slide":18,"text":"Fat-free is always healthier","textPreview":"Fat-free is always healthier","textChars":28,"textLines":1,"bbox":[114,314,254,22]}
+{"kind":"textbox","id":"sh/adcbqpsf","slide":18,"text":"Not always. Added sugar, sodium, portion, and food quality still matter.","textPreview":"Not always. Added sugar, sodium, portion, and food quality still matter.","textChars":72,"textLines":1,"bbox":[114,340,254,44]}
+{"kind":"shape","id":"sh/xg3a1kb6","slide":18,"bbox":[412,300,318,92]}
+{"kind":"shape","id":"sh/cfutsfal","slide":18,"bbox":[428,318,18,18]}
+{"kind":"textbox","id":"sh/rihsnqtw","slide":18,"text":"Keto supports every heart","textPreview":"Keto supports every heart","textChars":25,"textLines":1,"bbox":[460,314,254,22]}
+{"kind":"textbox","id":"sh/qh8relsb","slide":18,"text":"Not automatically. Lab numbers and food sources matter.","textPreview":"Not automatically. Lab numbers and food sources matter.","textChars":55,"textLines":1,"bbox":[460,340,254,44]}
+{"kind":"shape","id":"sh/udgvmtcz","slide":18,"bbox":[66,414,318,92]}
+{"kind":"shape","id":"sh/vepwvydk","slide":18,"bbox":[82,432,18,18]}
+{"kind":"textbox","id":"sh/wfydo3up","slide":18,"text":"Coconut oil is a miracle","textPreview":"Coconut oil is a miracle","textChars":24,"textLines":1,"bbox":[114,428,254,22]}
+{"kind":"textbox","id":"sh/hg7ex8va","slide":18,"text":"No single oil is a cure-all.","textPreview":"No single oil is a cure-all.","textChars":28,"textLines":1,"bbox":[114,454,254,44]}
+{"kind":"shape","id":"sh/m9wvitcn","slide":18,"bbox":[412,414,318,92]}
+{"kind":"shape","id":"sh/7apcred8","slide":18,"bbox":[428,432,18,18]}
+{"kind":"textbox","id":"sh/8bydkjut","slide":18,"text":"Everyone needs omega-3 pills","textPreview":"Everyone needs omega-3 pills","textChars":28,"textLines":1,"bbox":[460,428,254,22]}
+{"kind":"textbox","id":"sh/9c7etove","slide":18,"text":"Food and supplements are different. Ask about safety. [6]","textPreview":"Food and supplements are different. Ask about safety. [6]","textChars":57,"textLines":1,"bbox":[460,454,254,44]}
+{"kind":"shape","id":"sh/y5wve9cr","slide":18,"bbox":[66,528,318,92]}
+{"kind":"shape","id":"sh/z65cnedc","slide":18,"bbox":[82,546,18,18]}
+{"kind":"textbox","id":"sh/10bytcfu","slide":18,"text":"Eating fat equals body fat","textPreview":"Eating fat equals body fat","textChars":26,"textLines":1,"bbox":[114,542,254,22]}
+{"kind":"textbox","id":"sh/0z2h07e9","slide":18,"text":"Body weight is more complex than one nutrient.","textPreview":"Body weight is more complex than one nutrient.","textChars":46,"textLines":1,"bbox":[114,568,254,44]}
+{"kind":"shape","id":"sh/fytgr2xo","slide":18,"bbox":[412,528,318,92]}
+{"kind":"shape","id":"sh/exkfyhw3","slide":18,"bbox":[428,546,18,18]}
+{"kind":"textbox","id":"sh/dwbypcfi","slide":18,"text":"All fats affect cholesterol the same","textPreview":"All fats affect cholesterol the same","textChars":36,"textLines":1,"bbox":[460,542,254,22]}
+{"kind":"textbox","id":"sh/sv2xw7ex","slide":18,"text":"Different fats and replacements matter. [1]","textPreview":"Different fats and replacements matter. [1]","textChars":43,"textLines":1,"bbox":[460,568,254,44]}
+{"kind":"image","id":"im/y1cjm5gb","slide":18,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/c2umsa","slide":18,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/2ocdtc","slide":19,"title":"Fats Without Fear","textShapes":17}
+{"kind":"textbox","id":"sh/adsfuton","slide":19,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/ve1gnyp8","slide":19,"text":"Planner","textPreview":"Planner","textChars":7,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/8raxsj6h","slide":19,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/9sjylo72","slide":19,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/mpsfq9ob","slide":19,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/nq1wjepw","slide":19,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/snex4n6l","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/tonyxs76","slide":19,"text":"PLANNER","textPreview":"PLANNER","textChars":7,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/lobihg7y","slide":19,"text":"Personal fat-swap planner","textPreview":"Personal fat-swap planner","textChars":25,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/0n2h8b6d","slide":19,"text":"Choose one meal where a change feels realistic. Keep it small enough to try and satisfying enough to repeat.","textPreview":"Choose one meal where a change feels realistic. Keep it small enough to try and satisfying enough to repeat.","textChars":108,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"textbox","id":"sh/zmt0fqp8","slide":19,"text":"Meal or eating occasion","textPreview":"Meal or eating occasion","textChars":23,"textLines":1,"bbox":[66,300,205,24]}
+{"kind":"shape","id":"sh/ylkz6lon","slide":19,"bbox":[291,282,456,60]}
+{"kind":"textbox","id":"sh/dkrydg72","slide":19,"text":"What I usually choose","textPreview":"What I usually choose","textChars":21,"textLines":1,"bbox":[66,388,205,24]}
+{"kind":"shape","id":"sh/cjih4b6h","slide":19,"bbox":[291,370,456,60]}
+{"kind":"textbox","id":"sh/by9gb6pw","slide":19,"text":"One realistic change I could try","textPreview":"One realistic change I could try","textChars":32,"textLines":1,"bbox":[66,476,205,24]}
+{"kind":"shape","id":"sh/qx0z21ob","slide":19,"bbox":[291,458,456,60]}
+{"kind":"textbox","id":"sh/xgvip0n6","slide":19,"text":"Cost or availability","textPreview":"Cost or availability","textChars":20,"textLines":1,"bbox":[66,564,205,24]}
+{"kind":"shape","id":"sh/wfmhgv6l","slide":19,"bbox":[291,546,456,60]}
+{"kind":"textbox","id":"sh/gbet83i9","slide":19,"text":"Taste and satisfaction","textPreview":"Taste and satisfaction","textChars":22,"textLines":1,"bbox":[66,652,205,24]}
+{"kind":"shape","id":"sh/1cna18zu","slide":19,"bbox":[291,634,456,60]}
+{"kind":"textbox","id":"sh/e9cb6t03","slide":19,"text":"Use again?","textPreview":"Use again?","textChars":10,"textLines":1,"bbox":[66,740,205,24]}
+{"kind":"shape","id":"sh/fa5szyho","slide":19,"bbox":[291,722,456,60]}
+{"kind":"textbox","id":"sh/s7ut43ix","slide":19,"text":"Notes","textPreview":"Notes","textChars":5,"textLines":1,"bbox":[66,828,205,24]}
+{"kind":"shape","id":"sh/t83ax8zi","slide":19,"bbox":[291,810,456,60]}
+{"kind":"shape","id":"sh/65cb2t07","slide":19,"bbox":[66,912,682,64]}
+{"kind":"textbox","id":"sh/r6lsvyhc","slide":19,"text":"Keep it printable","textPreview":"Keep it printable","textChars":17,"textLines":1,"bbox":[83,926,648,22]}
+{"kind":"textbox","id":"sh/43u90ji1","slide":19,"text":"Use one meal at a time. A useful swap should be realistic for your budget, schedule, taste, and health needs.","textPreview":"Use one meal at a time. A useful swap should be realistic for your budget, schedule, taste, and health needs.","textChars":109,"textLines":1,"bbox":[83,954,648,12]}
+{"kind":"image","id":"im/s7ip8rid","slide":19,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/2ocdtc","slide":19,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/18m5r3","slide":20,"title":"Heart and brain health summary","textShapes":13}
+{"kind":"shape","id":"sh/ulgza5of","slide":20,"bbox":[0,0,816,1056]}
+{"kind":"textbox","id":"sh/gnyhcf6l","slide":20,"text":"Heart and brain health summary","textPreview":"Heart and brain health summary","textChars":30,"textLines":1,"bbox":[66,188,680,72]}
+{"kind":"textbox","id":"sh/3apgnapw","slide":20,"text":"Dietary-fat choices work inside a larger pattern: vegetables, fiber-rich foods, blood pressure care, cholesterol care, glucose care, movement, sleep, tobacco avoidance, and medical guidance. [7,8]","textPreview":"Dietary-fat choices work inside a larger pattern: vegetables, fiber-rich foods, blood pressure care, cholesterol care, glucose care, move...","textChars":196,"textLines":1,"bbox":[70,286,640,72]}
+{"kind":"shape","id":"sh/29gze5or","slide":20,"bbox":[82,416,560,56]}
+{"kind":"textbox","id":"sh/pcripk72","slide":20,"text":"Explore The Mindful Plate","textPreview":"Explore The Mindful Plate","textChars":25,"textLines":1,"bbox":[108,430,250,22]}
+{"kind":"textbox","id":"sh/4byhgf6h","slide":20,"text":"mindfuldiabetes.org/free-guides/","textPreview":"mindfuldiabetes.org/free-guides/","textChars":32,"textLines":1,"bbox":[356,431,250,20]}
+{"kind":"shape","id":"sh/je5gbqps","slide":20,"bbox":[82,508,560,56]}
+{"kind":"textbox","id":"sh/idwf2lo7","slide":20,"text":"Visit Health Tools","textPreview":"Visit Health Tools","textChars":18,"textLines":1,"bbox":[108,522,250,22]}
+{"kind":"textbox","id":"sh/oni18zi5","slide":20,"text":"mindfuldiabetes.org/health-tools/","textPreview":"mindfuldiabetes.org/health-tools/","textChars":33,"textLines":1,"bbox":[356,523,250,20]}
+{"kind":"shape","id":"sh/9ob214zq","slide":20,"bbox":[82,600,560,56]}
+{"kind":"textbox","id":"sh/ml0j6p0z","slide":20,"text":"Try JEIR","textPreview":"Try JEIR","textChars":8,"textLines":1,"bbox":[108,614,250,22]}
+{"kind":"textbox","id":"sh/nm9kzu1k","slide":20,"text":"mindfuldiabetes.org/research/","textPreview":"mindfuldiabetes.org/research/","textChars":29,"textLines":1,"bbox":[356,615,250,20]}
+{"kind":"shape","id":"sh/wb21czi1","slide":20,"bbox":[82,692,560,56]}
+{"kind":"textbox","id":"sh/xcb254zm","slide":20,"text":"Support free education","textPreview":"Support free education","textChars":22,"textLines":1,"bbox":[108,706,250,22]}
+{"kind":"textbox","id":"sh/apkja90b","slide":20,"text":"mindfuldiabetes.org/donation/","textPreview":"mindfuldiabetes.org/donation/","textChars":29,"textLines":1,"bbox":[356,707,250,20]}
+{"kind":"shape","id":"sh/bqtk3ehw","slide":20,"bbox":[82,800,560,90]}
+{"kind":"textbox","id":"sh/cvy10fix","slide":20,"text":"Medical disclaimer","textPreview":"Medical disclaimer","textChars":18,"textLines":1,"bbox":[99,814,526,22]}
+{"kind":"textbox","id":"sh/dg7i9kji","slide":20,"text":"This guide is general education, not medical advice, diagnosis, or treatment. Do not change medication, insulin, cholesterol treatment, or supplements based on this guide.","textPreview":"This guide is general education, not medical advice, diagnosis, or treatment. Do not change medication, insulin, cholesterol treatment, o...","textChars":171,"textLines":1,"bbox":[99,842,526,38]}
+{"kind":"textbox","id":"sh/t0zqhc7a","slide":20,"text":"Mindful Diabetes Inc. | 501(c)(3) nonprofit | Free to share for education","textPreview":"Mindful Diabetes Inc. | 501(c)(3) nonprofit | Free to share for education","textChars":73,"textLines":1,"bbox":[82,948,600,24]}
+{"kind":"image","id":"im/writ0vip","slide":20,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[66,70,58,62]}
+{"kind":"notes","id":"nt/18m5r3","slide":20,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
+{"kind":"slide","id":"sl/cnnd9o","slide":21,"title":"Fats Without Fear","textShapes":14}
+{"kind":"textbox","id":"sh/cnqpkrqd","slide":21,"text":"Fats Without Fear","textPreview":"Fats Without Fear","textChars":17,"textLines":1,"bbox":[92,35,210,18]}
+{"kind":"textbox","id":"sh/dozqtw7y","slide":21,"text":"References and safety","textPreview":"References and safety","textChars":21,"textLines":1,"bbox":[92,51,260,15]}
+{"kind":"shape","id":"sh/ep87m183","slide":21,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/zqh8v6po","slide":21,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/0rqpobq9","slide":21,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/1szqxw7u","slide":21,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/ut47ax8z","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/fudoj2pk","slide":21,"text":"REFERENCES AND SAFETY","textPreview":"REFERENCES AND SAFETY","textChars":21,"textLines":1,"bbox":[66,83,320,22]}
+{"kind":"textbox","id":"sh/zilobqp4","slide":21,"text":"References and medical disclaimer","textPreview":"References and medical disclaimer","textChars":33,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/ehc7iloj","slide":21,"text":"Every numbered citation in this guide appears here.","textPreview":"Every numbered citation in this guide appears here.","textChars":51,"textLines":1,"bbox":[66,196,670,60]}
+{"kind":"textbox","id":"sh/1k36dg7u","slide":21,"text":"Medical disclaimer","textPreview":"Medical disclaimer","textChars":18,"textLines":1,"bbox":[66,226,680,22]}
+{"kind":"textbox","id":"sh/0jupkb6p","slide":21,"text":"This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do not change insulin, diabetes medication, cholesterol medication, glucose targets, pregnancy care, kidney-disease care, or any prescribed medical diet because of this guide. For urgent symptoms, seek medical care.","textPreview":"This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do...","textChars":350,"textLines":1,"bbox":[66,252,680,82]}
+{"kind":"textbox","id":"sh/relo76ps","slide":21,"text":"References","textPreview":"References","textChars":10,"textLines":1,"bbox":[66,368,680,24]}
+{"kind":"textbox","id":"sh/qdcne1o7","slide":21,"text":"1. American Heart Association. The Facts on Fats. AHA; 2025. https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n2. American Heart Association. Fats in Foods. AHA; 2026. https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n3. U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. FDA; 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n4. U.S. Food and Drug Administration. Daily Value on the Nutrition and Supplement Facts Labels. FDA; 2024. https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n5. U.S. Food and Drug Administration and U.S. Environmental Protection Agency. Advice About Eating Fish. FDA/EPA; 2024. https://www.fda.gov/food/consumers/advice-about-eating-fish\n6. NIH Office of Dietary Supplements. Omega-3 Fatty Acids: Fact Sheet for Consumers. NIH ODS; 2022. https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n7. National Institute on Aging. What Do We Know About Diet and Prevention of Alzheimer's Disease?. NIA; 2023. https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n8. American Heart Association. Life's Essential 8. AHA; 2026. https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8","textPreview":"1. American Heart Association. The Facts on Fats. AHA; 2025. https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-fa...","textChars":1392,"textLines":8,"bbox":[66,400,680,420]}
+{"kind":"shape","id":"sh/dg369g7y","slide":21,"bbox":[66,856,682,78]}
+{"kind":"textbox","id":"sh/cfu5gb6d","slide":21,"text":"Publication information","textPreview":"Publication information","textChars":23,"textLines":1,"bbox":[83,870,648,22]}
+{"kind":"textbox","id":"sh/3q1o36pw","slide":21,"text":"Published July 30, 2026 | Next scheduled review July 2027 | Mindful Diabetes Inc., 501(c)(3) nonprofit health education.","textPreview":"Published July 30, 2026 | Next scheduled review July 2027 | Mindful Diabetes Inc., 501(c)(3) nonprofit health education.","textChars":120,"textLines":1,"bbox":[83,898,648,26]}
+{"kind":"image","id":"im/ihwbm9wr","slide":21,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/cnnd9o","slide":21,"text":"[Sources]\n- [1] American Heart Association, The Facts on Fats: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n- [2] American Heart Association, Fats in Foods: https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods\n- [3] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [4] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [5] U.S. Food and Drug Administration and U.S. Environmental Protection Agency, Advice About Eating Fish: https://www.fda.gov/food/consumers/advice-about-eating-fish\n- [6] NIH Office of Dietary Supplements, Omega-3 Fatty Acids: Fact Sheet for Consumers: https://ods.od.nih.gov/factsheets/Omega3FattyAcids-Consumer/\n- [7] National Institute on Aging, What Do We Know About Diet and Prevention of Alzheimer's Disease?: https://www.nia.nih.gov/health/alzheimers-and-dementia/what-do-we-know-about-diet-and-prevention-alzheimers-disease\n- [8] American Heart Association, Life's Essential 8: https://www.heart.org/en/healthy-living/healthy-lifestyle/lifes-essential-8\n"}
