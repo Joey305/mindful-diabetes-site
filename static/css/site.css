@@ -258,7 +258,11 @@
 .admin-experiment-grid,
 .admin-health-score-grid,
 .admin-benchmark-grid,
-.admin-purpose-grid {
+.admin-purpose-grid,
+.admin-scorecard-grid,
+.admin-opportunity-grid,
+.admin-warning-grid,
+.admin-board-grid {
   display: grid;
   gap: 1rem;
 }
@@ -284,11 +288,25 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.admin-scorecard-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.admin-opportunity-grid,
+.admin-warning-grid,
+.admin-board-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .admin-action-card,
 .admin-goal-card,
 .admin-experiment-card,
 .admin-health-score,
-.admin-benchmark-grid article {
+.admin-benchmark-grid article,
+.admin-scorecard,
+.admin-opportunity-card,
+.admin-warning-card,
+.admin-board-grid article {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -458,6 +476,247 @@
   background: var(--soft);
 }
 
+.admin-scorecard,
+.admin-opportunity-card,
+.admin-warning-card,
+.admin-board-grid article {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.admin-scorecard span,
+.admin-opportunity-card span,
+.admin-board-grid span {
+  color: var(--muted);
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-scorecard strong,
+.admin-opportunity-card h3,
+.admin-warning-card h3,
+.admin-board-grid strong {
+  color: var(--primary);
+  font-family: "Lora", serif;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.admin-scorecard small,
+.admin-scorecard p,
+.admin-opportunity-card p,
+.admin-warning-card p,
+.admin-board-grid p {
+  color: var(--body);
+  margin: 0;
+}
+
+.admin-scorecard b,
+.admin-opportunity-card b,
+.admin-warning-card strong {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.admin-scorecard--good,
+.admin-warning-card--good {
+  background: var(--miami-green-tint);
+  border-color: var(--tint-line-green);
+}
+
+.admin-scorecard--watch,
+.admin-opportunity-card--medium,
+.admin-warning-card--watch {
+  background: #fff8ec;
+  border-color: rgba(240, 114, 57, 0.24);
+}
+
+.admin-scorecard--low,
+.admin-opportunity-card--low,
+.admin-warning-card--low {
+  background: var(--soft);
+}
+
+.admin-opportunity-card--high {
+  border-left: 5px solid var(--secondary);
+}
+
+.admin-opportunity-card a {
+  color: var(--miami-green);
+  font-weight: 900;
+}
+
+.admin-report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.admin-report-actions a,
+.admin-report-actions button {
+  background: var(--miami-green);
+  border: 1px solid var(--miami-green);
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  padding: 0.65rem 0.85rem;
+  text-decoration: none;
+}
+
+.admin-funnel {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.admin-funnel-step {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.8rem;
+}
+
+.admin-funnel-step > div:first-child {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+}
+
+.admin-funnel-step strong {
+  color: var(--primary);
+}
+
+.admin-funnel-step span,
+.admin-funnel-step small {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.admin-funnel-bar {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  height: 0.8rem;
+  overflow: hidden;
+}
+
+.admin-funnel-bar span {
+  background: linear-gradient(90deg, var(--miami-green), var(--secondary));
+  display: block;
+  height: 100%;
+}
+
+.admin-bar-chart {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.admin-bar-row {
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: minmax(8rem, 1.3fr) minmax(8rem, 2fr) auto;
+}
+
+.admin-bar-row span {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.admin-bar-row div {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  height: 0.7rem;
+  overflow: hidden;
+}
+
+.admin-bar-row i {
+  background: var(--miami-green);
+  display: block;
+  height: 100%;
+}
+
+.admin-bar-row strong {
+  color: var(--primary);
+  font-family: "Lato", sans-serif;
+}
+
+.admin-donut-layout {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 8rem minmax(0, 1fr);
+}
+
+.admin-donut {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+}
+
+.admin-donut::after {
+  background: #fff;
+  border-radius: 50%;
+  content: "";
+  inset: 24%;
+  position: absolute;
+}
+
+.admin-donut-list {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-donut-list li {
+  align-items: center;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: space-between;
+}
+
+.admin-donut-list span {
+  align-items: center;
+  color: var(--primary);
+  display: inline-flex;
+  gap: 0.4rem;
+  font-weight: 900;
+}
+
+.admin-donut-list i {
+  border-radius: 999px;
+  display: inline-block;
+  height: 0.7rem;
+  width: 0.7rem;
+}
+
+.admin-donut-list strong {
+  color: var(--muted);
+  font-family: "Lato", sans-serif;
+}
+
+.admin-resource-trend {
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 0.45rem;
+  grid-auto-flow: column;
+  min-height: 10rem;
+  overflow-x: auto;
+  padding: 1rem 0 1.8rem;
+}
+
 .admin-health-score strong,
 .admin-benchmark-grid strong {
   color: var(--primary);
@@ -494,7 +753,11 @@
   .admin-experiment-grid,
   .admin-health-score-grid,
   .admin-benchmark-grid,
-  .admin-purpose-grid {
+  .admin-purpose-grid,
+  .admin-scorecard-grid,
+  .admin-opportunity-grid,
+  .admin-warning-grid,
+  .admin-board-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -508,9 +771,46 @@
   .admin-health-score-grid,
   .admin-benchmark-grid,
   .admin-purpose-grid,
+  .admin-scorecard-grid,
+  .admin-opportunity-grid,
+  .admin-warning-grid,
+  .admin-board-grid,
   .admin-insight-list--brief,
   .admin-filter-form--campaign {
     grid-template-columns: 1fr;
+  }
+
+  .admin-bar-row,
+  .admin-donut-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .admin-print-hide,
+  .admin-analytics-tabs,
+  .admin-action-row,
+  .admin-report-actions {
+    display: none !important;
+  }
+
+  .admin-page {
+    background: #ffffff;
+  }
+
+  .admin-panel,
+  .admin-scorecard,
+  .admin-opportunity-card,
+  .admin-board-grid article,
+  .admin-mini-grid article {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .admin-dashboard {
+    padding: 0;
   }
 }
 

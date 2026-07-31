@@ -19,6 +19,23 @@ DEFAULT_DB_PATH = PROJECT_ROOT / "MDinc" / "mdinc_analytics.sqlite3"
 MAX_PAYLOAD_BYTES = 32_000
 MAX_BATCH_SIZE = 20
 SCHEMA_VERSION = 1
+EVENT_NAME_ALIASES = {
+    "outbound_click": "outbound_link_click",
+    "guide_card_impression": "resource_card_view",
+    "guide_card_click": "resource_detail_view",
+    "guide_detail_view": "resource_detail_view",
+    "pdf_open": "resource_pdf_view",
+    "pdf_download": "resource_pdf_download",
+    "guide_share_click": "resource_share_click",
+    "related_guide_click": "resource_related_link_click",
+    "donation_button_click": "donation_cta_click",
+    "donation_complete": "donation_completed",
+    "newsletter_signup_submit": "newsletter_signup",
+    "newsletter_signup_success": "newsletter_signup",
+    "search_submitted": "site_search",
+    "search_no_results": "site_search",
+    "health_tool_outbound_click": "health_tool_click",
+}
 
 VALID_EVENT_NAMES = {
     "page_view",
@@ -49,6 +66,11 @@ VALID_EVENT_NAMES = {
     "sponsor_click",
     "event_registration_click",
     "volunteer_cta_click",
+    "session_start",
+    "donation_page_view",
+    "newsletter_signup_start",
+    "newsletter_signup_error",
+    "health_tool_view",
 }
 
 EVENT_CATEGORIES = {
@@ -80,6 +102,11 @@ EVENT_CATEGORIES = {
     "sponsor_click": "sponsor",
     "event_registration_click": "event",
     "volunteer_cta_click": "volunteer",
+    "session_start": "content",
+    "donation_page_view": "donation",
+    "newsletter_signup_start": "newsletter",
+    "newsletter_signup_error": "newsletter",
+    "health_tool_view": "health_tool",
 }
 
 ALLOWED_METADATA_KEYS = {
@@ -103,6 +130,7 @@ ALLOWED_METADATA_KEYS = {
     "related_article",
     "resource_id",
     "resource_type",
+    "guide_id",
     "guide_title",
     "guide_slug",
     "guide_category",
@@ -405,6 +433,7 @@ def normalize_event(payload: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(payload, dict):
         raise ValidationError("Each analytics event must be an object.")
     event_name = clean_string(payload.get("event_name"), "event_name", required=True)
+    event_name = EVENT_NAME_ALIASES.get(event_name, event_name)
     if event_name not in VALID_EVENT_NAMES:
         raise ValidationError("Unknown analytics event name.")
     metadata = payload.get("metadata") or {}
@@ -528,6 +557,11 @@ def filters_from_args(args) -> dict[str, str]:
         "campaign",
         "environment",
         "content_id",
+        "source",
+        "medium",
+        "guide_slug",
+        "guide_id",
+        "share_platform",
     }
     return {key: args.get(key, "").strip() for key in keys if args.get(key, "").strip()}
 
@@ -535,8 +569,16 @@ def filters_from_args(args) -> dict[str, str]:
 def where_clause(start: datetime, end: datetime, filters: dict[str, str]) -> tuple[str, list[Any]]:
     clauses = ["occurred_at >= ?", "occurred_at < ?", "COALESCE(page_path, '') NOT LIKE '/admin%'", "COALESCE(page_path, '') NOT LIKE '/analytics%'", "COALESCE(page_path, '') NOT LIKE '/static%'"]
     params = [to_iso(start), to_iso(end)]
+    metadata_filters = {
+        "guide_slug": "$.guide_slug",
+        "guide_id": "$.guide_id",
+        "share_platform": "$.share_platform",
+    }
     for key in sorted(filters):
-        clauses.append(f"{key} = ?")
+        if key in metadata_filters:
+            clauses.append(f"json_extract(metadata_json, '{metadata_filters[key]}') = ?")
+        else:
+            clauses.append(f"{key} = ?")
         params.append(filters[key])
     return "WHERE " + " AND ".join(clauses), params
 
@@ -579,6 +621,10 @@ def period_summary(start: datetime, end: datetime, filters: dict[str, str]) -> d
         "resource_newsletter_clicks": count_events(start, end, filters, event_name="resource_newsletter_click"),
         "resource_newsletter_submits": count_events(start, end, filters, event_name="resource_newsletter_submit"),
         "resource_donation_clicks": count_events(start, end, filters, event_name="resource_donation_click"),
+        "newsletter_signup_starts": count_events(start, end, filters, event_name="newsletter_signup_start"),
+        "newsletter_signup_errors": count_events(start, end, filters, event_name="newsletter_signup_error"),
+        "donation_page_views": count_events(start, end, filters, event_name="donation_page_view"),
+        "health_tool_views": count_events(start, end, filters, event_name="health_tool_view"),
     }
     return {
         "totals": totals,
@@ -663,7 +709,9 @@ def content_table(start, end, filters) -> list[dict[str, Any]]:
                    COUNT(CASE WHEN event_name = 'donation_cta_click' THEN 1 END) AS donation_clicks,
                    COUNT(CASE WHEN event_name = 'paypal_click' THEN 1 END) AS paypal_clicks,
                    COUNT(CASE WHEN event_name = 'health_tool_click' THEN 1 END) AS tool_clicks,
-                   COUNT(CASE WHEN event_name = 'newsletter_signup' THEN 1 END) AS newsletter_signups
+                   COUNT(CASE WHEN event_name = 'newsletter_signup' THEN 1 END) AS newsletter_signups,
+                   COUNT(CASE WHEN event_name IN ('resource_detail_view', 'resource_pdf_view', 'resource_pdf_download', 'resource_share_click') THEN 1 END) AS guide_actions,
+                   COUNT(CASE WHEN event_name IN ('donation_cta_click', 'paypal_click', 'health_tool_click', 'newsletter_signup', 'resource_pdf_download', 'resource_share_click', 'search_result_click') THEN 1 END) AS meaningful_actions
             FROM analytics_events
             {where}
             GROUP BY page
@@ -682,10 +730,17 @@ def daily_trend(start, end, filters) -> list[dict[str, Any]]:
             f"""
             SELECT substr(occurred_at, 1, 10) AS day,
                    COUNT(CASE WHEN event_name = 'page_view' THEN 1 END) AS page_views,
+                   COUNT(DISTINCT NULLIF(anonymous_session_id, '')) AS sessions,
                    COUNT(CASE WHEN event_name = 'donation_cta_click' THEN 1 END) AS donation_clicks,
                    COUNT(CASE WHEN event_name = 'paypal_click' THEN 1 END) AS paypal_clicks,
                    COUNT(CASE WHEN event_name = 'health_tool_click' THEN 1 END) AS tool_clicks,
-                   COUNT(CASE WHEN event_name = 'newsletter_signup' THEN 1 END) AS newsletter_signups
+                   COUNT(CASE WHEN event_name = 'newsletter_signup' THEN 1 END) AS newsletter_signups,
+                   COUNT(CASE WHEN event_name = 'site_search' THEN 1 END) AS searches,
+                   COUNT(CASE WHEN event_name = 'search_result_click' THEN 1 END) AS search_clicks,
+                   COUNT(CASE WHEN event_name = 'resource_detail_view' THEN 1 END) AS guide_detail_views,
+                   COUNT(CASE WHEN event_name = 'resource_pdf_view' THEN 1 END) AS pdf_views,
+                   COUNT(CASE WHEN event_name = 'resource_pdf_download' THEN 1 END) AS pdf_downloads,
+                   COUNT(CASE WHEN event_name = 'resource_share_click' THEN 1 END) AS guide_shares
             FROM analytics_events
             {where}
             GROUP BY day
@@ -833,7 +888,15 @@ def campaign_performance(start, end, filters) -> list[dict[str, Any]]:
                    MAX(medium) AS medium,
                    COUNT(CASE WHEN event_name = 'page_view' THEN 1 END) AS page_views,
                    COUNT(DISTINCT CASE WHEN event_name = 'page_view' THEN anonymous_session_id END) AS sessions,
-                   COUNT(CASE WHEN event_name IN ('newsletter_signup', 'donation_cta_click', 'paypal_click', 'health_tool_click', 'content_cta_click', 'volunteer_cta_click') THEN 1 END) AS actions
+                   COUNT(CASE WHEN event_name = 'resource_detail_view' THEN 1 END) AS guide_detail_views,
+                   COUNT(CASE WHEN event_name = 'resource_pdf_view' THEN 1 END) AS pdf_views,
+                   COUNT(CASE WHEN event_name = 'resource_pdf_download' THEN 1 END) AS pdf_downloads,
+                   COUNT(CASE WHEN event_name = 'resource_share_click' THEN 1 END) AS guide_shares,
+                   COUNT(CASE WHEN event_name = 'newsletter_signup' THEN 1 END) AS newsletter_signups,
+                   COUNT(CASE WHEN event_name = 'donation_cta_click' THEN 1 END) AS donation_clicks,
+                   COUNT(CASE WHEN event_name = 'paypal_click' THEN 1 END) AS paypal_clicks,
+                   COUNT(CASE WHEN event_name = 'health_tool_click' THEN 1 END) AS health_tool_clicks,
+                   COUNT(CASE WHEN event_name IN ('newsletter_signup', 'donation_cta_click', 'paypal_click', 'health_tool_click', 'content_cta_click', 'volunteer_cta_click', 'resource_pdf_download', 'resource_share_click', 'search_result_click') THEN 1 END) AS actions
             FROM analytics_events
             {where} AND campaign != ''
             GROUP BY campaign

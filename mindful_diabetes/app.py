@@ -1,3 +1,5 @@
+import csv
+import io
 import json
 import html as html_lib
 import hmac
@@ -889,6 +891,52 @@ def create_app(test_config=None):
             "Content-Type": "text/csv; charset=utf-8",
             "Content-Disposition": f"attachment; filename={filename}",
         }
+
+    @app.get("/admin/analytics/export/<kind>.csv")
+    @admin_required
+    def admin_analytics_named_export(kind):
+        dashboard = build_admin_dashboard(app.config, request.args)
+        body = dashboard_csv_export(kind, dashboard)
+        filename = f"mindful-diabetes-{clean_campaign_value(kind)}-{dashboard['start']}-to-{dashboard['end']}.csv"
+        return body, {
+            "Content-Type": "text/csv; charset=utf-8",
+            "Content-Disposition": f"attachment; filename={filename}",
+        }
+
+    @app.get("/admin/analytics/report/")
+    @admin_required
+    def admin_analytics_report():
+        dashboard = build_admin_dashboard(app.config, request.args)
+        return render_template("admin/analytics_report.html", dashboard=dashboard, admin_email=app.config["ADMIN_EMAIL"])
+
+    @app.get("/admin/analytics/board/")
+    @admin_required
+    def admin_analytics_board_report():
+        dashboard = build_admin_dashboard(app.config, request.args)
+        return render_template("admin/analytics_board.html", dashboard=dashboard, admin_email=app.config["ADMIN_EMAIL"])
+
+    @app.get("/admin/analytics/guides/<guide_slug>/")
+    @admin_required
+    def admin_analytics_guide_report(guide_slug):
+        guide = free_guide_definition_by_slug(guide_slug)
+        if not guide:
+            abort(404)
+        args = request.args.copy()
+        start, end, range_name = analytics.date_range_from_args(args)
+        filters = analytics.filters_from_args(args)
+        filters["guide_slug"] = guide_slug
+        filters["environment"] = analytics.analytics_environment(app.config)
+        summary = analytics.analytics_store(app.config).query_summary(start, end, filters)
+        report = dashboard_guide_report(guide, summary)
+        return render_template(
+            "admin/analytics_guide.html",
+            guide=guide,
+            report=report,
+            summary=summary,
+            range_name=range_name,
+            start=start.date().isoformat(),
+            end=(end - timedelta(days=1)).date().isoformat(),
+        )
 
     @app.get("/admin/analytics/page/")
     @admin_required
@@ -1852,6 +1900,14 @@ def build_admin_dashboard(config, args=None):
     recommended_actions = dashboard_recommended_actions(summary, missed_opportunities, health_scores)
     search_insights = dashboard_search_insights(summary)
     resource_insights = dashboard_resource_insights(summary)
+    funnels = dashboard_funnels(summary)
+    opportunities = dashboard_opportunities(summary, missed_opportunities, resource_insights, search_insights)
+    growth_scorecards = dashboard_growth_scorecards(summary, opportunities)
+    campaign_insights = dashboard_campaign_insights(summary)
+    content_intelligence = dashboard_content_intelligence(summary, resource_insights)
+    anomaly_alerts = dashboard_anomaly_alerts(summary)
+    monthly_brief = dashboard_monthly_brief(summary, opportunities, resource_insights, campaign_insights)
+    chart_blocks = dashboard_chart_blocks(summary)
     growth_experiments = dashboard_growth_experiments(summary, missed_opportunities, growth_goals, search_insights)
     weekly_brief = dashboard_weekly_brief(summary, growth_goals, growth_experiments, search_insights, resource_insights)
     stats = [
@@ -1882,6 +1938,15 @@ def build_admin_dashboard(config, args=None):
         "growth_experiments": growth_experiments,
         "search_insights": search_insights,
         "resource_insights": resource_insights,
+        "funnels": funnels,
+        "opportunities": opportunities,
+        "growth_scorecards": growth_scorecards,
+        "campaign_insights": campaign_insights,
+        "content_intelligence": content_intelligence,
+        "anomaly_alerts": anomaly_alerts,
+        "monthly_brief": monthly_brief,
+        "chart_blocks": chart_blocks,
+        "guide_options": [item for item in FREE_GUIDE_DEFINITIONS],
         "weekly_brief": weekly_brief,
         "campaign_builder": dashboard_campaign_builder(config, args),
         "missed_opportunities": missed_opportunities,
@@ -1889,6 +1954,10 @@ def build_admin_dashboard(config, args=None):
         "device_insights": dashboard_device_insights(summary),
         "benchmarks": dashboard_benchmarks(totals, page_views),
         "trend_max": dashboard_trend_max(summary.get("daily_trend", [])),
+        "resource_trend_max": dashboard_resource_trend_max(summary.get("daily_trend", [])),
+        "report_links": dashboard_report_links(args),
+        "metric_definitions": dashboard_metric_definitions(),
+        "board_update": dashboard_board_update(summary, opportunities, resource_insights, campaign_insights),
         "stats": stats,
         "recent_events": recent["events"],
         "top_paths": [{"path": item["label"], "count": item["count"]} for item in summary.get("top_pages", [])],
@@ -1907,10 +1976,584 @@ def dashboard_stat(label, value, summary, key, help_text):
     return {
         "label": label,
         "value": value,
+        "previous": summary.get("previous", {}).get(key, 0),
         "change": comparison.get("label", "No previous activity"),
         "direction": comparison.get("direction", "flat"),
         "help": help_text,
     }
+
+
+def dashboard_funnels(summary):
+    totals = summary.get("totals", {})
+    return {
+        "free_guides": build_funnel(
+            "Free Guides funnel",
+            [
+                ("Guide cards seen", totals.get("resource_card_views", 0), "Trackable"),
+                ("Guide detail viewed", totals.get("resource_detail_views", 0), "Trackable"),
+                ("PDF opened", totals.get("resource_pdf_views", 0), "Trackable"),
+                ("PDF downloaded", totals.get("resource_pdf_downloads", 0), "Trackable"),
+                ("Guide shared", totals.get("resource_share_clicks", 0), "Trackable"),
+            ],
+            "Shows whether people move from seeing a guide to using and sharing it.",
+        ),
+        "donations": build_funnel(
+            "Donation intent funnel",
+            [
+                ("Donation page viewed", totals.get("donation_page_views", 0), "Tracked when donation page view events are available"),
+                ("Support button clicked", totals.get("donation_cta_clicks", 0), "Trackable"),
+                ("PayPal opened", totals.get("paypal_clicks", 0), "Trackable"),
+                ("Donation completed", totals.get("confirmed_donations", 0), "Unavailable unless PayPal confirmation is connected"),
+            ],
+            "PayPal opens are interest signals, not confirmed gifts.",
+        ),
+        "newsletter": build_funnel(
+            "Newsletter funnel",
+            [
+                ("Form viewed", totals.get("newsletter_views", 0), "Trackable"),
+                ("Signup started", totals.get("newsletter_interactions", 0) or totals.get("newsletter_signup_starts", 0), "Trackable"),
+                ("Signup succeeded", totals.get("newsletter_signups", 0), "Trackable"),
+                ("Signup error", totals.get("newsletter_signup_errors", 0), "Tracked only when provider errors are reported"),
+            ],
+            "Shows whether visible forms are turning readers into repeat visitors.",
+        ),
+        "health_tools": build_funnel(
+            "Health Tools funnel",
+            [
+                ("Tool page viewed", totals.get("health_tool_views", 0), "Tracked when tool-view events are available"),
+                ("Tool clicked", totals.get("health_tool_clicks", 0), "Trackable"),
+                ("Outbound destination opened", totals.get("health_tool_clicks", 0), "Same signal for now"),
+            ],
+            "Shows whether readers move from information to a practical tool.",
+        ),
+        "search": build_funnel(
+            "Search usefulness funnel",
+            [
+                ("Search submitted", totals.get("site_searches", 0), "Trackable"),
+                ("Result clicked", totals.get("search_result_clicks", 0), "Trackable"),
+                ("No-result search", sum(int(row.get("no_results") or 0) for row in summary.get("search_no_results", [])), "Trackable"),
+            ],
+            "A useful search helps people find content and exposes topics the site may be missing.",
+        ),
+    }
+
+
+def build_funnel(title, raw_steps, note):
+    steps = []
+    first_count = int(raw_steps[0][1] or 0) if raw_steps else 0
+    previous_count = None
+    for label, count, availability in raw_steps:
+        count = int(count or 0)
+        if previous_count is None:
+            conversion = None
+            dropoff = 0
+        else:
+            conversion = analytics.numeric_rate(count, previous_count)
+            dropoff = max(0, previous_count - count)
+        steps.append(
+            {
+                "label": label,
+                "count": count,
+                "availability": availability,
+                "conversion": analytics.percent_label(conversion) if conversion is not None else "Start",
+                "overall": analytics.percent_label(analytics.numeric_rate(count, first_count)) if first_count else "No starting activity",
+                "dropoff": dropoff,
+                "width": max(4, round((count / max(first_count, 1)) * 100, 1)) if count else 4,
+            }
+        )
+        previous_count = count
+    return {"title": title, "steps": steps, "note": note, "finding": funnel_finding(title, steps)}
+
+
+def funnel_finding(title, steps):
+    if not steps or not any(step["count"] for step in steps):
+        return "More activity is needed before this funnel can say anything useful."
+    if "Free Guides" in title:
+        seen = steps[0]["count"]
+        opened = steps[2]["count"] if len(steps) > 2 else 0
+        downloaded = steps[3]["count"] if len(steps) > 3 else 0
+        shared = steps[4]["count"] if len(steps) > 4 else 0
+        if seen and not opened:
+            return "Many visitors see guide cards, but they are not opening the PDFs yet."
+        if opened and not downloaded:
+            return "People are opening PDFs, but download clicks are weak."
+        if downloaded and not shared:
+            return "Downloads are happening, but sharing is still low."
+    if "Search" in title and steps[-1]["count"]:
+        return "Some searches are not finding useful results, which may reveal content gaps."
+    return "The funnel is collecting measurable signals for this period."
+
+
+def dashboard_opportunities(summary, missed_opportunities, resource_insights, search_insights):
+    opportunities = []
+    for row in missed_opportunities[:4]:
+        opportunities.append(
+            opportunity_item(
+                f"Traffic without action: {row['title']}",
+                f"{row['views']} views; missing {row['missing']}",
+                "This page is attracting readers but not moving them toward a useful next step.",
+                row["recommendation"],
+                "High" if row["views"] >= 10 else "Medium",
+                confidence_label(row["views"]),
+                dashboard_url("admin_analytics_page_report", page_path=row["page"]) if row.get("page") else "",
+            )
+        )
+    guide_rows = resource_insights.get("top_guides", [])
+    average_download_rate = average_rate([row.get("download_rate") for row in guide_rows])
+    for row in guide_rows:
+        pdf_views = int(row.get("pdf_views") or 0)
+        downloads = int(row.get("downloads") or 0)
+        shares = int(row.get("shares") or 0)
+        rate = row.get("download_rate")
+        if pdf_views >= 5 and downloads < max(1, pdf_views * 0.2):
+            opportunities.append(
+                opportunity_item(
+                    f"Opened but not downloaded: {row['title']}",
+                    f"{pdf_views} PDF opens; {downloads} downloads",
+                    "Readers may be interested, but the download action is not convincing enough.",
+                    "Move the download button higher and make the button text more direct.",
+                    "High" if pdf_views >= 20 else "Medium",
+                    confidence_label(pdf_views),
+                    dashboard_url("admin_analytics_guide_report", guide_slug=row["slug"]),
+                )
+            )
+        elif downloads >= 3 and shares == 0:
+            opportunities.append(
+                opportunity_item(
+                    f"Downloaded but not shared: {row['title']}",
+                    f"{downloads} downloads; 0 shares",
+                    "The guide may be useful, but visitors are not being prompted to pass it along.",
+                    "Add a short share prompt near the download confirmation and sidebar buttons.",
+                    "Medium",
+                    confidence_label(downloads),
+                    dashboard_url("admin_analytics_guide_report", guide_slug=row["slug"]),
+                )
+            )
+        elif rate is not None and average_download_rate is not None and rate > average_download_rate and int(row.get("card_views") or 0) < 10:
+            opportunities.append(
+                opportunity_item(
+                    f"Promote a strong guide: {row['title']}",
+                    f"{row.get('download_rate_label')} download rate",
+                    "This guide converts well when people find it, but visibility is still limited.",
+                    "Add this guide to relevant articles and upcoming campaign links.",
+                    "Low",
+                    confidence_label(pdf_views + downloads),
+                    dashboard_url("admin_analytics_guide_report", guide_slug=row["slug"]),
+                )
+            )
+    for row in search_insights.get("no_result_queries", [])[:3]:
+        count = int(row.get("no_results") or row.get("count") or 0)
+        if count:
+            opportunities.append(
+                opportunity_item(
+                    f"Search gap: {row['label']}",
+                    f"{count} no-result searches",
+                    "People are asking the site for this topic and may not be finding a clear answer.",
+                    f"Create or update content that directly answers '{row['label']}'.",
+                    "High" if count >= 10 else "Medium",
+                    confidence_label(count),
+                    dashboard_url("admin_analytics", _anchor="search"),
+                )
+            )
+    for campaign in summary.get("campaign_performance", [])[:5]:
+        views = int(campaign.get("page_views") or 0)
+        actions = int(campaign.get("actions") or 0)
+        if views >= 5 and actions == 0:
+            opportunities.append(
+                opportunity_item(
+                    f"Campaign traffic without action: {campaign['label']}",
+                    f"{views} visits; 0 meaningful actions",
+                    "The link is bringing people in, but the landing page is not creating useful next steps.",
+                    "Review the landing page CTA and make the campaign promise match the page.",
+                    "Medium",
+                    confidence_label(views),
+                    dashboard_url("admin_analytics", _anchor="campaigns"),
+                )
+            )
+    if not opportunities:
+        opportunities.append(
+            opportunity_item(
+                "Keep building the baseline",
+                "No urgent missed opportunity yet",
+                "The dashboard needs more visitor behavior before it can rank opportunities confidently.",
+                "Review again after the next email, social post, or partner push.",
+                "Low",
+                "Low",
+                "",
+            )
+        )
+    priority_order = {"High": 0, "Medium": 1, "Low": 2}
+    return sorted(opportunities, key=lambda item: (priority_order.get(item["priority"], 9), item["title"]))[:10]
+
+
+def opportunity_item(title, metric, why, action, priority, confidence, url):
+    return {"title": title, "metric": metric, "why": why, "action": action, "priority": priority, "confidence": confidence, "url": url}
+
+
+def confidence_label(sample_size):
+    sample_size = int(sample_size or 0)
+    if sample_size >= 25:
+        return "High"
+    if sample_size >= 5:
+        return "Medium"
+    return "Low"
+
+
+def average_rate(values):
+    cleaned = [float(value) for value in values if value is not None]
+    if not cleaned:
+        return None
+    return sum(cleaned) / len(cleaned)
+
+
+def dashboard_growth_scorecards(summary, opportunities):
+    totals = summary.get("totals", {})
+    previous = summary.get("previous", {})
+    page_views = int(totals.get("page_views") or 0)
+    sessions = int(totals.get("anonymous_sessions") or 0)
+    downloads = int(totals.get("resource_pdf_downloads") or 0)
+    shares = int(totals.get("resource_share_clicks") or 0)
+    donation_intent = int(totals.get("donation_cta_clicks") or 0) + int(totals.get("paypal_clicks") or 0)
+    searches = int(totals.get("site_searches") or 0)
+    search_clicks = int(totals.get("search_result_clicks") or 0)
+    no_results = sum(int(row.get("no_results") or 0) for row in summary.get("search_no_results", []))
+    return [
+        growth_scorecard("Audience growth", sessions, previous.get("anonymous_sessions", 0), "Anonymous sessions in this period.", "Share the strongest page through the best current source."),
+        growth_scorecard("Resource engagement", downloads + shares, int(previous.get("resource_pdf_downloads") or 0) + int(previous.get("resource_share_clicks") or 0), "Guide downloads plus shares.", "Promote the guide with the strongest conversion rate."),
+        growth_scorecard("Donation intent", donation_intent, int(previous.get("donation_cta_clicks") or 0) + int(previous.get("paypal_clicks") or 0), "Support clicks and PayPal opens, not confirmed donations.", "Place one clearer support message on a high-traffic page."),
+        growth_scorecard("Newsletter growth", totals.get("newsletter_signups", 0), previous.get("newsletter_signups", 0), "Successful newsletter signups.", "Add a stronger signup promise near useful article sections."),
+        growth_scorecard("Search usefulness", search_clicks, previous.get("search_result_clicks", 0), f"{searches} searches; {no_results} no-result searches.", "Create content for repeated no-result searches."),
+        growth_scorecard("Content opportunity", len(opportunities), 0, "Ranked opportunities found from real activity.", "Work the highest-confidence opportunity first."),
+    ]
+
+
+def growth_scorecard(label, current, previous, explanation, action):
+    current = int(current or 0)
+    previous = int(previous or 0)
+    comparison = analytics.compare_counts(current, previous)
+    if current >= 25:
+        status = "Strong"
+    elif comparison["direction"] == "up":
+        status = "Improving"
+    elif current > 0:
+        status = "Stable"
+    else:
+        status = "Insufficient data"
+    return {
+        "label": label,
+        "status": status,
+        "tone": "good" if status in {"Strong", "Improving"} else "watch" if status == "Stable" else "low",
+        "current": current,
+        "previous": previous,
+        "change": comparison["label"],
+        "explanation": explanation,
+        "action": action,
+    }
+
+
+def dashboard_campaign_insights(summary):
+    rows = summary.get("campaign_performance", [])
+    if not rows:
+        return {
+            "notes": ["Campaign insights will appear after links with UTM tracking bring visitors to the site."],
+            "best_traffic": None,
+            "best_action_rate": None,
+            "best_downloads": None,
+        }
+    best_traffic = max(rows, key=lambda row: int(row.get("page_views") or 0))
+    best_action_rate = max(rows, key=lambda row: float(row.get("action_rate") or 0))
+    best_downloads = max(rows, key=lambda row: int(row.get("pdf_downloads") or 0))
+    notes = [
+        f"{best_traffic['label']} brought the most tracked visits ({best_traffic.get('page_views', 0)}).",
+        f"{best_action_rate['label']} has the strongest action rate ({best_action_rate.get('action_rate_label')}).",
+    ]
+    if int(best_downloads.get("pdf_downloads") or 0):
+        notes.append(f"{best_downloads['label']} generated the most guide downloads.")
+    weak = next((row for row in rows if int(row.get("page_views") or 0) >= 5 and int(row.get("actions") or 0) == 0), None)
+    if weak:
+        notes.append(f"{weak['label']} has traffic but no meaningful actions yet.")
+    return {"notes": notes[:4], "best_traffic": best_traffic, "best_action_rate": best_action_rate, "best_downloads": best_downloads}
+
+
+def dashboard_content_intelligence(summary, resource_insights):
+    rows = summary.get("top_content", [])
+    guides = resource_insights.get("top_guides", [])
+    best_guide = first_item(sorted(guides, key=lambda row: (int(row.get("downloads") or 0), int(row.get("pdf_views") or 0)), reverse=True))
+    recommendations = []
+    if best_guide:
+        guide_terms = guide_recommendation_terms(best_guide.get("title", ""))
+        for row in rows:
+            page_text = f"{row.get('title', '')} {row.get('page', '')} {row.get('article_group', '')}".lower()
+            if int(row.get("views") or 0) >= 2 and any(term in page_text for term in guide_terms):
+                recommendations.append(
+                    {
+                        "page": row.get("page"),
+                        "title": row.get("title") or row.get("page"),
+                        "guide": best_guide.get("title"),
+                        "reason": f"This page has related topic language and {row.get('views', 0)} views; the guide has {best_guide.get('downloads', 0)} downloads.",
+                        "action": "Consider adding a visible guide callout on this page.",
+                    }
+                )
+    return {
+        "best_by_traffic": rows[:6],
+        "best_by_actions": sorted(rows, key=lambda row: int(row.get("meaningful_actions") or 0), reverse=True)[:6],
+        "guide_recommendations": recommendations[:5],
+    }
+
+
+def guide_recommendation_terms(title):
+    terms = [term for term in re.split(r"[^a-z0-9]+", str(title).lower()) if len(term) >= 4]
+    extras = {
+        "plate": ["meal", "nutrition", "food", "eating"],
+        "grocery": ["shopping", "food", "label", "pantry"],
+        "fats": ["fat", "oil", "heart", "cholesterol"],
+        "brain": ["brain", "cognitive", "alzheimer", "dementia"],
+        "reset": ["habit", "sleep", "movement", "routine"],
+    }
+    for term in list(terms):
+        terms.extend(extras.get(term, []))
+    return sorted(set(terms))
+
+
+def dashboard_anomaly_alerts(summary):
+    alerts = []
+    trend = summary.get("daily_trend", [])
+    alerts.extend(daily_metric_alerts(trend, "page_views", "traffic"))
+    alerts.extend(daily_metric_alerts(trend, "pdf_downloads", "guide downloads"))
+    alerts.extend(daily_metric_alerts(trend, "paypal_clicks", "PayPal opens"))
+    if summary.get("search_no_results"):
+        top_gap = summary["search_no_results"][0]
+        if int(top_gap.get("no_results") or 0) >= 3:
+            alerts.append(
+                {
+                    "title": "Repeated no-result searches",
+                    "detail": f"'{top_gap['label']}' produced {top_gap.get('no_results')} no-result searches.",
+                    "action": "Create or improve content for this term.",
+                    "tone": "watch",
+                }
+            )
+    if not alerts:
+        alerts.append({"title": "No unusual warnings", "detail": "Nothing crossed the dashboard's lightweight alert thresholds.", "action": "Keep collecting baseline activity.", "tone": "good"})
+    return alerts[:6]
+
+
+def daily_metric_alerts(rows, key, label):
+    if len(rows) < 4:
+        return []
+    values = [int(row.get(key) or 0) for row in rows]
+    recent = values[-1]
+    baseline_values = values[:-1]
+    baseline = sum(baseline_values) / max(1, len(baseline_values))
+    if baseline < 3 and recent < 6:
+        return []
+    if recent >= baseline * 2 and recent - baseline >= 5:
+        return [{"title": f"Possible {label} spike", "detail": f"The latest day was {recent}, compared with a recent average of {baseline:.1f}.", "action": "Check which source or campaign caused the lift.", "tone": "good"}]
+    if baseline >= 5 and recent <= baseline * 0.35:
+        return [{"title": f"Possible {label} drop", "detail": f"The latest day was {recent}, compared with a recent average of {baseline:.1f}.", "action": "Check whether a campaign ended, a link changed, or traffic source shifted.", "tone": "watch"}]
+    if max(values) == 0:
+        return [{"title": f"No {label} activity", "detail": f"{label.title()} stayed flat across this period.", "action": "Promote the related page or CTA in one outreach channel.", "tone": "low"}]
+    return []
+
+
+def dashboard_monthly_brief(summary, opportunities, resource_insights, campaign_insights):
+    totals = summary.get("totals", {})
+    top_page = first_item(summary.get("top_pages")) or {"label": "No page activity", "count": 0}
+    top_guide = first_item(resource_insights.get("top_guides", [])) or {"title": "No guide activity", "downloads": 0}
+    top_campaign = campaign_insights.get("best_action_rate") or {"label": "No campaign activity", "action_rate_label": "No page views"}
+    opportunity = opportunities[0] if opportunities else {"title": "No urgent opportunity", "action": "Keep collecting baseline data."}
+    return [
+        f"This period reached {totals.get('anonymous_sessions', 0)} anonymous sessions and {totals.get('page_views', 0)} page reads.",
+        f"Top page: {top_page['label']} with {top_page['count']} views.",
+        f"Top guide: {top_guide['title']} with {top_guide.get('downloads', 0)} downloads.",
+        f"Best campaign by action rate: {top_campaign['label']} ({top_campaign.get('action_rate_label')}).",
+        f"Biggest opportunity: {opportunity['title']}. Next step: {opportunity['action']}",
+    ]
+
+
+def dashboard_chart_blocks(summary):
+    return {
+        "top_pages": ranked_chart_rows(summary.get("top_pages", []), "label", "count"),
+        "top_content": ranked_chart_rows(summary.get("top_content", []), "title", "views"),
+        "traffic_sources": donut_chart(summary.get("traffic_sources", [])),
+        "devices": donut_chart(summary.get("device_categories", [])),
+        "share_platforms": donut_chart(summary.get("resource_share_platforms", [])),
+    }
+
+
+def ranked_chart_rows(rows, label_key, value_key):
+    cleaned = []
+    max_value = max([int(row.get(value_key) or 0) for row in rows] or [1])
+    for row in rows[:8]:
+        value = int(row.get(value_key) or 0)
+        cleaned.append({"label": row.get(label_key) or row.get("page") or row.get("label") or "Untitled", "value": value, "width": max(3, round((value / max(max_value, 1)) * 100, 1))})
+    return cleaned
+
+
+def donut_chart(rows):
+    colors = ["#005030", "#f07239", "#4169e1", "#7b3fe4", "#008c7a", "#9b2c2c", "#8792a2"]
+    total = sum(int(row.get("count") or 0) for row in rows)
+    if total <= 0:
+        return {"segments": [], "gradient": "conic-gradient(#e4e6ef 0 100%)"}
+    cursor = 0
+    gradient_parts = []
+    segments = []
+    for index, row in enumerate(rows[:7]):
+        value = int(row.get("count") or 0)
+        if not value:
+            continue
+        percent = (value / total) * 100
+        start = cursor
+        cursor += percent
+        color = colors[index % len(colors)]
+        gradient_parts.append(f"{color} {start:.2f}% {cursor:.2f}%")
+        segments.append({"label": row.get("label") or "Unknown", "count": value, "percent": f"{percent:.1f}%", "color": color})
+    return {"segments": segments, "gradient": f"conic-gradient({', '.join(gradient_parts)})"}
+
+
+def dashboard_report_links(args):
+    clean_args = {key: args.get(key) for key in ("range", "start", "end", "guide_slug", "campaign", "source", "medium", "device_category", "event_name") if args.get(key)}
+    return {
+        "print": dashboard_url("admin_analytics_report", **clean_args),
+        "board": dashboard_url("admin_analytics_board_report", **clean_args),
+        "daily": dashboard_url("admin_analytics_named_export", kind="daily", **clean_args),
+        "guides": dashboard_url("admin_analytics_named_export", kind="guides", **clean_args),
+        "content": dashboard_url("admin_analytics_named_export", kind="content", **clean_args),
+        "campaigns": dashboard_url("admin_analytics_named_export", kind="campaigns", **clean_args),
+        "search": dashboard_url("admin_analytics_named_export", kind="search", **clean_args),
+        "opportunities": dashboard_url("admin_analytics_named_export", kind="opportunities", **clean_args),
+    }
+
+
+def dashboard_url(endpoint, **values):
+    try:
+        return url_for(endpoint, **values)
+    except RuntimeError:
+        anchor = values.pop("_anchor", None)
+        query_values = {key: value for key, value in values.items() if value not in {None, ""}}
+        path = {
+            "admin_analytics": "/admin/analytics/",
+            "admin_analytics_report": "/admin/analytics/report/",
+            "admin_analytics_board_report": "/admin/analytics/board/",
+            "admin_analytics_page_report": "/admin/analytics/page/",
+            "admin_analytics_named_export": f"/admin/analytics/export/{query_values.pop('kind', 'overview')}.csv",
+            "admin_analytics_guide_report": f"/admin/analytics/guides/{query_values.pop('guide_slug', '')}/",
+        }.get(endpoint, "/admin/analytics/")
+        query = urlencode(query_values)
+        suffix = f"?{query}" if query else ""
+        if anchor:
+            suffix += f"#{anchor}"
+        return f"{path}{suffix}"
+
+
+def dashboard_metric_definitions():
+    return [
+        "A meaningful action is a guide download or share, newsletter signup, PayPal open, health-tool click, or search-result click.",
+        "Donation clicks and PayPal opens are donation intent, not confirmed donations.",
+        "Previous-period comparisons use the immediately preceding date range with the same duration.",
+        "Guide download rate uses downloads divided by guide detail views plus PDF opens.",
+        "Opportunity priority is lowered when the sample size is small.",
+    ]
+
+
+def dashboard_board_update(summary, opportunities, resource_insights, campaign_insights):
+    totals = summary.get("totals", {})
+    top_campaign = campaign_insights.get("best_action_rate") or {"label": "No tracked campaign yet", "action_rate_label": "No page views"}
+    return [
+        {"label": "Audience reached", "value": totals.get("anonymous_sessions", 0), "note": "Anonymous sessions, not identified people."},
+        {"label": "Resources used", "value": resource_insights.get("pdf_views", 0), "note": "PDF opens across free guides."},
+        {"label": "Guide downloads", "value": resource_insights.get("downloads", 0), "note": "Download button clicks."},
+        {"label": "Newsletter growth", "value": totals.get("newsletter_signups", 0), "note": "Successful signups only."},
+        {"label": "Donation intent", "value": int(totals.get("donation_cta_clicks") or 0) + int(totals.get("paypal_clicks") or 0), "note": "Support clicks and PayPal opens, not confirmed gifts."},
+        {"label": "Most valuable campaign", "value": top_campaign["label"], "note": f"Action rate: {top_campaign.get('action_rate_label')}."},
+        {"label": "Major opportunity", "value": opportunities[0]["title"] if opportunities else "No urgent opportunity", "note": opportunities[0]["action"] if opportunities else "Keep collecting data."},
+    ]
+
+
+def dashboard_csv_export(kind, dashboard):
+    output = io.StringIO()
+    writer = csv.writer(output)
+    writer.writerow(["Mindful Diabetes analytics export"])
+    writer.writerow(["Report", kind])
+    writer.writerow(["Start", dashboard["start"]])
+    writer.writerow(["End", dashboard["end"]])
+    writer.writerow([])
+    kind = clean_campaign_value(kind)
+    if kind == "daily":
+        writer.writerow(["Date", "Page views", "Sessions", "Guide detail views", "PDF opens", "PDF downloads", "Guide shares", "Donation clicks", "PayPal opens", "Newsletter signups", "Health-tool clicks", "Searches"])
+        for row in dashboard["summary"].get("daily_trend", []):
+            writer.writerow([row.get("day"), row.get("page_views", 0), row.get("sessions", 0), row.get("guide_detail_views", 0), row.get("pdf_views", 0), row.get("pdf_downloads", 0), row.get("guide_shares", 0), row.get("donation_clicks", 0), row.get("paypal_clicks", 0), row.get("newsletter_signups", 0), row.get("tool_clicks", 0), row.get("searches", 0)])
+    elif kind == "guides":
+        writer.writerow(["Guide", "Category", "Cards seen", "Details", "PDF opens", "Downloads", "Shares", "Download rate", "Related clicks", "Support clicks"])
+        for row in dashboard["resource_insights"].get("top_guides", []):
+            writer.writerow([safe_cell(row.get("title")), safe_cell(row.get("category")), row.get("card_views", 0), row.get("detail_views", 0), row.get("pdf_views", 0), row.get("downloads", 0), row.get("shares", 0), row.get("download_rate_label"), row.get("related_clicks", 0), row.get("donation_clicks", 0)])
+    elif kind == "content":
+        writer.writerow(["Page", "Title", "Group", "Views", "Sessions", "Guide actions", "Tool clicks", "Newsletter signups", "Donation clicks", "Meaningful actions"])
+        for row in dashboard["summary"].get("top_content", []):
+            writer.writerow([safe_cell(row.get("page")), safe_cell(row.get("title")), safe_cell(row.get("article_group")), row.get("views", 0), row.get("sessions", 0), row.get("guide_actions", 0), row.get("tool_clicks", 0), row.get("newsletter_signups", 0), row.get("donation_clicks", 0), row.get("meaningful_actions", 0)])
+    elif kind == "campaigns":
+        writer.writerow(["Campaign", "Source", "Medium", "Views", "Sessions", "Guide details", "PDF opens", "Downloads", "Shares", "Newsletter signups", "Donation clicks", "PayPal opens", "Health-tool clicks", "Meaningful actions", "Action rate"])
+        for row in dashboard["summary"].get("campaign_performance", []):
+            writer.writerow([safe_cell(row.get("label")), safe_cell(row.get("source")), safe_cell(row.get("medium")), row.get("page_views", 0), row.get("sessions", 0), row.get("guide_detail_views", 0), row.get("pdf_views", 0), row.get("pdf_downloads", 0), row.get("guide_shares", 0), row.get("newsletter_signups", 0), row.get("donation_clicks", 0), row.get("paypal_clicks", 0), row.get("health_tool_clicks", 0), row.get("actions", 0), row.get("action_rate_label")])
+    elif kind == "search":
+        writer.writerow(["Search term", "Searches", "No-result searches", "Average results"])
+        for row in dashboard["search_insights"].get("top_queries", []):
+            writer.writerow([safe_cell(row.get("label")), row.get("count", 0), row.get("no_results", 0), row.get("avg_results", "")])
+        writer.writerow([])
+        writer.writerow(["No-result term", "Count"])
+        for row in dashboard["search_insights"].get("no_result_queries", []):
+            writer.writerow([safe_cell(row.get("label")), row.get("no_results", row.get("count", 0))])
+    elif kind == "opportunities":
+        writer.writerow(["Priority", "Opportunity", "Metric", "Confidence", "Why it matters", "Recommended action"])
+        for row in dashboard["opportunities"]:
+            writer.writerow([row["priority"], safe_cell(row["title"]), safe_cell(row["metric"]), row["confidence"], safe_cell(row["why"]), safe_cell(row["action"])])
+    else:
+        writer.writerow(["Metric", "Value", "Previous period", "Change"])
+        for stat in dashboard["stats"]:
+            writer.writerow([safe_cell(stat["label"]), stat["value"], stat["previous"], safe_cell(stat["change"])])
+    return output.getvalue()
+
+
+def safe_cell(value):
+    return analytics.csv_safe("" if value is None else value)
+
+
+def dashboard_guide_report(guide, summary):
+    totals = summary.get("totals", {})
+    top_sources = summary.get("resource_source_pages", []) or summary.get("traffic_sources", [])
+    download_rate = analytics.numeric_rate(totals.get("resource_pdf_downloads", 0), int(totals.get("resource_detail_views") or 0) + int(totals.get("resource_pdf_views") or 0))
+    share_rate = analytics.numeric_rate(totals.get("resource_share_clicks", 0), totals.get("resource_pdf_downloads", 0))
+    warnings = []
+    if totals.get("resource_pdf_views", 0) >= 3 and not totals.get("resource_pdf_downloads", 0):
+        warnings.append("People opened this guide but did not download it.")
+    if totals.get("resource_pdf_downloads", 0) >= 3 and not totals.get("resource_share_clicks", 0):
+        warnings.append("This guide is downloaded but rarely shared.")
+    if totals.get("resource_card_views", 0) >= 5 and not totals.get("resource_detail_views", 0) and not totals.get("resource_pdf_views", 0):
+        warnings.append("This guide receives card visibility but has a low open rate.")
+    if not warnings:
+        warnings.append("No guide-specific warning crossed the dashboard thresholds yet.")
+    suggestions = []
+    if totals.get("resource_card_views", 0) and not totals.get("resource_detail_views", 0):
+        suggestions.append("Improve the guide-card title or description.")
+    if totals.get("resource_pdf_views", 0) and not totals.get("resource_pdf_downloads", 0):
+        suggestions.append("Move the PDF download button higher and use clearer button text.")
+    if totals.get("resource_pdf_downloads", 0) and not totals.get("resource_share_clicks", 0):
+        suggestions.append("Add a sharing prompt near the download confirmation.")
+    if first_item(top_sources):
+        suggestions.append(f"Promote the guide through {top_sources[0]['label']}, the strongest current source.")
+    if not suggestions:
+        suggestions.append("Keep collecting guide activity before changing the page.")
+    return {
+        "download_rate": analytics.percent_label(download_rate),
+        "share_rate": analytics.percent_label(share_rate),
+        "warnings": warnings[:5],
+        "suggestions": suggestions[:5],
+        "top_sources": top_sources[:8],
+        "trend_max": dashboard_resource_trend_max(summary.get("daily_trend", [])),
+    }
+
+
+def free_guide_definition_by_slug(slug):
+    return next((item for item in FREE_GUIDE_DEFINITIONS if item["slug"] == slug), None)
 
 
 def normalize_dashboard_groups(summary):
@@ -2516,6 +3159,23 @@ def dashboard_trend_max(rows):
                 int(row.get("paypal_clicks") or 0),
                 int(row.get("tool_clicks") or 0),
                 int(row.get("newsletter_signups") or 0),
+                int(row.get("pdf_downloads") or 0),
+                int(row.get("guide_shares") or 0),
+                int(row.get("searches") or 0),
+            ]
+        )
+    return max(1, max(values, default=1))
+
+
+def dashboard_resource_trend_max(rows):
+    values = []
+    for row in rows:
+        values.extend(
+            [
+                int(row.get("guide_detail_views") or 0),
+                int(row.get("pdf_views") or 0),
+                int(row.get("pdf_downloads") or 0),
+                int(row.get("guide_shares") or 0),
             ]
         )
     return max(1, max(values, default=1))

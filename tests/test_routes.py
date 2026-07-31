@@ -1788,12 +1788,12 @@ def test_admin_dashboard_uses_category_tabs(tmp_path):
     response = client.get("/admin/analytics/")
 
     assert response.status_code == 200
-    for label in [b"Overview", b"Growth", b"Engagement", b"Resources", b"Search", b"Campaigns", b"Content", b"Activity"]:
+    for label in [b"Overview", b"Traffic", b"Free Guides", b"Articles", b"Search", b"Campaigns", b"Donations", b"Newsletter", b"Health Tools", b"Opportunities", b"Reports"]:
         assert label in response.data
     assert b'data-admin-tab="overview"' in response.data
-    assert b'data-admin-tab-panel="resources"' in response.data
-    assert b'data-admin-tab-panel="engagement"' in response.data
-    assert b'data-admin-tab-panel="activity"' in response.data
+    assert b'data-admin-tab-panel="free-guides"' in response.data
+    assert b'data-admin-tab-panel="traffic"' in response.data
+    assert b'data-admin-tab-panel="reports"' in response.data
 
 
 def test_admin_dashboard_renders_free_guide_resource_performance(tmp_path):
@@ -1878,6 +1878,62 @@ def test_admin_dashboard_renders_free_guide_resource_performance(tmp_path):
     assert b"Related guide clicks" in response.data
 
 
+def test_admin_dashboard_renders_funnels_reports_and_guide_detail(tmp_path):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+    sign_in_admin(client)
+
+    metadata = {
+        "guide_title": "The Mindful Plate",
+        "guide_slug": "mindful-plate",
+        "guide_category": "Nutrition",
+        "source_page": "/free-guides",
+    }
+    post_analytics_event(
+        client,
+        event_id="client:funnel-card",
+        event_name="resource_card_view",
+        page_path="/free-guides/",
+        page_title="Free Health Guides",
+        metadata=metadata,
+    )
+    post_analytics_event(
+        client,
+        event_id="client:funnel-pdf",
+        event_name="resource_pdf_view",
+        page_path="/free-guides/mindful-plate/",
+        page_title="The Mindful Plate",
+        metadata=metadata,
+    )
+    post_analytics_event(
+        client,
+        event_id="client:funnel-download",
+        event_name="resource_pdf_download",
+        page_path="/free-guides/mindful-plate/",
+        page_title="The Mindful Plate",
+        metadata=metadata,
+    )
+
+    dashboard = client.get("/admin/analytics/")
+    guide = client.get("/admin/analytics/guides/mindful-plate/")
+    export = client.get("/admin/analytics/export/guides.csv")
+    report = client.get("/admin/analytics/report/")
+    board = client.get("/admin/analytics/board/")
+
+    assert dashboard.status_code == 200
+    assert b"Free Guides funnel" in dashboard.data
+    assert b"Growth scorecards" in dashboard.data
+    assert b"Opportunity alerts" in dashboard.data
+    assert guide.status_code == 200
+    assert b"Guide warnings" in guide.data
+    assert export.status_code == 200
+    assert b"Guide,Category,Cards seen" in export.data
+    assert report.status_code == 200
+    assert b"Printable report" in report.data
+    assert board.status_code == 200
+    assert b"Board update" in board.data
+
+
 def test_dashboard_renders_growth_goals_search_and_campaign_tools(tmp_path):
     app = analytics_app(tmp_path)
     client = app.test_client()
@@ -1926,7 +1982,7 @@ def test_dashboard_renders_growth_goals_search_and_campaign_tools(tmp_path):
 
     assert response.status_code == 200
     assert b"Growth goals" in response.data
-    assert b"Weekly growth brief" in response.data
+    assert b"Weekly and monthly brief" in response.data
     assert b"Growth experiments" in response.data
     assert b"Search insights" in response.data
     assert b"rarepreventiontopic" in response.data
