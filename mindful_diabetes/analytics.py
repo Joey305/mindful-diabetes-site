@@ -22,6 +22,7 @@ MEANINGFUL_ACTION_EVENTS = {
     "newsletter_signup",
     "paypal_click",
     "donation_completed",
+    "donation_refunded",
     "health_tool_click",
     "search_result_click",
     "content_cta_click",
@@ -53,6 +54,8 @@ VALID_EVENT_NAMES = {
     "paypal_click",
     "donation_checkout_started",
     "donation_completed",
+    "donation_refunded",
+    "donation_denied",
     "health_tool_click",
     "newsletter_form_view",
     "newsletter_form_interaction",
@@ -89,6 +92,8 @@ EVENT_CATEGORIES = {
     "paypal_click": "donation",
     "donation_checkout_started": "donation",
     "donation_completed": "donation",
+    "donation_refunded": "donation",
+    "donation_denied": "donation",
     "health_tool_click": "health_tool",
     "newsletter_form_view": "newsletter",
     "newsletter_form_interaction": "newsletter",
@@ -126,6 +131,13 @@ ALLOWED_METADATA_KEYS = {
     "provider",
     "checkout_observed",
     "completion_source",
+    "paypal_event_id",
+    "paypal_resource_id",
+    "paypal_status",
+    "paypal_event_type",
+    "amount_value",
+    "currency_code",
+    "donation_status",
     "tool_id",
     "tool_name",
     "tool_slug",
@@ -416,6 +428,10 @@ class LocalAnalyticsStore(AnalyticsStore):
             "paypal_clicks": self._count(start, end, filters, event_name="paypal_click"),
             "checkout_starts": self._count(start, end, filters, event_name="donation_checkout_started"),
             "confirmed_donations": self._count(start, end, filters, event_name="donation_completed"),
+            "refunded_donations": self._count(start, end, filters, event_name="donation_refunded"),
+            "denied_donations": self._count(start, end, filters, event_name="donation_denied"),
+            "confirmed_donation_amount_cents": self._sum_metadata_amount_cents(start, end, filters, event_name="donation_completed"),
+            "refunded_donation_amount_cents": self._sum_metadata_amount_cents(start, end, filters, event_name="donation_refunded"),
             "health_tool_clicks": self._count(start, end, filters, event_name="health_tool_click"),
             "newsletter_signups": self._count(start, end, filters, event_name="newsletter_signup"),
             "newsletter_views": self._count(start, end, filters, event_name="newsletter_form_view"),
@@ -553,6 +569,22 @@ class LocalAnalyticsStore(AnalyticsStore):
                 f"SELECT COUNT(DISTINCT anonymous_session_id) FROM analytics_events {where} AND anonymous_session_id != ''",
                 params,
             ).fetchone()[0]
+
+    def _sum_metadata_amount_cents(self, start, end, filters=None, event_name=None):
+        where_filters = dict(filters or {})
+        if event_name:
+            where_filters["event_name"] = event_name
+        where, params = self._where(start, end, where_filters)
+        with self.connect() as connection:
+            value = connection.execute(
+                f"""
+                SELECT COALESCE(SUM(CAST(COALESCE(NULLIF(json_extract(metadata_json, '$.amount_value'), ''), '0') AS REAL)), 0)
+                FROM analytics_events
+                {where}
+                """,
+                params,
+            ).fetchone()[0]
+        return int(round(float(value or 0) * 100))
 
     def _group_counts(self, start, end, filters, column, event_name=None, event_names=None, limit=10):
         where_filters = dict(filters or {})

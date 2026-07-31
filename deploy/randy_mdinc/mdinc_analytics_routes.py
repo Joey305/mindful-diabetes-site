@@ -44,6 +44,8 @@ VALID_EVENT_NAMES = {
     "paypal_click",
     "donation_checkout_started",
     "donation_completed",
+    "donation_refunded",
+    "donation_denied",
     "health_tool_click",
     "newsletter_form_view",
     "newsletter_form_interaction",
@@ -80,6 +82,8 @@ EVENT_CATEGORIES = {
     "paypal_click": "donation",
     "donation_checkout_started": "donation",
     "donation_completed": "donation",
+    "donation_refunded": "donation",
+    "donation_denied": "donation",
     "health_tool_click": "health_tool",
     "newsletter_form_view": "newsletter",
     "newsletter_form_interaction": "newsletter",
@@ -117,6 +121,13 @@ ALLOWED_METADATA_KEYS = {
     "provider",
     "checkout_observed",
     "completion_source",
+    "paypal_event_id",
+    "paypal_resource_id",
+    "paypal_status",
+    "paypal_event_type",
+    "amount_value",
+    "currency_code",
+    "donation_status",
     "tool_id",
     "tool_name",
     "tool_slug",
@@ -604,6 +615,10 @@ def period_summary(start: datetime, end: datetime, filters: dict[str, str]) -> d
         "paypal_clicks": count_events(start, end, filters, event_name="paypal_click"),
         "checkout_starts": count_events(start, end, filters, event_name="donation_checkout_started"),
         "confirmed_donations": count_events(start, end, filters, event_name="donation_completed"),
+        "refunded_donations": count_events(start, end, filters, event_name="donation_refunded"),
+        "denied_donations": count_events(start, end, filters, event_name="donation_denied"),
+        "confirmed_donation_amount_cents": sum_metadata_amount_cents(start, end, filters, event_name="donation_completed"),
+        "refunded_donation_amount_cents": sum_metadata_amount_cents(start, end, filters, event_name="donation_refunded"),
         "health_tool_clicks": count_events(start, end, filters, event_name="health_tool_click"),
         "newsletter_signups": count_events(start, end, filters, event_name="newsletter_signup"),
         "newsletter_views": count_events(start, end, filters, event_name="newsletter_form_view"),
@@ -669,6 +684,23 @@ def distinct_sessions(start, end, filters) -> int:
     where, params = where_clause(start, end, filters)
     with connect() as conn:
         return int(conn.execute(f"SELECT COUNT(DISTINCT anonymous_session_id) FROM analytics_events {where} AND anonymous_session_id != ''", params).fetchone()[0])
+
+
+def sum_metadata_amount_cents(start, end, filters, event_name=None) -> int:
+    filters = dict(filters)
+    if event_name:
+        filters["event_name"] = event_name
+    where, params = where_clause(start, end, filters)
+    with connect() as conn:
+        value = conn.execute(
+            f"""
+            SELECT COALESCE(SUM(CAST(COALESCE(NULLIF(json_extract(metadata_json, '$.amount_value'), ''), '0') AS REAL)), 0)
+            FROM analytics_events
+            {where}
+            """,
+            params,
+        ).fetchone()[0]
+    return int(round(float(value or 0) * 100))
 
 
 def group_counts(start, end, filters, column, event_name=None, event_names=None, limit=10) -> list[dict[str, Any]]:

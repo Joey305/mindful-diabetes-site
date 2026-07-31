@@ -1589,6 +1589,94 @@ def test_analytics_rejects_unknown_event_name_and_bad_metadata(tmp_path):
     assert metadata_response.status_code == 400
 
 
+def test_paypal_webhook_requires_configuration_and_verification(tmp_path, monkeypatch):
+    app = analytics_app(tmp_path)
+    client = app.test_client()
+
+    missing_config = client.post("/paypal/webhook/", json={"event_type": "PAYMENT.CAPTURE.COMPLETED"})
+
+    app.config.update(
+        PAYPAL_CLIENT_ID="client-id",
+        PAYPAL_CLIENT_SECRET="client-secret",
+        PAYPAL_WEBHOOK_ID="webhook-id",
+    )
+    monkeypatch.setattr(app_module, "verify_paypal_webhook", lambda config, event, headers: False)
+    rejected = client.post(
+        "/paypal/webhook/",
+        json={"id": "WH-1", "event_type": "PAYMENT.CAPTURE.COMPLETED", "resource": {"id": "CAPTURE-1"}},
+        headers={
+            "PAYPAL-AUTH-ALGO": "SHA256withRSA",
+            "PAYPAL-CERT-URL": "https://api-m.paypal.com/certs/test",
+            "PAYPAL-TRANSMISSION-ID": "transmission-id",
+            "PAYPAL-TRANSMISSION-SIG": "signature",
+            "PAYPAL-TRANSMISSION-TIME": "2026-07-31T00:00:00Z",
+        },
+    )
+
+    assert missing_config.status_code == 503
+    assert rejected.status_code == 400
+
+
+def test_paypal_completed_webhook_records_confirmed_donation_amount(tmp_path, monkeypatch):
+    app = analytics_app(
+        tmp_path,
+        {
+            "PAYPAL_CLIENT_ID": "client-id",
+            "PAYPAL_CLIENT_SECRET": "client-secret",
+            "PAYPAL_WEBHOOK_ID": "webhook-id",
+        },
+    )
+    client = app.test_client()
+    monkeypatch.setattr(app_module, "verify_paypal_webhook", lambda config, event, headers: True)
+
+    response = client.post(
+        "/paypal/webhook/",
+        json={
+            "id": "WH-completed-1",
+            "event_type": "PAYMENT.CAPTURE.COMPLETED",
+            "resource": {
+                "id": "CAPTURE-123",
+                "status": "COMPLETED",
+                "amount": {"value": "25.50", "currency_code": "USD"},
+            },
+        },
+        headers={
+            "PAYPAL-AUTH-ALGO": "SHA256withRSA",
+            "PAYPAL-CERT-URL": "https://api-m.paypal.com/certs/test",
+            "PAYPAL-TRANSMISSION-ID": "transmission-id",
+            "PAYPAL-TRANSMISSION-SIG": "signature",
+            "PAYPAL-TRANSMISSION-TIME": "2026-07-31T00:00:00Z",
+        },
+    )
+    duplicate = client.post(
+        "/paypal/webhook/",
+        json={
+            "id": "WH-completed-1",
+            "event_type": "PAYMENT.CAPTURE.COMPLETED",
+            "resource": {
+                "id": "CAPTURE-123",
+                "status": "COMPLETED",
+                "amount": {"value": "25.50", "currency_code": "USD"},
+            },
+        },
+        headers={
+            "PAYPAL-AUTH-ALGO": "SHA256withRSA",
+            "PAYPAL-CERT-URL": "https://api-m.paypal.com/certs/test",
+            "PAYPAL-TRANSMISSION-ID": "transmission-id",
+            "PAYPAL-TRANSMISSION-SIG": "signature",
+            "PAYPAL-TRANSMISSION-TIME": "2026-07-31T00:00:00Z",
+        },
+    )
+    dashboard = app_module.build_admin_dashboard(app.config)
+
+    assert response.status_code == 202
+    assert response.json["stored"] == 1
+    assert duplicate.json["duplicates"] == 1
+    assert dashboard["summary"]["totals"]["confirmed_donations"] == 1
+    assert dashboard["summary"]["totals"]["confirmed_donation_amount_cents"] == 2550
+    assert dashboard["confirmed_donation_amount"] == "$25.50"
+
+
 def test_analytics_rejects_oversized_and_invalid_field_payloads(tmp_path):
     app = analytics_app(tmp_path)
     client = app.test_client()

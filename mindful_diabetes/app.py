@@ -1,3 +1,4 @@
+import base64
 import csv
 import io
 import json
@@ -418,6 +419,10 @@ def create_app(test_config=None):
         ANALYTICS_REMOTE_API_TOKEN=os.getenv("ANALYTICS_REMOTE_API_TOKEN", ""),
         ANALYTICS_REMOTE_TIMEOUT_SECONDS=os.getenv("ANALYTICS_REMOTE_TIMEOUT_SECONDS", "5"),
         SITE_BASE_URL=os.getenv("SITE_BASE_URL", "https://mindfuldiabetes.org"),
+        PAYPAL_CLIENT_ID=os.getenv("PAYPAL_CLIENT_ID", ""),
+        PAYPAL_CLIENT_SECRET=os.getenv("PAYPAL_CLIENT_SECRET", ""),
+        PAYPAL_WEBHOOK_ID=os.getenv("PAYPAL_WEBHOOK_ID", ""),
+        PAYPAL_ENVIRONMENT=os.getenv("PAYPAL_ENVIRONMENT", "live"),
         BREVO_API_KEY=os.getenv("BREVO_API_KEY", ""),
         BREVO_SMTP_URL=os.getenv("BREVO_SMTP_URL", "https://api.brevo.com/v3/smtp/email"),
         DATABASE_URL=os.getenv("DATABASE_URL", ""),
@@ -958,6 +963,26 @@ def create_app(test_config=None):
             end=(end - timedelta(days=1)).date().isoformat(),
         )
 
+    @app.post("/paypal/webhook/")
+    def paypal_webhook():
+        raw_body = request.get_data(cache=True)
+        try:
+            webhook_event = json.loads(raw_body.decode("utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError):
+            return jsonify({"ok": False, "message": "Webhook payload was not valid JSON."}), 400
+        if not paypal_webhook_configured(app.config):
+            return jsonify({"ok": False, "message": "PayPal webhook is not configured."}), 503
+        if not verify_paypal_webhook(app.config, webhook_event, request.headers):
+            return jsonify({"ok": False, "message": "PayPal webhook could not be verified."}), 400
+        event = paypal_analytics_event(webhook_event, app.config)
+        if not event:
+            return jsonify({"ok": True, "stored": 0, "ignored": True}), 202
+        try:
+            inserted = analytics.analytics_store(app.config).store_event(event)
+        except Exception:
+            return jsonify({"ok": False, "message": "PayPal webhook could not be stored."}), 202
+        return jsonify({"ok": True, "stored": 1 if inserted else 0, "duplicates": 0 if inserted else 1}), 202
+
     @app.post("/analytics/events")
     def collect_analytics_events():
         if not analytics.analytics_enabled(app.config):
@@ -1369,6 +1394,150 @@ def volunteer_search_item():
 def build_free_guide_cards(content):
     guides_by_slug = {definition["slug"]: definition for definition in FREE_GUIDE_DEFINITIONS}
     return [build_free_guide_card(definition, content, guides_by_slug) for definition in FREE_GUIDE_DEFINITIONS]
+
+
+def paypal_webhook_configured(config):
+    return all(
+        (
+            config.get("PAYPAL_CLIENT_ID"),
+            config.get("PAYPAL_CLIENT_SECRET"),
+            config.get("PAYPAL_WEBHOOK_ID"),
+        )
+    )
+
+
+def paypal_api_base(config):
+    if str(config.get("PAYPAL_ENVIRONMENT") or "live").lower() == "sandbox":
+        return "https://api-m.sandbox.paypal.com"
+    return "https://api-m.paypal.com"
+
+
+def paypal_access_token(config):
+    credentials = f"{config.get('PAYPAL_CLIENT_ID')}:{config.get('PAYPAL_CLIENT_SECRET')}".encode("utf-8")
+    auth = base64.b64encode(credentials).decode("ascii")
+    request_obj = Request(
+        f"{paypal_api_base(config)}/v1/oauth2/token",
+        data=urlencode({"grant_type": "client_credentials"}).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Basic {auth}",
+            "Accept": "application/json",
+            "Accept-Language": "en_US",
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+    )
+    with urlopen(request_obj, timeout=10) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+    return payload.get("access_token") or ""
+
+
+def verify_paypal_webhook(config, webhook_event, headers):
+    required_headers = {
+        "auth_algo": headers.get("PAYPAL-AUTH-ALGO", ""),
+        "cert_url": headers.get("PAYPAL-CERT-URL", ""),
+        "transmission_id": headers.get("PAYPAL-TRANSMISSION-ID", ""),
+        "transmission_sig": headers.get("PAYPAL-TRANSMISSION-SIG", ""),
+        "transmission_time": headers.get("PAYPAL-TRANSMISSION-TIME", ""),
+    }
+    if not all(required_headers.values()):
+        return False
+    token = paypal_access_token(config)
+    if not token:
+        return False
+    verify_payload = {
+        **required_headers,
+        "webhook_id": config.get("PAYPAL_WEBHOOK_ID"),
+        "webhook_event": webhook_event,
+    }
+    request_obj = Request(
+        f"{paypal_api_base(config)}/v1/notifications/verify-webhook-signature",
+        data=json.dumps(verify_payload).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+    )
+    try:
+        with urlopen(request_obj, timeout=10) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+        return False
+    return payload.get("verification_status") == "SUCCESS"
+
+
+def paypal_analytics_event(webhook_event, config):
+    event_type = str(webhook_event.get("event_type") or "").upper()
+    event_name = paypal_event_name(event_type)
+    if not event_name:
+        return None
+    resource = webhook_event.get("resource") if isinstance(webhook_event.get("resource"), dict) else {}
+    amount_value, currency_code = paypal_amount(resource)
+    resource_id = str(resource.get("id") or resource.get("sale_id") or resource.get("capture_id") or "")
+    paypal_event_id = str(webhook_event.get("id") or "")
+    stable_id = hashlib.sha256(f"{paypal_event_id}:{resource_id}:{event_type}".encode("utf-8")).hexdigest()[:32]
+    metadata = {
+        "provider": "paypal",
+        "completion_source": "paypal_webhook",
+        "paypal_event_id": paypal_event_id,
+        "paypal_resource_id": resource_id,
+        "paypal_event_type": event_type,
+        "paypal_status": str(resource.get("status") or ""),
+        "donation_status": paypal_donation_status(event_name),
+        "amount_value": amount_value,
+        "currency_code": currency_code,
+    }
+    payload = {
+        "event_id": f"paypal:{stable_id}",
+        "event_name": event_name,
+        "page_path": "/donation/",
+        "page_title": "PayPal donation",
+        "content_id": "paypal-donation",
+        "content_type": "static",
+        "article_group": "nonprofit updates",
+        "element_id": "paypal-webhook",
+        "element_label": "PayPal webhook",
+        "element_type": "webhook",
+        "element_position": "server",
+        "destination_domain": "paypal.com",
+        "source": "paypal",
+        "medium": "webhook",
+        "campaign": str(resource.get("custom_id") or resource.get("invoice_id") or ""),
+        "environment": analytics.analytics_environment(config),
+        "metadata": metadata,
+    }
+    return analytics.normalize_event_payload(payload, config)
+
+
+def paypal_event_name(event_type):
+    if event_type in {"PAYMENT.CAPTURE.COMPLETED", "PAYMENT.SALE.COMPLETED"}:
+        return "donation_completed"
+    if event_type in {"PAYMENT.CAPTURE.REFUNDED", "PAYMENT.SALE.REFUNDED"}:
+        return "donation_refunded"
+    if event_type in {"PAYMENT.CAPTURE.DENIED", "PAYMENT.CAPTURE.DECLINED", "PAYMENT.SALE.DENIED"}:
+        return "donation_denied"
+    if event_type in {"CHECKOUT.ORDER.APPROVED"}:
+        return "donation_checkout_started"
+    return ""
+
+
+def paypal_donation_status(event_name):
+    return {
+        "donation_completed": "completed",
+        "donation_refunded": "refunded",
+        "donation_denied": "denied",
+        "donation_checkout_started": "checkout_started",
+    }.get(event_name, "")
+
+
+def paypal_amount(resource):
+    amount = resource.get("amount") if isinstance(resource.get("amount"), dict) else {}
+    seller_receivable = resource.get("seller_receivable_breakdown") if isinstance(resource.get("seller_receivable_breakdown"), dict) else {}
+    gross_amount = seller_receivable.get("gross_amount") if isinstance(seller_receivable.get("gross_amount"), dict) else {}
+    value = amount.get("value") or amount.get("total") or gross_amount.get("value") or ""
+    currency = amount.get("currency_code") or amount.get("currency") or gross_amount.get("currency_code") or ""
+    return str(value)[:32], str(currency).upper()[:8]
 
 
 def build_free_guide_card(definition, content, guides_by_slug):
@@ -1915,6 +2084,7 @@ def build_admin_dashboard(config, args=None):
         dashboard_stat("Browser sessions", totals.get("anonymous_sessions", 0), summary, "anonymous_sessions", "Anonymous browser sessions, not identified people."),
         dashboard_stat("Support button clicks", totals.get("donation_cta_clicks", 0), summary, "donation_cta_clicks", "Donation/support buttons clicked before PayPal opens."),
         dashboard_stat("PayPal donation page opened", totals.get("paypal_clicks", 0), summary, "paypal_clicks", "PayPal opened; not a confirmed donation."),
+        dashboard_stat("Confirmed donations", totals.get("confirmed_donations", 0), summary, "confirmed_donations", "Verified PayPal webhook donations only."),
         dashboard_stat("Health-tool clicks", totals.get("health_tool_clicks", 0), summary, "health_tool_clicks", "Clicks to JEIR, Memovela, and related tools."),
         dashboard_stat("Newsletter signups", totals.get("newsletter_signups", 0), summary, "newsletter_signups", "Successful accepted newsletter signups only."),
         dashboard_stat("Free guide downloads", totals.get("resource_pdf_downloads", 0), summary, "resource_pdf_downloads", "Downloads of the public PDF guides."),
@@ -1967,7 +2137,10 @@ def build_admin_dashboard(config, args=None):
             "health_tools": analytics.click_rate(totals.get("health_tool_clicks", 0), page_views),
             "newsletter": analytics.click_rate(totals.get("newsletter_signups", 0), page_views),
         },
-        "confirmed_donations_available": totals.get("confirmed_donations", 0) > 0,
+        "paypal_webhook_configured": paypal_webhook_configured(config),
+        "confirmed_donations_available": totals.get("confirmed_donations", 0) > 0 or paypal_webhook_configured(config),
+        "confirmed_donation_amount": money_from_cents(totals.get("confirmed_donation_amount_cents", 0)),
+        "refunded_donation_amount": money_from_cents(totals.get("refunded_donation_amount_cents", 0)),
     }
 
 
@@ -1981,6 +2154,11 @@ def dashboard_stat(label, value, summary, key, help_text):
         "direction": comparison.get("direction", "flat"),
         "help": help_text,
     }
+
+
+def money_from_cents(cents, currency="$"):
+    cents = int(cents or 0)
+    return f"{currency}{cents / 100:,.2f}"
 
 
 def dashboard_funnels(summary):
@@ -3116,6 +3294,9 @@ def human_event_label(event):
         "cta_impression": "Someone saw a call-to-action",
         "donation_cta_click": "Someone clicked a support button",
         "paypal_click": "Someone opened PayPal",
+        "donation_completed": "PayPal confirmed a donation",
+        "donation_refunded": "PayPal reported a refund",
+        "donation_denied": "PayPal denied a payment",
         "health_tool_click": "Someone opened a health tool",
         "newsletter_form_view": "Someone saw a newsletter form",
         "newsletter_form_interaction": "Someone interacted with a newsletter form",

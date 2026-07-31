@@ -492,7 +492,10 @@
         <article><span>Donation CTA clicks</span><strong>{{ dashboard.summary.totals.donation_cta_clicks }}</strong><small>CTR: {{ dashboard.rates.donation_cta }}</small></article>
         <article><span>PayPal opens</span><strong>{{ dashboard.summary.totals.paypal_clicks }}</strong><small>CTR: {{ dashboard.rates.paypal }}</small></article>
         <article><span>Checkout starts</span><strong>{{ dashboard.summary.totals.checkout_starts }}</strong><small>Shown only when reliably observed</small></article>
-        <article><span>Confirmed donations</span><strong>{% if dashboard.confirmed_donations_available %}{{ dashboard.summary.totals.confirmed_donations }}{% else %}Unavailable{% endif %}</strong><small>Requires verified provider confirmation</small></article>
+        <article><span>Confirmed donations</span><strong>{% if dashboard.confirmed_donations_available %}{{ dashboard.summary.totals.confirmed_donations }}{% else %}Unavailable{% endif %}</strong><small>{% if dashboard.paypal_webhook_configured %}Verified by PayPal webhook{% else %}Requires verified provider confirmation{% endif %}</small></article>
+        <article><span>Confirmed amount</span><strong>{{ dashboard.confirmed_donation_amount }}</strong><small>Completed PayPal donations only</small></article>
+        <article><span>Refunded amount</span><strong>{{ dashboard.refunded_donation_amount }}</strong><small>{{ dashboard.summary.totals.refunded_donations }} refund events</small></article>
+        <article><span>Denied payments</span><strong>{{ dashboard.summary.totals.denied_donations }}</strong><small>Reported by PayPal</small></article>
       </div>
       <div class="admin-dashboard__grid">
         {{ analytics_list("Source pages", dashboard.summary.donation_sources, "No donation clicks have been recorded during this period.") }}
