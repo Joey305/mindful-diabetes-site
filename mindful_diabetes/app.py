@@ -255,7 +255,7 @@ FREE_GUIDE_DEFINITIONS = [
         "who": "Adults and families interested in the connection between metabolic, cardiovascular, and cognitive health.",
         "category": "Brain Health",
         "tags": ["Brain Health", "Diabetes Education", "Prevention"],
-        "page_count": 23,
+        "page_count": 24,
         "pdf_filename": "mindful-diabetes-blood-sugar-brain-health-2026.pdf",
         "cover_filename": "blood-sugar-brain-health-cover-preview.png",
         "thumb_filename": "blood-sugar-brain-health-download-card-thumbnail.png",

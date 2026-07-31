@@ -151,7 +151,7 @@ def test_free_guide_detail_pages_and_static_assets_resolve():
         "fats-without-fear": "21 pages",
         "grocery-store-survival-guide": "22 pages",
         "7-day-prevention-reset": "21 pages",
-        "blood-sugar-brain-health": "23 pages",
+        "blood-sugar-brain-health": "24 pages",
     }
     for slug, page_count in expected.items():
         response = client.get(f"/free-guides/{slug}/")
