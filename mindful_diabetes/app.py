@@ -81,6 +81,8 @@ DEFAULT_GROWTH_GOALS = [
 ]
 PRESERVED_CONTENT_CLASSES = {
     "article-image-placeholder",
+    "article-callout",
+    "article-callout__title",
     "article-impact-card",
     "article-impact-grid",
     "article-table-wrap",

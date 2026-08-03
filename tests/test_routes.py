@@ -30,7 +30,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 99
+    assert len(content.latest_posts) == 100
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -949,6 +949,105 @@ def test_summer_hydration_preview_images_include_seo_metadata():
         assert b'data-description="Hero image for a Mindful Diabetes article' in response.data
 
 
+def test_pediatric_otc_cgm_stelo_article_has_verified_sources_and_guardrails():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    response = client.get("/otc-cgm-children-stelo-family-guide/")
+    post = app.config["CONTENT"].posts_by_slug["otc-cgm-children-stelo-family-guide"]
+    source_note = app_module.BASE_DIR / "docs" / "research" / "2026-08-03-pediatric-otc-cgm-stelo-sources.md"
+    brief = app_module.BASE_DIR / "docs" / "blog-image-briefs" / "2026-08-03-pediatric-otc-cgm-stelo.md"
+
+    internal_links = [
+        b'href="/blood-sugar-body/"',
+        b'href="/sleep-and-diabetes-management/"',
+        b'href="/food-sequencing-diabetes/"',
+        b'href="/guide/"',
+        b'href="/free-guides/"',
+        b'href="/continuous-glucose-monitors-and-more-to-keep-you-on-track/"',
+        b'href="/glucose-metabolism-and-brain-health/"',
+        b'href="/insulin-resistance-cognitive-decline/"',
+        b'href="/low-impact-exercise/"',
+        b'href="/mindful-eating-the-key-to-blood-sugar-management/"',
+        b'href="/health-tools/"',
+        b'href="#subscribe"',
+    ]
+    external_links = [
+        b"https://www.fda.gov/news-events/press-announcements/fda-clears-first-over-counter-continuous-glucose-monitor-children",
+        b"https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260935",
+        b"https://www.accessdata.fda.gov/cdrh_docs/reviews/K260935.pdf",
+        b"https://www.stelo.com/en-us/safety-information",
+        b"https://www.stelo.com/en-us/compatibility",
+        b"https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+        b"https://www.cdc.gov/diabetes/signs-symptoms/index.html",
+        b"https://www.cdc.gov/diabetes/about/diabetic-ketoacidosis.html",
+        b"https://diabetesjournals.org/care/article/49/Supplement_1/S27/163926/2-Diagnosis-and-Classification-of-Diabetes",
+        b"https://diabetesjournals.org/care/article/49/Supplement_1/S297/163923/14-Children-and-Adolescents-Standards-of-Care-in",
+        b"https://pmc.ncbi.nlm.nih.gov/articles/PMC10258317/",
+        b"https://pmc.ncbi.nlm.nih.gov/articles/PMC5038546/",
+        b"https://pmc.ncbi.nlm.nih.gov/articles/PMC4002640/",
+    ]
+    image_assets = [
+        b"/static/uploads/2026/08/pediatric-otc-cgm-family-guide-2026.webp",
+        b"/static/uploads/2026/08/stelo-child-caregiver-glucose-trends.webp",
+        b"/static/uploads/2026/08/cgm-trends-versus-diabetes-diagnosis.webp",
+        b"/static/uploads/2026/08/who-should-use-pediatric-otc-cgm.webp",
+        b"/static/uploads/2026/08/cgm-data-anxiety-eating-behavior-families.webp",
+        b"/static/uploads/2026/08/questions-before-child-uses-cgm.webp",
+    ]
+    blocked_phrases = [
+        "fda approved",
+        "breakthrough for every child",
+        "revolutionary",
+        "end of fingersticks",
+        "every parent should",
+        "hack your child",
+        "optimize your child",
+        "perfect glucose",
+        "good foods and bad foods",
+        "flatten every glucose spike",
+        "prevent diabetes with a sensor",
+        "catch diabetes before the doctor does",
+        "take control of your child's health",
+    ]
+
+    assert response.status_code == 200
+    assert post["date"] == "2026-08-03 09:00:00"
+    assert app.config["CONTENT"].latest_posts[0]["slug"] == "otc-cgm-children-stelo-family-guide"
+    assert post["title"] == "The First Over-the-Counter CGM for Children: What Families Should Know About Stelo"
+    assert post["content_html"].count("<img ") == 6
+    assert post["content_html"].count("title=") == 6
+    assert post["content_html"].count("data-description=") == 6
+    assert post["content_html"].count("<table") == 2
+    assert response.data.count(b'class="article-table-wrap"') == 2
+    assert post["preview_image_title"] == "Family discussion about pediatric OTC CGM use"
+    assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
+    assert post["seo_title"] == "OTC CGM for Children: What Families Should Know About Stelo"
+    assert "why it cannot diagnose diabetes" in post["meta_description"]
+    assert b"June 12, 2026" in response.data
+    assert b"K260935" in response.data
+    assert b"2 years of age and older who do not use insulin" in response.data
+    assert b"under caregiver supervision" in response.data
+    assert b"not designed to alert users to problematic hypoglycemia" in response.data
+    assert b"people receiving dialysis" in response.data
+    assert b"disordered eating" in response.data
+    assert b"A Glucose Trend Is Not a Diabetes Diagnosis" in response.data
+    assert b"families should not start medication, stop medication, change a dose" in response.data
+    assert b"Symptoms Take Priority Over the Sensor" in response.data
+    assert "adult-oriented Stelo indication language" in post["content_html"]
+    assert b'class="article-impact-grid"' in response.data
+    assert b'class="article-callout"' in response.data
+    assert all(asset in response.data for asset in image_assets)
+    assert all(link in response.data for link in internal_links)
+    assert all(link in response.data for link in external_links)
+    assert all(phrase not in post["content_html"].lower() for phrase in blocked_phrases)
+    assert source_note.exists()
+    source_text = source_note.read_text(encoding="utf-8")
+    assert "510(k): `K260935`" in source_text
+    assert "Pediatric-specific purchase pathway and insurance coverage are guaranteed" in source_text
+    assert brief.exists()
+    assert brief.read_text(encoding="utf-8").count(".webp`") == 6
+
+
 def test_june_alzheimers_clinical_trials_post_has_snapshot_sources_and_images():
     app = create_app({"TESTING": True})
     client = app.test_client()
@@ -1020,7 +1119,7 @@ def test_june_alzheimers_clinical_trials_post_has_snapshot_sources_and_images():
 
     assert response.status_code == 200
     assert post["date"] == "2026-06-10 09:00:00"
-    assert app.config["CONTENT"].latest_posts[1]["slug"] == "alzheimers-clinical-trials-june-2026"
+    assert app.config["CONTENT"].latest_posts[2]["slug"] == "alzheimers-clinical-trials-june-2026"
     assert post["content_html"].count("<img ") == 6
     assert post["content_html"].count("title=") == 6
     assert post["preview_image_title"] == "Alzheimer’s clinical-trial research visit"
