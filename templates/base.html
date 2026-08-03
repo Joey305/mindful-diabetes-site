@@ -12,6 +12,17 @@
     {% if turnstile_site_key %}
       <link rel="preconnect" href="https://challenges.cloudflare.com">
     {% endif %}
+    {% if google_ads_config.enabled %}
+      <link rel="preconnect" href="https://www.googletagmanager.com">
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ google_ads_config.conversion_id }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "{{ google_ads_config.conversion_id }}");
+        window.__MDI_GOOGLE_ADS__ = {{ google_ads_config|tojson }};
+      </script>
+    {% endif %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
     <script src="{{ url_for('static', filename='js/site-analytics.js') }}" defer data-enabled="{{ 1 if analytics_browser_config.enabled else 0 }}" data-endpoint="{{ analytics_browser_config.endpoint }}" data-environment="{{ analytics_browser_config.environment }}"></script>
     <script src="{{ url_for('static', filename='js/site-nav.js') }}" defer></script>

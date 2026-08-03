@@ -1856,6 +1856,36 @@ def test_admin_pages_do_not_enable_browser_analytics(tmp_path):
     assert b'data-enabled="1"' in public_response.data
 
 
+def test_google_ads_tracking_loads_only_when_enabled_for_public_pages(tmp_path):
+    app = analytics_app(
+        tmp_path,
+        {
+            "GOOGLE_ADS_CONVERSION_ID": "AW-11435654295",
+            "GOOGLE_ADS_ENABLE_LOCAL_TESTING": "1",
+            "GOOGLE_ADS_CONVERSION_ACTIONS_JSON": json.dumps(
+                {"resource_pdf_download": "downloadLabel123"}
+            ),
+        },
+    )
+    client = app.test_client()
+
+    public_response = client.get("/")
+    admin_response = client.get("/admin/login/")
+
+    assert b"https://www.googletagmanager.com/gtag/js?id=AW-11435654295" in public_response.data
+    assert b'"resource_pdf_download": "AW-11435654295/downloadLabel123"' in public_response.data
+    assert b"https://www.googletagmanager.com/gtag/js?id=AW-11435654295" not in admin_response.data
+
+
+def test_google_ads_tracking_is_disabled_by_default_in_tests(tmp_path):
+    app = analytics_app(tmp_path, {"GOOGLE_ADS_CONVERSION_ID": "AW-11435654295"})
+    client = app.test_client()
+
+    response = client.get("/")
+
+    assert b"googletagmanager.com/gtag/js" not in response.data
+
+
 def test_donation_paypal_and_health_tool_events_stay_distinct(tmp_path):
     app = analytics_app(tmp_path)
     client = app.test_client()

@@ -34,6 +34,16 @@
       "description": "Optional Postgres connection URL for persistent admin login codes, activity tracking, and CMS content.",
       "required": false
     },
+    "GOOGLE_ADS_CONVERSION_ID": {
+      "description": "Public Google Ads conversion ID used by the Google tag.",
+      "required": false,
+      "value": "AW-11435654295"
+    },
+    "GOOGLE_ADS_CONVERSION_ACTIONS_JSON": {
+      "description": "Optional JSON map from first-party analytics events to Google Ads conversion labels.",
+      "required": false,
+      "value": "{}"
+    },
     "CMS_DATA_PATH": {
       "description": "Optional local development JSON path for CMS content when DATABASE_URL is unavailable.",
       "required": false

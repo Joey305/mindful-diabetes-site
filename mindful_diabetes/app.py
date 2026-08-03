@@ -420,6 +420,9 @@ def create_app(test_config=None):
         ANALYTICS_REMOTE_BASE_URL=os.getenv("ANALYTICS_REMOTE_BASE_URL", ""),
         ANALYTICS_REMOTE_API_TOKEN=os.getenv("ANALYTICS_REMOTE_API_TOKEN", ""),
         ANALYTICS_REMOTE_TIMEOUT_SECONDS=os.getenv("ANALYTICS_REMOTE_TIMEOUT_SECONDS", "5"),
+        GOOGLE_ADS_CONVERSION_ID=os.getenv("GOOGLE_ADS_CONVERSION_ID", "AW-11435654295"),
+        GOOGLE_ADS_CONVERSION_ACTIONS_JSON=os.getenv("GOOGLE_ADS_CONVERSION_ACTIONS_JSON", "{}"),
+        GOOGLE_ADS_ENABLE_LOCAL_TESTING=os.getenv("GOOGLE_ADS_ENABLE_LOCAL_TESTING", ""),
         SITE_BASE_URL=os.getenv("SITE_BASE_URL", "https://mindfuldiabetes.org"),
         PAYPAL_CLIENT_ID=os.getenv("PAYPAL_CLIENT_ID", ""),
         PAYPAL_CLIENT_SECRET=os.getenv("PAYPAL_CLIENT_SECRET", ""),
@@ -467,6 +470,7 @@ def create_app(test_config=None):
             ),
             "admin_csrf_token": get_admin_csrf_token,
             "analytics_browser_config": browser_analytics_config(app.config),
+            "google_ads_config": google_ads_tracking_config(app.config),
         }
 
     @app.template_filter("date_label")
@@ -3408,6 +3412,48 @@ def browser_analytics_config(config):
         "endpoint": "/analytics/events",
         "environment": analytics.analytics_environment(config),
     }
+
+
+def google_ads_tracking_config(config):
+    conversion_id = (config.get("GOOGLE_ADS_CONVERSION_ID") or "").strip()
+    if conversion_id and not conversion_id.startswith("AW-"):
+        conversion_id = f"AW-{conversion_id}"
+
+    enabled = bool(conversion_id)
+    if config.get("TESTING") or config.get("DEBUG"):
+        enabled = analytics.truthy(config.get("GOOGLE_ADS_ENABLE_LOCAL_TESTING"))
+    if request.path.startswith(("/admin", "/analytics", "/static")):
+        enabled = False
+
+    return {
+        "enabled": enabled,
+        "conversion_id": conversion_id,
+        "event_send_to": google_ads_event_send_to(config, conversion_id),
+    }
+
+
+def google_ads_event_send_to(config, conversion_id):
+    raw_actions = (config.get("GOOGLE_ADS_CONVERSION_ACTIONS_JSON") or "").strip()
+    if not raw_actions or not conversion_id:
+        return {}
+    try:
+        actions = json.loads(raw_actions)
+    except json.JSONDecodeError:
+        return {}
+    if not isinstance(actions, dict):
+        return {}
+
+    event_send_to = {}
+    for event_name, send_to in actions.items():
+        if event_name not in analytics.MEANINGFUL_ACTION_EVENTS:
+            continue
+        if not isinstance(send_to, str):
+            continue
+        send_to = send_to.strip()
+        if not send_to:
+            continue
+        event_send_to[event_name] = send_to if send_to.startswith("AW-") else f"{conversion_id}/{send_to}"
+    return event_send_to
 
 
 def same_origin_request(request_obj):

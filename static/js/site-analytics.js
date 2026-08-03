@@ -12,6 +12,19 @@
     endpoint: scriptConfig.endpoint || "",
     environment: scriptConfig.environment || "",
   };
+  var googleAdsConfig = window.__MDI_GOOGLE_ADS__ || {};
+  var googleAdsMeaningfulEvents = {
+    content_cta_click: true,
+    donation_cta_click: true,
+    health_tool_click: true,
+    newsletter_signup: true,
+    paypal_click: true,
+    resource_download_click: true,
+    resource_pdf_download: true,
+    resource_share_click: true,
+    search_result_click: true,
+    volunteer_cta_click: true,
+  };
   if (!config.enabled || !config.endpoint) {
     return;
   }
@@ -204,6 +217,7 @@
   }
 
   function send(event) {
+    sendGoogleAdsEvent(event);
     var body = JSON.stringify(event);
     try {
       if (navigator.sendBeacon) {
@@ -220,6 +234,27 @@
         keepalive: true,
       }).catch(function () {});
     } catch (_error) {}
+  }
+
+  function sendGoogleAdsEvent(event) {
+    if (!googleAdsConfig.enabled || !window.gtag || !event || !googleAdsMeaningfulEvents[event.event_name]) {
+      return;
+    }
+
+    var sendTo = googleAdsConfig.event_send_to && googleAdsConfig.event_send_to[event.event_name];
+    var params = {
+      event_category: event.event_category || "engagement",
+      event_label: event.event_name,
+      page_path: event.page_path || window.location.pathname || "/",
+    };
+
+    if (sendTo) {
+      params.send_to = sendTo;
+      window.gtag("event", "conversion", params);
+      return;
+    }
+
+    window.gtag("event", event.event_name, params);
   }
 
   window.trackEvent = function (eventName, metadata) {
