@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Revisions | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}admin-page{% endblock %}
+
+{% block content %}
+  <section class="admin-dashboard" aria-labelledby="revisions-heading">
+    <div class="admin-dashboard__header">
+      <div>
+        <p class="eyebrow">Content revisions</p>
+        <h1 id="revisions-heading">{{ item.title }}</h1>
+        <p class="admin-muted">Revisions are captured when published content is updated.</p>
+      </div>
+      <a class="admin-logout" href="{{ url_for('admin_content_editor', content_id=item.id) }}">Back to editor</a>
+    </div>
+
+    <section class="admin-panel admin-panel--wide">
+      {% if revisions %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th scope="col">Revision</th>
+                <th scope="col">Title</th>
+                <th scope="col">Status</th>
+                <th scope="col">Created</th>
+                <th scope="col">Created by</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for revision in revisions %}
+                <tr>
+                  <td>{{ revision.revision_number }}</td>
+                  <td>{{ revision.title }}</td>
+                  <td>{{ revision.status|title }}</td>
+                  <td>{{ revision.created_at_label }}</td>
+                  <td>{{ revision.created_by or "Admin" }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">No revisions yet.</p>
+      {% endif %}
+    </section>
+  </section>
+{% endblock %}

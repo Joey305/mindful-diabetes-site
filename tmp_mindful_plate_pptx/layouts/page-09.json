@@ -1,0 +1,1779 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/nztwvx",
+    "id": "nztwvx",
+    "slide": 9,
+    "layoutId": "f0930ad3-ec45-405f-89c7-992327d49d91",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFDF7",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 816,
+      "height": 1056
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Mindful Diabetes",
+    "colors": {
+      "dk1": "#16211D",
+      "lt1": "#FFFDF7",
+      "dk2": "#192442",
+      "lt2": "#FBF3EA",
+      "accent1": "#034B2F",
+      "accent2": "#F26A2E",
+      "accent3": "#E6F2EC",
+      "accent4": "#EEF7FA",
+      "accent5": "#F5C66B",
+      "accent6": "#5C6C67",
+      "hlink": "#034B2F",
+      "folHlink": "#192442"
+    },
+    "typefaces": [
+      "Lato",
+      "Lora"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "f0930ad3-ec45-405f-89c7-992327d49d91",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/ahwval4b",
+      "id": "1",
+      "bbox": [
+        58,
+        30,
+        27,
+        29
+      ],
+      "geometry": "roundRect",
+      "alt": "Mindful Diabetes Inc. logo",
+      "contentType": "image/jpeg",
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 29630"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "9a57f25d-6108-40d0-8cce-816a64ea4147",
+        "contentType": "image/jpeg",
+        "byteLength": 160253
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sradw3a1",
+      "id": "2",
+      "bbox": [
+        92,
+        35,
+        200,
+        18
+      ],
+      "geometry": "rect",
+      "text": "The Mindful Plate",
+      "textPreview": "The Mindful Plate",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lora",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The Mindful Plate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The Mindful Plate",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lora",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The Mindful Plate",
+              "fontSize": 10.51,
+              "typeface": "Lora",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsjep8rm",
+      "id": "3",
+      "bbox": [
+        92,
+        51,
+        230,
+        15
+      ],
+      "geometry": "rect",
+      "text": "Dietary fat",
+      "textPreview": "Dietary fat",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Dietary fat"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Dietary fat",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dietary fat",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/edsvyd87",
+      "id": "4",
+      "bbox": [
+        58,
+        75,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/felwri9s",
+      "id": "5",
+      "bbox": [
+        58,
+        1009,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0fux0nqd",
+      "id": "6",
+      "bbox": [
+        58,
+        1020,
+        185,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Mindful Diabetes Inc.",
+      "textPreview": "Mindful Diabetes Inc.",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Mindful Diabetes Inc."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Mindful Diabetes Inc.",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Mindful Diabetes Inc.",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1g3etsri",
+      "id": "7",
+      "bbox": [
+        332,
+        1020,
+        155,
+        18
+      ],
+      "geometry": "rect",
+      "text": "mindfuldiabetes.org",
+      "textPreview": "mindfuldiabetes.org",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "mindfuldiabetes.org"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "mindfuldiabetes.org",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "center",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "mindfuldiabetes.org",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "center",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uh8vmts3",
+      "id": "8",
+      "bbox": [
+        723,
+        1020,
+        35,
+        18
+      ],
+      "geometry": "rect",
+      "text": "9",
+      "textPreview": "9",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "9"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "9",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "alignment": "right",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "9",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "alignment": "right",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vihwfe98",
+      "id": "9",
+      "bbox": [
+        66,
+        83,
+        280,
+        22
+      ],
+      "geometry": "rect",
+      "text": "DIETARY FAT",
+      "textPreview": "DIETARY FAT",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DIETARY FAT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DIETARY FAT",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "DIETARY FAT",
+              "fontSize": 12,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zehcf218",
+      "id": "10",
+      "bbox": [
+        62,
+        112,
+        650,
+        76
+      ],
+      "geometry": "rect",
+      "text": "Fat adds flavor, texture, and staying power",
+      "textPreview": "Fat adds flavor, texture, and staying power",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 34,
+        "typeface": "Lora",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Fat adds flavor, texture, and staying"
+          },
+          {
+            "index": 2,
+            "text": "power"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Fat adds flavor, texture, and staying power",
+          "lineSpacingPercent": 103000,
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Lora",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.03
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Fat adds flavor, texture, and staying power",
+              "fontSize": 34,
+              "typeface": "Lora",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.03
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yd8b6xkn",
+      "id": "11",
+      "bbox": [
+        66,
+        196,
+        670,
+        58
+      ],
+      "geometry": "rect",
+      "text": "Dietary fat is an essential nutrient. The type and food source matter.",
+      "textPreview": "Dietary fat is an essential nutrient. The type and food source matter.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Dietary fat is an essential nutrient. The type and food source matter."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Dietary fat is an essential nutrient. The type and food source matter.",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dietary fat is an essential nutrient. The type and food source matter.",
+              "fontSize": 15,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l0zuhcje",
+      "id": "12",
+      "bbox": [
+        66,
+        290,
+        318,
+        300
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#B8D8C8",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0fqt872t",
+      "id": "13",
+      "bbox": [
+        432,
+        290,
+        318,
+        300
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FCE4D8",
+      "lineColor": "#F3B499",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bahcbi1c",
+      "id": "14",
+      "bbox": [
+        94,
+        324,
+        250,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Choose more often",
+      "textPreview": "Choose more often",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "Lora",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Choose more often"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Choose more often",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Lora",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Choose more often",
+              "fontSize": 18,
+              "typeface": "Lora",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q98b2dkr",
+      "id": "15",
+      "bbox": [
+        100,
+        379,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#034B2F",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dczudsj2",
+      "id": "16",
+      "bbox": [
+        122,
+        374,
+        218,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Avocado",
+      "textPreview": "Avocado",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Avocado"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Avocado",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Avocado",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbqt4n2x",
+      "id": "17",
+      "bbox": [
+        100,
+        417,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#034B2F",
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/36xc7i10",
+      "id": "18",
+      "bbox": [
+        122,
+        412,
+        218,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Nuts and seeds",
+      "textPreview": "Nuts and seeds",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Nuts and seeds"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Nuts and seeds",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Nuts and seeds",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/25obydkf",
+      "id": "19",
+      "bbox": [
+        100,
+        455,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#034B2F",
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6h4vad4n",
+      "id": "20",
+      "bbox": [
+        122,
+        450,
+        218,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Olive or canola oil",
+      "textPreview": "Olive or canola oil",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Olive or canola oil"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Olive or canola oil",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Olive or canola oil",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rixcji58",
+      "id": "21",
+      "bbox": [
+        100,
+        493,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#034B2F",
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s36dc3md",
+      "id": "22",
+      "bbox": [
+        122,
+        488,
+        218,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Fish such as salmon or sardines",
+      "textPreview": "Fish such as salmon or sardines",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Fish such as salmon or sardines"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Fish such as salmon or sardines",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Fish such as salmon or sardines",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t4ful8ny",
+      "id": "23",
+      "bbox": [
+        460,
+        324,
+        250,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Choose less often",
+      "textPreview": "Choose less often",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "Lora",
+        "color": "#8F3519",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Choose less often"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Choose less often",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Lora",
+            "color": "#8F3519",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Choose less often",
+              "fontSize": 18,
+              "typeface": "Lora",
+              "color": "#8F3519",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e5oved4j",
+      "id": "24",
+      "bbox": [
+        466,
+        379,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F26A2E",
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f6xcni54",
+      "id": "25",
+      "bbox": [
+        488,
+        374,
+        218,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Butter and cream",
+      "textPreview": "Butter and cream",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Butter and cream"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Butter and cream",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Butter and cream",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g76dgnmp",
+      "id": "26",
+      "bbox": [
+        466,
+        417,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F26A2E",
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/18fepsna",
+      "id": "27",
+      "bbox": [
+        488,
+        412,
+        218,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Processed meats",
+      "textPreview": "Processed meats",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Processed meats"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Processed meats",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Processed meats",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/29ovix4v",
+      "id": "28",
+      "bbox": [
+        466,
+        455,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F26A2E",
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ahwr250",
+      "id": "29",
+      "bbox": [
+        488,
+        450,
+        218,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Deep-fried foods",
+      "textPreview": "Deep-fried foods",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Deep-fried foods"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Deep-fried foods",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Deep-fried foods",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d4jyhw7i",
+      "id": "30",
+      "bbox": [
+        466,
+        493,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F26A2E",
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c3ax8r6x",
+      "id": "31",
+      "bbox": [
+        488,
+        488,
+        218,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Foods with trans fat",
+      "textPreview": "Foods with trans fat",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Foods with trans fat"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Foods with trans fat",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Foods with trans fat",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b21gfmpc",
+      "id": "32",
+      "bbox": [
+        84,
+        654,
+        640,
+        66
+      ],
+      "geometry": "rect",
+      "text": "A heart-health pattern usually emphasizes unsaturated fats from nuts, seeds, avocado, fish, and non-tropical liquid plant oils while limiting saturated fat and avoiding trans fat.",
+      "textPreview": "A heart-health pattern usually emphasizes unsaturated fats from nuts, seeds, avocado, fish, and non-tropical liquid plant oils while limi...",
+      "resolvedFontSize": 13.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.8,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A heart-health pattern usually emphasizes unsaturated fats from nuts, seeds, avocado, fish, and"
+          },
+          {
+            "index": 2,
+            "text": "non-tropical liquid plant oils while limiting saturated fat and avoiding trans fat."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A heart-health pattern usually emphasizes unsaturated fats from nuts, seeds, avocado, fish, and non-tropical liquid plant oils while limiting saturated fat and avoiding trans fat.",
+          "lineSpacingPercent": 122000,
+          "resolvedTextStyle": {
+            "fontSize": 13.8,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.22
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A heart-health pattern usually emphasizes unsaturated fats from nuts, seeds, avocado, fish, and non-tropical liquid plant oils while limiting saturated fat and avoiding trans fat.",
+              "fontSize": 13.8,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.22
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q1sfmhor",
+      "id": "33",
+      "bbox": [
+        66,
+        855,
+        684,
+        70
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#B8D8C8",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lsjylw7e",
+      "id": "34",
+      "bbox": [
+        83,
+        869,
+        650,
+        22
+      ],
+      "geometry": "rect",
+      "text": "More detail",
+      "textPreview": "More detail",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Lato",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "More detail"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "More detail",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Lato",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "More detail",
+              "fontSize": 13,
+              "typeface": "Lato",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/07axcr6t",
+      "id": "35",
+      "bbox": [
+        83,
+        897,
+        650,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Use the Fats Without Fear guide for saturated, unsaturated, and trans fats in plain language.",
+      "textPreview": "Use the Fats Without Fear guide for saturated, unsaturated, and trans fats in plain language.",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Use the Fats Without Fear guide for saturated, unsaturated, and trans fats in plain language."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Use the Fats Without Fear guide for saturated, unsaturated, and trans fats in plain language.",
+          "lineSpacingPercent": 117000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.17
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Use the Fats Without Fear guide for saturated, unsaturated, and trans fats in plain language.",
+              "fontSize": 12,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.17
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

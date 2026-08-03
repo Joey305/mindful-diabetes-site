@@ -1,0 +1,299 @@
+{
+  "title": "The Grocery Store Survival Guide",
+  "subtitle": "How to Make Practical, Blood Sugar-Conscious Choices Without Feeling Overwhelmed",
+  "running_subtitle": "Practical Blood Sugar-Conscious Shopping",
+  "slug": "grocery-store-survival-guide",
+  "file": "mindful-diabetes-grocery-store-guide-2026.pdf",
+  "pages": [
+    {
+      "section": "Before shopping",
+      "title": "Before you shop",
+      "body": "A good grocery trip starts before the store. Check what you already have, choose two or three meals, and pick backup foods for busy days.",
+      "bullets": [
+        "You do not need a perfect list.",
+        "A short list you use is better than an ideal list left at home."
+      ],
+      "layout": "split_visual_right",
+      "visual": "smart-cart",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Five-part cart",
+      "title": "The five-part cart formula",
+      "body": "Build around vegetables, protein, fiber-rich carbohydrates, healthy fats, and flavor builders. This keeps shopping practical without depending on one brand or diet plan.",
+      "bullets": [
+        "Fresh, frozen, canned, and dried foods can all fit.",
+        "Perimeter-only shopping misses many useful budget foods."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "smart-cart",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Produce",
+      "title": "Produce",
+      "body": "Choose vegetables and fruits you will actually eat. Fresh produce is wonderful, but it is not the only way to eat well.",
+      "bullets": [
+        "Pre-cut vegetables can save energy.",
+        "Frozen vegetables may reduce waste."
+      ],
+      "layout": "comparison",
+      "visual": "fresh-frozen-canned",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Frozen foods",
+      "title": "Frozen foods",
+      "body": "Frozen vegetables and fruit can be affordable, quick, and nutritious. Look for options without heavy sauces or added sugars when possible.",
+      "bullets": [
+        "Frozen berries work in yogurt or oats.",
+        "Frozen greens can disappear into soups and eggs."
+      ],
+      "layout": "split_visual_left",
+      "visual": "freezer-staples",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Canned foods",
+      "title": "Canned foods",
+      "body": "Canned beans, tuna, salmon, vegetables, tomato products, and soups can help on low-energy days. Rinsing canned beans or vegetables can lower sodium.",
+      "bullets": [
+        "Compare labels when you can.",
+        "Keep emergency meals in the pantry."
+      ],
+      "layout": "card_grid",
+      "visual": "pantry-cards",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Protein",
+      "title": "Protein choices",
+      "body": "Protein can come from eggs, fish, poultry, lean meat, tofu, tempeh, yogurt, cottage cheese, beans, lentils, nuts, and seeds.",
+      "bullets": [
+        "Beans and lentils also contain carbohydrate.",
+        "Choose based on budget, culture, and medical needs."
+      ],
+      "layout": "split_visual_right",
+      "visual": "protein-map",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Plant proteins",
+      "title": "Beans, lentils, tofu, and plant proteins",
+      "body": "Beans, lentils, tofu, tempeh, and edamame can support filling meals. They are useful in soups, tacos, bowls, stir-fries, curries, and salads.",
+      "bullets": [
+        "Seasoning matters.",
+        "Start with canned beans if dried beans feel like too much."
+      ],
+      "layout": "card_grid",
+      "visual": "plant-proteins",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Grains",
+      "title": "Breads, grains, cereals, and tortillas",
+      "body": "Look for grains and breads that bring fiber and fit your glucose plan. Whole grain, serving size, and total carbohydrate are more useful than marketing claims alone.",
+      "bullets": [
+        "Multigrain does not always mean whole grain.",
+        "Compare fiber and total carbohydrate."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "grain-label",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Dairy",
+      "title": "Dairy and alternatives",
+      "body": "Milk and yogurt contain carbohydrate. Plain yogurt, unsweetened fortified soy milk, and lower-sugar options may fit many plans, but allergies and preferences vary.",
+      "bullets": [
+        "Check added sugar.",
+        "Choose what fits your taste and budget."
+      ],
+      "layout": "card_grid",
+      "visual": "dairy-cards",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Snacks",
+      "title": "Snacks",
+      "body": "A snack can be planned or it can become accidental grazing. Pair protein or fat with fiber when you want something that lasts longer.",
+      "bullets": [
+        "Fruit with nuts.",
+        "Hummus with vegetables.",
+        "Yogurt with berries."
+      ],
+      "layout": "split_visual_right",
+      "visual": "snack-formula",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Drinks",
+      "title": "Drinks",
+      "body": "Sweet drinks can add sugar quickly. Start by improving one drink you have often rather than overhauling every beverage.",
+      "bullets": [
+        "Water, unsweet tea, sparkling water, or smaller sweet drinks can all be steps.",
+        "Alcohol needs medication and safety awareness."
+      ],
+      "layout": "comparison",
+      "visual": "drink-comparison",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Label",
+      "title": "Reading the Nutrition Facts label",
+      "body": "Start with serving size, then check total carbohydrate, fiber, added sugar, saturated fat, and sodium. Percent Daily Value helps compare nutrients. [3]",
+      "bullets": [
+        "5% DV is low and 20% DV is high.",
+        "Serving size is not a personal portion prescription."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "label-map",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Carbs and sugar",
+      "title": "Total carbohydrate and added sugar",
+      "body": "Total carbohydrate includes starches, fiber, sugars, and added sugars. Added sugars are added during processing or packaging, while naturally occurring sugars can be found in fruit and milk. [4]",
+      "bullets": [
+        "Total carbohydrate matters for glucose.",
+        "Ingredient names do not replace checking total carbohydrate."
+      ],
+      "layout": "split_visual_right",
+      "visual": "sugar-names",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Fiber",
+      "title": "Fiber",
+      "body": "Fiber can support fullness and steadier meals. The Nutrition Facts label lists dietary fiber in grams and Percent Daily Value.",
+      "bullets": [
+        "Compare similar products.",
+        "Increase fiber gradually."
+      ],
+      "layout": "split_visual_left",
+      "visual": "fiber-ladder",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Sodium",
+      "title": "Sodium",
+      "body": "The FDA Daily Value for sodium is less than 2,300 mg per day. Many packaged foods vary widely, so comparing labels can help. [5]",
+      "bullets": [
+        "5% DV or less is low.",
+        "20% DV or more is high."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "sodium-label",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Claims",
+      "title": "Ingredient lists and marketing claims",
+      "body": "Front labels can be useful, but they are not the whole story. Natural, keto, diabetic-friendly, low-fat, sugar-free, and no sugar added still deserve a label check.",
+      "bullets": [
+        "Net carbs are not regulated the same way on every label.",
+        "Sugar-free does not always mean carbohydrate-free."
+      ],
+      "layout": "card_grid",
+      "visual": "claims",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Budget",
+      "title": "Budget strategies",
+      "body": "Use store brands, frozen vegetables, canned beans, oats, eggs, lentils, rice, seasonal produce, and planned leftovers.",
+      "bullets": [
+        "Shop your kitchen first.",
+        "Let budget be part of the plan, not a source of shame."
+      ],
+      "layout": "card_grid",
+      "visual": "budget-cart",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Fast meals",
+      "title": "Ten-minute meal formulas",
+      "body": "Fast meals can still have structure: heat a base, add protein, add vegetables, add flavor, and choose a drink.",
+      "bullets": [
+        "Beans, salsa, greens, and tortillas.",
+        "Frozen vegetables, tofu, sauce, and rice.",
+        "Tuna, crackers, cucumber, fruit, and water."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "meal-formula",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Checklist",
+      "title": "Printable grocery checklist",
+      "body": "Use this list as a starting point. Add what fits your family, budget, culture, and medical needs.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "fields",
+        "fields": [
+          "Produce",
+          "Protein",
+          "Fiber-rich carbohydrates",
+          "Healthy fats",
+          "Drinks",
+          "Snacks",
+          "Pantry/freezer backups",
+          "Notes"
+        ]
+      }
+    },
+    {
+      "section": "Next steps",
+      "title": "Make the store easier next time",
+      "body": "Save one list that worked, one backup meal, and one label comparison. The next trip gets easier when you do not start from scratch.",
+      "bullets": [
+        "Download another free guide.",
+        "Visit Health Tools.",
+        "Share this guide with a caregiver or friend."
+      ],
+      "layout": "back_cover",
+      "visual": null,
+      "callout": null,
+      "worksheet": null
+    }
+  ],
+  "refs": [
+    "fda_label",
+    "fda_sugar",
+    "fda_sodium",
+    "plate",
+    "usda"
+  ],
+  "layout_system": [
+    "full_width_text",
+    "full_width_visual_then_text",
+    "split_visual_left",
+    "split_visual_right",
+    "card_grid",
+    "comparison",
+    "worksheet_full_page",
+    "reference_page",
+    "back_cover"
+  ]
+}

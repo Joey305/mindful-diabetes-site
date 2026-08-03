@@ -1,0 +1,7 @@
+<section class="cms-block cms-section-container cms-section-container--{{ block.settings.width }} cms-section-container--{{ block.settings.background }} cms-spacer-pad--{{ block.settings.spacing }} {% if block.settings.frame %}cms-section-container--framed{% endif %}">
+  {% for nested_block in block.content.blocks %}
+    {% with block=nested_block %}
+      {% include "blocks/" ~ nested_block.type ~ ".html" %}
+    {% endwith %}
+  {% endfor %}
+</section>

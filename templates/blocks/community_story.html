@@ -1,0 +1,10 @@
+<article class="cms-block cms-community-story">
+  {% if block.content.photo %}<img src="{{ block.content.photo }}" alt="">{% endif %}
+  <div>
+    <p class="eyebrow">Community story</p>
+    <h2>{{ "Anonymous story" if block.content.anonymous else block.content.name }}</h2>
+    {% if block.content.pull_quote %}<blockquote>{{ block.content.pull_quote }}</blockquote>{% endif %}
+    {% if block.content.story %}<p>{{ block.content.story }}</p>{% endif %}
+    {% if not block.settings.permission_confirmed %}<p class="cms-meta">Permission confirmation is required before publication.</p>{% endif %}
+  </div>
+</article>

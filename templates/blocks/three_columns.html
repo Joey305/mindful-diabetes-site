@@ -1,0 +1,11 @@
+<div class="cms-block cms-columns cms-columns--three">
+  {% for column in block.content.columns %}
+    <div class="cms-column">
+      {% for nested_block in column.blocks %}
+        {% with block=nested_block %}
+          {% include "blocks/" ~ nested_block.type ~ ".html" %}
+        {% endwith %}
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

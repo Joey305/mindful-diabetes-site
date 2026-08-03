@@ -1,0 +1,1 @@
+These revised PNG assets are exported from the rebuilt web PDF at 200 DPI. Core diagrams and worksheet structures are drawn as vector elements by the canonical ReportLab generator, so the PDF remains the editable source of truth.

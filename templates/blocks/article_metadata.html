@@ -1,0 +1,7 @@
+<div class="cms-block cms-article-metadata">
+  {% if block.settings.show_author and item.author %}<span>By {{ item.author }}</span>{% endif %}
+  {% if block.settings.show_dates and item.published_at_label %}<span>{{ item.published_at_label }}</span>{% endif %}
+  {% if block.settings.show_category and item.settings_json.category %}<span>{{ item.settings_json.category }}</span>{% endif %}
+  {% if block.settings.show_reading_time and item.settings_json.estimated_reading_time %}<span>{{ item.settings_json.estimated_reading_time }} min read</span>{% endif %}
+  {% if block.content.reviewed_by %}<span>Reviewed by {{ block.content.reviewed_by }}</span>{% endif %}
+</div>

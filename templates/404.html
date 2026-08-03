@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found | Mindful Diabetes Inc{% endblock %}
+{% block meta_description %}<meta name="description" content="This Mindful Diabetes page could not be found. Search the site or visit our free health guides, Pathways to Wellness articles, health tools, or research updates."><meta name="robots" content="noindex">{% endblock %}
+{% block body_class %}error-view error-404{% endblock %}
+
+{% block content %}
+  <section class="error-hero" aria-labelledby="error-404-heading">
+    <div class="error-hero__inner">
+      <div class="error-hero__copy">
+        <p class="eyebrow">404</p>
+        <h1 id="error-404-heading">This page wandered off the path.</h1>
+        <p>The link may have changed, the address may have a typo, or the page may no longer be available. You can search Mindful Diabetes or jump to one of the most useful places on the site.</p>
+        <form class="error-search" action="{{ url_for('search') }}" method="get" role="search">
+          <label class="screen-reader-text" for="error-search-input">Search Mindful Diabetes</label>
+          <input id="error-search-input" name="q" type="search" value="{{ search_hint }}" placeholder="Search articles, guides, tools...">
+          <button type="submit" data-track-event="content_cta_click" data-track-category="content" data-track-label="404 search" data-track-id="404_search" data-track-position="404-page">Search</button>
+        </form>
+        <div class="button-row error-actions">
+          <a class="button-primary" href="{{ url_for('home') }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="404 Home" data-track-id="404_home" data-track-position="404-page" data-track-destination="{{ url_for('home') }}">Go Home</a>
+          <a class="button-secondary button-secondary--light" href="{{ url_for('free_guides') }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="404 Free Health Guides" data-track-id="404_free_guides" data-track-position="404-page" data-track-destination="{{ url_for('free_guides') }}">Free Health Guides</a>
+        </div>
+      </div>
+      <div class="error-hero__panel" aria-label="Helpful next steps">
+        <span>404</span>
+        <strong>Still here to help</strong>
+        <p>Try a search, browse the free downloadable guides, or continue learning through Pathways to Wellness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="error-link-section" aria-labelledby="error-links-heading">
+    <div class="section-heading section-heading--left">
+      <p class="eyebrow">Helpful places to start</p>
+      <h2 id="error-links-heading">Find What You Were Looking For</h2>
+    </div>
+    <div class="error-link-grid">
+      <a href="{{ url_for('guide') }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="404 Pathways to Wellness" data-track-id="404_pathways" data-track-position="404-link-grid" data-track-destination="{{ url_for('guide') }}">
+        <strong>Pathways to Wellness</strong>
+        <span>Practical articles and everyday guidance for living well with diabetes.</span>
+      </a>
+      <a href="{{ url_for('free_guides') }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="404 Free Health Guides" data-track-id="404_free_guides_grid" data-track-position="404-link-grid" data-track-destination="{{ url_for('free_guides') }}">
+        <strong>Free Health Guides</strong>
+        <span>Download printable PDF guides, worksheets, and checklists.</span>
+      </a>
+      <a href="{{ url_for('health_tools') }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="404 Health Tools" data-track-id="404_health_tools" data-track-position="404-link-grid" data-track-destination="{{ url_for('health_tools') }}">
+        <strong>Health Tools</strong>
+        <span>Use simple tools and trusted resources for informed health decisions.</span>
+      </a>
+      <a href="{{ url_for('research') }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="404 Research" data-track-id="404_research" data-track-position="404-link-grid" data-track-destination="{{ url_for('research') }}">
+        <strong>Research &amp; Updates</strong>
+        <span>Read research summaries, nonprofit updates, and evidence-informed information.</span>
+      </a>
+    </div>
+  </section>
+
+  {% if latest_posts %}
+    <section class="error-latest" aria-labelledby="error-latest-heading">
+      <div class="section-heading section-heading--left">
+        <p class="eyebrow">Recent learning</p>
+        <h2 id="error-latest-heading">Latest from Pathways to Wellness</h2>
+      </div>
+      <div class="error-latest-grid">
+        {% for post in latest_posts %}
+          <article>
+            <p>{{ post.date | date_label }}</p>
+            <h3><a href="{{ post.canonical_path }}">{{ post.title }}</a></h3>
+            {% if post.excerpt_text %}
+              <p>{{ post.excerpt_text }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}

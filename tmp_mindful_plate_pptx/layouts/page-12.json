@@ -1,0 +1,1723 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/f30hk7",
+    "id": "f30hk7",
+    "slide": 12,
+    "layoutId": "f0930ad3-ec45-405f-89c7-992327d49d91",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFDF7",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 816,
+      "height": 1056
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Mindful Diabetes",
+    "colors": {
+      "dk1": "#16211D",
+      "lt1": "#FFFDF7",
+      "dk2": "#192442",
+      "lt2": "#FBF3EA",
+      "accent1": "#034B2F",
+      "accent2": "#F26A2E",
+      "accent3": "#E6F2EC",
+      "accent4": "#EEF7FA",
+      "accent5": "#F5C66B",
+      "accent6": "#5C6C67",
+      "hlink": "#034B2F",
+      "folHlink": "#192442"
+    },
+    "typefaces": [
+      "Lato",
+      "Lora"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "f0930ad3-ec45-405f-89c7-992327d49d91",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/0fe5o3yp",
+      "id": "1",
+      "bbox": [
+        58,
+        30,
+        27,
+        29
+      ],
+      "geometry": "roundRect",
+      "alt": "Mindful Diabetes Inc. logo",
+      "contentType": "image/jpeg",
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 29630"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "7a800e42-de3e-4a1f-b731-9a889751d785",
+        "contentType": "image/jpeg",
+        "byteLength": 160253
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6lwvy5ob",
+      "id": "2",
+      "bbox": [
+        92,
+        35,
+        200,
+        18
+      ],
+      "geometry": "rect",
+      "text": "The Mindful Plate",
+      "textPreview": "The Mindful Plate",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lora",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The Mindful Plate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The Mindful Plate",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lora",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The Mindful Plate",
+              "fontSize": 10.51,
+              "typeface": "Lora",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rm5wra5w",
+      "id": "3",
+      "bbox": [
+        92,
+        51,
+        230,
+        15
+      ],
+      "geometry": "rect",
+      "text": "Dinners",
+      "textPreview": "Dinners",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Dinners"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Dinners",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dinners",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbed4f6d",
+      "id": "4",
+      "bbox": [
+        58,
+        75,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1c7exkny",
+      "id": "5",
+      "bbox": [
+        58,
+        1009,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/epwv25on",
+      "id": "6",
+      "bbox": [
+        58,
+        1020,
+        185,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Mindful Diabetes Inc.",
+      "textPreview": "Mindful Diabetes Inc.",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Mindful Diabetes Inc."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Mindful Diabetes Inc.",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Mindful Diabetes Inc.",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fq5wva5s",
+      "id": "7",
+      "bbox": [
+        332,
+        1020,
+        155,
+        18
+      ],
+      "geometry": "rect",
+      "text": "mindfuldiabetes.org",
+      "textPreview": "mindfuldiabetes.org",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "mindfuldiabetes.org"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "mindfuldiabetes.org",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "center",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "mindfuldiabetes.org",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "center",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wfudsv69",
+      "id": "8",
+      "bbox": [
+        723,
+        1020,
+        35,
+        18
+      ],
+      "geometry": "rect",
+      "text": "12",
+      "textPreview": "12",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "12"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "12",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "alignment": "right",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "alignment": "right",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hg3ulgnu",
+      "id": "9",
+      "bbox": [
+        66,
+        83,
+        280,
+        22
+      ],
+      "geometry": "rect",
+      "text": "DINNERS",
+      "textPreview": "DINNERS",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DINNERS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DINNERS",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "DINNERS",
+              "fontSize": 12,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lkva98jy",
+      "id": "10",
+      "bbox": [
+        62,
+        112,
+        650,
+        76
+      ],
+      "geometry": "rect",
+      "text": "Cultural dinners can still be balanced",
+      "textPreview": "Cultural dinners can still be balanced",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 34,
+        "typeface": "Lora",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Cultural dinners can still be balanced"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Cultural dinners can still be balanced",
+          "lineSpacingPercent": 103000,
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Lora",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.03
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Cultural dinners can still be balanced",
+              "fontSize": 34,
+              "typeface": "Lora",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.03
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0zm9032d",
+      "id": "11",
+      "bbox": [
+        66,
+        196,
+        670,
+        58
+      ],
+      "geometry": "rect",
+      "text": "Healthy eating should not erase family food. Many traditional meals already include vegetables, beans, lentils, fish, lean meats, yogurt, grains, herbs, spices, and shared routines.",
+      "textPreview": "Healthy eating should not erase family food. Many traditional meals already include vegetables, beans, lentils, fish, lean meats, yogurt,...",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Healthy eating should not erase family food. Many traditional meals already include vegetables,"
+          },
+          {
+            "index": 2,
+            "text": "beans, lentils, fish, lean meats, yogurt, grains, herbs, spices, and shared routines."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Healthy eating should not erase family food. Many traditional meals already include vegetables, beans, lentils, fish, lean meats, yogurt, grains, herbs, spices, and shared routines.",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Healthy eating should not erase family food. Many traditional meals already include vegetables, beans, lentils, fish, lean meats, yogurt, grains, herbs, spices, and shared routines.",
+              "fontSize": 15,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zyds7i1s",
+      "id": "12",
+      "bbox": [
+        66,
+        306,
+        684,
+        80
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yxkrydk7",
+      "id": "13",
+      "bbox": [
+        82,
+        326,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9ovaxsju",
+      "id": "14",
+      "bbox": [
+        114,
+        322,
+        620,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Tacos",
+      "textPreview": "Tacos",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tacos"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tacos",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tacos",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8nm94n29",
+      "id": "15",
+      "bbox": [
+        114,
+        345,
+        620,
+        38
+      ],
+      "geometry": "rect",
+      "text": "beans or grilled protein, cabbage, salsa, avocado, corn tortillas",
+      "textPreview": "beans or grilled protein, cabbage, salsa, avocado, corn tortillas",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "beans or grilled protein, cabbage, salsa, avocado, corn tortillas"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "beans or grilled protein, cabbage, salsa, avocado, corn tortillas",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "beans or grilled protein, cabbage, salsa, avocado, corn tortillas",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nmdsvi1o",
+      "id": "16",
+      "bbox": [
+        66,
+        404,
+        684,
+        80
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ml4r2dk3",
+      "id": "17",
+      "bbox": [
+        82,
+        424,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#EEF7FA",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xsfa1sjq",
+      "id": "18",
+      "bbox": [
+        114,
+        420,
+        620,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Dal",
+      "textPreview": "Dal",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Dal"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Dal",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dal",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wr698n2l",
+      "id": "19",
+      "bbox": [
+        114,
+        443,
+        620,
+        38
+      ],
+      "geometry": "rect",
+      "text": "dal with vegetables, cucumber salad, rice",
+      "textPreview": "dal with vegetables, cucumber salad, rice",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "dal with vegetables, cucumber salad, rice"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "dal with vegetables, cucumber salad, rice",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "dal with vegetables, cucumber salad, rice",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gvet4bqh",
+      "id": "20",
+      "bbox": [
+        66,
+        502,
+        684,
+        80
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hwnudgr2",
+      "id": "21",
+      "bbox": [
+        82,
+        522,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#FCE4D8",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/utwb218b",
+      "id": "22",
+      "bbox": [
+        114,
+        518,
+        620,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Stir-fry",
+      "textPreview": "Stir-fry",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Stir-fry"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Stir-fry",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Stir-fry",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vu5cb69w",
+      "id": "23",
+      "bbox": [
+        114,
+        541,
+        620,
+        38
+      ],
+      "geometry": "rect",
+      "text": "tofu, chicken, shrimp, or beef, vegetables, rice",
+      "textPreview": "tofu, chicken, shrimp, or beef, vegetables, rice",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "tofu, chicken, shrimp, or beef, vegetables, rice"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "tofu, chicken, shrimp, or beef, vegetables, rice",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "tofu, chicken, shrimp, or beef, vegetables, rice",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4zed8bqt",
+      "id": "24",
+      "bbox": [
+        66,
+        600,
+        684,
+        80
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0nuhgre",
+      "id": "25",
+      "bbox": [
+        82,
+        620,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2xwb6l8n",
+      "id": "26",
+      "bbox": [
+        114,
+        616,
+        620,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Mediterranean plate",
+      "textPreview": "Mediterranean plate",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Mediterranean plate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Mediterranean plate",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Mediterranean plate",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3y5cf698",
+      "id": "27",
+      "bbox": [
+        114,
+        639,
+        620,
+        38
+      ],
+      "geometry": "rect",
+      "text": "fish, beans, greens, yogurt sauce, whole grains",
+      "textPreview": "fish, beans, greens, yogurt sauce, whole grains",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "fish, beans, greens, yogurt sauce, whole grains"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "fish, beans, greens, yogurt sauce, whole grains",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "fish, beans, greens, yogurt sauce, whole grains",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k3utwrq9",
+      "id": "28",
+      "bbox": [
+        66,
+        698,
+        684,
+        80
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l43u5wru",
+      "id": "29",
+      "bbox": [
+        82,
+        718,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#EEF7FA",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ni9wbutc",
+      "id": "30",
+      "bbox": [
+        114,
+        714,
+        620,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Pasta night",
+      "textPreview": "Pasta night",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pasta night"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pasta night",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pasta night",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mh0f2psr",
+      "id": "31",
+      "bbox": [
+        114,
+        737,
+        620,
+        38
+      ],
+      "geometry": "rect",
+      "text": "pasta, vegetables, beans or lean protein",
+      "textPreview": "pasta, vegetables, beans or lean protein",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "pasta, vegetables, beans or lean protein"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "pasta, vegetables, beans or lean protein",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "pasta, vegetables, beans or lean protein",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9kbed4bi",
+      "id": "32",
+      "bbox": [
+        66,
+        886,
+        684,
+        62
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#B8D8C8",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ojix4zax",
+      "id": "33",
+      "bbox": [
+        83,
+        900,
+        650,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Pattern over perfection",
+      "textPreview": "Pattern over perfection",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Lato",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pattern over perfection"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pattern over perfection",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Lato",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pattern over perfection",
+              "fontSize": 13,
+              "typeface": "Lato",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zu9w7atg",
+      "id": "34",
+      "bbox": [
+        83,
+        928,
+        650,
+        10
+      ],
+      "geometry": "rect",
+      "text": "A higher-carbohydrate food can often fit better when the rest of the plate supports it.",
+      "textPreview": "A higher-carbohydrate food can often fit better when the rest of the plate supports it.",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A higher-carbohydrate food can often fit better when the rest of the plate supports it."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A higher-carbohydrate food can often fit better when the rest of the plate supports it.",
+          "lineSpacingPercent": 117000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.17
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A higher-carbohydrate food can often fit better when the rest of the plate supports it.",
+              "fontSize": 12,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.17
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

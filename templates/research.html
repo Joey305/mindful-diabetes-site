@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Research | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}research-view{% endblock %}
+
+{% block content %}
+  <section class="research-hero">
+    <div class="research-hero__inner">
+      <div class="research-hero__copy">
+        <p class="eyebrow">Research</p>
+        <h1>Active research across diabetes, brain health, and therapeutic discovery</h1>
+        <p>Joseph Schulz's ORCID-indexed work spans pancreatic biology, Alzheimer's disease models, computational drug discovery, smart health technology, and medicinal chemistry.</p>
+        <div class="button-row">
+          <a class="button-primary" href="https://orcid.org/0000-0001-7276-1835" target="_blank" rel="noopener">View ORCID</a>
+          <a class="button-secondary button-secondary--light" href="{{ url_for('static', filename='uploads/2025/05/Joseph-Schulz-Resume_CV_May25.pdf') }}" target="_blank" rel="noopener">View CV</a>
+        </div>
+      </div>
+      <div class="research-hero__panel" aria-label="Research summary">
+        <strong>{{ publications|length }}</strong>
+        <span>ORCID-indexed works</span>
+        <p>2019-2026 publication record with a focus on prevention, cellular biology, computational modeling, and translational health tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="research-focus" aria-labelledby="research-focus-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Focus areas</p>
+      <h2 id="research-focus-heading">Research that supports the mission</h2>
+    </div>
+    <div class="research-focus-grid">
+      <article>
+        <span>01</span>
+        <h3>Diabetes and pancreatic biology</h3>
+        <p>Work on pancreatic tissue, endocrine cell formation, and metabolism connects the research record directly to the biology behind diabetes prevention.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Brain health and Alzheimer's modeling</h3>
+        <p>Stem-cell disease modeling creates a bridge between Type III Diabetes education, cognitive health, and future intervention strategies.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Computational therapeutic discovery</h3>
+        <p>Molecular dynamics, protein modeling, PROTACs, and targeted degradation point toward modern tools for asking better biomedical questions.</p>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>Health technology and daily systems</h3>
+        <p>Smart-home and wellness-technology work supports Mindful Diabetes' practical belief that healthier environments can make prevention easier.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="research-publications" aria-labelledby="research-publications-heading">
+    <div class="section-heading section-heading--left">
+      <p class="eyebrow">Publication record</p>
+      <h2 id="research-publications-heading">Selected works from ORCID</h2>
+      <p>Each article below links to its DOI so visitors can move from the Mindful Diabetes overview to the original research source.</p>
+    </div>
+
+    <div class="publication-list">
+      {% for publication in publications %}
+        <article class="publication-card">
+          <div class="publication-card__meta">
+            <span>{{ publication.date }}</span>
+            <span>{{ publication.type }}</span>
+          </div>
+          <div class="publication-card__body">
+            <p class="publication-card__venue">{{ publication.venue }}</p>
+            <h3>{{ publication.title }}</h3>
+            <p>{{ publication.excerpt }}</p>
+            <div class="publication-tags" aria-label="Research tags">
+              {% for tag in publication.tags %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="publication-card__links">
+            {% for link in publication.links %}
+              <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% endfor %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="research-cta" aria-labelledby="research-cta-heading">
+    <div>
+      <p class="eyebrow">Why it matters</p>
+      <h2 id="research-cta-heading">Research gives Mindful Diabetes a stronger foundation</h2>
+      <p>Our public education, prevention messaging, and wellness tools are stronger when they are connected to real research experience and a continuing publication record.</p>
+    </div>
+    <a class="button-primary" href="{{ url_for('guide') }}">Read the guide</a>
+  </section>
+{% endblock %}

@@ -1,0 +1,25 @@
+Mindful Diabetes 7-Day Prevention Reset
+Redesigned editable PPTX and exported PDF quality-control summary
+
+Deliverables inspected:
+- mindful-diabetes-7-day-prevention-reset-2026-redesigned-editable.pptx
+- mindful-diabetes-7-day-prevention-reset-2026-redesigned.pdf
+- Assets/mdi-logo-source.jpg
+
+QC completed:
+- Rebuilt all 21 pages as editable PowerPoint content: live text, editable shapes, diagrams, trackers, checkboxes, buttons, headers, footers, and page numbers.
+- Exported a matching 21-page letter-size PDF from PowerPoint.
+- Rendered and visually inspected every page of the editable deck.
+- Rendered and visually inspected every page of the exported PDF.
+- Ran automated overflow validation on the PPTX; result: passed with no overflow detected.
+- Verified cover wording no longer contains the run-together phrase "NoticeMealFiberMoveDrinkSleepPlan."
+- Verified optional glucose tracker uses "Activity, stress, or sleep" rather than the broken "Activity/stress/sl" heading.
+- Verified the 30-day continuation plan includes days 1 through 30 only.
+- Verified the movement citation maps to reference [5], and there is no orphan [9] citation.
+- Verified references are numbered [1] through [7] and visible on the references page.
+- Verified key URLs are present as hyperlinks in both the PPTX and PDF.
+- No AI-generated bitmap imagery was inserted. The only embedded image asset is the Mindful Diabetes logo source copied into Assets/.
+
+Notes:
+- Medical review remains marked as pending.
+- The PDF is not certified PDF/UA.

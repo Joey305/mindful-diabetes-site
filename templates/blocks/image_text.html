@@ -1,0 +1,10 @@
+<section class="cms-block cms-image-text cms-image-text--{{ block.settings.image_position }} cms-image-text--{{ block.settings.vertical_alignment }}">
+  <div class="cms-image-text__media">
+    {% if block.content.image %}<img src="{{ block.content.image }}" alt="{{ block.content.alt }}">{% else %}<div class="cms-image-placeholder">Image</div>{% endif %}
+  </div>
+  <div>
+    <h2>{{ block.content.heading }}</h2>
+    {% if block.content.text %}<p>{{ block.content.text }}</p>{% endif %}
+    {% if block.content.button and block.content.url %}<a class="cms-button cms-button--green" href="{{ block.content.url }}">{{ block.content.button }}</a>{% endif %}
+  </div>
+</section>

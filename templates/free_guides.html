@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}Free Health Guides | Mindful Diabetes Inc{% endblock %}
+{% block meta_description %}<meta name="description" content="Free Mindful Diabetes PDF guides with plain-English explanations, visual tools, and printable worksheets for blood sugar, nutrition, habits, and brain health.">{% endblock %}
+{% block canonical %}<link rel="canonical" href="{{ canonical_url }}">{% endblock %}
+{% block body_class %}free-guides-view{% endblock %}
+
+{% block content %}
+  <section class="free-guides-hero" aria-labelledby="free-guides-heading" data-track-impression="1" data-track-impression-event="free_guides_page_view" data-track-event="free_guides_page_view" data-track-category="resource" data-track-label="Free Health Guides" data-track-id="free-guides-page" data-track-position="hero" data-source-page="/free-guides">
+    <div class="free-guides-hero__inner">
+      <div class="free-guides-hero__copy">
+        <p class="eyebrow">Mindful Diabetes Free Guides</p>
+        <h1 id="free-guides-heading">Free Health Guides for Everyday Life</h1>
+        <p>Practical health information should be easy to understand and easy to access. These free Mindful Diabetes guides turn complicated topics into clear explanations, everyday examples, visual tools, and printable worksheets.</p>
+        <p class="free-guides-hero__note">No account, payment, or email address is required. Open or download any guide for free.</p>
+        <div class="button-row">
+          <a class="button-primary" href="#guide-collection">Browse the Free Guides</a>
+          <a class="button-secondary button-secondary--light" href="#why-guides">Why We Created These Guides</a>
+        </div>
+      </div>
+      <div class="free-guides-hero__preview" aria-label="Free guide series preview">
+        <img src="{{ featured_guide.banner_url }}" alt="{{ featured_guide.title }} guide banner preview">
+        <div>
+          <strong>Simple, practical guidance for metabolic and brain health.</strong>
+          <span>Five free PDF guides with printable tools</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="free-guides-benefits" aria-label="Guide benefits">
+    <div><span aria-hidden="true">Free</span> Completely free</div>
+    <div><span aria-hidden="true">Aa</span> Plain-English explanations</div>
+    <div><span aria-hidden="true">Print</span> Printable worksheets</div>
+    <div><span aria-hidden="true">Refs</span> Evidence-informed sources</div>
+    <div><span aria-hidden="true">Care</span> Designed for patients and families</div>
+  </section>
+
+  <section id="guide-collection" class="free-guides-featured" aria-labelledby="featured-guide-heading">
+    <div class="section-heading section-heading--left">
+      <p class="eyebrow">Start here</p>
+      <h2 id="featured-guide-heading">Featured Guide</h2>
+    </div>
+    <article class="free-guide-feature-card" data-track-impression="1" data-track-impression-event="resource_card_view" data-track-event="resource_card_view" data-track-category="resource" data-track-label="{{ featured_guide.title }}" data-track-id="resource-card-{{ featured_guide.slug }}" data-track-position="featured-guide" data-guide-title="{{ featured_guide.title }}" data-guide-slug="{{ featured_guide.slug }}" data-guide-category="{{ featured_guide.category }}" data-page-count="{{ featured_guide.page_count }}" data-file-type="{{ featured_guide.file_type }}" data-file-size="{{ featured_guide.file_size }}" data-source-page="/free-guides">
+      <a class="free-guide-feature-card__cover" href="{{ featured_guide.detail_url }}" aria-label="Open {{ featured_guide.title }} details">
+        <img src="{{ featured_guide.cover_url }}" alt="{{ featured_guide.alt_text }}">
+      </a>
+      <div class="free-guide-feature-card__body">
+        <p class="eyebrow">{{ featured_guide.category }}</p>
+        <h3>{{ featured_guide.title }}</h3>
+        <p class="free-guide-subtitle">{{ featured_guide.subtitle }}</p>
+        <p>{{ featured_guide.description }}</p>
+        <div class="free-guide-help">
+          <strong>Who this helps</strong>
+          <p>{{ featured_guide.who }}</p>
+        </div>
+        <div class="free-guide-meta" aria-label="Guide details">
+          <span>{{ featured_guide.page_count }} pages</span>
+          <span>{{ featured_guide.file_size }} PDF</span>
+          <span>Published {{ featured_guide.publication_date }}</span>
+          <span>{{ featured_guide.review_status }}</span>
+        </div>
+        <div class="free-guide-tags">
+          {% for tag in featured_guide.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <div class="free-guide-actions">
+          <a class="button-secondary" href="{{ featured_guide.pdf_url }}" target="_blank" rel="noopener noreferrer" data-track-event="resource_pdf_view" data-track-category="resource" data-track-label="View {{ featured_guide.title }}" data-track-id="view-{{ featured_guide.slug }}-featured" data-track-position="featured-guide" data-track-destination="{{ featured_guide.pdf_url }}" data-guide-title="{{ featured_guide.title }}" data-guide-slug="{{ featured_guide.slug }}" data-guide-category="{{ featured_guide.category }}" data-page-count="{{ featured_guide.page_count }}" data-file-type="{{ featured_guide.file_type }}" data-file-size="{{ featured_guide.file_size }}" data-action="view" data-button-location="featured-guide" data-source-page="/free-guides">View Guide</a>
+          <a class="button-primary" href="{{ featured_guide.pdf_url }}" download data-resource-download data-track-event="resource_pdf_download" data-track-category="resource" data-track-label="Download {{ featured_guide.title }}" data-track-id="download-{{ featured_guide.slug }}-featured" data-track-position="featured-guide" data-track-destination="{{ featured_guide.pdf_url }}" data-guide-title="{{ featured_guide.title }}" data-guide-slug="{{ featured_guide.slug }}" data-guide-category="{{ featured_guide.category }}" data-page-count="{{ featured_guide.page_count }}" data-file-type="{{ featured_guide.file_type }}" data-file-size="{{ featured_guide.file_size }}" data-action="download" data-button-location="featured-guide" data-source-page="/free-guides">Download Free PDF</a>
+        </div>
+        <p class="free-guide-no-signup">No signup required.</p>
+        <div class="free-guide-share" aria-label="Share {{ featured_guide.title }}">
+          <button type="button" data-copy-resource-link="{{ featured_guide.canonical_url }}" data-track-event="resource_share_click" data-track-category="resource" data-track-label="Copy {{ featured_guide.title }} link" data-track-id="copy-{{ featured_guide.slug }}-featured" data-track-position="featured-guide" data-guide-title="{{ featured_guide.title }}" data-guide-slug="{{ featured_guide.slug }}" data-share-platform="copy" data-source-page="/free-guides">Copy link</button>
+          {% for share in featured_guide.share_links %}
+            <a href="{{ share.url }}" target="_blank" rel="noopener noreferrer" data-track-event="resource_share_click" data-track-category="resource" data-track-label="{{ share.label }} {{ featured_guide.title }}" data-track-id="share-{{ featured_guide.slug }}-{{ share.platform }}-featured" data-track-position="featured-guide" data-guide-title="{{ featured_guide.title }}" data-guide-slug="{{ featured_guide.slug }}" data-share-platform="{{ share.platform }}" data-source-page="/free-guides">{{ share.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="free-guides-library" aria-labelledby="free-guides-library-heading">
+    <div class="section-heading section-heading--left">
+      <p class="eyebrow">Free resource library</p>
+      <h2 id="free-guides-library-heading">More Guides in the Series</h2>
+      <p>Each guide is built for real life: readable on a phone, useful as a printed handout, and easy to share with family, friends, clinics, and community partners.</p>
+    </div>
+    <div class="free-guide-card-grid">
+      {% for guide in guides[1:] %}
+        <article class="free-guide-card" data-track-impression="1" data-track-impression-event="resource_card_view" data-track-event="resource_card_view" data-track-category="resource" data-track-label="{{ guide.title }}" data-track-id="resource-card-{{ guide.slug }}" data-track-position="guide-card" data-guide-title="{{ guide.title }}" data-guide-slug="{{ guide.slug }}" data-guide-category="{{ guide.category }}" data-page-count="{{ guide.page_count }}" data-file-type="{{ guide.file_type }}" data-file-size="{{ guide.file_size }}" data-source-page="/free-guides">
+          <a class="free-guide-card__thumb" href="{{ guide.detail_url }}" aria-label="Open {{ guide.title }} details">
+            <img src="{{ guide.thumb_url }}" alt="{{ guide.alt_text }}">
+          </a>
+          <div class="free-guide-card__body">
+            <p class="eyebrow">{{ guide.category }}</p>
+            <h3>{{ guide.title }}</h3>
+            <p class="free-guide-subtitle">{{ guide.subtitle }}</p>
+            <p>{{ guide.description }}</p>
+            <div class="free-guide-help">
+              <strong>Who this helps</strong>
+              <p>{{ guide.who }}</p>
+            </div>
+            <div class="free-guide-meta">
+              <span>{{ guide.page_count }} pages</span>
+              <span>{{ guide.file_size }} PDF</span>
+              <span>Published {{ guide.publication_date }}</span>
+              <span>{{ guide.review_status }}</span>
+            </div>
+            <div class="free-guide-tags">
+              {% for tag in guide.tags %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="free-guide-card__footer">
+            <div class="free-guide-actions">
+              <a class="button-secondary" href="{{ guide.pdf_url }}" target="_blank" rel="noopener noreferrer" data-track-event="resource_pdf_view" data-track-category="resource" data-track-label="View {{ guide.title }}" data-track-id="view-{{ guide.slug }}-card" data-track-position="guide-card" data-track-destination="{{ guide.pdf_url }}" data-guide-title="{{ guide.title }}" data-guide-slug="{{ guide.slug }}" data-guide-category="{{ guide.category }}" data-page-count="{{ guide.page_count }}" data-file-type="{{ guide.file_type }}" data-file-size="{{ guide.file_size }}" data-action="view" data-button-location="guide-card" data-source-page="/free-guides">View Guide</a>
+              <a class="button-primary" href="{{ guide.pdf_url }}" download data-resource-download data-track-event="resource_pdf_download" data-track-category="resource" data-track-label="Download {{ guide.title }}" data-track-id="download-{{ guide.slug }}-card" data-track-position="guide-card" data-track-destination="{{ guide.pdf_url }}" data-guide-title="{{ guide.title }}" data-guide-slug="{{ guide.slug }}" data-guide-category="{{ guide.category }}" data-page-count="{{ guide.page_count }}" data-file-type="{{ guide.file_type }}" data-file-size="{{ guide.file_size }}" data-action="download" data-button-location="guide-card" data-source-page="/free-guides">Download Free PDF</a>
+            </div>
+            <p class="free-guide-no-signup">No signup required.</p>
+            <div class="free-guide-share" aria-label="Share {{ guide.title }}">
+              <button type="button" data-copy-resource-link="{{ guide.canonical_url }}" data-track-event="resource_share_click" data-track-category="resource" data-track-label="Copy {{ guide.title }} link" data-track-id="copy-{{ guide.slug }}-card" data-track-position="guide-card" data-guide-title="{{ guide.title }}" data-guide-slug="{{ guide.slug }}" data-share-platform="copy" data-source-page="/free-guides">Copy link</button>
+              {% for share in guide.share_links %}
+                <a href="{{ share.url }}" target="_blank" rel="noopener noreferrer" data-track-event="resource_share_click" data-track-category="resource" data-track-label="{{ share.label }} {{ guide.title }}" data-track-id="share-{{ guide.slug }}-{{ share.platform }}-card" data-track-position="guide-card" data-guide-title="{{ guide.title }}" data-guide-slug="{{ guide.slug }}" data-share-platform="{{ share.platform }}" data-source-page="/free-guides">{{ share.label }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="why-guides" class="free-guides-why" aria-labelledby="why-guides-heading">
+    <div>
+      <p class="eyebrow">Why we created these guides</p>
+      <h2 id="why-guides-heading">Useful health education should be easy to share.</h2>
+    </div>
+    <p>These guides are made for everyday readers, caregivers, educators, and community organizations who need practical information without a paywall. They are educational resources, not personal medical advice, and they are written to support better conversations with qualified health professionals.</p>
+  </section>
+
+  <section id="free-guides-newsletter" class="newsletter-section free-guides-newsletter" aria-labelledby="free-guides-newsletter-heading">
+    <div class="newsletter-panel">
+      <div>
+        <p class="eyebrow">Optional updates</p>
+        <h2 id="free-guides-newsletter-heading">Get New Free Resources by Email</h2>
+        <p>Mindful Diabetes periodically publishes practical guides, educational articles, research updates, and new health tools. Subscribe to hear when something new is available.</p>
+      </div>
+      <div>
+        {% set newsletter_id = "free-guides-newsletter-email" %}
+        {% set newsletter_source = "free-guides" %}
+        {% set newsletter_click_event = "resource_newsletter_click" %}
+        {% set newsletter_success_event = "resource_newsletter_submit" %}
+        {% include "_newsletter_form.html" %}
+      </div>
+    </div>
+  </section>
+
+  <section class="free-guides-donation" aria-labelledby="free-guides-donation-heading">
+    <div>
+      <p class="eyebrow">Keep them free</p>
+      <h2 id="free-guides-donation-heading">Help Keep These Guides Free</h2>
+      <p>Mindful Diabetes Inc. is a 501(c)(3) nonprofit. Donations help us create and maintain free educational resources for patients, families, and communities.</p>
+    </div>
+    <a class="button-primary" href="{{ url_for('page_detail', slug='donation') }}" data-track-event="resource_donation_click" data-track-category="resource" data-track-label="Support Free Health Education" data-track-id="free-guides-donation" data-track-position="free-guides-footer" data-track-destination="{{ url_for('page_detail', slug='donation') }}" data-button-location="free-guides-footer" data-source-page="/free-guides">Support Free Health Education</a>
+  </section>
+
+  <p class="free-guides-confirmation" role="status" aria-live="polite" hidden>Your free guide is opening. No signup is required.</p>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/free-guides.js') }}" defer></script>
+{% endblock %}

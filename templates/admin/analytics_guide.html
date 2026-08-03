@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Guide Analytics | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}admin-page{% endblock %}
+
+{% block content %}
+  <section class="admin-dashboard admin-analytics-dashboard" aria-labelledby="guide-report-heading">
+    <div class="admin-dashboard__header">
+      <div>
+        <p class="eyebrow">Admin guide report</p>
+        <h1 id="guide-report-heading">{{ guide.title }}</h1>
+        <p class="admin-muted">{{ start }} through {{ end }}. Donation clicks and PayPal opens are intent signals only.</p>
+      </div>
+      <div class="admin-action-row">
+        <a href="{{ url_for('admin_analytics', range=range_name, start=start, end=end) }}#free-guides">Back to dashboard</a>
+      </div>
+    </div>
+
+    <div class="admin-mini-grid">
+      <article><span>Cards seen</span><strong>{{ summary.totals.resource_card_views }}</strong></article>
+      <article><span>Detail views</span><strong>{{ summary.totals.resource_detail_views }}</strong></article>
+      <article><span>PDF opens</span><strong>{{ summary.totals.resource_pdf_views }}</strong></article>
+      <article><span>Downloads</span><strong>{{ summary.totals.resource_pdf_downloads }}</strong><small>{{ report.download_rate }} download rate</small></article>
+    </div>
+
+    <section class="admin-panel admin-panel--wide">
+      <div class="admin-panel__header">
+        <h2>Guide warnings</h2>
+        <span>Evidence-based suggestions</span>
+      </div>
+      <div class="admin-dashboard__grid">
+        <section class="admin-subpanel">
+          <h3>Warnings</h3>
+          <ul class="admin-next-list">
+            {% for item in report.warnings %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+        <section class="admin-subpanel">
+          <h3>Suggested improvements</h3>
+          <ul class="admin-next-list">
+            {% for item in report.suggestions %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="admin-panel admin-panel--wide">
+      <div class="admin-panel__header">
+        <h2>Daily guide trend</h2>
+        <span>Details, opens, downloads, shares</span>
+      </div>
+      {% if summary.daily_trend %}
+        <div class="admin-resource-trend" role="img" aria-label="Daily guide trend for {{ guide.title }}">
+          {% for row in summary.daily_trend %}
+            <div class="admin-trend-day admin-trend-day--resource">
+              <span class="admin-trend-day__label">{{ row.day[5:] }}</span>
+              <span class="admin-trend-bar admin-trend-bar--views" style="height: {{ ((row.guide_detail_views or 0) / report.trend_max * 100)|round(1) }}%" title="{{ row.day }} detail views: {{ row.guide_detail_views }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--tools" style="height: {{ ((row.pdf_views or 0) / report.trend_max * 100)|round(1) }}%" title="{{ row.day }} PDF opens: {{ row.pdf_views }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--donation" style="height: {{ ((row.pdf_downloads or 0) / report.trend_max * 100)|round(1) }}%" title="{{ row.day }} downloads: {{ row.pdf_downloads }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--newsletter" style="height: {{ ((row.guide_shares or 0) / report.trend_max * 100)|round(1) }}%" title="{{ row.day }} shares: {{ row.guide_shares }}"></span>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="admin-empty">No daily guide activity exists for this date range yet.</p>
+      {% endif %}
+    </section>
+
+    <section class="admin-panel admin-panel--wide">
+      <div class="admin-panel__header">
+        <h2>Acquisition and related actions</h2>
+        <span>Where guide activity starts</span>
+      </div>
+      <div class="admin-dashboard__grid">
+        <section class="admin-subpanel">
+          <h3>Top source pages</h3>
+          {% if report.top_sources %}
+            <ol class="admin-ranked-list">
+              {% for item in report.top_sources %}
+                <li><span>{{ item.label }}</span><span>{{ item.count }}</span></li>
+              {% endfor %}
+            </ol>
+          {% else %}
+            <p class="admin-empty">Source pages will appear after guide activity is recorded.</p>
+          {% endif %}
+        </section>
+        <section class="admin-subpanel">
+          <h3>Related actions</h3>
+          <ol class="admin-ranked-list">
+            <li><span>Related guide clicks</span><span>{{ summary.totals.resource_related_clicks }}</span></li>
+            <li><span>Newsletter clicks</span><span>{{ summary.totals.resource_newsletter_clicks }}</span></li>
+            <li><span>Support clicks</span><span>{{ summary.totals.resource_donation_clicks }}</span></li>
+            <li><span>Share rate</span><span>{{ report.share_rate }}</span></li>
+          </ol>
+        </section>
+      </div>
+    </section>
+  </section>
+{% endblock %}

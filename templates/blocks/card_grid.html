@@ -1,0 +1,11 @@
+<section class="cms-block cms-card-grid cms-card-grid--{{ block.settings.columns }} {% if block.settings.equal_height %}cms-card-grid--equal{% endif %} {% if block.settings.mobile_horizontal %}cms-card-grid--mobile-horizontal{% endif %}">
+  {% for card in block.content.cards %}
+    <article class="cms-resource-card">
+      {% if card.image %}<img src="{{ card.image }}" alt="">{% elif card.icon %}<span class="cms-resource-card__icon" aria-hidden="true">{{ card.icon }}</span>{% endif %}
+      {% if card.category %}<p class="eyebrow">{{ card.category }}</p>{% endif %}
+      <h3>{{ card.heading }}</h3>
+      {% if card.description %}<p>{{ card.description }}</p>{% endif %}
+      {% if card.url %}<a href="{{ card.url }}">{{ card.button }}</a>{% endif %}
+    </article>
+  {% endfor %}
+</section>

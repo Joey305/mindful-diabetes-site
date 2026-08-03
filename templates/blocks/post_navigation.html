@@ -1,0 +1,8 @@
+<nav class="cms-block cms-post-navigation" aria-label="Post navigation">
+  <h2>{{ block.content.heading }}</h2>
+  {% set posts = config.CONTENT.latest_posts if config.CONTENT else [] %}
+  <div>
+    {% if posts|length > 0 %}<a href="{{ posts[0].canonical_path }}">Newest: {{ posts[0].title }}</a>{% endif %}
+    {% if posts|length > 1 %}<a href="{{ posts[1].canonical_path }}">Next: {{ posts[1].title }}</a>{% endif %}
+  </div>
+</nav>

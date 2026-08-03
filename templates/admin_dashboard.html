@@ -1,0 +1,1070 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Analytics | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}admin-page{% endblock %}
+
+{% block content %}
+  <section class="admin-dashboard admin-analytics-dashboard" aria-labelledby="admin-dashboard-heading">
+    <div class="admin-dashboard__header">
+      <div>
+        <p class="eyebrow">Admin dashboard</p>
+        <h1 id="admin-dashboard-heading">Site analytics</h1>
+        <p class="admin-muted">Signed in as {{ admin_email }}. Storage: {{ dashboard.storage_backend }}.</p>
+      </div>
+      <div class="admin-action-row">
+        <a href="{{ url_for('admin_content_index') }}">Content Studio</a>
+        <a href="{{ url_for('admin_analytics_events') }}">Event Explorer</a>
+        <a class="admin-logout" href="{{ url_for('admin_logout') }}">Sign out</a>
+      </div>
+    </div>
+
+    {% if dashboard.temporary_storage %}
+      <p class="admin-alert admin-alert--warning">Temporary analytics storage is active. Data may reset after a Heroku restart or deployment. Durable storage has not yet been connected.</p>
+    {% endif %}
+
+    <section class="admin-panel admin-panel--wide admin-analytics-health" aria-label="Analytics storage status">
+      <span>Backend: {{ dashboard.storage.backend }}</span>
+      <span>Health: {{ "OK" if dashboard.storage.ok else "Needs attention" }}</span>
+      <span>Approximate events: {{ dashboard.storage.event_count }}</span>
+      <span>Last event: {{ dashboard.storage.last_recorded_at or "None yet" }}</span>
+    </section>
+
+    <section class="admin-panel admin-panel--wide" aria-label="Analytics date range">
+      <form class="admin-filter-form" action="{{ url_for('admin_analytics') }}" method="get">
+        <label>
+          Date range
+          <select name="range">
+            <option value="today" {% if dashboard.range_name == "today" %}selected{% endif %}>Today</option>
+            <option value="7d" {% if dashboard.range_name == "7d" %}selected{% endif %}>Last 7 days</option>
+            <option value="30d" {% if dashboard.range_name == "30d" %}selected{% endif %}>Last 30 days</option>
+            <option value="90d" {% if dashboard.range_name == "90d" %}selected{% endif %}>Last 90 days</option>
+            <option value="this_month" {% if dashboard.range_name == "this_month" %}selected{% endif %}>This month</option>
+            <option value="previous_month" {% if dashboard.range_name == "previous_month" %}selected{% endif %}>Previous month</option>
+            <option value="custom" {% if dashboard.range_name == "custom" %}selected{% endif %}>Custom</option>
+          </select>
+        </label>
+        <label>Start <input name="start" type="date" value="{{ dashboard.start }}"></label>
+        <label>End <input name="end" type="date" value="{{ dashboard.end }}"></label>
+        <button type="submit">Update</button>
+      </form>
+    </section>
+
+    <div class="admin-stat-grid" aria-label="Analytics summary">
+      {% for stat in dashboard.stats %}
+        <article class="admin-stat" title="{{ stat.help }}">
+          <span>{{ stat.label }}</span>
+          <strong>{{ stat.value }}</strong>
+          <small>Previous period: {{ stat.previous }}</small>
+          <small class="admin-stat__change admin-stat__change--{{ stat.direction }}">{{ stat.change }}</small>
+        </article>
+      {% endfor %}
+    </div>
+
+    <nav class="admin-analytics-tabs" aria-label="Admin dashboard sections" data-admin-tabs>
+      <button class="admin-tab-button" type="button" data-admin-tab="overview" aria-controls="admin-tab-overview">Overview</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="traffic" aria-controls="admin-tab-traffic">Traffic</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="free-guides" aria-controls="admin-tab-free-guides">Free Guides</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="articles" aria-controls="admin-tab-articles">Articles</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="search" aria-controls="admin-tab-search">Search</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="campaigns" aria-controls="admin-tab-campaigns">Campaigns</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="donations" aria-controls="admin-tab-donations">Donations</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="newsletter" aria-controls="admin-tab-newsletter">Newsletter</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="health-tools" aria-controls="admin-tab-health-tools">Health Tools</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="opportunities" aria-controls="admin-tab-opportunities">Opportunities</button>
+      <button class="admin-tab-button" type="button" data-admin-tab="reports" aria-controls="admin-tab-reports">Reports</button>
+    </nav>
+
+    <div class="admin-tab-panel" id="admin-tab-overview" data-admin-tab-panel="overview">
+    <section class="admin-panel admin-panel--wide admin-insight-panel" aria-labelledby="admin-insights-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-insights-heading">What changed?</h2>
+        <span>Plain-language readout</span>
+      </div>
+      <ul class="admin-insight-list">
+        {% for insight in dashboard.insights %}
+          <li>{{ insight }}</li>
+        {% endfor %}
+      </ul>
+      <div class="admin-report-actions">
+        <a href="{{ dashboard.report_links.print }}">Printable report</a>
+        <a href="{{ dashboard.report_links.board }}">Board update</a>
+        <a href="{{ dashboard.report_links.daily }}">Export daily CSV</a>
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-growth-scorecards-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-growth-scorecards-heading">Growth scorecards</h2>
+        <span>Status, comparison, and one next action</span>
+      </div>
+      <div class="admin-scorecard-grid">
+        {% for score in dashboard.growth_scorecards %}
+          <article class="admin-scorecard admin-scorecard--{{ score.tone }}">
+            <span>{{ score.label }}</span>
+            <strong>{{ score.status }}</strong>
+            <small>{{ score.current }} now; {{ score.previous }} before. {{ score.change }}</small>
+            <p>{{ score.explanation }}</p>
+            <b>{{ score.action }}</b>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
+    <section class="admin-panel admin-panel--wide" id="growth" aria-labelledby="admin-growth-goals-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-growth-goals-heading">Growth goals</h2>
+        <span>Progress for this date range</span>
+      </div>
+      <div class="admin-goal-grid">
+        {% for goal in dashboard.growth_goals %}
+          <article class="admin-goal-card">
+            <div class="admin-goal-card__top">
+              <span>{{ goal.status }}</span>
+              <strong>{{ goal.progress }}%</strong>
+            </div>
+            <h3>{{ goal.label }}</h3>
+            <p>{{ goal.value }} of {{ goal.target }} {{ goal.unit }}</p>
+            <div class="admin-progress" aria-label="{{ goal.label }} progress">
+              <span style="width: {{ goal.progress }}%"></span>
+            </div>
+            <small>{{ goal.why }}</small>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-weekly-brief-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-weekly-brief-heading">Weekly and monthly brief</h2>
+        <span>Plain-language summary points</span>
+      </div>
+      <div class="admin-dashboard__grid">
+        <section class="admin-subpanel">
+          <h3>Weekly</h3>
+          <ul class="admin-next-list">
+            {% for line in dashboard.weekly_brief %}
+              <li>{{ line }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+        <section class="admin-subpanel">
+          <h3>Monthly</h3>
+          <ul class="admin-next-list">
+            {% for line in dashboard.monthly_brief %}
+              <li>{{ line }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-opportunities" data-admin-tab-panel="opportunities">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-actions-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-actions-heading">Recommended next actions</h2>
+        <span>Highest-impact fixes first</span>
+      </div>
+      <div class="admin-action-card-grid">
+        {% for action in dashboard.recommended_actions %}
+          <article class="admin-action-card admin-action-card--{{ action.priority|lower }}">
+            <span>{{ action.priority }} priority</span>
+            <h3>{{ action.title }}</h3>
+            <p>{{ action.why }}</p>
+            <strong>{{ action.next_step }}</strong>
+            {% if action.page %}
+              <a href="{{ url_for('admin_analytics_page_report', page_path=action.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">View page report</a>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="opportunities">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-experiments-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-experiments-heading">Growth experiments</h2>
+        <span>Small tests with a clear measurement</span>
+      </div>
+      <div class="admin-experiment-grid">
+        {% for experiment in dashboard.growth_experiments %}
+          <article class="admin-experiment-card">
+            <span>{{ experiment.status }}</span>
+            <h3>{{ experiment.title }}</h3>
+            <p>{{ experiment.why }}</p>
+            <strong>{{ experiment.action }}</strong>
+            <small>{{ experiment.measure }}</small>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="opportunities">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-opportunities-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-opportunities-heading">Opportunity alerts</h2>
+        <a href="{{ dashboard.report_links.opportunities }}">Export CSV</a>
+      </div>
+      <div class="admin-opportunity-grid">
+        {% for item in dashboard.opportunities %}
+          <article class="admin-opportunity-card admin-opportunity-card--{{ item.priority|lower }}">
+            <span>{{ item.priority }} priority · {{ item.confidence }} confidence</span>
+            <h3>{{ item.title }}</h3>
+            <strong>{{ item.metric }}</strong>
+            <p>{{ item.why }}</p>
+            <b>{{ item.action }}</b>
+            {% if item.url %}
+              <a href="{{ item.url }}">Open detail</a>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="opportunities">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-warnings-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-warnings-heading">Recent warnings</h2>
+        <span>Transparent lightweight rules</span>
+      </div>
+      <div class="admin-warning-grid">
+        {% for alert in dashboard.anomaly_alerts %}
+          <article class="admin-warning-card admin-warning-card--{{ alert.tone }}">
+            <h3>{{ alert.title }}</h3>
+            <p>{{ alert.detail }}</p>
+            <strong>{{ alert.action }}</strong>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-health-score-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-health-score-heading">Site health score</h2>
+        <span>Simple readout</span>
+      </div>
+      <div class="admin-health-score-grid">
+        {% for score in dashboard.health_scores %}
+          <article class="admin-health-score admin-health-score--{{ score.tone }}" title="{{ score.help }}">
+            <span>{{ score.label }}</span>
+            <strong>{{ score.status }}</strong>
+            <small>{{ score.value }}</small>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-articles" data-admin-tab-panel="articles">
+    <section class="admin-panel admin-panel--wide admin-cms-actions" aria-labelledby="admin-cms-heading">
+      <div>
+        <h2 id="admin-cms-heading">Content Studio</h2>
+        <p class="admin-muted">Create and edit pages or posts, then open analytics from the content list.</p>
+      </div>
+      <div class="admin-action-row">
+        <form action="{{ url_for('admin_new_page') }}" method="post">
+          <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+          <button type="submit">Create New Page</button>
+        </form>
+        <form action="{{ url_for('admin_new_post') }}" method="post">
+          <input type="hidden" name="csrf_token" value="{{ admin_csrf_token() }}">
+          <button type="submit">Create New Post</button>
+        </form>
+        <a href="{{ url_for('admin_content_index') }}">Manage Content</a>
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-traffic" data-admin-tab-panel="traffic">
+    <div class="admin-dashboard__grid" id="overview">
+      <section class="admin-panel" aria-labelledby="admin-top-pages-heading">
+        <h2 id="admin-top-pages-heading">Top pages</h2>
+        {% if dashboard.top_paths %}
+          <ol class="admin-ranked-list">
+            {% for item in dashboard.top_paths %}
+              <li>
+                <a href="{{ url_for('admin_analytics_page_report', page_path=item.path, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ item.path }}</a>
+                <span>{{ item.count }}</span>
+              </li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <p class="admin-empty">Activity will appear here after visitors load public pages.</p>
+        {% endif %}
+      </section>
+
+      <section class="admin-panel" aria-labelledby="admin-groups-heading">
+        <h2 id="admin-groups-heading">Article groups</h2>
+        {% if dashboard.summary.article_groups %}
+          <ol class="admin-ranked-list">
+            {% for item in dashboard.summary.article_groups %}
+              <li><span>{{ item.label }}</span><span>{{ item.count }}</span></li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <p class="admin-empty">No article-group activity has been recorded during this period.</p>
+        {% endif %}
+      </section>
+
+      <section class="admin-panel" aria-labelledby="admin-traffic-heading">
+        <h2 id="admin-traffic-heading">Traffic sources</h2>
+        {% if dashboard.summary.traffic_sources %}
+          <ol class="admin-ranked-list">
+            {% for item in dashboard.summary.traffic_sources %}
+              <li><span>{{ item.label }}</span><span>{{ item.count }}</span></li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <p class="admin-empty">Traffic sources will appear after public page views are recorded.</p>
+        {% endif %}
+      </section>
+    </div>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="traffic">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-traffic-charts-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-traffic-charts-heading">Traffic charts</h2>
+        <a href="{{ dashboard.report_links.content }}">Export content CSV</a>
+      </div>
+      <div class="admin-dashboard__grid">
+        {{ ranked_chart("Top landing pages", dashboard.chart_blocks.top_pages, "Page views will appear after public pages are visited.") }}
+        {{ donut_chart("Traffic source mix", dashboard.chart_blocks.traffic_sources, "Traffic source mix will appear after tracked visits.") }}
+        {{ donut_chart("Device mix", dashboard.chart_blocks.devices, "Device mix will appear after more visitor activity.") }}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-benchmarks-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-benchmarks-heading">Simple benchmarks</h2>
+        <span>Helpful ranges, not hard rules</span>
+      </div>
+      <div class="admin-benchmark-grid">
+        {% for benchmark in dashboard.benchmarks %}
+          <article>
+            <span>{{ benchmark.label }}</span>
+            <strong>{{ benchmark.value }}</strong>
+            <small>Healthy early range: {{ benchmark.healthy_range }}</small>
+            <p>{{ benchmark.note }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-overview-funnel-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-overview-funnel-heading">Free Guides funnel</h2>
+        <span>{{ dashboard.funnels.free_guides.finding }}</span>
+      </div>
+      {{ funnel_chart(dashboard.funnels.free_guides) }}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="overview">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-trend-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-trend-heading">30-day trend</h2>
+        <span>Views and action clicks</span>
+      </div>
+      {% if dashboard.summary.daily_trend %}
+        <div class="admin-trend-chart" role="img" aria-label="Daily page views, health-tool clicks, donation clicks, PayPal opens, and newsletter signups">
+          {% for row in dashboard.summary.daily_trend %}
+            <div class="admin-trend-day">
+              <span class="admin-trend-day__label">{{ row.day[5:] }}</span>
+              <span class="admin-trend-bar admin-trend-bar--views" style="height: {{ ((row.page_views or 0) / dashboard.trend_max * 100)|round(1) }}%" title="{{ row.day }} page views: {{ row.page_views }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--tools" style="height: {{ ((row.tool_clicks or 0) / dashboard.trend_max * 100)|round(1) }}%" title="{{ row.day }} health-tool clicks: {{ row.tool_clicks }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--donation" style="height: {{ (((row.donation_clicks or 0) + (row.paypal_clicks or 0)) / dashboard.trend_max * 100)|round(1) }}%" title="{{ row.day }} donation interest: {{ (row.donation_clicks or 0) + (row.paypal_clicks or 0) }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--newsletter" style="height: {{ ((row.newsletter_signups or 0) / dashboard.trend_max * 100)|round(1) }}%" title="{{ row.day }} newsletter signups: {{ row.newsletter_signups }}"></span>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="admin-chart-legend">
+          <span><i class="admin-legend admin-legend--views"></i>Views</span>
+          <span><i class="admin-legend admin-legend--tools"></i>Health tools</span>
+          <span><i class="admin-legend admin-legend--donation"></i>Donation intent</span>
+          <span><i class="admin-legend admin-legend--newsletter"></i>Newsletter</span>
+        </div>
+      {% else %}
+        <p class="admin-empty">Trend lines will appear after more public events are recorded.</p>
+      {% endif %}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="traffic">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-cta-performance-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-cta-performance-heading">CTA performance</h2>
+        <span>Impressions to clicks</span>
+      </div>
+      {% if dashboard.summary.cta_performance %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>CTA</th>
+                <th>Page</th>
+                <th>Position</th>
+                <th>Impressions</th>
+                <th>Clicks</th>
+                <th>Click rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.summary.cta_performance %}
+                <tr>
+                  <td>{{ row.label or row.element_key or "Untitled CTA" }}</td>
+                  <td><a href="{{ url_for('admin_analytics_page_report', page_path=row.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ row.page or "-" }}</a></td>
+                  <td>{{ row.position or "-" }}</td>
+                  <td>{{ row.impressions }}</td>
+                  <td>{{ row.clicks }}</td>
+                  <td>{{ row.click_rate_label }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">CTA performance will appear after tracked CTAs are visible or clicked.</p>
+      {% endif %}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="traffic">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-journey-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-journey-heading">Visitor paths</h2>
+        <span>Where clicks take people</span>
+      </div>
+      {% if dashboard.summary.journey_paths %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>From</th>
+                <th>Clicked</th>
+                <th>Destination</th>
+                <th>Clicks</th>
+                <th>Sessions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.summary.journey_paths %}
+                <tr>
+                  <td>{{ row.source_page or "-" }}</td>
+                  <td>{{ row.action_label or "CTA" }}</td>
+                  <td>{{ row.destination }}</td>
+                  <td>{{ row.count }}</td>
+                  <td>{{ row.sessions }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">Visitor paths will appear after tracked buttons are clicked.</p>
+      {% endif %}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-donations" data-admin-tab-panel="donations">
+    <section class="admin-panel admin-panel--wide" id="donation" aria-labelledby="admin-donation-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-donation-heading">Donation activity</h2>
+        <span>Intent signals only</span>
+      </div>
+      <p class="admin-muted">Donation-button clicks and PayPal opens indicate interest and do not necessarily represent completed donations.</p>
+      <div class="admin-mini-grid">
+        <article><span>Donation CTA clicks</span><strong>{{ dashboard.summary.totals.donation_cta_clicks }}</strong><small>CTR: {{ dashboard.rates.donation_cta }}</small></article>
+        <article><span>PayPal opens</span><strong>{{ dashboard.summary.totals.paypal_clicks }}</strong><small>CTR: {{ dashboard.rates.paypal }}</small></article>
+        <article><span>Checkout starts</span><strong>{{ dashboard.summary.totals.checkout_starts }}</strong><small>Shown only when reliably observed</small></article>
+        <article><span>Confirmed donations</span><strong>{% if dashboard.confirmed_donations_available %}{{ dashboard.summary.totals.confirmed_donations }}{% else %}Unavailable{% endif %}</strong><small>{% if dashboard.paypal_webhook_configured %}Verified by PayPal webhook{% else %}Requires verified provider confirmation{% endif %}</small></article>
+        <article><span>Confirmed amount</span><strong>{{ dashboard.confirmed_donation_amount }}</strong><small>Completed PayPal donations only</small></article>
+        <article><span>Refunded amount</span><strong>{{ dashboard.refunded_donation_amount }}</strong><small>{{ dashboard.summary.totals.refunded_donations }} refund events</small></article>
+        <article><span>Denied payments</span><strong>{{ dashboard.summary.totals.denied_donations }}</strong><small>Reported by PayPal</small></article>
+      </div>
+      <div class="admin-dashboard__grid">
+        {{ analytics_list("Source pages", dashboard.summary.donation_sources, "No donation clicks have been recorded during this period.") }}
+        {{ analytics_list("CTA positions", dashboard.summary.donation_positions, "No CTA positions have been recorded yet.") }}
+      </div>
+      {{ funnel_chart(dashboard.funnels.donations) }}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-health-tools" data-admin-tab-panel="health-tools">
+    <section class="admin-panel admin-panel--wide" id="health-tools" aria-labelledby="admin-tools-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-tools-heading">Health-tool engagement</h2>
+        <span>CTR: {{ dashboard.rates.health_tools }}</span>
+      </div>
+      <div class="admin-dashboard__grid">
+        {{ analytics_list("Most-clicked health tools", dashboard.summary.health_tools, "No health-tool clicks have been recorded yet.") }}
+        {{ analytics_list("Source pages", dashboard.summary.health_tool_pages, "No pages have sent traffic to health tools yet.") }}
+      </div>
+      {{ funnel_chart(dashboard.funnels.health_tools) }}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-newsletter" data-admin-tab-panel="newsletter">
+    <section class="admin-panel admin-panel--wide" id="newsletter" aria-labelledby="admin-newsletter-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-newsletter-heading">Newsletter growth</h2>
+        <span>Signup rate: {{ dashboard.rates.newsletter }}</span>
+      </div>
+      <div class="admin-mini-grid">
+        <article><span>Form impressions</span><strong>{{ dashboard.summary.totals.newsletter_views }}</strong></article>
+        <article><span>Form interactions</span><strong>{{ dashboard.summary.totals.newsletter_interactions }}</strong></article>
+        <article><span>Successful signups</span><strong>{{ dashboard.summary.totals.newsletter_signups }}</strong></article>
+      </div>
+      <div class="admin-dashboard__grid">
+        {{ analytics_list("Top signup pages", dashboard.summary.newsletter_pages, "No successful newsletter signups were recorded.") }}
+        {{ analytics_list("Campaign sources", dashboard.summary.newsletter_sources, "No campaign source has been recorded yet.") }}
+      </div>
+      {{ funnel_chart(dashboard.funnels.newsletter) }}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-free-guides" data-admin-tab-panel="free-guides">
+    <section class="admin-panel admin-panel--wide" id="resources" aria-labelledby="admin-resources-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-resources-heading">Free Guides</h2>
+        <span>{{ dashboard.resource_insights.downloads }} downloads, {{ dashboard.resource_insights.shares }} shares</span>
+      </div>
+      <ul class="admin-insight-list">
+        {% for note in dashboard.resource_insights.notes %}
+          <li>{{ note }}</li>
+        {% endfor %}
+      </ul>
+      <div class="admin-mini-grid">
+        <article><span>Guide cards seen</span><strong>{{ dashboard.resource_insights.cards_seen }}</strong></article>
+        <article><span>Detail page views</span><strong>{{ dashboard.resource_insights.detail_views }}</strong></article>
+        <article><span>PDF opens</span><strong>{{ dashboard.resource_insights.pdf_views }}</strong></article>
+        <article><span>PDF downloads</span><strong>{{ dashboard.resource_insights.downloads }}</strong><small>Rate: {{ dashboard.resource_insights.download_rate }}</small></article>
+      </div>
+      {{ funnel_chart(dashboard.funnels.free_guides) }}
+      {% if dashboard.summary.daily_trend %}
+        <div class="admin-resource-trend" role="img" aria-label="Daily free guide detail views, PDF opens, downloads, and shares">
+          {% for row in dashboard.summary.daily_trend %}
+            <div class="admin-trend-day admin-trend-day--resource">
+              <span class="admin-trend-day__label">{{ row.day[5:] }}</span>
+              <span class="admin-trend-bar admin-trend-bar--views" style="height: {{ ((row.guide_detail_views or 0) / dashboard.resource_trend_max * 100)|round(1) }}%" title="{{ row.day }} guide detail views: {{ row.guide_detail_views }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--tools" style="height: {{ ((row.pdf_views or 0) / dashboard.resource_trend_max * 100)|round(1) }}%" title="{{ row.day }} PDF opens: {{ row.pdf_views }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--donation" style="height: {{ ((row.pdf_downloads or 0) / dashboard.resource_trend_max * 100)|round(1) }}%" title="{{ row.day }} downloads: {{ row.pdf_downloads }}"></span>
+              <span class="admin-trend-bar admin-trend-bar--newsletter" style="height: {{ ((row.guide_shares or 0) / dashboard.resource_trend_max * 100)|round(1) }}%" title="{{ row.day }} shares: {{ row.guide_shares }}"></span>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="admin-chart-legend">
+          <span><i class="admin-legend admin-legend--views"></i>Details</span>
+          <span><i class="admin-legend admin-legend--tools"></i>PDF opens</span>
+          <span><i class="admin-legend admin-legend--donation"></i>Downloads</span>
+          <span><i class="admin-legend admin-legend--newsletter"></i>Shares</span>
+        </div>
+      {% endif %}
+      {% if dashboard.resource_insights.top_guides %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Guide</th>
+                <th>Category</th>
+                <th>Cards seen</th>
+                <th>Details</th>
+                <th>PDF opens</th>
+                <th>Downloads</th>
+                <th>Download rate</th>
+                <th>Shares</th>
+                <th>Related clicks</th>
+                <th>Support clicks</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.resource_insights.top_guides %}
+                <tr>
+                  <td><a href="{{ url_for('admin_analytics_guide_report', guide_slug=row.slug, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ row.title }}</a></td>
+                  <td>{{ row.category }}</td>
+                  <td>{{ row.card_views }}</td>
+                  <td>{{ row.detail_views }}</td>
+                  <td>{{ row.pdf_views }}</td>
+                  <td>{{ row.downloads }}</td>
+                  <td>{{ row.download_rate_label }}</td>
+                  <td>{{ row.shares }}</td>
+                  <td>{{ row.related_clicks }}</td>
+                  <td>{{ row.donation_clicks }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">Free Guide performance will appear after visitors view, download, or share a guide.</p>
+      {% endif %}
+      <div class="admin-dashboard__grid">
+        {{ analytics_list("Guide action mix", dashboard.resource_insights.action_mix, "No guide actions have been recorded yet.") }}
+        {{ donut_chart("Share platforms", dashboard.chart_blocks.share_platforms, "No guide shares have been recorded yet.") }}
+        {{ analytics_list("Source pages", dashboard.resource_insights.source_pages, "No guide source pages have been recorded yet.") }}
+        {{ analytics_list("Related guide clicks", dashboard.resource_insights.related_clicks, "No related guide clicks have been recorded yet.") }}
+      </div>
+      <div class="admin-report-actions">
+        <a href="{{ dashboard.report_links.guides }}">Export guide CSV</a>
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-search" data-admin-tab-panel="search">
+    <section class="admin-panel admin-panel--wide" id="search-insights" aria-labelledby="admin-search-insights-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-search-insights-heading">Search insights</h2>
+        <span>{{ dashboard.search_insights.searches }} searches, {{ dashboard.search_insights.click_rate }} clicked a result</span>
+      </div>
+      <ul class="admin-insight-list">
+        {% for note in dashboard.search_insights.notes %}
+          <li>{{ note }}</li>
+        {% endfor %}
+      </ul>
+      <div class="admin-dashboard__grid">
+        {{ analytics_list("Top searches", dashboard.search_insights.top_queries, "No site searches have been recorded yet.") }}
+        {{ analytics_list("No-result searches", dashboard.search_insights.no_result_queries, "No search content gaps have appeared yet.") }}
+        {{ analytics_list("Clicked search results", dashboard.search_insights.result_clicks, "No search-result clicks have been recorded yet.") }}
+      </div>
+      {{ funnel_chart(dashboard.funnels.search) }}
+      <div class="admin-report-actions">
+        <a href="{{ dashboard.report_links.search }}">Export search CSV</a>
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-campaigns" data-admin-tab-panel="campaigns">
+    <section class="admin-panel admin-panel--wide" id="campaigns" aria-labelledby="admin-campaigns-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-campaigns-heading">Campaign links</h2>
+        <span>Track outreach from email, social, partners, and events</span>
+      </div>
+      <form class="admin-filter-form admin-filter-form--campaign" action="{{ url_for('admin_analytics') }}" method="get">
+        <input type="hidden" name="range" value="{{ dashboard.range_name }}">
+        <input type="hidden" name="start" value="{{ dashboard.start }}">
+        <input type="hidden" name="end" value="{{ dashboard.end }}">
+        <label>Page <input name="campaign_page" type="text" value="{{ dashboard.campaign_builder.page_path }}" placeholder="/donation/"></label>
+        <label>Source <input name="campaign_source" type="text" value="{{ dashboard.campaign_builder.source }}" placeholder="newsletter"></label>
+        <label>Medium <input name="campaign_medium" type="text" value="{{ dashboard.campaign_builder.medium }}" placeholder="email"></label>
+        <label>Campaign <input name="campaign_name" type="text" value="{{ dashboard.campaign_builder.campaign }}" placeholder="august_push"></label>
+        <label>Content <input name="campaign_content" type="text" value="{{ dashboard.campaign_builder.content }}" placeholder="support_cta"></label>
+        <button type="submit">Build link</button>
+      </form>
+      <div class="admin-copy-box">
+        <strong>Trackable link</strong>
+        <code>{{ dashboard.campaign_builder.url }}</code>
+      </div>
+      <ul class="admin-insight-list">
+        {% for note in dashboard.campaign_insights.notes %}
+          <li>{{ note }}</li>
+        {% endfor %}
+      </ul>
+      {% if dashboard.summary.campaign_performance %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Campaign</th>
+                <th>Source</th>
+                <th>Medium</th>
+                <th>Views</th>
+                <th>Sessions</th>
+                <th>Downloads</th>
+                <th>Shares</th>
+                <th>Newsletter</th>
+                <th>Donation intent</th>
+                <th>Health tools</th>
+                <th>Actions</th>
+                <th>Action rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.summary.campaign_performance %}
+                <tr>
+                  <td>{{ row.label }}</td>
+                  <td>{{ row.source or "-" }}</td>
+                  <td>{{ row.medium or "-" }}</td>
+                  <td>{{ row.page_views }}</td>
+                  <td>{{ row.sessions }}</td>
+                  <td>{{ row.pdf_downloads }}</td>
+                  <td>{{ row.guide_shares }}</td>
+                  <td>{{ row.newsletter_signups }}</td>
+                  <td>{{ (row.donation_clicks or 0) + (row.paypal_clicks or 0) }}</td>
+                  <td>{{ row.health_tool_clicks }}</td>
+                  <td>{{ row.actions }}</td>
+                  <td>{{ row.action_rate_label }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">Campaign performance will appear after people visit links with UTM tracking.</p>
+      {% endif %}
+      <div class="admin-report-actions">
+        <a href="{{ dashboard.report_links.campaigns }}">Export campaign CSV</a>
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="articles">
+    <section class="admin-panel admin-panel--wide" id="content" aria-labelledby="admin-content-analytics-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-content-analytics-heading">Most-read content</h2>
+        <a href="{{ dashboard.report_links.content }}">Export content CSV</a>
+      </div>
+      <div class="admin-dashboard__grid">
+        {{ ranked_chart("Best content by traffic", dashboard.chart_blocks.top_content, "Content bars will appear after page views are recorded.") }}
+        <section class="admin-subpanel">
+          <h3>Article-to-guide ideas</h3>
+          {% if dashboard.content_intelligence.guide_recommendations %}
+            <ol class="admin-next-list">
+              {% for item in dashboard.content_intelligence.guide_recommendations %}
+                <li><strong>{{ item.title }}</strong>: {{ item.reason }} {{ item.action }}</li>
+              {% endfor %}
+            </ol>
+          {% else %}
+            <p class="admin-empty">Guide-link ideas will appear once articles and guides have more activity.</p>
+          {% endif %}
+        </section>
+      </div>
+      {% if dashboard.summary.top_content %}
+        <div class="admin-table-wrap">
+          <table class="admin-table admin-table--sortable">
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>Group</th>
+                <th>Views</th>
+                <th>Sessions</th>
+                <th>Donation clicks</th>
+                <th>PayPal opens</th>
+                <th>Tool clicks</th>
+                <th>Guide actions</th>
+                <th>Newsletter signups</th>
+                <th>Meaningful actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.summary.top_content %}
+                <tr>
+                  <td><a href="{{ url_for('admin_analytics_page_report', page_path=row.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ row.title or row.page }}</a></td>
+                  <td>{{ row.article_group or "-" }}</td>
+                  <td>{{ row.views }}</td>
+                  <td>{{ row.sessions }}</td>
+                  <td>{{ row.donation_clicks }}</td>
+                  <td>{{ row.paypal_clicks }}</td>
+                  <td>{{ row.tool_clicks }}</td>
+                  <td>{{ row.guide_actions }}</td>
+                  <td>{{ row.newsletter_signups }}</td>
+                  <td>{{ row.meaningful_actions }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">No content analytics exist for this period. Visit a public page with local analytics testing enabled to generate test events.</p>
+      {% endif %}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="articles">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-purpose-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-purpose-heading">Top pages by purpose</h2>
+        <span>Different pages have different jobs</span>
+      </div>
+      <div class="admin-purpose-grid">
+        {% for bucket in dashboard.pages_by_purpose %}
+          <section class="admin-subpanel">
+            <h3>{{ bucket.label }}</h3>
+            {% if bucket["items"] %}
+              <ol class="admin-ranked-list">
+                {% for item in bucket["items"] %}
+                  <li>
+                    <a href="{{ url_for('admin_analytics_page_report', page_path=item.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ item.title }}</a>
+                    <span>{{ item.count }}</span>
+                  </li>
+                {% endfor %}
+              </ol>
+            {% else %}
+              <p class="admin-empty">No pages in this bucket yet.</p>
+            {% endif %}
+          </section>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="opportunities">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-missed-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-missed-heading">Pages with missed opportunity</h2>
+        <span>Traffic without action</span>
+      </div>
+      {% if dashboard.missed_opportunities %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>Views</th>
+                <th>Opportunity score</th>
+                <th>Missing</th>
+                <th>Suggested next move</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in dashboard.missed_opportunities %}
+                <tr>
+                  <td><a href="{{ url_for('admin_analytics_page_report', page_path=row.page, range=dashboard.range_name, start=dashboard.start, end=dashboard.end) }}">{{ row.title }}</a></td>
+                  <td>{{ row.views }}</td>
+                  <td>{{ row.score }}</td>
+                  <td>{{ row.missing }}</td>
+                  <td>{{ row.recommendation }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">No missed-opportunity pages stand out in this period.</p>
+      {% endif %}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="articles">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-device-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-device-heading">Device notes</h2>
+        <span>Mobile and desktop behavior</span>
+      </div>
+      <ul class="admin-insight-list">
+        {% for note in dashboard.device_insights %}
+          <li>{{ note }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" id="admin-tab-reports" data-admin-tab-panel="reports">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-report-controls-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-report-controls-heading">Reports and exports</h2>
+        <span>Download or print this date range</span>
+      </div>
+      <div class="admin-report-actions">
+        <a href="{{ dashboard.report_links.print }}">Printable dashboard report</a>
+        <a href="{{ dashboard.report_links.board }}">Board update summary</a>
+        <a href="{{ dashboard.report_links.daily }}">Daily traffic CSV</a>
+        <a href="{{ dashboard.report_links.guides }}">Guide performance CSV</a>
+        <a href="{{ dashboard.report_links.content }}">Article performance CSV</a>
+        <a href="{{ dashboard.report_links.campaigns }}">Campaign performance CSV</a>
+        <a href="{{ dashboard.report_links.search }}">Search terms CSV</a>
+        <a href="{{ dashboard.report_links.opportunities }}">Opportunity alerts CSV</a>
+      </div>
+      <div class="admin-board-grid">
+        {% for item in dashboard.board_update %}
+          <article>
+            <span>{{ item.label }}</span>
+            <strong>{{ item.value }}</strong>
+            <p>{{ item.note }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="reports">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-recent-heading">
+      <div class="admin-panel__header">
+        <h2 id="admin-recent-heading">Recent activity</h2>
+        <span>{{ dashboard.recent_events|length }} latest</span>
+      </div>
+      {% if dashboard.recent_events %}
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>When</th>
+                <th>Event</th>
+                <th>Source page</th>
+                <th>Element</th>
+                <th>Device</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for event in dashboard.recent_events %}
+                <tr>
+                  <td>{{ event.occurred_at_label }}</td>
+                  <td>{{ event.human_label }}</td>
+                  <td>{{ event.page_path }}</td>
+                  <td>{{ event.element_label or "-" }}</td>
+                  <td>{{ event.device_category or "-" }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="admin-empty">No activity yet. Public browser events will appear here after analytics is enabled.</p>
+      {% endif %}
+    </section>
+    </div>
+
+    <div class="admin-tab-panel" data-admin-tab-panel="reports">
+    <section class="admin-panel admin-panel--wide" aria-labelledby="admin-how-heading">
+      <h2 id="admin-how-heading">How these numbers work</h2>
+      <ul class="admin-next-list">
+        {% for line in dashboard.metric_definitions %}
+          <li>{{ line }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var root = document.querySelector(".admin-analytics-dashboard");
+      if (!root) {
+        return;
+      }
+      var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-admin-tab]"));
+      var panels = Array.prototype.slice.call(root.querySelectorAll("[data-admin-tab-panel]"));
+      var allowedTabs = tabs.map(function (tab) { return tab.dataset.adminTab; });
+
+      function selectedTab() {
+        var hash = (window.location.hash || "").replace("#", "");
+        var aliases = {
+          donation: "donations",
+          "health-tools": "health-tools",
+          newsletter: "newsletter",
+          resources: "free-guides",
+          "free-guides": "free-guides",
+          "search-insights": "search",
+          content: "articles",
+          articles: "articles",
+          campaigns: "campaigns",
+          overview: "overview",
+          growth: "opportunities",
+          engagement: "traffic",
+          activity: "reports",
+          reports: "reports",
+        };
+        hash = aliases[hash] || hash;
+        return allowedTabs.indexOf(hash) !== -1 ? hash : "overview";
+      }
+
+      function activate(name) {
+        tabs.forEach(function (tab) {
+          var active = tab.dataset.adminTab === name;
+          tab.classList.toggle("is-active", active);
+          tab.setAttribute("aria-selected", active ? "true" : "false");
+        });
+        panels.forEach(function (panel) {
+          panel.hidden = panel.dataset.adminTabPanel !== name;
+        });
+      }
+
+      root.classList.add("admin-tabs-ready");
+      tabs.forEach(function (tab) {
+        tab.setAttribute("role", "tab");
+        tab.addEventListener("click", function () {
+          var name = tab.dataset.adminTab;
+          history.replaceState(null, "", "#" + name);
+          activate(name);
+        });
+      });
+      root.querySelector("[data-admin-tabs]").setAttribute("role", "tablist");
+      window.addEventListener("hashchange", function () {
+        activate(selectedTab());
+      });
+      activate(selectedTab());
+    })();
+  </script>
+{% endblock %}
+
+{% macro analytics_list(title, rows, empty_text) %}
+  <section class="admin-subpanel">
+    <h3>{{ title }}</h3>
+    {% if rows %}
+      <ol class="admin-ranked-list">
+        {% for item in rows %}
+          <li><span>{{ item.label }}</span><span>{{ item.count }}</span></li>
+        {% endfor %}
+      </ol>
+    {% else %}
+      <p class="admin-empty">{{ empty_text }}</p>
+    {% endif %}
+  </section>
+{% endmacro %}
+
+{% macro funnel_chart(funnel) %}
+  <div class="admin-funnel" aria-label="{{ funnel.title }}">
+    <p class="admin-muted">{{ funnel.note }}</p>
+    {% for step in funnel.steps %}
+      <div class="admin-funnel-step">
+        <div>
+          <strong>{{ step.label }}</strong>
+          <span>{{ step.count }} reached · {{ step.conversion }}</span>
+        </div>
+        <div class="admin-funnel-bar"><span style="width: {{ step.width }}%"></span></div>
+        <small>{{ step.dropoff }} drop-off · {{ step.availability }}</small>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+{% macro ranked_chart(title, rows, empty_text) %}
+  <section class="admin-subpanel">
+    <h3>{{ title }}</h3>
+    {% if rows %}
+      <div class="admin-bar-chart">
+        {% for row in rows %}
+          <div class="admin-bar-row">
+            <span>{{ row.label }}</span>
+            <div><i style="width: {{ row.width }}%"></i></div>
+            <strong>{{ row.value }}</strong>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="admin-empty">{{ empty_text }}</p>
+    {% endif %}
+  </section>
+{% endmacro %}
+
+{% macro donut_chart(title, chart, empty_text) %}
+  <section class="admin-subpanel">
+    <h3>{{ title }}</h3>
+    {% if chart.segments %}
+      <div class="admin-donut-layout">
+        <div class="admin-donut" style="background: {{ chart.gradient }}" role="img" aria-label="{{ title }}"></div>
+        <ol class="admin-donut-list">
+          {% for item in chart.segments %}
+            <li><span><i style="background: {{ item.color }}"></i>{{ item.label }}</span><strong>{{ item.count }} · {{ item.percent }}</strong></li>
+          {% endfor %}
+        </ol>
+      </div>
+    {% else %}
+      <p class="admin-empty">{{ empty_text }}</p>
+    {% endif %}
+  </section>
+{% endmacro %}

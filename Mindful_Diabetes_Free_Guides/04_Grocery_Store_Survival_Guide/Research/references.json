@@ -1,0 +1,42 @@
+[
+  {
+    "key": "fda_label",
+    "organization_or_authors": "U.S. Food and Drug Administration",
+    "title": "How to Understand and Use the Nutrition Facts Label",
+    "publisher": "FDA",
+    "year": "2024",
+    "url": "https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label"
+  },
+  {
+    "key": "fda_sugar",
+    "organization_or_authors": "U.S. Food and Drug Administration",
+    "title": "Added Sugars on the Nutrition Facts Label",
+    "publisher": "FDA",
+    "year": "2026",
+    "url": "https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label"
+  },
+  {
+    "key": "fda_sodium",
+    "organization_or_authors": "U.S. Food and Drug Administration",
+    "title": "Sodium in Your Diet",
+    "publisher": "FDA",
+    "year": "2024",
+    "url": "https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet"
+  },
+  {
+    "key": "plate",
+    "organization_or_authors": "American Diabetes Association Nutrition & Wellness Team",
+    "title": "What is the Diabetes Plate?",
+    "publisher": "American Diabetes Association Diabetes Food Hub",
+    "year": "2026",
+    "url": "https://diabetesfoodhub.org/blog/what-diabetes-plate"
+  },
+  {
+    "key": "usda",
+    "organization_or_authors": "U.S. Department of Agriculture",
+    "title": "MyPlate.gov",
+    "publisher": "USDA",
+    "year": "2026",
+    "url": "https://www.myplate.gov/"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "key": "cdc_dpp",
+    "organization_or_authors": "Centers for Disease Control and Prevention",
+    "title": "What Is the National Diabetes Prevention Program?",
+    "publisher": "CDC",
+    "year": "2024",
+    "url": "https://www.cdc.gov/diabetes-prevention/programs/what-is-the-national-dpp.html"
+  },
+  {
+    "key": "cdc_activity",
+    "organization_or_authors": "Centers for Disease Control and Prevention",
+    "title": "Get Active",
+    "publisher": "CDC",
+    "year": "2024",
+    "url": "https://www.cdc.gov/diabetes/living-with/physical-activity.html"
+  },
+  {
+    "key": "cdc_sleep",
+    "organization_or_authors": "Centers for Disease Control and Prevention",
+    "title": "About Sleep",
+    "publisher": "CDC",
+    "year": "2024",
+    "url": "https://www.cdc.gov/sleep/about/index.html"
+  },
+  {
+    "key": "ada",
+    "organization_or_authors": "American Diabetes Association",
+    "title": "Standards of Care in Diabetes - 2026",
+    "publisher": "Diabetes Care",
+    "year": "2026",
+    "url": "https://diabetesjournals.org/care/issue/49/Supplement_1"
+  },
+  {
+    "key": "fda_sugar",
+    "organization_or_authors": "U.S. Food and Drug Administration",
+    "title": "Added Sugars on the Nutrition Facts Label",
+    "publisher": "FDA",
+    "year": "2026",
+    "url": "https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label"
+  }
+]

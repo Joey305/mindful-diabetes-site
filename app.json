@@ -1,0 +1,81 @@
+{
+  "name": "Mindful Diabetes Website",
+  "description": "Flask website for www.mindfuldiabetes.org.",
+  "keywords": ["flask", "python", "health", "diabetes", "nonprofit"],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "PAYPAL_HOSTED_BUTTON_ID": {
+      "description": "PayPal hosted donation button ID.",
+      "required": false
+    },
+    "SECRET_KEY": {
+      "description": "Long random secret used to sign Flask admin sessions.",
+      "required": true
+    },
+    "ADMIN_EMAIL": {
+      "description": "The single email address allowed to access /admin/.",
+      "required": false,
+      "value": "jmschulz@mindfuldiabetes.org"
+    },
+    "ADMIN_EMAIL_FROM": {
+      "description": "Verified Brevo sender used for admin login codes.",
+      "required": false,
+      "value": "Mindful Diabetes <login@auth.mindfuldiabetes.org>"
+    },
+    "BREVO_API_KEY": {
+      "description": "Brevo API key used to send passwordless admin login codes. Keep private.",
+      "required": false
+    },
+    "DATABASE_URL": {
+      "description": "Optional Postgres connection URL for persistent admin login codes, activity tracking, and CMS content.",
+      "required": false
+    },
+    "GOOGLE_ADS_CONVERSION_ID": {
+      "description": "Public Google Ads conversion ID used by the Google tag.",
+      "required": false,
+      "value": "AW-11435654295"
+    },
+    "GOOGLE_ADS_CONVERSION_ACTIONS_JSON": {
+      "description": "Optional JSON map from first-party analytics events to Google Ads conversion labels.",
+      "required": false,
+      "value": "{}"
+    },
+    "CMS_DATA_PATH": {
+      "description": "Optional local development JSON path for CMS content when DATABASE_URL is unavailable.",
+      "required": false
+    },
+    "CMS_LOCAL_UPLOAD_ROOT": {
+      "description": "Optional local development upload root. Do not rely on local uploads for Heroku persistence.",
+      "required": false
+    },
+    "MAILCHIMP_API_KEY": {
+      "description": "Mailchimp API key for newsletter subscriptions. Leave unset until ready.",
+      "required": false
+    },
+    "MAILCHIMP_AUDIENCE_ID": {
+      "description": "Mailchimp audience/list ID for newsletter subscriptions.",
+      "required": false
+    },
+    "MAILCHIMP_SERVER_PREFIX": {
+      "description": "Mailchimp server prefix, such as us21. Optional if included in the API key suffix.",
+      "required": false
+    },
+    "MAILCHIMP_TAGS": {
+      "description": "Comma-separated tags applied to new Mailchimp subscribers.",
+      "required": false,
+      "value": "Mindful Diabetes Subscribers"
+    },
+    "TURNSTILE_SITE_KEY": {
+      "description": "Cloudflare Turnstile public site key for newsletter bot protection.",
+      "required": false
+    },
+    "TURNSTILE_SECRET_KEY": {
+      "description": "Cloudflare Turnstile secret key for server-side verification. Keep private.",
+      "required": false
+    }
+  }
+}

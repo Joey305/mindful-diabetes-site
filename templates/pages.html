@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Current Pages | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}pages-index{% endblock %}
+
+{% block content %}
+  <section class="content-shell">
+    <div class="section-heading">
+      <p class="eyebrow">Migration map</p>
+      <h1>Current published pages</h1>
+      <p>These are the WordPress pages now represented by Flask routes.</p>
+    </div>
+    <div class="post-grid">
+      {% for page in pages %}
+        <article class="post-card">
+          <h2><a href="{{ page.canonical_path }}">{{ page.title }}</a></h2>
+          <p>{{ page.canonical_path }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

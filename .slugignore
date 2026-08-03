@@ -1,0 +1,38 @@
+# Heroku deployment exclusions.
+# Large media should live in external asset storage, not in the app slug.
+*.wav
+*.mp3
+*.mp4
+*.mov
+*.m4a
+*.avi
+*.zip
+
+# Local development and cache artifacts
+.env
+.env.*
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+._*
+
+# Private or non-runtime WordPress migration artifacts
+*.wpress
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+mindfuldiabetesinc.WordPress.*.xml
+mindful_diabetes_wp_parse_outputs/.DS_Store
+mindful_diabetes_wp_parse_outputs/wp_migration_outputs/*.csv
+mindful_diabetes_wp_parse_outputs/wp_migration_outputs/wordpress_*.json
+static/uploads/trustedlogin-logs/
+static/uploads/mailchimp-for-wp/debug-log.php
+*.log

@@ -1,0 +1,9 @@
+<aside class="cms-block cms-author-bio">
+  {% if block.content.photo %}<img src="{{ block.content.photo }}" alt="{{ block.content.name }}">{% endif %}
+  <div>
+    <h2>{{ block.content.name or "About the author" }}</h2>
+    {% if block.content.credentials %}<p class="cms-meta">{{ block.content.credentials }}</p>{% endif %}
+    {% if block.content.bio %}<p>{{ block.content.bio }}</p>{% endif %}
+    {% if block.content.profile_url %}<a href="{{ block.content.profile_url }}">Author profile</a>{% endif %}
+  </div>
+</aside>

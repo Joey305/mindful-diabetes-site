@@ -1,0 +1,8 @@
+<section class="cms-block cms-gallery cms-gallery--{{ block.settings.columns }} cms-gallery--{{ block.settings.ratio }} {% if block.settings.frame %}cms-gallery--framed{% endif %}">
+  {% for image in block.content.images %}
+    <figure>
+      {% if image.src %}<img src="{{ image.src }}" alt="{{ image.alt }}">{% else %}<div class="cms-image-placeholder">Image</div>{% endif %}
+      {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+    </figure>
+  {% endfor %}
+</section>

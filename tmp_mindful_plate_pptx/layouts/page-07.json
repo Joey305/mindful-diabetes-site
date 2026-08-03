@@ -1,0 +1,1971 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/31utbs",
+    "id": "31utbs",
+    "slide": 7,
+    "layoutId": "f0930ad3-ec45-405f-89c7-992327d49d91",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFDF7",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 816,
+      "height": 1056
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Mindful Diabetes",
+    "colors": {
+      "dk1": "#16211D",
+      "lt1": "#FFFDF7",
+      "dk2": "#192442",
+      "lt2": "#FBF3EA",
+      "accent1": "#034B2F",
+      "accent2": "#F26A2E",
+      "accent3": "#E6F2EC",
+      "accent4": "#EEF7FA",
+      "accent5": "#F5C66B",
+      "accent6": "#5C6C67",
+      "hlink": "#034B2F",
+      "folHlink": "#192442"
+    },
+    "typefaces": [
+      "Lato",
+      "Lora"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "f0930ad3-ec45-405f-89c7-992327d49d91",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/1svyhcna",
+      "id": "1",
+      "bbox": [
+        58,
+        30,
+        27,
+        29
+      ],
+      "geometry": "roundRect",
+      "alt": "Mindful Diabetes Inc. logo",
+      "contentType": "image/jpeg",
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 29630"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "9ffd9e27-e749-4bf8-b52f-0893e33926da",
+        "contentType": "image/jpeg",
+        "byteLength": 160253
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fu9cz69w",
+      "id": "2",
+      "bbox": [
+        92,
+        35,
+        200,
+        18
+      ],
+      "geometry": "rect",
+      "text": "The Mindful Plate",
+      "textPreview": "The Mindful Plate",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lora",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The Mindful Plate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The Mindful Plate",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lora",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The Mindful Plate",
+              "fontSize": 10.51,
+              "typeface": "Lora",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/et0vqlsb",
+      "id": "3",
+      "bbox": [
+        92,
+        51,
+        230,
+        15
+      ],
+      "geometry": "rect",
+      "text": "Protein",
+      "textPreview": "Protein",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Protein"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Protein",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Protein",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/90bu50ry",
+      "id": "4",
+      "bbox": [
+        58,
+        75,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oz2dwvad",
+      "id": "5",
+      "bbox": [
+        58,
+        1009,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nytc3q9s",
+      "id": "6",
+      "bbox": [
+        58,
+        1020,
+        185,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Mindful Diabetes Inc.",
+      "textPreview": "Mindful Diabetes Inc.",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Mindful Diabetes Inc."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Mindful Diabetes Inc.",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Mindful Diabetes Inc.",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2xkvuls7",
+      "id": "7",
+      "bbox": [
+        332,
+        1020,
+        155,
+        18
+      ],
+      "geometry": "rect",
+      "text": "mindfuldiabetes.org",
+      "textPreview": "mindfuldiabetes.org",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "mindfuldiabetes.org"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "mindfuldiabetes.org",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "center",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "mindfuldiabetes.org",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "center",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/54rutwre",
+      "id": "8",
+      "bbox": [
+        723,
+        1020,
+        35,
+        18
+      ],
+      "geometry": "rect",
+      "text": "7",
+      "textPreview": "7",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "7"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "7",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "alignment": "right",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "7",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "alignment": "right",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/43ytkra9",
+      "id": "9",
+      "bbox": [
+        66,
+        83,
+        280,
+        22
+      ],
+      "geometry": "rect",
+      "text": "PROTEIN",
+      "textPreview": "PROTEIN",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "PROTEIN"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "PROTEIN",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "PROTEIN",
+              "fontSize": 12,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6pgbi943",
+      "id": "10",
+      "bbox": [
+        62,
+        112,
+        650,
+        76
+      ],
+      "geometry": "rect",
+      "text": "Protein helps a meal hold together",
+      "textPreview": "Protein helps a meal hold together",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 34,
+        "typeface": "Lora",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Protein helps a meal hold together"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Protein helps a meal hold together",
+          "lineSpacingPercent": 103000,
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Lora",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.03
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Protein helps a meal hold together",
+              "fontSize": 34,
+              "typeface": "Lora",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.03
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7qpsre58",
+      "id": "11",
+      "bbox": [
+        66,
+        196,
+        670,
+        58
+      ],
+      "geometry": "rect",
+      "text": "Protein foods can support fullness and help make a meal feel more steady. They may come from animal or plant sources, and budget options count.",
+      "textPreview": "Protein foods can support fullness and help make a meal feel more steady. They may come from animal or plant sources, and budget options ...",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Protein foods can support fullness and help make a meal feel more steady. They may come from"
+          },
+          {
+            "index": 2,
+            "text": "animal or plant sources, and budget options count."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Protein foods can support fullness and help make a meal feel more steady. They may come from animal or plant sources, and budget options count.",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Protein foods can support fullness and help make a meal feel more steady. They may come from animal or plant sources, and budget options count.",
+              "fontSize": 15,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8ritkzmt",
+      "id": "12",
+      "bbox": [
+        66,
+        280,
+        318,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tsrat4ne",
+      "id": "13",
+      "bbox": [
+        82,
+        300,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#EEF7FA",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ut0bm94z",
+      "id": "14",
+      "bbox": [
+        114,
+        296,
+        254,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Eggs or fish",
+      "textPreview": "Eggs or fish",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Eggs or fish"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Eggs or fish",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Eggs or fish",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vu9sve5k",
+      "id": "15",
+      "bbox": [
+        114,
+        319,
+        254,
+        38
+      ],
+      "geometry": "rect",
+      "text": "eggs, tuna, salmon, sardines",
+      "textPreview": "eggs, tuna, salmon, sardines",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "eggs, tuna, salmon, sardines"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "eggs, tuna, salmon, sardines",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "eggs, tuna, salmon, sardines",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gvitojm5",
+      "id": "16",
+      "bbox": [
+        412,
+        280,
+        318,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hwraxonq",
+      "id": "17",
+      "bbox": [
+        428,
+        300,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ih0bqt4v",
+      "id": "18",
+      "bbox": [
+        460,
+        296,
+        254,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Poultry or lean meat",
+      "textPreview": "Poultry or lean meat",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Poultry or lean meat"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Poultry or lean meat",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Poultry or lean meat",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3i9szy5g",
+      "id": "19",
+      "bbox": [
+        460,
+        319,
+        254,
+        38
+      ],
+      "geometry": "rect",
+      "text": "chicken, turkey, lean beef",
+      "textPreview": "chicken, turkey, lean beef",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "chicken, turkey, lean beef"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "chicken, turkey, lean beef",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "chicken, turkey, lean beef",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zmts7y1o",
+      "id": "20",
+      "bbox": [
+        66,
+        394,
+        318,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/elkretk3",
+      "id": "21",
+      "bbox": [
+        82,
+        414,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1oba9oju",
+      "id": "22",
+      "bbox": [
+        114,
+        410,
+        254,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Tofu or tempeh",
+      "textPreview": "Tofu or tempeh",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tofu or tempeh"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tofu or tempeh",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tofu or tempeh",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0n29g329",
+      "id": "23",
+      "bbox": [
+        114,
+        433,
+        254,
+        38
+      ],
+      "geometry": "rect",
+      "text": "soy options, edamame",
+      "textPreview": "soy options, edamame",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "soy options, edamame"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "soy options, edamame",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "soy options, edamame",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ryts3els",
+      "id": "24",
+      "bbox": [
+        412,
+        394,
+        318,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qx0ra9k7",
+      "id": "25",
+      "bbox": [
+        428,
+        414,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#FCE4D8",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dkba5oji",
+      "id": "26",
+      "bbox": [
+        460,
+        410,
+        254,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Beans or lentils",
+      "textPreview": "Beans or lentils",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Beans or lentils"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Beans or lentils",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Beans or lentils",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cj29cj2x",
+      "id": "27",
+      "bbox": [
+        460,
+        433,
+        254,
+        38
+      ],
+      "geometry": "rect",
+      "text": "also contain carbohydrate",
+      "textPreview": "also contain carbohydrate",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "also contain carbohydrate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "also contain carbohydrate",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "also contain carbohydrate",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3u9szelg",
+      "id": "28",
+      "bbox": [
+        66,
+        508,
+        318,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/it0r69kv",
+      "id": "29",
+      "bbox": [
+        82,
+        528,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#EEF7FA",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8zypgfit",
+      "id": "30",
+      "bbox": [
+        114,
+        524,
+        254,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Plain yogurt",
+      "textPreview": "Plain yogurt",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Plain yogurt"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Plain yogurt",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Plain yogurt",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t0769kje",
+      "id": "31",
+      "bbox": [
+        114,
+        547,
+        254,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Greek yogurt, cottage cheese",
+      "textPreview": "Greek yogurt, cottage cheese",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Greek yogurt, cottage cheese"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Greek yogurt, cottage cheese",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Greek yogurt, cottage cheese",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6xw7e50n",
+      "id": "32",
+      "bbox": [
+        412,
+        508,
+        318,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7y5o7a18",
+      "id": "33",
+      "bbox": [
+        428,
+        528,
+        20,
+        20
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#034B2F",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g3ypkfip",
+      "id": "34",
+      "bbox": [
+        460,
+        524,
+        254,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Nuts and seeds",
+      "textPreview": "Nuts and seeds",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Nuts and seeds"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Nuts and seeds",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Nuts and seeds",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h476dkza",
+      "id": "35",
+      "bbox": [
+        460,
+        547,
+        254,
+        38
+      ],
+      "geometry": "rect",
+      "text": "satisfying add-ins",
+      "textPreview": "satisfying add-ins",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "satisfying add-ins"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "satisfying add-ins",
+          "lineSpacingPercent": 110000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "satisfying add-ins",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u1g7i50z",
+      "id": "36",
+      "bbox": [
+        78,
+        776,
+        630,
+        48
+      ],
+      "geometry": "rect",
+      "text": "Beans and lentils are both protein and carbohydrate foods. That does not make them wrong; it just means portion and pairing are useful.",
+      "textPreview": "Beans and lentils are both protein and carbohydrate foods. That does not make them wrong; it just means portion and pairing are useful.",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Beans and lentils are both protein and carbohydrate foods. That does not make them wrong; it just"
+          },
+          {
+            "index": 2,
+            "text": "means portion and pairing are useful."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Beans and lentils are both protein and carbohydrate foods. That does not make them wrong; it just means portion and pairing are useful.",
+          "lineSpacingPercent": 120000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.2
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Beans and lentils are both protein and carbohydrate foods. That does not make them wrong; it just means portion and pairing are useful.",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.2
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v2pobahk",
+      "id": "37",
+      "bbox": [
+        66,
+        875,
+        684,
+        70
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#B8D8C8",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7up8vil",
+      "id": "38",
+      "bbox": [
+        83,
+        889,
+        650,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Budget note",
+      "textPreview": "Budget note",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Lato",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Budget note"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Budget note",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Lato",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Budget note",
+              "fontSize": 13,
+              "typeface": "Lato",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x8n61gj6",
+      "id": "39",
+      "bbox": [
+        83,
+        917,
+        650,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Canned tuna, eggs, beans, lentils, tofu, and plain yogurt can be practical lower-cost protein anchors.",
+      "textPreview": "Canned tuna, eggs, beans, lentils, tofu, and plain yogurt can be practical lower-cost protein anchors.",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Canned tuna, eggs, beans, lentils, tofu, and plain yogurt can be practical lower-cost protein anchors."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Canned tuna, eggs, beans, lentils, tofu, and plain yogurt can be practical lower-cost protein anchors.",
+          "lineSpacingPercent": 117000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.17
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Canned tuna, eggs, beans, lentils, tofu, and plain yogurt can be practical lower-cost protein anchors.",
+              "fontSize": 12,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.17
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

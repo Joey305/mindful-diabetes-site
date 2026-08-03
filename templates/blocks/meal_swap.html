@@ -1,0 +1,13 @@
+<section class="cms-block cms-meal-swap">
+  <h2>{{ block.content.heading }}</h2>
+  <div>
+    {% for swap in block.content.swaps %}
+      <article>
+        <p class="eyebrow">Instead of</p>
+        <h3>{{ swap.first }}</h3>
+        <p class="eyebrow">Consider</p>
+        <h3>{{ swap.second }}</h3>
+      </article>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,10 @@
+Mindful Plate rebuilt source.
+Output PPTX: /Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/Mindful_Diabetes_Free_Guides/02_The_Mindful_Plate/Editable_Source/mindful-diabetes-mindful-plate-guide-2026-redesigned-corrected.pptx
+Generated image assets: /Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/Mindful_Diabetes_Free_Guides/02_The_Mindful_Plate/Editable_Source/Rebuilt_Assets/cover-balanced-plate.png, /Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/Mindful_Diabetes_Free_Guides/02_The_Mindful_Plate/Editable_Source/Rebuilt_Assets/welcome-shared-table.png
+Primary sources:
+1. American Diabetes Association | Standards of Care in Diabetes - 2026 | Diabetes Care | 2026 | https://diabetesjournals.org/care/issue/49/Supplement_1
+2. American Diabetes Association Nutrition & Wellness Team | What is the Diabetes Plate? | ADA Diabetes Food Hub | 2026 | https://diabetesfoodhub.org/blog/what-diabetes-plate
+3. U.S. Food and Drug Administration | How to Understand and Use the Nutrition Facts Label | FDA | 2024 | https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label
+4. U.S. Food and Drug Administration | Added Sugars on the Nutrition Facts Label | FDA | 2026 | https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label
+5. American Heart Association | The Facts on Fats | AHA | 2025 | https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats
+6. Centers for Disease Control and Prevention | About the Lifestyle Change Program | CDC | 2024 | https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html

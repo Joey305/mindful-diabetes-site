@@ -1,0 +1,1330 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/6pfilu",
+    "id": "6pfilu",
+    "slide": 21,
+    "layoutId": "f0930ad3-ec45-405f-89c7-992327d49d91",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFDF7",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 816,
+      "height": 1056
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Mindful Diabetes",
+    "colors": {
+      "dk1": "#16211D",
+      "lt1": "#FFFDF7",
+      "dk2": "#192442",
+      "lt2": "#FBF3EA",
+      "accent1": "#034B2F",
+      "accent2": "#F26A2E",
+      "accent3": "#E6F2EC",
+      "accent4": "#EEF7FA",
+      "accent5": "#F5C66B",
+      "accent6": "#5C6C67",
+      "hlink": "#034B2F",
+      "folHlink": "#192442"
+    },
+    "typefaces": [
+      "Lato",
+      "Lora"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "f0930ad3-ec45-405f-89c7-992327d49d91",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/7y18ryho",
+      "id": "1",
+      "bbox": [
+        58,
+        30,
+        27,
+        29
+      ],
+      "geometry": "roundRect",
+      "alt": "Mindful Diabetes Inc. logo",
+      "contentType": "image/jpeg",
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 29630"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "842366dc-c1c8-415f-8db4-5fa05e79b7f2",
+        "contentType": "image/jpeg",
+        "byteLength": 160253
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/po3ytgbe",
+      "id": "2",
+      "bbox": [
+        92,
+        35,
+        200,
+        18
+      ],
+      "geometry": "rect",
+      "text": "The Mindful Plate",
+      "textPreview": "The Mindful Plate",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lora",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The Mindful Plate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The Mindful Plate",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lora",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The Mindful Plate",
+              "fontSize": 10.51,
+              "typeface": "Lora",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/onuhkvut",
+      "id": "3",
+      "bbox": [
+        92,
+        51,
+        230,
+        15
+      ],
+      "geometry": "rect",
+      "text": "References and safety",
+      "textPreview": "References and safety",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "References and safety"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "References and safety",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "References and safety",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bq50vqt4",
+      "id": "4",
+      "bbox": [
+        58,
+        75,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/apwzmlcz",
+      "id": "5",
+      "bbox": [
+        58,
+        1009,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xsnix0ba",
+      "id": "6",
+      "bbox": [
+        58,
+        1020,
+        185,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Mindful Diabetes Inc.",
+      "textPreview": "Mindful Diabetes Inc.",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Mindful Diabetes Inc."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Mindful Diabetes Inc.",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Mindful Diabetes Inc.",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/crehovup",
+      "id": "7",
+      "bbox": [
+        332,
+        1020,
+        155,
+        18
+      ],
+      "geometry": "rect",
+      "text": "mindfuldiabetes.org",
+      "textPreview": "mindfuldiabetes.org",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "mindfuldiabetes.org"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "mindfuldiabetes.org",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "center",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "mindfuldiabetes.org",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "center",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ru1gj6t0",
+      "id": "8",
+      "bbox": [
+        723,
+        1020,
+        35,
+        18
+      ],
+      "geometry": "rect",
+      "text": "21",
+      "textPreview": "21",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "21"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "21",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "alignment": "right",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "21",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "alignment": "right",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qtsza1cf",
+      "id": "9",
+      "bbox": [
+        66,
+        83,
+        280,
+        22
+      ],
+      "geometry": "rect",
+      "text": "REFERENCES AND SAFETY",
+      "textPreview": "REFERENCES AND SAFETY",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "REFERENCES AND SAFETY"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "REFERENCES AND SAFETY",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "REFERENCES AND SAFETY",
+              "fontSize": 12,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0jql8fqp",
+      "id": "10",
+      "bbox": [
+        62,
+        112,
+        650,
+        76
+      ],
+      "geometry": "rect",
+      "text": "References and medical disclaimer",
+      "textPreview": "References and medical disclaimer",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 34,
+        "typeface": "Lora",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "References and medical disclaimer"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "References and medical disclaimer",
+          "lineSpacingPercent": 103000,
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Lora",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.03
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "References and medical disclaimer",
+              "fontSize": 34,
+              "typeface": "Lora",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.03
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lkzmhk7a",
+      "id": "11",
+      "bbox": [
+        66,
+        196,
+        670,
+        58
+      ],
+      "geometry": "rect",
+      "text": "Human-readable sources and the boundaries of this guide.",
+      "textPreview": "Human-readable sources and the boundaries of this guide.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Human-readable sources and the boundaries of this guide."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Human-readable sources and the boundaries of this guide.",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Human-readable sources and the boundaries of this guide.",
+              "fontSize": 15,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yh83658j",
+      "id": "12",
+      "bbox": [
+        66,
+        230,
+        680,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Medical disclaimer",
+      "textPreview": "Medical disclaimer",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Medical disclaimer"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Medical disclaimer",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Medical disclaimer",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zih4fap4",
+      "id": "13",
+      "bbox": [
+        66,
+        256,
+        680,
+        94
+      ],
+      "geometry": "rect",
+      "text": "This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do not change insulin, diabetes medication, glucose targets, pregnancy care, kidney-disease care, or any prescribed medical diet because of this guide. For symptoms of severe low blood sugar, severe high blood sugar, chest pain, trouble breathing, confusion, fainting, or another emergency, seek urgent medical care.",
+      "textPreview": "This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do...",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a"
+          },
+          {
+            "index": 2,
+            "text": "medication plan. Do not change insulin, diabetes medication, glucose targets, pregnancy care, kidney-disease care, or"
+          },
+          {
+            "index": 3,
+            "text": "any prescribed medical diet because of this guide. For symptoms of severe low blood sugar, severe high blood sugar,"
+          },
+          {
+            "index": 4,
+            "text": "chest pain, trouble breathing, confusion, fainting, or another emergency, seek urgent medical care."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do not change insulin, diabetes medication, glucose targets, pregnancy care, kidney-disease care, or any prescribed medical diet because of this guide. For symptoms of severe low blood sugar, severe high blood sugar, chest pain, trouble breathing, confusion, fainting, or another emergency, seek urgent medical care.",
+          "lineSpacingPercent": 119000,
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.19
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do not change insulin, diabetes medication, glucose targets, pregnancy care, kidney-disease care, or any prescribed medical diet because of this guide. For symptoms of severe low blood sugar, severe high blood sugar, chest pain, trouble breathing, confusion, fainting, or another emergency, seek urgent medical care.",
+              "fontSize": 12.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.19
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8nalcfql",
+      "id": "14",
+      "bbox": [
+        66,
+        382,
+        680,
+        24
+      ],
+      "geometry": "rect",
+      "text": "References",
+      "textPreview": "References",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Lato",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "References"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "References",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Lato",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "References",
+              "fontSize": 14,
+              "typeface": "Lato",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/98jmlk76",
+      "id": "15",
+      "bbox": [
+        66,
+        414,
+        680,
+        405
+      ],
+      "geometry": "rect",
+      "text": "1. American Diabetes Association. Standards of Care in Diabetes - 2026. Diabetes Care; 2026. https://diabetesjournals.org/care/issue/49/Supplement_1\n2. American Diabetes Association Nutrition & Wellness Team. What is the Diabetes Plate?. ADA Diabetes Food Hub; 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate\n3. U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. FDA; 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n4. U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. FDA; 2026. https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n5. American Heart Association. The Facts on Fats. AHA; 2025. https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats\n6. Centers for Disease Control and Prevention. About the Lifestyle Change Program. CDC; 2024. https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html",
+      "textPreview": "1. American Diabetes Association. Standards of Care in Diabetes - 2026. Diabetes Care; 2026. https://diabetesjournals.org/care/issue/49/S...",
+      "resolvedFontSize": 10.71,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.71,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 12,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1. American Diabetes Association. Standards of Care in Diabetes - 2026. Diabetes Care; 2026."
+          },
+          {
+            "index": 2,
+            "text": "https://diabetesjournals.org/care/issue/49/Supplement_1"
+          },
+          {
+            "index": 3,
+            "text": "2. American Diabetes Association Nutrition & Wellness Team. What is the Diabetes Plate?. ADA Diabetes Food Hub; 2026."
+          },
+          {
+            "index": 4,
+            "text": "https://diabetesfoodhub.org/blog/what-diabetes-plate"
+          },
+          {
+            "index": 5,
+            "text": "3. U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. FDA; 2024."
+          },
+          {
+            "index": 6,
+            "text": "https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label"
+          },
+          {
+            "index": 7,
+            "text": "4. U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. FDA; 2026."
+          },
+          {
+            "index": 8,
+            "text": "https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label"
+          },
+          {
+            "index": 9,
+            "text": "5. American Heart Association. The Facts on Fats. AHA; 2025."
+          },
+          {
+            "index": 10,
+            "text": "https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats"
+          },
+          {
+            "index": 11,
+            "text": "6. Centers for Disease Control and Prevention. About the Lifestyle Change Program. CDC; 2024."
+          },
+          {
+            "index": 12,
+            "text": "https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "1. American Diabetes Association. Standards of Care in Diabetes - 2026. Diabetes Care; 2026. https://diabetesjournals.org/care/issue/49/Supplement_1",
+          "lineSpacingPercent": 122000,
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.22
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1. American Diabetes Association. Standards of Care in Diabetes - 2026. Diabetes Care; 2026. https://diabetesjournals.org/care/issue/49/Supplement_1",
+              "fontSize": 10.71,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.22
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "2. American Diabetes Association Nutrition & Wellness Team. What is the Diabetes Plate?. ADA Diabetes Food Hub; 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate",
+          "lineSpacingPercent": 122000,
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.22
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2. American Diabetes Association Nutrition & Wellness Team. What is the Diabetes Plate?. ADA Diabetes Food Hub; 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate",
+              "fontSize": 10.71,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.22
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "3. U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. FDA; 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label",
+          "lineSpacingPercent": 122000,
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.22
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3. U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. FDA; 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label",
+              "fontSize": 10.71,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.22
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "4. U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. FDA; 2026. https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label",
+          "lineSpacingPercent": 122000,
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.22
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4. U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. FDA; 2026. https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label",
+              "fontSize": 10.71,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.22
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "5. American Heart Association. The Facts on Fats. AHA; 2025. https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats",
+          "lineSpacingPercent": 122000,
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.22
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "5. American Heart Association. The Facts on Fats. AHA; 2025. https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/the-facts-on-fats",
+              "fontSize": 10.71,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.22
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 6,
+          "text": "6. Centers for Disease Control and Prevention. About the Lifestyle Change Program. CDC; 2024. https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html",
+          "lineSpacingPercent": 122000,
+          "resolvedTextStyle": {
+            "fontSize": 10.71,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.22
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6. Centers for Disease Control and Prevention. About the Lifestyle Change Program. CDC; 2024. https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html",
+              "fontSize": 10.71,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.22
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ml83ap8f",
+      "id": "16",
+      "bbox": [
+        66,
+        850,
+        680,
+        94
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#B8D8C8",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nm14jap0",
+      "id": "17",
+      "bbox": [
+        84,
+        868,
+        220,
+        20
+      ],
+      "geometry": "rect",
+      "text": "Publication information",
+      "textPreview": "Publication information",
+      "resolvedFontSize": 12.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12.51,
+        "typeface": "Lato",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Publication information"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Publication information",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12.51,
+            "typeface": "Lato",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Publication information",
+              "fontSize": 12.51,
+              "typeface": "Lato",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/or6l0vqh",
+      "id": "18",
+      "bbox": [
+        84,
+        895,
+        620,
+        44
+      ],
+      "geometry": "rect",
+      "text": "Published: July 30, 2026 | Medical review: pending | Next scheduled review: July 2027\nMindful Diabetes Inc., 501(c)(3) nonprofit | Free to share for education, with attribution.",
+      "textPreview": "Published: July 30, 2026 | Medical review: pending | Next scheduled review: July 2027 | Mindful Diabetes Inc., 501(c)(3) nonprofit | Free...",
+      "resolvedFontSize": 11.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Published: July 30, 2026 | Medical review: pending | Next scheduled review: July 2027"
+          },
+          {
+            "index": 2,
+            "text": "Mindful Diabetes Inc., 501(c)(3) nonprofit | Free to share for education, with attribution."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Published: July 30, 2026 | Medical review: pending | Next scheduled review: July 2027",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 11.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Published: July 30, 2026 | Medical review: pending | Next scheduled review: July 2027",
+              "fontSize": 11.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "Mindful Diabetes Inc., 501(c)(3) nonprofit | Free to share for education, with attribution.",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 11.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Mindful Diabetes Inc., 501(c)(3) nonprofit | Free to share for education, with attribution.",
+              "fontSize": 11.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

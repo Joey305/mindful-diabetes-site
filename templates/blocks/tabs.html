@@ -1,0 +1,8 @@
+<section class="cms-block cms-tabs">
+  {% for tab in block.content.tabs %}
+    <details {% if loop.first %}open{% endif %}>
+      <summary>{{ tab.title }}</summary>
+      <div>{{ tab.body|safe }}</div>
+    </details>
+  {% endfor %}
+</section>

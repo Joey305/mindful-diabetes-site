@@ -1,0 +1,1726 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/powr8x",
+    "id": "powr8x",
+    "slide": 14,
+    "layoutId": "f0930ad3-ec45-405f-89c7-992327d49d91",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFDF7",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 816,
+      "height": 1056
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Mindful Diabetes",
+    "colors": {
+      "dk1": "#16211D",
+      "lt1": "#FFFDF7",
+      "dk2": "#192442",
+      "lt2": "#FBF3EA",
+      "accent1": "#034B2F",
+      "accent2": "#F26A2E",
+      "accent3": "#E6F2EC",
+      "accent4": "#EEF7FA",
+      "accent5": "#F5C66B",
+      "accent6": "#5C6C67",
+      "hlink": "#034B2F",
+      "folHlink": "#192442"
+    },
+    "typefaces": [
+      "Lato",
+      "Lora"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "f0930ad3-ec45-405f-89c7-992327d49d91",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4237063b-6a46-4da7-957c-19d1f6e15a5c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/nuxk7mp4",
+      "id": "1",
+      "bbox": [
+        58,
+        30,
+        27,
+        29
+      ],
+      "geometry": "roundRect",
+      "alt": "Mindful Diabetes Inc. logo",
+      "contentType": "image/jpeg",
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 29630"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "2193be75-3755-4f7f-a07d-d380b7ab854a",
+        "contentType": "image/jpeg",
+        "byteLength": 160253
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8vqh8ju",
+      "id": "2",
+      "bbox": [
+        92,
+        35,
+        200,
+        18
+      ],
+      "geometry": "rect",
+      "text": "The Mindful Plate",
+      "textPreview": "The Mindful Plate",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lora",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The Mindful Plate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The Mindful Plate",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lora",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The Mindful Plate",
+              "fontSize": 10.51,
+              "typeface": "Lora",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c729o3i9",
+      "id": "3",
+      "bbox": [
+        92,
+        51,
+        230,
+        15
+      ],
+      "geometry": "rect",
+      "text": "Drinks",
+      "textPreview": "Drinks",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Drinks"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Drinks",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Drinks",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3it8by1s",
+      "id": "4",
+      "bbox": [
+        58,
+        75,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ihkritk7",
+      "id": "5",
+      "bbox": [
+        58,
+        1009,
+        700,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#D9E2DA",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5kbqd8jy",
+      "id": "6",
+      "bbox": [
+        58,
+        1020,
+        185,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Mindful Diabetes Inc.",
+      "textPreview": "Mindful Diabetes Inc.",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Mindful Diabetes Inc."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Mindful Diabetes Inc.",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Mindful Diabetes Inc.",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4j29k32d",
+      "id": "7",
+      "bbox": [
+        332,
+        1020,
+        155,
+        18
+      ],
+      "geometry": "rect",
+      "text": "mindfuldiabetes.org",
+      "textPreview": "mindfuldiabetes.org",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "mindfuldiabetes.org"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "mindfuldiabetes.org",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "center",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "mindfuldiabetes.org",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "center",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nedsni1w",
+      "id": "8",
+      "bbox": [
+        723,
+        1020,
+        35,
+        18
+      ],
+      "geometry": "rect",
+      "text": "14",
+      "textPreview": "14",
+      "resolvedFontSize": 8.8,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 8.8,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "14"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "14",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 8.8,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "alignment": "right",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "14",
+              "fontSize": 8.8,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "alignment": "right",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/md4rud0b",
+      "id": "9",
+      "bbox": [
+        66,
+        83,
+        280,
+        22
+      ],
+      "geometry": "rect",
+      "text": "DRINKS",
+      "textPreview": "DRINKS",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Lato",
+        "color": "#F26A2E",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DRINKS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DRINKS",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Lato",
+            "color": "#F26A2E",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "DRINKS",
+              "fontSize": 12,
+              "typeface": "Lato",
+              "color": "#F26A2E",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0vm5o3eh",
+      "id": "10",
+      "bbox": [
+        62,
+        112,
+        650,
+        76
+      ],
+      "geometry": "rect",
+      "text": "Drinks and hidden sugars",
+      "textPreview": "Drinks and hidden sugars",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 34,
+        "typeface": "Lora",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Drinks and hidden sugars"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Drinks and hidden sugars",
+          "lineSpacingPercent": 103000,
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Lora",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.03
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Drinks and hidden sugars",
+              "fontSize": 34,
+              "typeface": "Lora",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.03
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwvmxov2",
+      "id": "11",
+      "bbox": [
+        66,
+        196,
+        670,
+        58
+      ],
+      "geometry": "rect",
+      "text": "Sugary drinks can raise blood glucose quickly because they are easy to drink fast and do not bring much fiber or fullness.",
+      "textPreview": "Sugary drinks can raise blood glucose quickly because they are easy to drink fast and do not bring much fiber or fullness.",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Sugary drinks can raise blood glucose quickly because they are easy to drink fast and do not bring"
+          },
+          {
+            "index": 2,
+            "text": "much fiber or fullness."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Sugary drinks can raise blood glucose quickly because they are easy to drink fast and do not bring much fiber or fullness.",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Sugary drinks can raise blood glucose quickly because they are easy to drink fast and do not bring much fiber or fullness.",
+              "fontSize": 15,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yt43mtwr",
+      "id": "12",
+      "bbox": [
+        86,
+        310,
+        114,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#C8DAD2",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zud4vydw",
+      "id": "13",
+      "bbox": [
+        119,
+        352,
+        48,
+        88
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#AFCAC0",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c72lkjel",
+      "id": "14",
+      "bbox": [
+        76,
+        528,
+        134,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Water",
+      "textPreview": "Water",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Water"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Water",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Water",
+              "fontSize": 13,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsbmtov6",
+      "id": "15",
+      "bbox": [
+        76,
+        556,
+        134,
+        34
+      ],
+      "geometry": "rect",
+      "text": "No added sugar",
+      "textPreview": "No added sugar",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "No added sugar"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "No added sugar",
+          "lineSpacingPercent": 105000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "center",
+            "lineSpacing": 1.05
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "No added sugar",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "center",
+              "lineSpacing": 1.05
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q5k3i9wf",
+      "id": "16",
+      "bbox": [
+        258,
+        310,
+        114,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#EEF7FA",
+      "lineColor": "#C8DAD2",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b6t4red0",
+      "id": "17",
+      "bbox": [
+        291,
+        352,
+        48,
+        88
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#AFCAC0",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o32lgze9",
+      "id": "18",
+      "bbox": [
+        248,
+        528,
+        134,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Sparkling water",
+      "textPreview": "Sparkling water",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Sparkling water"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Sparkling water",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Sparkling water",
+              "fontSize": 13,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p4bmp4vu",
+      "id": "19",
+      "bbox": [
+        248,
+        556,
+        134,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Check labels if flavored",
+      "textPreview": "Check labels if flavored",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Check labels if flavored"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Check labels if flavored",
+          "lineSpacingPercent": 105000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "center",
+            "lineSpacing": 1.05
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Check labels if flavored",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "center",
+              "lineSpacing": 1.05
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5ojaxgjm",
+      "id": "20",
+      "bbox": [
+        430,
+        310,
+        114,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#C8DAD2",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4nat4b21",
+      "id": "21",
+      "bbox": [
+        463,
+        352,
+        48,
+        88
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#AFCAC0",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm1sv61g",
+      "id": "22",
+      "bbox": [
+        420,
+        528,
+        134,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Unsweet tea or coffee",
+      "textPreview": "Unsweet tea or coffee",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Unsweet tea or"
+          },
+          {
+            "index": 2,
+            "text": "coffee"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Unsweet tea or coffee",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Unsweet tea or coffee",
+              "fontSize": 13,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ilsb21kv",
+      "id": "23",
+      "bbox": [
+        420,
+        556,
+        134,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Add-ons can change it",
+      "textPreview": "Add-ons can change it",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Add-ons can change it"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Add-ons can change it",
+          "lineSpacingPercent": 105000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "center",
+            "lineSpacing": 1.05
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Add-ons can change it",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "center",
+              "lineSpacing": 1.05
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hkjatwja",
+      "id": "24",
+      "bbox": [
+        602,
+        310,
+        114,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FCE4D8",
+      "lineColor": "#C8DAD2",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wjqt0r25",
+      "id": "25",
+      "bbox": [
+        635,
+        352,
+        48,
+        88
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#AFCAC0",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vihsrm1k",
+      "id": "26",
+      "bbox": [
+        592,
+        528,
+        134,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Sweet drink",
+      "textPreview": "Sweet drink",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Lato",
+        "color": "#192442",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Sweet drink"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Sweet drink",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Lato",
+            "color": "#192442",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Sweet drink",
+              "fontSize": 13,
+              "typeface": "Lato",
+              "color": "#192442",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uh8byhkz",
+      "id": "27",
+      "bbox": [
+        592,
+        556,
+        134,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Try smaller size or less syrup",
+      "textPreview": "Try smaller size or less syrup",
+      "resolvedFontSize": 10.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 10.51,
+        "typeface": "Lato",
+        "color": "#5C6C67",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Try smaller size or less"
+          },
+          {
+            "index": 2,
+            "text": "syrup"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Try smaller size or less syrup",
+          "lineSpacingPercent": 105000,
+          "resolvedTextStyle": {
+            "fontSize": 10.51,
+            "typeface": "Lato",
+            "color": "#5C6C67",
+            "alignment": "center",
+            "lineSpacing": 1.05
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Try smaller size or less syrup",
+              "fontSize": 10.51,
+              "typeface": "Lato",
+              "color": "#5C6C67",
+              "alignment": "center",
+              "lineSpacing": 1.05
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1g3u50ju",
+      "id": "28",
+      "bbox": [
+        80,
+        687,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F26A2E",
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gfutcv29",
+      "id": "29",
+      "bbox": [
+        102,
+        682,
+        628,
+        34
+      ],
+      "geometry": "rect",
+      "text": "The FDA Daily Value for added sugars is 50 grams per day based on a 2,000-calorie diet.",
+      "textPreview": "The FDA Daily Value for added sugars is 50 grams per day based on a 2,000-calorie diet.",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The FDA Daily Value for added sugars is 50 grams per day based on a 2,000-calorie diet."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The FDA Daily Value for added sugars is 50 grams per day based on a 2,000-calorie diet.",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The FDA Daily Value for added sugars is 50 grams per day based on a 2,000-calorie diet.",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ylo7qx0r",
+      "id": "30",
+      "bbox": [
+        80,
+        731,
+        10,
+        10
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F26A2E",
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zmx8zihc",
+      "id": "31",
+      "bbox": [
+        102,
+        726,
+        628,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Start by improving one drink you have often.",
+      "textPreview": "Start by improving one drink you have often.",
+      "resolvedFontSize": 13.51,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13.51,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Start by improving one drink you have often."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Start by improving one drink you have often.",
+          "lineSpacingPercent": 118000,
+          "resolvedTextStyle": {
+            "fontSize": 13.51,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.18
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Start by improving one drink you have often.",
+              "fontSize": 13.51,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.18
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0n6psnix",
+      "id": "32",
+      "bbox": [
+        66,
+        876,
+        684,
+        74
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E6F2EC",
+      "lineColor": "#B8D8C8",
+      "lineWidth": 1.2
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lofq1sz2",
+      "id": "33",
+      "bbox": [
+        83,
+        890,
+        650,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Try this",
+      "textPreview": "Try this",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Lato",
+        "color": "#034B2F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Try this"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Try this",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Lato",
+            "color": "#034B2F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Try this",
+              "fontSize": 13,
+              "typeface": "Lato",
+              "color": "#034B2F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qx47md0f",
+      "id": "34",
+      "bbox": [
+        83,
+        918,
+        650,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Make one drink change: smaller size, less syrup, unsweet tea, sparkling water, infused water, or water beside the drink.",
+      "textPreview": "Make one drink change: smaller size, less syrup, unsweet tea, sparkling water, infused water, or water beside the drink.",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Lato",
+        "color": "#16211D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 2,
+          "right": 4,
+          "bottom": 2,
+          "left": 4
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Make one drink change: smaller size, less syrup, unsweet tea, sparkling water, infused water, or water beside the drink."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Make one drink change: smaller size, less syrup, unsweet tea, sparkling water, infused water, or water beside the drink.",
+          "lineSpacingPercent": 117000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Lato",
+            "color": "#16211D",
+            "alignment": "left",
+            "lineSpacing": 1.17
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Make one drink change: smaller size, less syrup, unsweet tea, sparkling water, infused water, or water beside the drink.",
+              "fontSize": 12,
+              "typeface": "Lato",
+              "color": "#16211D",
+              "alignment": "left",
+              "lineSpacing": 1.17
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,15 @@
+{% set featured = featured_content %}
+<section class="cms-block cms-featured-content cms-featured-content--{{ block.settings.layout }}">
+  {% if featured %}
+    {% set image = block.content.image_override or featured.preview_image_url %}
+    {% if image %}<img src="{{ image }}" alt="{{ featured.preview_image_alt|default('') }}">{% endif %}
+    <div>
+      <p class="eyebrow">{{ block.content.eyebrow }}</p>
+      <h2>{{ block.content.title_override or featured.title }}</h2>
+      <p>{{ block.content.description_override or featured.excerpt_text }}</p>
+      <a class="cms-button cms-button--green" href="{{ featured.canonical_path }}">{{ block.content.button }}</a>
+    </div>
+  {% else %}
+    <p class="admin-muted">Choose content to feature.</p>
+  {% endif %}
+</section>

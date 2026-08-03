@@ -1,0 +1,34 @@
+<nav class="article-navigation" aria-label="Article navigation">
+  {% if article_navigation.previous %}
+    <a class="article-navigation__link article-navigation__link--previous" href="{{ article_navigation.previous.canonical_path }}" aria-label="Previous article: {{ article_navigation.previous.title }}">
+      <span aria-hidden="true">&larr;</span>
+      <small>Previous article</small>
+      <strong>{{ article_navigation.previous.title }}</strong>
+    </a>
+  {% else %}
+    <span class="article-navigation__link article-navigation__link--disabled">
+      <span aria-hidden="true">&larr;</span>
+      <small>Previous article</small>
+      <strong>You are at the oldest article</strong>
+    </span>
+  {% endif %}
+
+  <a class="article-navigation__random" href="{{ url_for('random_article', exclude=post.slug) }}" aria-label="Open a random article, excluding {{ post.title }}">
+    <small>Surprise me</small>
+    <strong>Random article</strong>
+  </a>
+
+  {% if article_navigation.next %}
+    <a class="article-navigation__link article-navigation__link--next" href="{{ article_navigation.next.canonical_path }}" aria-label="Next article: {{ article_navigation.next.title }}">
+      <small>Next article</small>
+      <strong>{{ article_navigation.next.title }}</strong>
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+  {% else %}
+    <span class="article-navigation__link article-navigation__link--disabled">
+      <small>Next article</small>
+      <strong>You are at the newest article</strong>
+      <span aria-hidden="true">&rarr;</span>
+    </span>
+  {% endif %}
+</nav>

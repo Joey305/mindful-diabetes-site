@@ -1,0 +1,7 @@
+<aside class="cms-block cms-callout cms-callout--{{ block.settings.tone }}">
+  {% if block.content.icon %}<span class="cms-callout__icon" aria-hidden="true">{{ block.content.icon }}</span>{% endif %}
+  <div>
+    <h3>{{ block.content.title }}</h3>
+    {% if block.content.text %}<p>{{ block.content.text }}</p>{% endif %}
+  </div>
+</aside>

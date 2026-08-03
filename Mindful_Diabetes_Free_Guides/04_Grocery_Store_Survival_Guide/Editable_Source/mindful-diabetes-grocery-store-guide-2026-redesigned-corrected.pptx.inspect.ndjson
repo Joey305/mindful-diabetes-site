@@ -1,0 +1,969 @@
+{"kind":"deck","id":"pr/m5j2n3","name":"Deck"}
+{"kind":"layout","layoutId":"08d87dfb-c742-483f-be6d-7c2aa8452b5b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"40032332-b656-47c5-aa77-a46810b5ece2","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/u3cg52","slide":1,"title":"Mindful Diabetes Free Guides","textShapes":10}
+{"kind":"shape","id":"sh/its3ql0j","slide":1,"bbox":[0,0,816,568]}
+{"kind":"textbox","id":"sh/wralobit","slide":1,"text":"Mindful Diabetes Free Guides","textPreview":"Mindful Diabetes Free Guides","textChars":28,"textLines":1,"bbox":[132,72,340,24]}
+{"kind":"textbox","id":"sh/hsj2xgzy","slide":1,"text":"501(c)(3) nonprofit health education","textPreview":"501(c)(3) nonprofit health education","textChars":36,"textLines":1,"bbox":[132,98,320,18]}
+{"kind":"shape","id":"sh/up83m10n","slide":1,"bbox":[62,486,108,34]}
+{"kind":"textbox","id":"sh/vq1kv6h8","slide":1,"text":"FREE GUIDE","textPreview":"FREE GUIDE","textChars":10,"textLines":1,"bbox":[77,495,80,15]}
+{"kind":"textbox","id":"sh/8nqlkrih","slide":1,"text":"The Grocery Store Survival Guide","textPreview":"The Grocery Store Survival Guide","textChars":32,"textLines":1,"bbox":[62,618,690,120]}
+{"kind":"textbox","id":"sh/9oz2twz2","slide":1,"text":"How to Make Practical, Blood Sugar-Conscious Choices Without Feeling Overwhelmed","textPreview":"How to Make Practical, Blood Sugar-Conscious Choices Without Feeling Overwhelmed","textChars":80,"textLines":1,"bbox":[66,760,670,54]}
+{"kind":"textbox","id":"sh/94v2xkzm","slide":1,"text":"A warm, practical shopping guide for building a cart that fits your life, budget, schedule, and health needs.","textPreview":"A warm, practical shopping guide for building a cart that fits your life, budget, schedule, and health needs.","textChars":109,"textLines":1,"bbox":[66,844,660,54]}
+{"kind":"shape","id":"sh/o3ml4fy1","slide":1,"bbox":[66,910,660,70]}
+{"kind":"textbox","id":"sh/n2dkvahg","slide":1,"text":"Inside","textPreview":"Inside","textChars":6,"textLines":1,"bbox":[82,924,628,22]}
+{"kind":"textbox","id":"sh/m1432pgb","slide":1,"text":"Planning, cart formula, aisle strategies, product comparisons, label reading, backup meals, and a printable grocery list.","textPreview":"Planning, cart formula, aisle strategies, product comparisons, label reading, backup meals, and a printable grocery list.","textChars":121,"textLines":1,"bbox":[82,952,628,20]}
+{"kind":"textbox","id":"sh/10v2tkzq","slide":1,"text":"Published July 30, 2026 | Medical review pending","textPreview":"Published July 30, 2026 | Medical review pending","textChars":48,"textLines":1,"bbox":[66,1002,430,18]}
+{"kind":"textbox","id":"sh/0zml0fy5","slide":1,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[594,1002,140,18]}
+{"kind":"image","id":"im/g3uhsnu9","slide":1,"name":"","alt":"Reusable bags and grocery cart with practical groceries","bbox":[0,0,816,568]}
+{"kind":"image","id":"im/u1czqdc3","slide":1,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[62,62,54,58]}
+{"kind":"notes","id":"nt/u3cg52","slide":1,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/hbotow","slide":2,"title":"Grocery Store Survival Guide","textShapes":22}
+{"kind":"textbox","id":"sh/cvm5w7ml","slide":2,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/xwv6pcn6","slide":2,"text":"Before you shop","textPreview":"Before you shop","textChars":15,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/2pknqdoj","slide":2,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/3qt4ji54","slide":2,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/or25sn69","slide":2,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/psbmlsnu","slide":2,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/mlon2h4n","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/7mxovm58","slide":2,"text":"BEFORE YOU SHOP","textPreview":"BEFORE YOU SHOP","textChars":15,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/zqlozido","slide":2,"text":"A short list you use beats an ideal list left at home","textPreview":"A short list you use beats an ideal list left at home","textChars":53,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/ypcnqxw3","slide":2,"text":"Start with what is already in your kitchen, then choose a few realistic meals for the week.","textPreview":"Start with what is already in your kitchen, then choose a few realistic meals for the week.","textChars":91,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/0re5sne9","slide":2,"bbox":[406,286,310,58]}
+{"kind":"shape","id":"sh/nu5o32dk","slide":2,"bbox":[420,304,13,13]}
+{"kind":"textbox","id":"sh/mtw7uxwf","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[448,299,256,22]}
+{"kind":"textbox","id":"sh/9wn65cvq","slide":2,"text":"Check the refrigerator, freezer, and pantry.","textPreview":"Check the refrigerator, freezer, and pantry.","textChars":44,"textLines":1,"bbox":[448,326,256,12]}
+{"kind":"shape","id":"sh/8vepw7e5","slide":2,"bbox":[406,364,310,58]}
+{"kind":"shape","id":"sh/vypo7mdw","slide":2,"bbox":[420,382,13,13]}
+{"kind":"textbox","id":"sh/axw7yhwb","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[448,377,256,22]}
+{"kind":"textbox","id":"sh/65kzm5kv","slide":2,"text":"Choose two or three meals.","textPreview":"Choose two or three meals.","textChars":26,"textLines":1,"bbox":[448,404,256,12]}
+{"kind":"shape","id":"sh/rqt0fa1g","slide":2,"bbox":[406,442,310,58]}
+{"kind":"shape","id":"sh/sr2hof21","slide":2,"bbox":[420,460,13,13]}
+{"kind":"textbox","id":"sh/tsbihkj6","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[448,455,256,22]}
+{"kind":"textbox","id":"sh/i10zi5kj","slide":2,"text":"Pick one or two backup meals.","textPreview":"Pick one or two backup meals.","textChars":29,"textLines":1,"bbox":[448,482,256,12]}
+{"kind":"shape","id":"sh/j290bq14","slide":2,"bbox":[406,520,310,58]}
+{"kind":"shape","id":"sh/432hkv2p","slide":2,"bbox":[420,538,13,13]}
+{"kind":"textbox","id":"sh/54bid0ja","slide":2,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[448,533,256,22]}
+{"kind":"textbox","id":"sh/2x4jupk3","slide":2,"text":"Check the household schedule.","textPreview":"Check the household schedule.","textChars":29,"textLines":1,"bbox":[448,560,256,12]}
+{"kind":"shape","id":"sh/3yd0nu1o","slide":2,"bbox":[406,598,310,58]}
+{"kind":"shape","id":"sh/xsf2do3q","slide":2,"bbox":[420,616,13,13]}
+{"kind":"textbox","id":"sh/cr6lkjm5","slide":2,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[448,611,256,22]}
+{"kind":"textbox","id":"sh/bqxkbelk","slide":2,"text":"Write a short list.","textPreview":"Write a short list.","textChars":19,"textLines":1,"bbox":[448,638,256,12]}
+{"kind":"shape","id":"sh/qpo3it4z","slide":2,"bbox":[406,676,310,58]}
+{"kind":"shape","id":"sh/pof29o3e","slide":2,"bbox":[420,694,13,13]}
+{"kind":"textbox","id":"sh/on6lgjm9","slide":2,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[448,689,256,22]}
+{"kind":"textbox","id":"sh/3mxk7elo","slide":2,"text":"Bring bags, coupons, mobility tools, or reminders.","textPreview":"Bring bags, coupons, mobility tools, or reminders.","textChars":50,"textLines":1,"bbox":[448,716,256,12]}
+{"kind":"shape","id":"sh/2l43e943","slide":2,"bbox":[66,800,650,88]}
+{"kind":"textbox","id":"sh/9kzml83y","slide":2,"text":"Kind shopping rule","textPreview":"Kind shopping rule","textChars":18,"textLines":1,"bbox":[82,814,618,22]}
+{"kind":"textbox","id":"sh/8jqls32d","slide":2,"text":"The goal is not a perfect cart. The goal is food you can use before it spoils, on days that are busy, tired, or unpredictable.","textPreview":"The goal is not a perfect cart. The goal is food you can use before it spoils, on days that are busy, tired, or unpredictable.","textChars":126,"textLines":1,"bbox":[82,842,618,38]}
+{"kind":"image","id":"im/y90jq94n","slide":2,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/ipo3ylwb","slide":2,"name":"","geometry":"roundRect","alt":"Grocery bag, blank list, and practical food on a kitchen counter","bbox":[66,288,310,250]}
+{"kind":"notes","id":"nt/hbotow","slide":2,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/8atoaw","slide":3,"title":"Grocery Store Survival Guide","textShapes":20}
+{"kind":"textbox","id":"sh/z2pczexg","slide":3,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/y1gvqtwv","slide":3,"text":"Five-part cart","textPreview":"Five-part cart","textChars":14,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/9sre58vi","slide":3,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/8rydw3ex","slide":3,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/n6pw3yxc","slide":3,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/m5gvutwr","slide":3,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/hwre98ve","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/wvid03et","slide":3,"text":"FIVE-PART CART","textPreview":"FIVE-PART CART","textChars":14,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/q9k76l4z","slide":3,"text":"Use five flexible categories, not a perfect grocery script","textPreview":"Use five flexible categories, not a perfect grocery script","textChars":58,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/bat8zq54","slide":3,"text":"The categories help you build meals. They do not need equal space in the cart, and fresh, frozen, canned, dried, and shelf-stable foods can all fit. [5]","textPreview":"The categories help you build meals. They do not need equal space in the cart, and fresh, frozen, canned, dried, and shelf-stable foods c...","textChars":152,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/dcbq1gna","slide":3,"bbox":[78,302,176,74]}
+{"kind":"textbox","id":"sh/yxk7al4v","slide":3,"text":"Vegetables and fruit","textPreview":"Vegetables and fruit","textChars":20,"textLines":1,"bbox":[94,316,144,22]}
+{"kind":"textbox","id":"sh/zyt83q5g","slide":3,"text":"fresh, frozen, canned","textPreview":"fresh, frozen, canned","textChars":21,"textLines":1,"bbox":[94,344,144,24]}
+{"kind":"shape","id":"sh/0zmpcvm1","slide":3,"bbox":[560,330,176,74]}
+{"kind":"textbox","id":"sh/l0vq50nm","slide":3,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[576,344,144,22]}
+{"kind":"textbox","id":"sh/u107y14r","slide":3,"text":"animal or plant","textPreview":"animal or plant","textChars":15,"textLines":1,"bbox":[576,372,144,24]}
+{"kind":"shape","id":"sh/f29or65c","slide":3,"bbox":[64,650,176,74]}
+{"kind":"textbox","id":"sh/jm54z2l4","slide":3,"text":"Fiber-rich carbs","textPreview":"Fiber-rich carbs","textChars":16,"textLines":1,"bbox":[80,664,144,22]}
+{"kind":"textbox","id":"sh/ilwn6xkj","slide":3,"text":"beans, oats, grains, fruit","textPreview":"beans, oats, grains, fruit","textChars":26,"textLines":1,"bbox":[80,692,144,24]}
+{"kind":"shape","id":"sh/587m1s3u","slide":3,"bbox":[558,646,176,74]}
+{"kind":"textbox","id":"sh/k7e58729","slide":3,"text":"Healthy fats","textPreview":"Healthy fats","textChars":12,"textLines":1,"bbox":[574,660,144,22]}
+{"kind":"textbox","id":"sh/vi54vils","slide":3,"text":"nuts, seeds, oils","textPreview":"nuts, seeds, oils","textChars":17,"textLines":1,"bbox":[574,688,144,24]}
+{"kind":"shape","id":"sh/ahwn2dk7","slide":3,"bbox":[296,735,224,74]}
+{"kind":"textbox","id":"sh/xknmxs3y","slide":3,"text":"Flavor builders","textPreview":"Flavor builders","textChars":15,"textLines":1,"bbox":[312,749,192,22]}
+{"kind":"textbox","id":"sh/wje54n2d","slide":3,"text":"spices, salsa, herbs","textPreview":"spices, salsa, herbs","textChars":20,"textLines":1,"bbox":[312,777,192,24]}
+{"kind":"shape","id":"sh/fepo7mlw","slide":3,"bbox":[66,860,650,78]}
+{"kind":"textbox","id":"sh/udgnehkr","slide":3,"text":"Use what works","textPreview":"Use what works","textChars":14,"textLines":1,"bbox":[82,874,618,22]}
+{"kind":"textbox","id":"sh/c7qtcfex","slide":3,"text":"Perimeter-only shopping can miss useful budget foods such as beans, oats, canned tomatoes, frozen vegetables, lentils, and shelf-stable fish.","textPreview":"Perimeter-only shopping can miss useful budget foods such as beans, oats, canned tomatoes, frozen vegetables, lentils, and shelf-stable f...","textChars":141,"textLines":1,"bbox":[82,902,618,28]}
+{"kind":"image","id":"im/dc3q5kbq","slide":3,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/zyts3qpk","slide":3,"name":"","geometry":"roundRect","alt":"Overhead grocery cart with practical food categories","bbox":[86,286,490,430]}
+{"kind":"notes","id":"nt/8atoaw","slide":3,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/zbwn62","slide":4,"title":"Grocery Store Survival Guide","textShapes":28}
+{"kind":"textbox","id":"sh/qdk3mhc7","slide":4,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/bet4vmts","slide":4,"text":"Produce","textPreview":"Produce","textChars":7,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/ob2lkru1","slide":4,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/pcbmtwbm","slide":4,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/2903ihcv","slide":4,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/3a9krmtg","slide":4,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/g7ilg7u5","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/18r2pcvq","slide":4,"text":"PRODUCE","textPreview":"PRODUCE","textChars":7,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/9sr21832","slide":4,"text":"Fresh, frozen, and canned all count","textPreview":"Fresh, frozen, and canned all count","textChars":35,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/8ri1s32x","slide":4,"text":"Choose vegetables and fruit you will actually use. Fresh can be wonderful, but it is not morally superior to frozen or canned options. [6]","textPreview":"Choose vegetables and fruit you will actually use. Fresh can be wonderful, but it is not morally superior to frozen or canned options. [6]","textChars":138,"textLines":1,"bbox":[66,196,670,64]}
+{"kind":"shape","id":"sh/nq9kzylc","slide":4,"bbox":[66,306,200,330]}
+{"kind":"textbox","id":"sh/mp0jqtkr","slide":4,"text":"Fresh","textPreview":"Fresh","textChars":5,"textLines":1,"bbox":[84,328,160,24]}
+{"kind":"textbox","id":"sh/lor2xo36","slide":4,"text":"Useful when it will be eaten before spoiling.","textPreview":"Useful when it will be eaten before spoiling.","textChars":45,"textLines":1,"bbox":[84,366,160,58]}
+{"kind":"shape","id":"sh/0ni1oj2l","slide":4,"bbox":[88,456,8,8]}
+{"kind":"textbox","id":"sh/zmpkvel0","slide":4,"text":"Leafy greens","textPreview":"Leafy greens","textChars":12,"textLines":1,"bbox":[110,450,128,30]}
+{"kind":"shape","id":"sh/y1gjm9kf","slide":4,"bbox":[88,494,8,8]}
+{"kind":"textbox","id":"sh/d07ito3a","slide":4,"text":"Peppers","textPreview":"Peppers","textChars":7,"textLines":1,"bbox":[110,488,128,30]}
+{"kind":"shape","id":"sh/czy1kj2p","slide":4,"bbox":[88,532,8,8]}
+{"kind":"textbox","id":"sh/43210jul","slide":4,"text":"Carrots","textPreview":"Carrots","textChars":7,"textLines":1,"bbox":[110,526,128,30]}
+{"kind":"shape","id":"sh/p4b29obq","slide":4,"bbox":[88,570,8,8]}
+{"kind":"textbox","id":"sh/ihkjy9cf","slide":4,"text":"Tomatoes","textPreview":"Tomatoes","textChars":8,"textLines":1,"bbox":[110,564,128,30]}
+{"kind":"shape","id":"sh/32tk7et0","slide":4,"bbox":[294,306,200,330]}
+{"kind":"textbox","id":"sh/gfi1czu9","slide":4,"text":"Frozen","textPreview":"Frozen","textChars":6,"textLines":1,"bbox":[312,328,160,24]}
+{"kind":"textbox","id":"sh/hgr254bu","slide":4,"text":"Helpful for convenience and reducing waste.","textPreview":"Helpful for convenience and reducing waste.","textChars":43,"textLines":1,"bbox":[312,366,160,58]}
+{"kind":"shape","id":"sh/ud0ja9c3","slide":4,"bbox":[316,456,8,8]}
+{"kind":"textbox","id":"sh/ve9k3uto","slide":4,"text":"Broccoli","textPreview":"Broccoli","textChars":8,"textLines":1,"bbox":[338,450,128,30]}
+{"kind":"shape","id":"sh/0bml83at","slide":4,"bbox":[316,494,8,8]}
+{"kind":"textbox","id":"sh/1cv2h8by","slide":4,"text":"Mixed vegetables","textPreview":"Mixed vegetables","textChars":16,"textLines":1,"bbox":[338,488,128,30]}
+{"kind":"shape","id":"sh/b6x472dg","slide":4,"bbox":[316,532,8,8]}
+{"kind":"textbox","id":"sh/a5onexcv","slide":4,"text":"Berries","textPreview":"Berries","textChars":7,"textLines":1,"bbox":[338,526,128,30]}
+{"kind":"shape","id":"sh/xszm9cv6","slide":4,"bbox":[316,570,8,8]}
+{"kind":"textbox","id":"sh/wrq5g7u1","slide":4,"text":"Greens","textPreview":"Greens","textChars":6,"textLines":1,"bbox":[338,564,128,30]}
+{"kind":"shape","id":"sh/juh4b2dc","slide":4,"bbox":[522,306,200,330]}
+{"kind":"textbox","id":"sh/yt8nihcr","slide":4,"text":"Canned","textPreview":"Canned","textChars":6,"textLines":1,"bbox":[540,328,160,24]}
+{"kind":"textbox","id":"sh/lwzmdcvi","slide":4,"text":"Useful for low-energy days and shelf stability.","textPreview":"Useful for low-energy days and shelf stability.","textChars":47,"textLines":1,"bbox":[540,366,160,58]}
+{"kind":"shape","id":"sh/kvq5k7ux","slide":4,"bbox":[544,456,8,8]}
+{"kind":"textbox","id":"sh/zyd4zid8","slide":4,"text":"Tomatoes","textPreview":"Tomatoes","textChars":8,"textLines":1,"bbox":[566,450,128,30]}
+{"kind":"shape","id":"sh/ex436dwn","slide":4,"bbox":[544,494,8,8]}
+{"kind":"textbox","id":"sh/qh8nmd4j","slide":4,"text":"Peaches in water or juice","textPreview":"Peaches in water or juice","textChars":25,"textLines":1,"bbox":[566,488,128,30]}
+{"kind":"shape","id":"sh/rih4fil4","slide":4,"bbox":[544,532,8,8]}
+{"kind":"textbox","id":"sh/sjq5onmp","slide":4,"text":"Carrots","textPreview":"Carrots","textChars":7,"textLines":1,"bbox":[566,526,128,30]}
+{"kind":"shape","id":"sh/dkzmhs3u","slide":4,"bbox":[544,570,8,8]}
+{"kind":"textbox","id":"sh/elsnqx4f","slide":4,"text":"Vegetable mixes","textPreview":"Vegetable mixes","textChars":15,"textLines":1,"bbox":[566,564,128,30]}
+{"kind":"shape","id":"sh/fm14j2l0","slide":4,"bbox":[66,760,650,86]}
+{"kind":"textbox","id":"sh/07a5snml","slide":4,"text":"What to check","textPreview":"What to check","textChars":13,"textLines":1,"bbox":[82,774,618,22]}
+{"kind":"textbox","id":"sh/18j6ls36","slide":4,"text":"For canned fruit, check syrup versus water or juice. For vegetables, compare sodium when practical. For frozen produce, check sauces and added sugars.","textPreview":"For canned fruit, check syrup versus water or juice. For vegetables, compare sodium when practical. For frozen produce, check sauces and ...","textChars":150,"textLines":1,"bbox":[82,802,618,36]}
+{"kind":"image","id":"im/gzq5o3ux","slide":4,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/zbwn62","slide":4,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/nlvy4z","slide":5,"title":"Grocery Store Survival Guide","textShapes":18}
+{"kind":"textbox","id":"sh/i9o72tg7","slide":5,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/3axobyxs","slide":5,"text":"Frozen foods","textPreview":"Frozen foods","textChars":12,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/g76p0jyh","slide":5,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/h8f69of2","slide":5,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/u5onytgb","slide":5,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/v6xo7exw","slide":5,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/03qpcnyl","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/14j6lsf6","slide":5,"text":"FROZEN FOODS","textPreview":"FROZEN FOODS","textChars":12,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/90jihwj6","slide":5,"text":"The freezer section can reduce waste and rescue dinner","textPreview":"The freezer section can reduce waste and rescue dinner","textChars":54,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/8zah8ril","slide":5,"text":"Frozen foods can be affordable, fast, and useful. The package details matter more than the freezer aisle itself.","textPreview":"Frozen foods can be affordable, fast, and useful. The package details matter more than the freezer aisle itself.","textChars":112,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/mdsz610v","slide":5,"bbox":[420,286,145,112]}
+{"kind":"shape","id":"sh/lcjidwja","slide":5,"bbox":[434,304,16,16]}
+{"kind":"textbox","id":"sh/kbqh4rip","slide":5,"text":"Frozen greens","textPreview":"Frozen greens","textChars":13,"textLines":1,"bbox":[462,299,91,22]}
+{"kind":"textbox","id":"sh/zah0bm14","slide":5,"text":"Soups, eggs, bowls, sauces.","textPreview":"Soups, eggs, bowls, sauces.","textChars":27,"textLines":1,"bbox":[462,326,91,66]}
+{"kind":"shape","id":"sh/y98z2h0j","slide":5,"bbox":[593,286,145,112]}
+{"kind":"shape","id":"sh/583ipgje","slide":5,"bbox":[607,304,16,16]}
+{"kind":"textbox","id":"sh/47u1gbit","slide":5,"text":"Frozen berries","textPreview":"Frozen berries","textChars":14,"textLines":1,"bbox":[635,299,91,22]}
+{"kind":"textbox","id":"sh/onmt8juh","slide":5,"text":"Yogurt, oats, smoothies.","textPreview":"Yogurt, oats, smoothies.","textChars":24,"textLines":1,"bbox":[635,326,91,66]}
+{"kind":"shape","id":"sh/povu1ovm","slide":5,"bbox":[420,422,145,112]}
+{"kind":"shape","id":"sh/2l4b69cb","slide":5,"bbox":[434,440,16,16]}
+{"kind":"textbox","id":"sh/3mdszedw","slide":5,"text":"Mixed vegetables","textPreview":"Mixed vegetables","textChars":16,"textLines":1,"bbox":[462,435,91,22]}
+{"kind":"textbox","id":"sh/gj2t4ju5","slide":5,"text":"Fast side or stir-fry base.","textPreview":"Fast side or stir-fry base.","textChars":27,"textLines":1,"bbox":[462,462,91,66]}
+{"kind":"shape","id":"sh/1kbaxovq","slide":5,"bbox":[593,422,145,112]}
+{"kind":"shape","id":"sh/ehkb29cz","slide":5,"bbox":[607,440,16,16]}
+{"kind":"textbox","id":"sh/fitsvedk","slide":5,"text":"Frozen fish","textPreview":"Frozen fish","textChars":11,"textLines":1,"bbox":[635,435,91,22]}
+{"kind":"textbox","id":"sh/sv2t0zu9","slide":5,"text":"Protein backup for busy weeks.","textPreview":"Protein backup for busy weeks.","textChars":30,"textLines":1,"bbox":[635,462,91,66]}
+{"kind":"shape","id":"sh/tgbat4vu","slide":5,"bbox":[66,760,650,90]}
+{"kind":"textbox","id":"sh/vq9cjuxg","slide":5,"text":"Check the package","textPreview":"Check the package","textChars":17,"textLines":1,"bbox":[82,774,618,22]}
+{"kind":"textbox","id":"sh/up0bapwv","slide":5,"text":"Look for sauce, added sugar, sodium, serving size, protein, and vegetables. A simple frozen meal can still be supplemented with extra vegetables or protein.","textPreview":"Look for sauce, added sugar, sodium, serving size, protein, and vegetables. A simple frozen meal can still be supplemented with extra veg...","textChars":156,"textLines":1,"bbox":[82,802,618,40]}
+{"kind":"image","id":"im/s3mtsvet","slide":5,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/87ql0ri1","slide":5,"name":"","geometry":"roundRect","alt":"Freezer case with plain frozen vegetables, berries, fish, and meals","bbox":[66,286,326,320]}
+{"kind":"notes","id":"nt/nlvy4z","slide":5,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/xxd5fu","slide":6,"title":"Grocery Store Survival Guide","textShapes":22}
+{"kind":"textbox","id":"sh/32h4r21o","slide":6,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/218nyxk3","slide":6,"text":"Canned and shelf-stable","textPreview":"Canned and shelf-stable","textChars":23,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/d8jmxcjq","slide":6,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/c7q547il","slide":6,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/b6h4vm10","slide":6,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/q58n2hkf","slide":6,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/tcfmlsjm","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/sb65sn21","slide":6,"text":"CANNED AND SHELF-STABLE","textPreview":"CANNED AND SHELF-STABLE","textChars":23,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/6dcvypgn","slide":6,"text":"Pantry foods are not a fallback failure","textPreview":"Pantry foods are not a fallback failure","textChars":39,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/ry5w7uh8","slide":6,"text":"Canned, dried, and shelf-stable foods can make useful emergency meals. Oats belong with pantry grains, not canned foods.","textPreview":"Canned, dried, and shelf-stable foods can make useful emergency meals. Oats belong with pantry grains, not canned foods.","textChars":120,"textLines":1,"bbox":[66,196,670,64]}
+{"kind":"shape","id":"sh/t0ne94fe","slide":6,"bbox":[66,536,318,82]}
+{"kind":"shape","id":"sh/e1wf29gz","slide":6,"bbox":[80,554,16,16]}
+{"kind":"textbox","id":"sh/f25wbexk","slide":6,"text":"Canned beans","textPreview":"Canned beans","textChars":12,"textLines":1,"bbox":[108,549,264,22]}
+{"kind":"textbox","id":"sh/g3ex4jy5","slide":6,"text":"Rinsing may reduce some sodium; draining changes the final contents.","textPreview":"Rinsing may reduce some sodium; draining changes the final contents.","textChars":68,"textLines":1,"bbox":[108,576,264,36]}
+{"kind":"shape","id":"sh/14nedofq","slide":6,"bbox":[412,536,318,82]}
+{"kind":"shape","id":"sh/25wf69gv","slide":6,"bbox":[426,554,16,16]}
+{"kind":"textbox","id":"sh/n6pwfexg","slide":6,"text":"Canned tomatoes","textPreview":"Canned tomatoes","textChars":15,"textLines":1,"bbox":[454,549,264,22]}
+{"kind":"textbox","id":"sh/zapwnedo","slide":6,"text":"Useful for soups, stews, sauces, and shakshuka-style meals.","textPreview":"Useful for soups, stews, sauces, and shakshuka-style meals.","textChars":59,"textLines":1,"bbox":[454,576,264,36]}
+{"kind":"shape","id":"sh/y9gvutw3","slide":6,"bbox":[66,636,318,82]}
+{"kind":"shape","id":"sh/lw7epovu","slide":6,"bbox":[80,654,16,16]}
+{"kind":"textbox","id":"sh/kvydwje9","slide":6,"text":"Tuna, salmon, or chicken","textPreview":"Tuna, salmon, or chicken","textChars":24,"textLines":1,"bbox":[108,649,264,22]}
+{"kind":"textbox","id":"sh/b6pcjeds","slide":6,"text":"Shelf-stable protein; compare sodium and serving size.","textPreview":"Shelf-stable protein; compare sodium and serving size.","textChars":54,"textLines":1,"bbox":[108,676,264,36]}
+{"kind":"shape","id":"sh/a5wvq9w7","slide":6,"bbox":[412,636,318,82]}
+{"kind":"shape","id":"sh/x87elovi","slide":6,"bbox":[426,654,16,16]}
+{"kind":"textbox","id":"sh/c7ydsjex","slide":6,"text":"Canned vegetables or fruit","textPreview":"Canned vegetables or fruit","textChars":26,"textLines":1,"bbox":[454,649,264,22]}
+{"kind":"textbox","id":"sh/n25cfudg","slide":6,"text":"Look for sodium, syrup, water, or juice as needed.","textPreview":"Look for sodium, syrup, water, or juice as needed.","textChars":50,"textLines":1,"bbox":[454,676,264,36]}
+{"kind":"shape","id":"sh/21wvm9wv","slide":6,"bbox":[66,736,318,82]}
+{"kind":"shape","id":"sh/s7utwvut","slide":6,"bbox":[80,754,16,16]}
+{"kind":"textbox","id":"sh/t83ap0be","slide":6,"text":"Dried lentils","textPreview":"Dried lentils","textChars":13,"textLines":1,"bbox":[108,749,264,22]}
+{"kind":"textbox","id":"sh/6lsbu5cn","slide":6,"text":"Quick-cooking pantry protein plus carbohydrate and fiber.","textPreview":"Quick-cooking pantry protein plus carbohydrate and fiber.","textChars":57,"textLines":1,"bbox":[108,776,264,36]}
+{"kind":"shape","id":"sh/r6lsnat8","slide":6,"bbox":[412,736,318,82]}
+{"kind":"shape","id":"sh/gbut0fup","slide":6,"bbox":[426,754,16,16]}
+{"kind":"textbox","id":"sh/1c3atkba","slide":6,"text":"Oats","textPreview":"Oats","textChars":4,"textLines":1,"bbox":[454,749,264,22]}
+{"kind":"textbox","id":"sh/e9cby5cz","slide":6,"text":"A pantry grain, useful for breakfast or baking, not canned food.","textPreview":"A pantry grain, useful for breakfast or baking, not canned food.","textChars":64,"textLines":1,"bbox":[454,776,264,36]}
+{"kind":"shape","id":"sh/falsratk","slide":6,"bbox":[66,866,650,78]}
+{"kind":"textbox","id":"sh/wfa9obul","slide":6,"text":"Backup meal idea","textPreview":"Backup meal idea","textChars":16,"textLines":1,"bbox":[82,880,618,22]}
+{"kind":"textbox","id":"sh/hgjahgb6","slide":6,"text":"Keep one meal you can make when energy is low: beans plus tomatoes plus frozen vegetables, or soup plus extra protein and a whole-grain side.","textPreview":"Keep one meal you can make when energy is low: beans plus tomatoes plus frozen vegetables, or soup plus extra protein and a whole-grain s...","textChars":141,"textLines":1,"bbox":[82,908,618,28]}
+{"kind":"image","id":"im/d07q54zu","slide":6,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/7qpsr6hg","slide":6,"name":"","geometry":"roundRect","alt":"Budget-friendly shelf-stable foods with canned goods, oats, lentils, rice, eggs, carrots, and frozen vegetables","bbox":[66,288,310,214]}
+{"kind":"notes","id":"nt/xxd5fu","slide":6,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/qq4ffx","slide":7,"title":"Grocery Store Survival Guide","textShapes":18}
+{"kind":"textbox","id":"sh/z6xwjetw","slide":7,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/e5ovq9cb","slide":7,"text":"Protein choices","textPreview":"Protein choices","textChars":15,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/9czepoby","slide":7,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/ob6dwjud","slide":7,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/naxwnets","slide":7,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/m9ovu9c7","slide":7,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/pgvedkvu","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/4fmdkfu9","slide":7,"text":"PROTEIN CHOICES","textPreview":"PROTEIN CHOICES","textChars":15,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/i58nqtcr","slide":7,"text":"Choose by use, budget, culture, storage, and medical needs","textPreview":"Choose by use, budget, culture, storage, and medical needs","textChars":58,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/36h4zydc","slide":7,"text":"Protein foods can be animal-based or plant-based. Beans and lentils provide protein, carbohydrate, and fiber, so they may matter in glucose planning. [8]","textPreview":"Protein foods can be animal-based or plant-based. Beans and lentils provide protein, carbohydrate, and fiber, so they may matter in gluco...","textChars":153,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/47q5s3ux","slide":7,"bbox":[66,302,318,108]}
+{"kind":"shape","id":"sh/58z618vi","slide":7,"bbox":[80,320,16,16]}
+{"kind":"textbox","id":"sh/q98nudc3","slide":7,"text":"Quick fridge proteins","textPreview":"Quick fridge proteins","textChars":21,"textLines":1,"bbox":[108,315,264,22]}
+{"kind":"textbox","id":"sh/raho3ydo","slide":7,"text":"Eggs, yogurt, cottage cheese, tofu, tempeh.","textPreview":"Eggs, yogurt, cottage cheese, tofu, tempeh.","textChars":43,"textLines":1,"bbox":[108,342,264,62]}
+{"kind":"shape","id":"sh/sba5w3ut","slide":7,"bbox":[412,302,318,108]}
+{"kind":"shape","id":"sh/dcj658ve","slide":7,"bbox":[426,320,16,16]}
+{"kind":"textbox","id":"sh/edsnydcz","slide":7,"text":"Freezer proteins","textPreview":"Freezer proteins","textChars":16,"textLines":1,"bbox":[454,315,264,22]}
+{"kind":"textbox","id":"sh/fe1o7idk","slide":7,"text":"Fish, poultry, lean meats, edamame, cooked beans.","textPreview":"Fish, poultry, lean meats, edamame, cooked beans.","textChars":49,"textLines":1,"bbox":[454,342,264,62]}
+{"kind":"shape","id":"sh/b2l4vi9s","slide":7,"bbox":[66,436,318,108]}
+{"kind":"shape","id":"sh/ahsnmds7","slide":7,"bbox":[80,454,16,16]}
+{"kind":"textbox","id":"sh/x43mxsry","slide":7,"text":"Pantry proteins","textPreview":"Pantry proteins","textChars":15,"textLines":1,"bbox":[108,449,264,22]}
+{"kind":"textbox","id":"sh/c3u5onad","slide":7,"text":"Beans, lentils, canned fish or chicken, nuts, seeds.","textPreview":"Beans, lentils, canned fish or chicken, nuts, seeds.","textChars":52,"textLines":1,"bbox":[108,476,264,62]}
+{"kind":"shape","id":"sh/ne14ri9g","slide":7,"bbox":[412,436,318,108]}
+{"kind":"shape","id":"sh/2ds3idsv","slide":7,"bbox":[426,454,16,16]}
+{"kind":"textbox","id":"sh/pgjmt8rm","slide":7,"text":"Meal context","textPreview":"Meal context","textChars":12,"textLines":1,"bbox":[454,449,264,22]}
+{"kind":"textbox","id":"sh/ofalk3a1","slide":7,"text":"Tacos, soup, stir-fry, bowls, sandwiches, salads.","textPreview":"Tacos, soup, stir-fry, bowls, sandwiches, salads.","textChars":49,"textLines":1,"bbox":[454,476,264,62]}
+{"kind":"shape","id":"sh/fah4ny9k","slide":7,"bbox":[66,800,650,86]}
+{"kind":"textbox","id":"sh/e983etsz","slide":7,"text":"No moral ranking","textPreview":"No moral ranking","textChars":16,"textLines":1,"bbox":[82,814,618,22]}
+{"kind":"textbox","id":"sh/4f61ozqx","slide":7,"text":"The best protein option is the one that fits the meal, the household, allergies, taste, storage, preparation time, and medical needs.","textPreview":"The best protein option is the one that fits the meal, the household, allergies, taste, storage, preparation time, and medical needs.","textChars":133,"textLines":1,"bbox":[82,842,618,36]}
+{"kind":"image","id":"im/hk7qx0j6","slide":7,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/qq4ffx","slide":7,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/vna5zo","slide":8,"title":"Grocery Store Survival Guide","textShapes":22}
+{"kind":"textbox","id":"sh/udgfaxcr","slide":8,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/vy9wj2dw","slide":8,"text":"Plant proteins","textPreview":"Plant proteins","textChars":14,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/8byx8nul","slide":8,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/9c7ehsv6","slide":8,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/m9gf6dcf","slide":8,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/7apwfid0","slide":8,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/k7yd4nu9","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/l87ed8vu","slide":8,"text":"PLANT PROTEINS","textPreview":"PLANT PROTEINS","textChars":14,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/tgni18na","slide":8,"text":"Canned beans count","textPreview":"Canned beans count","textChars":18,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/sfuhs36p","slide":8,"text":"You do not need to begin with dried beans. Start where your time, tools, digestion, and budget are today.","textPreview":"You do not need to begin with dried beans. Start where your time, tools, digestion, and budget are today.","textChars":105,"textLines":1,"bbox":[66,196,670,64]}
+{"kind":"shape","id":"sh/relgzy54","slide":8,"bbox":[66,300,306,96]}
+{"kind":"shape","id":"sh/6dczqtoj","slide":8,"bbox":[80,318,16,16]}
+{"kind":"textbox","id":"sh/5c3yxony","slide":8,"text":"Beans","textPreview":"Beans","textChars":5,"textLines":1,"bbox":[108,313,252,22]}
+{"kind":"textbox","id":"sh/4buhoj6d","slide":8,"text":"Tacos, soups, bowls, salads.","textPreview":"Tacos, soups, bowls, salads.","textChars":28,"textLines":1,"bbox":[108,340,252,50]}
+{"kind":"shape","id":"sh/jalgve5s","slide":8,"bbox":[408,300,306,96]}
+{"kind":"shape","id":"sh/i9czm9on","slide":8,"bbox":[422,318,16,16]}
+{"kind":"textbox","id":"sh/h83yton2","slide":8,"text":"Lentils","textPreview":"Lentils","textChars":7,"textLines":1,"bbox":[450,313,252,22]}
+{"kind":"textbox","id":"sh/w7ahkj6h","slide":8,"text":"Dal, soup, curry, salad.","textPreview":"Dal, soup, curry, salad.","textChars":24,"textLines":1,"bbox":[450,340,252,50]}
+{"kind":"shape","id":"sh/83y9w3ip","slide":8,"bbox":[66,428,306,96]}
+{"kind":"shape","id":"sh/947qp8zu","slide":8,"bbox":[80,446,16,16]}
+{"kind":"textbox","id":"sh/m1g7ud0j","slide":8,"text":"Tofu","textPreview":"Tofu","textChars":4,"textLines":1,"bbox":[108,441,252,22]}
+{"kind":"textbox","id":"sh/72p8nih4","slide":8,"text":"Stir-fry, bowls, scramble.","textPreview":"Stir-fry, bowls, scramble.","textChars":26,"textLines":1,"bbox":[108,468,252,50]}
+{"kind":"shape","id":"sh/0zyps3id","slide":8,"bbox":[408,428,306,96]}
+{"kind":"shape","id":"sh/l07ql8zy","slide":8,"bbox":[422,446,16,16]}
+{"kind":"textbox","id":"sh/yxw7qt07","slide":8,"text":"Tempeh","textPreview":"Tempeh","textChars":6,"textLines":1,"bbox":[450,441,252,22]}
+{"kind":"textbox","id":"sh/zy58jyhs","slide":8,"text":"Skillet meals, sandwiches.","textPreview":"Skillet meals, sandwiches.","textChars":26,"textLines":1,"bbox":[450,468,252,50]}
+{"kind":"shape","id":"sh/4vi94nih","slide":8,"bbox":[66,556,306,96]}
+{"kind":"shape","id":"sh/5wrqxsz2","slide":8,"bbox":[80,574,16,16]}
+{"kind":"textbox","id":"sh/fqdcn61k","slide":8,"text":"Edamame","textPreview":"Edamame","textChars":7,"textLines":1,"bbox":[108,569,252,22]}
+{"kind":"textbox","id":"sh/epkbu1kz","slide":8,"text":"Snacks, sides, bowls.","textPreview":"Snacks, sides, bowls.","textChars":21,"textLines":1,"bbox":[108,596,252,50]}
+{"kind":"shape","id":"sh/1svupwja","slide":8,"bbox":[408,556,306,96]}
+{"kind":"shape","id":"sh/grmtwr2p","slide":8,"bbox":[422,574,16,16]}
+{"kind":"textbox","id":"sh/3udcr61g","slide":8,"text":"Seasoning","textPreview":"Seasoning","textChars":9,"textLines":1,"bbox":[450,569,252,22]}
+{"kind":"textbox","id":"sh/2t4by1kv","slide":8,"text":"Cumin, garlic, ginger, curry, salsa, herbs.","textPreview":"Cumin, garlic, ginger, curry, salsa, herbs.","textChars":43,"textLines":1,"bbox":[450,596,252,50]}
+{"kind":"shape","id":"sh/pwvutgjm","slide":8,"bbox":[66,810,650,86]}
+{"kind":"textbox","id":"sh/ovmt0b21","slide":8,"text":"Glucose planning note","textPreview":"Glucose planning note","textChars":21,"textLines":1,"bbox":[82,824,618,22]}
+{"kind":"textbox","id":"sh/jytsf21c","slide":8,"text":"Beans, lentils, and edamame are often filling because they bring protein and fiber, but they also contain carbohydrate. Use your own plan if you count carbs.","textPreview":"Beans, lentils, and edamame are often filling because they bring protein and fiber, but they also contain carbohydrate. Use your own plan...","textChars":157,"textLines":1,"bbox":[82,852,618,36]}
+{"kind":"image","id":"im/s36xofqd","slide":8,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/vna5zo","slide":8,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/dv4rb5","slide":9,"title":"Grocery Store Survival Guide","textShapes":28}
+{"kind":"textbox","id":"sh/e5gzqxoj","slide":9,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/f6pgj2p4","slide":9,"text":"Breads and grains","textPreview":"Breads and grains","textChars":17,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/ovyhwr6l","slide":9,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/pwrypc76","slide":9,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/29gzuhov","slide":9,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/napgnmpg","slide":9,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/czih0r6x","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/x0ritw7i","slide":9,"text":"BREADS, GRAINS, CEREALS, AND TORTILLAS","textPreview":"BREADS, GRAINS, CEREALS, AND TORTILLAS","textChars":38,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/dg7y1oj2","slide":9,"text":"Front-package claims are only the first sentence","textPreview":"Front-package claims are only the first sentence","textChars":48,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/cfyh8j2h","slide":9,"text":"Compare similar products by serving size, total carbohydrate, fiber, added sugar, saturated fat when relevant, ingredients, and what you enjoy.","textPreview":"Compare similar products by serving size, total carbohydrate, fiber, added sugar, saturated fat when relevant, ingredients, and what you ...","textChars":143,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/repgzylw","slide":9,"bbox":[66,302,150,52]}
+{"kind":"textbox","id":"sh/qdgf6tkb","slide":9,"text":"Front claim","textPreview":"Front claim","textChars":11,"textLines":1,"bbox":[74,311,134,40]}
+{"kind":"shape","id":"sh/14ry58jy","slide":9,"bbox":[216,302,210,52]}
+{"kind":"textbox","id":"sh/0jihc32d","slide":9,"text":"Useful next check","textPreview":"Useful next check","textChars":17,"textLines":1,"bbox":[224,311,194,40]}
+{"kind":"shape","id":"sh/zi9g3y18","slide":9,"bbox":[426,302,290,52]}
+{"kind":"textbox","id":"sh/eh0zatkn","slide":9,"text":"Why it matters","textPreview":"Why it matters","textChars":14,"textLines":1,"bbox":[434,311,274,40]}
+{"kind":"shape","id":"sh/honyt43u","slide":9,"bbox":[66,354,150,52]}
+{"kind":"textbox","id":"sh/gnex0z29","slide":9,"text":"Multigrain","textPreview":"Multigrain","textChars":10,"textLines":1,"bbox":[74,363,134,40]}
+{"kind":"shape","id":"sh/8rihgja5","slide":9,"bbox":[216,354,210,52]}
+{"kind":"textbox","id":"sh/tsry9obq","slide":9,"text":"Ingredient list","textPreview":"Ingredient list","textChars":15,"textLines":1,"bbox":[224,363,194,40]}
+{"kind":"shape","id":"sh/6p0ze9sz","slide":9,"bbox":[426,354,290,52]}
+{"kind":"textbox","id":"sh/7q9g7etk","slide":9,"text":"May not mean whole grain","textPreview":"May not mean whole grain","textChars":24,"textLines":1,"bbox":[434,363,274,40]}
+{"kind":"shape","id":"sh/gv2hkja1","slide":9,"bbox":[66,406,150,52]}
+{"kind":"textbox","id":"sh/hwbydobm","slide":9,"text":"Whole grain","textPreview":"Whole grain","textChars":11,"textLines":1,"bbox":[74,415,134,40]}
+{"kind":"shape","id":"sh/ut0zi9sb","slide":9,"bbox":[216,406,210,52]}
+{"kind":"textbox","id":"sh/vutgbetw","slide":9,"text":"Fiber + carbs","textPreview":"Fiber + carbs","textChars":13,"textLines":1,"bbox":[224,415,194,40]}
+{"kind":"shape","id":"sh/4z2ho3ad","slide":9,"bbox":[426,406,290,52]}
+{"kind":"textbox","id":"sh/5kbyh8by","slide":9,"text":"Still compare serving sizes","textPreview":"Still compare serving sizes","textChars":27,"textLines":1,"bbox":[434,415,274,40]}
+{"kind":"shape","id":"sh/zqxs3mhc","slide":9,"bbox":[66,458,150,52]}
+{"kind":"textbox","id":"sh/epobuhgr","slide":9,"text":"Keto","textPreview":"Keto","textChars":4,"textLines":1,"bbox":[74,467,134,40]}
+{"kind":"shape","id":"sh/1sza5wz2","slide":9,"bbox":[216,458,210,52]}
+{"kind":"textbox","id":"sh/0rqtwryx","slide":9,"text":"Saturated fat + fiber","textPreview":"Saturated fat + fiber","textChars":21,"textLines":1,"bbox":[224,467,194,40]}
+{"kind":"shape","id":"sh/r2xszmh0","slide":9,"bbox":[426,458,290,52]}
+{"kind":"textbox","id":"sh/q1orqhgf","slide":9,"text":"Claim alone is not enough","textPreview":"Claim alone is not enough","textChars":25,"textLines":1,"bbox":[434,467,274,40]}
+{"kind":"shape","id":"sh/d4fa1cz6","slide":9,"bbox":[66,510,150,52]}
+{"kind":"textbox","id":"sh/c369sryl","slide":9,"text":"High-fiber","textPreview":"High-fiber","textChars":10,"textLines":1,"bbox":[74,519,134,40]}
+{"kind":"shape","id":"sh/vy1sb6xk","slide":9,"bbox":[216,510,210,52]}
+{"kind":"textbox","id":"sh/ax8b21gz","slide":9,"text":"Serving size + tolerance","textPreview":"Serving size + tolerance","textChars":24,"textLines":1,"bbox":[224,519,194,40]}
+{"kind":"shape","id":"sh/i58v65c3","slide":9,"bbox":[426,510,290,52]}
+{"kind":"textbox","id":"sh/j6hwzado","slide":9,"text":"More is not always better","textPreview":"More is not always better","textChars":25,"textLines":1,"bbox":[434,519,274,40]}
+{"kind":"shape","id":"sh/47qd8fu9","slide":9,"bbox":[66,562,150,52]}
+{"kind":"textbox","id":"sh/58ze1kvu","slide":9,"text":"No added sugar","textPreview":"No added sugar","textChars":14,"textLines":1,"bbox":[74,571,134,40]}
+{"kind":"shape","id":"sh/uhov2lc7","slide":9,"bbox":[216,562,210,52]}
+{"kind":"textbox","id":"sh/v2xwvqds","slide":9,"text":"Total carbohydrate","textPreview":"Total carbohydrate","textChars":18,"textLines":1,"bbox":[224,571,194,40]}
+{"kind":"shape","id":"sh/w36d4vux","slide":9,"bbox":[426,562,290,52]}
+{"kind":"textbox","id":"sh/h4fex0vi","slide":9,"text":"May still contain starch","textPreview":"May still contain starch","textChars":24,"textLines":1,"bbox":[434,571,274,40]}
+{"kind":"shape","id":"sh/edsfepcb","slide":9,"bbox":[66,720,650,92]}
+{"kind":"textbox","id":"sh/fy1w7udw","slide":9,"text":"Store-shelf method","textPreview":"Store-shelf method","textChars":18,"textLines":1,"bbox":[82,734,618,22]}
+{"kind":"textbox","id":"sh/ps3yxofy","slide":9,"text":"Pick two similar items, then compare the label. One number does not decide the best choice; the food has to fit your meal, taste, budget, and glucose plan.","textPreview":"Pick two similar items, then compare the label. One number does not decide the best choice; the food has to fit your meal, taste, budget,...","textChars":155,"textLines":1,"bbox":[82,762,618,42]}
+{"kind":"image","id":"im/4rm5kfih","slide":9,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/dv4rb5","slide":9,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/mssv5j","slide":10,"title":"Grocery Store Survival Guide","textShapes":22}
+{"kind":"textbox","id":"sh/7e50z2p8","slide":10,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/mdwzqxon","slide":10,"text":"Dairy and alternatives","textPreview":"Dairy and alternatives","textChars":22,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/lcnixs72","slide":10,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/kbeho76h","slide":10,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/za50v2pw","slide":10,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/y9wzmxor","slide":10,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/58ri9wnm","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/47y10r61","slide":10,"text":"DAIRY AND ALTERNATIVES","textPreview":"DAIRY AND ALTERNATIVES","textChars":22,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/qtw7qxcv","slide":10,"text":"The cooler section is not one category nutritionally","textPreview":"The cooler section is not one category nutritionally","textChars":52,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/ru58j2tg","slide":10,"text":"Milk and yogurt often contain carbohydrate. Cheese usually has little carbohydrate, but can add saturated fat and sodium. Fortified soy milk differs from many other plant beverages. [7]","textPreview":"Milk and yogurt often contain carbohydrate. Cheese usually has little carbohydrate, but can add saturated fat and sodium. Fortified soy m...","textChars":185,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/sveps7u1","slide":10,"bbox":[66,292,318,90]}
+{"kind":"shape","id":"sh/dgnqlcbm","slide":10,"bbox":[80,310,16,16]}
+{"kind":"textbox","id":"sh/ipc7mdcz","slide":10,"text":"Milk","textPreview":"Milk","textChars":4,"textLines":1,"bbox":[108,305,264,22]}
+{"kind":"textbox","id":"sh/3ql8fitk","slide":10,"text":"Check serving size, carbohydrate, and how you use it.","textPreview":"Check serving size, carbohydrate, and how you use it.","textChars":53,"textLines":1,"bbox":[108,332,264,44]}
+{"kind":"shape","id":"sh/4ruponup","slide":10,"bbox":[412,292,318,90]}
+{"kind":"shape","id":"sh/5snqhsba","slide":10,"bbox":[426,310,16,16]}
+{"kind":"textbox","id":"sh/2lg7yhc3","slide":10,"text":"Plain yogurt","textPreview":"Plain yogurt","textChars":12,"textLines":1,"bbox":[454,305,264,22]}
+{"kind":"textbox","id":"sh/nmp8rmto","slide":10,"text":"Check protein and added sugar; add fruit if desired.","textPreview":"Check protein and added sugar; add fruit if desired.","textChars":52,"textLines":1,"bbox":[454,332,264,44]}
+{"kind":"shape","id":"sh/j6h4je90","slide":10,"bbox":[66,402,318,90]}
+{"kind":"shape","id":"sh/y58na9sf","slide":10,"bbox":[80,420,16,16]}
+{"kind":"textbox","id":"sh/lszmlor6","slide":10,"text":"Flavored yogurt","textPreview":"Flavored yogurt","textChars":15,"textLines":1,"bbox":[108,415,264,22]}
+{"kind":"textbox","id":"sh/krq5cjal","slide":10,"text":"Check added sugar and total carbohydrate.","textPreview":"Check added sugar and total carbohydrate.","textChars":41,"textLines":1,"bbox":[108,442,264,44]}
+{"kind":"shape","id":"sh/7u14ne9c","slide":10,"bbox":[412,402,318,90]}
+{"kind":"shape","id":"sh/6tsnetsr","slide":10,"bbox":[426,420,16,16]}
+{"kind":"textbox","id":"sh/twjmpor2","slide":10,"text":"Cheese","textPreview":"Cheese","textChars":6,"textLines":1,"bbox":[454,415,264,22]}
+{"kind":"textbox","id":"sh/8va5gjah","slide":10,"text":"Often lower carb; compare sodium and saturated fat.","textPreview":"Often lower carb; compare sodium and saturated fat.","textChars":51,"textLines":1,"bbox":[454,442,264,44]}
+{"kind":"shape","id":"sh/vy14ry98","slide":10,"bbox":[66,512,318,90]}
+{"kind":"shape","id":"sh/uxsnitsn","slide":10,"bbox":[80,530,16,16]}
+{"kind":"textbox","id":"sh/s3ul83q1","slide":10,"text":"Fortified soy milk","textPreview":"Fortified soy milk","textChars":18,"textLines":1,"bbox":[108,525,264,22]}
+{"kind":"textbox","id":"sh/do3mh876","slide":10,"text":"Often closer to dairy milk for protein than many alternatives.","textPreview":"Often closer to dairy milk for protein than many alternatives.","textChars":62,"textLines":1,"bbox":[108,552,264,44]}
+{"kind":"shape","id":"sh/q1c36t8v","slide":10,"bbox":[412,512,318,90]}
+{"kind":"shape","id":"sh/r2l4fypg","slide":10,"bbox":[426,530,16,16]}
+{"kind":"textbox","id":"sh/4zal4jqp","slide":10,"text":"Other plant drinks","textPreview":"Other plant drinks","textChars":18,"textLines":1,"bbox":[454,525,264,22]}
+{"kind":"textbox","id":"sh/503mdo7a","slide":10,"text":"Almond, oat, coconut, and rice beverages vary widely.","textPreview":"Almond, oat, coconut, and rice beverages vary widely.","textChars":53,"textLines":1,"bbox":[454,552,264,44]}
+{"kind":"shape","id":"sh/ixs32t8j","slide":10,"bbox":[66,838,650,86]}
+{"kind":"textbox","id":"sh/3y14byp4","slide":10,"text":"Comparison prompts","textPreview":"Comparison prompts","textChars":18,"textLines":1,"bbox":[82,852,618,22]}
+{"kind":"textbox","id":"sh/gval0jqt","slide":10,"text":"Is it sweetened? How much protein? Is it fortified? Does it fit allergies, preferences, kidney needs, or other medical considerations?","textPreview":"Is it sweetened? How much protein? Is it fortified? Does it fit allergies, preferences, kidney needs, or other medical considerations?","textChars":134,"textLines":1,"bbox":[82,880,618,36]}
+{"kind":"image","id":"im/5kzmtkzy","slide":10,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/mssv5j","slide":10,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/050tzz","slide":11,"title":"Grocery Store Survival Guide","textShapes":26}
+{"kind":"textbox","id":"sh/gbap0vu9","slide":11,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/hcjq90vu","slide":11,"text":"Snacks","textPreview":"Snacks","textChars":6,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/6587ulc7","slide":11,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/76ho36dc","slide":11,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/87qpwbux","slide":11,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/t8z65gvi","slide":11,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/q1c765cb","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/r2l8fatw","slide":11,"text":"SNACKS","textPreview":"SNACKS","textChars":6,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/zm9k3y18","slide":11,"text":"A planned snack can be useful, and some people may not need one","textPreview":"A planned snack can be useful, and some people may not need one","textChars":63,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/el0jut0n","slide":11,"text":"Snacking is not a character test. If snacks help your schedule, medication plan, activity, or hunger, make them practical.","textPreview":"Snacking is not a character test. If snacks help your schedule, medication plan, activity, or hunger, make them practical.","textChars":122,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/1ob258je","slide":11,"bbox":[66,294,318,74]}
+{"kind":"shape","id":"sh/0n21w3it","slide":11,"bbox":[80,312,16,16]}
+{"kind":"textbox","id":"sh/nqtk7i14","slide":11,"text":"Fruit + nuts","textPreview":"Fruit + nuts","textChars":12,"textLines":1,"bbox":[108,307,264,22]}
+{"kind":"textbox","id":"sh/mpkjyd0z","slide":11,"text":"Portable, filling, easy to repeat.","textPreview":"Portable, filling, easy to repeat.","textChars":34,"textLines":1,"bbox":[108,334,264,28]}
+{"kind":"shape","id":"sh/9cb298ja","slide":11,"bbox":[412,294,318,74]}
+{"kind":"shape","id":"sh/or210nip","slide":11,"bbox":[426,312,16,16]}
+{"kind":"textbox","id":"sh/betkbi1g","slide":11,"text":"Yogurt + berries","textPreview":"Yogurt + berries","textChars":16,"textLines":1,"bbox":[454,307,264,22]}
+{"kind":"textbox","id":"sh/adkj2d0v","slide":11,"text":"Protein plus fruit; check added sugar.","textPreview":"Protein plus fruit; check added sugar.","textChars":38,"textLines":1,"bbox":[454,334,264,28]}
+{"kind":"shape","id":"sh/6l8vqlof","slide":11,"bbox":[66,384,318,74]}
+{"kind":"shape","id":"sh/rmhwjqp0","slide":11,"bbox":[80,402,16,16]}
+{"kind":"textbox","id":"sh/snqdsv6l","slide":11,"text":"Hummus + vegetables","textPreview":"Hummus + vegetables","textChars":19,"textLines":1,"bbox":[108,397,264,22]}
+{"kind":"textbox","id":"sh/tozelg7q","slide":11,"text":"Fiber, flavor, and crunch.","textPreview":"Fiber, flavor, and crunch.","textChars":26,"textLines":1,"bbox":[108,424,264,28]}
+{"kind":"shape","id":"sh/ihovm1o3","slide":11,"bbox":[412,384,318,74]}
+{"kind":"shape","id":"sh/jixcf6po","slide":11,"bbox":[426,402,16,16]}
+{"kind":"textbox","id":"sh/kj6dob69","slide":11,"text":"Egg + fruit","textPreview":"Egg + fruit","textChars":11,"textLines":1,"bbox":[454,397,264,22]}
+{"kind":"textbox","id":"sh/5kzuhg7u","slide":11,"text":"Simple protein plus carbohydrate.","textPreview":"Simple protein plus carbohydrate.","textChars":33,"textLines":1,"bbox":[454,424,264,28]}
+{"kind":"shape","id":"sh/2dsvy5on","slide":11,"bbox":[66,474,318,74]}
+{"kind":"shape","id":"sh/3e1wrap8","slide":11,"bbox":[80,492,16,16]}
+{"kind":"textbox","id":"sh/d83yh4ra","slide":11,"text":"Crackers + tuna","textPreview":"Crackers + tuna","textChars":15,"textLines":1,"bbox":[108,487,264,22]}
+{"kind":"textbox","id":"sh/c7uxozqp","slide":11,"text":"Shelf-stable option with protein.","textPreview":"Shelf-stable option with protein.","textChars":33,"textLines":1,"bbox":[108,514,264,28]}
+{"kind":"shape","id":"sh/bmlgfu94","slide":11,"bbox":[412,474,318,74]}
+{"kind":"shape","id":"sh/qlcfmp8j","slide":11,"bbox":[426,492,16,16]}
+{"kind":"textbox","id":"sh/pk3ydkry","slide":11,"text":"Roasted chickpeas","textPreview":"Roasted chickpeas","textChars":17,"textLines":1,"bbox":[454,487,264,22]}
+{"kind":"textbox","id":"sh/ojuxkfqt","slide":11,"text":"Crunchy, portable, contains carbs and fiber.","textPreview":"Crunchy, portable, contains carbs and fiber.","textChars":44,"textLines":1,"bbox":[454,514,264,28]}
+{"kind":"shape","id":"sh/3i1gbu98","slide":11,"bbox":[66,564,318,74]}
+{"kind":"shape","id":"sh/2hsfip8n","slide":11,"bbox":[80,582,16,16]}
+{"kind":"textbox","id":"sh/9gnypori","slide":11,"text":"Nut butter + apple","textPreview":"Nut butter + apple","textChars":18,"textLines":1,"bbox":[108,577,264,22]}
+{"kind":"textbox","id":"sh/8fehwjqx","slide":11,"text":"Satisfying; portion as needed.","textPreview":"Satisfying; portion as needed.","textChars":30,"textLines":1,"bbox":[108,604,264,28]}
+{"kind":"shape","id":"sh/g7ix0zmh","slide":11,"bbox":[412,564,318,74]}
+{"kind":"shape","id":"sh/h8ry9kn2","slide":11,"bbox":[426,582,16,16]}
+{"kind":"textbox","id":"sh/u50fyp4b","slide":11,"text":"Popcorn + another food","textPreview":"Popcorn + another food","textChars":22,"textLines":1,"bbox":[454,577,264,22]}
+{"kind":"textbox","id":"sh/v69g7u5w","slide":11,"text":"May need protein or fat if it does not last.","textPreview":"May need protein or fat if it does not last.","textChars":44,"textLines":1,"bbox":[454,604,264,28]}
+{"kind":"shape","id":"sh/4b2x4zmd","slide":11,"bbox":[66,890,650,72]}
+{"kind":"textbox","id":"sh/5cbyd4ny","slide":11,"text":"Medication safety","textPreview":"Medication safety","textChars":17,"textLines":1,"bbox":[82,904,618,22]}
+{"kind":"textbox","id":"sh/i9kf2p47","slide":11,"text":"If you use insulin or medicines that can cause low blood sugar, ask your care team how snacks, activity, and low-glucose treatment should be handled.","textPreview":"If you use insulin or medicines that can cause low blood sugar, ask your care team how snacks, activity, and low-glucose treatment should...","textChars":149,"textLines":1,"bbox":[82,932,618,22]}
+{"kind":"image","id":"im/itgz6p0n","slide":11,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/050tzz","slide":11,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/5lsk98","slide":12,"title":"Grocery Store Survival Guide","textShapes":26}
+{"kind":"textbox","id":"sh/bi9kzadk","slide":12,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/ahg3qpwz","slide":12,"text":"Drinks","textPreview":"Drinks","textChars":6,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/l8r254vm","slide":12,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/knilwze1","slide":12,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/zm9k3udg","slide":12,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/yl03upwv","slide":12,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/9cb294vi","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/8b2l0zex","slide":12,"text":"DRINKS","textPreview":"DRINKS","textChars":6,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/2hwjehcv","slide":12,"text":"Change one frequent drink before changing everything","textPreview":"Change one frequent drink before changing everything","textChars":52,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/ni50n2d0","slide":12,"text":"Sweet drinks can add sugar quickly, but the next step can be gradual. Juice is not universally forbidden; context and portion matter.","textPreview":"Sweet drinks can add sugar quickly, but the next step can be gradual. Juice is not universally forbidden; context and portion matter.","textChars":133,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/ojy1g7ul","slide":12,"bbox":[66,306,138,82]}
+{"kind":"shape","id":"sh/pk7ipcv6","slide":12,"bbox":[88,324,24,42]}
+{"kind":"textbox","id":"sh/algjihcr","slide":12,"text":"Water","textPreview":"Water","textChars":5,"textLines":1,"bbox":[122,324,72,18]}
+{"kind":"textbox","id":"sh/bmp0rmdc","slide":12,"text":"default","textPreview":"default","textChars":7,"textLines":1,"bbox":[122,346,72,24]}
+{"kind":"shape","id":"sh/c7y1krux","slide":12,"bbox":[234,306,138,82]}
+{"kind":"shape","id":"sh/x872twvi","slide":12,"bbox":[256,324,24,42]}
+{"kind":"textbox","id":"sh/6pcz6xcn","slide":12,"text":"Sparkling water","textPreview":"Sparkling water","textChars":15,"textLines":1,"bbox":[290,324,72,18]}
+{"kind":"textbox","id":"sh/rql0fid8","slide":12,"text":"unsweetened","textPreview":"unsweetened","textChars":11,"textLines":1,"bbox":[290,346,72,24]}
+{"kind":"shape","id":"sh/vu1gnyt0","slide":12,"bbox":[402,306,138,82]}
+{"kind":"shape","id":"sh/utsfetsf","slide":12,"bbox":[424,324,24,42]}
+{"kind":"textbox","id":"sh/hwjypobq","slide":12,"text":"Tea or coffee","textPreview":"Tea or coffee","textChars":13,"textLines":1,"bbox":[458,324,72,18]}
+{"kind":"textbox","id":"sh/wvaxgja5","slide":12,"text":"watch add-ins","textPreview":"watch add-ins","textChars":13,"textLines":1,"bbox":[458,346,72,24]}
+{"kind":"shape","id":"sh/7qhgjeto","slide":12,"bbox":[570,306,138,82]}
+{"kind":"shape","id":"sh/mp8fa9s3","slide":12,"bbox":[592,324,24,42]}
+{"kind":"textbox","id":"sh/9sjylobu","slide":12,"text":"Smaller sweet drink","textPreview":"Smaller sweet drink","textChars":19,"textLines":1,"bbox":[626,324,72,18]}
+{"kind":"textbox","id":"sh/8rqxcja9","slide":12,"text":"step-down option","textPreview":"step-down option","textChars":16,"textLines":1,"bbox":[626,346,72,24]}
+{"kind":"shape","id":"sh/rmlgvits","slide":12,"bbox":[66,428,138,82]}
+{"kind":"shape","id":"sh/6lczmdsn","slide":12,"bbox":[88,446,24,42]}
+{"kind":"textbox","id":"sh/ov2l0bmt","slide":12,"text":"Soda","textPreview":"Soda","textChars":4,"textLines":1,"bbox":[122,446,72,18]}
+{"kind":"textbox","id":"sh/pgvmtgne","slide":12,"text":"sugar quickly adds up","textPreview":"sugar quickly adds up","textChars":21,"textLines":1,"bbox":[122,468,72,24]}
+{"kind":"shape","id":"sh/2tk3y14n","slide":12,"bbox":[234,428,138,82]}
+{"kind":"shape","id":"sh/3ut4r658","slide":12,"bbox":[256,446,24,42]}
+{"kind":"textbox","id":"sh/cjml4bmp","slide":12,"text":"Sweet tea","textPreview":"Sweet tea","textChars":9,"textLines":1,"bbox":[290,446,72,18]}
+{"kind":"textbox","id":"sh/dkvmxgna","slide":12,"text":"sugar varies","textPreview":"sugar varies","textChars":12,"textLines":1,"bbox":[290,468,72,24]}
+{"kind":"shape","id":"sh/qh432l4j","slide":12,"bbox":[402,428,138,82]}
+{"kind":"shape","id":"sh/bid4vq54","slide":12,"bbox":[424,446,24,42]}
+{"kind":"textbox","id":"sh/0n658vm1","slide":12,"text":"Juice","textPreview":"Juice","textChars":5,"textLines":1,"bbox":[458,446,72,18]}
+{"kind":"textbox","id":"sh/lofm10n6","slide":12,"text":"portion and purpose matter","textPreview":"portion and purpose matter","textChars":26,"textLines":1,"bbox":[458,468,72,24]}
+{"kind":"shape","id":"sh/lwnmhgrm","slide":12,"bbox":[570,428,138,82]}
+{"kind":"shape","id":"sh/kve58bq1","slide":12,"bbox":[592,446,24,42]}
+{"kind":"textbox","id":"sh/ju54fq9g","slide":12,"text":"Energy/sports drinks","textPreview":"Energy/sports drinks","textChars":20,"textLines":1,"bbox":[626,446,72,18]}
+{"kind":"textbox","id":"sh/ytw36l8v","slide":12,"text":"check sugar and caffeine","textPreview":"check sugar and caffeine","textChars":24,"textLines":1,"bbox":[626,468,72,24]}
+{"kind":"shape","id":"sh/xsnmdgra","slide":12,"bbox":[66,720,650,92]}
+{"kind":"textbox","id":"sh/wrel4bq5","slide":12,"text":"Alcohol safety","textPreview":"Alcohol safety","textChars":14,"textLines":1,"bbox":[82,734,618,22]}
+{"kind":"textbox","id":"sh/bq54b69k","slide":12,"text":"Alcohol can interact with diabetes medicines and can affect glucose decisions. Ask your clinician what is safe for you, especially if you use insulin or medicines that can cause lows.","textPreview":"Alcohol can interact with diabetes medicines and can affect glucose decisions. Ask your clinician what is safe for you, especially if you...","textChars":183,"textLines":1,"bbox":[82,762,618,42]}
+{"kind":"image","id":"im/9872lg3u","slide":12,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/5lsk98","slide":12,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/obwsyr","slide":13,"title":"Grocery Store Survival Guide","textShapes":52}
+{"kind":"textbox","id":"sh/94j6dojm","slide":13,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/83apk321","slide":13,"text":"Nutrition Facts label","textPreview":"Nutrition Facts label","textChars":21,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/v6lofy1c","slide":13,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/u5s7mtk7","slide":13,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/h836h8ji","slide":13,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/w7upo32x","slide":13,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/jal8ji1o","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/i9c7qdk3","slide":13,"text":"NUTRITION FACTS LABEL","textPreview":"NUTRITION FACTS LABEL","textChars":21,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/s7ylcnyx","slide":13,"text":"Start with serving size, then scan what matters for your meal","textPreview":"Start with serving size, then scan what matters for your meal","textChars":61,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/t8725szi","slide":13,"text":"The label is a comparison tool, not a personal portion prescription. Use it alongside your own plan and the way you will eat the food. [1,2]","textPreview":"The label is a comparison tool, not a personal portion prescription. Use it alongside your own plan and the way you will eat the food. [1,2]","textChars":140,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/65g3axgr","slide":13,"bbox":[66,300,330,500]}
+{"kind":"textbox","id":"sh/76pk3ihc","slide":13,"text":"Nutrition Facts","textPreview":"Nutrition Facts","textChars":15,"textLines":1,"bbox":[78,312,220,34]}
+{"kind":"shape","id":"sh/gbilg7yt","slide":13,"bbox":[76,358,310,0]}
+{"kind":"textbox","id":"sh/1cr29cze","slide":13,"text":"Serving size","textPreview":"Serving size","textChars":12,"textLines":1,"bbox":[78,362,180,20]}
+{"kind":"textbox","id":"sh/e9g3exgn","slide":13,"text":"1 cup","textPreview":"1 cup","textChars":5,"textLines":1,"bbox":[272,362,92,20]}
+{"kind":"shape","id":"sh/fa9k72h8","slide":13,"bbox":[376,360,22,22]}
+{"kind":"textbox","id":"sh/ozilk7y5","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[382,364,10,10]}
+{"kind":"shape","id":"sh/p0r2dcza","slide":13,"bbox":[76,393,310,0]}
+{"kind":"textbox","id":"sh/dknuhsni","slide":13,"text":"Servings per container","textPreview":"Servings per container","textChars":22,"textLines":1,"bbox":[96,397,180,20]}
+{"kind":"textbox","id":"sh/cjut8nmx","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[272,397,92,20]}
+{"kind":"shape","id":"sh/bilcfi5c","slide":13,"bbox":[376,395,22,22]}
+{"kind":"textbox","id":"sh/qhcb6d4r","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[382,399,10,10]}
+{"kind":"shape","id":"sh/l8nulsne","slide":13,"bbox":[76,428,310,0]}
+{"kind":"textbox","id":"sh/07etcnmt","slide":13,"text":"Calories","textPreview":"Calories","textChars":8,"textLines":1,"bbox":[78,432,180,20]}
+{"kind":"textbox","id":"sh/zm5cji58","slide":13,"text":"240","textPreview":"240","textChars":3,"textLines":1,"bbox":[272,432,92,20]}
+{"kind":"shape","id":"sh/ylwbad43","slide":13,"bbox":[76,470,310,0]}
+{"kind":"textbox","id":"sh/hc3a98na","slide":13,"text":"Total Fat","textPreview":"Total Fat","textChars":9,"textLines":1,"bbox":[78,474,180,20]}
+{"kind":"textbox","id":"sh/gbat03mp","slide":13,"text":"12g  15%","textPreview":"12g  15%","textChars":8,"textLines":1,"bbox":[272,474,92,20]}
+{"kind":"shape","id":"sh/6h8rapkn","slide":13,"bbox":[76,505,310,0]}
+{"kind":"textbox","id":"sh/7ih83ul8","slide":13,"text":"Saturated Fat","textPreview":"Saturated Fat","textChars":13,"textLines":1,"bbox":[96,509,180,20]}
+{"kind":"textbox","id":"sh/sjq9cz2d","slide":13,"text":"4g  20%","textPreview":"4g  20%","textChars":7,"textLines":1,"bbox":[272,509,92,20]}
+{"kind":"shape","id":"sh/tkjq543y","slide":13,"bbox":[376,507,22,22]}
+{"kind":"textbox","id":"sh/ulsre9kj","slide":13,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[382,511,10,10]}
+{"kind":"shape","id":"sh/fm187el4","slide":13,"bbox":[76,540,310,0]}
+{"kind":"textbox","id":"sh/gna9gj2p","slide":13,"text":"Sodium","textPreview":"Sodium","textChars":6,"textLines":1,"bbox":[78,544,180,20]}
+{"kind":"textbox","id":"sh/hojq9o3a","slide":13,"text":"480mg  21%","textPreview":"480mg  21%","textChars":10,"textLines":1,"bbox":[272,544,92,20]}
+{"kind":"shape","id":"sh/apo725kf","slide":13,"bbox":[376,542,22,22]}
+{"kind":"textbox","id":"sh/vqx8val0","slide":13,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[382,546,10,10]}
+{"kind":"shape","id":"sh/bmpoz6do","slide":13,"bbox":[76,575,310,0]}
+{"kind":"textbox","id":"sh/algn61w3","slide":13,"text":"Total Carbohydrate","textPreview":"Total Carbohydrate","textChars":18,"textLines":1,"bbox":[78,579,180,20]}
+{"kind":"textbox","id":"sh/xo761gvu","slide":13,"text":"34g  12%","textPreview":"34g  12%","textChars":8,"textLines":1,"bbox":[272,579,92,20]}
+{"kind":"shape","id":"sh/cnyp8bu9","slide":13,"bbox":[376,577,22,22]}
+{"kind":"textbox","id":"sh/za9o3qdk","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[382,581,10,10]}
+{"kind":"shape","id":"sh/yp07alcf","slide":13,"bbox":[76,610,310,0]}
+{"kind":"textbox","id":"sh/lcr65gvq","slide":13,"text":"Dietary Fiber","textPreview":"Dietary Fiber","textChars":13,"textLines":1,"bbox":[96,614,180,20]}
+{"kind":"textbox","id":"sh/kbipcbu5","slide":13,"text":"4g  14%","textPreview":"4g  14%","textChars":7,"textLines":1,"bbox":[272,614,92,20]}
+{"kind":"shape","id":"sh/7e9o7qdw","slide":13,"bbox":[376,612,22,22]}
+{"kind":"textbox","id":"sh/md07elcb","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[382,616,10,10]}
+{"kind":"shape","id":"sh/4j254vap","slide":13,"bbox":[76,645,310,0]}
+{"kind":"textbox","id":"sh/5kb6x0bu","slide":13,"text":"Total Sugars","textPreview":"Total Sugars","textChars":12,"textLines":1,"bbox":[96,649,180,20]}
+{"kind":"textbox","id":"sh/ihkn2lsj","slide":13,"text":"12g","textPreview":"12g","textChars":3,"textLines":1,"bbox":[272,649,92,20]}
+{"kind":"shape","id":"sh/jitovqt4","slide":13,"bbox":[76,680,310,0]}
+{"kind":"textbox","id":"sh/wfi50vad","slide":13,"text":"Added Sugars","textPreview":"Added Sugars","textChars":12,"textLines":1,"bbox":[96,684,180,20]}
+{"kind":"textbox","id":"sh/hgb6tgby","slide":13,"text":"8g  16%","textPreview":"8g  16%","textChars":7,"textLines":1,"bbox":[272,684,92,20]}
+{"kind":"shape","id":"sh/ud0nyls7","slide":13,"bbox":[376,682,22,22]}
+{"kind":"textbox","id":"sh/ve94rqts","slide":13,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[382,686,10,10]}
+{"kind":"shape","id":"sh/8ri5wbah","slide":13,"bbox":[430,312,28,28]}
+{"kind":"textbox","id":"sh/9crmpgb2","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[437,317,10,10]}
+{"kind":"textbox","id":"sh/pwzud8ze","slide":13,"text":"Serving size describes the label.","textPreview":"Serving size describes the label.","textChars":33,"textLines":1,"bbox":[470,315,240,36]}
+{"kind":"shape","id":"sh/ovqt43yt","slide":13,"bbox":[430,382,28,28]}
+{"kind":"textbox","id":"sh/nuhcbyh8","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[437,387,10,10]}
+{"kind":"textbox","id":"sh/298b2dg3","slide":13,"text":"Servings per container can change the math.","textPreview":"Servings per container can change the math.","textChars":43,"textLines":1,"bbox":[470,385,240,36]}
+{"kind":"shape","id":"sh/18zu98zi","slide":13,"bbox":[430,452,28,28]}
+{"kind":"textbox","id":"sh/g7qt03yx","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[437,457,10,10]}
+{"kind":"textbox","id":"sh/f6xc7yhc","slide":13,"text":"Total carbohydrate is the main carb line.","textPreview":"Total carbohydrate is the main carb line.","textChars":41,"textLines":1,"bbox":[470,455,240,36]}
+{"kind":"shape","id":"sh/e5obytgr","slide":13,"bbox":[430,522,28,28]}
+{"kind":"textbox","id":"sh/l4julszm","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[437,527,10,10]}
+{"kind":"textbox","id":"sh/k3adcny1","slide":13,"text":"Fiber is included in total carbohydrate.","textPreview":"Fiber is included in total carbohydrate.","textChars":40,"textLines":1,"bbox":[470,525,240,36]}
+{"kind":"shape","id":"sh/i94r6pwj","slide":13,"bbox":[430,592,28,28]}
+{"kind":"textbox","id":"sh/jadszux4","slide":13,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[437,597,10,10]}
+{"kind":"textbox","id":"sh/4bm98zep","slide":13,"text":"Added sugar is separate from total sugars.","textPreview":"Added sugar is separate from total sugars.","textChars":42,"textLines":1,"bbox":[470,595,240,36]}
+{"kind":"shape","id":"sh/5cva14fa","slide":13,"bbox":[430,662,28,28]}
+{"kind":"textbox","id":"sh/u5kr2pwn","slide":13,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[437,667,10,10]}
+{"kind":"textbox","id":"sh/v6t8vaxs","slide":13,"text":"Saturated fat helps compare similar foods.","textPreview":"Saturated fat helps compare similar foods.","textChars":42,"textLines":1,"bbox":[470,665,240,36]}
+{"kind":"shape","id":"sh/w7294fed","slide":13,"bbox":[430,732,28,28]}
+{"kind":"textbox","id":"sh/h8vqxkfy","slide":13,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[437,737,10,10]}
+{"kind":"textbox","id":"sh/e1ore9wr","slide":13,"text":"Sodium and %DV help with comparison.","textPreview":"Sodium and %DV help with comparison.","textChars":36,"textLines":1,"bbox":[470,735,240,36]}
+{"kind":"shape","id":"sh/f2xs7exc","slide":13,"bbox":[66,850,650,80]}
+{"kind":"textbox","id":"sh/nyt8repg","slide":13,"text":"Fast rule of thumb","textPreview":"Fast rule of thumb","textChars":18,"textLines":1,"bbox":[82,864,618,22]}
+{"kind":"textbox","id":"sh/2xkry9ov","slide":13,"text":"For many nutrients, 5% Daily Value or less is low and 20% Daily Value or more is high. The amount is per labeled serving. [2]","textPreview":"For many nutrients, 5% Daily Value or less is low and 20% Daily Value or more is high. The amount is per labeled serving. [2]","textChars":125,"textLines":1,"bbox":[82,892,618,30]}
+{"kind":"image","id":"im/vqloval8","slide":13,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/obwsyr","slide":13,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/hl00gp","slide":14,"title":"Grocery Store Survival Guide","textShapes":27}
+{"kind":"textbox","id":"sh/sbu58bmd","slide":14,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/dw36hgny","slide":14,"text":"Carbs and added sugar","textPreview":"Carbs and added sugar","textChars":21,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/i5sn214b","slide":14,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/361ob65g","slide":14,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/47a54bm1","slide":14,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/58j6dgnm","slide":14,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/u18ny14z","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/v21o7m5k","slide":14,"text":"CARBS AND ADDED SUGAR","textPreview":"CARBS AND ADDED SUGAR","textChars":21,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/v6hojupk","slide":14,"text":"Added sugar is one clue; total carbohydrate is still the main carb line","textPreview":"Added sugar is one clue; total carbohydrate is still the main carb line","textChars":71,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/ul87ap8z","slide":14,"text":"Total carbohydrate includes starch, sugars, added sugars, and fiber. It can matter for carbohydrate-counting or glucose-management plans. [3,4]","textPreview":"Total carbohydrate includes starch, sugars, added sugars, and fiber. It can matter for carbohydrate-counting or glucose-management plans....","textChars":143,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/h8z6lk7q","slide":14,"bbox":[82,300,280,360]}
+{"kind":"textbox","id":"sh/g7qpcfq5","slide":14,"text":"Total carbohydrate includes","textPreview":"Total carbohydrate includes","textChars":27,"textLines":1,"bbox":[110,330,230,30]}
+{"kind":"shape","id":"sh/3a1onupw","slide":14,"bbox":[126,385,190,42]}
+{"kind":"textbox","id":"sh/i987ep8b","slide":14,"text":"Starches","textPreview":"Starches","textChars":8,"textLines":1,"bbox":[140,397,160,16]}
+{"kind":"shape","id":"sh/5cjqp47m","slide":14,"bbox":[126,450,190,42]}
+{"kind":"textbox","id":"sh/4bapgzqh","slide":14,"text":"Sugars","textPreview":"Sugars","textChars":6,"textLines":1,"bbox":[140,462,160,16]}
+{"kind":"shape","id":"sh/jexobapc","slide":14,"bbox":[126,515,190,42]}
+{"kind":"textbox","id":"sh/ydon258r","slide":14,"text":"Added sugars","textPreview":"Added sugars","textChars":12,"textLines":1,"bbox":[140,527,160,16]}
+{"kind":"shape","id":"sh/29wradsf","slide":14,"bbox":[126,580,190,42]}
+{"kind":"textbox","id":"sh/na5sjy90","slide":14,"text":"Fiber","textPreview":"Fiber","textChars":5,"textLines":1,"bbox":[140,592,160,16]}
+{"kind":"shape","id":"sh/ove9c3al","slide":14,"bbox":[418,306,160,54]}
+{"kind":"textbox","id":"sh/pwnal8r6","slide":14,"text":"Ingredient words","textPreview":"Ingredient words","textChars":16,"textLines":1,"bbox":[426,315,144,42]}
+{"kind":"shape","id":"sh/e5cr6tsj","slide":14,"bbox":[578,306,220,54]}
+{"kind":"textbox","id":"sh/f6lsfy94","slide":14,"text":"Still check","textPreview":"Still check","textChars":11,"textLines":1,"bbox":[586,315,204,42]}
+{"kind":"shape","id":"sh/07u983ap","slide":14,"bbox":[418,360,160,54]}
+{"kind":"textbox","id":"sh/183ah8ru","slide":14,"text":"Syrup, dextrose, sucrose","textPreview":"Syrup, dextrose, sucrose","textChars":24,"textLines":1,"bbox":[426,369,144,42]}
+{"kind":"shape","id":"sh/q1cr2ts7","slide":14,"bbox":[578,360,220,54]}
+{"kind":"textbox","id":"sh/r2lsbe9s","slide":14,"text":"Total carbohydrate","textPreview":"Total carbohydrate","textChars":18,"textLines":1,"bbox":[586,369,204,42]}
+{"kind":"shape","id":"sh/t8bmxgfm","slide":14,"bbox":[418,414,160,54]}
+{"kind":"textbox","id":"sh/s72l4by1","slide":14,"text":"Honey, agave, molasses","textPreview":"Honey, agave, molasses","textChars":22,"textLines":1,"bbox":[426,423,144,42]}
+{"kind":"shape","id":"sh/76t4v6xg","slide":14,"bbox":[578,414,220,54]}
+{"kind":"textbox","id":"sh/65k32lgv","slide":14,"text":"Added sugars + serving size","textPreview":"Added sugars + serving size","textChars":27,"textLines":1,"bbox":[586,423,204,42]}
+{"kind":"shape","id":"sh/l4rmtgfq","slide":14,"bbox":[418,468,160,54]}
+{"kind":"textbox","id":"sh/k3il0by5","slide":14,"text":"Juice concentrate","textPreview":"Juice concentrate","textChars":17,"textLines":1,"bbox":[426,477,144,42]}
+{"kind":"shape","id":"sh/j294r6xk","slide":14,"bbox":[578,468,220,54]}
+{"kind":"textbox","id":"sh/y103y1gz","slide":14,"text":"Total carbs and portion","textPreview":"Total carbs and portion","textChars":23,"textLines":1,"bbox":[586,477,204,42]}
+{"kind":"shape","id":"sh/xgrmpwfe","slide":14,"bbox":[418,522,160,54]}
+{"kind":"textbox","id":"sh/wfilwryt","slide":14,"text":"No sugar added","textPreview":"No sugar added","textChars":14,"textLines":1,"bbox":[426,531,144,42]}
+{"kind":"shape","id":"sh/c7qlgbut","slide":14,"bbox":[578,522,220,54]}
+{"kind":"textbox","id":"sh/d8zmpgbe","slide":14,"text":"May not be low carbohydrate","textPreview":"May not be low carbohydrate","textChars":27,"textLines":1,"bbox":[586,531,204,42]}
+{"kind":"shape","id":"sh/q583e1cn","slide":14,"bbox":[418,576,160,54]}
+{"kind":"textbox","id":"sh/b6hkn6t8","slide":14,"text":"Sugar-free","textPreview":"Sugar-free","textChars":10,"textLines":1,"bbox":[426,585,144,42]}
+{"kind":"shape","id":"sh/0valkbap","slide":14,"bbox":[578,576,220,54]}
+{"kind":"textbox","id":"sh/lwjmtgba","slide":14,"text":"May not be carbohydrate-free","textPreview":"May not be carbohydrate-free","textChars":28,"textLines":1,"bbox":[586,585,204,42]}
+{"kind":"shape","id":"sh/yt83ilcz","slide":14,"bbox":[66,780,650,82]}
+{"kind":"textbox","id":"sh/zuh4r6t4","slide":14,"text":"Plain-English takeaway","textPreview":"Plain-English takeaway","textChars":22,"textLines":1,"bbox":[82,794,618,22]}
+{"kind":"textbox","id":"sh/gz6l8rul","slide":14,"text":"Ingredient names can help you notice added sweeteners. They do not replace the Nutrition Facts label or your portion.","textPreview":"Ingredient names can help you notice added sweeteners. They do not replace the Nutrition Facts label or your portion.","textChars":117,"textLines":1,"bbox":[82,822,618,32]}
+{"kind":"image","id":"im/e9wv6l8j","slide":14,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/hl00gp","slide":14,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/arks9u","slide":15,"title":"Grocery Store Survival Guide","textShapes":42}
+{"kind":"textbox","id":"sh/srutkr6d","slide":15,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/ts3atwny","slide":15,"text":"Fiber","textPreview":"Fiber","textChars":5,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/utcbm1oj","slide":15,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/fu5svm54","slide":15,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/gvetor6p","slide":15,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/hgnuxwnu","slide":15,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/2hwbq1of","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/3i5cz650","slide":15,"text":"FIBER","textPreview":"FIBER","textChars":5,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/7epwvu1k","slide":15,"text":"Compare similar foods, then increase gradually","textPreview":"Compare similar foods, then increase gradually","textChars":46,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/6dwfmpkz","slide":15,"text":"Fiber-rich foods can support fullness, digestive health, overall dietary quality, cholesterol management, and more balanced meals. Individual glucose and digestive responses vary.","textPreview":"Fiber-rich foods can support fullness, digestive health, overall dietary quality, cholesterol management, and more balanced meals. Indivi...","textChars":179,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/tg7exkjq","slide":15,"bbox":[70,292,132,26]}
+{"kind":"textbox","id":"sh/sfyxof25","slide":15,"text":"Vegetables","textPreview":"Vegetables","textChars":10,"textLines":1,"bbox":[80,298,112,14]}
+{"kind":"shape","id":"sh/jq5wra18","slide":15,"bbox":[236,292,132,26]}
+{"kind":"textbox","id":"sh/ipwfi5k3","slide":15,"text":"Beans","textPreview":"Beans","textChars":5,"textLines":1,"bbox":[246,298,112,14]}
+{"kind":"shape","id":"sh/5cnetkje","slide":15,"bbox":[402,292,132,26]}
+{"kind":"textbox","id":"sh/kbexkf2t","slide":15,"text":"Lentils","textPreview":"Lentils","textChars":7,"textLines":1,"bbox":[412,298,112,14]}
+{"kind":"shape","id":"sh/3m9g3e1s","slide":15,"bbox":[568,292,132,26]}
+{"kind":"textbox","id":"sh/2l0fu9k7","slide":15,"text":"Oats","textPreview":"Oats","textChars":4,"textLines":1,"bbox":[578,298,112,14]}
+{"kind":"shape","id":"sh/y1kzmd4f","slide":15,"bbox":[70,336,132,26]}
+{"kind":"textbox","id":"sh/z2t0vyl0","slide":15,"text":"Whole grains","textPreview":"Whole grains","textChars":12,"textLines":1,"bbox":[80,342,112,14]}
+{"kind":"shape","id":"sh/032ho3ml","slide":15,"bbox":[236,336,132,26]}
+{"kind":"textbox","id":"sh/l4vix83q","slide":15,"text":"Berries","textPreview":"Berries","textChars":7,"textLines":1,"bbox":[246,342,112,14]}
+{"kind":"shape","id":"sh/m54zqd4b","slide":15,"bbox":[402,336,132,26]}
+{"kind":"textbox","id":"sh/n6d0zilw","slide":15,"text":"Nuts","textPreview":"Nuts","textChars":4,"textLines":1,"bbox":[412,342,112,14]}
+{"kind":"shape","id":"sh/87mhsnmh","slide":15,"bbox":[568,336,132,26]}
+{"kind":"textbox","id":"sh/98vi1s32","slide":15,"text":"Seeds","textPreview":"Seeds","textChars":5,"textLines":1,"bbox":[578,342,112,14]}
+{"kind":"shape","id":"sh/290zet47","slide":15,"bbox":[90,418,250,236]}
+{"kind":"textbox","id":"sh/3a9gnels","slide":15,"text":"Nutrition Facts","textPreview":"Nutrition Facts","textChars":15,"textLines":1,"bbox":[100,428,170,25]}
+{"kind":"textbox","id":"sh/54z2twna","slide":15,"text":"Option 1","textPreview":"Option 1","textChars":8,"textLines":1,"bbox":[100,458,200,18]}
+{"kind":"shape","id":"sh/k36l0r6p","slide":15,"bbox":[100,480,230,0]}
+{"kind":"textbox","id":"sh/j2xkrm54","slide":15,"text":"Serving size","textPreview":"Serving size","textChars":12,"textLines":1,"bbox":[102,484,130,18]}
+{"kind":"textbox","id":"sh/i1o3yhoj","slide":15,"text":"1 bar","textPreview":"1 bar","textChars":5,"textLines":1,"bbox":[235,484,85,18]}
+{"kind":"shape","id":"sh/tsz2xwn6","slide":15,"bbox":[100,508,230,0]}
+{"kind":"textbox","id":"sh/srql4r61","slide":15,"text":"Total carb","textPreview":"Total carb","textChars":10,"textLines":1,"bbox":[102,512,130,18]}
+{"kind":"textbox","id":"sh/7qhkvm5g","slide":15,"text":"28g","textPreview":"28g","textChars":3,"textLines":1,"bbox":[235,512,85,18]}
+{"kind":"shape","id":"sh/658321ov","slide":15,"bbox":[100,536,230,0]}
+{"kind":"textbox","id":"sh/9wf2lcn2","slide":15,"text":"Dietary fiber","textPreview":"Dietary fiber","textChars":13,"textLines":1,"bbox":[102,540,130,18]}
+{"kind":"textbox","id":"sh/8vm1s76h","slide":15,"text":"2g  7%","textPreview":"2g  7%","textChars":6,"textLines":1,"bbox":[235,540,85,18]}
+{"kind":"shape","id":"sh/c3exgzuh","slide":15,"bbox":[100,564,230,0]}
+{"kind":"textbox","id":"sh/x4nep4b2","slide":15,"text":"Added sugars","textPreview":"Added sugars","textChars":12,"textLines":1,"bbox":[102,568,130,18]}
+{"kind":"textbox","id":"sh/a1wfepcb","slide":15,"text":"9g  18%","textPreview":"9g  18%","textChars":7,"textLines":1,"bbox":[235,568,85,18]}
+{"kind":"shape","id":"sh/b25wnutw","slide":15,"bbox":[100,592,230,0]}
+{"kind":"textbox","id":"sh/ozuxczu5","slide":15,"text":"Sodium","textPreview":"Sodium","textChars":6,"textLines":1,"bbox":[102,596,130,18]}
+{"kind":"textbox","id":"sh/p0nel4bq","slide":15,"text":"120mg  5%","textPreview":"120mg  5%","textChars":9,"textLines":1,"bbox":[235,596,85,18]}
+{"kind":"shape","id":"sh/2xcvapcf","slide":15,"bbox":[450,418,250,236]}
+{"kind":"textbox","id":"sh/nylwjutk","slide":15,"text":"Nutrition Facts","textPreview":"Nutrition Facts","textChars":15,"textLines":1,"bbox":[460,428,170,25]}
+{"kind":"textbox","id":"sh/gvud8fu9","slide":15,"text":"Option 2","textPreview":"Option 2","textChars":8,"textLines":1,"bbox":[460,458,200,18]}
+{"kind":"shape","id":"sh/1w3ehkbu","slide":15,"bbox":[460,480,230,0]}
+{"kind":"textbox","id":"sh/j61gradg","slide":15,"text":"Serving size","textPreview":"Serving size","textChars":12,"textLines":1,"bbox":[462,484,130,18]}
+{"kind":"textbox","id":"sh/i5sfi5wv","slide":15,"text":"1 bar","textPreview":"1 bar","textChars":5,"textLines":1,"bbox":[595,484,85,18]}
+{"kind":"shape","id":"sh/58jytkvm","slide":15,"bbox":[460,508,230,0]}
+{"kind":"textbox","id":"sh/47axkfe1","slide":15,"text":"Total carb","textPreview":"Total carb","textChars":10,"textLines":1,"bbox":[462,512,130,18]}
+{"kind":"textbox","id":"sh/rulgvuds","slide":15,"text":"29g","textPreview":"29g","textChars":3,"textLines":1,"bbox":[595,512,85,18]}
+{"kind":"shape","id":"sh/69cfmpw7","slide":15,"bbox":[460,536,230,0]}
+{"kind":"textbox","id":"sh/tw3yxkvi","slide":15,"text":"Dietary fiber","textPreview":"Dietary fiber","textChars":13,"textLines":1,"bbox":[462,540,130,18]}
+{"kind":"textbox","id":"sh/svuxozex","slide":15,"text":"6g  21%","textPreview":"6g  21%","textChars":7,"textLines":1,"bbox":[595,540,85,18]}
+{"kind":"shape","id":"sh/fylgzudo","slide":15,"bbox":[460,564,230,0]}
+{"kind":"textbox","id":"sh/excfqpw3","slide":15,"text":"Added sugars","textPreview":"Added sugars","textChars":12,"textLines":1,"bbox":[462,568,130,18]}
+{"kind":"textbox","id":"sh/atgjitgb","slide":15,"text":"5g  10%","textPreview":"5g  10%","textChars":7,"textLines":1,"bbox":[595,568,85,18]}
+{"kind":"shape","id":"sh/bup0ryxw","slide":15,"bbox":[460,592,230,0]}
+{"kind":"textbox","id":"sh/cvy1k3yh","slide":15,"text":"Sodium","textPreview":"Sodium","textChars":6,"textLines":1,"bbox":[462,596,130,18]}
+{"kind":"textbox","id":"sh/xw7it8f2","slide":15,"text":"150mg  7%","textPreview":"150mg  7%","textChars":9,"textLines":1,"bbox":[595,596,85,18]}
+{"kind":"shape","id":"sh/2pwzetgf","slide":15,"bbox":[66,790,650,82]}
+{"kind":"textbox","id":"sh/nq50nyx0","slide":15,"text":"Comfort note","textPreview":"Comfort note","textChars":12,"textLines":1,"bbox":[82,804,618,22]}
+{"kind":"textbox","id":"sh/orehgjyl","slide":15,"text":"Increase fiber gradually, drink fluids, and adjust for digestive conditions, kidney needs, medications, and your care team's advice.","textPreview":"Increase fiber gradually, drink fluids, and adjust for digestive conditions, kidney needs, medications, and your care team's advice.","textChars":132,"textLines":1,"bbox":[82,832,618,32]}
+{"kind":"image","id":"im/29wbitkv","slide":15,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/arks9u","slide":15,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/is8z4e","slide":16,"title":"Grocery Store Survival Guide","textShapes":36}
+{"kind":"textbox","id":"sh/2p0zqtk3","slide":16,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/nq9gjylo","slide":16,"text":"Sodium","textPreview":"Sodium","textChars":6,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/0niho32x","slide":16,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/1oryh83i","slide":16,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/e10zmtk7","slide":16,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/fm9gfylc","slide":16,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/kjmh0n2h","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/lkvitsj2","slide":16,"text":"SODIUM","textPreview":"SODIUM","textChars":6,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/90vyhczm","slide":16,"text":"Compare similar products before deciding","textPreview":"Compare similar products before deciding","textChars":40,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/8zmh87yh","slide":16,"text":"The FDA Daily Value for sodium is 2,300 mg per day. The %DV is per labeled serving, and individual recommendations may differ. [2,9]","textPreview":"The FDA Daily Value for sodium is 2,300 mg per day. The %DV is per labeled serving, and individual recommendations may differ. [2,9]","textChars":132,"textLines":1,"bbox":[66,196,670,64]}
+{"kind":"shape","id":"sh/7ydgf2hw","slide":16,"bbox":[92,310,250,236]}
+{"kind":"textbox","id":"sh/mx4z6xgb","slide":16,"text":"Nutrition Facts","textPreview":"Nutrition Facts","textChars":15,"textLines":1,"bbox":[102,320,170,25]}
+{"kind":"textbox","id":"sh/lcvydszq","slide":16,"text":"Option 1 canned soup","textPreview":"Option 1 canned soup","textChars":20,"textLines":1,"bbox":[102,350,200,18]}
+{"kind":"shape","id":"sh/kb2h4ny5","slide":16,"bbox":[102,372,230,0]}
+{"kind":"textbox","id":"sh/zatgbihk","slide":16,"text":"Serving size","textPreview":"Serving size","textChars":12,"textLines":1,"bbox":[104,376,130,18]}
+{"kind":"textbox","id":"sh/y9kz2dgz","slide":16,"text":"1 cup","textPreview":"1 cup","textChars":5,"textLines":1,"bbox":[237,376,85,18]}
+{"kind":"shape","id":"sh/58fipwzu","slide":16,"bbox":[102,400,230,0]}
+{"kind":"textbox","id":"sh/476hgryp","slide":16,"text":"Servings/container","textPreview":"Servings/container","textChars":18,"textLines":1,"bbox":[104,404,130,18]}
+{"kind":"textbox","id":"sh/obe1sv6l","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[237,404,85,18]}
+{"kind":"shape","id":"sh/pcn2l0n6","slide":16,"bbox":[102,428,230,0]}
+{"kind":"textbox","id":"sh/29wjqlof","slide":16,"text":"Sodium","textPreview":"Sodium","textChars":6,"textLines":1,"bbox":[104,432,130,18]}
+{"kind":"textbox","id":"sh/3a5kjq50","slide":16,"text":"520mg  23%","textPreview":"520mg  23%","textChars":10,"textLines":1,"bbox":[237,432,85,18]}
+{"kind":"shape","id":"sh/g7e1ov6p","slide":16,"bbox":[102,456,230,0]}
+{"kind":"textbox","id":"sh/18nihgna","slide":16,"text":"Total carb","textPreview":"Total carb","textChars":10,"textLines":1,"bbox":[104,460,130,18]}
+{"kind":"textbox","id":"sh/e5cjmloj","slide":16,"text":"24g  9%","textPreview":"24g  9%","textChars":7,"textLines":1,"bbox":[237,460,85,18]}
+{"kind":"shape","id":"sh/f6l0fq54","slide":16,"bbox":[102,484,230,0]}
+{"kind":"textbox","id":"sh/sju1kb6d","slide":16,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[104,488,130,18]}
+{"kind":"textbox","id":"sh/t43idgny","slide":16,"text":"9g","textPreview":"9g","textChars":2,"textLines":1,"bbox":[237,488,85,18]}
+{"kind":"shape","id":"sh/ve1kn690","slide":16,"bbox":[462,310,250,236]}
+{"kind":"textbox","id":"sh/udsju18f","slide":16,"text":"Nutrition Facts","textPreview":"Nutrition Facts","textChars":15,"textLines":1,"bbox":[472,320,170,25]}
+{"kind":"textbox","id":"sh/hg32pgrq","slide":16,"text":"Option 2 canned soup","textPreview":"Option 2 canned soup","textChars":20,"textLines":1,"bbox":[472,350,200,18]}
+{"kind":"shape","id":"sh/wfa1wbql","slide":16,"bbox":[472,372,230,0]}
+{"kind":"textbox","id":"sh/j2lkr69w","slide":16,"text":"Serving size","textPreview":"Serving size","textChars":12,"textLines":1,"bbox":[474,376,130,18]}
+{"kind":"textbox","id":"sh/ihc3yl8b","slide":16,"text":"1 cup","textPreview":"1 cup","textChars":5,"textLines":1,"bbox":[607,376,85,18]}
+{"kind":"shape","id":"sh/5432tgr2","slide":16,"bbox":[472,400,230,0]}
+{"kind":"textbox","id":"sh/43ul0bqh","slide":16,"text":"Servings/container","textPreview":"Servings/container","textChars":18,"textLines":1,"bbox":[474,404,130,18]}
+{"kind":"textbox","id":"sh/r6lkvq98","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[607,404,85,18]}
+{"kind":"shape","id":"sh/65c32l8n","slide":16,"bbox":[472,428,230,0]}
+{"kind":"textbox","id":"sh/ql4vetkv","slide":16,"text":"Sodium","textPreview":"Sodium","textChars":6,"textLines":1,"bbox":[474,432,130,18]}
+{"kind":"textbox","id":"sh/bmdwny1g","slide":16,"text":"760mg  33%","textPreview":"760mg  33%","textChars":10,"textLines":1,"bbox":[607,432,85,18]}
+{"kind":"shape","id":"sh/cnmdg321","slide":16,"bbox":[472,456,230,0]}
+{"kind":"textbox","id":"sh/dovep8jm","slide":16,"text":"Total carb","textPreview":"Total carb","textChars":10,"textLines":1,"bbox":[474,460,130,18]}
+{"kind":"textbox","id":"sh/ypovitk7","slide":16,"text":"23g  8%","textPreview":"23g  8%","textChars":7,"textLines":1,"bbox":[607,460,85,18]}
+{"kind":"shape","id":"sh/zqxwry1c","slide":16,"bbox":[472,484,230,0]}
+{"kind":"textbox","id":"sh/0r6dk32x","slide":16,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[474,488,130,18]}
+{"kind":"textbox","id":"sh/lsfet8ji","slide":16,"text":"10g","textPreview":"10g","textChars":3,"textLines":1,"bbox":[607,488,85,18]}
+{"kind":"shape","id":"sh/etkv69kn","slide":16,"bbox":[66,610,650,86]}
+{"kind":"textbox","id":"sh/futcfel8","slide":16,"text":"How to compare","textPreview":"How to compare","textChars":14,"textLines":1,"bbox":[82,624,618,22]}
+{"kind":"textbox","id":"sh/hojylc3q","slide":16,"text":"First compare the same serving size. Then ask how much you will actually eat, how often you buy it, and what else is in the meal.","textPreview":"First compare the same serving size. Then ask how much you will actually eat, how often you buy it, and what else is in the meal.","textChars":129,"textLines":1,"bbox":[82,652,618,36]}
+{"kind":"shape","id":"sh/wnqhc7m5","slide":16,"bbox":[66,724,650,92]}
+{"kind":"textbox","id":"sh/vmhgj2lk","slide":16,"text":"Daily Value cue","textPreview":"Daily Value cue","textChars":15,"textLines":1,"bbox":[82,738,618,22]}
+{"kind":"textbox","id":"sh/al8fax4f","slide":16,"text":"For many nutrients, 5% DV or less is generally low and 20% DV or more is generally high. One label line does not make a food universally good or bad.","textPreview":"For many nutrients, 5% DV or less is generally low and 20% DV or more is generally high. One label line does not make a food universally ...","textChars":149,"textLines":1,"bbox":[82,766,618,42]}
+{"kind":"image","id":"im/w36hovex","slide":16,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/is8z4e","slide":16,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/jb3ld5","slide":17,"title":"Grocery Store Survival Guide","textShapes":26}
+{"kind":"textbox","id":"sh/p0bmt4bu","slide":17,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/oz25kza9","slide":17,"text":"Claims and ingredients","textPreview":"Claims and ingredients","textChars":22,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/b2d4vet0","slide":17,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/a14nm9sf","slide":17,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/x4vmxobq","slide":17,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/c3m5oja5","slide":17,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/r694jutg","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/6503apcv","slide":17,"text":"INGREDIENT LISTS AND MARKETING CLAIMS","textPreview":"INGREDIENT LISTS AND MARKETING CLAIMS","textChars":37,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/sji14val","slide":17,"text":"Front labels can be useful, but they are not the whole story","textPreview":"Front labels can be useful, but they are not the whole story","textChars":60,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/t4r2d0b6","slide":17,"text":"Claims may be helpful clues. They do not replace the Nutrition Facts label, ingredient list, serving size, and your health needs. [1,3]","textPreview":"Claims may be helpful clues. They do not replace the Nutrition Facts label, ingredient list, serving size, and your health needs. [1,3]","textChars":135,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/6hgj2lsf","slide":17,"bbox":[66,296,140,132]}
+{"kind":"shape","id":"sh/ri9kbqt0","slide":17,"bbox":[84,314,104,42]}
+{"kind":"textbox","id":"sh/07i18fah","slide":17,"text":"No sugar added","textPreview":"No sugar added","textChars":14,"textLines":1,"bbox":[90,326,92,16]}
+{"kind":"textbox","id":"sh/18r2hkb2","slide":17,"text":"Front","textPreview":"Front","textChars":5,"textLines":1,"bbox":[84,374,104,22]}
+{"kind":"shape","id":"sh/e50j65sb","slide":17,"bbox":[110,414,52,50]}
+{"kind":"shape","id":"sh/f69kfatw","slide":17,"bbox":[236,296,140,132]}
+{"kind":"shape","id":"sh/wby1wbad","slide":17,"bbox":[254,314,104,42]}
+{"kind":"textbox","id":"sh/hc725gby","slide":17,"text":"Sugar-free","textPreview":"Sugar-free","textChars":10,"textLines":1,"bbox":[260,326,92,16]}
+{"kind":"textbox","id":"sh/x8zi9c3m","slide":17,"text":"Front","textPreview":"Front","textChars":5,"textLines":1,"bbox":[254,374,104,22]}
+{"kind":"shape","id":"sh/w7qh07m1","slide":17,"bbox":[280,414,52,50]}
+{"kind":"shape","id":"sh/b6x072lg","slide":17,"bbox":[406,296,140,132]}
+{"kind":"shape","id":"sh/a5ozyx4v","slide":17,"bbox":[424,314,104,42]}
+{"kind":"textbox","id":"sh/lczidc3i","slide":17,"text":"Natural","textPreview":"Natural","textChars":7,"textLines":1,"bbox":[430,326,92,16]}
+{"kind":"textbox","id":"sh/kbqh47md","slide":17,"text":"Front","textPreview":"Front","textChars":5,"textLines":1,"bbox":[424,374,104,22]}
+{"kind":"shape","id":"sh/jah0bmls","slide":17,"bbox":[450,414,52,50]}
+{"kind":"shape","id":"sh/y98z2h47","slide":17,"bbox":[576,296,140,132]}
+{"kind":"shape","id":"sh/t0ji1w3u","slide":17,"bbox":[594,314,104,42]}
+{"kind":"textbox","id":"sh/8zah8rm9","slide":17,"text":"Multigrain","textPreview":"Multigrain","textChars":10,"textLines":1,"bbox":[600,326,92,16]}
+{"kind":"textbox","id":"sh/qlkf2tkr","slide":17,"text":"Front","textPreview":"Front","textChars":5,"textLines":1,"bbox":[594,374,104,22]}
+{"kind":"shape","id":"sh/rmtwvy1c","slide":17,"bbox":[620,414,52,50]}
+{"kind":"shape","id":"sh/c72x4j2x","slide":17,"bbox":[66,462,140,132]}
+{"kind":"shape","id":"sh/d8vexoji","slide":17,"bbox":[84,480,104,42]}
+{"kind":"textbox","id":"sh/e94f6tkn","slide":17,"text":"Keto","textPreview":"Keto","textChars":4,"textLines":1,"bbox":[90,492,92,16]}
+{"kind":"textbox","id":"sh/zadwzy18","slide":17,"text":"Front","textPreview":"Front","textChars":5,"textLines":1,"bbox":[84,540,104,22]}
+{"kind":"shape","id":"sh/0bmx832t","slide":17,"bbox":[110,580,52,50]}
+{"kind":"shape","id":"sh/1cve18je","slide":17,"bbox":[236,462,140,132]}
+{"kind":"shape","id":"sh/md4fadkz","slide":17,"bbox":[254,480,104,42]}
+{"kind":"textbox","id":"sh/nedw3i1k","slide":17,"text":"Low-fat","textPreview":"Low-fat","textChars":7,"textLines":1,"bbox":[260,492,92,16]}
+{"kind":"textbox","id":"sh/bi9o7epc","slide":17,"text":"Front","textPreview":"Front","textChars":5,"textLines":1,"bbox":[254,540,104,22]}
+{"kind":"shape","id":"sh/ah0ny98r","slide":17,"bbox":[280,580,52,50]}
+{"kind":"shape","id":"sh/xkr69o7i","slide":17,"bbox":[406,462,140,132]}
+{"kind":"shape","id":"sh/wji50j6x","slide":17,"bbox":[424,480,104,42]}
+{"kind":"textbox","id":"sh/jm9obep8","slide":17,"text":"High-protein","textPreview":"High-protein","textChars":12,"textLines":1,"bbox":[430,492,92,16]}
+{"kind":"textbox","id":"sh/yl0n2to3","slide":17,"text":"Front","textPreview":"Front","textChars":5,"textLines":1,"bbox":[424,540,104,22]}
+{"kind":"shape","id":"sh/lob6do7e","slide":17,"bbox":[450,580,52,50]}
+{"kind":"shape","id":"sh/kni54j6t","slide":17,"bbox":[576,462,140,132]}
+{"kind":"shape","id":"sh/zqp4zup4","slide":17,"bbox":[594,480,104,42]}
+{"kind":"textbox","id":"sh/epwnqp8j","slide":17,"text":"Organic","textPreview":"Organic","textChars":7,"textLines":1,"bbox":[600,492,92,16]}
+{"kind":"textbox","id":"sh/4vul0v6h","slide":17,"text":"Front","textPreview":"Front","textChars":5,"textLines":1,"bbox":[594,540,104,22]}
+{"kind":"shape","id":"sh/5w3290n2","slide":17,"bbox":[620,580,52,50]}
+{"kind":"shape","id":"sh/itc3ylob","slide":17,"bbox":[66,696,650,92]}
+{"kind":"textbox","id":"sh/3ulk7q5w","slide":17,"text":"Back-of-package checks","textPreview":"Back-of-package checks","textChars":22,"textLines":1,"bbox":[82,710,618,22]}
+{"kind":"textbox","id":"sh/gru1wb6l","slide":17,"text":"Serving size, total carbohydrate, fiber, added sugar, saturated fat, sodium, and ingredient list. Net carbs is not one of the standard Nutrition Facts lines. [1]","textPreview":"Serving size, total carbohydrate, fiber, added sugar, saturated fat, sodium, and ingredient list. Net carbs is not one of the standard Nu...","textChars":161,"textLines":1,"bbox":[82,738,618,42]}
+{"kind":"image","id":"im/3e9sv6d4","slide":17,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/jb3ld5","slide":17,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/ai3a1l","slide":18,"title":"Grocery Store Survival Guide","textShapes":20}
+{"kind":"textbox","id":"sh/sjalsjmh","slide":18,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/t4j2lo32","slide":18,"text":"Budget strategies","textPreview":"Budget strategies","textChars":17,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/e5s3ut4n","slide":18,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/f61knyls","slide":18,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/g7alw3md","slide":18,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/18j2po3y","slide":18,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/a9ojip43","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/vahkbulo","slide":18,"text":"BUDGET STRATEGIES","textPreview":"BUDGET STRATEGIES","textChars":17,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/ri58nmxc","slide":18,"text":"Let budget be part of the plan, not a source of shame","textPreview":"Let budget be part of the plan, not a source of shame","textChars":53,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/qxw7uhgr","slide":18,"text":"A realistic plan uses what is already available and avoids buying aspirational foods that will not be eaten.","textPreview":"A realistic plan uses what is already available and avoids buying aspirational foods that will not be eaten.","textChars":108,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/cjepwrex","slide":18,"bbox":[416,296,12,12]}
+{"kind":"textbox","id":"sh/3ul8j2x0","slide":18,"text":"Shop the kitchen first.","textPreview":"Shop the kitchen first.","textChars":23,"textLines":1,"bbox":[438,292,268,30]}
+{"kind":"shape","id":"sh/2tc7qxgv","slide":18,"bbox":[416,338,12,12]}
+{"kind":"textbox","id":"sh/pwnqlcf6","slide":18,"text":"Plan meals around what is already available.","textPreview":"Plan meals around what is already available.","textChars":44,"textLines":1,"bbox":[438,334,268,30]}
+{"kind":"shape","id":"sh/4vups7yl","slide":18,"bbox":[416,380,12,12]}
+{"kind":"textbox","id":"sh/vqlof2x4","slide":18,"text":"Compare unit prices.","textPreview":"Compare unit prices.","textChars":20,"textLines":1,"bbox":[438,376,268,30]}
+{"kind":"shape","id":"sh/upc7mxgj","slide":18,"bbox":[416,422,12,12]}
+{"kind":"textbox","id":"sh/ylsryx0b","slide":18,"text":"Use store brands.","textPreview":"Use store brands.","textChars":17,"textLines":1,"bbox":[438,418,268,30]}
+{"kind":"shape","id":"sh/jm187ihw","slide":18,"bbox":[416,464,12,12]}
+{"kind":"textbox","id":"sh/kna90nih","slide":18,"text":"Use frozen vegetables.","textPreview":"Use frozen vegetables.","textChars":22,"textLines":1,"bbox":[438,460,268,30]}
+{"kind":"shape","id":"sh/lojq9sz2","slide":18,"bbox":[416,528,12,12]}
+{"kind":"textbox","id":"sh/6pcr2x0n","slide":18,"text":"Use canned beans.","textPreview":"Use canned beans.","textChars":17,"textLines":1,"bbox":[438,524,268,30]}
+{"kind":"shape","id":"sh/7ql8b2h8","slide":18,"bbox":[416,570,12,12]}
+{"kind":"textbox","id":"sh/8ru947id","slide":18,"text":"Buy seasonal produce when useful.","textPreview":"Buy seasonal produce when useful.","textChars":33,"textLines":1,"bbox":[438,566,268,30]}
+{"kind":"shape","id":"sh/ts3qdczy","slide":18,"bbox":[416,612,12,12]}
+{"kind":"textbox","id":"sh/utcr6h0j","slide":18,"text":"Freeze leftovers.","textPreview":"Freeze leftovers.","textChars":17,"textLines":1,"bbox":[438,608,268,30]}
+{"kind":"shape","id":"sh/vul8fmh4","slide":18,"bbox":[416,654,12,12]}
+{"kind":"textbox","id":"sh/p072l0ni","slide":18,"text":"Build pantry backup meals.","textPreview":"Build pantry backup meals.","textChars":26,"textLines":1,"bbox":[438,650,268,30]}
+{"kind":"shape","id":"sh/ozylsv6x","slide":18,"bbox":[416,696,12,12]}
+{"kind":"textbox","id":"sh/3ypkjq5c","slide":18,"text":"Reduce waste before adding more variety.","textPreview":"Reduce waste before adding more variety.","textChars":40,"textLines":1,"bbox":[438,692,268,30]}
+{"kind":"shape","id":"sh/2xgjq5o7","slide":18,"bbox":[66,788,650,78]}
+{"kind":"textbox","id":"sh/dor2pknu","slide":18,"text":"Useful question","textPreview":"Useful question","textChars":15,"textLines":1,"bbox":[82,802,618,22]}
+{"kind":"textbox","id":"sh/cnilwf69","slide":18,"text":"Will I actually eat this before it spoils? That question can protect both your budget and your energy.","textPreview":"Will I actually eat this before it spoils? That question can protect both your budget and your energy.","textChars":102,"textLines":1,"bbox":[82,830,618,28]}
+{"kind":"image","id":"im/mh8j6xo3","slide":18,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"image","id":"im/etofm9c7","slide":18,"name":"","geometry":"roundRect","alt":"Budget-friendly foods arranged on a table","bbox":[66,292,310,210]}
+{"kind":"notes","id":"nt/ai3a1l","slide":18,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/f86qeq","slide":19,"title":"Grocery Store Survival Guide","textShapes":18}
+{"kind":"textbox","id":"sh/a1sn6tcn","slide":19,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/v21ozyds","slide":19,"text":"Ten-minute meals","textPreview":"Ten-minute meals","textChars":16,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/8zq54jeh","slide":19,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/90j6xov2","slide":19,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/mx8n29wb","slide":19,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/nyhovedw","slide":19,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/0vq50ze5","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/lwz6t4vq","slide":19,"text":"TEN-MINUTE MEAL FORMULAS","textPreview":"TEN-MINUTE MEAL FORMULAS","textChars":24,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/dszyh4vu","slide":19,"text":"Build from a base, a protein, a vegetable or fruit, and flavor","textPreview":"Build from a base, a protein, a vegetable or fruit, and flavor","textChars":62,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/srqx8zu9","slide":19,"text":"These are flexible formulas, not prescriptions. Swap based on culture, budget, appetite, allergies, tools, and what is already in the kitchen.","textPreview":"These are flexible formulas, not prescriptions. Swap based on culture, budget, appetite, allergies, tools, and what is already in the kit...","textChars":142,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/rqhgfudo","slide":19,"bbox":[66,300,306,140]}
+{"kind":"textbox","id":"sh/qp8f6pcj","slide":19,"text":"Taco or tortilla meal","textPreview":"Taco or tortilla meal","textChars":21,"textLines":1,"bbox":[84,318,260,24]}
+{"kind":"textbox","id":"sh/5ozydkvy","slide":19,"text":"Tortilla + beans or protein + cabbage or frozen vegetables + salsa or avocado","textPreview":"Tortilla + beans or protein + cabbage or frozen vegetables + salsa or avocado","textChars":77,"textLines":1,"bbox":[84,356,260,58]}
+{"kind":"shape","id":"sh/4nqx4zud","slide":19,"bbox":[408,300,306,140]}
+{"kind":"textbox","id":"sh/3mxgbuds","slide":19,"text":"Rice bowl","textPreview":"Rice bowl","textChars":9,"textLines":1,"bbox":[426,318,260,24]}
+{"kind":"textbox","id":"sh/ilof2pc7","slide":19,"text":"Rice + tofu, egg, fish, or chicken + frozen stir-fry vegetables + sauce","textPreview":"Rice + tofu, egg, fish, or chicken + frozen stir-fry vegetables + sauce","textChars":71,"textLines":1,"bbox":[426,356,260,58]}
+{"kind":"shape","id":"sh/hkfe9kvm","slide":19,"bbox":[66,480,306,140]}
+{"kind":"textbox","id":"sh/gj6x0fu1","slide":19,"text":"Pantry plate","textPreview":"Pantry plate","textChars":12,"textLines":1,"bbox":[84,498,260,24]}
+{"kind":"textbox","id":"sh/8fupcj69","slide":19,"text":"Crackers or bread + tuna, hummus, or beans + cucumber, carrots, or fruit","textPreview":"Crackers or bread + tuna, hummus, or beans + cucumber, carrots, or fruit","textChars":72,"textLines":1,"bbox":[84,536,260,58]}
+{"kind":"shape","id":"sh/tg365o7u","slide":19,"bbox":[408,480,306,140]}
+{"kind":"textbox","id":"sh/6ds7a983","slide":19,"text":"Soup upgrade","textPreview":"Soup upgrade","textChars":12,"textLines":1,"bbox":[426,498,260,24]}
+{"kind":"textbox","id":"sh/7elo3epo","slide":19,"text":"Canned soup + extra vegetables + beans, chicken, tofu, or egg + whole-grain side","textPreview":"Canned soup + extra vegetables + beans, chicken, tofu, or egg + whole-grain side","textChars":80,"textLines":1,"bbox":[426,536,260,58]}
+{"kind":"shape","id":"sh/kbap8zqd","slide":19,"bbox":[66,770,650,82]}
+{"kind":"textbox","id":"sh/lcj6147i","slide":19,"text":"Backup meal line","textPreview":"Backup meal line","textChars":16,"textLines":1,"bbox":[82,784,618,22]}
+{"kind":"textbox","id":"sh/yps76987","slide":19,"text":"Write one formula on your grocery list. Repeating a meal that works is not boring; it is a way to lower decision fatigue.","textPreview":"Write one formula on your grocery list. Repeating a meal that works is not boring; it is a way to lower decision fatigue.","textChars":121,"textLines":1,"bbox":[82,812,618,32]}
+{"kind":"image","id":"im/k7q5wn2t","slide":19,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/f86qeq","slide":19,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/le8yh9","slide":20,"title":"Grocery Store Survival Guide","textShapes":39}
+{"kind":"textbox","id":"sh/sn2h8fmd","slide":20,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/tobi1k3y","slide":20,"text":"Checklist","textPreview":"Checklist","textChars":9,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/ih0z254b","slide":20,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/ji90vqlw","slide":20,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/4jih4vmh","slide":20,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/5krix032","slide":20,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/2dkjepkf","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/3ed07ul0","slide":20,"text":"PRINTABLE GROCERY CHECKLIST","textPreview":"PRINTABLE GROCERY CHECKLIST","textChars":27,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/zipwni98","slide":20,"text":"Make one list that works for your household","textPreview":"Make one list that works for your household","textChars":43,"textLines":1,"bbox":[62,112,690,96]}
+{"kind":"textbox","id":"sh/yhgvedsn","slide":20,"text":"Use this as a starting point. Add what fits your family, budget, culture, medical needs, and schedule.","textPreview":"Use this as a starting point. Add what fits your family, budget, culture, medical needs, and schedule.","textChars":102,"textLines":1,"bbox":[66,218,670,64]}
+{"kind":"shape","id":"sh/lk7epsre","slide":20,"bbox":[66,302,12,12]}
+{"kind":"textbox","id":"sh/kjydgnat","slide":20,"text":"Shop my kitchen first: refrigerator","textPreview":"Shop my kitchen first: refrigerator","textChars":35,"textLines":1,"bbox":[86,297,165,20]}
+{"kind":"shape","id":"sh/7mpwr29k","slide":20,"bbox":[254,292,150,38]}
+{"kind":"textbox","id":"sh/mlgfixsz","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[366,302,34,14]}
+{"kind":"shape","id":"sh/98retcra","slide":20,"bbox":[66,360,12,12]}
+{"kind":"textbox","id":"sh/87yxk7a5","slide":20,"text":"Shop my kitchen first: freezer","textPreview":"Shop my kitchen first: freezer","textChars":30,"textLines":1,"bbox":[86,355,165,20]}
+{"kind":"shape","id":"sh/va9wv29g","slide":20,"bbox":[254,350,150,38]}
+{"kind":"textbox","id":"sh/u90fmxsv","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[366,360,34,14]}
+{"kind":"shape","id":"sh/65kze1c3","slide":20,"bbox":[66,418,12,12]}
+{"kind":"textbox","id":"sh/r6tgn6to","slide":20,"text":"Shop my kitchen first: pantry","textPreview":"Shop my kitchen first: pantry","textChars":29,"textLines":1,"bbox":[86,413,165,20]}
+{"kind":"shape","id":"sh/s7mhgbu9","slide":20,"bbox":[254,408,150,38]}
+{"kind":"textbox","id":"sh/t8vipgbu","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[366,418,34,14]}
+{"kind":"shape","id":"sh/i1kza1c7","slide":20,"bbox":[66,476,12,12]}
+{"kind":"textbox","id":"sh/j2tgj6ts","slide":20,"text":"Produce","textPreview":"Produce","textChars":7,"textLines":1,"bbox":[86,471,165,20]}
+{"kind":"shape","id":"sh/432hcbud","slide":20,"bbox":[254,466,150,38]}
+{"kind":"textbox","id":"sh/54bylwbi","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[366,476,34,14]}
+{"kind":"shape","id":"sh/2x4zmlsb","slide":20,"bbox":[66,534,12,12]}
+{"kind":"textbox","id":"sh/3yd0vqtw","slide":20,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[86,529,165,20]}
+{"kind":"shape","id":"sh/xsz2lkvy","slide":20,"bbox":[254,524,150,38]}
+{"kind":"textbox","id":"sh/crq1szed","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[366,534,34,14]}
+{"kind":"shape","id":"sh/bqhkjud8","slide":20,"bbox":[66,592,12,12]}
+{"kind":"textbox","id":"sh/q5ojqpwn","slide":20,"text":"Fiber-rich carbohydrates","textPreview":"Fiber-rich carbohydrates","textChars":24,"textLines":1,"bbox":[86,587,165,20]}
+{"kind":"shape","id":"sh/p4f2hkv2","slide":20,"bbox":[254,582,150,38]}
+{"kind":"textbox","id":"sh/o361ofeh","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[366,592,34,14]}
+{"kind":"shape","id":"sh/32xkfadw","slide":20,"bbox":[66,650,12,12]}
+{"kind":"textbox","id":"sh/21ojm5wb","slide":20,"text":"Healthy fats","textPreview":"Healthy fats","textChars":12,"textLines":1,"bbox":[86,645,165,20]}
+{"kind":"shape","id":"sh/90j2t4v6","slide":20,"bbox":[254,640,150,38]}
+{"kind":"textbox","id":"sh/8zal0jul","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[366,650,34,14]}
+{"kind":"shape","id":"sh/g3ytkjuh","slide":20,"bbox":[420,302,12,12]}
+{"kind":"textbox","id":"sh/h47at4v2","slide":20,"text":"Flavor builders","textPreview":"Flavor builders","textChars":15,"textLines":1,"bbox":[440,297,165,20]}
+{"kind":"shape","id":"sh/u1wri9cb","slide":20,"bbox":[608,292,150,38]}
+{"kind":"textbox","id":"sh/f2psredw","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[720,302,34,14]}
+{"kind":"shape","id":"sh/o7ytojud","slide":20,"bbox":[420,360,12,12]}
+{"kind":"textbox","id":"sh/p87axovy","slide":20,"text":"Dairy or alternatives","textPreview":"Dairy or alternatives","textChars":21,"textLines":1,"bbox":[440,355,165,20]}
+{"kind":"shape","id":"sh/25gbm9cn","slide":20,"bbox":[608,350,150,38]}
+{"kind":"textbox","id":"sh/36psveds","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[720,360,34,14]}
+{"kind":"shape","id":"sh/cvits3up","slide":20,"bbox":[420,418,12,12]}
+{"kind":"textbox","id":"sh/dwra1ova","slide":20,"text":"Drinks","textPreview":"Drinks","textChars":6,"textLines":1,"bbox":[440,413,165,20]}
+{"kind":"shape","id":"sh/nqtwr2xc","slide":20,"bbox":[608,408,150,38]}
+{"kind":"textbox","id":"sh/mpkvixwr","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[720,418,34,14]}
+{"kind":"shape","id":"sh/9sbetsfi","slide":20,"bbox":[420,476,12,12]}
+{"kind":"textbox","id":"sh/8r2dk7ex","slide":20,"text":"Snacks","textPreview":"Snacks","textChars":6,"textLines":1,"bbox":[440,471,165,20]}
+{"kind":"shape","id":"sh/z2tcnix0","slide":20,"bbox":[608,466,150,38]}
+{"kind":"textbox","id":"sh/y1kvedwv","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[720,476,34,14]}
+{"kind":"shape","id":"sh/lobupsf6","slide":20,"bbox":[420,534,12,12]}
+{"kind":"textbox","id":"sh/032dgnel","slide":20,"text":"Pantry and freezer backups","textPreview":"Pantry and freezer backups","textChars":26,"textLines":1,"bbox":[440,529,165,20]}
+{"kind":"shape","id":"sh/jydwzmxk","slide":20,"bbox":[608,524,150,38]}
+{"kind":"textbox","id":"sh/ix4vqhwz","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[720,534,34,14]}
+{"kind":"shape","id":"sh/ut8zilg7","slide":20,"bbox":[420,592,12,12]}
+{"kind":"textbox","id":"sh/fehgrqhs","slide":20,"text":"Household or non-food items","textPreview":"Household or non-food items","textChars":27,"textLines":1,"bbox":[440,587,165,20]}
+{"kind":"shape","id":"sh/gfqhkbyd","slide":20,"bbox":[608,582,150,38]}
+{"kind":"textbox","id":"sh/hgzytgzy","slide":20,"text":"Qty","textPreview":"Qty","textChars":3,"textLines":1,"bbox":[720,592,34,14]}
+{"kind":"textbox","id":"sh/2h8zmlg3","slide":20,"text":"Meals planned","textPreview":"Meals planned","textChars":13,"textLines":1,"bbox":[66,732,175,22]}
+{"kind":"shape","id":"sh/3ihgvqho","slide":20,"bbox":[251,724,465,38]}
+{"kind":"textbox","id":"sh/4jahovy9","slide":20,"text":"Backup meals","textPreview":"Backup meals","textChars":12,"textLines":1,"bbox":[66,780,175,22]}
+{"kind":"shape","id":"sh/pkjyx0zu","slide":20,"bbox":[251,772,465,38]}
+{"kind":"textbox","id":"sh/ilofa1gz","slide":20,"text":"Already have","textPreview":"Already have","textChars":12,"textLines":1,"bbox":[66,828,175,22]}
+{"kind":"shape","id":"sh/jmxgj6hk","slide":20,"bbox":[251,820,465,38]}
+{"kind":"textbox","id":"sh/lsna5one","slide":20,"text":"Need to buy / budget","textPreview":"Need to buy / budget","textChars":20,"textLines":1,"bbox":[66,876,175,22]}
+{"kind":"shape","id":"sh/kretcjmt","slide":20,"bbox":[251,868,465,38]}
+{"kind":"textbox","id":"sh/zq5s3y58","slide":20,"text":"Store or household notes","textPreview":"Store or household notes","textChars":24,"textLines":1,"bbox":[66,924,175,22]}
+{"kind":"shape","id":"sh/ypwrat4n","slide":20,"bbox":[251,916,465,38]}
+{"kind":"image","id":"im/29orul0j","slide":20,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/le8yh9","slide":20,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/dcplys","slide":21,"title":"Make the store easier next time","textShapes":13}
+{"kind":"textbox","id":"sh/e9knyxgz","slide":21,"text":"Make the store easier next time","textPreview":"Make the store easier next time","textChars":31,"textLines":1,"bbox":[66,190,660,70]}
+{"kind":"textbox","id":"sh/zat472xk","slide":21,"text":"Save one list that worked, one backup meal, and one product comparison. The next grocery trip gets easier when you do not start from scratch.","textPreview":"Save one list that worked, one backup meal, and one product comparison. The next grocery trip gets easier when you do not start from scra...","textChars":141,"textLines":1,"bbox":[70,292,650,58]}
+{"kind":"shape","id":"sh/c725w7yt","slide":21,"bbox":[82,420,570,54]}
+{"kind":"textbox","id":"sh/d8bm5sfe","slide":21,"text":"Explore the Guide","textPreview":"Explore the Guide","textChars":17,"textLines":1,"bbox":[106,436,250,18]}
+{"kind":"textbox","id":"sh/q5knuxgn","slide":21,"text":"mindfuldiabetes.org/guide/","textPreview":"mindfuldiabetes.org/guide/","textChars":26,"textLines":1,"bbox":[360,437,260,16]}
+{"kind":"shape","id":"sh/r6t432x8","slide":21,"bbox":[82,506,570,54]}
+{"kind":"textbox","id":"sh/w3m58ryx","slide":21,"text":"Visit Health Tools","textPreview":"Visit Health Tools","textChars":18,"textLines":1,"bbox":[106,522,250,18]}
+{"kind":"textbox","id":"sh/x4f6hwfi","slide":21,"text":"mindfuldiabetes.org/health-tools/","textPreview":"mindfuldiabetes.org/health-tools/","textChars":33,"textLines":1,"bbox":[360,523,260,16]}
+{"kind":"shape","id":"sh/pwrm1cj6","slide":21,"bbox":[82,592,570,54]}
+{"kind":"textbox","id":"sh/ovi5s7il","slide":21,"text":"Try JEIR","textPreview":"Try JEIR","textChars":8,"textLines":1,"bbox":[106,608,250,18]}
+{"kind":"textbox","id":"sh/nup4z210","slide":21,"text":"mindfuldiabetes.org/research/","textPreview":"mindfuldiabetes.org/research/","textChars":29,"textLines":1,"bbox":[360,609,260,16]}
+{"kind":"shape","id":"sh/2tgnqx0f","slide":21,"bbox":[82,678,570,54]}
+{"kind":"textbox","id":"sh/1s7mxcju","slide":21,"text":"Support free education","textPreview":"Support free education","textChars":22,"textLines":1,"bbox":[106,694,250,18]}
+{"kind":"textbox","id":"sh/0ry5o7ip","slide":21,"text":"mindfuldiabetes.org/donation/","textPreview":"mindfuldiabetes.org/donation/","textChars":29,"textLines":1,"bbox":[360,695,260,16]}
+{"kind":"shape","id":"sh/fqp4v214","slide":21,"bbox":[82,790,570,86]}
+{"kind":"textbox","id":"sh/epgnmx0j","slide":21,"text":"Medical disclaimer","textPreview":"Medical disclaimer","textChars":18,"textLines":1,"bbox":[98,804,538,22]}
+{"kind":"textbox","id":"sh/lob69wje","slide":21,"text":"This guide is general education, not medical advice, diagnosis, or treatment. Do not change medication, insulin, glucose targets, or a prescribed medical diet based on this guide.","textPreview":"This guide is general education, not medical advice, diagnosis, or treatment. Do not change medication, insulin, glucose targets, or a pr...","textChars":179,"textLines":1,"bbox":[98,832,538,36]}
+{"kind":"textbox","id":"sh/kn250rit","slide":21,"text":"Mindful Diabetes Inc. | 501(c)(3) nonprofit | Free to share for education","textPreview":"Mindful Diabetes Inc. | 501(c)(3) nonprofit | Free to share for education","textChars":73,"textLines":1,"bbox":[82,958,600,18]}
+{"kind":"image","id":"im/c3mpsfyx","slide":21,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[66,72,50,54]}
+{"kind":"notes","id":"nt/dcplys","slide":21,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}
+{"kind":"slide","id":"sl/kgjw6i","slide":22,"title":"Grocery Store Survival Guide","textShapes":14}
+{"kind":"textbox","id":"sh/1kn2l4nu","slide":22,"text":"Grocery Store Survival Guide","textPreview":"Grocery Store Survival Guide","textChars":28,"textLines":1,"bbox":[92,35,260,18]}
+{"kind":"textbox","id":"sh/0zulczm9","slide":22,"text":"References and safety","textPreview":"References and safety","textChars":21,"textLines":1,"bbox":[92,51,280,15]}
+{"kind":"shape","id":"sh/nm5kne50","slide":22,"bbox":[58,75,700,0]}
+{"kind":"shape","id":"sh/mlw3e94f","slide":22,"bbox":[58,1009,700,0]}
+{"kind":"textbox","id":"sh/9on2pon6","slide":22,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[58,1020,185,18]}
+{"kind":"textbox","id":"sh/onelgjml","slide":22,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[332,1020,155,18]}
+{"kind":"textbox","id":"sh/3q1kba5w","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[723,1020,35,18]}
+{"kind":"textbox","id":"sh/2psj254b","slide":22,"text":"REFERENCES AND SAFETY","textPreview":"REFERENCES AND SAFETY","textChars":21,"textLines":1,"bbox":[66,83,500,22]}
+{"kind":"textbox","id":"sh/cfypczu5","slide":22,"text":"References and medical disclaimer","textPreview":"References and medical disclaimer","textChars":33,"textLines":1,"bbox":[62,112,690,76]}
+{"kind":"textbox","id":"sh/dg76l4bq","slide":22,"text":"Every numbered citation in this guide appears here.","textPreview":"Every numbered citation in this guide appears here.","textChars":51,"textLines":1,"bbox":[66,196,670,64]}
+{"kind":"textbox","id":"sh/qdw7apcz","slide":22,"text":"Medical disclaimer","textPreview":"Medical disclaimer","textChars":18,"textLines":1,"bbox":[66,224,680,22]}
+{"kind":"textbox","id":"sh/re5ojutk","slide":22,"text":"This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do not change insulin, diabetes medication, cholesterol medication, glucose targets, pregnancy care, kidney-disease care, or any prescribed medical diet because of this guide. For urgent symptoms, seek medical care.","textPreview":"This guide provides general health education. It is not medical advice, diagnosis, treatment, nutrition therapy, or a medication plan. Do...","textChars":350,"textLines":1,"bbox":[66,250,680,82]}
+{"kind":"textbox","id":"sh/0jypgzuh","slide":22,"text":"References","textPreview":"References","textChars":10,"textLines":1,"bbox":[66,362,680,24]}
+{"kind":"textbox","id":"sh/1k76p4b2","slide":22,"text":"1. U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. FDA; 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n2. U.S. Food and Drug Administration. Daily Value on the Nutrition and Supplement Facts Labels. FDA; 2024. https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n3. U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. FDA; 2026. https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n4. Centers for Disease Control and Prevention. Counting Carbohydrates. CDC; 2024. https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n5. American Diabetes Association. What is the Diabetes Plate?. ADA; 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate\n6. U.S. Department of Agriculture. MyPlate: Fruits and Vegetables. USDA MyPlate; 2026. https://www.myplate.gov/eat-healthy/fruits\n7. U.S. Department of Agriculture. MyPlate: Dairy. USDA MyPlate; 2026. https://www.myplate.gov/eat-healthy/dairy\n8. U.S. Department of Agriculture. MyPlate: Protein Foods. USDA MyPlate; 2026. https://www.myplate.gov/eat-healthy/protein-foods\n9. U.S. Food and Drug Administration. Sodium in Your Diet. FDA; 2024. https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet","textPreview":"1. U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. FDA; 2024. https://www.fda.gov/food/nutrition-...","textChars":1367,"textLines":9,"bbox":[66,394,680,440]}
+{"kind":"shape","id":"sh/ehg7e9cb","slide":22,"bbox":[66,864,650,82]}
+{"kind":"textbox","id":"sh/ziponutw","slide":22,"text":"Publication information","textPreview":"Publication information","textChars":23,"textLines":1,"bbox":[82,878,618,22]}
+{"kind":"textbox","id":"sh/gnu54fux","slide":22,"text":"Published July 30, 2026 | Medical review pending | Next scheduled review July 2027 | Accessibility review: basic visual QA completed; PDF/UA tagging not completed.","textPreview":"Published July 30, 2026 | Medical review pending | Next scheduled review July 2027 | Accessibility review: basic visual QA completed; PDF...","textChars":163,"textLines":1,"bbox":[82,906,618,32]}
+{"kind":"image","id":"im/fahw369o","slide":22,"name":"","geometry":"roundRect","alt":"Mindful Diabetes Inc. logo","bbox":[58,30,27,29]}
+{"kind":"notes","id":"nt/kgjw6i","slide":22,"text":"[Sources]\n- [1] U.S. Food and Drug Administration, How to Understand and Use the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [2] U.S. Food and Drug Administration, Daily Value on the Nutrition and Supplement Facts Labels: https://www.fda.gov/food/nutrition-facts-label/daily-value-nutrition-and-supplement-facts-labels\n- [3] U.S. Food and Drug Administration, Added Sugars on the Nutrition Facts Label: https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label\n- [4] Centers for Disease Control and Prevention, Counting Carbohydrates: https://www.cdc.gov/diabetes/healthy-eating/carb-counting.html\n- [5] American Diabetes Association, What is the Diabetes Plate?: https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [6] U.S. Department of Agriculture, MyPlate: Fruits and Vegetables: https://www.myplate.gov/eat-healthy/fruits\n- [7] U.S. Department of Agriculture, MyPlate: Dairy: https://www.myplate.gov/eat-healthy/dairy\n- [8] U.S. Department of Agriculture, MyPlate: Protein Foods: https://www.myplate.gov/eat-healthy/protein-foods\n- [9] U.S. Food and Drug Administration, Sodium in Your Diet: https://www.fda.gov/food/nutrition-education-resources-materials/sodium-your-diet\n"}

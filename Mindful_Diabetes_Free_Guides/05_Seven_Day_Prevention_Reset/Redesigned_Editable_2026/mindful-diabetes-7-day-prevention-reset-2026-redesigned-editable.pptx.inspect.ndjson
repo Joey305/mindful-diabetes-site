@@ -1,0 +1,1584 @@
+{"kind":"deck","id":"pr/sef76w","name":"Deck"}
+{"kind":"layout","layoutId":"83179cf9-2f24-4674-90b8-c01a0d9f1d9d","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"3c88599d-6118-4b80-bfdb-90c92fb8d61e","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/botgbr","slide":1,"title":"Mindful Diabetes Free Guides","textShapes":23}
+{"kind":"shape","id":"sh/4r2hkjqt","slide":1,"bbox":[36,36,744,984]}
+{"kind":"shape","id":"sh/3qt0be98","slide":1,"bbox":[36,36,744,220]}
+{"kind":"textbox","id":"sh/hobi94r2","slide":1,"text":"Mindful Diabetes Free Guides","textPreview":"Mindful Diabetes Free Guides","textChars":28,"textLines":1,"bbox":[132,70,330,24]}
+{"kind":"textbox","id":"sh/gn2hgjqh","slide":1,"text":"Mindful Diabetes Inc. | 501(c)(3) nonprofit","textPreview":"Mindful Diabetes Inc. | 501(c)(3) nonprofit","textChars":43,"textLines":1,"bbox":[132,96,340,18]}
+{"kind":"shape","id":"sh/v2t07e9w","slide":1,"bbox":[626,72,112,34]}
+{"kind":"textbox","id":"sh/u10ze98b","slide":1,"text":"FREE GUIDE","textPreview":"FREE GUIDE","textChars":10,"textLines":1,"bbox":[626,82,112,16]}
+{"kind":"textbox","id":"sh/1kvil8r6","slide":1,"text":"The 7-Day\nPrevention Reset","textPreview":"The 7-Day | Prevention Reset","textChars":26,"textLines":2,"bbox":[72,206,490,132]}
+{"kind":"textbox","id":"sh/0jmhs3q1","slide":1,"text":"A gentle one-week habit-building workbook for supporting everyday metabolic health.","textPreview":"A gentle one-week habit-building workbook for supporting everyday metabolic health.","textChars":83,"textLines":1,"bbox":[76,354,560,54]}
+{"kind":"textbox","id":"sh/mhw3m9on","slide":1,"text":"A Gentle One-Week Plan for Building Healthier Everyday Habits","textPreview":"A Gentle One-Week Plan for Building Healthier Everyday Habits","textChars":61,"textLines":1,"bbox":[76,420,520,36]}
+{"kind":"shape","id":"sh/ni54feps","slide":1,"bbox":[84,520,648,250]}
+{"kind":"shape","id":"sh/ojeloj6d","slide":1,"bbox":[156,626,50,0]}
+{"kind":"shape","id":"sh/9knmho7y","slide":1,"bbox":[118,588,44,44]}
+{"kind":"textbox","id":"sh/etw3i9ob","slide":1,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[118,595.92,44,19.8]}
+{"kind":"textbox","id":"sh/zu54bepw","slide":1,"text":"Notice","textPreview":"Notice","textChars":6,"textLines":1,"bbox":[104,637,72,20]}
+{"kind":"shape","id":"sh/0felkj6h","slide":1,"bbox":[128.48,689.36,23.04,15.12]}
+{"kind":"shape","id":"sh/1gnmdo72","slide":1,"bbox":[137.12,694.4,5.76,5.76]}
+{"kind":"shape","id":"sh/ypgnutov","slide":1,"bbox":[242,626,50,0]}
+{"kind":"shape","id":"sh/jqp4ny50","slide":1,"bbox":[204,588,44,44]}
+{"kind":"textbox","id":"sh/vu10fq5s","slide":1,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[204,595.92,44,19.8]}
+{"kind":"textbox","id":"sh/ut8jml47","slide":1,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[190,637,72,20]}
+{"kind":"shape","id":"sh/hwjih0ni","slide":1,"bbox":[208,680,36,36]}
+{"kind":"shape","id":"sh/gva1ovmx","slide":1,"bbox":[212.32,685.04,12.96,25.92]}
+{"kind":"shape","id":"sh/3y10ja5o","slide":1,"bbox":[226.72,685.04,12.24,12.24]}
+{"kind":"shape","id":"sh/ixsjq543","slide":1,"bbox":[226.72,698.72,12.24,12.24]}
+{"kind":"shape","id":"sh/50jilknu","slide":1,"bbox":[226,684.32,0,27.36]}
+{"kind":"shape","id":"sh/4za1sfm9","slide":1,"bbox":[226,698,13.68,0]}
+{"kind":"shape","id":"sh/rmlkna5k","slide":1,"bbox":[208,680,36,36]}
+{"kind":"shape","id":"sh/qlsjup4f","slide":1,"bbox":[328,626,50,0]}
+{"kind":"shape","id":"sh/oruh4f2d","slide":1,"bbox":[290,588,44,44]}
+{"kind":"textbox","id":"sh/9s3idkjy","slide":1,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[290,595.92,44,19.8]}
+{"kind":"textbox","id":"sh/mpcz2pk7","slide":1,"text":"Fiber","textPreview":"Fiber","textChars":5,"textLines":1,"bbox":[276,637,72,20]}
+{"kind":"shape","id":"sh/nql0bu1s","slide":1,"bbox":[294,687.92,12.24,9.36]}
+{"kind":"shape","id":"sh/0nuh0f2h","slide":1,"bbox":[299.76,694.4,12.24,9.36]}
+{"kind":"shape","id":"sh/1o3i9kj2","slide":1,"bbox":[305.52,687.92,12.24,9.36]}
+{"kind":"shape","id":"sh/e1czy5kb","slide":1,"bbox":[311.28,694.4,12.24,9.36]}
+{"kind":"shape","id":"sh/z2l07a1w","slide":1,"bbox":[312.72,680.72,4.32,5.76]}
+{"kind":"shape","id":"sh/czahwv25","slide":1,"bbox":[414,626,50,0]}
+{"kind":"shape","id":"sh/d0ji50jq","slide":1,"bbox":[376,588,44,44]}
+{"kind":"textbox","id":"sh/hsf6hcv6","slide":1,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[376,595.92,44,19.8]}
+{"kind":"textbox","id":"sh/wr65o7el","slide":1,"text":"Move","textPreview":"Move","textChars":4,"textLines":1,"bbox":[362,637,72,20]}
+{"kind":"shape","id":"sh/vqxof2dg","slide":1,"bbox":[395.12,682,6.48,6.48]}
+{"kind":"shape","id":"sh/uponmxwv","slide":1,"bbox":[391.88,688.28,6.48,7.92]}
+{"kind":"shape","id":"sh/5wz6lcvi","slide":1,"bbox":[398.36,688.28,8.64,6.48]}
+{"kind":"shape","id":"sh/4v65s7ex","slide":1,"bbox":[389.72,696.2,6.48,10.8]}
+{"kind":"shape","id":"sh/juxojmdc","slide":1,"bbox":[396.2,696.2,9.36,9.36]}
+{"kind":"shape","id":"sh/itonqhwr","slide":1,"bbox":[500,626,50,0]}
+{"kind":"shape","id":"sh/l0v69svy","slide":1,"bbox":[462,588,44,44]}
+{"kind":"textbox","id":"sh/kzm5gnet","slide":1,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[462,595.92,44,19.8]}
+{"kind":"textbox","id":"sh/a503qtcb","slide":1,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[448,637,72,20]}
+{"kind":"shape","id":"sh/b6tkjytw","slide":1,"bbox":[475,683.6,15.84,24.48]}
+{"kind":"shape","id":"sh/c72ls3uh","slide":1,"bbox":[482.92,680,9.36,28.08]}
+{"kind":"shape","id":"sh/xsb2lob2","slide":1,"bbox":[586,626,50,0]}
+{"kind":"shape","id":"sh/ytk3utcn","slide":1,"bbox":[548,588,44,44]}
+{"kind":"textbox","id":"sh/zut4nyt8","slide":1,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[548,595.92,44,19.8]}
+{"kind":"textbox","id":"sh/kv2lw3ud","slide":1,"text":"Sleep","textPreview":"Sleep","textChars":5,"textLines":1,"bbox":[534,637,72,20]}
+{"kind":"shape","id":"sh/lwbmp8by","slide":1,"bbox":[556.32,684.32,25.92,25.92]}
+{"kind":"shape","id":"sh/exg3i9c3","slide":1,"bbox":[564.24,680.72,24.48,24.48]}
+{"kind":"shape","id":"sh/fy9kbeto","slide":1,"bbox":[672,626,0,0]}
+{"kind":"shape","id":"sh/j250ja9g","slide":1,"bbox":[634,588,44,44]}
+{"kind":"textbox","id":"sh/ihwzq5sv","slide":1,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[634,595.92,44,19.8]}
+{"kind":"textbox","id":"sh/54nil0rm","slide":1,"text":"Plan","textPreview":"Plan","textChars":4,"textLines":1,"bbox":[620,637,72,20]}
+{"kind":"shape","id":"sh/43ehsfa1","slide":1,"bbox":[643.04,684.32,25.92,24.48]}
+{"kind":"shape","id":"sh/vel0fq9k","slide":1,"bbox":[647,690.08,3.6,3.6]}
+{"kind":"shape","id":"sh/udczmlsz","slide":1,"bbox":[653.12,691.88,10.08,0]}
+{"kind":"shape","id":"sh/hgnih0rq","slide":1,"bbox":[647,695.12,3.6,3.6]}
+{"kind":"shape","id":"sh/wfehova5","slide":1,"bbox":[653.12,696.92,10.08,0]}
+{"kind":"shape","id":"sh/fap0ru9o","slide":1,"bbox":[647,700.16,3.6,3.6]}
+{"kind":"shape","id":"sh/e9gjyps3","slide":1,"bbox":[653.12,701.96,10.08,0]}
+{"kind":"textbox","id":"sh/cfqxcrql","slide":1,"text":"Seven days to observe, test, adapt, and choose what is realistic enough to repeat.","textPreview":"Seven days to observe, test, adapt, and choose what is realistic enough to repeat.","textChars":82,"textLines":1,"bbox":[112,786,592,36]}
+{"kind":"textbox","id":"sh/xgjelw76","slide":1,"text":"Published: July 30, 2026 | Medical review: pending","textPreview":"Published: July 30, 2026 | Medical review: pending","textChars":50,"textLines":1,"bbox":[72,932,390,18]}
+{"kind":"textbox","id":"sh/ad8fah8f","slide":1,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[578,932,166,18]}
+{"kind":"image","id":"im/rih0vmhg","slide":1,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[72,70,48,48]}
+{"kind":"notes","id":"nt/botgbr","slide":1,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/yxjr8n","slide":2,"title":"The 7-Day Prevention Reset","textShapes":34}
+{"kind":"shape","id":"sh/vitsbqpc","slide":2,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/hkbad07i","slide":2,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/i5krm583","slide":2,"text":"Welcome","textPreview":"Welcome","textChars":7,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/j6dsfapo","slide":2,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/47m9ofq9","slide":2,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/58vahk7u","slide":2,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/y90ra18z","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/za983694","slide":2,"text":"WELCOME","textPreview":"WELCOME","textChars":7,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/zu9kn6to","slide":2,"text":"A reset is not a cleanse","textPreview":"A reset is not a cleanse","textChars":24,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/yt0je1cj","slide":2,"text":"Use this as a seven-day observation and habit-building workbook, not a test.","textPreview":"Use this as a seven-day observation and habit-building workbook, not a test.","textChars":76,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"textbox","id":"sh/lgr2pwbu","slide":2,"text":"This guide supports everyday habits associated with general metabolic health and risk reduction. It does not guarantee prevention, replace screening or diagnosis, or substitute for treatment, medication, or medical care. Readers may repeat, skip, or adapt days.","textPreview":"This guide supports everyday habits associated with general metabolic health and risk reduction. It does not guarantee prevention, replac...","textChars":261,"textLines":1,"bbox":[54,230,410,116]}
+{"kind":"shape","id":"sh/kfi1gru9","slide":2,"bbox":[54,376,708,122]}
+{"kind":"shape","id":"sh/bqpkjmds","slide":2,"bbox":[54,376,6,122]}
+{"kind":"textbox","id":"sh/apgjahc7","slide":2,"text":"Use this guide safely","textPreview":"Use this guide safely","textChars":21,"textLines":1,"bbox":[72,390,674,24]}
+{"kind":"textbox","id":"sh/xsr2lwby","slide":2,"text":"Do not change medicine or insulin based on this guide. Choose movement that is safe for your body. Ask for individualized guidance if you have diabetes, prediabetes, cardiovascular disease, kidney disease, mobility limitations, sleep disorders, pregnancy-specific needs, or a prescribed medical plan.","textPreview":"Do not change medicine or insulin based on this guide. Choose movement that is safe for your body. Ask for individualized guidance if you...","textChars":300,"textLines":1,"bbox":[72,418,674,70]}
+{"kind":"shape","id":"sh/cri1crud","slide":2,"bbox":[54,538,708,300]}
+{"kind":"textbox","id":"sh/nmp0fmdw","slide":2,"text":"The weekly rhythm","textPreview":"The weekly rhythm","textChars":17,"textLines":1,"bbox":[80,564,220,28]}
+{"kind":"shape","id":"sh/2lgj6hcb","slide":2,"bbox":[86,620,38,38]}
+{"kind":"textbox","id":"sh/qhw3ixw3","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[86,626.84,38,17.1]}
+{"kind":"textbox","id":"sh/ri5kr2xo","slide":2,"text":"Notice","textPreview":"Notice","textChars":6,"textLines":1,"bbox":[72,663,66,20]}
+{"kind":"textbox","id":"sh/sjylk7e9","slide":2,"text":"Observe one ordinary day without judgment.","textPreview":"Observe one ordinary day without judgment.","textChars":42,"textLines":1,"bbox":[136,621,110,48]}
+{"kind":"shape","id":"sh/dk72tcfe","slide":2,"bbox":[260,620,38,38]}
+{"kind":"textbox","id":"sh/elg3mhwz","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[260,626.84,38,17.1]}
+{"kind":"textbox","id":"sh/fmpkvmxk","slide":2,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[246,663,66,20]}
+{"kind":"textbox","id":"sh/0nylore5","slide":2,"text":"Try one flexible Mindful Plate meal.","textPreview":"Try one flexible Mindful Plate meal.","textChars":36,"textLines":1,"bbox":[310,621,110,48]}
+{"kind":"shape","id":"sh/1o72xwfq","slide":2,"bbox":[434,620,38,38]}
+{"kind":"textbox","id":"sh/2pg3q1wb","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[434,626.84,38,17.1]}
+{"kind":"textbox","id":"sh/nqpkzmxw","slide":2,"text":"Fiber","textPreview":"Fiber","textChars":5,"textLines":1,"bbox":[420,663,66,20]}
+{"kind":"textbox","id":"sh/xkb6p0zy","slide":2,"text":"Choose one manageable fiber addition.","textPreview":"Choose one manageable fiber addition.","textChars":37,"textLines":1,"bbox":[484,621,110,48]}
+{"kind":"shape","id":"sh/cj25wvyd","slide":2,"bbox":[608,620,38,38]}
+{"kind":"textbox","id":"sh/bi94nqhs","slide":2,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[608,626.84,38,17.1]}
+{"kind":"textbox","id":"sh/ah0nulg7","slide":2,"text":"Move","textPreview":"Move","textChars":4,"textLines":1,"bbox":[594,663,66,20]}
+{"kind":"textbox","id":"sh/l8b6t0zu","slide":2,"text":"Add one safe movement break.","textPreview":"Add one safe movement break.","textChars":28,"textLines":1,"bbox":[658,621,110,48]}
+{"kind":"shape","id":"sh/k7250vyp","slide":2,"bbox":[86,714,38,38]}
+{"kind":"textbox","id":"sh/zmtorqh4","slide":2,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[86,720.84,38,17.1]}
+{"kind":"textbox","id":"sh/ylknylgj","slide":2,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[72,757,66,20]}
+{"kind":"textbox","id":"sh/9cv6xkz6","slide":2,"text":"Adjust one drink you have often.","textPreview":"Adjust one drink you have often.","textChars":32,"textLines":1,"bbox":[136,715,110,48]}
+{"kind":"shape","id":"sh/8bm54fyl","slide":2,"bbox":[260,714,38,38]}
+{"kind":"textbox","id":"sh/4769wjit","slide":2,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[260,720.84,38,17.1]}
+{"kind":"textbox","id":"sh/58fqp4je","slide":2,"text":"Sleep","textPreview":"Sleep","textChars":5,"textLines":1,"bbox":[246,757,66,20]}
+{"kind":"textbox","id":"sh/i5o7u90n","slide":2,"text":"Choose one realistic sleep support.","textPreview":"Choose one realistic sleep support.","textChars":35,"textLines":1,"bbox":[310,715,110,48]}
+{"kind":"shape","id":"sh/j6x8ne18","slide":2,"bbox":[434,714,38,38]}
+{"kind":"textbox","id":"sh/w36pszix","slide":2,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[434,720.84,38,17.1]}
+{"kind":"textbox","id":"sh/h4fql4j2","slide":2,"text":"Plan","textPreview":"Plan","textChars":4,"textLines":1,"bbox":[420,757,66,20]}
+{"kind":"textbox","id":"sh/u147qp0r","slide":2,"text":"Keep one helpful habit and adjust the rest.","textPreview":"Keep one helpful habit and adjust the rest.","textChars":43,"textLines":1,"bbox":[484,715,110,48]}
+{"kind":"textbox","id":"sh/v2x8ju1c","slide":2,"text":"Observation should not become judgment. One useful change can be enough.","textPreview":"Observation should not become judgment. One useful change can be enough.","textChars":72,"textLines":1,"bbox":[80,796,620,24]}
+{"kind":"image","id":"im/tkvipgv2","slide":2,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/yxjr8n","slide":2,"text":"[Sources]\n- [1] Centers for Disease Control and Prevention. About the Lifestyle Change Program. 2024. https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n- [2] American Diabetes Association, Diabetes Care. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes--2026. 2026. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well"}
+{"kind":"slide","id":"sl/bk8jwt","slide":3,"title":"The 7-Day Prevention Reset","textShapes":21}
+{"kind":"shape","id":"sh/4jitsbal","slide":3,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/ih0bq1sv","slide":3,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/t8bu5gri","slide":3,"text":"Orientation","textPreview":"Orientation","textChars":11,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/s72twbax","slide":3,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/r6tc369c","slide":3,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/65kbulsr","slide":3,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/9c7atwby","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/8bytkrad","slide":3,"text":"SMALL HABITS","textPreview":"SMALL HABITS","textChars":12,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/m50z614r","slide":3,"text":"How small habits work","textPreview":"How small habits work","textChars":21,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/nq9gz6lc","slide":3,"text":"Seven days can help you test a routine. It may take longer for a habit to feel automatic.","textPreview":"Seven days can help you test a routine. It may take longer for a habit to feel automatic.","textChars":89,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/8rih8bmh","slide":3,"bbox":[238,370,168,76]}
+{"kind":"textbox","id":"sh/9sry1w32","slide":3,"text":"Choose a cue","textPreview":"Choose a cue","textChars":12,"textLines":1,"bbox":[250,383,144,18]}
+{"kind":"textbox","id":"sh/atkza14n","slide":3,"text":"after morning coffee","textPreview":"after morning coffee","textChars":20,"textLines":1,"bbox":[250,406,144,22]}
+{"kind":"shape","id":"sh/vutg36l8","slide":3,"bbox":[476,370,168,76]}
+{"kind":"textbox","id":"sh/wv2hcbmt","slide":3,"text":"Make it small","textPreview":"Make it small","textChars":13,"textLines":1,"bbox":[488,383,144,18]}
+{"kind":"textbox","id":"sh/xwby5g3e","slide":3,"text":"five minutes or less","textPreview":"five minutes or less","textChars":20,"textLines":1,"bbox":[488,406,144,22]}
+{"kind":"shape","id":"sh/ixkzel4z","slide":3,"bbox":[528,570,168,76]}
+{"kind":"textbox","id":"sh/jytg7ql4","slide":3,"text":"Complete it","textPreview":"Complete it","textChars":11,"textLines":1,"bbox":[540,583,144,18]}
+{"kind":"textbox","id":"sh/f2dgvq1c","slide":3,"text":"walk, stretch, sip, prep","textPreview":"walk, stretch, sip, prep","textChars":24,"textLines":1,"bbox":[540,606,144,22]}
+{"kind":"shape","id":"sh/e14fml0r","slide":3,"bbox":[288,570,168,76]}
+{"kind":"textbox","id":"sh/1ovyx0ji","slide":3,"text":"Mark or notice it","textPreview":"Mark or notice it","textChars":17,"textLines":1,"bbox":[300,583,144,18]}
+{"kind":"textbox","id":"sh/gnmxovix","slide":3,"text":"check, circle, or reflect","textPreview":"check, circle, or reflect","textChars":25,"textLines":1,"bbox":[300,606,144,22]}
+{"kind":"shape","id":"sh/rytgr61g","slide":3,"bbox":[178,480,168,76]}
+{"kind":"textbox","id":"sh/6xkfilkv","slide":3,"text":"Adjust and repeat","textPreview":"Adjust and repeat","textChars":17,"textLines":1,"bbox":[190,493,144,18]}
+{"kind":"textbox","id":"sh/t0vytgjm","slide":3,"text":"use a backup plan","textPreview":"use a backup plan","textChars":17,"textLines":1,"bbox":[190,516,144,22]}
+{"kind":"shape","id":"sh/sz2xkb21","slide":3,"bbox":[405,360,0,250]}
+{"kind":"shape","id":"sh/jutwn614","slide":3,"bbox":[158,518,500,0]}
+{"kind":"shape","id":"sh/itkfe1kz","slide":3,"bbox":[54,706,708,90]}
+{"kind":"shape","id":"sh/8zydo7ih","slide":3,"bbox":[54,706,6,90]}
+{"kind":"textbox","id":"sh/907uxcz2","slide":3,"text":"Example","textPreview":"Example","textChars":7,"textLines":1,"bbox":[72,720,674,24]}
+{"kind":"textbox","id":"sh/mdgvmx0r","slide":3,"text":"Cue: after morning coffee. Action: walk or move for five minutes. Completion: check the tracker. Backup: seated movement on a difficult day.","textPreview":"Cue: after morning coffee. Action: walk or move for five minutes. Completion: check the tracker. Backup: seated movement on a difficult day.","textChars":140,"textLines":1,"bbox":[72,748,674,38]}
+{"kind":"textbox","id":"sh/nypcv2hw","slide":3,"text":"Environmental support, repetition, backup plans, and self-compassion often matter as much as willpower.","textPreview":"Environmental support, repetition, backup plans, and self-compassion often matter as much as willpower.","textChars":103,"textLines":1,"bbox":[54,830,708,44]}
+{"kind":"image","id":"im/a9cbipgz","slide":3,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/bk8jwt","slide":3,"text":"[Sources]\n- [1] Centers for Disease Control and Prevention. About the Lifestyle Change Program. 2024. https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n- [2] American Diabetes Association, Diabetes Care. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes--2026. 2026. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well"}
+{"kind":"slide","id":"sl/1ykfr9","slide":4,"title":"The 7-Day Prevention Reset","textShapes":37}
+{"kind":"shape","id":"sh/4z610z6d","slide":4,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/ix4zypon","slide":4,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/d4fixo7a","slide":4,"text":"Seven-day roadmap","textPreview":"Seven-day roadmap","textChars":17,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/s3614j6p","slide":4,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/r2x0vep4","slide":4,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/q1oj29oj","slide":4,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/1szi1on6","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/07q18j6l","slide":4,"text":"OVERVIEW","textPreview":"OVERVIEW","textChars":8,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/ips7edw3","slide":4,"text":"Seven days, one main action each day","textPreview":"Seven days, one main action each day","textChars":36,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/jq1onido","slide":4,"text":"You may repeat a day, skip a day, or adapt the plan. The goal is learning, not proving anything.","textPreview":"You may repeat a day, skip a day, or adapt the plan. The goal is learning, not proving anything.","textChars":96,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/krapgnet","slide":4,"bbox":[54,228,708,70]}
+{"kind":"shape","id":"sh/5cj6psve","slide":4,"bbox":[72,241,38,38]}
+{"kind":"textbox","id":"sh/6ds7ixwz","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[72,247.84,38,17.1]}
+{"kind":"textbox","id":"sh/re1ob2dk","slide":4,"text":"Notice","textPreview":"Notice","textChars":6,"textLines":1,"bbox":[58,284,66,20]}
+{"kind":"shape","id":"sh/sfapk7e5","slide":4,"bbox":[151.12,253.84,21.76,14.28]}
+{"kind":"shape","id":"sh/tg36dsvq","slide":4,"bbox":[159.28,258.6,5.44,5.44]}
+{"kind":"textbox","id":"sh/mhon6twv","slide":4,"text":"Day 1: Notice your starting point","textPreview":"Day 1: Notice your starting point","textChars":33,"textLines":1,"bbox":[196,241,260,20]}
+{"kind":"textbox","id":"sh/nihofyxg","slide":4,"text":"Observe one ordinary day without judgment.","textPreview":"Observe one ordinary day without judgment.","textChars":42,"textLines":1,"bbox":[196,266,430,20]}
+{"kind":"shape","id":"sh/bmd47ud8","slide":4,"bbox":[54,320,708,70]}
+{"kind":"shape","id":"sh/q143epcn","slide":4,"bbox":[72,333,38,38]}
+{"kind":"textbox","id":"sh/dovm94vy","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[72,339.84,38,17.1]}
+{"kind":"textbox","id":"sh/cnmlgzud","slide":4,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[58,376,66,20]}
+{"kind":"shape","id":"sh/3ydk3udw","slide":4,"bbox":[145,337,34,34]}
+{"kind":"shape","id":"sh/2xk3apcb","slide":4,"bbox":[149.08,341.76,12.24,24.48]}
+{"kind":"shape","id":"sh/p0v25kv2","slide":4,"bbox":[162.68,341.76,11.56,11.56]}
+{"kind":"shape","id":"sh/ozmlczuh","slide":4,"bbox":[162.68,354.68,11.56,11.56]}
+{"kind":"shape","id":"sh/nux4fetg","slide":4,"bbox":[162,341.08,0,25.84]}
+{"kind":"shape","id":"sh/mto3m9cv","slide":4,"bbox":[162,354,12.92,0]}
+{"kind":"shape","id":"sh/4zi1gbad","slide":4,"bbox":[145,337,34,34]}
+{"kind":"textbox","id":"sh/50ri9gbi","slide":4,"text":"Day 2: Build one balanced meal","textPreview":"Day 2: Build one balanced meal","textChars":30,"textLines":1,"bbox":[196,333,260,20]}
+{"kind":"textbox","id":"sh/ixgze1s7","slide":4,"text":"Try one flexible Mindful Plate meal.","textPreview":"Try one flexible Mindful Plate meal.","textChars":36,"textLines":1,"bbox":[196,358,430,20]}
+{"kind":"shape","id":"sh/jyp076ts","slide":4,"bbox":[54,412,708,70]}
+{"kind":"shape","id":"sh/s3i1kva9","slide":4,"bbox":[72,425,38,38]}
+{"kind":"textbox","id":"sh/t4rid0bu","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[72,431.84,38,17.1]}
+{"kind":"textbox","id":"sh/610jils3","slide":4,"text":"Fiber","textPreview":"Fiber","textChars":5,"textLines":1,"bbox":[58,468,66,20]}
+{"kind":"shape","id":"sh/r290bqto","slide":4,"bbox":[145,436.48,11.56,8.84]}
+{"kind":"shape","id":"sh/g721ova5","slide":4,"bbox":[150.44,442.6,11.56,8.84]}
+{"kind":"shape","id":"sh/1sbih0rq","slide":4,"bbox":[155.88,436.48,11.56,8.84]}
+{"kind":"shape","id":"sh/1ojahwbu","slide":4,"bbox":[161.32,442.6,11.56,8.84]}
+{"kind":"shape","id":"sh/03a98ra9","slide":4,"bbox":[162.68,429.68,4.08,5.44]}
+{"kind":"textbox","id":"sh/f2hsfmto","slide":4,"text":"Day 3: Add one source of fiber","textPreview":"Day 3: Add one source of fiber","textChars":30,"textLines":1,"bbox":[196,425,260,20]}
+{"kind":"textbox","id":"sh/e18r6hs3","slide":4,"text":"Choose one manageable fiber addition.","textPreview":"Choose one manageable fiber addition.","textChars":37,"textLines":1,"bbox":[196,450,430,20]}
+{"kind":"shape","id":"sh/d0zadcby","slide":4,"bbox":[54,504,708,70]}
+{"kind":"shape","id":"sh/szq94rad","slide":4,"bbox":[72,517,38,38]}
+{"kind":"textbox","id":"sh/ryhsbmts","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[72,523.84,38,17.1]}
+{"kind":"textbox","id":"sh/qx8r2hs7","slide":4,"text":"Move","textPreview":"Move","textChars":4,"textLines":1,"bbox":[58,560,66,20]}
+{"kind":"shape","id":"sh/xw3apgb2","slide":4,"bbox":[159.28,523,6.12,6.12]}
+{"kind":"shape","id":"sh/cvutgbah","slide":4,"bbox":[156.22,528.82,6.12,7.48]}
+{"kind":"shape","id":"sh/u147ad8z","slide":4,"bbox":[162.34,528.82,8.16,6.12]}
+{"kind":"shape","id":"sh/v2doji9k","slide":4,"bbox":[154.18,536.3,6.12,10.2]}
+{"kind":"shape","id":"sh/w3mpcnq5","slide":4,"bbox":[160.3,536.3,8.84,8.84]}
+{"kind":"textbox","id":"sh/h4f6lsrq","slide":4,"text":"Day 4: Break up sitting time","textPreview":"Day 4: Break up sitting time","textChars":28,"textLines":1,"bbox":[196,517,260,20]}
+{"kind":"textbox","id":"sh/md476t83","slide":4,"text":"Add one safe movement break.","textPreview":"Add one safe movement break.","textChars":28,"textLines":1,"bbox":[196,542,430,20]}
+{"kind":"shape","id":"sh/7edofy98","slide":4,"bbox":[54,596,708,70]}
+{"kind":"shape","id":"sh/8zmp83qt","slide":4,"bbox":[72,609,38,38]}
+{"kind":"textbox","id":"sh/90v6h8re","slide":4,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[72,615.84,38,17.1]}
+{"kind":"textbox","id":"sh/q9o7ix87","slide":4,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[58,652,66,20]}
+{"kind":"shape","id":"sh/rux8r29s","slide":4,"bbox":[153.5,616.4,14.96,23.12]}
+{"kind":"shape","id":"sh/ne943up4","slide":4,"bbox":[160.98,613,8.84,26.52]}
+{"kind":"textbox","id":"sh/2dg3apoj","slide":4,"text":"Day 5: Improve one drink","textPreview":"Day 5: Improve one drink","textChars":24,"textLines":1,"bbox":[196,609,260,20]}
+{"kind":"textbox","id":"sh/pgrm547a","slide":4,"text":"Adjust one drink you have often.","textPreview":"Adjust one drink you have often.","textChars":32,"textLines":1,"bbox":[196,634,430,20]}
+{"kind":"shape","id":"sh/ofilcz6p","slide":4,"bbox":[54,688,708,70]}
+{"kind":"shape","id":"sh/bi947up0","slide":4,"bbox":[72,701,38,38]}
+{"kind":"textbox","id":"sh/ah03epov","slide":4,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[72,707.84,38,17.1]}
+{"kind":"textbox","id":"sh/xkrm9476","slide":4,"text":"Sleep","textPreview":"Sleep","textChars":5,"textLines":1,"bbox":[58,744,66,20]}
+{"kind":"shape","id":"sh/cji5gz6l","slide":4,"bbox":[149.08,709.08,24.48,24.48]}
+{"kind":"shape","id":"sh/z6t4bepc","slide":4,"bbox":[156.56,705.68,23.12,23.12]}
+{"kind":"textbox","id":"sh/y5kni9or","slide":4,"text":"Day 6: Protect sleep","textPreview":"Day 6: Protect sleep","textChars":20,"textLines":1,"bbox":[196,701,260,20]}
+{"kind":"textbox","id":"sh/wb2l8jmp","slide":4,"text":"Choose one realistic sleep support.","textPreview":"Choose one realistic sleep support.","textChars":35,"textLines":1,"bbox":[196,726,430,20]}
+{"kind":"shape","id":"sh/hcvm1o3a","slide":4,"bbox":[54,780,708,70]}
+{"kind":"shape","id":"sh/u9k3694z","slide":4,"bbox":[72,793,38,38]}
+{"kind":"textbox","id":"sh/vatkzelk","slide":4,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[72,799.84,38,17.1]}
+{"kind":"textbox","id":"sh/872l4zmt","slide":4,"text":"Plan","textPreview":"Plan","textChars":4,"textLines":1,"bbox":[58,836,66,20]}
+{"kind":"shape","id":"sh/98b2x43e","slide":4,"bbox":[149.76,801.08,24.48,23.12]}
+{"kind":"shape","id":"sh/mlk3294n","slide":4,"bbox":[153.5,806.52,3.4,3.4]}
+{"kind":"shape","id":"sh/76tkvel8","slide":4,"bbox":[159.28,808.22,9.52,0]}
+{"kind":"shape","id":"sh/kjil0zmx","slide":4,"bbox":[153.5,811.28,3.4,3.4]}
+{"kind":"shape","id":"sh/lkr2t432","slide":4,"bbox":[159.28,812.98,9.52,0]}
+{"kind":"shape","id":"sh/dgvadwnq","slide":4,"bbox":[153.5,816.04,3.4,3.4]}
+{"kind":"shape","id":"sh/cfmt4rml","slide":4,"bbox":[159.28,817.74,9.52,0]}
+{"kind":"textbox","id":"sh/redsbm50","slide":4,"text":"Day 7: Plan the next week","textPreview":"Day 7: Plan the next week","textChars":25,"textLines":1,"bbox":[196,793,260,20]}
+{"kind":"textbox","id":"sh/qd4b2h4f","slide":4,"text":"Keep one helpful habit and adjust the rest.","textPreview":"Keep one helpful habit and adjust the rest.","textChars":43,"textLines":1,"bbox":[196,818,430,20]}
+{"kind":"textbox","id":"sh/1kfahwn2","slide":4,"text":"Small, realistic actions are easier to repeat than dramatic overhauls.","textPreview":"Small, realistic actions are easier to repeat than dramatic overhauls.","textChars":70,"textLines":1,"bbox":[54,900,708,26]}
+{"kind":"image","id":"im/250fitgr","slide":4,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/1ykfr9","slide":4,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/4cmh8a","slide":5,"title":"The 7-Day Prevention Reset","textShapes":17}
+{"kind":"shape","id":"sh/nydkrm5o","slide":5,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/9kv2twnu","slide":5,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/etkjuho7","slide":5,"text":"Day 1","textPreview":"Day 1","textChars":5,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/futkn25s","slide":5,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/0v21w76d","slide":5,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/1wv2pcni","slide":5,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/qpkjqxov","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/rqtkj25g","slide":5,"text":"DAY 1","textPreview":"DAY 1","textChars":5,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/fm9cj214","slide":5,"text":"Notice your starting point","textPreview":"Notice your starting point","textChars":26,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/ul0bah0j","slide":5,"text":"Record a normal day without grading yourself as good or bad.","textPreview":"Record a normal day without grading yourself as good or bad.","textChars":60,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"textbox","id":"sh/horulcja","slide":5,"text":"Choose awareness over judgment. A useful starting point includes what already works, what felt difficult, and one realistic goal.","textPreview":"Choose awareness over judgment. A useful starting point includes what already works, what felt difficult, and one realistic goal.","textChars":129,"textLines":1,"bbox":[54,218,708,52]}
+{"kind":"textbox","id":"sh/gnitc7ip","slide":5,"text":"One drink pattern I noticed","textPreview":"One drink pattern I noticed","textChars":27,"textLines":1,"bbox":[54,298,318,20]}
+{"kind":"shape","id":"sh/3atcnm10","slide":5,"bbox":[54,320,318,90]}
+{"kind":"textbox","id":"sh/29kbeh0v","slide":5,"text":"One meal pattern I noticed","textPreview":"One meal pattern I noticed","textChars":26,"textLines":1,"bbox":[408,298,318,20]}
+{"kind":"shape","id":"sh/pcbupwj6","slide":5,"bbox":[408,320,318,90]}
+{"kind":"textbox","id":"sh/4b2tgril","slide":5,"text":"One movement pattern I noticed","textPreview":"One movement pattern I noticed","textChars":30,"textLines":1,"bbox":[54,440,318,20]}
+{"kind":"shape","id":"sh/jepsbi1w","slide":5,"bbox":[54,462,318,90]}
+{"kind":"textbox","id":"sh/idgb2xkb","slide":5,"text":"One sleep pattern I noticed","textPreview":"One sleep pattern I noticed","textChars":27,"textLines":1,"bbox":[408,440,318,20]}
+{"kind":"shape","id":"sh/m9ofqlkz","slide":5,"bbox":[408,462,318,90]}
+{"kind":"textbox","id":"sh/naxwjqlk","slide":5,"text":"My energy or mood","textPreview":"My energy or mood","textChars":17,"textLines":1,"bbox":[54,582,318,20]}
+{"kind":"shape","id":"sh/ob6xsv25","slide":5,"bbox":[54,604,318,90]}
+{"kind":"textbox","id":"sh/9cfel03q","slide":5,"text":"One part of the day that felt difficult","textPreview":"One part of the day that felt difficult","textChars":39,"textLines":1,"bbox":[408,582,318,20]}
+{"kind":"shape","id":"sh/e54fmlk3","slide":5,"bbox":[408,604,318,90]}
+{"kind":"textbox","id":"sh/z6dwfql8","slide":5,"text":"One thing already working","textPreview":"One thing already working","textChars":25,"textLines":1,"bbox":[54,724,318,20]}
+{"kind":"shape","id":"sh/07mxov2t","slide":5,"bbox":[54,746,318,90]}
+{"kind":"textbox","id":"sh/18veh03e","slide":5,"text":"One realistic goal","textPreview":"One realistic goal","textChars":18,"textLines":1,"bbox":[408,724,318,20]}
+{"kind":"shape","id":"sh/qh4vi1kr","slide":5,"bbox":[408,746,318,90]}
+{"kind":"image","id":"im/94fe9c36","slide":5,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/4cmh8a","slide":5,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/5in5v8","slide":6,"title":"The 7-Day Prevention Reset","textShapes":19}
+{"kind":"shape","id":"sh/5w7qh4ji","slide":6,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/3up8fu1c","slide":6,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/szipcj2t","slide":6,"text":"Day 2","textPreview":"Day 2","textChars":5,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/d0rqloje","slide":6,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/qx07a9kn","slide":6,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/ry98je18","slide":6,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/03ipgj25","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/14rqpoja","slide":6,"text":"DAY 2","textPreview":"DAY 2","textChars":5,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/pszipgf6","slide":6,"text":"Build one balanced meal","textPreview":"Build one balanced meal","textChars":23,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/or6hgbyl","slide":6,"text":"Use the Mindful Plate as a flexible starting point for one meal.","textPreview":"Use the Mindful Plate as a flexible starting point for one meal.","textChars":64,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/3qx0n6x0","slide":6,"bbox":[96,266,300,300]}
+{"kind":"shape","id":"sh/2poze1gf","slide":6,"bbox":[132,308,108,216]}
+{"kind":"shape","id":"sh/xgzitgf2","slide":6,"bbox":[252,308,102,102]}
+{"kind":"shape","id":"sh/cfqhkbyx","slide":6,"bbox":[252,422,102,102]}
+{"kind":"shape","id":"sh/beh0r6xc","slide":6,"bbox":[246,302,0,228]}
+{"kind":"shape","id":"sh/qd8zi1gr","slide":6,"bbox":[246,416,114,0]}
+{"kind":"shape","id":"sh/tkfihwfy","slide":6,"bbox":[96,266,300,300]}
+{"kind":"textbox","id":"sh/sjmh8ryd","slide":6,"text":"Approximate plate pattern","textPreview":"Approximate plate pattern","textChars":25,"textLines":1,"bbox":[124,590,250,22]}
+{"kind":"shape","id":"sh/k3qhor69","slide":6,"bbox":[124,635,7,7]}
+{"kind":"textbox","id":"sh/54zixwnu","slide":6,"text":"About half: non-starchy vegetables","textPreview":"About half: non-starchy vegetables","textChars":34,"textLines":1,"bbox":[140,628,254,34]}
+{"kind":"shape","id":"sh/i18zmho3","slide":6,"bbox":[124,663,7,7]}
+{"kind":"textbox","id":"sh/j2h0vm5o","slide":6,"text":"About one quarter: protein","textPreview":"About one quarter: protein","textChars":26,"textLines":1,"bbox":[140,656,254,34]}
+{"kind":"shape","id":"sh/s7ahsr6l","slide":6,"bbox":[124,691,7,7]}
+{"kind":"textbox","id":"sh/t8ji1wnq","slide":6,"text":"About one quarter: carbohydrate","textPreview":"About one quarter: carbohydrate","textChars":31,"textLines":1,"bbox":[140,684,254,34]}
+{"kind":"shape","id":"sh/65szq1of","slide":6,"bbox":[124,719,7,7]}
+{"kind":"textbox","id":"sh/7610zm50","slide":6,"text":"Lower-sugar drink nearby","textPreview":"Lower-sugar drink nearby","textChars":24,"textLines":1,"bbox":[140,712,254,34]}
+{"kind":"textbox","id":"sh/gva1wb6h","slide":6,"text":"Mixed dishes still count. Cultural foods still count. Beans and lentils may contribute protein, carbohydrate, and fiber. Individual carbohydrate and medication needs vary. [3]","textPreview":"Mixed dishes still count. Cultural foods still count. Beans and lentils may contribute protein, carbohydrate, and fiber. Individual carbo...","textChars":175,"textLines":1,"bbox":[438,266,300,112]}
+{"kind":"shape","id":"sh/hwji5gn2","slide":6,"bbox":[416,414,310,140]}
+{"kind":"shape","id":"sh/b2pcbutg","slide":6,"bbox":[416,414,6,140]}
+{"kind":"textbox","id":"sh/a1wbi9cv","slide":6,"text":"Meal examples","textPreview":"Meal examples","textChars":13,"textLines":1,"bbox":[434,428,276,24]}
+{"kind":"textbox","id":"sh/x47ud4bm","slide":6,"text":"Rice, beans, greens, and fish. Lentil dal with vegetables and yogurt. Tortilla with eggs, avocado, vegetables, and fruit. Stir-fry with tofu, noodles, and broccoli.","textPreview":"Rice, beans, greens, and fish. Lentil dal with vegetables and yogurt. Tortilla with eggs, avocado, vegetables, and fruit. Stir-fry with t...","textChars":164,"textLines":1,"bbox":[434,456,276,88]}
+{"kind":"textbox","id":"sh/c3ytkzu1","slide":6,"text":"The meal I will try","textPreview":"The meal I will try","textChars":19,"textLines":1,"bbox":[416,594,310,20]}
+{"kind":"shape","id":"sh/ny5c7udk","slide":6,"bbox":[416,616,310,66]}
+{"kind":"shape","id":"sh/2dwbepcz","slide":6,"bbox":[416,716,14,14]}
+{"kind":"textbox","id":"sh/p0nu94ba","slide":6,"text":"One meal is enough.","textPreview":"One meal is enough.","textChars":19,"textLines":1,"bbox":[438,714,208,22]}
+{"kind":"shape","id":"sh/ozetgzup","slide":6,"bbox":[416,746,14,14]}
+{"kind":"textbox","id":"sh/7u9cjeto","slide":6,"text":"Not every meal needs to be divided on a plate.","textPreview":"Not every meal needs to be divided on a plate.","textChars":46,"textLines":1,"bbox":[438,744,268,22]}
+{"kind":"image","id":"im/7up0f25c","slide":6,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/5in5v8","slide":6,"text":"[Sources]\n- [3] American Diabetes Association Diabetes Food Hub. What is the Diabetes Plate?. 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate"}
+{"kind":"slide","id":"sl/apdl2m","slide":7,"title":"The 7-Day Prevention Reset","textShapes":25}
+{"kind":"shape","id":"sh/ilkretc7","slide":7,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/4n29g3ud","slide":7,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/vit8jydw","slide":7,"text":"Day 3","textPreview":"Day 3","textChars":5,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/uhkratcb","slide":7,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/hkbqlovm","slide":7,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/gj29c3uh","slide":7,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/fedsvid0","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/ed4rmdcf","slide":7,"text":"DAY 3","textPreview":"DAY 3","textChars":5,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/ov6h0vud","slide":7,"text":"Add one source of fiber","textPreview":"Add one source of fiber","textChars":23,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/9wfyt0vy","slide":7,"text":"Choose one addition and notice comfort. No single food has to do everything.","textPreview":"Choose one addition and notice comfort. No single food has to do everything.","textChars":76,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/m94zylc7","slide":7,"bbox":[72,240,138,94]}
+{"kind":"shape","id":"sh/nuxgrqds","slide":7,"bbox":[114,267.44,17.68,13.52]}
+{"kind":"shape","id":"sh/07mhwbu1","slide":7,"bbox":[122.32,276.8,17.68,13.52]}
+{"kind":"shape","id":"sh/18vypgvm","slide":7,"bbox":[130.64,267.44,17.68,13.52]}
+{"kind":"shape","id":"sh/e54fulcv","slide":7,"bbox":[138.96,276.8,17.68,13.52]}
+{"kind":"shape","id":"sh/z6dgnqdg","slide":7,"bbox":[141.04,257.04,6.24,8.32]}
+{"kind":"textbox","id":"sh/c3mxsbu5","slide":7,"text":"Vegetables","textPreview":"Vegetables","textChars":10,"textLines":1,"bbox":[80,308,122,18]}
+{"kind":"shape","id":"sh/d4vylgvq","slide":7,"bbox":[247,240,138,94]}
+{"kind":"shape","id":"sh/t0nepcne","slide":7,"bbox":[289,267.44,17.68,13.52]}
+{"kind":"shape","id":"sh/szedw7mt","slide":7,"bbox":[297.32,276.8,17.68,13.52]}
+{"kind":"shape","id":"sh/rylwn258","slide":7,"bbox":[305.64,267.44,17.68,13.52]}
+{"kind":"shape","id":"sh/6xcvux4n","slide":7,"bbox":[313.96,276.8,17.68,13.52]}
+{"kind":"shape","id":"sh/5w3elsni","slide":7,"bbox":[316.04,257.04,6.24,8.32]}
+{"kind":"textbox","id":"sh/4vudsnmx","slide":7,"text":"Beans","textPreview":"Beans","textChars":5,"textLines":1,"bbox":[255,308,122,18]}
+{"kind":"shape","id":"sh/julwji5c","slide":7,"bbox":[422,240,138,94]}
+{"kind":"shape","id":"sh/itcvqdor","slide":7,"bbox":[464,267.44,17.68,13.52]}
+{"kind":"shape","id":"sh/ps7exwnm","slide":7,"bbox":[472.32,276.8,17.68,13.52]}
+{"kind":"shape","id":"sh/oryx4rm1","slide":7,"bbox":[480.64,267.44,17.68,13.52]}
+{"kind":"shape","id":"sh/m1o32pg7","slide":7,"bbox":[488.96,276.8,17.68,13.52]}
+{"kind":"shape","id":"sh/nmhkbuhs","slide":7,"bbox":[491.04,257.04,6.24,8.32]}
+{"kind":"textbox","id":"sh/onql4zyd","slide":7,"text":"Lentils","textPreview":"Lentils","textChars":7,"textLines":1,"bbox":[430,308,122,18]}
+{"kind":"shape","id":"sh/9oz2d4zy","slide":7,"bbox":[597,240,138,94]}
+{"kind":"shape","id":"sh/exojy5gb","slide":7,"bbox":[639,267.44,17.68,13.52]}
+{"kind":"shape","id":"sh/zyxk7ahw","slide":7,"bbox":[647.32,276.8,17.68,13.52]}
+{"kind":"shape","id":"sh/0z610fy1","slide":7,"bbox":[655.64,267.44,17.68,13.52]}
+{"kind":"shape","id":"sh/10f29kzm","slide":7,"bbox":[663.96,276.8,17.68,13.52]}
+{"kind":"shape","id":"sh/yt83a9gf","slide":7,"bbox":[666.04,257.04,6.24,8.32]}
+{"kind":"textbox","id":"sh/ju1kjeh0","slide":7,"text":"Oats","textPreview":"Oats","textChars":4,"textLines":1,"bbox":[605,308,122,18]}
+{"kind":"shape","id":"sh/3mxgf6lg","slide":7,"bbox":[72,366,138,94]}
+{"kind":"shape","id":"sh/iloz61kv","slide":7,"bbox":[114,393.44,17.68,13.52]}
+{"kind":"shape","id":"sh/5ozyhg36","slide":7,"bbox":[122.32,402.8,17.68,13.52]}
+{"kind":"shape","id":"sh/4n6h8b21","slide":7,"bbox":[130.64,393.44,17.68,13.52]}
+{"kind":"shape","id":"sh/vixgb6l4","slide":7,"bbox":[138.96,402.8,17.68,13.52]}
+{"kind":"shape","id":"sh/uhoz21kj","slide":7,"bbox":[141.04,383.04,6.24,8.32]}
+{"kind":"textbox","id":"sh/hkfydw3a","slide":7,"text":"Whole grains","textPreview":"Whole grains","textChars":12,"textLines":1,"bbox":[80,434,122,18]}
+{"kind":"shape","id":"sh/gj6h4b2p","slide":7,"bbox":[247,366,138,94]}
+{"kind":"shape","id":"sh/feh0nqlo","slide":7,"bbox":[289,393.44,17.68,13.52]}
+{"kind":"shape","id":"sh/ed8zelk3","slide":7,"bbox":[297.32,402.8,17.68,13.52]}
+{"kind":"shape","id":"sh/cz2d8nil","slide":7,"bbox":[305.64,393.44,17.68,13.52]}
+{"kind":"shape","id":"sh/xkbe1sj6","slide":7,"bbox":[313.96,402.8,17.68,13.52]}
+{"kind":"shape","id":"sh/axkv6d0f","slide":7,"bbox":[316.04,383.04,6.24,8.32]}
+{"kind":"textbox","id":"sh/bytwzi10","slide":7,"text":"Berries","textPreview":"Berries","textChars":7,"textLines":1,"bbox":[255,434,122,18]}
+{"kind":"shape","id":"sh/kn2dc7ih","slide":7,"bbox":[422,366,138,94]}
+{"kind":"shape","id":"sh/love5cj2","slide":7,"bbox":[464,393.44,17.68,13.52]}
+{"kind":"shape","id":"sh/ylkvax0b","slide":7,"bbox":[472.32,402.8,17.68,13.52]}
+{"kind":"shape","id":"sh/jmtw321w","slide":7,"bbox":[480.64,393.44,17.68,13.52]}
+{"kind":"shape","id":"sh/8rmxg7it","slide":7,"bbox":[488.96,402.8,17.68,13.52]}
+{"kind":"shape","id":"sh/tsve9cjy","slide":7,"bbox":[491.04,383.04,6.24,8.32]}
+{"kind":"textbox","id":"sh/h8retcbi","slide":7,"text":"Nuts","textPreview":"Nuts","textChars":4,"textLines":1,"bbox":[430,434,122,18]}
+{"kind":"shape","id":"sh/g7id07ax","slide":7,"bbox":[597,366,138,94]}
+{"kind":"shape","id":"sh/f69wr2tc","slide":7,"bbox":[639,393.44,17.68,13.52]}
+{"kind":"shape","id":"sh/u50vyxsr","slide":7,"bbox":[647.32,402.8,17.68,13.52]}
+{"kind":"shape","id":"sh/pcbexcbe","slide":7,"bbox":[655.64,393.44,17.68,13.52]}
+{"kind":"shape","id":"sh/4b2d4rat","slide":7,"bbox":[663.96,402.8,17.68,13.52]}
+{"kind":"shape","id":"sh/3a9wvmt8","slide":7,"bbox":[666.04,383.04,6.24,8.32]}
+{"kind":"textbox","id":"sh/290v2hsn","slide":7,"text":"Seeds","textPreview":"Seeds","textChars":5,"textLines":1,"bbox":[605,434,122,18]}
+{"kind":"shape","id":"sh/5g7ulsba","slide":7,"bbox":[54,520,708,146]}
+{"kind":"textbox","id":"sh/kfydsnap","slide":7,"text":"Choose one","textPreview":"Choose one","textChars":10,"textLines":1,"bbox":[72,542,140,20]}
+{"kind":"shape","id":"sh/alwb2t8n","slide":7,"bbox":[84,580,14,14]}
+{"kind":"textbox","id":"sh/bm5svy9s","slide":7,"text":"Add a vegetable","textPreview":"Add a vegetable","textChars":15,"textLines":1,"bbox":[106,578,248,22]}
+{"kind":"shape","id":"sh/wnet43qd","slide":7,"bbox":[394,580,14,14]}
+{"kind":"textbox","id":"sh/xonaxory","slide":7,"text":"Add beans or lentils","textPreview":"Add beans or lentils","textChars":20,"textLines":1,"bbox":[416,578,248,22]}
+{"kind":"shape","id":"sh/ypwb6t8j","slide":7,"bbox":[84,612,14,14]}
+{"kind":"textbox","id":"sh/jq5szy94","slide":7,"text":"Choose oats or a whole grain","textPreview":"Choose oats or a whole grain","textChars":28,"textLines":1,"bbox":[106,610,248,22]}
+{"kind":"shape","id":"sh/kbet83qp","slide":7,"bbox":[394,612,14,14]}
+{"kind":"textbox","id":"sh/lc7a18ra","slide":7,"text":"Add berries","textPreview":"Add berries","textChars":11,"textLines":1,"bbox":[416,610,248,22]}
+{"kind":"shape","id":"sh/etcru98f","slide":7,"bbox":[84,644,14,14]}
+{"kind":"textbox","id":"sh/zulsne90","slide":7,"text":"Add nuts or seeds","textPreview":"Add nuts or seeds","textChars":17,"textLines":1,"bbox":[106,642,248,22]}
+{"kind":"shape","id":"sh/j29kzul0","slide":7,"bbox":[54,700,708,116]}
+{"kind":"shape","id":"sh/i103qp4f","slide":7,"bbox":[54,700,6,116]}
+{"kind":"textbox","id":"sh/54b21436","slide":7,"text":"Go gradually","textPreview":"Go gradually","textChars":12,"textLines":1,"bbox":[72,714,674,24]}
+{"kind":"textbox","id":"sh/43ilsz2l","slide":7,"text":"Fiber-rich foods may support digestive health, fullness, cholesterol management, dietary quality, and more balanced meals. Increase gradually, drink fluids according to your needs, and ask for guidance with kidney disease, digestive conditions, swallowing problems, prescribed diets, or significant symptoms. [4]","textPreview":"Fiber-rich foods may support digestive health, fullness, cholesterol management, dietary quality, and more balanced meals. Increase gradu...","textChars":312,"textLines":1,"bbox":[72,742,674,64]}
+{"kind":"textbox","id":"sh/rqtk3elc","slide":7,"text":"My fiber addition today","textPreview":"My fiber addition today","textChars":23,"textLines":1,"bbox":[54,852,708,20]}
+{"kind":"shape","id":"sh/65k3u9kr","slide":7,"bbox":[54,874,708,60]}
+{"kind":"image","id":"im/0n2dofit","slide":7,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/apdl2m","slide":7,"text":"[Sources]\n- [4] U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label"}
+{"kind":"slide","id":"sl/utiygi","slide":8,"title":"The 7-Day Prevention Reset","textShapes":22}
+{"kind":"shape","id":"sh/j2h4zihs","slide":8,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/l4jm1szy","slide":8,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/65snuxgj","slide":8,"text":"Day 4","textPreview":"Day 4","textChars":5,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/761432h4","slide":8,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/87a5w7yp","slide":8,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/t8jm5czu","slide":8,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/m9o3itgz","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/nax4ryhk","slide":8,"text":"DAY 4","textPreview":"DAY 4","textChars":5,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/7uh0bats","slide":8,"text":"Break up sitting time","textPreview":"Break up sitting time","textChars":21,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/6t8z25s7","slide":8,"text":"Start from where you are. A short, safe movement break still counts.","textPreview":"Start from where you are. A short, safe movement break still counts.","textChars":68,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/twzidkby","slide":8,"bbox":[54,236,318,50]}
+{"kind":"shape","id":"sh/svqh4fad","slide":8,"bbox":[80.28,246,6.12,6.12]}
+{"kind":"shape","id":"sh/jqh07atw","slide":8,"bbox":[77.22,251.82,6.12,7.48]}
+{"kind":"shape","id":"sh/ipozy5sb","slide":8,"bbox":[83.34,251.82,8.16,6.12]}
+{"kind":"shape","id":"sh/5szi9kb2","slide":8,"bbox":[75.18,259.3,6.12,10.2]}
+{"kind":"shape","id":"sh/krqh0fah","slide":8,"bbox":[81.3,259.3,8.84,8.84]}
+{"kind":"textbox","id":"sh/vmx03qtk","slide":8,"text":"Short walk","textPreview":"Short walk","textChars":10,"textLines":1,"bbox":[110,252,248,18]}
+{"kind":"shape","id":"sh/a1ozulcf","slide":8,"bbox":[408,236,318,50]}
+{"kind":"shape","id":"sh/yx4j6lw7","slide":8,"bbox":[434.28,246,6.12,6.12]}
+{"kind":"shape","id":"sh/zyd0fqds","slide":8,"bbox":[431.22,251.82,6.12,7.48]}
+{"kind":"shape","id":"sh/0z618ved","slide":8,"bbox":[437.34,251.82,8.16,6.12]}
+{"kind":"shape","id":"sh/l0fih0vi","slide":8,"bbox":[429.18,259.3,6.12,10.2]}
+{"kind":"shape","id":"sh/mloja5w3","slide":8,"bbox":[435.3,259.3,8.84,8.84]}
+{"kind":"textbox","id":"sh/nmx0jado","slide":8,"text":"Standing break","textPreview":"Standing break","textChars":14,"textLines":1,"bbox":[464,252,248,18]}
+{"kind":"shape","id":"sh/8n61cfe9","slide":8,"bbox":[54,304,318,50]}
+{"kind":"shape","id":"sh/9ofil0vu","slide":8,"bbox":[80.28,314,6.12,6.12]}
+{"kind":"shape","id":"sh/apoje5wf","slide":8,"bbox":[77.22,319.82,6.12,7.48]}
+{"kind":"shape","id":"sh/vqhknad0","slide":8,"bbox":[83.34,319.82,8.16,6.12]}
+{"kind":"shape","id":"sh/5kjmd4f2","slide":8,"bbox":[75.18,327.3,6.12,10.2]}
+{"kind":"shape","id":"sh/kjal4zyh","slide":8,"bbox":[81.3,327.3,8.84,8.84]}
+{"kind":"textbox","id":"sh/ji14bexw","slide":8,"text":"Chair movement","textPreview":"Chair movement","textChars":14,"textLines":1,"bbox":[110,320,248,18]}
+{"kind":"shape","id":"sh/ih8329gb","slide":8,"bbox":[408,304,318,50]}
+{"kind":"shape","id":"sh/tojmhofy","slide":8,"bbox":[434.28,314,6.12,6.12]}
+{"kind":"shape","id":"sh/snal8jyd","slide":8,"bbox":[431.22,319.82,6.12,7.48]}
+{"kind":"shape","id":"sh/7m14fex8","slide":8,"bbox":[437.34,319.82,8.16,6.12]}
+{"kind":"shape","id":"sh/6ls369gn","slide":8,"bbox":[429.18,327.3,6.12,10.2]}
+{"kind":"shape","id":"sh/1c3mlofa","slide":8,"bbox":[435.3,327.3,8.84,8.84]}
+{"kind":"textbox","id":"sh/gbulc3yp","slide":8,"text":"Stretching","textPreview":"Stretching","textChars":10,"textLines":1,"bbox":[464,320,248,18]}
+{"kind":"shape","id":"sh/c7epknix","slide":8,"bbox":[54,372,318,50]}
+{"kind":"shape","id":"sh/d8n6dszi","slide":8,"bbox":[80.28,382,6.12,6.12]}
+{"kind":"shape","id":"sh/q5w7ix0r","slide":8,"bbox":[77.22,387.82,6.12,7.48]}
+{"kind":"shape","id":"sh/b65ob2hc","slide":8,"bbox":[83.34,387.82,8.16,6.12]}
+{"kind":"shape","id":"sh/ojepgnil","slide":8,"bbox":[75.18,395.3,6.12,10.2]}
+{"kind":"shape","id":"sh/p4n69sz6","slide":8,"bbox":[81.3,395.3,8.84,8.84]}
+{"kind":"textbox","id":"sh/2hwned0v","slide":8,"text":"Light household task","textPreview":"Light household task","textChars":20,"textLines":1,"bbox":[110,388,248,18]}
+{"kind":"shape","id":"sh/3i5o7ihg","slide":8,"bbox":[408,372,318,50]}
+{"kind":"shape","id":"sh/8fyps7i5","slide":8,"bbox":[434.28,382,6.12,6.12]}
+{"kind":"shape","id":"sh/90r6lczq","slide":8,"bbox":[431.22,387.82,6.12,7.48]}
+{"kind":"shape","id":"sh/jutsb61s","slide":8,"bbox":[437.34,387.82,8.16,6.12]}
+{"kind":"shape","id":"sh/i9krilk7","slide":8,"bbox":[429.18,395.3,6.12,10.2]}
+{"kind":"shape","id":"sh/5wbadgjy","slide":8,"bbox":[435.3,395.3,8.84,8.84]}
+{"kind":"textbox","id":"sh/kv29kb2d","slide":8,"text":"Physical therapy exercise","textPreview":"Physical therapy exercise","textChars":25,"textLines":1,"bbox":[464,388,248,18]}
+{"kind":"shape","id":"sh/7ytsfq1o","slide":8,"bbox":[54,440,318,50]}
+{"kind":"shape","id":"sh/6xkrmlk3","slide":8,"bbox":[80.28,450,6.12,6.12]}
+{"kind":"shape","id":"sh/t0vah0ju","slide":8,"bbox":[77.22,455.82,6.12,7.48]}
+{"kind":"shape","id":"sh/szm9ov29","slide":8,"bbox":[83.34,455.82,8.16,6.12]}
+{"kind":"shape","id":"sh/n2983m1k","slide":8,"bbox":[75.18,463.3,6.12,10.2]}
+{"kind":"shape","id":"sh/m10ra1kz","slide":8,"bbox":[81.3,463.3,8.84,8.84]}
+{"kind":"textbox","id":"sh/a983yt8z","slide":8,"text":"Resistance movement","textPreview":"Resistance movement","textChars":19,"textLines":1,"bbox":[110,456,248,18]}
+{"kind":"textbox","id":"sh/bah47ypk","slide":8,"text":"The general public-health guideline for adults is 150 to 300 minutes of moderate-intensity activity per week, plus muscle-strengthening activity on 2 days. This is not a pass-or-fail target; people may start below it and adapt activity to ability and medical guidance. [5]","textPreview":"The general public-health guideline for adults is 150 to 300 minutes of moderate-intensity activity per week, plus muscle-strengthening a...","textChars":272,"textLines":1,"bbox":[54,540,708,82]}
+{"kind":"textbox","id":"sh/cvql03qp","slide":8,"text":"My cue","textPreview":"My cue","textChars":6,"textLines":1,"bbox":[54,656,318,20]}
+{"kind":"shape","id":"sh/xwjm987a","slide":8,"bbox":[54,678,318,56]}
+{"kind":"textbox","id":"sh/2583ut8n","slide":8,"text":"My movement","textPreview":"My movement","textChars":11,"textLines":1,"bbox":[408,656,318,20]}
+{"kind":"shape","id":"sh/n6h43ep8","slide":8,"bbox":[408,678,318,56]}
+{"kind":"textbox","id":"sh/o7qlwjqt","slide":8,"text":"Approximate minutes","textPreview":"Approximate minutes","textChars":19,"textLines":1,"bbox":[54,754,318,20]}
+{"kind":"shape","id":"sh/p8zm5o7e","slide":8,"bbox":[54,776,318,56]}
+{"kind":"textbox","id":"sh/e1o3q98r","slide":8,"text":"My backup option","textPreview":"My backup option","textChars":16,"textLines":1,"bbox":[408,754,318,20]}
+{"kind":"shape","id":"sh/f2xkzepc","slide":8,"bbox":[408,776,318,56]}
+{"kind":"shape","id":"sh/hwn65cru","slide":8,"bbox":[54,872,708,74]}
+{"kind":"shape","id":"sh/wvepw7q9","slide":8,"bbox":[54,872,6,74]}
+{"kind":"textbox","id":"sh/vulo329o","slide":8,"text":"Stop and seek advice","textPreview":"Stop and seek advice","textChars":20,"textLines":1,"bbox":[72,886,674,24]}
+{"kind":"textbox","id":"sh/utc7uxs3","slide":8,"text":"Stop and seek medical advice for chest pain, severe shortness of breath, fainting, new neurological symptoms, or severe or unusual pain.","textPreview":"Stop and seek medical advice for chest pain, severe shortness of breath, fainting, new neurological symptoms, or severe or unusual pain.","textChars":136,"textLines":1,"bbox":[72,914,674,22]}
+{"kind":"image","id":"im/t0f2tkz6","slide":8,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/utiygi","slide":8,"text":"[Sources]\n- [5] U.S. Department of Health and Human Services. Physical Activity Guidelines for Americans, 2nd edition. 2018. https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"}
+{"kind":"slide","id":"sl/b943c2","slide":9,"title":"The 7-Day Prevention Reset","textShapes":19}
+{"kind":"shape","id":"sh/54jyx8bm","slide":9,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/j21gbytg","slide":9,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/wfqx03a5","slide":9,"text":"Day 5","textPreview":"Day 5","textChars":5,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/xgjy9obq","slide":9,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/ad8fytsz","slide":9,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/vehg7ytk","slide":9,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/gbuhcna9","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/hw3y5sbu","slide":9,"text":"DAY 5","textPreview":"DAY 5","textChars":5,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/psjexk3q","slide":9,"text":"Improve one drink","textPreview":"Improve one drink","textChars":17,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/4rqd4f25","slide":9,"text":"You do not have to jump straight to plain water. Adjust one drink you have often.","textPreview":"You do not have to jump straight to plain water. Adjust one drink you have often.","textChars":81,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/3qhwvalk","slide":9,"bbox":[54,272,116,118]}
+{"kind":"shape","id":"sh/2p8v25kz","slide":9,"bbox":[99.5,296.6,20.24,31.28]}
+{"kind":"shape","id":"sh/h4zet03u","slide":9,"bbox":[109.62,292,11.96,35.88]}
+{"kind":"textbox","id":"sh/g3qd0v29","slide":9,"text":"Large sweet drink","textPreview":"Large sweet drink","textChars":17,"textLines":1,"bbox":[63,348,98,34]}
+{"kind":"shape","id":"sh/f2hwrqlo","slide":9,"bbox":[170,330,20,0]}
+{"kind":"shape","id":"sh/u18vy5k3","slide":9,"bbox":[189,272,116,118]}
+{"kind":"shape","id":"sh/103e543y","slide":9,"bbox":[234.5,296.6,20.24,31.28]}
+{"kind":"shape","id":"sh/0zuxcz2d","slide":9,"bbox":[244.62,292,11.96,35.88]}
+{"kind":"textbox","id":"sh/kf2po7el","slide":9,"text":"Smaller sweet drink","textPreview":"Smaller sweet drink","textChars":19,"textLines":1,"bbox":[198,348,98,34]}
+{"kind":"shape","id":"sh/5gvqxcv6","slide":9,"bbox":[305,330,20,0]}
+{"kind":"shape","id":"sh/idk7mxwv","slide":9,"bbox":[324,272,116,118]}
+{"kind":"shape","id":"sh/jetov2dg","slide":9,"bbox":[369.5,296.6,20.24,31.28]}
+{"kind":"shape","id":"sh/wb2pknep","slide":9,"bbox":[379.62,292,11.96,35.88]}
+{"kind":"textbox","id":"sh/xcb6tsva","slide":9,"text":"Less syrup or sugar","textPreview":"Less syrup or sugar","textChars":19,"textLines":1,"bbox":[333,348,98,34]}
+{"kind":"shape","id":"sh/a9k7idwj","slide":9,"bbox":[440,330,20,0]}
+{"kind":"shape","id":"sh/vatorix4","slide":9,"bbox":[459,272,116,118]}
+{"kind":"shape","id":"sh/o7ipgnet","slide":9,"bbox":[504.5,296.6,20.24,31.28]}
+{"kind":"shape","id":"sh/98r6psfy","slide":9,"bbox":[514.62,292,11.96,35.88]}
+{"kind":"textbox","id":"sh/ri98zih0","slide":9,"text":"Unsweetened option","textPreview":"Unsweetened option","textChars":18,"textLines":1,"bbox":[468,348,98,34]}
+{"kind":"shape","id":"sh/qhg7qdgf","slide":9,"bbox":[575,330,20,0]}
+{"kind":"shape","id":"sh/dkrq18z6","slide":9,"bbox":[594,272,116,118]}
+{"kind":"shape","id":"sh/cjips3yl","slide":9,"bbox":[639.5,296.6,20.24,31.28]}
+{"kind":"shape","id":"sh/z6983ihw","slide":9,"bbox":[649.62,292,11.96,35.88]}
+{"kind":"textbox","id":"sh/e507udgr","slide":9,"text":"Water or sparkling water","textPreview":"Water or sparkling water","textChars":24,"textLines":1,"bbox":[603,348,98,34]}
+{"kind":"shape","id":"sh/18rq5sz2","slide":9,"bbox":[54,445,7,7]}
+{"kind":"textbox","id":"sh/07i9wnyh","slide":9,"text":"Water, sparkling water, unsweetened tea, coffee with less added sugar, a smaller sweet beverage, or a diluted or less frequent sweet drink can all be realistic steps.","textPreview":"Water, sparkling water, unsweetened tea, coffee with less added sugar, a smaller sweet beverage, or a diluted or less frequent sweet drin...","textChars":166,"textLines":1,"bbox":[70,438,692,58]}
+{"kind":"shape","id":"sh/nat872h8","slide":9,"bbox":[54,497,7,7]}
+{"kind":"textbox","id":"sh/m9kryxgn","slide":9,"text":"Hydration needs vary by body size, climate, activity, pregnancy, kidney or heart conditions, medicines, and illness.","textPreview":"Hydration needs vary by body size, climate, activity, pregnancy, kidney or heart conditions, medicines, and illness.","textChars":116,"textLines":1,"bbox":[70,490,692,58]}
+{"kind":"shape","id":"sh/6dsba1oz","slide":9,"bbox":[54,549,7,7]}
+{"kind":"textbox","id":"sh/7e1s36p4","slide":9,"text":"Alcohol can affect safety with some medicines and glucose plans; ask your care team what is safest for you.","textPreview":"Alcohol can affect safety with some medicines and glucose plans; ask your care team what is safest for you.","textChars":107,"textLines":1,"bbox":[70,542,692,58]}
+{"kind":"textbox","id":"sh/8fatcb6p","slide":9,"text":"The drink I will adjust","textPreview":"The drink I will adjust","textChars":23,"textLines":1,"bbox":[54,650,708,20]}
+{"kind":"shape","id":"sh/tgja5g7a","slide":9,"bbox":[54,672,708,64]}
+{"kind":"shape","id":"sh/uhsbelov","slide":9,"bbox":[54,778,708,70]}
+{"kind":"shape","id":"sh/vi1s765g","slide":9,"bbox":[54,778,6,70]}
+{"kind":"textbox","id":"sh/gjatgb61","slide":9,"text":"Label cue","textPreview":"Label cue","textChars":9,"textLines":1,"bbox":[72,792,674,24]}
+{"kind":"textbox","id":"sh/hkja9gnm","slide":9,"text":"Added sugars are listed on the Nutrition Facts label. Use the label as information, not as a grade. [7]","textPreview":"Added sugars are listed on the Nutrition Facts label. Use the label as information, not as a grade. [7]","textChars":103,"textLines":1,"bbox":[72,820,674,18]}
+{"kind":"image","id":"im/v6h0jitg","slide":9,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/b943c2","slide":9,"text":"[Sources]\n- [7] U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. 2026. https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label"}
+{"kind":"slide","id":"sl/wi8ron","slide":10,"title":"The 7-Day Prevention Reset","textShapes":24}
+{"kind":"shape","id":"sh/nqdgjidc","slide":10,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/9svylsv2","slide":10,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/ylkf6dwf","slide":10,"text":"Day 6","textPreview":"Day 6","textChars":5,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/zmtgfix0","slide":10,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/0n2x8nel","slide":10,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/lobyhsv6","slide":10,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/qx0f2twj","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/bytgbyx4","slide":10,"text":"DAY 6","textPreview":"DAY 6","textChars":5,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/bq9cfuxk","slide":10,"text":"Protect sleep","textPreview":"Protect sleep","textChars":13,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/qp0b6pwf","slide":10,"text":"Sleep problems deserve care, not blame. Choose one support instead of overhauling everything.","textPreview":"Sleep problems deserve care, not blame. Choose one support instead of overhauling everything.","textChars":93,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/dsbuhkfq","slide":10,"bbox":[74,270,38,38]}
+{"kind":"shape","id":"sh/cr2t8fe5","slide":10,"bbox":[112,289,56,0]}
+{"kind":"textbox","id":"sh/zutcjudw","slide":10,"text":"Wake cue","textPreview":"Wake cue","textChars":8,"textLines":1,"bbox":[56,326,76,34]}
+{"kind":"shape","id":"sh/ytkbapwb","slide":10,"bbox":[168,270,38,38]}
+{"kind":"shape","id":"sh/lgbul4v2","slide":10,"bbox":[206,289,56,0]}
+{"kind":"textbox","id":"sh/0v2tczeh","slide":10,"text":"Daylight","textPreview":"Daylight","textChars":8,"textLines":1,"bbox":[150,326,76,34]}
+{"kind":"shape","id":"sh/fyps7axs","slide":10,"bbox":[262,270,38,38]}
+{"kind":"shape","id":"sh/exgby5w7","slide":10,"bbox":[300,289,56,0]}
+{"kind":"textbox","id":"sh/idof6dgf","slide":10,"text":"Daytime movement","textPreview":"Daytime movement","textChars":16,"textLines":1,"bbox":[244,326,76,34]}
+{"kind":"shape","id":"sh/jexwfyx0","slide":10,"bbox":[356,270,38,38]}
+{"kind":"shape","id":"sh/4f6x83yl","slide":10,"bbox":[394,289,56,0]}
+{"kind":"textbox","id":"sh/5gfeh8f6","slide":10,"text":"Caffeine timing","textPreview":"Caffeine timing","textChars":15,"textLines":1,"bbox":[338,326,76,34]}
+{"kind":"shape","id":"sh/up4v2tgj","slide":10,"bbox":[450,270,38,38]}
+{"kind":"shape","id":"sh/vaxwbyh4","slide":10,"bbox":[488,289,56,0]}
+{"kind":"textbox","id":"sh/wb6d43yp","slide":10,"text":"Dim evening light","textPreview":"Dim evening light","textChars":17,"textLines":1,"bbox":[432,326,76,34]}
+{"kind":"shape","id":"sh/hcfed8fa","slide":10,"bbox":[544,270,38,38]}
+{"kind":"shape","id":"sh/ml4vytgn","slide":10,"bbox":[582,289,56,0]}
+{"kind":"textbox","id":"sh/7mdw7ehs","slide":10,"text":"Wind-down cue","textPreview":"Wind-down cue","textChars":13,"textLines":1,"bbox":[526,326,76,34]}
+{"kind":"shape","id":"sh/pc3qtg3m","slide":10,"bbox":[638,270,38,38]}
+{"kind":"textbox","id":"sh/obu90bm1","slide":10,"text":"Morning reflection","textPreview":"Morning reflection","textChars":18,"textLines":1,"bbox":[620,326,76,34]}
+{"kind":"shape","id":"sh/nql8r6lw","slide":10,"bbox":[54,406,708,210]}
+{"kind":"textbox","id":"sh/2pc7yl4b","slide":10,"text":"Choose one action","textPreview":"Choose one action","textChars":17,"textLines":1,"bbox":[74,430,180,20]}
+{"kind":"shape","id":"sh/1o3qpgnq","slide":10,"bbox":[84,470,14,14]}
+{"kind":"textbox","id":"sh/0nupwbm5","slide":10,"text":"Reduce late caffeine","textPreview":"Reduce late caffeine","textChars":20,"textLines":1,"bbox":[106,468,278,22]}
+{"kind":"shape","id":"sh/fml8n65k","slide":10,"bbox":[410,470,14,14]}
+{"kind":"textbox","id":"sh/els7u14z","slide":10,"text":"Move the phone farther from bed","textPreview":"Move the phone farther from bed","textChars":31,"textLines":1,"bbox":[432,468,278,22]}
+{"kind":"shape","id":"sh/dkjqlwne","slide":10,"bbox":[84,512,14,14]}
+{"kind":"textbox","id":"sh/sjapsrmt","slide":10,"text":"Create a short wind-down cue","textPreview":"Create a short wind-down cue","textChars":28,"textLines":1,"bbox":[106,510,278,22]}
+{"kind":"shape","id":"sh/sbipcbit","slide":10,"bbox":[410,512,14,14]}
+{"kind":"textbox","id":"sh/tcbq5gze","slide":10,"text":"Ask about snoring or breathing pauses","textPreview":"Ask about snoring or breathing pauses","textChars":37,"textLines":1,"bbox":[432,510,278,22]}
+{"kind":"shape","id":"sh/6907a10n","slide":10,"bbox":[84,554,14,14]}
+{"kind":"textbox","id":"sh/7a9836h8","slide":10,"text":"Prepare for shift-work sleep","textPreview":"Prepare for shift-work sleep","textChars":28,"textLines":1,"bbox":[106,552,278,22]}
+{"kind":"shape","id":"sh/gf2pgbip","slide":10,"bbox":[410,554,14,14]}
+{"kind":"textbox","id":"sh/hgbq9gza","slide":10,"text":"Discuss persistent insomnia or restless legs","textPreview":"Discuss persistent insomnia or restless legs","textChars":44,"textLines":1,"bbox":[432,552,278,22]}
+{"kind":"textbox","id":"sh/udk7el0z","slide":10,"text":"Sleep routines can be affected by shift work, pain, caregiving, breathing problems, insomnia, restless legs, mental health, and home responsibilities. A routine can support sleep, but it does not cure a sleep disorder. [6]","textPreview":"Sleep routines can be affected by shift work, pain, caregiving, breathing problems, insomnia, restless legs, mental health, and home resp...","textChars":222,"textLines":1,"bbox":[54,660,708,70]}
+{"kind":"textbox","id":"sh/fet876hk","slide":10,"text":"The sleep support I will try","textPreview":"The sleep support I will try","textChars":28,"textLines":1,"bbox":[54,766,708,20]}
+{"kind":"shape","id":"sh/wjyp4ril","slide":10,"bbox":[54,788,708,64]}
+{"kind":"image","id":"im/l4fe94b6","slide":10,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/wi8ron","slide":10,"text":"[Sources]\n- [6] National Heart, Lung, and Blood Institute. Sleep Deprivation and Deficiency: Healthy Sleep Habits. 2022. https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits"}
+{"kind":"slide","id":"sl/hid3yf","slide":11,"title":"The 7-Day Prevention Reset","textShapes":16}
+{"kind":"shape","id":"sh/9szutor6","slide":11,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/7qhcry90","slide":11,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/gvqd43ah","slide":11,"text":"Day 7","textPreview":"Day 7","textChars":5,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/hwzux8r2","slide":11,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/ut8v2tsb","slide":11,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/vuhcvy9w","slide":11,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/4zad83at","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/50je18ry","slide":11,"text":"DAY 7","textPreview":"DAY 7","textChars":5,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/dgruts76","slide":11,"text":"Prepare the next week","textPreview":"Prepare the next week","textChars":21,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/cfit0n6l","slide":11,"text":"Keep the useful parts. Drop or redesign what was unrealistic.","textPreview":"Keep the useful parts. Drop or redesign what was unrealistic.","textChars":61,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"textbox","id":"sh/re9cripg","slide":11,"text":"What helped","textPreview":"What helped","textChars":11,"textLines":1,"bbox":[54,228,318,20]}
+{"kind":"shape","id":"sh/qd0bydov","slide":11,"bbox":[54,250,318,104]}
+{"kind":"textbox","id":"sh/lkruxs7i","slide":11,"text":"What felt difficult","textPreview":"What felt difficult","textChars":19,"textLines":1,"bbox":[408,228,318,20]}
+{"kind":"shape","id":"sh/0jit4n6x","slide":11,"bbox":[408,250,318,104]}
+{"kind":"textbox","id":"sh/zi9cvipc","slide":11,"text":"What felt irritating or unrealistic","textPreview":"What felt irritating or unrealistic","textChars":35,"textLines":1,"bbox":[54,384,318,20]}
+{"kind":"shape","id":"sh/eh0b2dor","slide":11,"bbox":[54,406,318,104]}
+{"kind":"textbox","id":"sh/ho7al87y","slide":11,"text":"What I want to continue","textPreview":"What I want to continue","textChars":23,"textLines":1,"bbox":[408,384,318,20]}
+{"kind":"shape","id":"sh/gnyts36d","slide":11,"bbox":[408,406,318,104]}
+{"kind":"textbox","id":"sh/872t83e9","slide":11,"text":"What I want to pause","textPreview":"What I want to pause","textChars":20,"textLines":1,"bbox":[54,540,318,20]}
+{"kind":"shape","id":"sh/tsbu18fu","slide":11,"bbox":[54,562,318,104]}
+{"kind":"textbox","id":"sh/650b6twj","slide":11,"text":"What I might change","textPreview":"What I might change","textChars":19,"textLines":1,"bbox":[408,540,318,20]}
+{"kind":"shape","id":"sh/769czyx4","slide":11,"bbox":[408,562,318,104]}
+{"kind":"textbox","id":"sh/gv2tc3el","slide":11,"text":"One question for my care team","textPreview":"One question for my care team","textChars":29,"textLines":1,"bbox":[54,696,318,20]}
+{"kind":"shape","id":"sh/hwbu58f6","slide":11,"bbox":[54,718,318,104]}
+{"kind":"textbox","id":"sh/utkbadwf","slide":11,"text":"My one habit for next week","textPreview":"My one habit for next week","textChars":26,"textLines":1,"bbox":[408,696,318,20]}
+{"kind":"shape","id":"sh/vutc3yx0","slide":11,"bbox":[408,718,318,104]}
+{"kind":"image","id":"im/fq1snmp4","slide":11,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/hid3yf","slide":11,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/bu6wky","slide":12,"title":"The 7-Day Prevention Reset","textShapes":59}
+{"kind":"shape","id":"sh/czq5szqd","slide":12,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/qxonqp8n","slide":12,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/pwf6hkr2","slide":12,"text":"Optional tracker","textPreview":"Optional tracker","textChars":16,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/4v65ofqh","slide":12,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/3uxofa9w","slide":12,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/2tonm58b","slide":12,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/9sj6t4r6","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/orap0jql","slide":12,"text":"OPTIONAL","textPreview":"OPTIONAL","textChars":8,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/25ovyh4r","slide":12,"text":"Drink Pattern Tracker","textPreview":"Drink Pattern Tracker","textChars":21,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/n6xw725c","slide":12,"text":"Use this for awareness, not judgment. There is no universal water target here.","textPreview":"Use this for awareness, not judgment. There is no universal water target here.","textChars":78,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/o76d07mx","slide":12,"bbox":[54,232,708,78]}
+{"kind":"textbox","id":"sh/p8fe9cni","slide":12,"text":"Day 1","textPreview":"Day 1","textChars":5,"textLines":1,"bbox":[66,246,54,18]}
+{"kind":"textbox","id":"sh/eh4vux4v","slide":12,"text":"Water","textPreview":"Water","textChars":5,"textLines":1,"bbox":[126,242,102,18]}
+{"kind":"shape","id":"sh/fixc3250","slide":12,"bbox":[130,274,100.33,0]}
+{"kind":"textbox","id":"sh/0j6dw7ml","slide":12,"text":"Sweet drinks","textPreview":"Sweet drinks","textChars":12,"textLines":1,"bbox":[229,242,102,18]}
+{"kind":"shape","id":"sh/14fu5cn6","slide":12,"bbox":[233,274,100.33,0]}
+{"kind":"textbox","id":"sh/yd8v614z","slide":12,"text":"Coffee/tea additions","textPreview":"Coffee/tea additions","textChars":20,"textLines":1,"bbox":[332,242,102,18]}
+{"kind":"shape","id":"sh/zehwfm5k","slide":12,"bbox":[336,274,100.33,0]}
+{"kind":"textbox","id":"sh/vi9s7elw","slide":12,"text":"Juice","textPreview":"Juice","textChars":5,"textLines":1,"bbox":[435,242,102,18]}
+{"kind":"shape","id":"sh/uh0rytkb","slide":12,"bbox":[439,274,100.33,0]}
+{"kind":"textbox","id":"sh/hkba9o32","slide":12,"text":"Alcohol","textPreview":"Alcohol","textChars":7,"textLines":1,"bbox":[538,242,102,18]}
+{"kind":"shape","id":"sh/wj2t0j2h","slide":12,"bbox":[542,274,100.33,0]}
+{"kind":"textbox","id":"sh/jmtsbyls","slide":12,"text":"Timing/notes","textPreview":"Timing/notes","textChars":12,"textLines":1,"bbox":[641,242,102,18]}
+{"kind":"shape","id":"sh/ilkb2tkn","slide":12,"bbox":[645,274,100.33,0]}
+{"kind":"shape","id":"sh/5obad83y","slide":12,"bbox":[54,320,708,78]}
+{"kind":"textbox","id":"sh/4n2t432d","slide":12,"text":"Day 2","textPreview":"Day 2","textChars":5,"textLines":1,"bbox":[66,334,54,18]}
+{"kind":"textbox","id":"sh/rqtsfil4","slide":12,"text":"Water","textPreview":"Water","textChars":5,"textLines":1,"bbox":[126,330,102,18]}
+{"kind":"shape","id":"sh/6pkb6dkj","slide":12,"bbox":[130,362,100.33,0]}
+{"kind":"textbox","id":"sh/ofm9wnix","slide":12,"text":"Sweet drinks","textPreview":"Sweet drinks","textChars":12,"textLines":1,"bbox":[229,330,102,18]}
+{"kind":"shape","id":"sh/pgva58z2","slide":12,"bbox":[233,362,100.33,0]}
+{"kind":"textbox","id":"sh/2d4rud0r","slide":12,"text":"Coffee/tea additions","textPreview":"Coffee/tea additions","textChars":20,"textLines":1,"bbox":[332,330,102,18]}
+{"kind":"shape","id":"sh/neds3ihc","slide":12,"bbox":[336,362,100.33,0]}
+{"kind":"textbox","id":"sh/grm9s3il","slide":12,"text":"Juice","textPreview":"Juice","textChars":5,"textLines":1,"bbox":[435,330,102,18]}
+{"kind":"shape","id":"sh/1cva18z6","slide":12,"bbox":[439,362,100.33,0]}
+{"kind":"textbox","id":"sh/epkrqt0f","slide":12,"text":"Alcohol","textPreview":"Alcohol","textChars":7,"textLines":1,"bbox":[538,330,102,18]}
+{"kind":"shape","id":"sh/fqd8zyh0","slide":12,"bbox":[542,362,100.33,0]}
+{"kind":"textbox","id":"sh/sn29o3ip","slide":12,"text":"Timing/notes","textPreview":"Timing/notes","textChars":12,"textLines":1,"bbox":[641,330,102,18]}
+{"kind":"shape","id":"sh/tobqxoza","slide":12,"bbox":[645,362,100.33,0]}
+{"kind":"shape","id":"sh/xg7y90bq","slide":12,"bbox":[54,408,708,78]}
+{"kind":"textbox","id":"sh/wfyxgvu5","slide":12,"text":"Day 3","textPreview":"Day 3","textChars":5,"textLines":1,"bbox":[66,422,54,18]}
+{"kind":"textbox","id":"sh/vepg7qtk","slide":12,"text":"Water","textPreview":"Water","textChars":5,"textLines":1,"bbox":[126,418,102,18]}
+{"kind":"shape","id":"sh/adwfelcz","slide":12,"bbox":[130,450,100.33,0]}
+{"kind":"textbox","id":"sh/5k7yd0bm","slide":12,"text":"Sweet drinks","textPreview":"Sweet drinks","textChars":12,"textLines":1,"bbox":[229,418,102,18]}
+{"kind":"shape","id":"sh/kjyxkfu1","slide":12,"bbox":[233,450,100.33,0]}
+{"kind":"textbox","id":"sh/jipgbatg","slide":12,"text":"Coffee/tea additions","textPreview":"Coffee/tea additions","textChars":20,"textLines":1,"bbox":[332,418,102,18]}
+{"kind":"shape","id":"sh/ihgfi5cb","slide":12,"bbox":[336,450,100.33,0]}
+{"kind":"textbox","id":"sh/lone1gvi","slide":12,"text":"Juice","textPreview":"Juice","textChars":5,"textLines":1,"bbox":[435,418,102,18]}
+{"kind":"shape","id":"sh/0nex8bux","slide":12,"bbox":[439,450,100.33,0]}
+{"kind":"textbox","id":"sh/qtsv2hsv","slide":12,"text":"Alcohol","textPreview":"Alcohol","textChars":7,"textLines":1,"bbox":[538,418,102,18]}
+{"kind":"shape","id":"sh/bu1cbm9g","slide":12,"bbox":[542,450,100.33,0]}
+{"kind":"textbox","id":"sh/cvud4ral","slide":12,"text":"Timing/notes","textPreview":"Timing/notes","textChars":12,"textLines":1,"bbox":[641,418,102,18]}
+{"kind":"shape","id":"sh/dw3udwr6","slide":12,"bbox":[645,450,100.33,0]}
+{"kind":"shape","id":"sh/yhcv6hsr","slide":12,"bbox":[54,496,708,78]}
+{"kind":"textbox","id":"sh/zilcfm9c","slide":12,"text":"Day 4","textPreview":"Day 4","textChars":5,"textLines":1,"bbox":[66,510,54,18]}
+{"kind":"textbox","id":"sh/0jud8rax","slide":12,"text":"Water","textPreview":"Water","textChars":5,"textLines":1,"bbox":[126,506,102,18]}
+{"kind":"shape","id":"sh/lk3uhwri","slide":12,"bbox":[130,538,100.33,0]}
+{"kind":"textbox","id":"sh/e18buxsn","slide":12,"text":"Sweet drinks","textPreview":"Sweet drinks","textChars":12,"textLines":1,"bbox":[229,506,102,18]}
+{"kind":"shape","id":"sh/fmhc32t8","slide":12,"bbox":[233,538,100.33,0]}
+{"kind":"textbox","id":"sh/j6xsby90","slide":12,"text":"Coffee/tea additions","textPreview":"Coffee/tea additions","textChars":20,"textLines":1,"bbox":[332,506,102,18]}
+{"kind":"shape","id":"sh/i5or2t8f","slide":12,"bbox":[336,538,100.33,0]}
+{"kind":"textbox","id":"sh/5sfad8rq","slide":12,"text":"Juice","textPreview":"Juice","textChars":5,"textLines":1,"bbox":[435,506,102,18]}
+{"kind":"shape","id":"sh/k76943ql","slide":12,"bbox":[439,538,100.33,0]}
+{"kind":"textbox","id":"sh/v2ds7e9o","slide":12,"text":"Alcohol","textPreview":"Alcohol","textChars":7,"textLines":1,"bbox":[538,506,102,18]}
+{"kind":"shape","id":"sh/a14ry983","slide":12,"bbox":[542,538,100.33,0]}
+{"kind":"textbox","id":"sh/x4fa9oru","slide":12,"text":"Timing/notes","textPreview":"Timing/notes","textChars":12,"textLines":1,"bbox":[641,506,102,18]}
+{"kind":"shape","id":"sh/w3m90jq9","slide":12,"bbox":[645,538,100.33,0]}
+{"kind":"shape","id":"sh/fyhsjip8","slide":12,"bbox":[54,584,708,78]}
+{"kind":"textbox","id":"sh/ux8rad8n","slide":12,"text":"Day 5","textPreview":"Day 5","textChars":5,"textLines":1,"bbox":[66,598,54,18]}
+{"kind":"textbox","id":"sh/c3ip4f65","slide":12,"text":"Water","textPreview":"Water","textChars":5,"textLines":1,"bbox":[126,594,102,18]}
+{"kind":"shape","id":"sh/d4r6dk7a","slide":12,"bbox":[130,626,100.33,0]}
+{"kind":"textbox","id":"sh/qh0725oz","slide":12,"text":"Sweet drinks","textPreview":"Sweet drinks","textChars":12,"textLines":1,"bbox":[229,594,102,18]}
+{"kind":"shape","id":"sh/b29obapk","slide":12,"bbox":[233,626,100.33,0]}
+{"kind":"textbox","id":"sh/072p8f61","slide":12,"text":"Coffee/tea additions","textPreview":"Coffee/tea additions","textChars":20,"textLines":1,"bbox":[332,594,102,18]}
+{"kind":"shape","id":"sh/l8b6hk7m","slide":12,"bbox":[336,626,100.33,0]}
+{"kind":"textbox","id":"sh/y5k76pov","slide":12,"text":"Juice","textPreview":"Juice","textChars":5,"textLines":1,"bbox":[435,594,102,18]}
+{"kind":"shape","id":"sh/z6tofapg","slide":12,"bbox":[439,626,100.33,0]}
+{"kind":"textbox","id":"sh/8b2pcz6d","slide":12,"text":"Alcohol","textPreview":"Alcohol","textChars":7,"textLines":1,"bbox":[538,594,102,18]}
+{"kind":"shape","id":"sh/9cv6l4ni","slide":12,"bbox":[542,626,100.33,0]}
+{"kind":"textbox","id":"sh/xwj2tova","slide":12,"text":"Timing/notes","textPreview":"Timing/notes","textChars":12,"textLines":1,"bbox":[641,594,102,18]}
+{"kind":"shape","id":"sh/wva10jup","slide":12,"bbox":[645,626,100.33,0]}
+{"kind":"shape","id":"sh/vu1kredk","slide":12,"bbox":[54,672,708,78]}
+{"kind":"textbox","id":"sh/at8jy9cz","slide":12,"text":"Day 6","textPreview":"Day 6","textChars":5,"textLines":1,"bbox":[66,686,54,18]}
+{"kind":"textbox","id":"sh/9sz2p4ve","slide":12,"text":"Water","textPreview":"Water","textChars":5,"textLines":1,"bbox":[126,682,102,18]}
+{"kind":"shape","id":"sh/8rq1wjut","slide":12,"bbox":[130,714,100.33,0]}
+{"kind":"textbox","id":"sh/n6hkned8","slide":12,"text":"Sweet drinks","textPreview":"Sweet drinks","textChars":12,"textLines":1,"bbox":[229,682,102,18]}
+{"kind":"shape","id":"sh/m58ju9cn","slide":12,"bbox":[233,714,100.33,0]}
+{"kind":"textbox","id":"sh/14z2l4v2","slide":12,"text":"Coffee/tea additions","textPreview":"Coffee/tea additions","textChars":20,"textLines":1,"bbox":[332,682,102,18]}
+{"kind":"shape","id":"sh/03q1szux","slide":12,"bbox":[336,714,100.33,0]}
+{"kind":"textbox","id":"sh/q94zm5sf","slide":12,"text":"Juice","textPreview":"Juice","textChars":5,"textLines":1,"bbox":[435,682,102,18]}
+{"kind":"shape","id":"sh/radgvat0","slide":12,"bbox":[439,714,100.33,0]}
+{"kind":"textbox","id":"sh/cb6hofal","slide":12,"text":"Alcohol","textPreview":"Alcohol","textChars":7,"textLines":1,"bbox":[538,682,102,18]}
+{"kind":"shape","id":"sh/dcfyxkb6","slide":12,"bbox":[542,714,100.33,0]}
+{"kind":"textbox","id":"sh/254zilsj","slide":12,"text":"Timing/notes","textPreview":"Timing/notes","textChars":12,"textLines":1,"bbox":[641,682,102,18]}
+{"kind":"shape","id":"sh/36dgrqt4","slide":12,"bbox":[645,714,100.33,0]}
+{"kind":"shape","id":"sh/47mhkvap","slide":12,"bbox":[54,760,708,78]}
+{"kind":"textbox","id":"sh/p8vyt0bu","slide":12,"text":"Day 7","textPreview":"Day 7","textChars":5,"textLines":1,"bbox":[66,774,54,18]}
+{"kind":"textbox","id":"sh/uhkzels7","slide":12,"text":"Water","textPreview":"Water","textChars":5,"textLines":1,"bbox":[126,770,102,18]}
+{"kind":"shape","id":"sh/f2tgnqts","slide":12,"bbox":[130,802,100.33,0]}
+{"kind":"textbox","id":"sh/wvmps729","slide":12,"text":"Sweet drinks","textPreview":"Sweet drinks","textChars":12,"textLines":1,"bbox":[229,770,102,18]}
+{"kind":"shape","id":"sh/xwvqlc3e","slide":12,"bbox":[233,802,100.33,0]}
+{"kind":"textbox","id":"sh/atk7qxk3","slide":12,"text":"Coffee/tea additions","textPreview":"Coffee/tea additions","textChars":20,"textLines":1,"bbox":[332,770,102,18]}
+{"kind":"shape","id":"sh/bud8j2lo","slide":12,"bbox":[336,802,100.33,0]}
+{"kind":"textbox","id":"sh/or2pon2x","slide":12,"text":"Juice","textPreview":"Juice","textChars":5,"textLines":1,"bbox":[435,770,102,18]}
+{"kind":"shape","id":"sh/9sbqhs3i","slide":12,"bbox":[439,802,100.33,0]}
+{"kind":"textbox","id":"sh/mpk7mxkr","slide":12,"text":"Alcohol","textPreview":"Alcohol","textChars":7,"textLines":1,"bbox":[538,770,102,18]}
+{"kind":"shape","id":"sh/nqt8filc","slide":12,"bbox":[542,802,100.33,0]}
+{"kind":"textbox","id":"sh/032pkn21","slide":12,"text":"Timing/notes","textPreview":"Timing/notes","textChars":12,"textLines":1,"bbox":[641,770,102,18]}
+{"kind":"shape","id":"sh/1obqds3m","slide":12,"bbox":[645,802,100.33,0]}
+{"kind":"shape","id":"sh/3y98ni58","slide":12,"bbox":[54,880,708,68]}
+{"kind":"shape","id":"sh/2x0rudon","slide":12,"bbox":[54,880,6,68]}
+{"kind":"textbox","id":"sh/p0rqpsne","slide":12,"text":"Privacy reminder","textPreview":"Privacy reminder","textChars":16,"textLines":1,"bbox":[72,894,674,24]}
+{"kind":"textbox","id":"sh/4zi9wn6t","slide":12,"text":"If you record personal health information, store or dispose of completed pages in a way that feels secure.","textPreview":"If you record personal health information, store or dispose of completed pages in a way that feels secure.","textChars":106,"textLines":1,"bbox":[72,922,674,16]}
+{"kind":"image","id":"im/q1cr2tsb","slide":12,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/bu6wky","slide":12,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/sbbxen","slide":13,"title":"The 7-Day Prevention Reset","textShapes":57}
+{"kind":"shape","id":"sh/u5gfq58n","slide":13,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/g7yxsvqt","slide":13,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/7i5gfqpc","slide":13,"text":"Optional tracker","textPreview":"Optional tracker","textChars":16,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/6hwfml8r","slide":13,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/t47yh072","slide":13,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/8jexovqx","slide":13,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/re9grupg","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/qd0zyp8v","slide":13,"text":"OPTIONAL","textPreview":"OPTIONAL","textChars":8,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/ozmpgfyp","slide":13,"text":"Movement Tracker","textPreview":"Movement Tracker","textChars":16,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/90v69kza","slide":13,"text":"Record movement that is safe for your body. Use short notes, not perfect logs.","textPreview":"Record movement that is safe for your body. Use short notes, not perfect logs.","textChars":78,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/mx47e5gj","slide":13,"bbox":[54,230,318,148]}
+{"kind":"textbox","id":"sh/nydo7ah4","slide":13,"text":"Day 1","textPreview":"Day 1","textChars":5,"textLines":1,"bbox":[66,242,60,18]}
+{"kind":"textbox","id":"sh/0vmpcvyt","slide":13,"text":"Activity","textPreview":"Activity","textChars":8,"textLines":1,"bbox":[130,242,90,18]}
+{"kind":"shape","id":"sh/1wv650zy","slide":13,"bbox":[130,268,216,0]}
+{"kind":"shape","id":"sh/e9k7a5gn","slide":13,"bbox":[72,284,14,14]}
+{"kind":"textbox","id":"sh/zado3ah8","slide":13,"text":"Seated","textPreview":"Seated","textChars":6,"textLines":1,"bbox":[94,282,110,22]}
+{"kind":"shape","id":"sh/c7258vyh","slide":13,"bbox":[214,284,14,14]}
+{"kind":"textbox","id":"sh/d8b610z2","slide":13,"text":"Standing","textPreview":"Standing","textChars":8,"textLines":1,"bbox":[236,282,110,22]}
+{"kind":"shape","id":"sh/tc3epsne","slide":13,"bbox":[72,310,14,14]}
+{"kind":"textbox","id":"sh/sradgnm9","slide":13,"text":"Walking","textPreview":"Walking","textChars":7,"textLines":1,"bbox":[94,308,110,22]}
+{"kind":"shape","id":"sh/7q1wni5o","slide":13,"bbox":[214,310,14,14]}
+{"kind":"textbox","id":"sh/6psved43","slide":13,"text":"Strength/stretch","textPreview":"Strength/stretch","textChars":16,"textLines":1,"bbox":[236,308,110,22]}
+{"kind":"textbox","id":"sh/5ojul8ni","slide":13,"text":"How it felt / pain or symptoms / adjustment","textPreview":"How it felt / pain or symptoms / adjustment","textChars":43,"textLines":1,"bbox":[72,338,270,16]}
+{"kind":"shape","id":"sh/knadcn6x","slide":13,"bbox":[72,364,276,0]}
+{"kind":"shape","id":"sh/jm1cji5c","slide":13,"bbox":[408,230,318,148]}
+{"kind":"textbox","id":"sh/ilsvador","slide":13,"text":"Day 2","textPreview":"Day 2","textChars":5,"textLines":1,"bbox":[420,242,60,18]}
+{"kind":"textbox","id":"sh/pknexcnm","slide":13,"text":"Activity","textPreview":"Activity","textChars":8,"textLines":1,"bbox":[484,242,90,18]}
+{"kind":"shape","id":"sh/4judo7mh","slide":13,"bbox":[484,268,216,0]}
+{"kind":"shape","id":"sh/mpobi94j","slide":13,"bbox":[426,284,14,14]}
+{"kind":"textbox","id":"sh/nqxsrel4","slide":13,"text":"Seated","textPreview":"Seated","textChars":6,"textLines":1,"bbox":[448,282,110,22]}
+{"kind":"shape","id":"sh/8r6tkj2p","slide":13,"bbox":[568,284,14,14]}
+{"kind":"textbox","id":"sh/9sfato3a","slide":13,"text":"Standing","textPreview":"Standing","textChars":8,"textLines":1,"bbox":[590,282,110,22]}
+{"kind":"shape","id":"sh/e14bep4n","slide":13,"bbox":[426,310,14,14]}
+{"kind":"textbox","id":"sh/z2xsnul8","slide":13,"text":"Walking","textPreview":"Walking","textChars":7,"textLines":1,"bbox":[448,308,110,22]}
+{"kind":"shape","id":"sh/0n6tgzmt","slide":13,"bbox":[568,310,14,14]}
+{"kind":"textbox","id":"sh/lofap43e","slide":13,"text":"Strength/stretch","textPreview":"Strength/stretch","textChars":16,"textLines":1,"bbox":[590,308,110,22]}
+{"kind":"textbox","id":"sh/ix8bqtkr","slide":13,"text":"How it felt / pain or symptoms / adjustment","textPreview":"How it felt / pain or symptoms / adjustment","textChars":43,"textLines":1,"bbox":[426,338,270,16]}
+{"kind":"shape","id":"sh/jihszylc","slide":13,"bbox":[426,364,276,0]}
+{"kind":"shape","id":"sh/3axofqps","slide":13,"bbox":[54,404,318,148]}
+{"kind":"textbox","id":"sh/ipo7mlo7","slide":13,"text":"Day 3","textPreview":"Day 3","textChars":5,"textLines":1,"bbox":[66,416,60,18]}
+{"kind":"textbox","id":"sh/5cf6h07y","slide":13,"text":"Activity","textPreview":"Activity","textChars":8,"textLines":1,"bbox":[130,416,90,18]}
+{"kind":"shape","id":"sh/4b6pov6d","slide":13,"bbox":[130,442,216,0]}
+{"kind":"shape","id":"sh/vmdobqpw","slide":13,"bbox":[72,458,14,14]}
+{"kind":"textbox","id":"sh/ul47ilob","slide":13,"text":"Seated","textPreview":"Seated","textChars":6,"textLines":1,"bbox":[94,456,110,22]}
+{"kind":"shape","id":"sh/hof6dg7m","slide":13,"bbox":[214,458,14,14]}
+{"kind":"textbox","id":"sh/gn6pkv6h","slide":13,"text":"Standing","textPreview":"Standing","textChars":8,"textLines":1,"bbox":[236,456,110,22]}
+{"kind":"shape","id":"sh/fih8nap0","slide":13,"bbox":[72,484,14,14]}
+{"kind":"textbox","id":"sh/eh87u5of","slide":13,"text":"Walking","textPreview":"Walking","textChars":7,"textLines":1,"bbox":[94,482,110,22]}
+{"kind":"shape","id":"sh/wnilo7mx","slide":13,"bbox":[214,484,14,14]}
+{"kind":"textbox","id":"sh/xobmhcni","slide":13,"text":"Strength/stretch","textPreview":"Strength/stretch","textChars":16,"textLines":1,"bbox":[236,482,110,22]}
+{"kind":"textbox","id":"sh/al03mx4r","slide":13,"text":"How it felt / pain or symptoms / adjustment","textPreview":"How it felt / pain or symptoms / adjustment","textChars":43,"textLines":1,"bbox":[72,512,270,16]}
+{"kind":"shape","id":"sh/bm94f25c","slide":13,"bbox":[72,538,276,0]}
+{"kind":"shape","id":"sh/kr2lsrm9","slide":13,"bbox":[408,404,318,148]}
+{"kind":"textbox","id":"sh/lsbmlwne","slide":13,"text":"Day 4","textPreview":"Day 4","textChars":5,"textLines":1,"bbox":[420,416,60,18]}
+{"kind":"textbox","id":"sh/ypk3qh43","slide":13,"text":"Activity","textPreview":"Activity","textChars":8,"textLines":1,"bbox":[484,416,90,18]}
+{"kind":"shape","id":"sh/jqt4jm5o","slide":13,"bbox":[484,442,216,0]}
+{"kind":"shape","id":"sh/8v25wrm5","slide":13,"bbox":[426,458,14,14]}
+{"kind":"textbox","id":"sh/tgvmpwnq","slide":13,"text":"Seated","textPreview":"Seated","textChars":6,"textLines":1,"bbox":[448,456,110,22]}
+{"kind":"shape","id":"sh/hcrm9wfu","slide":13,"bbox":[568,458,14,14]}
+{"kind":"textbox","id":"sh/gbilgre9","slide":13,"text":"Standing","textPreview":"Standing","textChars":8,"textLines":1,"bbox":[590,456,110,22]}
+{"kind":"shape","id":"sh/fa947mxo","slide":13,"bbox":[426,484,14,14]}
+{"kind":"textbox","id":"sh/u9g3ehw3","slide":13,"text":"Walking","textPreview":"Walking","textChars":7,"textLines":1,"bbox":[448,482,110,22]}
+{"kind":"shape","id":"sh/pgrmdwfq","slide":13,"bbox":[568,484,14,14]}
+{"kind":"textbox","id":"sh/4filkbel","slide":13,"text":"Strength/stretch","textPreview":"Strength/stretch","textChars":16,"textLines":1,"bbox":[590,482,110,22]}
+{"kind":"textbox","id":"sh/3e94b6x0","slide":13,"text":"How it felt / pain or symptoms / adjustment","textPreview":"How it felt / pain or symptoms / adjustment","textChars":43,"textLines":1,"bbox":[426,512,270,16]}
+{"kind":"shape","id":"sh/2d03i1wf","slide":13,"bbox":[426,538,276,0]}
+{"kind":"shape","id":"sh/5k7m1cfm","slide":13,"bbox":[54,578,318,148]}
+{"kind":"textbox","id":"sh/kjyl87e1","slide":13,"text":"Day 5","textPreview":"Day 5","textChars":5,"textLines":1,"bbox":[66,590,60,18]}
+{"kind":"textbox","id":"sh/adsrm98n","slide":13,"text":"Activity","textPreview":"Activity","textChars":8,"textLines":1,"bbox":[130,590,90,18]}
+{"kind":"shape","id":"sh/belsve98","slide":13,"bbox":[130,616,216,0]}
+{"kind":"shape","id":"sh/wfu9ojqt","slide":13,"bbox":[72,632,14,14]}
+{"kind":"textbox","id":"sh/x03axore","slide":13,"text":"Seated","textPreview":"Seated","textChars":6,"textLines":1,"bbox":[94,630,110,22]}
+{"kind":"shape","id":"sh/y1crqt8z","slide":13,"bbox":[214,632,14,14]}
+{"kind":"textbox","id":"sh/j2lszy94","slide":13,"text":"Standing","textPreview":"Standing","textChars":8,"textLines":1,"bbox":[236,630,110,22]}
+{"kind":"shape","id":"sh/k3uts3qp","slide":13,"bbox":[72,658,14,14]}
+{"kind":"textbox","id":"sh/l43a1ora","slide":13,"text":"Walking","textPreview":"Walking","textChars":7,"textLines":1,"bbox":[94,656,110,22]}
+{"kind":"shape","id":"sh/e58rep8f","slide":13,"bbox":[214,658,14,14]}
+{"kind":"textbox","id":"sh/f61snu90","slide":13,"text":"Strength/stretch","textPreview":"Strength/stretch","textChars":16,"textLines":1,"bbox":[236,656,110,22]}
+{"kind":"textbox","id":"sh/3q9szeps","slide":13,"text":"How it felt / pain or symptoms / adjustment","textPreview":"How it felt / pain or symptoms / adjustment","textChars":43,"textLines":1,"bbox":[72,686,270,16]}
+{"kind":"shape","id":"sh/i50b6987","slide":13,"bbox":[72,712,276,0]}
+{"kind":"shape","id":"sh/5sru1o7i","slide":13,"bbox":[408,578,318,148]}
+{"kind":"textbox","id":"sh/4rit8jqd","slide":13,"text":"Day 6","textPreview":"Day 6","textChars":5,"textLines":1,"bbox":[420,590,60,18]}
+{"kind":"textbox","id":"sh/ru9c3ypo","slide":13,"text":"Activity","textPreview":"Activity","textChars":8,"textLines":1,"bbox":[484,590,90,18]}
+{"kind":"shape","id":"sh/qt0bat83","slide":13,"bbox":[484,616,216,0]}
+{"kind":"shape","id":"sh/dwbu587u","slide":13,"bbox":[426,632,14,14]}
+{"kind":"textbox","id":"sh/sv2tc369","slide":13,"text":"Seated","textPreview":"Seated","textChars":6,"textLines":1,"bbox":[448,630,110,22]}
+{"kind":"shape","id":"sh/7ypsrupk","slide":13,"bbox":[568,632,14,14]}
+{"kind":"textbox","id":"sh/6xgbyp8z","slide":13,"text":"Standing","textPreview":"Standing","textChars":8,"textLines":1,"bbox":[590,630,110,22]}
+{"kind":"shape","id":"sh/cruhcb2l","slide":13,"bbox":[426,658,14,14]}
+{"kind":"textbox","id":"sh/ds3ilgj6","slide":13,"text":"Walking","textPreview":"Walking","textChars":7,"textLines":1,"bbox":[448,656,110,22]}
+{"kind":"shape","id":"sh/qpsza1kf","slide":13,"bbox":[568,658,14,14]}
+{"kind":"textbox","id":"sh/bq1gj610","slide":13,"text":"Strength/stretch","textPreview":"Strength/stretch","textChars":16,"textLines":1,"bbox":[590,656,110,22]}
+{"kind":"textbox","id":"sh/o3ah8r29","slide":13,"text":"How it felt / pain or symptoms / adjustment","textPreview":"How it felt / pain or symptoms / adjustment","textChars":43,"textLines":1,"bbox":[426,686,270,16]}
+{"kind":"shape","id":"sh/p4jyhwju","slide":13,"bbox":[426,712,276,0]}
+{"kind":"shape","id":"sh/21sz6hkj","slide":13,"bbox":[54,752,318,148]}
+{"kind":"textbox","id":"sh/321gfm14","slide":13,"text":"Day 7","textPreview":"Day 7","textChars":5,"textLines":1,"bbox":[66,764,60,18]}
+{"kind":"textbox","id":"sh/8zehkvit","slide":13,"text":"Activity","textPreview":"Activity","textChars":8,"textLines":1,"bbox":[130,764,90,18]}
+{"kind":"shape","id":"sh/90nit0je","slide":13,"bbox":[130,790,216,0]}
+{"kind":"shape","id":"sh/u9kvaho3","slide":13,"bbox":[72,806,14,14]}
+{"kind":"textbox","id":"sh/vatwjmp8","slide":13,"text":"Seated","textPreview":"Seated","textChars":6,"textLines":1,"bbox":[94,804,110,22]}
+{"kind":"shape","id":"sh/wb2dcr6t","slide":13,"bbox":[214,806,14,14]}
+{"kind":"textbox","id":"sh/hwbelw7e","slide":13,"text":"Standing","textPreview":"Standing","textChars":8,"textLines":1,"bbox":[236,804,110,22]}
+{"kind":"shape","id":"sh/m50v6hor","slide":13,"bbox":[72,832,14,14]}
+{"kind":"textbox","id":"sh/76tcfmpc","slide":13,"text":"Walking","textPreview":"Walking","textChars":7,"textLines":1,"bbox":[94,830,110,22]}
+{"kind":"shape","id":"sh/872d876x","slide":13,"bbox":[214,832,14,14]}
+{"kind":"textbox","id":"sh/98behc7i","slide":13,"text":"Strength/stretch","textPreview":"Strength/stretch","textChars":16,"textLines":1,"bbox":[236,830,110,22]}
+{"kind":"textbox","id":"sh/y10v2xov","slide":13,"text":"How it felt / pain or symptoms / adjustment","textPreview":"How it felt / pain or symptoms / adjustment","textChars":43,"textLines":1,"bbox":[72,860,270,16]}
+{"kind":"shape","id":"sh/z29cb2pg","slide":13,"bbox":[72,886,276,0]}
+{"kind":"image","id":"im/0rmh4jal","slide":13,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/sbbxen","slide":13,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/lp3l9m","slide":14,"title":"The 7-Day Prevention Reset","textShapes":64}
+{"kind":"shape","id":"sh/14725kvi","slide":14,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/f25k3adc","slide":14,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/sze18vel","slide":14,"text":"Optional tracker","textPreview":"Optional tracker","textChars":16,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/t0n210v6","slide":14,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/6xwj6lwv","slide":14,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/ry5kzqdg","slide":14,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/cvilkze5","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/xwr2d4vq","slide":14,"text":"OPTIONAL","textPreview":"OPTIONAL","textChars":8,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/h0vyp0zq","slide":14,"text":"Meal and Fiber Tracker","textPreview":"Meal and Fiber Tracker","textChars":22,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/gzmxgvi5","slide":14,"text":"Use this page for one meal per day or any meal you want to remember.","textPreview":"Use this page for one meal per day or any meal you want to remember.","textChars":68,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/vydgnqhk","slide":14,"bbox":[54,232,708,78]}
+{"kind":"textbox","id":"sh/ux4fel0z","slide":14,"text":"Day 1","textPreview":"Day 1","textChars":5,"textLines":1,"bbox":[66,246,54,18]}
+{"kind":"textbox","id":"sh/twvelgju","slide":14,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[118,242,88.57,18]}
+{"kind":"shape","id":"sh/8vmxcbi9","slide":14,"bbox":[122,274,87.14,0]}
+{"kind":"textbox","id":"sh/7udwj61o","slide":14,"text":"Vegetable/fruit","textPreview":"Vegetable/fruit","textChars":15,"textLines":1,"bbox":[207.43,242,88.57,18]}
+{"kind":"shape","id":"sh/6t4fa103","slide":14,"bbox":[211.43,274,87.14,0]}
+{"kind":"textbox","id":"sh/dszyxkzy","slide":14,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[296.86,242,88.57,18]}
+{"kind":"shape","id":"sh/sr6xofid","slide":14,"bbox":[300.86,274,87.14,0]}
+{"kind":"textbox","id":"sh/cvehkjqp","slide":14,"text":"Carbohydrate","textPreview":"Carbohydrate","textChars":12,"textLines":1,"bbox":[386.29,242,88.57,18]}
+{"kind":"shape","id":"sh/xw7ito7a","slide":14,"bbox":[390.29,274,87.14,0]}
+{"kind":"textbox","id":"sh/a9wzi98j","slide":14,"text":"Fiber source","textPreview":"Fiber source","textChars":12,"textLines":1,"bbox":[475.71,242,88.57,18]}
+{"kind":"shape","id":"sh/ba50rep4","slide":14,"bbox":[479.71,274,87.14,0]}
+{"kind":"textbox","id":"sh/o7ehgzqd","slide":14,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[565.14,242,88.57,18]}
+{"kind":"shape","id":"sh/p8nip47y","slide":14,"bbox":[569.14,274,87.14,0]}
+{"kind":"textbox","id":"sh/25wze987","slide":14,"text":"Comfort/notes","textPreview":"Comfort/notes","textChars":13,"textLines":1,"bbox":[654.57,242,88.57,18]}
+{"kind":"shape","id":"sh/n650neps","slide":14,"bbox":[658.57,274,87.14,0]}
+{"kind":"shape","id":"sh/03uhczqh","slide":14,"bbox":[54,320,708,78]}
+{"kind":"textbox","id":"sh/143il472","slide":14,"text":"Day 2","textPreview":"Day 2","textChars":5,"textLines":1,"bbox":[66,334,54,18]}
+{"kind":"textbox","id":"sh/jyl0vuto","slide":14,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[118,330,88.57,18]}
+{"kind":"shape","id":"sh/idcj2ps3","slide":14,"bbox":[122,362,87.14,0]}
+{"kind":"textbox","id":"sh/503ix4bu","slide":14,"text":"Vegetable/fruit","textPreview":"Vegetable/fruit","textChars":15,"textLines":1,"bbox":[207.43,330,88.57,18]}
+{"kind":"shape","id":"sh/4zu14za9","slide":14,"bbox":[211.43,362,87.14,0]}
+{"kind":"textbox","id":"sh/r2l0zu90","slide":14,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[296.86,330,88.57,18]}
+{"kind":"shape","id":"sh/61cj6psf","slide":14,"bbox":[300.86,362,87.14,0]}
+{"kind":"textbox","id":"sh/t43i14rq","slide":14,"text":"Carbohydrate","textPreview":"Carbohydrate","textChars":12,"textLines":1,"bbox":[386.29,330,88.57,18]}
+{"kind":"shape","id":"sh/s3u18za5","slide":14,"bbox":[390.29,362,87.14,0]}
+{"kind":"textbox","id":"sh/f6503e9w","slide":14,"text":"Fiber source","textPreview":"Fiber source","textChars":12,"textLines":1,"bbox":[475.71,330,88.57,18]}
+{"kind":"shape","id":"sh/e5wja9sb","slide":14,"bbox":[479.71,362,87.14,0]}
+{"kind":"textbox","id":"sh/yl4bmh4z","slide":14,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[565.14,330,88.57,18]}
+{"kind":"shape","id":"sh/zmxcvml4","slide":14,"bbox":[569.14,362,87.14,0]}
+{"kind":"textbox","id":"sh/kn6tormp","slide":14,"text":"Comfort/notes","textPreview":"Comfort/notes","textChars":13,"textLines":1,"bbox":[654.57,330,88.57,18]}
+{"kind":"shape","id":"sh/lofuxc3a","slide":14,"bbox":[658.57,362,87.14,0]}
+{"kind":"shape","id":"sh/mpobqh4v","slide":14,"bbox":[54,408,708,78]}
+{"kind":"textbox","id":"sh/7qxczmlg","slide":14,"text":"Day 3","textPreview":"Day 3","textChars":5,"textLines":1,"bbox":[66,422,54,18]}
+{"kind":"textbox","id":"sh/8r6tsrm1","slide":14,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[118,418,88.57,18]}
+{"kind":"shape","id":"sh/9cfu1w3m","slide":14,"bbox":[122,450,87.14,0]}
+{"kind":"textbox","id":"sh/2tkbex4r","slide":14,"text":"Vegetable/fruit","textPreview":"Vegetable/fruit","textChars":15,"textLines":1,"bbox":[207.43,418,88.57,18]}
+{"kind":"shape","id":"sh/nutcn2lc","slide":14,"bbox":[211.43,450,87.14,0]}
+{"kind":"textbox","id":"sh/58jet0nu","slide":14,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[296.86,418,88.57,18]}
+{"kind":"shape","id":"sh/47axkv69","slide":14,"bbox":[300.86,450,87.14,0]}
+{"kind":"textbox","id":"sh/j61wrq5o","slide":14,"text":"Carbohydrate","textPreview":"Carbohydrate","textChars":12,"textLines":1,"bbox":[386.29,418,88.57,18]}
+{"kind":"shape","id":"sh/ilsfilo3","slide":14,"bbox":[390.29,450,87.14,0]}
+{"kind":"textbox","id":"sh/tcjex0nq","slide":14,"text":"Fiber source","textPreview":"Fiber source","textChars":12,"textLines":1,"bbox":[475.71,418,88.57,18]}
+{"kind":"shape","id":"sh/sbaxof65","slide":14,"bbox":[479.71,450,87.14,0]}
+{"kind":"textbox","id":"sh/ra1wva5k","slide":14,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[565.14,418,88.57,18]}
+{"kind":"shape","id":"sh/69sfm5oz","slide":14,"bbox":[569.14,450,87.14,0]}
+{"kind":"textbox","id":"sh/9gzelgnm","slide":14,"text":"Comfort/notes","textPreview":"Comfort/notes","textChars":13,"textLines":1,"bbox":[654.57,418,88.57,18]}
+{"kind":"shape","id":"sh/8fqdcb61","slide":14,"bbox":[658.57,450,87.14,0]}
+{"kind":"shape","id":"sh/0zuxsbex","slide":14,"bbox":[54,496,708,78]}
+{"kind":"textbox","id":"sh/l03e1gvi","slide":14,"text":"Day 4","textPreview":"Day 4","textChars":5,"textLines":1,"bbox":[66,510,54,18]}
+{"kind":"textbox","id":"sh/yxsf61wr","slide":14,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[118,506,88.57,18]}
+{"kind":"shape","id":"sh/zy1wz6dc","slide":14,"bbox":[122,538,87.14,0]}
+{"kind":"textbox","id":"sh/8nuxwvet","slide":14,"text":"Vegetable/fruit","textPreview":"Vegetable/fruit","textChars":15,"textLines":1,"bbox":[207.43,506,88.57,18]}
+{"kind":"shape","id":"sh/9o3e50ve","slide":14,"bbox":[211.43,538,87.14,0]}
+{"kind":"textbox","id":"sh/mlcfulwn","slide":14,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[296.86,506,88.57,18]}
+{"kind":"shape","id":"sh/nmlw3qd8","slide":14,"bbox":[300.86,538,87.14,0]}
+{"kind":"textbox","id":"sh/wrex0ve5","slide":14,"text":"Carbohydrate","textPreview":"Carbohydrate","textChars":12,"textLines":1,"bbox":[386.29,506,88.57,18]}
+{"kind":"shape","id":"sh/xsny90va","slide":14,"bbox":[390.29,538,87.14,0]}
+{"kind":"textbox","id":"sh/7mp0zuxs","slide":14,"text":"Fiber source","textPreview":"Fiber source","textChars":12,"textLines":1,"bbox":[475.71,506,88.57,18]}
+{"kind":"shape","id":"sh/6lgz6pg7","slide":14,"bbox":[479.71,538,87.14,0]}
+{"kind":"textbox","id":"sh/to7i14fi","slide":14,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[565.14,506,88.57,18]}
+{"kind":"shape","id":"sh/snyh8zyd","slide":14,"bbox":[569.14,538,87.14,0]}
+{"kind":"textbox","id":"sh/jip0vuxg","slide":14,"text":"Comfort/notes","textPreview":"Comfort/notes","textChars":13,"textLines":1,"bbox":[654.57,506,88.57,18]}
+{"kind":"shape","id":"sh/ihwz2pgv","slide":14,"bbox":[658.57,538,87.14,0]}
+{"kind":"shape","id":"sh/5k7ixkfm","slide":14,"bbox":[54,584,708,78]}
+{"kind":"textbox","id":"sh/kjyh4zy1","slide":14,"text":"Day 5","textPreview":"Day 5","textChars":5,"textLines":1,"bbox":[66,598,54,18]}
+{"kind":"textbox","id":"sh/3e907ex0","slide":14,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[118,594,88.57,18]}
+{"kind":"shape","id":"sh/2d0je9gf","slide":14,"bbox":[122,626,87.14,0]}
+{"kind":"textbox","id":"sh/epg7q107","slide":14,"text":"Vegetable/fruit","textPreview":"Vegetable/fruit","textChars":15,"textLines":1,"bbox":[207.43,594,88.57,18]}
+{"kind":"shape","id":"sh/zqpoj6hs","slide":14,"bbox":[211.43,626,87.14,0]}
+{"kind":"textbox","id":"sh/0rypsbid","slide":14,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[296.86,594,88.57,18]}
+{"kind":"shape","id":"sh/1s7qlgzy","slide":14,"bbox":[300.86,626,87.14,0]}
+{"kind":"textbox","id":"sh/qlw7m10b","slide":14,"text":"Carbohydrate","textPreview":"Carbohydrate","textChars":12,"textLines":1,"bbox":[386.29,594,88.57,18]}
+{"kind":"shape","id":"sh/rm5of61w","slide":14,"bbox":[390.29,626,87.14,0]}
+{"kind":"textbox","id":"sh/cnepobih","slide":14,"text":"Fiber source","textPreview":"Fiber source","textChars":12,"textLines":1,"bbox":[475.71,594,88.57,18]}
+{"kind":"shape","id":"sh/don6hwz2","slide":14,"bbox":[479.71,626,87.14,0]}
+{"kind":"textbox","id":"sh/2xc7ih0z","slide":14,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[565.14,594,88.57,18]}
+{"kind":"shape","id":"sh/3y5obm1k","slide":14,"bbox":[569.14,626,87.14,0]}
+{"kind":"textbox","id":"sh/5cbahkj2","slide":14,"text":"Comfort/notes","textPreview":"Comfort/notes","textChars":13,"textLines":1,"bbox":[654.57,594,88.57,18]}
+{"kind":"shape","id":"sh/kb29of2x","slide":14,"bbox":[658.57,626,87.14,0]}
+{"kind":"shape","id":"sh/jatsfu1c","slide":14,"bbox":[54,672,708,78]}
+{"kind":"textbox","id":"sh/ipkrmpkr","slide":14,"text":"Day 6","textPreview":"Day 6","textChars":5,"textLines":1,"bbox":[66,686,54,18]}
+{"kind":"textbox","id":"sh/xobadkj6","slide":14,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[118,682,88.57,18]}
+{"kind":"shape","id":"sh/wni9kf2l","slide":14,"bbox":[122,714,87.14,0]}
+{"kind":"textbox","id":"sh/vm9sba10","slide":14,"text":"Vegetable/fruit","textPreview":"Vegetable/fruit","textChars":15,"textLines":1,"bbox":[207.43,682,88.57,18]}
+{"kind":"shape","id":"sh/al0ri5kf","slide":14,"bbox":[211.43,714,87.14,0]}
+{"kind":"textbox","id":"sh/9kra903a","slide":14,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[296.86,682,88.57,18]}
+{"kind":"shape","id":"sh/8ji9gv2p","slide":14,"bbox":[300.86,714,87.14,0]}
+{"kind":"textbox","id":"sh/p4bat472","slide":14,"text":"Carbohydrate","textPreview":"Carbohydrate","textChars":12,"textLines":1,"bbox":[386.29,682,88.57,18]}
+{"kind":"shape","id":"sh/o329kzqh","slide":14,"bbox":[390.29,714,87.14,0]}
+{"kind":"textbox","id":"sh/n2tsru9w","slide":14,"text":"Fiber source","textPreview":"Fiber source","textChars":12,"textLines":1,"bbox":[475.71,682,88.57,18]}
+{"kind":"shape","id":"sh/21krip8b","slide":14,"bbox":[479.71,714,87.14,0]}
+{"kind":"textbox","id":"sh/10bapkrq","slide":14,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[565.14,682,88.57,18]}
+{"kind":"shape","id":"sh/0zi9gzq5","slide":14,"bbox":[569.14,714,87.14,0]}
+{"kind":"textbox","id":"sh/fy9snu9k","slide":14,"text":"Comfort/notes","textPreview":"Comfort/notes","textChars":13,"textLines":1,"bbox":[654.57,682,88.57,18]}
+{"kind":"shape","id":"sh/ex0rep8f","slide":14,"bbox":[658.57,714,87.14,0]}
+{"kind":"shape","id":"sh/lwva1o7u","slide":14,"bbox":[54,760,708,78]}
+{"kind":"textbox","id":"sh/kvmtsjqp","slide":14,"text":"Day 7","textPreview":"Day 7","textChars":5,"textLines":1,"bbox":[66,774,54,18]}
+{"kind":"textbox","id":"sh/i1g7mlo7","slide":14,"text":"Meal","textPreview":"Meal","textChars":4,"textLines":1,"bbox":[118,770,88.57,18]}
+{"kind":"shape","id":"sh/32p8vqpc","slide":14,"bbox":[122,802,87.14,0]}
+{"kind":"textbox","id":"sh/43ypov6x","slide":14,"text":"Vegetable/fruit","textPreview":"Vegetable/fruit","textChars":15,"textLines":1,"bbox":[207.43,770,88.57,18]}
+{"kind":"shape","id":"sh/547qx07i","slide":14,"bbox":[211.43,802,87.14,0]}
+{"kind":"textbox","id":"sh/udw7i1ov","slide":14,"text":"Protein","textPreview":"Protein","textChars":7,"textLines":1,"bbox":[296.86,770,88.57,18]}
+{"kind":"shape","id":"sh/ve5or6pg","slide":14,"bbox":[300.86,802,87.14,0]}
+{"kind":"textbox","id":"sh/gfepkb61","slide":14,"text":"Carbohydrate","textPreview":"Carbohydrate","textChars":12,"textLines":1,"bbox":[386.29,770,88.57,18]}
+{"kind":"shape","id":"sh/hgn6tg7m","slide":14,"bbox":[390.29,802,87.14,0]}
+{"kind":"textbox","id":"sh/e907u5oz","slide":14,"text":"Fiber source","textPreview":"Fiber source","textChars":12,"textLines":1,"bbox":[475.71,770,88.57,18]}
+{"kind":"shape","id":"sh/fa983a5k","slide":14,"bbox":[479.71,802,87.14,0]}
+{"kind":"textbox","id":"sh/be14f25c","slide":14,"text":"Drink","textPreview":"Drink","textChars":5,"textLines":1,"bbox":[565.14,770,88.57,18]}
+{"kind":"shape","id":"sh/ads3mx4r","slide":14,"bbox":[569.14,802,87.14,0]}
+{"kind":"textbox","id":"sh/xgjmhcn2","slide":14,"text":"Comfort/notes","textPreview":"Comfort/notes","textChars":13,"textLines":1,"bbox":[654.57,770,88.57,18]}
+{"kind":"shape","id":"sh/cfa5o7mh","slide":14,"bbox":[658.57,802,87.14,0]}
+{"kind":"image","id":"im/fm10ruxc","slide":14,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/lp3l9m","slide":14,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/wwdilm","slide":15,"title":"The 7-Day Prevention Reset","textShapes":65}
+{"kind":"shape","id":"sh/83u54nm5","slide":15,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/m1cn2d4f","slide":15,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/l03mt8nu","slide":15,"text":"Optional tracker","textPreview":"Optional tracker","textChars":16,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/kfu50369","slide":15,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/zel4ry5o","slide":15,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/ydcnydo3","slide":15,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/xc3mp8ni","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/cba5w36x","slide":15,"text":"OPTIONAL","textPreview":"OPTIONAL","textChars":8,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/e5gbql4v","slide":15,"text":"Sleep Check-In","textPreview":"Sleep Check-In","textChars":14,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/f6pczq5g","slide":15,"text":"Approximate notes are enough. Exact sleep calculations are not required.","textPreview":"Approximate notes are enough. Exact sleep calculations are not required.","textChars":72,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/07ytsbm1","slide":15,"bbox":[54,232,708,78]}
+{"kind":"textbox","id":"sh/18ru1gn6","slide":15,"text":"Day 1","textPreview":"Day 1","textChars":5,"textLines":1,"bbox":[66,246,54,18]}
+{"kind":"textbox","id":"sh/q1gbm14j","slide":15,"text":"Bedtime","textPreview":"Bedtime","textChars":7,"textLines":1,"bbox":[118,242,88.57,18]}
+{"kind":"shape","id":"sh/r2pcv654","slide":15,"bbox":[122,274,87.14,0]}
+{"kind":"textbox","id":"sh/s3ytobmp","slide":15,"text":"Wake time","textPreview":"Wake time","textChars":9,"textLines":1,"bbox":[207.43,242,88.57,18]}
+{"kind":"shape","id":"sh/d47uxgna","slide":15,"bbox":[211.43,274,87.14,0]}
+{"kind":"textbox","id":"sh/idwbi1on","slide":15,"text":"Night waking","textPreview":"Night waking","textChars":12,"textLines":1,"bbox":[296.86,242,88.57,18]}
+{"kind":"shape","id":"sh/3y5srm58","slide":15,"bbox":[300.86,274,87.14,0]}
+{"kind":"textbox","id":"sh/76103yho","slide":15,"text":"Nap","textPreview":"Nap","textChars":3,"textLines":1,"bbox":[386.29,242,88.57,18]}
+{"kind":"shape","id":"sh/m5szatg3","slide":15,"bbox":[390.29,274,87.14,0]}
+{"kind":"textbox","id":"sh/98ji58zu","slide":15,"text":"Late caffeine","textPreview":"Late caffeine","textChars":13,"textLines":1,"bbox":[475.71,242,88.57,18]}
+{"kind":"shape","id":"sh/87ahc3y9","slide":15,"bbox":[479.71,274,87.14,0]}
+{"kind":"textbox","id":"sh/vu107ihk","slide":15,"text":"Screen/light","textPreview":"Screen/light","textChars":12,"textLines":1,"bbox":[565.14,242,88.57,18]}
+{"kind":"shape","id":"sh/utszedgf","slide":15,"bbox":[569.14,274,87.14,0]}
+{"kind":"textbox","id":"sh/hw3i98zq","slide":15,"text":"Context/rested","textPreview":"Context/rested","textChars":14,"textLines":1,"bbox":[654.57,242,88.57,18]}
+{"kind":"shape","id":"sh/wvuhg3y5","slide":15,"bbox":[658.57,274,87.14,0]}
+{"kind":"shape","id":"sh/byhgvehg","slide":15,"bbox":[54,320,708,78]}
+{"kind":"textbox","id":"sh/qx8z290v","slide":15,"text":"Day 2","textPreview":"Day 2","textChars":5,"textLines":1,"bbox":[66,334,54,18]}
+{"kind":"textbox","id":"sh/g3mxwfet","slide":15,"text":"Bedtime","textPreview":"Bedtime","textChars":7,"textLines":1,"bbox":[118,330,88.57,18]}
+{"kind":"shape","id":"sh/14ve5kfe","slide":15,"bbox":[122,362,87.14,0]}
+{"kind":"textbox","id":"sh/eh4fu5gn","slide":15,"text":"Wake time","textPreview":"Wake time","textChars":9,"textLines":1,"bbox":[207.43,330,88.57,18]}
+{"kind":"shape","id":"sh/fidw3ax8","slide":15,"bbox":[211.43,362,87.14,0]}
+{"kind":"textbox","id":"sh/sfmxsvyx","slide":15,"text":"Night waking","textPreview":"Night waking","textChars":12,"textLines":1,"bbox":[296.86,330,88.57,18]}
+{"kind":"shape","id":"sh/tgve10f2","slide":15,"bbox":[300.86,362,87.14,0]}
+{"kind":"textbox","id":"sh/6d4vq5gr","slide":15,"text":"Nap","textPreview":"Nap","textChars":3,"textLines":1,"bbox":[386.29,330,88.57,18]}
+{"kind":"shape","id":"sh/redwzaxc","slide":15,"bbox":[390.29,362,87.14,0]}
+{"kind":"textbox","id":"sh/cb6x4ze1","slide":15,"text":"Late caffeine","textPreview":"Late caffeine","textChars":13,"textLines":1,"bbox":[475.71,330,88.57,18]}
+{"kind":"shape","id":"sh/dczed4fm","slide":15,"bbox":[479.71,362,87.14,0]}
+{"kind":"textbox","id":"sh/9gru5wvy","slide":15,"text":"Screen/light","textPreview":"Screen/light","textChars":12,"textLines":1,"bbox":[565.14,330,88.57,18]}
+{"kind":"shape","id":"sh/8fitwred","slide":15,"bbox":[569.14,362,87.14,0]}
+{"kind":"textbox","id":"sh/7e9c3mds","slide":15,"text":"Context/rested","textPreview":"Context/rested","textChars":14,"textLines":1,"bbox":[654.57,330,88.57,18]}
+{"kind":"shape","id":"sh/mdgbuhw7","slide":15,"bbox":[658.57,362,87.14,0]}
+{"kind":"shape","id":"sh/hkru9wvu","slide":15,"bbox":[54,408,708,78]}
+{"kind":"textbox","id":"sh/wjit0bep","slide":15,"text":"Day 3","textPreview":"Day 3","textChars":5,"textLines":1,"bbox":[66,422,54,18]}
+{"kind":"textbox","id":"sh/vi9c76d4","slide":15,"text":"Bedtime","textPreview":"Bedtime","textChars":7,"textLines":1,"bbox":[118,418,88.57,18]}
+{"kind":"shape","id":"sh/uh0by1wj","slide":15,"bbox":[122,450,87.14,0]}
+{"kind":"textbox","id":"sh/5obudgv6","slide":15,"text":"Wake time","textPreview":"Wake time","textChars":9,"textLines":1,"bbox":[207.43,418,88.57,18]}
+{"kind":"shape","id":"sh/4n2t4bul","slide":15,"bbox":[211.43,450,87.14,0]}
+{"kind":"textbox","id":"sh/2tcrydc3","slide":15,"text":"Night waking","textPreview":"Night waking","textChars":12,"textLines":1,"bbox":[296.86,418,88.57,18]}
+{"kind":"shape","id":"sh/3ul87ito","slide":15,"bbox":[300.86,450,87.14,0]}
+{"kind":"textbox","id":"sh/ove90nu9","slide":15,"text":"Nap","textPreview":"Nap","textChars":3,"textLines":1,"bbox":[386.29,418,88.57,18]}
+{"kind":"shape","id":"sh/pwnq9sbu","slide":15,"bbox":[390.29,450,87.14,0]}
+{"kind":"textbox","id":"sh/axwr2dcz","slide":15,"text":"Late caffeine","textPreview":"Late caffeine","textChars":13,"textLines":1,"bbox":[475.71,418,88.57,18]}
+{"kind":"shape","id":"sh/by58bitk","slide":15,"bbox":[479.71,450,87.14,0]}
+{"kind":"textbox","id":"sh/cze94nu5","slide":15,"text":"Screen/light","textPreview":"Screen/light","textChars":12,"textLines":1,"bbox":[565.14,418,88.57,18]}
+{"kind":"shape","id":"sh/xknqdsbq","slide":15,"bbox":[569.14,450,87.14,0]}
+{"kind":"textbox","id":"sh/ylwr6xcb","slide":15,"text":"Context/rested","textPreview":"Context/rested","textChars":14,"textLines":1,"bbox":[654.57,418,88.57,18]}
+{"kind":"shape","id":"sh/zmpsf2tw","slide":15,"bbox":[658.57,450,87.14,0]}
+{"kind":"shape","id":"sh/vqp8n29o","slide":15,"bbox":[54,496,708,78]}
+{"kind":"textbox","id":"sh/upg7ux8j","slide":15,"text":"Day 4","textPreview":"Day 4","textChars":5,"textLines":1,"bbox":[66,510,54,18]}
+{"kind":"textbox","id":"sh/hs7qpcru","slide":15,"text":"Bedtime","textPreview":"Bedtime","textChars":7,"textLines":1,"bbox":[118,506,88.57,18]}
+{"kind":"shape","id":"sh/wrypw7q9","slide":15,"bbox":[122,538,87.14,0]}
+{"kind":"textbox","id":"sh/7mp8ji9s","slide":15,"text":"Wake time","textPreview":"Wake time","textChars":9,"textLines":1,"bbox":[207.43,506,88.57,18]}
+{"kind":"shape","id":"sh/mlw7qx87","slide":15,"bbox":[211.43,538,87.14,0]}
+{"kind":"textbox","id":"sh/9o7qlsry","slide":15,"text":"Night waking","textPreview":"Night waking","textChars":12,"textLines":1,"bbox":[296.86,506,88.57,18]}
+{"kind":"shape","id":"sh/8nypsnqd","slide":15,"bbox":[300.86,538,87.14,0]}
+{"kind":"textbox","id":"sh/zy58fi9w","slide":15,"text":"Nap","textPreview":"Nap","textChars":3,"textLines":1,"bbox":[386.29,506,88.57,18]}
+{"kind":"shape","id":"sh/yxw7md8b","slide":15,"bbox":[390.29,538,87.14,0]}
+{"kind":"textbox","id":"sh/4rad0f2x","slide":15,"text":"Late caffeine","textPreview":"Late caffeine","textChars":13,"textLines":1,"bbox":[475.71,506,88.57,18]}
+{"kind":"shape","id":"sh/psje9k3i","slide":15,"bbox":[479.71,538,87.14,0]}
+{"kind":"textbox","id":"sh/2psvypkr","slide":15,"text":"Screen/light","textPreview":"Screen/light","textChars":12,"textLines":1,"bbox":[565.14,506,88.57,18]}
+{"kind":"shape","id":"sh/3q1w7alc","slide":15,"bbox":[569.14,538,87.14,0]}
+{"kind":"textbox","id":"sh/cvad4z2t","slide":15,"text":"Context/rested","textPreview":"Context/rested","textChars":14,"textLines":1,"bbox":[654.57,506,88.57,18]}
+{"kind":"shape","id":"sh/dgjed43e","slide":15,"bbox":[658.57,538,87.14,0]}
+{"kind":"shape","id":"sh/qtsv2pkn","slide":15,"bbox":[54,584,708,78]}
+{"kind":"textbox","id":"sh/ru1wbul8","slide":15,"text":"Day 5","textPreview":"Day 5","textChars":5,"textLines":1,"bbox":[66,598,54,18]}
+{"kind":"textbox","id":"sh/szqdsv2p","slide":15,"text":"Bedtime","textPreview":"Bedtime","textChars":7,"textLines":1,"bbox":[118,594,88.57,18]}
+{"kind":"shape","id":"sh/tkze103a","slide":15,"bbox":[122,626,87.14,0]}
+{"kind":"textbox","id":"sh/x4va9wj2","slide":15,"text":"Wake time","textPreview":"Wake time","textChars":9,"textLines":1,"bbox":[207.43,594,88.57,18]}
+{"kind":"shape","id":"sh/w3mt0rih","slide":15,"bbox":[211.43,626,87.14,0]}
+{"kind":"textbox","id":"sh/v2ds761w","slide":15,"text":"Night waking","textPreview":"Night waking","textChars":12,"textLines":1,"bbox":[296.86,594,88.57,18]}
+{"kind":"shape","id":"sh/a14by10b","slide":15,"bbox":[300.86,626,87.14,0]}
+{"kind":"textbox","id":"sh/90va5wjq","slide":15,"text":"Nap","textPreview":"Nap","textChars":3,"textLines":1,"bbox":[386.29,594,88.57,18]}
+{"kind":"shape","id":"sh/8zmtwri5","slide":15,"bbox":[390.29,626,87.14,0]}
+{"kind":"textbox","id":"sh/nyts3m1k","slide":15,"text":"Late caffeine","textPreview":"Late caffeine","textChars":13,"textLines":1,"bbox":[475.71,594,88.57,18]}
+{"kind":"shape","id":"sh/mxkbuh0f","slide":15,"bbox":[479.71,626,87.14,0]}
+{"kind":"textbox","id":"sh/twfuhgja","slide":15,"text":"Screen/light","textPreview":"Screen/light","textChars":12,"textLines":1,"bbox":[565.14,594,88.57,18]}
+{"kind":"shape","id":"sh/sv6t8bip","slide":15,"bbox":[569.14,626,87.14,0]}
+{"kind":"textbox","id":"sh/q1072dg7","slide":15,"text":"Context/rested","textPreview":"Context/rested","textChars":14,"textLines":1,"bbox":[654.57,594,88.57,18]}
+{"kind":"shape","id":"sh/b298bihc","slide":15,"bbox":[658.57,626,87.14,0]}
+{"kind":"shape","id":"sh/c3ip4nyx","slide":15,"bbox":[54,672,708,78]}
+{"kind":"textbox","id":"sh/d4rqdszi","slide":15,"text":"Day 6","textPreview":"Day 6","textChars":5,"textLines":1,"bbox":[66,686,54,18]}
+{"kind":"textbox","id":"sh/2dg7ydgv","slide":15,"text":"Bedtime","textPreview":"Bedtime","textChars":7,"textLines":1,"bbox":[118,682,88.57,18]}
+{"kind":"shape","id":"sh/3ep87ihg","slide":15,"bbox":[122,714,87.14,0]}
+{"kind":"textbox","id":"sh/4fip03y1","slide":15,"text":"Wake time","textPreview":"Wake time","textChars":9,"textLines":1,"bbox":[207.43,682,88.57,18]}
+{"kind":"shape","id":"sh/pgrq98zm","slide":15,"bbox":[211.43,714,87.14,0]}
+{"kind":"textbox","id":"sh/m9kraxgz","slide":15,"text":"Night waking","textPreview":"Night waking","textChars":12,"textLines":1,"bbox":[296.86,682,88.57,18]}
+{"kind":"shape","id":"sh/nat8j2hk","slide":15,"bbox":[300.86,714,87.14,0]}
+{"kind":"textbox","id":"sh/kjy1wfax","slide":15,"text":"Nap","textPreview":"Nap","textChars":3,"textLines":1,"bbox":[386.29,682,88.57,18]}
+{"kind":"shape","id":"sh/5k72pkbi","slide":15,"bbox":[390.29,714,87.14,0]}
+{"kind":"textbox","id":"sh/ihgju5s7","slide":15,"text":"Late caffeine","textPreview":"Late caffeine","textChars":13,"textLines":1,"bbox":[475.71,682,88.57,18]}
+{"kind":"shape","id":"sh/jipknatc","slide":15,"bbox":[479.71,714,87.14,0]}
+{"kind":"textbox","id":"sh/wfy1sva1","slide":15,"text":"Screen/light","textPreview":"Screen/light","textChars":12,"textLines":1,"bbox":[565.14,682,88.57,18]}
+{"kind":"shape","id":"sh/xg72l0bm","slide":15,"bbox":[569.14,714,87.14,0]}
+{"kind":"textbox","id":"sh/adwjq5sv","slide":15,"text":"Context/rested","textPreview":"Context/rested","textChars":14,"textLines":1,"bbox":[654.57,682,88.57,18]}
+{"kind":"shape","id":"sh/ve50jqtg","slide":15,"bbox":[658.57,714,87.14,0]}
+{"kind":"shape","id":"sh/gbi14za5","slide":15,"bbox":[54,760,708,78]}
+{"kind":"textbox","id":"sh/hcr2x4rq","slide":15,"text":"Day 7","textPreview":"Day 7","textChars":5,"textLines":1,"bbox":[66,774,54,18]}
+{"kind":"textbox","id":"sh/r6d43yds","slide":15,"text":"Bedtime","textPreview":"Bedtime","textChars":7,"textLines":1,"bbox":[118,770,88.57,18]}
+{"kind":"shape","id":"sh/q5knutc7","slide":15,"bbox":[122,802,87.14,0]}
+{"kind":"textbox","id":"sh/d8vm58vy","slide":15,"text":"Wake time","textPreview":"Wake time","textChars":9,"textLines":1,"bbox":[207.43,770,88.57,18]}
+{"kind":"shape","id":"sh/c7m5w3ud","slide":15,"bbox":[211.43,802,87.14,0]}
+{"kind":"textbox","id":"sh/zad47yt4","slide":15,"text":"Night waking","textPreview":"Night waking","textChars":12,"textLines":1,"bbox":[296.86,770,88.57,18]}
+{"kind":"shape","id":"sh/e94nydcj","slide":15,"bbox":[300.86,802,87.14,0]}
+{"kind":"textbox","id":"sh/1cvm98bu","slide":15,"text":"Nap","textPreview":"Nap","textChars":3,"textLines":1,"bbox":[386.29,770,88.57,18]}
+{"kind":"shape","id":"sh/0bm503up","slide":15,"bbox":[390.29,802,87.14,0]}
+{"kind":"textbox","id":"sh/fet4vedk","slide":15,"text":"Late caffeine","textPreview":"Late caffeine","textChars":13,"textLines":1,"bbox":[475.71,770,88.57,18]}
+{"kind":"shape","id":"sh/ud03m9cf","slide":15,"bbox":[479.71,802,87.14,0]}
+{"kind":"textbox","id":"sh/i5szql0z","slide":15,"text":"Screen/light","textPreview":"Screen/light","textChars":12,"textLines":1,"bbox":[565.14,770,88.57,18]}
+{"kind":"shape","id":"sh/j61gj6hk","slide":15,"bbox":[569.14,802,87.14,0]}
+{"kind":"textbox","id":"sh/47ahsbi5","slide":15,"text":"Context/rested","textPreview":"Context/rested","textChars":14,"textLines":1,"bbox":[654.57,770,88.57,18]}
+{"kind":"shape","id":"sh/58jylgzq","slide":15,"bbox":[658.57,802,87.14,0]}
+{"kind":"textbox","id":"sh/ah8fm103","slide":15,"text":"Context can include pain, caregiving, shift work, breathing symptoms, restless legs, stress, or other notes.","textPreview":"Context can include pain, caregiving, shift work, breathing symptoms, restless legs, stress, or other notes.","textChars":108,"textLines":1,"bbox":[54,878,708,32]}
+{"kind":"image","id":"im/69w7qhcz","slide":15,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/wwdilm","slide":15,"text":"[Sources]\n- [6] National Heart, Lung, and Blood Institute. Sleep Deprivation and Deficiency: Healthy Sleep Habits. 2022. https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits"}
+{"kind":"slide","id":"sl/zsebqj","slide":16,"title":"The 7-Day Prevention Reset","textShapes":59}
+{"kind":"shape","id":"sh/zi14vqxw","slide":16,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/lkjmx0f2","slide":16,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/mlsnqlwn","slide":16,"text":"Optional tracker","textPreview":"Optional tracker","textChars":16,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/nm14zqx8","slide":16,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/87a5svet","slide":16,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/98jm10fe","slide":16,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/a9snu5wz","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/val43ax4","slide":16,"text":"OPTIONAL","textPreview":"OPTIONAL","textChars":8,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/fq50n2d4","slide":16,"text":"Mood and Energy Notes","textPreview":"Mood and Energy Notes","textChars":21,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/epwjexcj","slide":16,"text":"These numbers are simple observations, not diagnoses or grades.","textPreview":"These numbers are simple observations, not diagnoses or grades.","textChars":63,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/1snipcvu","slide":16,"bbox":[54,232,708,78]}
+{"kind":"textbox","id":"sh/gre1g7up","slide":16,"text":"Day 1","textPreview":"Day 1","textChars":5,"textLines":1,"bbox":[66,246,54,18]}
+{"kind":"textbox","id":"sh/rml0j2ds","slide":16,"text":"Mood 1-5","textPreview":"Mood 1-5","textChars":8,"textLines":1,"bbox":[126,242,102,18]}
+{"kind":"shape","id":"sh/6lcjaxc7","slide":16,"bbox":[130,274,100.33,0]}
+{"kind":"textbox","id":"sh/tonilsvy","slide":16,"text":"Energy 1-5","textPreview":"Energy 1-5","textChars":10,"textLines":1,"bbox":[229,242,102,18]}
+{"kind":"shape","id":"sh/sne1cnud","slide":16,"bbox":[233,274,100.33,0]}
+{"kind":"textbox","id":"sh/bipkvmdc","slide":16,"text":"Meal note","textPreview":"Meal note","textChars":9,"textLines":1,"bbox":[332,242,102,18]}
+{"kind":"shape","id":"sh/ahgjmhcr","slide":16,"bbox":[336,274,100.33,0]}
+{"kind":"textbox","id":"sh/md03elwz","slide":16,"text":"Sleep note","textPreview":"Sleep note","textChars":10,"textLines":1,"bbox":[435,242,102,18]}
+{"kind":"shape","id":"sh/7et4nqxk","slide":16,"bbox":[439,274,100.33,0]}
+{"kind":"textbox","id":"sh/8f2lgvep","slide":16,"text":"Movement note","textPreview":"Movement note","textChars":13,"textLines":1,"bbox":[538,242,102,18]}
+{"kind":"shape","id":"sh/9gbmp0fa","slide":16,"bbox":[542,274,100.33,0]}
+{"kind":"textbox","id":"sh/uhk3i5wv","slide":16,"text":"Stress/context","textPreview":"Stress/context","textChars":14,"textLines":1,"bbox":[641,242,102,18]}
+{"kind":"shape","id":"sh/vit4raxg","slide":16,"bbox":[645,274,100.33,0]}
+{"kind":"shape","id":"sh/wj2lkve1","slide":16,"bbox":[54,320,708,78]}
+{"kind":"textbox","id":"sh/hkbmt0fm","slide":16,"text":"Day 2","textPreview":"Day 2","textChars":5,"textLines":1,"bbox":[66,334,54,18]}
+{"kind":"textbox","id":"sh/alg361wr","slide":16,"text":"Mood 1-5","textPreview":"Mood 1-5","textChars":8,"textLines":1,"bbox":[126,330,102,18]}
+{"kind":"shape","id":"sh/bmpkf6xc","slide":16,"bbox":[130,362,100.33,0]}
+{"kind":"textbox","id":"sh/t0f6l4zu","slide":16,"text":"Energy 1-5","textPreview":"Energy 1-5","textChars":10,"textLines":1,"bbox":[229,330,102,18]}
+{"kind":"shape","id":"sh/sz6pczy9","slide":16,"bbox":[233,362,100.33,0]}
+{"kind":"textbox","id":"sh/rexojuho","slide":16,"text":"Meal note","textPreview":"Meal note","textChars":9,"textLines":1,"bbox":[332,330,102,18]}
+{"kind":"shape","id":"sh/6do7a9g3","slide":16,"bbox":[336,362,100.33,0]}
+{"kind":"textbox","id":"sh/14f6pozq","slide":16,"text":"Sleep note","textPreview":"Sleep note","textChars":10,"textLines":1,"bbox":[435,330,102,18]}
+{"kind":"shape","id":"sh/g36pgjy5","slide":16,"bbox":[439,362,100.33,0]}
+{"kind":"textbox","id":"sh/f2xonehk","slide":16,"text":"Movement note","textPreview":"Movement note","textChars":13,"textLines":1,"bbox":[538,330,102,18]}
+{"kind":"shape","id":"sh/e1o7e9gf","slide":16,"bbox":[542,362,100.33,0]}
+{"kind":"textbox","id":"sh/h8v6dkzm","slide":16,"text":"Stress/context","textPreview":"Stress/context","textChars":14,"textLines":1,"bbox":[641,330,102,18]}
+{"kind":"shape","id":"sh/w7m5kfy1","slide":16,"bbox":[645,362,100.33,0]}
+{"kind":"shape","id":"sh/kfu18rm1","slide":16,"bbox":[54,408,708,78]}
+{"kind":"textbox","id":"sh/l03i1wn6","slide":16,"text":"Day 3","textPreview":"Day 3","textChars":5,"textLines":1,"bbox":[66,422,54,18]}
+{"kind":"textbox","id":"sh/ydcj6h4v","slide":16,"text":"Mood 1-5","textPreview":"Mood 1-5","textChars":8,"textLines":1,"bbox":[126,418,102,18]}
+{"kind":"shape","id":"sh/jel0zm5g","slide":16,"bbox":[130,450,100.33,0]}
+{"kind":"textbox","id":"sh/wbu147mp","slide":16,"text":"Energy 1-5","textPreview":"Energy 1-5","textChars":10,"textLines":1,"bbox":[229,418,102,18]}
+{"kind":"shape","id":"sh/xc3ixcna","slide":16,"bbox":[233,450,100.33,0]}
+{"kind":"textbox","id":"sh/a9sj2h4j","slide":16,"text":"Meal note","textPreview":"Meal note","textChars":9,"textLines":1,"bbox":[332,418,102,18]}
+{"kind":"shape","id":"sh/bal0v254","slide":16,"bbox":[336,450,100.33,0]}
+{"kind":"textbox","id":"sh/o7ah07mt","slide":16,"text":"Sleep note","textPreview":"Sleep note","textChars":10,"textLines":1,"bbox":[435,418,102,18]}
+{"kind":"shape","id":"sh/98jitcne","slide":16,"bbox":[439,450,100.33,0]}
+{"kind":"textbox","id":"sh/r2hkj2p0","slide":16,"text":"Movement note","textPreview":"Movement note","textChars":13,"textLines":1,"bbox":[538,418,102,18]}
+{"kind":"shape","id":"sh/qh8jax8f","slide":16,"bbox":[542,450,100.33,0]}
+{"kind":"textbox","id":"sh/d4j2lc76","slide":16,"text":"Stress/context","textPreview":"Stress/context","textChars":14,"textLines":1,"bbox":[641,418,102,18]}
+{"kind":"shape","id":"sh/s3a1c76l","slide":16,"bbox":[645,450,100.33,0]}
+{"kind":"shape","id":"sh/f61kn2pw","slide":16,"bbox":[54,496,708,78]}
+{"kind":"textbox","id":"sh/e5sjexor","slide":16,"text":"Day 4","textPreview":"Day 4","textChars":5,"textLines":1,"bbox":[66,510,54,18]}
+{"kind":"textbox","id":"sh/18j2pc72","slide":16,"text":"Mood 1-5","textPreview":"Mood 1-5","textChars":8,"textLines":1,"bbox":[126,506,102,18]}
+{"kind":"shape","id":"sh/07a1g76h","slide":16,"bbox":[130,538,100.33,0]}
+{"kind":"textbox","id":"sh/nalkrmp8","slide":16,"text":"Energy 1-5","textPreview":"Energy 1-5","textChars":10,"textLines":1,"bbox":[229,506,102,18]}
+{"kind":"shape","id":"sh/29sjihon","slide":16,"bbox":[233,538,100.33,0]}
+{"kind":"textbox","id":"sh/y5wnal8v","slide":16,"text":"Meal note","textPreview":"Meal note","textChars":9,"textLines":1,"bbox":[332,506,102,18]}
+{"kind":"shape","id":"sh/j654jq9g","slide":16,"bbox":[336,538,100.33,0]}
+{"kind":"textbox","id":"sh/k7e5cvq1","slide":16,"text":"Sleep note","textPreview":"Sleep note","textChars":10,"textLines":1,"bbox":[435,506,102,18]}
+{"kind":"shape","id":"sh/lsnmlgrm","slide":16,"bbox":[439,538,100.33,0]}
+{"kind":"textbox","id":"sh/a1c3618z","slide":16,"text":"Movement note","textPreview":"Movement note","textChars":13,"textLines":1,"bbox":[538,506,102,18]}
+{"kind":"shape","id":"sh/b254f694","slide":16,"bbox":[542,538,100.33,0]}
+{"kind":"textbox","id":"sh/w3e58bqp","slide":16,"text":"Stress/context","textPreview":"Stress/context","textChars":14,"textLines":1,"bbox":[641,506,102,18]}
+{"kind":"shape","id":"sh/x4nmhgra","slide":16,"bbox":[645,538,100.33,0]}
+{"kind":"shape","id":"sh/uxgni583","slide":16,"bbox":[54,584,708,78]}
+{"kind":"textbox","id":"sh/vyp4ra9o","slide":16,"text":"Day 5","textPreview":"Day 5","textChars":5,"textLines":1,"bbox":[66,598,54,18]}
+{"kind":"textbox","id":"sh/5srqh4bq","slide":16,"text":"Mood 1-5","textPreview":"Mood 1-5","textChars":8,"textLines":1,"bbox":[126,594,102,18]}
+{"kind":"shape","id":"sh/4ripoza5","slide":16,"bbox":[130,626,100.33,0]}
+{"kind":"textbox","id":"sh/3q98futk","slide":16,"text":"Energy 1-5","textPreview":"Energy 1-5","textChars":10,"textLines":1,"bbox":[229,594,102,18]}
+{"kind":"shape","id":"sh/ip07mpsf","slide":16,"bbox":[233,626,100.33,0]}
+{"kind":"textbox","id":"sh/hor6dkbu","slide":16,"text":"Meal note","textPreview":"Meal note","textChars":9,"textLines":1,"bbox":[332,594,102,18]}
+{"kind":"shape","id":"sh/gnipkfa9","slide":16,"bbox":[336,626,100.33,0]}
+{"kind":"textbox","id":"sh/vm9obuto","slide":16,"text":"Sleep note","textPreview":"Sleep note","textChars":10,"textLines":1,"bbox":[435,594,102,18]}
+{"kind":"shape","id":"sh/u107ips3","slide":16,"bbox":[439,626,100.33,0]}
+{"kind":"textbox","id":"sh/1kvqpoby","slide":16,"text":"Movement note","textPreview":"Movement note","textChars":13,"textLines":1,"bbox":[538,594,102,18]}
+{"kind":"shape","id":"sh/0j2pgjad","slide":16,"bbox":[542,626,100.33,0]}
+{"kind":"textbox","id":"sh/cf6tonul","slide":16,"text":"Stress/context","textPreview":"Stress/context","textChars":14,"textLines":1,"bbox":[641,594,102,18]}
+{"kind":"shape","id":"sh/xgfahsv6","slide":16,"bbox":[645,626,100.33,0]}
+{"kind":"shape","id":"sh/adormdcf","slide":16,"bbox":[54,672,708,78]}
+{"kind":"textbox","id":"sh/bexsfid0","slide":16,"text":"Day 6","textPreview":"Day 6","textChars":5,"textLines":1,"bbox":[66,686,54,18]}
+{"kind":"textbox","id":"sh/kjqtsnux","slide":16,"text":"Mood 1-5","textPreview":"Mood 1-5","textChars":8,"textLines":1,"bbox":[126,682,102,18]}
+{"kind":"shape","id":"sh/lkzalsv2","slide":16,"bbox":[130,714,100.33,0]}
+{"kind":"textbox","id":"sh/yhobqxcr","slide":16,"text":"Energy 1-5","textPreview":"Energy 1-5","textChars":10,"textLines":1,"bbox":[229,682,102,18]}
+{"kind":"shape","id":"sh/jixsj2dc","slide":16,"bbox":[233,714,100.33,0]}
+{"kind":"textbox","id":"sh/0nm9g3ud","slide":16,"text":"Meal note","textPreview":"Meal note","textChars":9,"textLines":1,"bbox":[332,682,102,18]}
+{"kind":"shape","id":"sh/1ova98vy","slide":16,"bbox":[336,714,100.33,0]}
+{"kind":"textbox","id":"sh/3el4ba1s","slide":16,"text":"Sleep note","textPreview":"Sleep note","textChars":10,"textLines":1,"bbox":[435,682,102,18]}
+{"kind":"shape","id":"sh/2dcn2507","slide":16,"bbox":[439,714,100.33,0]}
+{"kind":"textbox","id":"sh/pgnmd0jy","slide":16,"text":"Movement note","textPreview":"Movement note","textChars":13,"textLines":1,"bbox":[538,682,102,18]}
+{"kind":"shape","id":"sh/4fu54vid","slide":16,"bbox":[542,714,100.33,0]}
+{"kind":"textbox","id":"sh/fql47q1g","slide":16,"text":"Stress/context","textPreview":"Stress/context","textChars":14,"textLines":1,"bbox":[641,682,102,18]}
+{"kind":"shape","id":"sh/upc3yl0b","slide":16,"bbox":[645,714,100.33,0]}
+{"kind":"shape","id":"sh/hc3m90jm","slide":16,"bbox":[54,760,708,78]}
+{"kind":"textbox","id":"sh/grul0vi1","slide":16,"text":"Day 7","textPreview":"Day 7","textChars":5,"textLines":1,"bbox":[66,774,54,18]}
+{"kind":"textbox","id":"sh/7m14361k","slide":16,"text":"Mood 1-5","textPreview":"Mood 1-5","textChars":8,"textLines":1,"bbox":[126,770,102,18]}
+{"kind":"shape","id":"sh/6ls3ul0z","slide":16,"bbox":[130,802,100.33,0]}
+{"kind":"textbox","id":"sh/7epozedo","slide":16,"text":"Energy 1-5","textPreview":"Energy 1-5","textChars":10,"textLines":1,"bbox":[229,770,102,18]}
+{"kind":"shape","id":"sh/mdg769w3","slide":16,"bbox":[233,802,100.33,0]}
+{"kind":"textbox","id":"sh/9g761ovu","slide":16,"text":"Meal note","textPreview":"Meal note","textChars":9,"textLines":1,"bbox":[332,770,102,18]}
+{"kind":"shape","id":"sh/8fyp8je9","slide":16,"bbox":[336,802,100.33,0]}
+{"kind":"textbox","id":"sh/v29o3yd0","slide":16,"text":"Sleep note","textPreview":"Sleep note","textChars":10,"textLines":1,"bbox":[435,770,102,18]}
+{"kind":"shape","id":"sh/u1g7atwf","slide":16,"bbox":[439,802,100.33,0]}
+{"kind":"textbox","id":"sh/h4r658vq","slide":16,"text":"Movement note","textPreview":"Movement note","textChars":13,"textLines":1,"bbox":[538,770,102,18]}
+{"kind":"shape","id":"sh/g3ipc3e5","slide":16,"bbox":[542,802,100.33,0]}
+{"kind":"textbox","id":"sh/369o7ydw","slide":16,"text":"Stress/context","textPreview":"Stress/context","textChars":14,"textLines":1,"bbox":[641,770,102,18]}
+{"kind":"shape","id":"sh/i507etwb","slide":16,"bbox":[645,802,100.33,0]}
+{"kind":"shape","id":"sh/0b2543up","slide":16,"bbox":[54,880,708,68]}
+{"kind":"shape","id":"sh/1cb6x8bu","slide":16,"bbox":[54,880,6,68]}
+{"kind":"textbox","id":"sh/e9kn2dcj","slide":16,"text":"Care note","textPreview":"Care note","textChars":9,"textLines":1,"bbox":[72,894,674,24]}
+{"kind":"textbox","id":"sh/fatovyt4","slide":16,"text":"Seek appropriate help for symptoms that are severe, persistent, worsening, or feel unsafe.","textPreview":"Seek appropriate help for symptoms that are severe, persistent, worsening, or feel unsafe.","textChars":90,"textLines":1,"bbox":[72,922,674,16]}
+{"kind":"image","id":"im/t83yh07i","slide":16,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/zsebqj","slide":16,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/4oeg8a","slide":17,"title":"The 7-Day Prevention Reset","textShapes":59}
+{"kind":"shape","id":"sh/4rat8b6h","slide":17,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/ipsb6lob","slide":17,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/tg3u50ny","slide":17,"text":"Optional tracker","textPreview":"Optional tracker","textChars":16,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/sfadcv6d","slide":17,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/re1c3q5s","slide":17,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/6dsbalon","slide":17,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/9kzutwnu","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/8jqt0r69","slide":17,"text":"OPTIONAL GLUCOSE NOTES","textPreview":"OPTIONAL GLUCOSE NOTES","textChars":22,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/qhk3ux4v","slide":17,"text":"Use only according to your care plan","textPreview":"Use only according to your care plan","textChars":36,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/rit432lg","slide":17,"text":"Not everyone needs to monitor glucose. Frequency and actions depend on an individual care plan.","textPreview":"Not everyone needs to monitor glucose. Frequency and actions depend on an individual care plan.","textChars":95,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/s3mlwnm1","slide":17,"bbox":[54,264,708,68]}
+{"kind":"textbox","id":"sh/d4vm5s3m","slide":17,"text":"Day 1","textPreview":"Day 1","textChars":5,"textLines":1,"bbox":[66,278,54,18]}
+{"kind":"textbox","id":"sh/e543yxk7","slide":17,"text":"Date/time","textPreview":"Date/time","textChars":9,"textLines":1,"bbox":[126,274,102,18]}
+{"kind":"shape","id":"sh/f6d472ls","slide":17,"bbox":[130,306,100.33,0]}
+{"kind":"textbox","id":"sh/07m5072d","slide":17,"text":"Reading","textPreview":"Reading","textChars":7,"textLines":1,"bbox":[229,274,102,18]}
+{"kind":"shape","id":"sh/18vm9c3i","slide":17,"bbox":[233,306,100.33,0]}
+{"kind":"textbox","id":"sh/m94n2hk3","slide":17,"text":"Meal relation","textPreview":"Meal relation","textChars":13,"textLines":1,"bbox":[332,274,102,18]}
+{"kind":"shape","id":"sh/nad4bmlo","slide":17,"bbox":[336,306,100.33,0]}
+{"kind":"textbox","id":"sh/jexkjm1w","slide":17,"text":"Medicine as prescribed","textPreview":"Medicine as prescribed","textChars":22,"textLines":1,"bbox":[435,274,102,18]}
+{"kind":"shape","id":"sh/ydo3qh0b","slide":17,"bbox":[439,306,100.33,0]}
+{"kind":"textbox","id":"sh/l0fmlcj2","slide":17,"text":"Activity, stress, or sleep","textPreview":"Activity, stress, or sleep","textChars":26,"textLines":1,"bbox":[538,274,102,18]}
+{"kind":"shape","id":"sh/kf6lsrih","slide":17,"bbox":[542,306,100.33,0]}
+{"kind":"textbox","id":"sh/baxkf21k","slide":17,"text":"Symptoms/action per plan","textPreview":"Symptoms/action per plan","textChars":24,"textLines":1,"bbox":[641,274,102,18]}
+{"kind":"shape","id":"sh/a943mx0f","slide":17,"bbox":[645,306,100.33,0]}
+{"kind":"shape","id":"sh/xcf2hcjq","slide":17,"bbox":[54,342,708,68]}
+{"kind":"textbox","id":"sh/wb6lo7i5","slide":17,"text":"Day 2","textPreview":"Day 2","textChars":5,"textLines":1,"bbox":[66,356,54,18]}
+{"kind":"textbox","id":"sh/n6dkb21o","slide":17,"text":"Date/time","textPreview":"Date/time","textChars":9,"textLines":1,"bbox":[126,352,102,18]}
+{"kind":"shape","id":"sh/2543ix03","slide":17,"bbox":[130,384,100.33,0]}
+{"kind":"textbox","id":"sh/sb2hs3y1","slide":17,"text":"Reading","textPreview":"Reading","textChars":7,"textLines":1,"bbox":[229,352,102,18]}
+{"kind":"shape","id":"sh/dcbil8zm","slide":17,"bbox":[233,384,100.33,0]}
+{"kind":"textbox","id":"sh/qp0zqtgv","slide":17,"text":"Meal relation","textPreview":"Meal relation","textChars":13,"textLines":1,"bbox":[332,352,102,18]}
+{"kind":"shape","id":"sh/ra90jyhg","slide":17,"bbox":[336,384,100.33,0]}
+{"kind":"textbox","id":"sh/0f21w3yx","slide":17,"text":"Medicine as prescribed","textPreview":"Medicine as prescribed","textChars":22,"textLines":1,"bbox":[435,352,102,18]}
+{"kind":"shape","id":"sh/1gbip8zi","slide":17,"bbox":[439,384,100.33,0]}
+{"kind":"textbox","id":"sh/edkjutg7","slide":17,"text":"Activity, stress, or sleep","textPreview":"Activity, stress, or sleep","textChars":26,"textLines":1,"bbox":[538,352,102,18]}
+{"kind":"shape","id":"sh/fet0nyhc","slide":17,"bbox":[542,384,100.33,0]}
+{"kind":"textbox","id":"sh/gjyhkjyt","slide":17,"text":"Symptoms/action per plan","textPreview":"Symptoms/action per plan","textChars":24,"textLines":1,"bbox":[641,352,102,18]}
+{"kind":"shape","id":"sh/hkrid4ze","slide":17,"bbox":[645,384,100.33,0]}
+{"kind":"shape","id":"sh/9g3at4zi","slide":17,"bbox":[54,420,708,68]}
+{"kind":"textbox","id":"sh/ofu9kjyx","slide":17,"text":"Day 3","textPreview":"Day 3","textChars":5,"textLines":1,"bbox":[66,434,54,18]}
+{"kind":"textbox","id":"sh/ne1srehs","slide":17,"text":"Date/time","textPreview":"Date/time","textChars":9,"textLines":1,"bbox":[126,430,102,18]}
+{"kind":"shape","id":"sh/mdsri9g7","slide":17,"bbox":[130,462,100.33,0]}
+{"kind":"textbox","id":"sh/1cjap4zm","slide":17,"text":"Reading","textPreview":"Reading","textChars":7,"textLines":1,"bbox":[229,430,102,18]}
+{"kind":"shape","id":"sh/0ba9gzy1","slide":17,"bbox":[233,462,100.33,0]}
+{"kind":"textbox","id":"sh/za1snuhg","slide":17,"text":"Meal relation","textPreview":"Meal relation","textChars":13,"textLines":1,"bbox":[332,430,102,18]}
+{"kind":"shape","id":"sh/e9srepgv","slide":17,"bbox":[336,462,100.33,0]}
+{"kind":"textbox","id":"sh/d8jqlkza","slide":17,"text":"Medicine as prescribed","textPreview":"Medicine as prescribed","textChars":22,"textLines":1,"bbox":[435,430,102,18]}
+{"kind":"shape","id":"sh/c7q9czy5","slide":17,"bbox":[439,462,100.33,0]}
+{"kind":"textbox","id":"sh/2do7mlwn","slide":17,"text":"Activity, stress, or sleep","textPreview":"Activity, stress, or sleep","textChars":26,"textLines":1,"bbox":[538,430,102,18]}
+{"kind":"shape","id":"sh/3exofqx8","slide":17,"bbox":[542,462,100.33,0]}
+{"kind":"textbox","id":"sh/4f6povet","slide":17,"text":"Symptoms/action per plan","textPreview":"Symptoms/action per plan","textChars":24,"textLines":1,"bbox":[641,430,102,18]}
+{"kind":"shape","id":"sh/pgz6h0fe","slide":17,"bbox":[645,462,100.33,0]}
+{"kind":"shape","id":"sh/upo7ilwr","slide":17,"bbox":[54,498,708,68]}
+{"kind":"textbox","id":"sh/fqxorqxc","slide":17,"text":"Day 4","textPreview":"Day 4","textChars":5,"textLines":1,"bbox":[66,512,54,18]}
+{"kind":"textbox","id":"sh/gr6pkvex","slide":17,"text":"Date/time","textPreview":"Date/time","textChars":9,"textLines":1,"bbox":[126,508,102,18]}
+{"kind":"shape","id":"sh/hsf6t0f2","slide":17,"bbox":[130,540,100.33,0]}
+{"kind":"textbox","id":"sh/6l47e1wf","slide":17,"text":"Reading","textPreview":"Reading","textChars":7,"textLines":1,"bbox":[229,508,102,18]}
+{"kind":"shape","id":"sh/7mdon6x0","slide":17,"bbox":[233,540,100.33,0]}
+{"kind":"textbox","id":"sh/vqt4f2ds","slide":17,"text":"Meal relation","textPreview":"Meal relation","textChars":13,"textLines":1,"bbox":[332,508,102,18]}
+{"kind":"shape","id":"sh/ap03mxc7","slide":17,"bbox":[336,540,100.33,0]}
+{"kind":"textbox","id":"sh/xsbmhcvy","slide":17,"text":"Medicine as prescribed","textPreview":"Medicine as prescribed","textChars":22,"textLines":1,"bbox":[435,508,102,18]}
+{"kind":"shape","id":"sh/wr2lo7ud","slide":17,"bbox":[439,540,100.33,0]}
+{"kind":"textbox","id":"sh/jut4jmd4","slide":17,"text":"Activity, stress, or sleep","textPreview":"Activity, stress, or sleep","textChars":26,"textLines":1,"bbox":[538,508,102,18]}
+{"kind":"shape","id":"sh/itk3qhcj","slide":17,"bbox":[542,540,100.33,0]}
+{"kind":"textbox","id":"sh/5wbmlwvu","slide":17,"text":"Symptoms/action per plan","textPreview":"Symptoms/action per plan","textChars":24,"textLines":1,"bbox":[641,508,102,18]}
+{"kind":"shape","id":"sh/kv2lsrup","slide":17,"bbox":[645,540,100.33,0]}
+{"kind":"shape","id":"sh/zy947idk","slide":17,"bbox":[54,576,708,68]}
+{"kind":"textbox","id":"sh/exg3edwz","slide":17,"text":"Day 5","textPreview":"Day 5","textChars":5,"textLines":1,"bbox":[66,590,54,18]}
+{"kind":"textbox","id":"sh/4ru9sz6l","slide":17,"text":"Date/time","textPreview":"Date/time","textChars":9,"textLines":1,"bbox":[126,586,102,18]}
+{"kind":"shape","id":"sh/5s3a1476","slide":17,"bbox":[130,618,100.33,0]}
+{"kind":"textbox","id":"sh/ipcrqpov","slide":17,"text":"Reading","textPreview":"Reading","textChars":7,"textLines":1,"bbox":[229,586,102,18]}
+{"kind":"shape","id":"sh/3qlszupg","slide":17,"bbox":[233,618,100.33,0]}
+{"kind":"textbox","id":"sh/gnu9of6p","slide":17,"text":"Meal relation","textPreview":"Meal relation","textChars":13,"textLines":1,"bbox":[332,586,102,18]}
+{"kind":"shape","id":"sh/ho3axk7a","slide":17,"bbox":[336,618,100.33,0]}
+{"kind":"textbox","id":"sh/u1srm58j","slide":17,"text":"Medicine as prescribed","textPreview":"Medicine as prescribed","textChars":22,"textLines":1,"bbox":[435,586,102,18]}
+{"kind":"shape","id":"sh/vmlsvap4","slide":17,"bbox":[439,618,100.33,0]}
+{"kind":"textbox","id":"sh/0jet0j6t","slide":17,"text":"Activity, stress, or sleep","textPreview":"Activity, stress, or sleep","textChars":26,"textLines":1,"bbox":[538,586,102,18]}
+{"kind":"shape","id":"sh/1k7a9o7e","slide":17,"bbox":[542,618,100.33,0]}
+{"kind":"textbox","id":"sh/9crepk3a","slide":17,"text":"Symptoms/action per plan","textPreview":"Symptoms/action per plan","textChars":24,"textLines":1,"bbox":[641,586,102,18]}
+{"kind":"shape","id":"sh/8bixgf2p","slide":17,"bbox":[645,618,100.33,0]}
+{"kind":"shape","id":"sh/7a9wnal4","slide":17,"bbox":[54,654,708,68]}
+{"kind":"textbox","id":"sh/m90fe5kj","slide":17,"text":"Day 6","textPreview":"Day 6","textChars":5,"textLines":1,"bbox":[66,668,54,18]}
+{"kind":"textbox","id":"sh/h0betkj6","slide":17,"text":"Date/time","textPreview":"Date/time","textChars":9,"textLines":1,"bbox":[126,664,102,18]}
+{"kind":"shape","id":"sh/wz2xkz2l","slide":17,"bbox":[130,696,100.33,0]}
+{"kind":"textbox","id":"sh/vytwru10","slide":17,"text":"Reading","textPreview":"Reading","textChars":7,"textLines":1,"bbox":[229,664,102,18]}
+{"kind":"shape","id":"sh/udkfipkf","slide":17,"bbox":[233,696,100.33,0]}
+{"kind":"textbox","id":"sh/x47eh032","slide":17,"text":"Meal relation","textPreview":"Meal relation","textChars":13,"textLines":1,"bbox":[332,664,102,18]}
+{"kind":"shape","id":"sh/c3ydov2h","slide":17,"bbox":[336,696,100.33,0]}
+{"kind":"textbox","id":"sh/2xc32xw3","slide":17,"text":"Medicine as prescribed","textPreview":"Medicine as prescribed","textChars":22,"textLines":1,"bbox":[435,664,102,18]}
+{"kind":"shape","id":"sh/3ylkb2xo","slide":17,"bbox":[439,696,100.33,0]}
+{"kind":"textbox","id":"sh/4zul47et","slide":17,"text":"Activity, stress, or sleep","textPreview":"Activity, stress, or sleep","textChars":26,"textLines":1,"bbox":[538,664,102,18]}
+{"kind":"shape","id":"sh/p0n2xcfe","slide":17,"bbox":[542,696,100.33,0]}
+{"kind":"textbox","id":"sh/q1w36hwz","slide":17,"text":"Symptoms/action per plan","textPreview":"Symptoms/action per plan","textChars":24,"textLines":1,"bbox":[641,664,102,18]}
+{"kind":"shape","id":"sh/b25kzmdk","slide":17,"bbox":[645,696,100.33,0]}
+{"kind":"shape","id":"sh/c3el8re5","slide":17,"bbox":[54,732,708,68]}
+{"kind":"textbox","id":"sh/d4n21cvq","slide":17,"text":"Day 7","textPreview":"Day 7","textChars":5,"textLines":1,"bbox":[66,746,54,18]}
+{"kind":"textbox","id":"sh/65sjudwv","slide":17,"text":"Date/time","textPreview":"Date/time","textChars":9,"textLines":1,"bbox":[126,742,102,18]}
+{"kind":"shape","id":"sh/761k3ixg","slide":17,"bbox":[130,774,100.33,0]}
+{"kind":"textbox","id":"sh/cbeh4vml","slide":17,"text":"Reading","textPreview":"Reading","textChars":7,"textLines":1,"bbox":[229,742,102,18]}
+{"kind":"shape","id":"sh/dcnix036","slide":17,"bbox":[233,774,100.33,0]}
+{"kind":"textbox","id":"sh/q9wz2l4f","slide":17,"text":"Meal relation","textPreview":"Meal relation","textChars":13,"textLines":1,"bbox":[332,742,102,18]}
+{"kind":"shape","id":"sh/ba50vql0","slide":17,"bbox":[336,774,100.33,0]}
+{"kind":"textbox","id":"sh/0fyh8vmh","slide":17,"text":"Medicine as prescribed","textPreview":"Medicine as prescribed","textChars":22,"textLines":1,"bbox":[435,742,102,18]}
+{"kind":"shape","id":"sh/lg7i1032","slide":17,"bbox":[439,774,100.33,0]}
+{"kind":"textbox","id":"sh/ydwz654b","slide":17,"text":"Activity, stress, or sleep","textPreview":"Activity, stress, or sleep","textChars":26,"textLines":1,"bbox":[538,742,102,18]}
+{"kind":"shape","id":"sh/ze50zalw","slide":17,"bbox":[542,774,100.33,0]}
+{"kind":"textbox","id":"sh/8jyhcfmt","slide":17,"text":"Symptoms/action per plan","textPreview":"Symptoms/action per plan","textChars":24,"textLines":1,"bbox":[641,742,102,18]}
+{"kind":"shape","id":"sh/9k7i5k3y","slide":17,"bbox":[645,774,100.33,0]}
+{"kind":"shape","id":"sh/jetkve5g","slide":17,"bbox":[54,848,708,92]}
+{"kind":"shape","id":"sh/id0329ov","slide":17,"bbox":[54,848,6,92]}
+{"kind":"textbox","id":"sh/50b2xon6","slide":17,"text":"Safety note","textPreview":"Safety note","textChars":11,"textLines":1,"bbox":[72,862,674,24]}
+{"kind":"textbox","id":"sh/kz2l4j61","slide":17,"text":"Do not change medication or insulin based on this worksheet alone. Follow your personal care plan for high or low readings, and seek urgent help when appropriate.","textPreview":"Do not change medication or insulin based on this worksheet alone. Follow your personal care plan for high or low readings, and seek urge...","textChars":162,"textLines":1,"bbox":[72,890,674,40]}
+{"kind":"image","id":"im/e9wf2dk7","slide":17,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/4oeg8a","slide":17,"text":"[Sources]\n- [2] American Diabetes Association, Diabetes Care. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes--2026. 2026. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well"}
+{"kind":"slide","id":"sl/p03qfz","slide":18,"title":"The 7-Day Prevention Reset","textShapes":19}
+{"kind":"shape","id":"sh/ep8zyd87","slide":18,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/grqh0nqd","slide":18,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/nuh0vipo","slide":18,"text":"Planning","textPreview":"Planning","textChars":8,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/2t8z2x8j","slide":18,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/pgjixs7u","slide":18,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/ova14nq9","slide":18,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/bi10z2p0","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/ahsj6x8f","slide":18,"text":"BACKUP PLANS","textPreview":"BACKUP PLANS","textChars":12,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/wfmtg76d","slide":18,"text":"Obstacles and backup plans","textPreview":"Obstacles and backup plans","textChars":26,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/hgva9c7y","slide":18,"text":"Plan for difficult days before they arrive.","textPreview":"Plan for difficult days before they arrive.","textChars":43,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/ut4reho7","slide":18,"bbox":[54,226,708,56]}
+{"kind":"shape","id":"sh/veds72ps","slide":18,"bbox":[54,226,6,56]}
+{"kind":"textbox","id":"sh/4j6tkr69","slide":18,"text":"Example 1","textPreview":"Example 1","textChars":9,"textLines":1,"bbox":[72,240,674,24]}
+{"kind":"textbox","id":"sh/5kfadw7u","slide":18,"text":"If I am too tired to cook, then I will use this backup meal.","textPreview":"If I am too tired to cook, then I will use this backup meal.","textChars":60,"textLines":1,"bbox":[72,268,674,4]}
+{"kind":"shape","id":"sh/ih4bihoj","slide":18,"bbox":[54,300,708,56]}
+{"kind":"shape","id":"sh/jixsbmpo","slide":18,"bbox":[54,300,6,56]}
+{"kind":"textbox","id":"sh/sn6tor6l","slide":18,"text":"Example 2","textPreview":"Example 2","textChars":9,"textLines":1,"bbox":[72,314,674,24]}
+{"kind":"textbox","id":"sh/tofahw76","slide":18,"text":"If I cannot walk, then I will use this safe movement option.","textPreview":"If I cannot walk, then I will use this safe movement option.","textChars":60,"textLines":1,"bbox":[72,342,674,4]}
+{"kind":"shape","id":"sh/14ba1wza","slide":18,"bbox":[54,374,708,56]}
+{"kind":"shape","id":"sh/032tsryp","slide":18,"bbox":[54,374,6,56]}
+{"kind":"textbox","id":"sh/f2tszmh4","slide":18,"text":"Example 3","textPreview":"Example 3","textChars":9,"textLines":1,"bbox":[72,388,674,24]}
+{"kind":"textbox","id":"sh/e1krqhgj","slide":18,"text":"If the day becomes chaotic, then I will let this part be imperfect.","textPreview":"If the day becomes chaotic, then I will let this part be imperfect.","textChars":67,"textLines":1,"bbox":[72,416,674,4]}
+{"kind":"textbox","id":"sh/p8va5gz6","slide":18,"text":"Obstacle","textPreview":"Obstacle","textChars":8,"textLines":1,"bbox":[54,480,318,20]}
+{"kind":"shape","id":"sh/o7mtwbyl","slide":18,"bbox":[54,502,318,90]}
+{"kind":"textbox","id":"sh/n6ds36h0","slide":18,"text":"Easiest backup","textPreview":"Easiest backup","textChars":14,"textLines":1,"bbox":[408,480,318,20]}
+{"kind":"shape","id":"sh/254bu1gv","slide":18,"bbox":[408,502,318,90]}
+{"kind":"textbox","id":"sh/5cratcz2","slide":18,"text":"What I need in advance","textPreview":"What I need in advance","textChars":22,"textLines":1,"bbox":[54,622,318,20]}
+{"kind":"shape","id":"sh/4bi9k7yh","slide":18,"bbox":[54,644,318,90]}
+{"kind":"textbox","id":"sh/a5wze9s3","slide":18,"text":"Who can help","textPreview":"Who can help","textChars":12,"textLines":1,"bbox":[408,622,318,20]}
+{"kind":"shape","id":"sh/v65g7eto","slide":18,"bbox":[408,644,318,90]}
+{"kind":"textbox","id":"sh/w7ehgja9","slide":18,"text":"What can remain imperfect","textPreview":"What can remain imperfect","textChars":25,"textLines":1,"bbox":[54,764,708,20]}
+{"kind":"shape","id":"sh/x87y9obe","slide":18,"bbox":[54,786,708,90]}
+{"kind":"image","id":"im/0f6pc3ap","slide":18,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/p03qfz","slide":18,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/y1cczv","slide":19,"title":"The 7-Day Prevention Reset","textShapes":44}
+{"kind":"shape","id":"sh/mp0ni1k3","slide":19,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/obi5kb29","slide":19,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/zm94nmls","slide":19,"text":"Continuation","textPreview":"Continuation","textChars":12,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/elgnehk7","slide":19,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/1ormpw3i","slide":19,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/0ni5gr2x","slide":19,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/jitozqlw","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/yhknqlkb","slide":19,"text":"NEXT MONTH","textPreview":"NEXT MONTH","textChars":10,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/g3u58fil","slide":19,"text":"30-day continuation plan","textPreview":"30-day continuation plan","textChars":24,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/h4n6h0z6","slide":19,"text":"Continue what fits. Adjust what does not.","textPreview":"Continue what fits. Adjust what does not.","textChars":41,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"textbox","id":"sh/u1cn650f","slide":19,"text":"Habit 1","textPreview":"Habit 1","textChars":7,"textLines":1,"bbox":[54,224,318,20]}
+{"kind":"shape","id":"sh/f2lofah0","slide":19,"bbox":[54,246,318,34]}
+{"kind":"textbox","id":"sh/szu54vip","slide":19,"text":"Habit 2","textPreview":"Habit 2","textChars":7,"textLines":1,"bbox":[408,224,318,20]}
+{"kind":"shape","id":"sh/t036d0zu","slide":19,"bbox":[408,246,318,34]}
+{"kind":"textbox","id":"sh/6xcn2l0j","slide":19,"text":"Why it matters to me","textPreview":"Why it matters to me","textChars":20,"textLines":1,"bbox":[54,292,318,20]}
+{"kind":"shape","id":"sh/7ylobqh4","slide":19,"bbox":[54,314,318,34]}
+{"kind":"textbox","id":"sh/kva50bid","slide":19,"text":"My minimum version","textPreview":"My minimum version","textChars":18,"textLines":1,"bbox":[408,292,318,20]}
+{"kind":"shape","id":"sh/5wj69gzy","slide":19,"bbox":[408,314,318,34]}
+{"kind":"textbox","id":"sh/1gbuhs7q","slide":19,"text":"My backup plan","textPreview":"My backup plan","textChars":14,"textLines":1,"bbox":[54,360,708,20]}
+{"kind":"shape","id":"sh/0fidon65","slide":19,"bbox":[54,382,708,34]}
+{"kind":"shape","id":"sh/ze9cfipk","slide":19,"bbox":[62,468,82,56]}
+{"kind":"textbox","id":"sh/ed0vmdoz","slide":19,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[70,475,22,16]}
+{"kind":"shape","id":"sh/dcrud87e","slide":19,"bbox":[100,477,12,12]}
+{"kind":"shape","id":"sh/cbitk36t","slide":19,"bbox":[120,477,12,12]}
+{"kind":"shape","id":"sh/rq9cbyp8","slide":19,"bbox":[72,506,62,0]}
+{"kind":"shape","id":"sh/qp0bito3","slide":19,"bbox":[158,468,82,56]}
+{"kind":"textbox","id":"sh/x8vupcni","slide":19,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[166,475,22,16]}
+{"kind":"shape","id":"sh/w7mdw76d","slide":19,"bbox":[196,477,12,12]}
+{"kind":"shape","id":"sh/utwrq94v","slide":19,"bbox":[216,477,12,12]}
+{"kind":"shape","id":"sh/fu5sju50","slide":19,"bbox":[168,506,62,0]}
+{"kind":"shape","id":"sh/gve9szml","slide":19,"bbox":[254,468,82,56]}
+{"kind":"textbox","id":"sh/hw7al4n6","slide":19,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[262,475,22,16]}
+{"kind":"shape","id":"sh/6pwrmp4j","slide":19,"bbox":[292,477,12,12]}
+{"kind":"shape","id":"sh/7q5sfu54","slide":19,"bbox":[312,477,12,12]}
+{"kind":"shape","id":"sh/sre9ozmp","slide":19,"bbox":[264,506,62,0]}
+{"kind":"shape","id":"sh/tsnah4na","slide":19,"bbox":[350,468,82,56]}
+{"kind":"textbox","id":"sh/qlgryt4n","slide":19,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[358,475,22,16]}
+{"kind":"shape","id":"sh/rmpsre58","slide":19,"bbox":[388,477,12,12]}
+{"kind":"shape","id":"sh/be5onq9o","slide":19,"bbox":[408,477,12,12]}
+{"kind":"shape","id":"sh/adwnul83","slide":19,"bbox":[360,506,62,0]}
+{"kind":"shape","id":"sh/xgn6p07u","slide":19,"bbox":[446,468,82,56]}
+{"kind":"textbox","id":"sh/cfe5wvq9","slide":19,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[454,475,22,16]}
+{"kind":"shape","id":"sh/naloj69s","slide":19,"bbox":[484,477,12,12]}
+{"kind":"shape","id":"sh/29cnq187","slide":19,"bbox":[504,477,12,12]}
+{"kind":"shape","id":"sh/pcn6lgri","slide":19,"bbox":[456,506,62,0]}
+{"kind":"shape","id":"sh/obe5sbqd","slide":19,"bbox":[542,468,82,56]}
+{"kind":"textbox","id":"sh/76povapw","slide":19,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[550,475,22,16]}
+{"kind":"shape","id":"sh/65g7258b","slide":19,"bbox":[580,477,12,12]}
+{"kind":"shape","id":"sh/4ralg76t","slide":19,"bbox":[600,477,12,12]}
+{"kind":"shape","id":"sh/5sj2pc7e","slide":19,"bbox":[552,506,62,0]}
+{"kind":"shape","id":"sh/ip83exon","slide":19,"bbox":[638,468,82,56]}
+{"kind":"textbox","id":"sh/3qhkn2p8","slide":19,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[646,475,22,16]}
+{"kind":"shape","id":"sh/sfalk765","slide":19,"bbox":[676,477,12,12]}
+{"kind":"shape","id":"sh/dgjmtc7a","slide":19,"bbox":[696,477,12,12]}
+{"kind":"shape","id":"sh/qts3ihoz","slide":19,"bbox":[648,506,62,0]}
+{"kind":"shape","id":"sh/ru1kr2pk","slide":19,"bbox":[62,538,82,56]}
+{"kind":"textbox","id":"sh/0julor61","slide":19,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[70,545,22,16]}
+{"kind":"shape","id":"sh/1k3mxwnm","slide":19,"bbox":[100,547,12,12]}
+{"kind":"shape","id":"sh/pofulsbe","slide":19,"bbox":[120,547,12,12]}
+{"kind":"shape","id":"sh/o36tsnut","slide":19,"bbox":[72,576,62,0]}
+{"kind":"shape","id":"sh/n2xcjito","slide":19,"bbox":[158,538,82,56]}
+{"kind":"textbox","id":"sh/21obqdc3","slide":19,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[166,545,22,16]}
+{"kind":"shape","id":"sh/xszupsbq","slide":19,"bbox":[196,547,12,12]}
+{"kind":"shape","id":"sh/cr6tw7u5","slide":19,"bbox":[216,547,12,12]}
+{"kind":"shape","id":"sh/bqxcn2tk","slide":19,"bbox":[168,576,62,0]}
+{"kind":"shape","id":"sh/apobuxcz","slide":19,"bbox":[254,538,82,56]}
+{"kind":"textbox","id":"sh/dwvud8v6","slide":19,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[262,545,22,16]}
+{"kind":"shape","id":"sh/svmtk3ul","slide":19,"bbox":[292,547,12,12]}
+{"kind":"shape","id":"sh/i1kru9sj","slide":19,"bbox":[312,547,12,12]}
+{"kind":"shape","id":"sh/32t8ne94","slide":19,"bbox":[264,576,62,0]}
+{"kind":"shape","id":"sh/4329wjap","slide":19,"bbox":[350,538,82,56]}
+{"kind":"textbox","id":"sh/54bqpora","slide":19,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[358,545,22,16]}
+{"kind":"shape","id":"sh/q5kry9sv","slide":19,"bbox":[388,547,12,12]}
+{"kind":"shape","id":"sh/r6t8re9g","slide":19,"bbox":[408,547,12,12]}
+{"kind":"shape","id":"sh/s7290jal","slide":19,"bbox":[360,576,62,0]}
+{"kind":"shape","id":"sh/d8bator6","slide":19,"bbox":[446,538,82,56]}
+{"kind":"textbox","id":"sh/69grmpsb","slide":19,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[454,545,22,16]}
+{"kind":"shape","id":"sh/7a98futw","slide":19,"bbox":[484,547,12,12]}
+{"kind":"shape","id":"sh/bix0ra5c","slide":19,"bbox":[504,547,12,12]}
+{"kind":"shape","id":"sh/qhoji54r","slide":19,"bbox":[456,576,62,0]}
+{"kind":"shape","id":"sh/dkf2tkni","slide":19,"bbox":[542,538,82,56]}
+{"kind":"textbox","id":"sh/cj61kfmx","slide":19,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[550,545,22,16]}
+{"kind":"shape","id":"sh/zmhkvu58","slide":19,"bbox":[580,547,12,12]}
+{"kind":"shape","id":"sh/yl8jmp43","slide":19,"bbox":[600,547,12,12]}
+{"kind":"shape","id":"sh/loz2x4ne","slide":19,"bbox":[552,576,62,0]}
+{"kind":"shape","id":"sh/0nq1ozmt","slide":19,"bbox":[638,538,82,56]}
+{"kind":"textbox","id":"sh/fqd0jq54","slide":19,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[646,545,22,16]}
+{"kind":"shape","id":"sh/ep4jal4j","slide":19,"bbox":[676,547,12,12]}
+{"kind":"shape","id":"sh/kv2xkr2h","slide":19,"bbox":[696,547,12,12]}
+{"kind":"shape","id":"sh/5wbytw32","slide":19,"bbox":[648,576,62,0]}
+{"kind":"shape","id":"sh/it0fi1kb","slide":19,"bbox":[62,608,82,56]}
+{"kind":"textbox","id":"sh/jutgrmlw","slide":19,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[70,615,22,16]}
+{"kind":"shape","id":"sh/wrixgr25","slide":19,"bbox":[100,617,12,12]}
+{"kind":"shape","id":"sh/xsrypw3q","slide":19,"bbox":[120,617,12,12]}
+{"kind":"shape","id":"sh/ap0fehkf","slide":19,"bbox":[72,646,62,0]}
+{"kind":"shape","id":"sh/vq9gnml0","slide":19,"bbox":[158,608,82,56]}
+{"kind":"textbox","id":"sh/gnmhsb2p","slide":19,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[166,615,22,16]}
+{"kind":"shape","id":"sh/1ovy1g3a","slide":19,"bbox":[196,617,12,12]}
+{"kind":"shape","id":"sh/65wbm10n","slide":19,"bbox":[216,617,12,12]}
+{"kind":"shape","id":"sh/765sf618","slide":19,"bbox":[168,646,62,0]}
+{"kind":"shape","id":"sh/8retorit","slide":19,"bbox":[254,608,82,56]}
+{"kind":"textbox","id":"sh/tsnahwje","slide":19,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[262,615,22,16]}
+{"kind":"shape","id":"sh/y1cbih0r","slide":19,"bbox":[292,617,12,12]}
+{"kind":"shape","id":"sh/j2lsbm1c","slide":19,"bbox":[312,617,12,12]}
+{"kind":"shape","id":"sh/k3utkrih","slide":19,"bbox":[264,646,62,0]}
+{"kind":"shape","id":"sh/l43adwj2","slide":19,"bbox":[350,608,82,56]}
+{"kind":"textbox","id":"sh/axsrehkf","slide":19,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[358,615,22,16]}
+{"kind":"shape","id":"sh/byls7210","slide":19,"bbox":[388,617,12,12]}
+{"kind":"shape","id":"sh/dsredk3i","slide":19,"bbox":[408,617,12,12]}
+{"kind":"shape","id":"sh/sridkf2x","slide":19,"bbox":[360,646,62,0]}
+{"kind":"shape","id":"sh/rq9wbalc","slide":19,"bbox":[446,608,82,56]}
+{"kind":"textbox","id":"sh/qp0vi5k7","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[454,615,22,16]}
+{"kind":"shape","id":"sh/5o7e903m","slide":19,"bbox":[484,617,12,12]}
+{"kind":"shape","id":"sh/4nydgv21","slide":19,"bbox":[504,617,12,12]}
+{"kind":"shape","id":"sh/3mpc7qlg","slide":19,"bbox":[456,646,62,0]}
+{"kind":"shape","id":"sh/ilgve5kv","slide":19,"bbox":[542,608,82,56]}
+{"kind":"textbox","id":"sh/h07u503a","slide":19,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[550,615,22,16]}
+{"kind":"shape","id":"sh/gzydcv2p","slide":19,"bbox":[580,617,12,12]}
+{"kind":"shape","id":"sh/832dsval","slide":19,"bbox":[600,617,12,12]}
+{"kind":"shape","id":"sh/94be10b6","slide":19,"bbox":[552,646,62,0]}
+{"kind":"shape","id":"sh/m10vqlcv","slide":19,"bbox":[638,608,82,56]}
+{"kind":"textbox","id":"sh/72twzqt0","slide":19,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[646,615,22,16]}
+{"kind":"shape","id":"sh/kfidobup","slide":19,"bbox":[676,617,12,12]}
+{"kind":"shape","id":"sh/l0rexgba","slide":19,"bbox":[696,617,12,12]}
+{"kind":"shape","id":"sh/yd0vmlcj","slide":19,"bbox":[648,646,62,0]}
+{"kind":"shape","id":"sh/ze9wvqt4","slide":19,"bbox":[62,678,82,56]}
+{"kind":"textbox","id":"sh/4bmd0fat","slide":19,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[70,685,22,16]}
+{"kind":"shape","id":"sh/5wve9kbe","slide":19,"bbox":[100,687,12,12]}
+{"kind":"shape","id":"sh/fqxgzedg","slide":19,"bbox":[120,687,12,12]}
+{"kind":"shape","id":"sh/e5ozq9cv","slide":19,"bbox":[72,716,62,0]}
+{"kind":"shape","id":"sh/1sfy1ovm","slide":19,"bbox":[158,678,82,56]}
+{"kind":"textbox","id":"sh/gr6hsju1","slide":19,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[166,685,22,16]}
+{"kind":"shape","id":"sh/3uhg3yds","slide":19,"bbox":[196,687,12,12]}
+{"kind":"shape","id":"sh/2t8zutc7","slide":19,"bbox":[216,687,12,12]}
+{"kind":"shape","id":"sh/pwzy5ovy","slide":19,"bbox":[168,716,62,0]}
+{"kind":"shape","id":"sh/ovqhwjud","slide":19,"bbox":[254,678,82,56]}
+{"kind":"textbox","id":"sh/jydgrud8","slide":19,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[262,685,22,16]}
+{"kind":"shape","id":"sh/ix4fipw3","slide":19,"bbox":[292,687,12,12]}
+{"kind":"shape","id":"sh/uts7ut8v","slide":19,"bbox":[312,687,12,12]}
+{"kind":"shape","id":"sh/vu18nypg","slide":19,"bbox":[264,716,62,0]}
+{"kind":"shape","id":"sh/wvapw3q1","slide":19,"bbox":[350,678,82,56]}
+{"kind":"textbox","id":"sh/hwjqp87m","slide":19,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[358,685,22,16]}
+{"kind":"shape","id":"sh/ihs7yt87","slide":19,"bbox":[388,687,12,12]}
+{"kind":"shape","id":"sh/ji18ryps","slide":19,"bbox":[408,687,12,12]}
+{"kind":"shape","id":"sh/4jap03qx","slide":19,"bbox":[360,716,62,0]}
+{"kind":"shape","id":"sh/5k3qt87i","slide":19,"bbox":[446,678,82,56]}
+{"kind":"textbox","id":"sh/6lcr2d83","slide":19,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[454,685,22,16]}
+{"kind":"shape","id":"sh/rml8vipo","slide":19,"bbox":[484,687,12,12]}
+{"kind":"shape","id":"sh/1gna1crq","slide":19,"bbox":[504,687,12,12]}
+{"kind":"shape","id":"sh/0fets7a5","slide":19,"bbox":[456,716,62,0]}
+{"kind":"shape","id":"sh/fe5sz290","slide":19,"bbox":[542,678,82,56]}
+{"kind":"textbox","id":"sh/edwbqxsf","slide":19,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[550,685,22,16]}
+{"kind":"shape","id":"sh/pk7apcr2","slide":19,"bbox":[580,687,12,12]}
+{"kind":"shape","id":"sh/ojytwrah","slide":19,"bbox":[600,687,12,12]}
+{"kind":"shape","id":"sh/ni5snm9w","slide":19,"bbox":[552,716,62,0]}
+{"kind":"shape","id":"sh/2hwbuhsb","slide":19,"bbox":[638,678,82,56]}
+{"kind":"textbox","id":"sh/x87utwry","slide":19,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[646,685,22,16]}
+{"kind":"shape","id":"sh/c7yt0rqd","slide":19,"bbox":[676,687,12,12]}
+{"kind":"shape","id":"sh/wr6dwvyp","slide":19,"bbox":[696,687,12,12]}
+{"kind":"shape","id":"sh/xsfu50za","slide":19,"bbox":[648,716,62,0]}
+{"kind":"shape","id":"sh/apovu5gj","slide":19,"bbox":[62,748,82,56]}
+{"kind":"textbox","id":"sh/vqxc3qh4","slide":19,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[70,755,22,16]}
+{"kind":"shape","id":"sh/kfqd0fyl","slide":19,"bbox":[100,757,12,12]}
+{"kind":"shape","id":"sh/5gze9kz6","slide":19,"bbox":[120,757,12,12]}
+{"kind":"shape","id":"sh/idovy5gv","slide":19,"bbox":[72,786,62,0]}
+{"kind":"shape","id":"sh/jehc7ahg","slide":19,"bbox":[158,748,82,56]}
+{"kind":"textbox","id":"sh/0jmdobyh","slide":19,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[166,755,22,16]}
+{"kind":"shape","id":"sh/lkvuxgz2","slide":19,"bbox":[196,757,12,12]}
+{"kind":"shape","id":"sh/nqloji5w","slide":19,"bbox":[216,757,12,12]}
+{"kind":"shape","id":"sh/2pc7qd4b","slide":19,"bbox":[168,786,62,0]}
+{"kind":"textbox","id":"sh/psn6lsnm","slide":19,"text":"Each day: mark Habit 1, Habit 2, or leave blank. Blank days are information, not failure.","textPreview":"Each day: mark Habit 1, Habit 2, or leave blank. Blank days are information, not failure.","textChars":89,"textLines":1,"bbox":[54,886,708,30]}
+{"kind":"image","id":"im/krux0nu1","slide":19,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/y1cczv","slide":19,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/fja22y","slide":20,"title":"The 7-Day Prevention Reset","textShapes":20}
+{"kind":"shape","id":"sh/8zilg7mp","slide":20,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/md03eh4j","slide":20,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/h4b2dw36","slide":20,"text":"Next steps","textPreview":"Next steps","textChars":10,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/w32lkrml","slide":20,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/v2tkbml0","slide":20,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/u1k3ih4v","slide":20,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/58v2hw3i","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/472lormx","slide":20,"text":"NEXT STEPS","textPreview":"NEXT STEPS","textChars":10,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/65c7qhgz","slide":20,"text":"Repeat what worked","textPreview":"Repeat what worked","textChars":18,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/76l8zmxk","slide":20,"text":"Keep one or two routines. Drop what was unrealistic.","textPreview":"Keep one or two routines. Drop what was unrealistic.","textChars":52,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/87epsry5","slide":20,"bbox":[54,249,7,7]}
+{"kind":"textbox","id":"sh/t8nq1wfa","slide":20,"text":"Add another step only when the current habit feels repeatable.","textPreview":"Add another step only when the current habit feels repeatable.","textChars":62,"textLines":1,"bbox":[70,242,692,48]}
+{"kind":"shape","id":"sh/u9w7u1gv","slide":20,"bbox":[54,291,7,7]}
+{"kind":"textbox","id":"sh/va5836xg","slide":20,"text":"Share useful patterns with your care team.","textPreview":"Share useful patterns with your care team.","textChars":42,"textLines":1,"bbox":[70,284,692,48]}
+{"kind":"shape","id":"sh/gbepwby1","slide":20,"bbox":[54,333,7,7]}
+{"kind":"textbox","id":"sh/hcnq5gfm","slide":20,"text":"Reuse any tracker that helped, and ignore trackers that did not help.","textPreview":"Reuse any tracker that helped, and ignore trackers that did not help.","textChars":69,"textLines":1,"bbox":[70,326,692,48]}
+{"kind":"shape","id":"sh/ads7ixgr","slide":20,"bbox":[54,375,7,7]}
+{"kind":"textbox","id":"sh/be1or2hc","slide":20,"text":"Free sharing is welcome for personal, family, clinic, school, or community education.","textPreview":"Free sharing is welcome for personal, family, clinic, school, or community education.","textChars":85,"textLines":1,"bbox":[70,368,692,48]}
+{"kind":"shape","id":"sh/fih4zyx4","slide":20,"bbox":[54,464,708,210]}
+{"kind":"textbox","id":"sh/eh8nqtwj","slide":20,"text":"Helpful resources","textPreview":"Helpful resources","textChars":17,"textLines":1,"bbox":[78,492,250,24]}
+{"kind":"shape","id":"sh/1kzm18va","slide":20,"bbox":[82,542,150,38]}
+{"kind":"textbox","id":"sh/0jq5s3ep","slide":20,"text":"Explore the Guide","textPreview":"Explore the Guide","textChars":17,"textLines":1,"bbox":[82,551,150,18]}
+{"kind":"shape","id":"sh/rux4vyxs","slide":20,"bbox":[248,542,150,38]}
+{"kind":"textbox","id":"sh/qtonmtwn","slide":20,"text":"Visit Health Tools","textPreview":"Visit Health Tools","textChars":18,"textLines":1,"bbox":[248,551,150,18]}
+{"kind":"shape","id":"sh/dgfmx8fy","slide":20,"bbox":[414,542,120,38]}
+{"kind":"textbox","id":"sh/sf65o3ed","slide":20,"text":"Try JEIR","textPreview":"Try JEIR","textChars":8,"textLines":1,"bbox":[414,551,120,18]}
+{"kind":"shape","id":"sh/bq147idc","slide":20,"bbox":[552,542,180,38]}
+{"kind":"textbox","id":"sh/apsnydwr","slide":20,"text":"Support Free Education","textPreview":"Support Free Education","textChars":22,"textLines":1,"bbox":[552,551,180,18]}
+{"kind":"textbox","id":"sh/8v21sfu9","slide":20,"text":"Mindful Diabetes Inc. is a 501(c)(3) nonprofit creating free education for patients, families, and communities.","textPreview":"Mindful Diabetes Inc. is a 501(c)(3) nonprofit creating free education for patients, families, and communities.","textChars":111,"textLines":1,"bbox":[82,614,652,36]}
+{"kind":"shape","id":"sh/twb2lkvu","slide":20,"bbox":[54,720,708,90]}
+{"kind":"shape","id":"sh/6tkjqpc3","slide":20,"bbox":[54,720,6,90]}
+{"kind":"textbox","id":"sh/7utkjado","slide":20,"text":"Medical disclaimer","textPreview":"Medical disclaimer","textChars":18,"textLines":1,"bbox":[72,734,674,24]}
+{"kind":"textbox","id":"sh/gzm1wzu5","slide":20,"text":"This guide is general education, not personal medical advice. Individual needs vary. Do not change medication, insulin, or glucose targets based on this guide.","textPreview":"This guide is general education, not personal medical advice. Individual needs vary. Do not change medication, insulin, or glucose target...","textChars":159,"textLines":1,"bbox":[72,762,674,38]}
+{"kind":"image","id":"im/ypobaxgb","slide":20,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/fja22y","slide":20,"text":"[Sources]\n- No external claims beyond Mindful Diabetes workbook editorial content."}
+{"kind":"slide","id":"sl/7y8mb3","slide":21,"title":"The 7-Day Prevention Reset","textShapes":18}
+{"kind":"shape","id":"sh/ulgrylg7","slide":21,"bbox":[54,82,708,0]}
+{"kind":"textbox","id":"sh/g7y90byd","slide":21,"text":"The 7-Day Prevention Reset","textPreview":"The 7-Day Prevention Reset","textChars":26,"textLines":1,"bbox":[98,30,300,22]}
+{"kind":"textbox","id":"sh/3apsbqh4","slide":21,"text":"References and safety","textPreview":"References and safety","textChars":21,"textLines":1,"bbox":[98,51,300,20]}
+{"kind":"shape","id":"sh/i9gr2lgj","slide":21,"bbox":[54,998,708,0]}
+{"kind":"textbox","id":"sh/pcrad0zu","slide":21,"text":"Mindful Diabetes Inc.","textPreview":"Mindful Diabetes Inc.","textChars":21,"textLines":1,"bbox":[54,1010,190,18]}
+{"kind":"textbox","id":"sh/4bi94vy9","slide":21,"text":"mindfuldiabetes.org","textPreview":"mindfuldiabetes.org","textChars":19,"textLines":1,"bbox":[334,1010,148,18]}
+{"kind":"textbox","id":"sh/re9sfah0","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[726,1010,36,18]}
+{"kind":"textbox","id":"sh/qd0r65gf","slide":21,"text":"REFERENCES","textPreview":"REFERENCES","textChars":10,"textLines":1,"bbox":[54,98,420,18]}
+{"kind":"textbox","id":"sh/8nepgjyp","slide":21,"text":"References and safety","textPreview":"References and safety","textChars":21,"textLines":1,"bbox":[54,121,708,54]}
+{"kind":"textbox","id":"sh/9on69ofa","slide":21,"text":"Medical review pending. Next scheduled review: July 2027.","textPreview":"Medical review pending. Next scheduled review: July 2027.","textChars":57,"textLines":1,"bbox":[54,182,708,40]}
+{"kind":"shape","id":"sh/mlw7e9gj","slide":21,"bbox":[54,212,708,98]}
+{"kind":"shape","id":"sh/nm5o7ex4","slide":21,"bbox":[54,212,6,98]}
+{"kind":"textbox","id":"sh/wrypkjel","slide":21,"text":"Medical disclaimer","textPreview":"Medical disclaimer","textChars":18,"textLines":1,"bbox":[72,226,674,24]}
+{"kind":"textbox","id":"sh/xs7qdof6","slide":21,"text":"This guide is for general education only. It is not medical advice, diagnosis, or treatment. Individual needs vary. Seek appropriate medical attention for severe low blood sugar, severe high blood sugar, sudden confusion, chest pain, trouble breathing, fainting, seizures, or other urgent symptoms.","textPreview":"This guide is for general education only. It is not medical advice, diagnosis, or treatment. Individual needs vary. Seek appropriate medi...","textChars":298,"textLines":1,"bbox":[72,254,674,46]}
+{"kind":"textbox","id":"sh/apw7i9gv","slide":21,"text":"[1] Centers for Disease Control and Prevention. About the Lifestyle Change Program. 2024. https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html","textPreview":"[1] Centers for Disease Control and Prevention. About the Lifestyle Change Program. 2024. https://www.cdc.gov/diabetes-prevention/lifesty...","textChars":192,"textLines":1,"bbox":[74,340,688,48]}
+{"kind":"textbox","id":"sh/vqpobex0","slide":21,"text":"[2] American Diabetes Association, Diabetes Care. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes--2026. 2026. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well","textPreview":"[2] American Diabetes Association, Diabetes Care. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Stand...","textChars":293,"textLines":1,"bbox":[74,392,688,56]}
+{"kind":"textbox","id":"sh/kvypo3ex","slide":21,"text":"[3] American Diabetes Association Diabetes Food Hub. What is the Diabetes Plate?. 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate","textPreview":"[3] American Diabetes Association Diabetes Food Hub. What is the Diabetes Plate?. 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate","textChars":140,"textLines":1,"bbox":[74,452,688,48]}
+{"kind":"textbox","id":"sh/5g7qh8fi","slide":21,"text":"[4] U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label","textPreview":"[4] U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. 2024. https://www.fda.gov/food/nutrition-fact...","textChars":189,"textLines":1,"bbox":[74,504,688,48]}
+{"kind":"textbox","id":"sh/tcn61o7m","slide":21,"text":"[5] U.S. Department of Health and Human Services. Physical Activity Guidelines for Americans, 2nd edition. 2018. https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf","textPreview":"[5] U.S. Department of Health and Human Services. Physical Activity Guidelines for Americans, 2nd edition. 2018. https://health.gov/sites...","textChars":204,"textLines":1,"bbox":[74,556,688,48]}
+{"kind":"textbox","id":"sh/sbup8361","slide":21,"text":"[6] National Heart, Lung, and Blood Institute. Sleep Deprivation and Deficiency: Healthy Sleep Habits. 2022. https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits","textPreview":"[6] National Heart, Lung, and Blood Institute. Sleep Deprivation and Deficiency: Healthy Sleep Habits. 2022. https://www.nhlbi.nih.gov/he...","textChars":180,"textLines":1,"bbox":[74,608,688,48]}
+{"kind":"textbox","id":"sh/ralozypg","slide":21,"text":"[7] U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. 2026. https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label","textPreview":"[7] U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. 2026. https://www.fda.gov/food/nutrition-facts-label/ad...","textChars":169,"textLines":1,"bbox":[74,660,688,48]}
+{"kind":"textbox","id":"sh/69c76tov","slide":21,"text":"Publication date: July 30, 2026 | Medical review: pending | Accessibility status: editable PPTX with live text, shapes, links, and alt text for logo; exported PDF has not been certified PDF/UA.","textPreview":"Publication date: July 30, 2026 | Medical review: pending | Accessibility status: editable PPTX with live text, shapes, links, and alt te...","textChars":193,"textLines":1,"bbox":[54,886,708,48]}
+{"kind":"image","id":"im/87md0z21","slide":21,"name":"","geometry":"roundRect","alt":"Mindful Diabetes logo","bbox":[54,33,34,34]}
+{"kind":"notes","id":"nt/7y8mb3","slide":21,"text":"[Sources]\n- [1] Centers for Disease Control and Prevention. About the Lifestyle Change Program. 2024. https://www.cdc.gov/diabetes-prevention/lifestyle-change-program/lifestyle-change-program-details.html\n- [2] American Diabetes Association, Diabetes Care. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes--2026. 2026. https://diabetesjournals.org/care/article/49/Supplement_1/S89/163932/5-Facilitating-Positive-Health-Behaviors-and-Well\n- [3] American Diabetes Association Diabetes Food Hub. What is the Diabetes Plate?. 2026. https://diabetesfoodhub.org/blog/what-diabetes-plate\n- [4] U.S. Food and Drug Administration. How to Understand and Use the Nutrition Facts Label. 2024. https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label\n- [5] U.S. Department of Health and Human Services. Physical Activity Guidelines for Americans, 2nd edition. 2018. https://health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf\n- [6] National Heart, Lung, and Blood Institute. Sleep Deprivation and Deficiency: Healthy Sleep Habits. 2022. https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits\n- [7] U.S. Food and Drug Administration. Added Sugars on the Nutrition Facts Label. 2026. https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label"}

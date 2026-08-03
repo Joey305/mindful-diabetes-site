@@ -1,0 +1,288 @@
+{
+  "title": "Fats Without Fear",
+  "subtitle": "A Plain-English Guide to Dietary Fats, Heart Health, and Brain Health",
+  "running_subtitle": "Dietary Fats, Heart, and Brain Health",
+  "slug": "fats-without-fear",
+  "file": "mindful-diabetes-fats-without-fear-2026.pdf",
+  "pages": [
+    {
+      "section": "Welcome",
+      "title": "Fat is not something to fear",
+      "body": "Fat is an essential nutrient and food would be dull without it. The useful question is not whether fat is allowed, but which fat sources show up most often and what they replace.",
+      "bullets": [
+        "You will learn the main fat types, how to read labels, and how to try practical swaps.",
+        "Ask for individualized advice if you have pancreatitis, gallbladder disease, high triglycerides, kidney disease, or a prescribed diet."
+      ],
+      "layout": "card_grid",
+      "visual": "food-sources",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "What fat does",
+      "title": "What dietary fat does in the body",
+      "body": "Fat helps build cell membranes, carries flavor, supports fullness, and helps the body absorb vitamins A, D, E, and K.",
+      "bullets": [
+        "Food source matters more than one isolated number.",
+        "Nuts, oils, fish, dairy, meats, and fried foods are not nutritionally identical."
+      ],
+      "layout": "split_visual_right",
+      "visual": "fat-types",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Fat types",
+      "title": "Saturated, unsaturated, and trans fats",
+      "body": "Saturated, monounsaturated, polyunsaturated, and trans fats behave differently. The American Heart Association recommends limiting saturated fat and avoiding trans fat, while choosing unsaturated fats in place of saturated fat when possible. [6]",
+      "bullets": [
+        "Saturated fats are common in butter, cheese, fatty meats, and tropical oils.",
+        "Unsaturated fats are common in non-tropical liquid oils, nuts, seeds, avocado, and fish."
+      ],
+      "layout": "card_grid",
+      "visual": "fat-types",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Replacement",
+      "title": "Why replacement matters",
+      "body": "A lower-saturated-fat pattern works best when saturated fat is replaced by unsaturated fat sources, vegetables, beans, fruit, and whole grains, not simply by refined starches or added sugar. [6]",
+      "bullets": [
+        "Swap, do not just subtract.",
+        "Look at the overall eating pattern."
+      ],
+      "layout": "split_visual_left",
+      "visual": "replacement-pathway",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Blood fats",
+      "title": "LDL, HDL, and triglycerides",
+      "body": "LDL cholesterol is often called 'bad' cholesterol because higher levels can contribute to plaque in arteries. HDL and triglycerides are also part of cardiovascular risk, but no single number tells the whole story.",
+      "bullets": [
+        "Ask what your personal numbers mean.",
+        "Do not start supplements for cholesterol or triglycerides without guidance."
+      ],
+      "layout": "card_grid",
+      "visual": "lipid-cards",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Cooking oils",
+      "title": "Cooking oils",
+      "body": "Non-tropical liquid plant oils such as olive, canola, soybean, sunflower, avocado, corn, and peanut oils are generally useful options. Coconut and palm oils are higher in saturated fat and should not be treated as miracle foods. [7]",
+      "bullets": [
+        "Choose an oil that fits the recipe and budget.",
+        "Use measured amounts when portions are a concern."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "oil-chart",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Nuts and avocado",
+      "title": "Nuts, seeds, and avocado",
+      "body": "These foods can add unsaturated fats, fiber, minerals, texture, and satisfaction. They are calorie-dense, which is a neutral fact, not a moral warning.",
+      "bullets": [
+        "Try peanuts, walnuts, sunflower seeds, pumpkin seeds, chia, flax, or avocado.",
+        "Buy small bags or store-brand options if cost matters."
+      ],
+      "layout": "split_visual_right",
+      "visual": "food-sources",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Fish",
+      "title": "Fish and omega-3 fats",
+      "body": "Fish can be a useful protein source and fatty fish provides omega-3 fats. Eating fish is different from assuming everyone needs an omega-3 supplement.",
+      "bullets": [
+        "Canned salmon, sardines, or tuna may be budget options.",
+        "Pregnancy, allergies, mercury concerns, and medications require individualized advice."
+      ],
+      "layout": "split_visual_left",
+      "visual": "fish-source",
+      "callout": [
+        "Supplement caution",
+        "Do not treat omega-3 supplements as universally needed. Ask your clinician if supplements are safe for you.",
+        "orange"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Dairy fats",
+      "title": "Butter, cheese, cream, and full-fat dairy",
+      "body": "Butter, cream, cheese, and many full-fat dairy foods can be higher in saturated fat. You do not have to ban them, but it helps to notice frequency and portion.",
+      "bullets": [
+        "Use strong flavors in smaller amounts.",
+        "Try yogurt, lower-fat dairy, or plant options when they fit your needs."
+      ],
+      "layout": "comparison",
+      "visual": "dairy-swap",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Tropical oils",
+      "title": "Coconut and palm oils",
+      "body": "Natural does not automatically mean heart-supportive. Coconut and palm oils are plant-based but still high in saturated fat. [7]",
+      "bullets": [
+        "Use them less often if LDL cholesterol is a concern.",
+        "Avoid miracle-food claims."
+      ],
+      "layout": "comparison",
+      "visual": "tropical-oils",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Fried foods",
+      "title": "Fried and ultra-processed foods",
+      "body": "Fried foods and many packaged snacks can combine refined starch, sodium, saturated fat, and large portions. The issue is the pattern, not a single food.",
+      "bullets": [
+        "Choose less often, share a portion, or pair with vegetables.",
+        "Read labels on packaged foods."
+      ],
+      "layout": "comparison",
+      "visual": "fried-pattern",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Label reading",
+      "title": "Reading the Nutrition Facts label",
+      "body": "The label lists total fat, saturated fat, trans fat, serving size, and Percent Daily Value. The FDA notes that 5% DV or less is low and 20% DV or more is high for a nutrient. [3]",
+      "bullets": [
+        "Start with serving size.",
+        "Compare saturated fat across similar foods."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "label-map",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Breakfast swaps",
+      "title": "Breakfast swaps",
+      "body": "A swap should still taste like breakfast. Keep one familiar food and change the fat source or add fiber.",
+      "bullets": [
+        "Avocado on toast instead of butter sometimes.",
+        "Plain yogurt with nuts instead of sweetened pastry.",
+        "Eggs with vegetables instead of a fried-meat side."
+      ],
+      "layout": "comparison",
+      "visual": "breakfast-swap",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Meal swaps",
+      "title": "Lunch and dinner swaps",
+      "body": "Try beans, fish, tofu, or lean poultry more often. Use olive oil vinaigrette instead of creamy dressing sometimes.",
+      "bullets": [
+        "Swap frequency, not identity.",
+        "Make the meal satisfying enough to repeat."
+      ],
+      "layout": "comparison",
+      "visual": "meal-swap",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Snack swaps",
+      "title": "Snack swaps",
+      "body": "For crunch, try nuts, roasted chickpeas, popcorn, vegetables with hummus, or whole-grain crackers with tuna.",
+      "bullets": [
+        "For sweet snacks, pair fruit with yogurt, nuts, or nut butter.",
+        "Planned snacks can prevent grazing for some people."
+      ],
+      "layout": "comparison",
+      "visual": "snack-swap",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Budget",
+      "title": "Budget-friendly fats",
+      "body": "Healthy fat choices do not have to be expensive. Peanuts, sunflower seeds, canola oil, canned fish, eggs, and store-brand nut butters can all fit.",
+      "bullets": [
+        "Buy what you will actually use.",
+        "Avoid letting premium wellness foods define health."
+      ],
+      "layout": "card_grid",
+      "visual": "budget-fats",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Myths",
+      "title": "Myths and frequently asked questions",
+      "body": "Fat-free does not always mean healthier, keto does not automatically mean heart-supportive, and coconut oil is not a cure-all.",
+      "bullets": [
+        "Look past front-package claims.",
+        "Use your lab numbers and clinician guidance."
+      ],
+      "layout": "card_grid",
+      "visual": "fat-myths",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Planner",
+      "title": "Personal fat-swap planner",
+      "body": "Choose one meal where a fat swap feels realistic. Write the current choice, one possible replacement, cost, taste, and whether you would repeat it.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "table",
+        "rows": 6,
+        "fields": [
+          "Meal",
+          "Current choice",
+          "Possible swap",
+          "Cost",
+          "Taste",
+          "Repeat?",
+          "Notes"
+        ]
+      }
+    },
+    {
+      "section": "Next steps",
+      "title": "Heart and brain health summary",
+      "body": "Dietary fat choices matter most as part of a larger pattern that also includes vegetables, fiber-rich foods, movement, sleep, blood pressure, cholesterol, glucose care, and clinical guidance.",
+      "bullets": [
+        "Explore the Mindful Plate guide.",
+        "Ask your clinician what your cholesterol numbers mean.",
+        "Share the guide with someone who feels confused by fat advice."
+      ],
+      "layout": "back_cover",
+      "visual": null,
+      "callout": null,
+      "worksheet": null
+    }
+  ],
+  "refs": [
+    "aha_fats",
+    "aha_sat",
+    "fda_label",
+    "ada"
+  ],
+  "layout_system": [
+    "full_width_text",
+    "full_width_visual_then_text",
+    "split_visual_left",
+    "split_visual_right",
+    "card_grid",
+    "comparison",
+    "worksheet_full_page",
+    "reference_page",
+    "back_cover"
+  ]
+}

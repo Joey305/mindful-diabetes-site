@@ -1,0 +1,17 @@
+<section class="cms-block cms-nutrition-facts">
+  <h2>Nutrition facts</h2>
+  <dl>
+    {% for label, value in [
+      ("Serving size", block.content.serving_size),
+      ("Calories", block.content.calories),
+      ("Carbohydrates", block.content.carbohydrates),
+      ("Fiber", block.content.fiber),
+      ("Protein", block.content.protein),
+      ("Fat", block.content.fat),
+      ("Sodium", block.content.sodium)
+    ] %}
+      {% if value %}<div><dt>{{ label }}</dt><dd>{{ value }}</dd></div>{% endif %}
+    {% endfor %}
+  </dl>
+  {% if block.content.estimated %}<p class="cms-meta">Nutrition values are estimates and may vary.</p>{% endif %}
+</section>

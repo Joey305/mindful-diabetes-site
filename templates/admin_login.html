@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Login | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}admin-page{% endblock %}
+
+{% block content %}
+  <section class="admin-auth-shell" aria-labelledby="admin-login-heading">
+    <div class="admin-auth-panel">
+      <p class="eyebrow">Admin</p>
+      <h1 id="admin-login-heading">Sign in with an email code</h1>
+      <p class="admin-muted">Only the configured admin email can access this dashboard.</p>
+
+      {% if error %}
+        <p class="admin-alert admin-alert--error">{{ error }}</p>
+      {% elif notice %}
+        <p class="admin-alert">{{ notice }}</p>
+      {% endif %}
+
+      <form class="admin-form" action="{{ url_for('admin_login') }}" method="post">
+        <input type="hidden" name="next" value="{{ next_url }}">
+        {% if code_requested %}
+          <input type="hidden" name="email" value="{{ email }}">
+          <label for="admin-code">One-time code</label>
+          <input id="admin-code" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" required autofocus>
+          <button type="submit">Open dashboard</button>
+        {% else %}
+          <label for="admin-email">Admin email</label>
+          <input id="admin-email" name="email" type="email" autocomplete="email" required>
+          <button type="submit">Send code</button>
+        {% endif %}
+      </form>
+
+      {% if code_requested %}
+        <form class="admin-inline-form" action="{{ url_for('admin_login') }}" method="post">
+          <input type="hidden" name="next" value="{{ next_url }}">
+          <input type="hidden" name="email" value="{{ email }}">
+          <button type="submit">Send a new code</button>
+        </form>
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}

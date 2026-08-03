@@ -1,0 +1,12 @@
+<nav class="cms-block cms-table-of-contents {% if block.settings.sticky %}cms-table-of-contents--sticky{% endif %}" aria-label="Table of contents">
+  <h2>{{ block.content.heading }}</h2>
+  {% if toc_items %}
+    <ol>
+      {% for item in toc_items %}
+        <li class="cms-toc-level-{{ item.level }}"><a href="#{{ item.anchor }}">{{ item.text }}</a></li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p class="admin-muted">Add H2 or H3 headings to build a table of contents.</p>
+  {% endif %}
+</nav>

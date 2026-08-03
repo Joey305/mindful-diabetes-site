@@ -1,0 +1,50 @@
+[
+  {
+    "key": "ada",
+    "organization_or_authors": "American Diabetes Association",
+    "title": "Standards of Care in Diabetes - 2026",
+    "publisher": "Diabetes Care",
+    "year": "2026",
+    "url": "https://diabetesjournals.org/care/issue/49/Supplement_1"
+  },
+  {
+    "key": "plate",
+    "organization_or_authors": "American Diabetes Association Nutrition & Wellness Team",
+    "title": "What is the Diabetes Plate?",
+    "publisher": "American Diabetes Association Diabetes Food Hub",
+    "year": "2026",
+    "url": "https://diabetesfoodhub.org/blog/what-diabetes-plate"
+  },
+  {
+    "key": "fda_label",
+    "organization_or_authors": "U.S. Food and Drug Administration",
+    "title": "How to Understand and Use the Nutrition Facts Label",
+    "publisher": "FDA",
+    "year": "2024",
+    "url": "https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label"
+  },
+  {
+    "key": "fda_sugar",
+    "organization_or_authors": "U.S. Food and Drug Administration",
+    "title": "Added Sugars on the Nutrition Facts Label",
+    "publisher": "FDA",
+    "year": "2026",
+    "url": "https://www.fda.gov/food/nutrition-facts-label/added-sugars-nutrition-facts-label"
+  },
+  {
+    "key": "aha_fats",
+    "organization_or_authors": "American Heart Association",
+    "title": "Fats in Foods",
+    "publisher": "AHA",
+    "year": "2026",
+    "url": "https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/fats-in-foods"
+  },
+  {
+    "key": "cdc_dpp",
+    "organization_or_authors": "Centers for Disease Control and Prevention",
+    "title": "What Is the National Diabetes Prevention Program?",
+    "publisher": "CDC",
+    "year": "2024",
+    "url": "https://www.cdc.gov/diabetes-prevention/programs/what-is-the-national-dpp.html"
+  }
+]

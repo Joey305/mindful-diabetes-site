@@ -1,0 +1,10 @@
+<article class="cms-block cms-profile-card">
+  {% if block.content.photo %}<img src="{{ block.content.photo }}" alt="{{ block.content.name }}">{% endif %}
+  <div>
+    <h2>{{ block.content.name }}</h2>
+    {% if block.content.role %}<p class="cms-meta">{{ block.content.role }}</p>{% endif %}
+    {% if block.content.credentials %}<p><strong>{{ block.content.credentials }}</strong></p>{% endif %}
+    {% if block.content.bio %}<p>{{ block.content.bio }}</p>{% endif %}
+    {% if block.content.profile_url %}<a href="{{ block.content.profile_url }}">Profile</a>{% endif %}
+  </div>
+</article>

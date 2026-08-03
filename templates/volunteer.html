@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Volunteer | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}volunteer-view{% endblock %}
+
+{% block content %}
+  <section class="volunteer-hero">
+    <div class="volunteer-hero__inner">
+      <div class="volunteer-hero__copy">
+        <p class="eyebrow">Volunteer with Mindful Diabetes</p>
+        <h1>Help grow prevention education, one useful contribution at a time.</h1>
+        <p>Mindful Diabetes is building education, research awareness, wellness tools, and community support around Type II and Type III diabetes prevention. Volunteers can help us reach more people, make our tools better, and turn good ideas into work that actually moves.</p>
+        <div class="button-row">
+          <a class="button-primary" href="mailto:jmschulz@mindfuldiabetes.org?subject=Volunteer%20with%20Mindful%20Diabetes">Raise your hand</a>
+          <a class="button-secondary button-secondary--light" href="#volunteer-roles">Explore opportunities</a>
+        </div>
+      </div>
+      <div class="volunteer-hero__panel" aria-label="Volunteer impact summary">
+        <span>8</span>
+        <strong>ways to help</strong>
+        <p>Writing, outreach, research support, design, social media, tool testing, fundraising, and partnerships.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="volunteer-intro" aria-labelledby="volunteer-intro-heading">
+    <div>
+      <p class="eyebrow">Why volunteers matter</p>
+      <h2 id="volunteer-intro-heading">A small nonprofit grows through thoughtful hands</h2>
+    </div>
+    <p>We do not need every volunteer to do everything. We need people who can bring one useful skill, one steady habit, or one small pocket of time to the mission. Whether you are comfortable writing, researching, organizing, designing, testing tools, or connecting us with new audiences, there is a meaningful place to plug in.</p>
+  </section>
+
+  <section id="volunteer-roles" class="volunteer-roles" aria-labelledby="volunteer-roles-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Opportunities</p>
+      <h2 id="volunteer-roles-heading">Choose a lane that fits your strengths</h2>
+    </div>
+    <div class="volunteer-role-grid">
+      <article>
+        <span>01</span>
+        <h3>Guide writing and editing</h3>
+        <p>Help turn diabetes, brain health, nutrition, and prevention topics into clear articles people can actually understand and use.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Research summaries</h3>
+        <p>Support our research page and guide by helping summarize studies, organize citations, and connect science back to daily prevention habits.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Social media storytelling</h3>
+        <p>Create short posts, captions, carousels, and video ideas that help Mindful Diabetes reach families, caregivers, students, and wellness-minded communities.</p>
+      </article>
+      <article>
+        <span>04</span>
+        <h3>Community outreach</h3>
+        <p>Help identify schools, clinics, running clubs, local organizations, and wellness groups that may want to share or support our prevention resources.</p>
+      </article>
+      <article>
+        <span>05</span>
+        <h3>Tool testing and feedback</h3>
+        <p>Try JEIR, Memovela, and the Mindful Eating Game, then share honest feedback on clarity, usability, mobile experience, and what would make them more helpful.</p>
+      </article>
+      <article>
+        <span>06</span>
+        <h3>Design and media support</h3>
+        <p>Help polish graphics, article images, video thumbnails, educational one-pagers, and visual assets that make the mission feel more trustworthy and alive.</p>
+      </article>
+      <article>
+        <span>07</span>
+        <h3>Fundraising and events</h3>
+        <p>Support small campaigns, book fundraiser outreach, donor updates, and community events that help fund education and prevention work.</p>
+      </article>
+      <article>
+        <span>08</span>
+        <h3>Partnership scouting</h3>
+        <p>Help us find aligned researchers, health creators, sponsors, community leaders, and organizations that can amplify the work responsibly.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="volunteer-pathway" aria-labelledby="volunteer-pathway-heading">
+    <div class="section-heading section-heading--left">
+      <p class="eyebrow">How it starts</p>
+      <h2 id="volunteer-pathway-heading">Start simple, then build momentum</h2>
+      <p>Volunteering should feel clear and manageable. We can begin with one small task, learn what fits, and grow from there.</p>
+    </div>
+    <div class="volunteer-pathway__grid">
+      <article>
+        <span>Step 1</span>
+        <h3>Tell us your lane</h3>
+        <p>Send a short note with what you are interested in, what skills you enjoy using, and how much time you realistically have.</p>
+      </article>
+      <article>
+        <span>Step 2</span>
+        <h3>Pick a first task</h3>
+        <p>We will match you with a focused first contribution, such as reviewing a tool, drafting a caption, or summarizing one topic.</p>
+      </article>
+      <article>
+        <span>Step 3</span>
+        <h3>Keep what works</h3>
+        <p>If it feels useful and sustainable, we can turn that first contribution into a recurring role or a larger project.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="volunteer-cta" aria-labelledby="volunteer-cta-heading">
+    <div>
+      <p class="eyebrow">Get involved</p>
+      <h2 id="volunteer-cta-heading">Ready to help Mindful Diabetes grow?</h2>
+      <p>Send a quick email with your name, the volunteer lane that interests you, and one sentence about why the mission speaks to you.</p>
+    </div>
+    <div class="button-row">
+      <a class="button-primary" href="mailto:jmschulz@mindfuldiabetes.org?subject=Volunteer%20with%20Mindful%20Diabetes">Email us to volunteer</a>
+      <a class="button-secondary button-secondary--light" href="{{ url_for('health_tools') }}">Explore our tools</a>
+    </div>
+  </section>
+{% endblock %}

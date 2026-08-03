@@ -1,0 +1,359 @@
+{
+  "title": "The Mindful Plate",
+  "subtitle": "A Simple Guide to Blood Sugar-Friendly Eating",
+  "running_subtitle": "Blood Sugar-Friendly Eating",
+  "slug": "mindful-plate",
+  "file": "mindful-diabetes-mindful-plate-guide-2026.pdf",
+  "pages": [
+    {
+      "section": "Welcome",
+      "title": "A calmer way to build a meal",
+      "body": "If food advice has started to feel like a stack of rules, this guide is meant to lower the noise. The Mindful Plate is a flexible way to assemble meals that include vegetables, protein, carbohydrate, drink, and flavor without weighing everything or giving up foods that matter to you.",
+      "bullets": [
+        "Use it as a starting point, not a rulebook.",
+        "Ask for individualized guidance if you are pregnant, have kidney disease, an eating disorder history, allergies, gastrointestinal disease, or a prescribed medical diet."
+      ],
+      "layout": "card_grid",
+      "visual": null,
+      "callout": [
+        "This guide cannot replace",
+        "Medical nutrition therapy, medication guidance, glucose targets, insulin changes, pregnancy care, eating-disorder care, or urgent medical attention.",
+        "orange"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Quick start",
+      "title": "Start here tonight",
+      "body": "Choose one meal, not your whole life. Use the plate as a quick visual check, then adapt it to the food you actually have.",
+      "bullets": [
+        "Half the plate: non-starchy vegetables when available.",
+        "One quarter: protein such as eggs, fish, tofu, beans, yogurt, chicken, or lean meat.",
+        "One quarter: carbohydrate such as rice, oats, bread, fruit, beans, potato, or tortilla.",
+        "Drink: water, unsweet tea, or another lower-sugar choice."
+      ],
+      "layout": "card_grid",
+      "visual": "mindful-plate",
+      "callout": [
+        "No all-or-nothing test",
+        "If dinner is pizza, add a salad or vegetable side. If breakfast is rushed, improve the drink. One useful change is enough.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Food and blood sugar",
+      "title": "What happens after we eat?",
+      "body": "During digestion, the body breaks food into smaller parts. Carbohydrate foods usually have the most direct effect on blood glucose because many carbohydrates break down into glucose. Insulin helps move glucose from the blood into cells so it can be used for energy. [1]",
+      "bullets": [
+        "Protein, fiber, fat, portion, activity, timing, stress, illness, sleep, alcohol, and medicines can all influence glucose patterns.",
+        "Two people can eat a similar meal and see different results."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "digestion",
+      "callout": [
+        "Safety note",
+        "Do not change insulin, diabetes medicine, or glucose targets because of this guide. If readings are often high or low, ask your care team what changes are safest for you.",
+        "orange"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Plate method",
+      "title": "The Mindful Plate method",
+      "body": "A common diabetes plate pattern uses about one-half non-starchy vegetables, one-quarter protein, one-quarter carbohydrate, and water or another low-calorie drink. [2] This guide uses that pattern as a flexible starting point.",
+      "bullets": [
+        "Mixed dishes can still be balanced by thinking about what is inside them.",
+        "The method can fit bowls, soups, tacos, dal, stir-fries, sandwiches, and leftovers."
+      ],
+      "layout": "split_visual_right",
+      "visual": "mindful-plate",
+      "callout": [
+        "What this does not mean",
+        "Every meal does not need to look separated on a plate. Culture, appetite, budget, and medical needs still matter.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Carbohydrates",
+      "title": "Carbs without confusion",
+      "body": "Carbohydrates are found in grains, starchy vegetables, fruit, milk, yogurt, beans, lentils, sweets, and sugary drinks. They are not automatically forbidden. The type, amount, and what you eat with them matter.",
+      "bullets": [
+        "Pair carbohydrate foods with protein, fiber-rich foods, vegetables, and satisfying flavor when possible.",
+        "Total carbohydrate and added sugar can both be useful label checks."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "carb-families",
+      "callout": [
+        "Try this",
+        "Choose one carbohydrate you eat often. Keep the food, but experiment with portion and pairing.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Protein",
+      "title": "Protein helps a meal hold together",
+      "body": "Protein foods can support fullness and help make a meal feel more steady. They may come from animal or plant sources, and budget options count.",
+      "bullets": [
+        "Eggs, fish, chicken, turkey, lean meats, tofu, tempeh, edamame, Greek yogurt, cottage cheese, beans, lentils, nuts, and seeds can all fit.",
+        "Beans and lentils contain both protein and carbohydrate."
+      ],
+      "layout": "split_visual_right",
+      "visual": "protein-map",
+      "callout": [
+        "Budget note",
+        "Canned tuna, eggs, beans, lentils, tofu, and plain yogurt can be practical lower-cost protein anchors.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Fiber",
+      "title": "Fiber is quiet but useful",
+      "body": "Fiber is a type of carbohydrate the body does not fully digest. Many fiber-rich foods can support fullness, bowel regularity, cholesterol patterns, and steadier meals. The FDA Daily Value for fiber is 28 grams per day based on a 2,000-calorie diet, but individual needs vary. [3]",
+      "bullets": [
+        "Add fiber gradually and drink fluids.",
+        "Ask for guidance if fiber worsens symptoms or you have a digestive or kidney condition."
+      ],
+      "layout": "split_visual_left",
+      "visual": "fiber-ladder",
+      "callout": [
+        "Gentle pace",
+        "A sudden jump in fiber can feel uncomfortable. Add one food at a time.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Dietary fat",
+      "title": "Fat adds flavor, texture, and staying power",
+      "body": "Dietary fat is an essential nutrient. The type and food source matter. A heart-health pattern usually emphasizes unsaturated fats from nuts, seeds, avocado, fish, and non-tropical liquid plant oils while limiting saturated fat and avoiding trans fat. [6]",
+      "bullets": [
+        "Use small amounts of flavorful fats to make meals satisfying.",
+        "The companion guide Fats Without Fear explains this in more detail."
+      ],
+      "layout": "comparison",
+      "visual": "drink-comparison",
+      "callout": [
+        "More detail coming",
+        "Use the Fats Without Fear guide for saturated, unsaturated, and trans fats in plain language.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Breakfasts",
+      "title": "Breakfasts, if breakfast fits your day",
+      "body": "Not everyone wants or needs breakfast. If you do eat it, breakfast can be a useful place to add protein, fiber, and a lower-sugar drink.",
+      "bullets": [
+        "Eggs, whole-grain toast, and vegetables.",
+        "Plain yogurt with berries, nuts, and oats.",
+        "Oatmeal with seeds, fruit, and nut butter.",
+        "Beans, egg or tofu, salsa, vegetables, and corn tortilla."
+      ],
+      "layout": "card_grid",
+      "visual": "breakfast-grid",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Lunches",
+      "title": "Lunches that do not require a fresh start",
+      "body": "Lunch often happens between work, caregiving, school, appointments, or errands. It does not need to be a recipe. Think in pieces: colorful food, protein, fiber, and something enjoyable.",
+      "bullets": [
+        "Bowl: greens, leftover chicken or tofu, beans, salsa, and rice.",
+        "Sandwich: whole-grain bread, turkey or hummus, vegetables, and fruit.",
+        "No-cook: tuna packet, whole-grain crackers, cucumber, carrots, and fruit."
+      ],
+      "layout": "card_grid",
+      "visual": "lunch-grid",
+      "callout": [
+        "Restaurant note",
+        "Choose one adjustment: add vegetables, choose water, share fries, or save part for later.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Dinners",
+      "title": "Dinners can honor culture and still be balanced",
+      "body": "Healthy eating should not erase family food. Many traditional meals already include vegetables, beans, lentils, fish, lean meats, yogurt, grains, herbs, spices, and shared routines.",
+      "bullets": [
+        "Tacos with beans or grilled protein, cabbage, salsa, avocado, and corn tortillas.",
+        "Dal with vegetables, cucumber salad, and rice.",
+        "Stir-fry with tofu, chicken, shrimp, or beef, vegetables, and rice.",
+        "Caribbean-inspired plate with fish or chicken, greens, beans, and plantain."
+      ],
+      "layout": "card_grid",
+      "visual": "dinner-grid",
+      "callout": [
+        "Pattern over perfection",
+        "A higher-carbohydrate food can often fit better when the rest of the plate supports it.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Snacks",
+      "title": "Snacks are optional",
+      "body": "Some people feel better with planned snacks. Others do not need them. Snacks may be useful if meals are far apart, activity changes glucose, medication timing matters, or hunger makes the next meal harder.",
+      "bullets": [
+        "Apple with peanut butter.",
+        "Plain yogurt with berries.",
+        "Hummus with vegetables or whole-grain crackers.",
+        "Boiled egg with fruit.",
+        "Nuts with a small piece of fruit."
+      ],
+      "layout": "card_grid",
+      "visual": "snack-grid",
+      "callout": [
+        "Medication safety",
+        "If you use insulin or medicines that can cause low blood sugar, ask your care team how snacks, activity, and low readings should be handled.",
+        "orange"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Drinks",
+      "title": "Drinks and hidden sugars",
+      "body": "Sugary drinks can raise blood glucose quickly because they are easy to drink fast and do not bring much fiber or fullness. Soda, sweet tea, juice, energy drinks, sports drinks, and sweet coffee drinks can all add sugar quickly.",
+      "bullets": [
+        "The FDA Daily Value for added sugars is 50 grams per day based on a 2,000-calorie diet. [4]",
+        "Start by improving one drink you have often."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "drink-comparison",
+      "callout": [
+        "Try this",
+        "Make one drink change: smaller size, less syrup, unsweet tea, sparkling water, infused water, or water beside the drink.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Portions",
+      "title": "Portions without weighing everything",
+      "body": "Portions do not need to be exact to be useful. The plate method gives a visual estimate. Labels give serving sizes. Cups, bowls, and hand-based estimates can help when measuring is not realistic.",
+      "bullets": [
+        "A fist can be a rough estimate for about one cup of some foods.",
+        "A palm can be a rough estimate for a portion of cooked protein.",
+        "A label serving size is the amount used for the numbers on the label, not a personal prescription. [3]"
+      ],
+      "layout": "split_visual_right",
+      "visual": "portion-guide",
+      "callout": [
+        "Keep it kind",
+        "Portion awareness is a tool, not a judgment. If measuring food feels stressful or unsafe, ask for support.",
+        "orange"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Sample menu",
+      "title": "Three days of flexible ideas",
+      "body": "These are examples, not a prescription. Your calorie, carbohydrate, protein, sodium, kidney, allergy, pregnancy, medication, and glucose needs may be different.",
+      "bullets": [],
+      "layout": "full_width_visual_then_text",
+      "visual": "menu-table",
+      "callout": [
+        "Vegetarian swap",
+        "Use beans, lentils, tofu, tempeh, edamame, eggs, yogurt, nuts, and seeds when they fit your needs.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Worksheet",
+      "title": "Build your own meal",
+      "body": "Choose one meal you already eat. Write down what you could add, reduce, swap, or prepare ahead. Keep the change small enough that you can actually try it.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "fields",
+        "fields": [
+          "1/2 plate vegetables",
+          "1/4 plate protein",
+          "1/4 plate carbohydrate",
+          "Drink",
+          "Flavor or fat",
+          "What I can prep ahead"
+        ]
+      }
+    },
+    {
+      "section": "Shopping",
+      "title": "Grocery starter list",
+      "body": "Use this as a starter list, not a rule. Frozen, canned, dried, and store-brand foods can be practical.",
+      "bullets": [
+        "Vegetables, fruit, protein, carbohydrates, healthy fats, flavor builders, and freezer or pantry backups.",
+        "Rinse canned beans or vegetables when you want less sodium."
+      ],
+      "layout": "card_grid",
+      "visual": "grocery-list",
+      "callout": [
+        "Budget note",
+        "Frozen, canned, dried, and store-brand foods can reduce waste and cost.",
+        "green"
+      ],
+      "worksheet": null
+    },
+    {
+      "section": "Questions and myths",
+      "title": "A few food questions people ask all the time",
+      "body": "Food questions are normal because nutrition advice can be noisy. These short answers are designed to reduce fear, not replace personal guidance.",
+      "bullets": [
+        "Do I have to stop eating carbohydrates? No.",
+        "Is fruit too sugary? Whole fruit can fit for many people.",
+        "Are potatoes forbidden? No; portion and pairing matter.",
+        "Do I have to buy expensive health foods? No.",
+        "Can I keep culturally important foods? Yes."
+      ],
+      "layout": "card_grid",
+      "visual": "myth-grid",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Next steps",
+      "title": "Keep the guide useful",
+      "body": "Pick one page to use this week. You might build one balanced dinner, improve one drink, or complete the meal worksheet.",
+      "bullets": [
+        "Explore more Mindful Diabetes guides.",
+        "Join the newsletter.",
+        "Visit Health Tools and JEIR.",
+        "Support free health education if you are able."
+      ],
+      "layout": "back_cover",
+      "visual": null,
+      "callout": [
+        "Medical disclaimer",
+        "This guide is general education, not medical advice, diagnosis, or treatment. Do not change medication, insulin, or glucose targets based on this guide.",
+        "orange"
+      ],
+      "worksheet": null
+    }
+  ],
+  "refs": [
+    "ada",
+    "plate",
+    "fda_label",
+    "fda_sugar",
+    "aha_fats",
+    "cdc_dpp"
+  ],
+  "layout_system": [
+    "full_width_text",
+    "full_width_visual_then_text",
+    "split_visual_left",
+    "split_visual_right",
+    "card_grid",
+    "comparison",
+    "worksheet_full_page",
+    "reference_page",
+    "back_cover"
+  ]
+}

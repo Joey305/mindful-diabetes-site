@@ -1,0 +1,2117 @@
+{
+    "manifest_version": "1.0.9",
+    "title": "Gaveall",
+    "page_builder": "elementor",
+    "kit_version": "1.0.1",
+    "templates": [
+        {
+            "name": "Global Kit Styles",
+            "screenshot": "screenshots\/default-kit.jpg",
+            "source": "templates\/global.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "global-styles",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "additional_template_information": [
+                    "These are the global theme styles configured through the Elementor Theme Styles area."
+                ]
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "About Us",
+            "screenshot": "screenshots\/about-us.jpg",
+            "source": "templates\/about-us.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/about-us\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Become a Volunteer",
+            "screenshot": "screenshots\/become-a-volunteer.jpg",
+            "source": "templates\/become-a-volunteer.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/become-a-volunteer\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Causes Detail",
+            "screenshot": "screenshots\/causes-detail.jpg",
+            "source": "templates\/causes-detail.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/causes-detail\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Causes List",
+            "screenshot": "screenshots\/causes-list.jpg",
+            "source": "templates\/causes-list.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/causes-list\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Contact",
+            "screenshot": "screenshots\/contact.jpg",
+            "source": "templates\/contact.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/contact\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Event Detail",
+            "screenshot": "screenshots\/event-detail.jpg",
+            "source": "templates\/event-detail.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/event-detail\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Event Page",
+            "screenshot": "screenshots\/event-page.jpg",
+            "source": "templates\/event-page.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/event-page\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Gallery",
+            "screenshot": "screenshots\/gallery.jpg",
+            "source": "templates\/gallery.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/gallery\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Homepage",
+            "screenshot": "screenshots\/homepage.jpg",
+            "source": "templates\/homepage.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/homepage\/",
+            "type": "section",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-home",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Team",
+            "screenshot": "screenshots\/team.jpg",
+            "source": "templates\/team.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/template-kit\/team\/",
+            "type": "page",
+            "category": "page",
+            "metadata": {
+                "template_type": "single-page",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1"
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Theme Builder - Footer (Elementor Pro)",
+            "screenshot": "screenshots\/theme-builder-footer-elementor-pro-.jpg",
+            "source": "templates\/theme-builder-footer-elementor-pro-.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/?elementor_library=theme-builder-footer-elementor-pro",
+            "type": "footer",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-footer",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "footer",
+                "elementor_pro_conditions": [
+                    "include\/general"
+                ],
+                "additional_template_information": [
+                    "This is a \"Footer\" template for Elementor Pro.",
+                    "This template will display on: Entire Site."
+                ]
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Theme Builder \u2013 Header (Elementor Pro)",
+            "screenshot": "screenshots\/theme-builder-header-elementor-pro-.jpg",
+            "source": "templates\/theme-builder-header-elementor-pro-.json",
+            "preview_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/?elementor_library=theme-builder-header-elementor-pro-2",
+            "type": "header",
+            "category": "section",
+            "metadata": {
+                "template_type": "section-header",
+                "include_in_zip": "1",
+                "elementor_pro_required": "1",
+                "elementor_library_type": "header",
+                "elementor_pro_conditions": [
+                    "include\/general"
+                ],
+                "additional_template_information": [
+                    "This is a \"Header\" template for Elementor Pro.",
+                    "This template will display on: Entire Site."
+                ]
+            },
+            "elementor_pro_required": true
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Elementor",
+            "version": "3.0.11",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        },
+        {
+            "name": "Elementor Pro",
+            "version": "3.0.5",
+            "file": "elementor-pro\/elementor-pro.php",
+            "author": "Elementor.com"
+        }
+    ],
+    "images": [
+        {
+            "filename": "people-carrying-donation-box-GH2LYUP.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/people-carrying-donation-box-GH2LYUP-600x400.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/become-a-volunteer.json",
+                    "name": "Become a Volunteer"
+                },
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                },
+                {
+                    "source": "templates\/contact.json",
+                    "name": "Contact"
+                },
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 215007,
+            "dimensions": [
+                1280,
+                853
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-GH2LYUP"
+        },
+        {
+            "filename": "About-Video.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/About-Video-600x338.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 383173,
+            "dimensions": [
+                922,
+                519
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/creative-team-at-work-P7QLBZT"
+        },
+        {
+            "filename": "Our-mission-03.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Our-mission-03.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 1990,
+            "dimensions": [
+                118,
+                118
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-line-J6QP24W"
+        },
+        {
+            "filename": "Our-mission-02.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Our-mission-02.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 1740,
+            "dimensions": [
+                118,
+                118
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-line-J6QP24W"
+        },
+        {
+            "filename": "Our-mission-01.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Our-mission-01.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2066,
+            "dimensions": [
+                118,
+                118
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-line-J6QP24W"
+        },
+        {
+            "filename": "Partner-05.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Partner-05.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 1477,
+            "dimensions": [
+                99,
+                99
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/colorful-charity-logo-U6VZL5"
+        },
+        {
+            "filename": "Partner-04.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Partner-04.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 1462,
+            "dimensions": [
+                135,
+                135
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/forgroup-logo-template-MUUCHQ"
+        },
+        {
+            "filename": "Partner-03.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Partner-03.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2249,
+            "dimensions": [
+                131,
+                113
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/child-charity-logo-Z5Y3YD"
+        },
+        {
+            "filename": "Partner-02.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Partner-02.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 2469,
+            "dimensions": [
+                141,
+                119
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/people-assist-logo-template-T5KM7B"
+        },
+        {
+            "filename": "Partner-01.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Partner-01.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 1514,
+            "dimensions": [
+                105,
+                115
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/society-colorful-logo-8EZAE2"
+        },
+        {
+            "filename": "Our-Story.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Our-Story.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                }
+            ],
+            "filesize": 378329,
+            "dimensions": [
+                517,
+                769
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/team-of-young-designers-team-in-a-meeting-PYTSE3F"
+        },
+        {
+            "filename": "User.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/User.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                },
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 889,
+            "dimensions": [
+                62,
+                62
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-solid-QZTUP8W"
+        },
+        {
+            "filename": "Become-Volunteer.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Become-Volunteer-600x329.jpg",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                },
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 138079,
+            "dimensions": [
+                611,
+                335
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/teamwork-and-teambuilding-people-connect-hands-4RUX6YS"
+        },
+        {
+            "filename": "Become-a-volunteer.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Become-a-volunteer.png",
+            "templates": [
+                {
+                    "source": "templates\/about-us.json",
+                    "name": "About Us"
+                },
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                },
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                },
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 12217,
+            "dimensions": [
+                379,
+                274
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/asian-woman-with-armed-crossed-5XX9US8"
+        },
+        {
+            "filename": "Become-s1.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Become-s1-600x476.jpg",
+            "templates": [
+                {
+                    "source": "templates\/become-a-volunteer.json",
+                    "name": "Become a Volunteer"
+                }
+            ],
+            "filesize": 298845,
+            "dimensions": [
+                655,
+                520
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/creative-people-meeting-at-a-cafe-PG9DRX3"
+        },
+        {
+            "filename": "Become-s1-1.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Become-s1-1.jpg",
+            "templates": [
+                {
+                    "source": "templates\/become-a-volunteer.json",
+                    "name": "Become a Volunteer"
+                }
+            ],
+            "filesize": 116451,
+            "dimensions": [
+                329,
+                298
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/business-meeting-at-the-coffee-shop-P5FY558"
+        },
+        {
+            "filename": "Become-s3.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Become-s3.png",
+            "templates": [
+                {
+                    "source": "templates\/become-a-volunteer.json",
+                    "name": "Become a Volunteer"
+                }
+            ],
+            "filesize": 507643,
+            "dimensions": [
+                586,
+                639
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/portrait-of-a-happy-creative-team-of-people-talkin-KWECYBJ"
+        },
+        {
+            "filename": "Testi-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Testi-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/become-a-volunteer.json",
+                    "name": "Become a Volunteer"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 12578,
+            "dimensions": [
+                100,
+                100
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/woman-portrait-natural-beautiful-casual-beautiful--6ANLYFB"
+        },
+        {
+            "filename": "Testi-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Testi-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/become-a-volunteer.json",
+                    "name": "Become a Volunteer"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 10812,
+            "dimensions": [
+                100,
+                100
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/woman-with-black-long-hair-and-natural-makeup-over-NZFAGQF"
+        },
+        {
+            "filename": "Causes-detail.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-detail-600x726.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                }
+            ],
+            "filesize": 272962,
+            "dimensions": [
+                617,
+                747
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/young-child-PPZS789"
+        },
+        {
+            "filename": "Causes-summary-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-summary-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                }
+            ],
+            "filesize": 80611,
+            "dimensions": [
+                378,
+                236
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/beutiful-black-african-people-children-portrait-JL4VZLR"
+        },
+        {
+            "filename": "Causes-summary-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-summary-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                }
+            ],
+            "filesize": 111082,
+            "dimensions": [
+                378,
+                236
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/children-playing-outdoors-in-summer-NN5W8DZ"
+        },
+        {
+            "filename": "Causes-summary-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-summary-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                }
+            ],
+            "filesize": 37802,
+            "dimensions": [
+                378,
+                236
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/young-cute-african-girl-against-gray-background-2BREE8G"
+        },
+        {
+            "filename": "Causes-detail-vid.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-detail-vid.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                }
+            ],
+            "filesize": 303008,
+            "dimensions": [
+                582,
+                513
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/portrait-of-family-couple-mother-and-son-black-afr-PZ367ZH"
+        },
+        {
+            "filename": "Causes-list-06.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-list-06.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                },
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 60919,
+            "dimensions": [
+                377,
+                339
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/cancer-survivor-MH4ASS6"
+        },
+        {
+            "filename": "Causes-list-05.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-list-05.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                },
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 71628,
+            "dimensions": [
+                377,
+                339
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/black-and-white-of-an-african-boy-leaning-on-a-tre-W7EU6MC"
+        },
+        {
+            "filename": "Causes-list-04.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-list-04.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-detail.json",
+                    "name": "Causes Detail"
+                },
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 129192,
+            "dimensions": [
+                377,
+                339
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/elementary-school-kids-in-africa-posing-in-school--PHKQSZG"
+        },
+        {
+            "filename": "Causes-list-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-list-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 86152,
+            "dimensions": [
+                377,
+                339
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": " https:\/\/elements.envato.com\/african-kid-87C5FGM"
+        },
+        {
+            "filename": "Causes-list-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-list-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 150782,
+            "dimensions": [
+                377,
+                339
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/children-and-education-kids-and-girls-reading-book-PQ5Z8XF"
+        },
+        {
+            "filename": "Causes-list-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-list-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 70325,
+            "dimensions": [
+                377,
+                339
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/african-businesswoman-wearing-mask-PH7DVAW"
+        },
+        {
+            "filename": "causes-list-s2.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/causes-list-s2-600x543.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 204876,
+            "dimensions": [
+                659,
+                596
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/young-child-PPZS789"
+        },
+        {
+            "filename": "causes-list-s3.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/causes-list-s3-600x492.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 223496,
+            "dimensions": [
+                659,
+                540
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/woman-with-cancer-PVAGPD4"
+        },
+        {
+            "filename": "news-update-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/news-update-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 135465,
+            "dimensions": [
+                377,
+                344
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/little-african-boy-take-a-breakfast-with-caucasian-52ADTXN"
+        },
+        {
+            "filename": "news-update-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/news-update-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 84500,
+            "dimensions": [
+                377,
+                344
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/coronavirus-covid-19-ZYCM5LR"
+        },
+        {
+            "filename": "news-update-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/news-update-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/causes-list.json",
+                    "name": "Causes List"
+                }
+            ],
+            "filesize": 82103,
+            "dimensions": [
+                377,
+                344
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/donate-today-concept-H6487HL"
+        },
+        {
+            "filename": "Contact-form.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Contact-form.jpg",
+            "templates": [
+                {
+                    "source": "templates\/contact.json",
+                    "name": "Contact"
+                }
+            ],
+            "filesize": 371812,
+            "dimensions": [
+                549,
+                692
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/team-of-young-designers-team-in-a-meeting-PYTSE3F"
+        },
+        {
+            "filename": "Event-Detail.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-Detail-600x302.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-detail.json",
+                    "name": "Event Detail"
+                }
+            ],
+            "filesize": 665266,
+            "dimensions": [
+                1194,
+                601
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/spectators-cheering-at-outdoor-sports-event-P6D8KXN"
+        },
+        {
+            "filename": "About-team-05.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/About-team-05.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-detail.json",
+                    "name": "Event Detail"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 107219,
+            "dimensions": [
+                377,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/asian-woman-with-armed-crossed-5XX9US8"
+        },
+        {
+            "filename": "About-team-04.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/About-team-04.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-detail.json",
+                    "name": "Event Detail"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 59371,
+            "dimensions": [
+                377,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/asian-young-man-X6422N5"
+        },
+        {
+            "filename": "About-team-06.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/About-team-06.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-detail.json",
+                    "name": "Event Detail"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 106868,
+            "dimensions": [
+                377,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/asian-woman-YRYQ8DY"
+        },
+        {
+            "filename": "Event-page-06.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-page-06.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-detail.json",
+                    "name": "Event Detail"
+                },
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                }
+            ],
+            "filesize": 129570,
+            "dimensions": [
+                378,
+                396
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/motivation-event-8XYZ64J"
+        },
+        {
+            "filename": "Event-page-05.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-page-05.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-detail.json",
+                    "name": "Event Detail"
+                },
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                }
+            ],
+            "filesize": 185801,
+            "dimensions": [
+                378,
+                396
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/women-breast-cancer-support-charity-concept-PHW4MUJ"
+        },
+        {
+            "filename": "Event-page-04.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-page-04.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-detail.json",
+                    "name": "Event Detail"
+                },
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                }
+            ],
+            "filesize": 160392,
+            "dimensions": [
+                378,
+                396
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/spectators-cheering-at-outdoor-sports-event-P6D8KXN"
+        },
+        {
+            "filename": "Event-page-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-page-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                }
+            ],
+            "filesize": 152161,
+            "dimensions": [
+                378,
+                396
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/school-event-G9ZKGC6"
+        },
+        {
+            "filename": "Event-page-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-page-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                }
+            ],
+            "filesize": 136522,
+            "dimensions": [
+                378,
+                396
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/supporter-holding-balloons-at-sports-event-9UX9DSC"
+        },
+        {
+            "filename": "Event-page-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-page-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                }
+            ],
+            "filesize": 149284,
+            "dimensions": [
+                378,
+                396
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/looking-on-surprising-result-of-work-A5V4M5N"
+        },
+        {
+            "filename": "Gallery-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Gallery-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 159528,
+            "dimensions": [
+                515,
+                422
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/young-multiethnic-group-of-volunteers-putting-food-2FTY5GT"
+        },
+        {
+            "filename": "Gallery-05.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Gallery-05-600x391.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 190722,
+            "dimensions": [
+                648,
+                422
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/cropped-shot-of-young-volunteers-group-packing-foo-GWF8VAJ"
+        },
+        {
+            "filename": "Gallery-04.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Gallery-04.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 107419,
+            "dimensions": [
+                383,
+                260
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/elementary-school-kids-in-playground-waving-to-cam-P34BUTG"
+        },
+        {
+            "filename": "Gallery-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Gallery-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 90605,
+            "dimensions": [
+                383,
+                260
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/teacher-helping-elementary-school-girl-at-her-desk-PJQGRP9"
+        },
+        {
+            "filename": "Gallery-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Gallery-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                },
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 106139,
+            "dimensions": [
+                383,
+                260
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/women-breast-cancer-support-charity-concept-P6HHSAM"
+        },
+        {
+            "filename": "About-Team.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/About-Team.png",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 248,
+            "dimensions": [
+                163,
+                129
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "Event-s3.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-s3.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                }
+            ],
+            "filesize": 146545,
+            "dimensions": [
+                560,
+                435
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/volunteer-working-at-donation-center-YDGVWW9"
+        },
+        {
+            "filename": "Love-icon.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Love-icon.png",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                },
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 1017,
+            "dimensions": [
+                87,
+                87
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-solid-QZTUP8W"
+        },
+        {
+            "filename": "Event-s4.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-s4.jpg",
+            "templates": [
+                {
+                    "source": "templates\/event-page.json",
+                    "name": "Event Page"
+                }
+            ],
+            "filesize": 157236,
+            "dimensions": [
+                493,
+                514
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/handsome-young-man-looking-at-camera-MV9M24E"
+        },
+        {
+            "filename": "Event-Gallery-05.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-Gallery-05.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 110563,
+            "dimensions": [
+                378,
+                422
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/cropped-shot-of-young-volunteers-group-packing-foo-GWF8VAJ"
+        },
+        {
+            "filename": "Event-Gallery-06.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-Gallery-06.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 174855,
+            "dimensions": [
+                378,
+                422
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/women-breast-cancer-support-charity-concept-P6HHSAM"
+        },
+        {
+            "filename": "Event-Gallery-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-Gallery-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 128367,
+            "dimensions": [
+                378,
+                422
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/four-young-multicultural-volunteers-in-white-t-shi-NBY778K"
+        },
+        {
+            "filename": "Event-Gallery-04.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-Gallery-04.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 131991,
+            "dimensions": [
+                378,
+                459
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/teacher-helping-elementary-school-girl-at-her-desk-PJQGRP9"
+        },
+        {
+            "filename": "Event-Gallery-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-Gallery-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 150476,
+            "dimensions": [
+                378,
+                459
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/elementary-school-kids-in-playground-waving-to-cam-P34BUTG"
+        },
+        {
+            "filename": "Event-Gallery-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Event-Gallery-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 120635,
+            "dimensions": [
+                378,
+                459
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/young-multiethnic-group-of-volunteers-putting-food-2FTY5GT"
+        },
+        {
+            "filename": "Charity-Gallery-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Charity-Gallery-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 251831,
+            "dimensions": [
+                440,
+                459
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/women-and-children-running-charity-bake-sale-PPRX58D"
+        },
+        {
+            "filename": "Charity-Gallery-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Charity-Gallery-01-600x381.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 295918,
+            "dimensions": [
+                723,
+                459
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/elementary-school-kids-in-africa-posing-in-school--PHKQSZG"
+        },
+        {
+            "filename": "volunteer-meetup.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/volunteer-meetup-600x256.jpg",
+            "templates": [
+                {
+                    "source": "templates\/gallery.json",
+                    "name": "Gallery"
+                }
+            ],
+            "filesize": 517923,
+            "dimensions": [
+                1186,
+                507
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/motivation-event-8XYZ64J"
+        },
+        {
+            "filename": "Group-140.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Group-140.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 158226,
+            "dimensions": [
+                600,
+                400
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/smiling-cancer-woman-PUCHXV8"
+        },
+        {
+            "filename": "Mask-Group.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Mask-Group.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 71165,
+            "dimensions": [
+                279,
+                303
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/smiling-man-holding-a-donation-box-in-office-9UYDZXH"
+        },
+        {
+            "filename": "hero-stats.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/hero-stats.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 3032,
+            "dimensions": [
+                125,
+                178
+            ],
+            "image_source": "self_created",
+            "person_or_place": "no",
+            "image_urls": ""
+        },
+        {
+            "filename": "thumb.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/thumb.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 1077,
+            "dimensions": [
+                88,
+                88
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/interface-line-icons-N3VUHDD"
+        },
+        {
+            "filename": "four-young-multicultural-volunteers-in-white-t-shi-NBY778K.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/four-young-multicultural-volunteers-in-white-t-shi-NBY778K-600x400.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 131128,
+            "dimensions": [
+                900,
+                600
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/image-NBY778K"
+        },
+        {
+            "filename": "Who-we-are.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Who-we-are.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 1905,
+            "dimensions": [
+                370,
+                99
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-solid-QZTUP8W"
+        },
+        {
+            "filename": "What-we-do03.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/What-we-do03.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 1973,
+            "dimensions": [
+                118,
+                118
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-line-J6QP24W"
+        },
+        {
+            "filename": "What-we-do02.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/What-we-do02.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 2268,
+            "dimensions": [
+                118,
+                118
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-line-J6QP24W"
+        },
+        {
+            "filename": "What-we-do01.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/What-we-do01.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 2190,
+            "dimensions": [
+                118,
+                118
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-line-J6QP24W"
+        },
+        {
+            "filename": "Love.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Love.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 453,
+            "dimensions": [
+                40,
+                38
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-solid-QZTUP8W"
+        },
+        {
+            "filename": "Section-3.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Section-3.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 322999,
+            "dimensions": [
+                527,
+                765
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/young-child-PPZS789"
+        },
+        {
+            "filename": "Section-3-2.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Section-3-2.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 13580,
+            "dimensions": [
+                379,
+                274
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/woman-with-black-long-hair-and-natural-makeup-over-NZFAGQF"
+        },
+        {
+            "filename": "Causes-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 47255,
+            "dimensions": [
+                382,
+                226
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/cancer-survivor-MH4ASS6"
+        },
+        {
+            "filename": "Love-1.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Love-1.png",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 522,
+            "dimensions": [
+                40,
+                38
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-solid-QZTUP8W"
+        },
+        {
+            "filename": "Causes-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 58352,
+            "dimensions": [
+                382,
+                226
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/black-and-white-of-an-african-boy-leaning-on-a-tre-W7EU6MC"
+        },
+        {
+            "filename": "Causes-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Causes-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 101135,
+            "dimensions": [
+                382,
+                226
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/elementary-school-kids-in-africa-posing-in-school--PHKQSZG"
+        },
+        {
+            "filename": "Events-04.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Events-04.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 175168,
+            "dimensions": [
+                517,
+                396
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/motivation-event-8XYZ64J"
+        },
+        {
+            "filename": "Events-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Events-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 19345,
+            "dimensions": [
+                143,
+                137
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/cropped-shot-of-volunteers-with-food-and-drinks-fo-QQ6GJBV"
+        },
+        {
+            "filename": "Events-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Events-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 30155,
+            "dimensions": [
+                143,
+                137
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/women-breast-cancer-support-charity-concept-PHW4MUJ"
+        },
+        {
+            "filename": "Events-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Events-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 27621,
+            "dimensions": [
+                143,
+                137
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/spectators-cheering-at-outdoor-sports-event-P6D8KXN"
+        },
+        {
+            "filename": "team-and-staff-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/team-and-staff-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 48996,
+            "dimensions": [
+                323,
+                285
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/asian-woman-with-armed-crossed-5XX9US8"
+        },
+        {
+            "filename": "team-and-staff-04.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/team-and-staff-04.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 27763,
+            "dimensions": [
+                323,
+                285
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/asian-young-man-X6422N5"
+        },
+        {
+            "filename": "team-and-staff-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/team-and-staff-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 37722,
+            "dimensions": [
+                323,
+                285
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/caucasian-man-portrait-E9L5KXL"
+        },
+        {
+            "filename": "team-and-staff-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/team-and-staff-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/homepage.json",
+                    "name": "Homepage"
+                }
+            ],
+            "filesize": 50324,
+            "dimensions": [
+                323,
+                285
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/woman-portrait-7URU8RY"
+        },
+        {
+            "filename": "About-team-03.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/About-team-03.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 113372,
+            "dimensions": [
+                377,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/woman-portrait-7URU8RY"
+        },
+        {
+            "filename": "About-team-01.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/About-team-01.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 105248,
+            "dimensions": [
+                377,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/brunette-woman-portrait-NTTDVG2"
+        },
+        {
+            "filename": "About-team-02.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/About-team-02.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 77151,
+            "dimensions": [
+                377,
+                500
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/caucasian-man-portrait-E9L5KXL"
+        },
+        {
+            "filename": "Team-s2.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Team-s2-600x497.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 324340,
+            "dimensions": [
+                638,
+                529
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/successful-and-happy-business-team-ECRJ2AU"
+        },
+        {
+            "filename": "team-s2-2.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/team-s2-2.png",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 12360,
+            "dimensions": [
+                379,
+                274
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/asian-woman-with-armed-crossed-5XX9US8"
+        },
+        {
+            "filename": "team-s3-2.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/team-s3-2.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 166871,
+            "dimensions": [
+                352,
+                349
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/women-and-children-running-charity-bake-sale-PPRX58D"
+        },
+        {
+            "filename": "team-s3-1.jpg",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/team-s3-1.jpg",
+            "templates": [
+                {
+                    "source": "templates\/team.json",
+                    "name": "Team"
+                }
+            ],
+            "filesize": 122118,
+            "dimensions": [
+                386,
+                379
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "yes",
+            "image_urls": "https:\/\/elements.envato.com\/happy-children-WRZT473"
+        },
+        {
+            "filename": "Gaveall-Logo.png",
+            "thumbnail_url": "https:\/\/templatekit.tokomoo.com\/gaveall\/wp-content\/uploads\/sites\/20\/2021\/01\/Gaveall-Logo.png",
+            "templates": [
+                {
+                    "source": "templates\/theme-builder-footer-elementor-pro-.json",
+                    "name": "Theme Builder - Footer (Elementor Pro)"
+                },
+                {
+                    "source": "templates\/theme-builder-header-elementor-pro-.json",
+                    "name": "Theme Builder \u2013 Header (Elementor Pro)"
+                }
+            ],
+            "filesize": 922,
+            "dimensions": [
+                129,
+                39
+            ],
+            "image_source": "envato_elements",
+            "person_or_place": "no",
+            "image_urls": "https:\/\/elements.envato.com\/20-charity-icons-solid-QZTUP8W"
+        }
+    ]
+}

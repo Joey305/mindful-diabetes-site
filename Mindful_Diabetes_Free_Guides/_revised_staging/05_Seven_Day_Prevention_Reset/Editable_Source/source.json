@@ -1,0 +1,363 @@
+{
+  "title": "The 7-Day Prevention Reset",
+  "subtitle": "A Gentle One-Week Plan for Building Healthier Everyday Habits",
+  "running_subtitle": "A Gentle One-Week Habit Plan",
+  "slug": "7-day-prevention-reset",
+  "file": "mindful-diabetes-7-day-prevention-reset-2026.pdf",
+  "pages": [
+    {
+      "section": "Welcome",
+      "title": "A reset is not a cleanse",
+      "body": "This reset means pausing, observing, and creating a few useful routines. It is not a detox, crash diet, or promise.",
+      "bullets": [
+        "Do not change medicines or insulin based on this guide.",
+        "Choose movement that is safe for your body."
+      ],
+      "layout": "card_grid",
+      "visual": "roadmap",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Habits",
+      "title": "How habits work",
+      "body": "Habits often need a cue, a routine, and a reward. The smaller the routine, the easier it is to repeat when life gets busy.",
+      "bullets": [
+        "Tie a new habit to something you already do.",
+        "Make backup plans part of the habit."
+      ],
+      "layout": "split_visual_right",
+      "visual": "habit-loop",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Overview",
+      "title": "Seven-day overview",
+      "body": "Each day asks for one main action. You can repeat a day, skip a day, or adapt the plan. The point is learning, not proving anything.",
+      "bullets": [
+        "Day 1 notice.",
+        "Day 2 build one balanced meal.",
+        "Day 3 add fiber.",
+        "Day 4 break up sitting.",
+        "Day 5 improve one drink.",
+        "Day 6 protect sleep.",
+        "Day 7 plan next week."
+      ],
+      "layout": "full_width_visual_then_text",
+      "visual": "roadmap",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Day 1",
+      "title": "Notice your starting point",
+      "body": "Record a normal day without judgment. Notice drinks, meals, movement, sleep, energy, mood, and one thing that felt hard.",
+      "bullets": [
+        "Choose one realistic goal.",
+        "Keep private health notes secure."
+      ],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "fields",
+        "fields": [
+          "Today I noticed",
+          "One drink pattern",
+          "One meal pattern",
+          "One movement pattern",
+          "One sleep note",
+          "One realistic goal"
+        ]
+      }
+    },
+    {
+      "section": "Day 2",
+      "title": "Build one balanced meal",
+      "body": "Use the Mindful Plate method for one meal only. Add vegetables, protein, carbohydrate, and a lower-sugar drink if possible.",
+      "bullets": [
+        "One meal is enough.",
+        "Mixed dishes can still count."
+      ],
+      "layout": "split_visual_right",
+      "visual": "balanced-meal",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Day 3",
+      "title": "Add a source of fiber",
+      "body": "Add one fiber source such as beans, lentils, oats, berries, vegetables, whole grains, nuts, or seeds. Increase gradually and drink fluids.",
+      "bullets": [
+        "Stop and ask for advice if fiber worsens symptoms.",
+        "People with some medical diets need individual guidance."
+      ],
+      "layout": "split_visual_left",
+      "visual": "fiber-ladder",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Day 4",
+      "title": "Break up sitting time",
+      "body": "Short activity breaks can help many people. Options include walking, standing, chair movement, stretching, or gentle household tasks.",
+      "bullets": [
+        "The CDC describes 150 minutes per week as a common adult activity goal, but starting slowly is okay. [9]",
+        "Ask which activities are safest for you."
+      ],
+      "layout": "split_visual_right",
+      "visual": "movement-menu",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Day 5",
+      "title": "Improve one drink",
+      "body": "Choose one drink you have often and adjust it. Try less sugar, a smaller size, unsweet tea, water, sparkling water, or a gradual step-down.",
+      "bullets": [
+        "You do not need to love plain water overnight.",
+        "Alcohol and diabetes medicine require safety awareness."
+      ],
+      "layout": "comparison",
+      "visual": "drink-comparison",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Day 6",
+      "title": "Protect sleep",
+      "body": "A realistic sleep routine may include a consistent wake time, dimmer light, less late caffeine, a wind-down cue, and a plan for pain, caregiving, or work shifts.",
+      "bullets": [
+        "Sleep problems deserve care, not blame.",
+        "Ask about snoring, breathing pauses, insomnia, or restless legs."
+      ],
+      "layout": "split_visual_left",
+      "visual": "sleep-timeline",
+      "callout": null,
+      "worksheet": null
+    },
+    {
+      "section": "Day 7",
+      "title": "Prepare the next week",
+      "body": "Look back at what helped, what felt irritating, and what was too much. Pick one habit to repeat for another week.",
+      "bullets": [
+        "Keep the habit small.",
+        "Write down one question for a clinician if needed."
+      ],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "fields",
+        "fields": [
+          "What worked",
+          "What was difficult",
+          "What I will continue",
+          "What I will pause",
+          "Question for care team"
+        ]
+      }
+    },
+    {
+      "section": "Hydration tracker",
+      "title": "Hydration tracker",
+      "body": "Track drinks for awareness, not judgment. A beverage inventory can reveal one easy place to reduce added sugar.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": [
+        "Privacy reminder",
+        "Store completed health notes securely if they include personal information.",
+        "orange"
+      ],
+      "worksheet": {
+        "type": "table",
+        "rows": 7,
+        "fields": [
+          "Day",
+          "Water",
+          "Sweet drinks",
+          "Coffee additions",
+          "Juice",
+          "Alcohol",
+          "Timing/notes"
+        ]
+      }
+    },
+    {
+      "section": "Movement tracker",
+      "title": "Movement tracker",
+      "body": "Record movement that is safe for your body. Chair movement, stretching, physical therapy exercises, and short walks all count as information.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "table",
+        "rows": 7,
+        "fields": [
+          "Activity",
+          "Minutes",
+          "Type",
+          "How it felt",
+          "Pain/symptoms"
+        ]
+      }
+    },
+    {
+      "section": "Meal and fiber tracker",
+      "title": "Meal and fiber tracker",
+      "body": "Use this page to notice meals that kept you satisfied. Write the vegetable, protein, carbohydrate, and fiber source when you can.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "table",
+        "rows": 7,
+        "fields": [
+          "Meal",
+          "Vegetable",
+          "Protein",
+          "Carb",
+          "Fiber",
+          "Satisfaction"
+        ]
+      }
+    },
+    {
+      "section": "Sleep check-in",
+      "title": "Sleep check-in",
+      "body": "Sleep is affected by stress, shift work, caregiving, pain, medications, breathing problems, and mental health. This page helps you notice what is changeable.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "table",
+        "rows": 7,
+        "fields": [
+          "Bedtime",
+          "Wake",
+          "Waking",
+          "Naps",
+          "Caffeine",
+          "Screens",
+          "Notes"
+        ]
+      }
+    },
+    {
+      "section": "Mood and energy",
+      "title": "Mood and energy",
+      "body": "Energy can change with meals, sleep, movement, stress, and blood glucose. A simple mood and energy note can help you see patterns.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "table",
+        "rows": 7,
+        "fields": [
+          "Day",
+          "Mood 1-5",
+          "Energy 1-5",
+          "Meal note",
+          "Sleep note",
+          "Other notes"
+        ]
+      }
+    },
+    {
+      "section": "Glucose notes",
+      "title": "Optional glucose notes",
+      "body": "If you monitor glucose, use this page only in the way your care team recommends. Do not chase perfect numbers.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": [
+        "Safety note",
+        "Record action taken according to your care plan. Do not change medicine based on this worksheet alone.",
+        "orange"
+      ],
+      "worksheet": {
+        "type": "table",
+        "rows": 6,
+        "fields": [
+          "Date/time",
+          "Reading",
+          "Meal",
+          "Medicine",
+          "Activity/stress/sleep",
+          "Action per plan"
+        ]
+      }
+    },
+    {
+      "section": "Obstacles",
+      "title": "Obstacles and backup plans",
+      "body": "Plan for busy days before they arrive. A backup meal, safe movement option, and lower-sugar drink can protect momentum.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "fields",
+        "fields": [
+          "If this obstacle happens",
+          "My easiest backup meal",
+          "My safest movement option",
+          "My drink backup",
+          "Who can help",
+          "What I can let be imperfect"
+        ]
+      }
+    },
+    {
+      "section": "30-day plan",
+      "title": "30-day continuation plan",
+      "body": "After seven days, continue one or two habits. A prevention plan should fit real life well enough to survive an ordinary month.",
+      "bullets": [],
+      "layout": "worksheet_full_page",
+      "visual": null,
+      "callout": null,
+      "worksheet": {
+        "type": "calendar",
+        "fields": []
+      }
+    },
+    {
+      "section": "Next steps",
+      "title": "Repeat what worked",
+      "body": "Keep one or two helpful routines. Drop what was unrealistic. Add one next step only when the current habit feels repeatable.",
+      "bullets": [
+        "Explore other Mindful Diabetes guides.",
+        "Visit Health Tools.",
+        "Ask your care team about patterns you noticed."
+      ],
+      "layout": "back_cover",
+      "visual": null,
+      "callout": null,
+      "worksheet": null
+    }
+  ],
+  "refs": [
+    "cdc_dpp",
+    "cdc_activity",
+    "cdc_sleep",
+    "ada",
+    "fda_sugar"
+  ],
+  "layout_system": [
+    "full_width_text",
+    "full_width_visual_then_text",
+    "split_visual_left",
+    "split_visual_right",
+    "card_grid",
+    "comparison",
+    "worksheet_full_page",
+    "reference_page",
+    "back_cover"
+  ]
+}

@@ -1,0 +1,11 @@
+<aside class="cms-block cms-citation cms-citation--{{ block.settings.display }}">
+  {% if block.content.number %}<span class="cms-citation__number">{{ block.content.number }}</span>{% endif %}
+  <p>
+    {% if block.content.authors %}{{ block.content.authors }}. {% endif %}
+    <strong>{{ block.content.title }}</strong>
+    {% if block.content.journal %} <em>{{ block.content.journal }}</em>.{% endif %}
+    {% if block.content.year %} {{ block.content.year }}.{% endif %}
+    {% if block.content.doi %} DOI: {{ block.content.doi }}.{% endif %}
+  </p>
+  {% if block.content.pubmed_url %}<a href="{{ block.content.pubmed_url }}" target="_blank" rel="noopener">PubMed</a>{% endif %}
+</aside>
