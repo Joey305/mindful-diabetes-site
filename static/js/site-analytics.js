@@ -20,8 +20,13 @@
     newsletter_signup: true,
     paypal_click: true,
     resource_download_click: true,
+    resource_explore_click: true,
+    resource_jeir_click: true,
+    resource_nonprofit_article_click: true,
     resource_pdf_download: true,
+    resource_related_guide_click: true,
     resource_share_click: true,
+    resource_video_click: true,
     search_result_click: true,
     volunteer_cta_click: true,
   };
@@ -138,6 +143,14 @@
       "guideTitle",
       "guideSlug",
       "guideCategory",
+      "resourceSlug",
+      "resourceTitle",
+      "resourceCategory",
+      "ctaPosition",
+      "sourceResourceSlug",
+      "destinationResourceSlug",
+      "articleTitle",
+      "videoTitle",
       "pageCount",
       "fileType",
       "fileSize",
@@ -171,6 +184,14 @@
       guideTitle: "guide_title",
       guideSlug: "guide_slug",
       guideCategory: "guide_category",
+      resourceSlug: "resource_slug",
+      resourceTitle: "resource_title",
+      resourceCategory: "resource_category",
+      ctaPosition: "cta_position",
+      sourceResourceSlug: "source_resource_slug",
+      destinationResourceSlug: "destination_resource_slug",
+      articleTitle: "article_title",
+      videoTitle: "video_title",
       pageCount: "page_count",
       fileType: "file_type",
       fileSize: "file_size",
@@ -255,6 +276,44 @@
     }
 
     window.gtag("event", event.event_name, params);
+  }
+
+  function preserveAttributionOnInternalLinks() {
+    var keys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid"];
+    var current = new URLSearchParams(window.location.search || "");
+    var attribution = {};
+    keys.forEach(function (key) {
+      var value = current.get(key);
+      if (value) {
+        attribution[key] = value;
+      }
+    });
+    if (!Object.keys(attribution).length) {
+      return;
+    }
+    document.querySelectorAll("a[href]").forEach(function (link) {
+      var rawHref = link.getAttribute("href") || "";
+      if (!rawHref || rawHref.charAt(0) === "#" || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("tel:") === 0) {
+        return;
+      }
+      try {
+        var url = new URL(rawHref, window.location.href);
+        var isAllowedDestination = url.origin === window.location.origin || url.hostname === "www.mindfuldiabetes.ai";
+        if (!isAllowedDestination) {
+          return;
+        }
+        keys.forEach(function (key) {
+          if (attribution[key] && !url.searchParams.has(key)) {
+            url.searchParams.set(key, attribution[key]);
+          }
+        });
+        if (url.origin === window.location.origin) {
+          link.setAttribute("href", url.pathname + url.search + url.hash);
+        } else {
+          link.setAttribute("href", url.toString());
+        }
+      } catch (_error) {}
+    });
   }
 
   window.trackEvent = function (eventName, metadata) {
@@ -362,6 +421,7 @@
     }
   });
   document.addEventListener("DOMContentLoaded", function () {
+    preserveAttributionOnInternalLinks();
     copySessionToNewsletterForms();
     initImpressions();
   });

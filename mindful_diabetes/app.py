@@ -23,6 +23,7 @@ from markupsafe import Markup, escape
 
 from mindful_diabetes import cms
 from mindful_diabetes import analytics
+from mindful_diabetes import resources as resource_library
 
 try:
     import psycopg
@@ -587,6 +588,8 @@ def create_app(test_config=None):
                 health_tools_search_item(content),
                 research_search_item(),
                 volunteer_search_item(),
+                resources_search_item(),
+                *resource_search_items(),
                 free_guides_search_item(),
                 *free_guide_search_items(),
             ],
@@ -756,11 +759,36 @@ def create_app(test_config=None):
         )
 
     @app.get("/resources")
+    def resources_index():
+        grouped_resources = resource_library.resources_grouped_by_category()
+        return render_template(
+            "resources.html",
+            grouped_resources=grouped_resources,
+            resources=resource_library.all_resources(),
+            jeir_url=resource_library.JEIR_URL,
+            ai_resources_url=resource_library.AI_RESOURCES_URL,
+            canonical_url=f"{PUBLIC_SITE_URL}/resources",
+        )
+
     @app.get("/resources/")
+    def resources_index_slash():
+        return redirect(url_for("resources_index"), code=301)
+
     @app.get("/resources/free-guides")
     @app.get("/resources/free-guides/")
-    def resources_redirect():
+    def resources_free_guides_redirect():
         return redirect(url_for("free_guides"), code=301)
+
+    @app.get("/resources/<resource_slug>")
+    def resource_detail(resource_slug):
+        resource = resource_library.resource_by_slug(resource_slug)
+        if not resource:
+            abort(404)
+        return redirect(url_with_attribution(resource["external_url"]), code=301)
+
+    @app.get("/resources/<resource_slug>/")
+    def resource_detail_slash(resource_slug):
+        return redirect(url_for("resource_detail", resource_slug=resource_slug), code=301)
 
     @app.get("/free-guides/<guide_slug>")
     def free_guide_detail_no_slash(guide_slug):
@@ -1170,6 +1198,8 @@ def create_app(test_config=None):
             health_tools_search_item(content),
             research_search_item(),
             volunteer_search_item(),
+            resources_search_item(),
+            *resource_search_items(),
             free_guides_search_item(),
             *free_guide_search_items(),
         ]
@@ -1650,6 +1680,142 @@ def free_guide_search_items():
         }
         for guide in FREE_GUIDE_DEFINITIONS
     ]
+
+
+def resources_search_item():
+    resources = resource_library.all_resources()
+    search_text = " ".join(
+        [
+            "resources mindful diabetes educational guides blood sugar metabolic health brain health daily habits doctor questions JEIR",
+            *[
+                " ".join(
+                    [
+                        resource["title"],
+                        resource["category"],
+                        resource["summary"],
+                        resource["big_idea"],
+                        resource["best_lens"],
+                        " ".join(resource["learning_points"]),
+                    ]
+                )
+                for resource in resources
+            ],
+        ]
+    )
+    return {
+        "type": "page",
+        "title": "Educational Resources",
+        "canonical_path": "/resources",
+        "date": "",
+        "modified": "2026-08-04",
+        "excerpt_text": "Explore Mindful Diabetes Inc. educational resources on blood sugar, metabolic health, brain health, daily habits, and questions for qualified healthcare professionals.",
+        "search_text": search_text.lower(),
+    }
+
+
+def url_with_attribution(destination_url):
+    preserved_keys = {
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_content",
+        "utm_term",
+        "gclid",
+    }
+    pairs = [
+        (key, value)
+        for key, value in request.args.items()
+        if key in preserved_keys and value
+    ]
+    if not pairs:
+        return destination_url
+
+    separator = "&" if "?" in destination_url else "?"
+    return f"{destination_url}{separator}{urlencode(pairs)}"
+
+
+def resource_search_items():
+    return [
+        {
+            "type": "page",
+            "title": resource["title"],
+            "canonical_path": resource["canonical_path"],
+            "date": "2026-07-31",
+            "modified": "2026-07-31",
+            "excerpt_text": resource["meta_description"],
+            "search_text": " ".join(
+                [
+                    resource["title"],
+                    resource["category"],
+                    resource["summary"],
+                    resource["big_idea"],
+                    resource["best_lens"],
+                    " ".join(resource["learning_points"]),
+                    " ".join(title for title, _body in resource["sections"]),
+                ]
+            ).lower(),
+        }
+        for resource in resource_library.all_resources()
+    ]
+
+
+def resource_article_schema(resource, canonical_url):
+    return {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": resource["title"],
+        "description": resource["meta_description"],
+        "datePublished": "2026-07-31",
+        "dateModified": "2026-07-31",
+        "author": {
+            "@type": "Organization",
+            "name": "Mindful Diabetes Editorial Team",
+        },
+        "publisher": organization_schema(),
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonical_url,
+        },
+        "url": canonical_url,
+        "articleSection": resource["category"],
+        "isAccessibleForFree": True,
+    }
+
+
+def resource_breadcrumb_schema(resource, canonical_url):
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Resources",
+                "item": f"{PUBLIC_SITE_URL}/resources",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": resource["category"],
+                "item": f"{PUBLIC_SITE_URL}/resources#{resource['category_slug']}",
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": resource["title"],
+                "item": canonical_url,
+            },
+        ],
+    }
+
+
+def organization_schema():
+    return {
+        "@type": "Organization",
+        "name": "Mindful Diabetes Inc.",
+        "url": PUBLIC_SITE_URL,
+        "logo": f"{PUBLIC_SITE_URL}/static/img/mdi-logo.jpg",
+    }
 
 
 def is_valid_email(email):
@@ -3391,6 +3557,8 @@ def should_track_request(response):
         "search",
         "pages_index",
         "research",
+        "resources_index",
+        "resource_detail",
         "health_tools",
         "volunteer",
         "page_detail",
@@ -3527,6 +3695,11 @@ def title_for_request(content, endpoint, view_args):
         return "Health Tools"
     if endpoint == "volunteer":
         return "Volunteer"
+    if endpoint == "resources_index":
+        return "Educational Resources"
+    if endpoint == "resource_detail":
+        resource = resource_library.resource_by_slug((view_args or {}).get("resource_slug", ""))
+        return resource["title"] if resource else "Educational Resource"
     if endpoint == "page_detail":
         slug = (view_args or {}).get("slug", "")
         item = content.pages_by_slug.get(slug) or content.posts_by_slug.get(slug)
@@ -3545,6 +3718,7 @@ def navigation_state_for_request(content):
         "home": endpoint == "home",
         "pathways": endpoint == "guide" or is_post,
         "research": endpoint == "research",
+        "resources": endpoint in {"resources_index", "resources_index_slash", "resource_detail", "resource_detail_slash"} or path.startswith("/resources"),
         "free_guides": endpoint in {"free_guides", "free_guide_detail", "free_guides_no_slash", "free_guide_detail_no_slash"} or path.startswith("/free-guides"),
         "health_tools": endpoint == "health_tools",
         "sponsors": is_page and slug == "sponsors",
@@ -3552,7 +3726,7 @@ def navigation_state_for_request(content):
     }
     if state["pathways"] or state["research"]:
         state["section"] = "learn"
-    elif state["free_guides"] or state["health_tools"]:
+    elif state["resources"] or state["free_guides"] or state["health_tools"]:
         state["section"] = "resources"
     elif state["sponsors"] or state["donation"]:
         state["section"] = "about_support"

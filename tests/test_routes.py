@@ -169,13 +169,71 @@ def test_free_guides_redirects_and_nav_links():
     client = app.test_client()
 
     assert client.get("/free-guides").status_code == 301
-    assert client.get("/resources").status_code == 301
+    assert client.get("/resources").status_code == 200
+    assert client.get("/resources/").status_code == 301
     assert client.get("/resources/free-guides/").status_code == 301
 
     response = client.get("/")
     assert response.status_code == 200
+    assert b'href="/resources"' in response.data
+    assert b"Educational Resources" in response.data
     assert b'href="/free-guides/"' in response.data
     assert b"Free Health Guides" in response.data
+
+
+def test_resource_index_and_article_template_render_all_current_guides():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    slugs = [
+        "blood-sugar-and-energy",
+        "understanding-a1c",
+        "fasting-glucose-basics",
+        "post-meal-blood-sugar",
+        "insulin-resistance",
+        "metabolic-health-basics",
+        "food-patterns-and-blood-sugar",
+        "inflammation-and-metabolic-health",
+        "type-3-diabetes",
+        "brain-health-and-alzheimers",
+        "cognitive-health-and-daily-habits",
+        "lifestyle-habits",
+        "movement-and-insulin-sensitivity",
+        "sleep-and-blood-sugar",
+        "stress-and-glucose-patterns",
+        "questions-to-ask-your-doctor",
+    ]
+
+    index_response = client.get("/resources")
+    assert index_response.status_code == 200
+    assert b"Educational resources now live on MindfulDiabetes.ai." in index_response.data
+    assert b"https://www.mindfuldiabetes.ai/resources/blood-sugar-and-energy" in index_response.data
+    assert b"https://www.mindfuldiabetes.ai/jeir" in index_response.data
+
+    for slug in slugs:
+        response = client.get(f"/resources/{slug}")
+
+        assert response.status_code == 301, slug
+        assert response.headers["Location"] == f"https://www.mindfuldiabetes.ai/resources/{slug}"
+
+    attributed_response = client.get(
+        "/resources/stress-and-glucose-patterns?utm_source=google&utm_campaign=ad-grants&gclid=test-click"
+    )
+    assert attributed_response.status_code == 301
+    assert (
+        attributed_response.headers["Location"]
+        == "https://www.mindfuldiabetes.ai/resources/stress-and-glucose-patterns?utm_source=google&utm_campaign=ad-grants&gclid=test-click"
+    )
+
+
+def test_type_3_diabetes_resource_preserves_careful_framing():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    response = client.get("/resources/type-3-diabetes")
+
+    assert response.status_code == 301
+    assert response.headers["Location"] == "https://www.mindfuldiabetes.ai/resources/type-3-diabetes"
 
 
 def test_header_uses_scalable_navigation_groups():

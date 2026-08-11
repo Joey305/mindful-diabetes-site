@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Resources | Mindful Diabetes Inc{% endblock %}
+{% block meta_description %}<meta name="description" content="Explore Mindful Diabetes Inc. educational resources and continue to the full MindfulDiabetes.ai resource library and JEIR educational assistant.">{% endblock %}
+{% block canonical %}
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:title" content="Resources | Mindful Diabetes Inc">
+  <meta property="og:description" content="Explore free educational resources from Mindful Diabetes Inc. and continue to the full MindfulDiabetes.ai library.">
+  <meta property="og:url" content="{{ canonical_url }}">
+{% endblock %}
+{% block body_class %}resources-view{% endblock %}
+
+{% block content %}
+  <section class="resources-hero" aria-labelledby="resources-heading">
+    <div class="resources-hero__inner">
+      <div class="resources-hero__copy">
+        <p class="eyebrow">Resource library</p>
+        <h1 id="resources-heading">Educational resources now live on MindfulDiabetes.ai.</h1>
+        <p>Use this page as a simple directory into the full MindfulDiabetes.ai resource library. Each topic opens the polished guide on MindfulDiabetes.ai, where readers can continue to JEIR and related educational pathways.</p>
+        <div class="resources-trust-list" aria-label="Resource library details">
+          <span>{{ resources|length }} public guides</span>
+          <span>No account required</span>
+          <span>Free educational resource</span>
+          <a href="{{ ai_resources_url }}" data-track-event="resource_explore_click" data-track-category="resource" data-track-label="Open MindfulDiabetes.ai Resources" data-track-id="resources-hero-ai-library" data-track-position="resources-hero" data-track-destination="{{ ai_resources_url }}" data-cta-position="hero">Full library on MindfulDiabetes.ai</a>
+        </div>
+      </div>
+      <div class="resources-hero__panel" aria-label="Resource categories">
+        {% for group in grouped_resources %}
+          <a href="#{{ group.slug }}">
+            <strong>{{ group.name }}</strong>
+            <span>{{ group.resources|length }} guides</span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="resources-library" aria-labelledby="resources-library-heading">
+    <div class="section-heading section-heading--left">
+      <p class="eyebrow">Explore by topic</p>
+      <h2 id="resources-library-heading">Choose a topic and continue on MindfulDiabetes.ai.</h2>
+      <p>This directory keeps the useful topic list here while sending readers to the cleaner, better-supported resource experience on MindfulDiabetes.ai.</p>
+    </div>
+
+    <div class="resources-category-stack">
+      {% for group in grouped_resources %}
+        <section id="{{ group.slug }}" class="resources-category" aria-labelledby="resources-category-{{ group.slug }}">
+          <div class="resources-category__header">
+            <div>
+              <p class="eyebrow">{{ group.name }}</p>
+              <h2 id="resources-category-{{ group.slug }}">{{ group.name }}</h2>
+            </div>
+            <span>{{ group.resources|length }} guides</span>
+          </div>
+          <div class="resources-card-grid">
+            {% for resource in group.resources %}
+              <a class="resource-card resource-card--external" href="{{ resource.external_url }}" data-track-impression="1" data-track-impression-event="resource_card_view" data-track-event="resource_explore_click" data-track-category="resource" data-track-label="{{ resource.title }}" data-track-id="resource-index-link-{{ resource.slug }}" data-track-position="resource-index-card" data-track-destination="{{ resource.external_url }}" data-resource-slug="{{ resource.slug }}" data-resource-title="{{ resource.title }}" data-resource-category="{{ resource.category }}" data-cta-position="resource_index" data-source-page="/resources">
+                <p class="eyebrow">{{ resource.category }}</p>
+                <h3>{{ resource.title }}</h3>
+                <p>{{ resource.summary }}</p>
+                <div class="resource-card__tags">
+                  {% for point in resource.learning_points[:2] %}
+                    <span>{{ point }}</span>
+                  {% endfor %}
+                </div>
+                <p class="resource-card__read">Open on MindfulDiabetes.ai</p>
+              </a>
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="resources-attribution" aria-labelledby="resources-attribution-heading">
+    <div>
+      <p class="eyebrow">Attribution and intent</p>
+      <h2 id="resources-attribution-heading">Created as part of the nonprofit education mission.</h2>
+      <p>Mindful Diabetes Inc. supports better public understanding and better questions for qualified professionals, not diagnosis or treatment. The main resource experience now lives on MindfulDiabetes.ai.</p>
+    </div>
+    <div class="resources-attribution__cta">
+      <h2>Want interactive education?</h2>
+      <p>JEIR can explain general concepts simply while staying within educational boundaries.</p>
+      <a class="button-primary" href="{{ jeir_url }}" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Open JEIR" data-track-id="resources-index-jeir" data-track-position="resources-index-footer" data-track-destination="{{ jeir_url }}" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external">Open JEIR</a>
+      <a class="button-secondary button-secondary--light" href="{{ ai_resources_url }}" data-track-event="resource_explore_click" data-track-category="resource" data-track-label="Explore MindfulDiabetes.ai Resources" data-track-id="resources-index-ai-library" data-track-position="resources-index-footer" data-track-destination="{{ ai_resources_url }}" data-cta-position="footer">Explore resources</a>
+    </div>
+  </section>
+{% endblock %}
