@@ -250,6 +250,8 @@
 
     if (sendTo) {
       params.send_to = sendTo;
+      params.value = 1.0;
+      params.currency = "USD";
       window.gtag("event", "conversion", params);
       return;
     }

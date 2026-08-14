@@ -1,5 +1,6 @@
 import json
 from importlib import import_module
+from pathlib import Path
 
 from mindful_diabetes import create_app
 
@@ -1875,6 +1876,15 @@ def test_google_ads_tracking_loads_only_when_enabled_for_public_pages(tmp_path):
     assert b"https://www.googletagmanager.com/gtag/js?id=AW-11435654295" in public_response.data
     assert b'"resource_pdf_download": "AW-11435654295/downloadLabel123"' in public_response.data
     assert b"https://www.googletagmanager.com/gtag/js?id=AW-11435654295" not in admin_response.data
+
+
+def test_google_ads_conversion_events_include_numeric_value_and_currency():
+    script = Path("static/js/site-analytics.js").read_text()
+    conversion_call = script[script.index("if (sendTo) {") : script.index('window.gtag("event", "conversion", params);')]
+
+    assert "params.send_to = sendTo;" in conversion_call
+    assert "params.value = 1.0;" in conversion_call
+    assert 'params.currency = "USD";' in conversion_call
 
 
 def test_google_ads_tracking_is_disabled_by_default_in_tests(tmp_path):
