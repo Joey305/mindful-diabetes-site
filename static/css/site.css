@@ -8092,6 +8092,314 @@ a.article-navigation__link:hover {
   font-size: 0.92rem;
 }
 
+.post-companion-guide .article-post-hero__inner {
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.78fr);
+}
+
+.article-post-hero__subtitle {
+  max-width: 720px;
+  margin: 0.7rem 0 0;
+  color: var(--secondary);
+  font-family: "Lora", serif;
+  font-size: clamp(1.45rem, 3.5vw, 2.35rem);
+  line-height: 1.24;
+}
+
+.article-companion-card {
+  display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  grid-template-columns: minmax(120px, 0.58fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  color: var(--body);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  box-shadow: 0 24px 85px rgba(0, 0, 0, 0.24);
+}
+
+.article-companion-card__cover {
+  overflow: hidden;
+  background: var(--miami-orange-tint);
+  border: 1px solid var(--tint-line-orange);
+  border-radius: 6px;
+}
+
+.article-companion-card__cover img {
+  display: block;
+  width: 100%;
+  max-height: 24rem;
+  object-fit: contain;
+}
+
+.article-companion-card__body h2,
+.companion-guide-top h2,
+.companion-pathways h2,
+.companion-glance-grid h3,
+.companion-pathways h3,
+.companion-guide-inline h2,
+.companion-guide-final h2,
+.companion-guide-final h3,
+.companion-tools h2,
+.companion-tools h3 {
+  margin: 0;
+  color: var(--text);
+  font-family: "Lora", serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.22;
+}
+
+.article-companion-card__body h2 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.article-companion-card__body p:not(.eyebrow) {
+  margin: 0.65rem 0;
+  color: var(--body);
+  line-height: 1.55;
+}
+
+.companion-guide-top,
+.companion-pathways,
+.companion-guide-final,
+.companion-related-guides,
+.companion-tools,
+.companion-newsletter,
+.companion-donation {
+  width: min(1240px, calc(100% - 2rem));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.companion-guide-top,
+.companion-pathways,
+.companion-tools {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.companion-glance-grid,
+.companion-pathways__grid,
+.companion-tools__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.companion-glance-grid article,
+.companion-pathways__grid article,
+.companion-tools__grid article {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: clamp(1rem, 2.5vw, 1.35rem);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.companion-glance-grid article:nth-child(odd),
+.companion-pathways__grid article:nth-child(even),
+.companion-tools__grid article:nth-child(odd) {
+  background: var(--miami-green-tint);
+  border-color: var(--tint-line-green);
+}
+
+.companion-glance-grid article:nth-child(even),
+.companion-pathways__grid article:nth-child(odd),
+.companion-tools__grid article:nth-child(even) {
+  background: var(--miami-orange-tint);
+  border-color: var(--tint-line-orange);
+}
+
+.companion-glance-grid h3,
+.companion-pathways h3,
+.companion-tools h3 {
+  font-size: 1.28rem;
+}
+
+.companion-glance-grid p,
+.companion-pathways p,
+.companion-tools p {
+  margin: 0;
+  color: var(--body);
+  line-height: 1.62;
+}
+
+.companion-pathways__grid .button-primary,
+.companion-pathways__grid .button-secondary,
+.companion-tools__grid .button-primary {
+  width: 100%;
+  margin-top: auto;
+}
+
+.post-companion-guide .article-post-shell {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+}
+
+.post-companion-guide .article-post-body__header {
+  text-align: left;
+}
+
+.article-on-page {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
+.article-on-page__desktop {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 44px rgba(13, 19, 56, 0.08);
+}
+
+.article-on-page__desktop .eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--secondary);
+}
+
+.article-on-page a,
+.article-on-page summary {
+  color: var(--primary);
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.article-on-page a {
+  display: block;
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.article-on-page a:hover {
+  color: var(--secondary);
+}
+
+.article-on-page__mobile {
+  display: none;
+}
+
+.companion-guide-inline {
+  display: grid;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 0 clamp(1.35rem, 3vw, 2rem);
+  padding: clamp(1rem, 3vw, 1.35rem);
+  grid-template-columns: minmax(110px, 0.34fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 0.42rem solid var(--secondary);
+  border-radius: 8px;
+  box-shadow: 0 18px 52px rgba(13, 19, 56, 0.1);
+}
+
+.article-content .companion-guide-inline {
+  max-width: 900px;
+}
+
+.companion-guide-inline__cover img,
+.article-content .companion-guide-inline__cover img {
+  width: 100%;
+  max-height: 16rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 6px;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+.companion-guide-inline .eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--secondary);
+}
+
+.companion-guide-inline p,
+.companion-guide-inline ul {
+  margin-top: 0.65rem;
+  margin-bottom: 0;
+}
+
+.companion-guide-inline ul {
+  display: grid;
+  gap: 0.25rem;
+  padding-left: 1.1rem;
+}
+
+.companion-guide-inline .free-guide-actions {
+  margin-top: 1rem;
+}
+
+.companion-guide-final {
+  display: grid;
+  box-sizing: border-box;
+  margin-top: clamp(3.5rem, 7vw, 5.5rem);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  grid-template-columns: minmax(180px, 0.36fr) minmax(0, 1fr);
+  gap: clamp(1.2rem, 4vw, 2rem);
+  align-items: center;
+  background: var(--miami-green-tint);
+  border: 1px solid var(--tint-line-green);
+  border-radius: 8px;
+}
+
+.companion-guide-final__cover {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.companion-guide-final__cover img {
+  display: block;
+  width: 100%;
+  max-height: 34rem;
+  object-fit: contain;
+}
+
+.companion-guide-final h2 {
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+}
+
+.companion-guide-final h3 {
+  margin-top: 1rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.companion-guide-final p {
+  max-width: 780px;
+  color: var(--body);
+  line-height: 1.65;
+}
+
+.companion-related-guides,
+.companion-tools,
+.companion-newsletter,
+.companion-donation {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.companion-tools__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.post-companion-guide .button-primary,
+.post-companion-guide .button-secondary {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 .mobile-blog-subscribe {
   display: none;
 }
@@ -9089,8 +9397,58 @@ a.article-navigation__link:hover {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .post-companion-guide .article-post-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .post-companion-guide .article-companion-card {
+    width: 100%;
+    max-width: 22rem;
+    justify-self: center;
+  }
+
+  .article-on-page {
+    position: static;
+  }
+
+  .article-on-page__desktop {
+    display: none;
+  }
+
+  .article-on-page__mobile {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 14px 44px rgba(13, 19, 56, 0.08);
+  }
+
+  .article-on-page__mobile summary {
+    padding: 0.95rem 1rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .article-on-page__mobile summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .article-on-page__mobile nav {
+    display: grid;
+    padding: 0 1rem 0.75rem;
+  }
+
   .article-wellness-tools__grid {
     grid-template-columns: 1fr;
+  }
+
+  .companion-glance-grid,
+  .companion-pathways__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .companion-tools__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .article-impact-grid {
@@ -9181,6 +9539,11 @@ a.article-navigation__link:hover {
   .post-view,
   .cms-public-post {
     padding-bottom: 5.75rem;
+  }
+
+  .post-companion-guide {
+    padding-bottom: 0;
+    overflow-x: hidden;
   }
 
   .mobile-blog-subscribe {
@@ -9432,6 +9795,57 @@ a.article-navigation__link:hover {
     text-align: center;
   }
 
+  .post-companion-guide .article-post-hero__inner {
+    width: calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
+    margin-right: 1rem;
+    margin-left: 1rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    overflow: hidden;
+  }
+
+  .post-companion-guide .article-post-hero__copy,
+  .post-companion-guide .article-companion-card,
+  .post-companion-guide .article-companion-card__body,
+  .post-companion-guide .companion-guide-final__copy,
+  .post-companion-guide .companion-guide-inline__copy {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .post-companion-guide .article-post-hero h1 {
+    width: min(100%, calc(100vw - 2rem));
+    max-width: 16rem;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(1.95rem, 9vw, 2.25rem);
+    overflow-wrap: break-word;
+  }
+
+  .post-companion-guide .article-post-hero__subtitle {
+    width: min(100%, calc(100vw - 2rem));
+    max-width: 18rem;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(1.2rem, 5.4vw, 1.45rem);
+    overflow-wrap: break-word;
+  }
+
+  .post-companion-guide .article-post-hero__copy > p:not(.eyebrow):not(.meta) {
+    max-width: 20rem;
+  }
+
+  .post-companion-guide .article-post-hero .button-row {
+    max-width: 22rem;
+  }
+
+  .post-companion-guide .article-companion-card__body p,
+  .post-companion-guide .article-companion-card__body h2 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
   .home-hero p,
   .home-hero .button-row,
   .health-tools-hero .button-row,
@@ -9471,6 +9885,37 @@ a.article-navigation__link:hover {
 
   .article-content {
     font-size: 1rem;
+  }
+
+  .article-companion-card,
+  .companion-guide-inline,
+  .companion-guide-final,
+  .companion-tools__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-companion-card {
+    width: 100%;
+    max-width: 20rem;
+    justify-self: center;
+    text-align: left;
+  }
+
+  .article-companion-card__cover img {
+    max-height: 22rem;
+  }
+
+  .companion-guide-inline {
+    padding: 0.9rem;
+  }
+
+  .companion-guide-inline__cover img,
+  .article-content .companion-guide-inline__cover img {
+    max-height: 14rem;
+  }
+
+  .companion-guide-final__cover img {
+    max-height: 26rem;
   }
 
   .article-impact-card {

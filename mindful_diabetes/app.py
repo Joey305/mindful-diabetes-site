@@ -285,6 +285,38 @@ FREE_GUIDE_DEFINITIONS = [
         ],
     },
 ]
+COMPANION_GUIDE_POSTS = {
+    "fats-guide": "fats-without-fear",
+}
+FATS_GUIDE_LANDING = {
+    "eyebrow": "Pathways to Wellness | Nutrition",
+    "title": "The Truth About Fats",
+    "subtitle": "Saturated, Unsaturated, and Trans Fats",
+    "glance_cards": [
+        {
+            "title": "Unsaturated Fats",
+            "body": "The article describes unsaturated fats as heart-healthy fats found in foods such as olive oil, avocados, nuts, seeds, and fatty fish.",
+        },
+        {
+            "title": "Saturated Fats",
+            "body": "Saturated fats are presented as more complex: they are commonly found in animal products and tropical oils, and the article emphasizes context and moderation.",
+        },
+        {
+            "title": "Trans Fats",
+            "body": "The article identifies trans fats as the fats to avoid, especially partially hydrogenated oils and highly processed foods that may contain them.",
+        },
+    ],
+    "contents": [
+        {"label": "Understanding Dietary Fats", "href": "#understanding-dietary-fats"},
+        {"label": "Saturated Fats", "href": "#saturated-fats"},
+        {"label": "Unsaturated Fats", "href": "#unsaturated-fats"},
+        {"label": "Trans Fats", "href": "#trans-fats"},
+        {"label": "Practical Food Choices", "href": "#practical-food-choices"},
+        {"label": "Free Fats Guide", "href": "#free-fats-guide"},
+        {"label": "Related Resources", "href": "#related-free-guides"},
+    ],
+    "related_guide_slugs": ["mindful-plate", "grocery-store-survival-guide", "blood-sugar-brain-health"],
+}
 RESEARCH_PUBLICATIONS = [
     {
         "title": "PyMACS: A Python-Based Automation Suite for GROMACS Molecular Dynamics Setup, Simulation, and Analysis",
@@ -483,12 +515,13 @@ def create_app(test_config=None):
         return Markup(clean_wordpress_html(value or "", app.config["PAYPAL_HOSTED_BUTTON_ID"]))
 
     @app.template_filter("article_html")
-    def article_html(value, post_slug=""):
+    def article_html(value, post_slug="", companion_guide=None):
         return Markup(
             clean_article_html(
                 value or "",
                 app.config["PAYPAL_HOSTED_BUTTON_ID"],
                 post_slug=post_slug,
+                companion_guide=companion_guide,
             )
         )
 
@@ -1220,11 +1253,18 @@ def create_app(test_config=None):
 
         post = content.posts_by_slug.get(slug)
         if post:
+            free_guide_cards = build_free_guide_cards(content)
+            companion_guide = companion_guide_for_post(slug, free_guide_cards)
+            companion_landing = companion_landing_for_post(slug)
+            related_guides = companion_related_guides(companion_landing, free_guide_cards)
             related_posts = [item for item in content.latest_posts if item["slug"] != slug][:3]
             article_navigation = navigation_for_post(content.latest_posts, slug)
             return render_template(
                 "post.html",
                 post=post,
+                companion_guide=companion_guide,
+                companion_landing=companion_landing,
+                companion_related_guides=related_guides,
                 related_posts=related_posts,
                 article_navigation=article_navigation,
             )
@@ -1430,6 +1470,26 @@ def volunteer_search_item():
 def build_free_guide_cards(content):
     guides_by_slug = {definition["slug"]: definition for definition in FREE_GUIDE_DEFINITIONS}
     return [build_free_guide_card(definition, content, guides_by_slug) for definition in FREE_GUIDE_DEFINITIONS]
+
+
+def companion_guide_for_post(post_slug, guides):
+    guide_slug = COMPANION_GUIDE_POSTS.get(post_slug)
+    if not guide_slug:
+        return None
+    return next((guide for guide in guides if guide["slug"] == guide_slug), None)
+
+
+def companion_landing_for_post(post_slug):
+    if post_slug == "fats-guide":
+        return FATS_GUIDE_LANDING
+    return None
+
+
+def companion_related_guides(landing, guides):
+    if not landing:
+        return []
+    related_slugs = landing.get("related_guide_slugs", [])
+    return [guide for guide in guides if guide["slug"] in related_slugs]
 
 
 def paypal_webhook_configured(config):
@@ -3613,6 +3673,7 @@ def google_ads_event_send_to(config, conversion_id):
 
     event_send_to = {}
     for event_name, send_to in actions.items():
+        event_name = analytics.EVENT_NAME_ALIASES.get(event_name, event_name)
         if event_name not in analytics.MEANINGFUL_ACTION_EVENTS:
             continue
         if not isinstance(send_to, str):
@@ -4006,17 +4067,141 @@ def strip_imported_attributes(html):
     )
 
 
-def clean_article_html(raw_html, paypal_button_id, post_slug=""):
+def clean_article_html(raw_html, paypal_button_id, post_slug="", companion_guide=None):
     html = clean_wordpress_html(raw_html, paypal_button_id)
     html = rewrite_article_subscribe_links(html)
     html = remove_article_media(html)
-    html = replace_imported_donation_blocks(html, paypal_button_id)
-    html = replace_imported_wellness_tools_blocks(html)
-    html = promote_chicago_marathon_figure(html)
+    if companion_guide:
+        html = remove_companion_article_distractions(html)
+    else:
+        html = replace_imported_donation_blocks(html, paypal_button_id)
+        html = replace_imported_wellness_tools_blocks(html)
+        html = promote_chicago_marathon_figure(html)
     html = remove_empty_figures(html)
     html = wrap_article_tables(html)
     html = wrap_article_sections(html)
+    if companion_guide:
+        html = add_fats_article_heading_ids(html)
+        html = insert_companion_guide_cta(html, companion_guide)
     return html
+
+
+def remove_companion_article_distractions(html):
+    html = re.sub(
+        r"\s*<h[2-4]\b[^>]*>\s*[^<]*Join Us in Preventing Type 3 Diabetes\s*</h[2-4]>.*?"
+        r"<form action=\"https://www\.paypal\.com/donate\".*?</form>",
+        "",
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    html = re.sub(
+        r"\s*<figure>\s*<a\b[^>]*href=[\"']/chicago-marathon-diabetes/?[\"'][^>]*>\s*<img\b.*?</a>\s*"
+        r"<figcaption>.*?raised over \$2,500.*?</figcaption>\s*</figure>\s*",
+        "",
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    html = re.sub(
+        r"\s*<h[2-4]\b[^>]*>\s*(?:[^<]*?)Try Our Free Wellness Tools!\s*</h[2-4]>\s*"
+        r"<p\b[^>]*>.*?</p>\s*(?:<a\b[^>]*>.*?</a>\s*){4}",
+        "",
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    html = re.sub(
+        r"\s*<h[2-4]\b[^>]*>\s*[^<]*Continue Exploring.*",
+        "",
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    return html
+
+
+def add_fats_article_heading_ids(html):
+    heading_ids = [
+        (r"Understanding Fats", "understanding-dietary-fats"),
+        (r"Saturated Fats: The Controversial Fat", "saturated-fats"),
+        (r"Unsaturated Fats: The Heart-Healthy Fat", "unsaturated-fats"),
+        (r"Trans Fats: The Harmful Fat", "trans-fats"),
+        (r"Conclusion:", "practical-food-choices"),
+    ]
+    for heading_pattern, heading_id in heading_ids:
+        html = add_id_to_matching_heading(html, heading_pattern, heading_id)
+    return html
+
+
+def add_id_to_matching_heading(html, heading_pattern, heading_id):
+    matched = False
+
+    def replace(match):
+        nonlocal matched
+        if matched:
+            return match.group(0)
+        attrs = match.group("attrs") or ""
+        if re.search(r"\bid=", attrs, re.IGNORECASE):
+            return match.group(0)
+        heading_text = html_to_text(match.group("content"))
+        if not re.search(heading_pattern, heading_text, re.IGNORECASE):
+            return match.group(0)
+        matched = True
+        return f"<{match.group('tag')}{attrs} id=\"{heading_id}\">{match.group('content')}</{match.group('tag')}>"
+
+    return re.sub(
+        r"<(?P<tag>h[2-4])(?P<attrs>\b[^>]*)>(?P<content>.*?)</(?P=tag)>",
+        replace,
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+
+
+def insert_companion_guide_cta(html, companion_guide):
+    cta_html = companion_guide_article_cta(companion_guide, "mid-article")
+    pattern = (
+        r"(?P<section><section\b[^>]*>\s*<h4\b[^>]*>\s*1\.3 Health Impacts and Dietary Recommendations\s*</h4>.*?</section>)"
+    )
+    inserted, count = re.subn(
+        pattern,
+        lambda match: match.group("section") + cta_html,
+        html,
+        count=1,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if count:
+        return inserted
+    return html
+
+
+def companion_guide_article_cta(guide, position):
+    guide_title = escape(guide["title"])
+    guide_subtitle = escape(guide["subtitle"])
+    guide_description = escape(guide["description"])
+    detail_url = escape(guide["detail_url"])
+    pdf_url = escape(guide["pdf_url"])
+    cover_url = escape(guide["cover_url"])
+    file_size = escape(guide.get("file_size") or "")
+    return f"""
+    <aside class="companion-guide-inline" aria-labelledby="companion-guide-inline-heading">
+      <div class="companion-guide-inline__cover">
+        <img src="{cover_url}" alt="Cover preview for {guide_title}.">
+      </div>
+      <div class="companion-guide-inline__copy">
+        <p class="eyebrow">Want the practical version?</p>
+        <h2 id="companion-guide-inline-heading">{guide_title}</h2>
+        <p class="free-guide-subtitle">{guide_subtitle}</p>
+        <p>{guide_description}</p>
+        <ul>
+          <li>Cooking-oil comparisons</li>
+          <li>Food-label guidance</li>
+          <li>Realistic meal swaps</li>
+          <li>Printable fat-swap worksheet</li>
+        </ul>
+        <div class="free-guide-actions">
+          <a class="button-primary" href="{detail_url}" data-track-event="resource_related_link_click" data-track-category="resource" data-track-label="Open {guide_title}" data-track-id="article-companion-{position}-{escape(guide['slug'])}" data-track-position="{position}" data-track-destination="{detail_url}" data-guide-title="{guide_title}" data-guide-slug="{escape(guide['slug'])}" data-guide-category="{escape(guide['category'])}" data-page-count="{escape(str(guide['page_count']))}" data-file-type="{escape(guide['file_type'])}" data-file-size="{file_size}" data-action="open-guide" data-button-location="{position}" data-source-page="/fats-guide/" data-track-impression="1">Open the Free Guide</a>
+          <a class="button-secondary" href="{pdf_url}" target="_blank" rel="noopener noreferrer" data-track-event="resource_pdf_view" data-track-category="resource" data-track-label="View {guide_title}" data-track-id="article-companion-pdf-{position}-{escape(guide['slug'])}" data-track-position="{position}" data-track-destination="{pdf_url}" data-guide-title="{guide_title}" data-guide-slug="{escape(guide['slug'])}" data-guide-category="{escape(guide['category'])}" data-page-count="{escape(str(guide['page_count']))}" data-file-type="{escape(guide['file_type'])}" data-file-size="{file_size}" data-action="view" data-button-location="{position}" data-source-page="/fats-guide/">View PDF</a>
+        </div>
+      </div>
+    </aside>
+    """
 
 
 def remove_empty_paragraphs(html):

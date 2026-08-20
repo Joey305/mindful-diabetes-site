@@ -1,5 +1,6 @@
 import json
 from importlib import import_module
+from pathlib import Path
 
 from mindful_diabetes import create_app
 
@@ -787,15 +788,21 @@ def test_every_post_uses_shared_article_template():
         assert b'class="article-post-hero"' in response.data, post["canonical_path"]
         assert response.data.count(b'class="article-post-shell"') == 1, post["canonical_path"]
         assert response.data.count(b'class="article-post-body"') == 1, post["canonical_path"]
-        assert response.data.count(b'class="article-post-sidebar"') == 1, post["canonical_path"]
         assert b'class="wp-content article-content"' in response.data, post["canonical_path"]
-        assert response.data.count(b'class="article-sidebar-card"') == 4, post["canonical_path"]
         assert b'action="/subscribe/"' in response.data, post["canonical_path"]
-        assert b'class="mobile-blog-subscribe"' in response.data, post["canonical_path"]
-        assert f"mobile-blog-newsletter-email-{post['slug']}".encode() in response.data, post["canonical_path"]
-        assert b"/static/js/mobile-blog-subscribe.js" in response.data, post["canonical_path"]
         assert b'class="article-callout"></section>' not in response.data, post["canonical_path"]
         assert b'<div class="article-callout"><section' not in response.data, post["canonical_path"]
+        if post["slug"] in app_module.COMPANION_GUIDE_POSTS:
+            assert b'class="article-on-page"' in response.data, post["canonical_path"]
+            assert b'class="article-post-sidebar"' not in response.data, post["canonical_path"]
+            assert b'class="mobile-blog-subscribe"' not in response.data, post["canonical_path"]
+            assert b"/static/js/mobile-blog-subscribe.js" not in response.data, post["canonical_path"]
+        else:
+            assert response.data.count(b'class="article-post-sidebar"') == 1, post["canonical_path"]
+            assert response.data.count(b'class="article-sidebar-card"') == 4, post["canonical_path"]
+            assert b'class="mobile-blog-subscribe"' in response.data, post["canonical_path"]
+            assert f"mobile-blog-newsletter-email-{post['slug']}".encode() in response.data, post["canonical_path"]
+            assert b"/static/js/mobile-blog-subscribe.js" in response.data, post["canonical_path"]
 
 
 def test_mobile_blog_subscribe_styles_are_mobile_only():
@@ -834,9 +841,13 @@ def test_every_post_uses_styled_wellness_tools_panel():
         response = client.get(post["canonical_path"])
 
         assert response.status_code == 200, post["canonical_path"]
-        assert b'class="article-wellness-tools"' in response.data, post["canonical_path"]
-        assert b"https://memovela.com/" in response.data, post["canonical_path"]
-        assert b"Read about Memovela" in response.data, post["canonical_path"]
+        if post["slug"] in app_module.COMPANION_GUIDE_POSTS:
+            assert b"Build Healthy Habits" in response.data, post["canonical_path"]
+            assert b"https://memovela.com/" in response.data, post["canonical_path"]
+        else:
+            assert b'class="article-wellness-tools"' in response.data, post["canonical_path"]
+            assert b"https://memovela.com/" in response.data, post["canonical_path"]
+            assert b"Read about Memovela" in response.data, post["canonical_path"]
         assert b"md-glow-btn" not in response.data, post["canonical_path"]
 
 
@@ -856,9 +867,13 @@ def test_chicago_marathon_impact_card_replaces_imported_blog_promo():
         response = client.get(post["canonical_path"])
 
         assert response.status_code == 200, post["canonical_path"]
-        assert b'class="article-impact-card"' in response.data, post["canonical_path"]
-        assert b"Chicago Marathon Diabetes Project" in response.data, post["canonical_path"]
-        assert b"Read the marathon story" in response.data, post["canonical_path"]
+        if post["slug"] in app_module.COMPANION_GUIDE_POSTS:
+            assert b'class="article-impact-card"' not in response.data, post["canonical_path"]
+            assert b"Chicago Marathon Diabetes Project" not in response.data, post["canonical_path"]
+        else:
+            assert b'class="article-impact-card"' in response.data, post["canonical_path"]
+            assert b"Chicago Marathon Diabetes Project" in response.data, post["canonical_path"]
+            assert b"Read the marathon story" in response.data, post["canonical_path"]
         assert b"<figcaption>Click the photo to read about how we raised over $2,500" not in response.data
 
 
@@ -1921,7 +1936,10 @@ def test_google_ads_tracking_loads_only_when_enabled_for_public_pages(tmp_path):
             "GOOGLE_ADS_CONVERSION_ID": "AW-11435654295",
             "GOOGLE_ADS_ENABLE_LOCAL_TESTING": "1",
             "GOOGLE_ADS_CONVERSION_ACTIONS_JSON": json.dumps(
-                {"resource_pdf_download": "downloadLabel123"}
+                {
+                    "guide_download": "downloadLabel123",
+                    "donation_click": "donationLabel456",
+                }
             ),
         },
     )
@@ -1932,7 +1950,17 @@ def test_google_ads_tracking_loads_only_when_enabled_for_public_pages(tmp_path):
 
     assert b"https://www.googletagmanager.com/gtag/js?id=AW-11435654295" in public_response.data
     assert b'"resource_pdf_download": "AW-11435654295/downloadLabel123"' in public_response.data
+    assert b'"donation_cta_click": "AW-11435654295/donationLabel456"' in public_response.data
     assert b"https://www.googletagmanager.com/gtag/js?id=AW-11435654295" not in admin_response.data
+
+
+def test_google_ads_conversion_events_include_numeric_value_and_currency():
+    script = Path("static/js/site-analytics.js").read_text()
+    conversion_call = script[script.index("if (sendTo) {") : script.index('window.gtag("event", "conversion", params);')]
+
+    assert "params.send_to = sendTo;" in conversion_call
+    assert "params.value = 1.0;" in conversion_call
+    assert 'params.currency = "USD";' in conversion_call
 
 
 def test_google_ads_tracking_is_disabled_by_default_in_tests(tmp_path):

@@ -42,7 +42,7 @@
     "GOOGLE_ADS_CONVERSION_ACTIONS_JSON": {
       "description": "Optional JSON map from first-party analytics events to Google Ads conversion labels.",
       "required": false,
-      "value": "{}"
+      "value": "{\"resource_pdf_download\":\"AW-11435654295/_vSkCPP-3-AcEJf5-Mwq\",\"guide_download\":\"AW-11435654295/_vSkCPP-3-AcEJf5-Mwq\",\"guide_pdf_download\":\"AW-11435654295/_vSkCPP-3-AcEJf5-Mwq\"}"
     },
     "CMS_DATA_PATH": {
       "description": "Optional local development JSON path for CMS content when DATABASE_URL is unavailable.",

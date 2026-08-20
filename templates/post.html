@@ -10,21 +10,26 @@
     <meta property="og:image" content="{{ post.og_image or post.preview_image_url }}">
   {% endif %}
 {% endblock %}
-{% block body_class %}post-view post-pilot post-{{ post.slug }}{% endblock %}
+{% block body_class %}post-view post-pilot post-{{ post.slug }}{% if companion_guide %} post-companion-guide{% endif %}{% endblock %}
 
 {% block content %}
   <article class="article-post">
     <section class="article-post-hero">
       <div class="article-post-hero__inner">
         <div class="article-post-hero__copy">
-          <p class="eyebrow">{{ "JEIR update" if post.slug == "diabetes-health-jeir-updates" else "Pathways to wellness" }}</p>
-          <h1>{{ post.title }}</h1>
+          <p class="eyebrow">{{ companion_landing.eyebrow if companion_landing else ("JEIR update" if post.slug == "diabetes-health-jeir-updates" else "Pathways to wellness") }}</p>
+          <h1>{{ companion_landing.title if companion_landing else post.title }}</h1>
+          {% if companion_landing %}
+            <h2 class="article-post-hero__subtitle">{{ companion_landing.subtitle }}</h2>
+          {% endif %}
           {% if post.date %}
             <p class="meta">{{ post.date | date_label }}</p>
           {% endif %}
           <p>{{ post.excerpt_text }}</p>
           <div class="button-row">
-            {% if post.slug == "diabetes-health-jeir-updates" %}
+            {% if companion_guide %}
+              <a class="button-primary" href="{{ companion_guide.detail_url }}" data-track-event="resource_related_link_click" data-track-category="resource" data-track-label="Get the Free Fats Guide" data-track-id="post-hero-companion-guide-{{ post.slug }}" data-track-position="article-hero" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-destination="{{ companion_guide.detail_url }}" data-guide-title="{{ companion_guide.title }}" data-guide-slug="{{ companion_guide.slug }}" data-guide-category="{{ companion_guide.category }}" data-page-count="{{ companion_guide.page_count }}" data-file-type="{{ companion_guide.file_type }}" data-file-size="{{ companion_guide.file_size }}" data-action="open-guide" data-button-location="article-hero" data-source-page="{{ post.canonical_path }}" data-track-impression="1">Get the Free Fats Guide</a>
+            {% elif post.slug == "diabetes-health-jeir-updates" %}
               <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try JEIR" data-track-id="post-hero-jeir-{{ post.slug }}" data-track-position="article-hero" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-article-group="health tools" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">Try JEIR</a>
             {% elif post.slug == "memovela" %}
               <a class="button-primary" href="https://memovela.com" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="post-hero-memovela-{{ post.slug }}" data-track-position="article-hero" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-article-group="health tools" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">Try Memovela</a>
@@ -34,7 +39,23 @@
             <a class="button-secondary button-secondary--light" href="#article">Read the article</a>
           </div>
         </div>
-        {% if post.preview_image_url %}
+        {% if companion_guide %}
+          <aside class="article-companion-card" aria-labelledby="article-companion-card-heading" data-track-impression="1" data-track-impression-event="resource_card_view" data-track-event="resource_card_view" data-track-category="resource" data-track-label="{{ companion_guide.title }}" data-track-id="article-hero-card-{{ companion_guide.slug }}" data-track-position="article-hero-companion-card" data-guide-title="{{ companion_guide.title }}" data-guide-slug="{{ companion_guide.slug }}" data-guide-category="{{ companion_guide.category }}" data-page-count="{{ companion_guide.page_count }}" data-file-type="{{ companion_guide.file_type }}" data-file-size="{{ companion_guide.file_size }}" data-source-page="{{ post.canonical_path }}">
+            <div class="article-companion-card__cover">
+              <img src="{{ companion_guide.cover_url }}" alt="{{ companion_guide.alt_text }}">
+            </div>
+            <div class="article-companion-card__body">
+              <p class="eyebrow">Free companion guide</p>
+              <h2 id="article-companion-card-heading">{{ companion_guide.title }}</h2>
+              <p class="free-guide-subtitle">{{ companion_guide.subtitle }}</p>
+              <p>{{ companion_guide.page_count }} pages | Printable | No signup required</p>
+              <div class="free-guide-actions">
+                <a class="button-primary" href="{{ companion_guide.detail_url }}" data-track-event="resource_related_link_click" data-track-category="resource" data-track-label="Open {{ companion_guide.title }}" data-track-id="article-hero-open-{{ companion_guide.slug }}" data-track-position="article-hero-companion-card" data-track-destination="{{ companion_guide.detail_url }}" data-guide-title="{{ companion_guide.title }}" data-guide-slug="{{ companion_guide.slug }}" data-guide-category="{{ companion_guide.category }}" data-page-count="{{ companion_guide.page_count }}" data-file-type="{{ companion_guide.file_type }}" data-file-size="{{ companion_guide.file_size }}" data-action="open-guide" data-button-location="article-hero-companion-card" data-source-page="{{ post.canonical_path }}">Open Free Guide</a>
+                <a class="button-secondary" href="{{ companion_guide.pdf_url }}" target="_blank" rel="noopener noreferrer" data-track-event="resource_pdf_view" data-track-category="resource" data-track-label="View {{ companion_guide.title }}" data-track-id="article-hero-view-pdf-{{ companion_guide.slug }}" data-track-position="article-hero-companion-card" data-track-destination="{{ companion_guide.pdf_url }}" data-guide-title="{{ companion_guide.title }}" data-guide-slug="{{ companion_guide.slug }}" data-guide-category="{{ companion_guide.category }}" data-page-count="{{ companion_guide.page_count }}" data-file-type="{{ companion_guide.file_type }}" data-file-size="{{ companion_guide.file_size }}" data-action="view" data-button-location="article-hero-companion-card" data-source-page="{{ post.canonical_path }}">Download PDF</a>
+              </div>
+            </div>
+          </aside>
+        {% elif post.preview_image_url %}
           <div class="article-post-hero__media">
             <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt or post.title }}" title="{{ post.preview_image_title or post.title }}"{% if post.preview_image_description %} data-description="{{ post.preview_image_description }}"{% endif %}>
           </div>
@@ -42,16 +63,77 @@
       </div>
     </section>
 
+    {% if companion_guide and companion_landing %}
+      <section class="companion-guide-top" aria-labelledby="fats-at-a-glance">
+        <div class="section-heading section-heading--left">
+          <p class="eyebrow">Quick answer</p>
+          <h2 id="fats-at-a-glance">Fats at a Glance</h2>
+        </div>
+        <div class="companion-glance-grid">
+          {% for card in companion_landing.glance_cards %}
+            <article>
+              <h3>{{ card.title }}</h3>
+              <p>{{ card.body }}</p>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="companion-pathways" aria-labelledby="companion-pathways-heading">
+        <div class="section-heading section-heading--left">
+          <p class="eyebrow">Choose your next step</p>
+          <h2 id="companion-pathways-heading">What Would You Like to Do?</h2>
+        </div>
+        <div class="companion-pathways__grid">
+          <article>
+            <h3>Want the full explanation?</h3>
+            <p>Read the original article about saturated, unsaturated, and trans fats.</p>
+            <a class="button-secondary" href="#article">Read the Article</a>
+          </article>
+          <article>
+            <h3>Want something you can save?</h3>
+            <p>Open the companion guide with practical swaps, label guidance, and worksheets.</p>
+            <a class="button-primary" href="{{ companion_guide.detail_url }}" data-track-event="resource_related_link_click" data-track-category="resource" data-track-label="Open {{ companion_guide.title }}" data-track-id="article-pathway-companion-{{ companion_guide.slug }}" data-track-position="article-pathway" data-track-destination="{{ companion_guide.detail_url }}" data-guide-title="{{ companion_guide.title }}" data-guide-slug="{{ companion_guide.slug }}" data-guide-category="{{ companion_guide.category }}" data-action="open-guide" data-source-page="{{ post.canonical_path }}" data-track-impression="1">Open Fats Without Fear</a>
+          </article>
+          <article>
+            <h3>Want help at the grocery store?</h3>
+            <p>Use the grocery guide for label reading, cart planning, and practical shopping choices.</p>
+            <a class="button-secondary" href="{{ url_for('free_guide_detail', guide_slug='grocery-store-survival-guide') }}" data-track-event="resource_related_link_click" data-track-category="resource" data-track-label="Open The Grocery Store Survival Guide" data-track-id="article-pathway-grocery-guide" data-track-position="article-pathway" data-track-destination="{{ url_for('free_guide_detail', guide_slug='grocery-store-survival-guide') }}" data-action="related-guide" data-source-page="{{ post.canonical_path }}" data-track-impression="1">Open the Grocery Guide</a>
+          </article>
+        </div>
+      </section>
+    {% endif %}
+
     <section id="article" class="article-post-shell">
+      {% if companion_guide and companion_landing %}
+        <aside class="article-on-page" aria-label="On this page">
+          <details class="article-on-page__mobile">
+            <summary>On this page</summary>
+            <nav>
+              {% for item in companion_landing.contents %}
+                <a href="{{ item.href }}">{{ item.label }}</a>
+              {% endfor %}
+            </nav>
+          </details>
+          <nav class="article-on-page__desktop" aria-label="Article contents">
+            <p class="eyebrow">On this page</p>
+            {% for item in companion_landing.contents %}
+              <a href="{{ item.href }}">{{ item.label }}</a>
+            {% endfor %}
+          </nav>
+        </aside>
+      {% endif %}
+
       <div class="article-post-body">
         <div class="article-post-body__header">
           <h2>{{ post.article_section_title }}</h2>
         </div>
         <div class="wp-content article-content">
-          {{ post.content_html | article_html(post.slug) }}
+          {{ post.content_html | article_html(post.slug, companion_guide) }}
         </div>
       </div>
 
+      {% if not companion_guide %}
       <aside class="article-post-sidebar" aria-label="Article actions">
         <div class="article-sidebar-card">
           <p class="eyebrow">Tool</p>
@@ -88,12 +170,103 @@
           {% set social_link_variant = "" %}
         </div>
       </aside>
+      {% endif %}
     </section>
   </article>
 
-  {% include "_article_navigation.html" %}
+  {% if companion_guide %}
+    <section id="free-fats-guide" class="companion-guide-final" aria-labelledby="free-fats-guide-heading">
+      <div class="companion-guide-final__cover">
+        <img src="{{ companion_guide.cover_url }}" alt="{{ companion_guide.alt_text }}">
+      </div>
+      <div class="companion-guide-final__copy">
+        <p class="eyebrow">Free companion guide</p>
+        <h2 id="free-fats-guide-heading">You Understand the Science. Now Make It Practical.</h2>
+        <h3>{{ companion_guide.title }}</h3>
+        <p class="free-guide-subtitle">{{ companion_guide.subtitle }}</p>
+        <p>{{ companion_guide.description }}</p>
+        <div class="free-guide-meta">
+          <span>{{ companion_guide.page_count }} pages</span>
+          <span>{{ companion_guide.file_size }} PDF</span>
+          <span>Printable</span>
+          <span>No signup required</span>
+        </div>
+        <div class="free-guide-actions">
+          <a class="button-primary" href="{{ companion_guide.detail_url }}" data-track-event="resource_related_link_click" data-track-category="resource" data-track-label="Open {{ companion_guide.title }}" data-track-id="article-final-open-{{ companion_guide.slug }}" data-track-position="article-final-guide-cta" data-track-destination="{{ companion_guide.detail_url }}" data-guide-title="{{ companion_guide.title }}" data-guide-slug="{{ companion_guide.slug }}" data-guide-category="{{ companion_guide.category }}" data-page-count="{{ companion_guide.page_count }}" data-file-type="{{ companion_guide.file_type }}" data-file-size="{{ companion_guide.file_size }}" data-action="open-guide" data-button-location="article-final-guide-cta" data-source-page="{{ post.canonical_path }}" data-track-impression="1">Open Free Guide</a>
+          <a class="button-secondary" href="{{ companion_guide.pdf_url }}" download data-resource-download data-track-event="resource_pdf_download" data-track-category="resource" data-track-label="Download {{ companion_guide.title }}" data-track-id="article-final-download-{{ companion_guide.slug }}" data-track-position="article-final-guide-cta" data-track-destination="{{ companion_guide.pdf_url }}" data-guide-title="{{ companion_guide.title }}" data-guide-slug="{{ companion_guide.slug }}" data-guide-category="{{ companion_guide.category }}" data-page-count="{{ companion_guide.page_count }}" data-file-type="{{ companion_guide.file_type }}" data-file-size="{{ companion_guide.file_size }}" data-action="download" data-button-location="article-final-guide-cta" data-source-page="{{ post.canonical_path }}">Download Free PDF</a>
+        </div>
+      </div>
+    </section>
 
-  {% if related_posts %}
+    {% if companion_related_guides %}
+      <section id="related-free-guides" class="companion-related-guides" aria-labelledby="related-free-guides-heading">
+        <div class="section-heading section-heading--left">
+          <p class="eyebrow">Related free guides</p>
+          <h2 id="related-free-guides-heading">Keep Learning With Practical Resources</h2>
+        </div>
+        <div class="free-guide-mini-grid">
+          {% for related in companion_related_guides %}
+            <article>
+              <img src="{{ related.thumb_url }}" alt="{{ related.alt_text }}">
+              <h3><a href="{{ related.detail_url }}" data-track-event="resource_related_link_click" data-track-category="resource" data-track-label="{{ related.title }}" data-track-id="article-related-guide-{{ related.slug }}" data-track-position="article-related-guides" data-guide-title="{{ companion_guide.title }}" data-guide-slug="{{ companion_guide.slug }}" data-action="related-guide" data-source-page="{{ post.canonical_path }}">{{ related.title }}</a></h3>
+              <p>{{ related.subtitle }}</p>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+    <section class="companion-tools" aria-labelledby="companion-tools-heading">
+      <div class="section-heading section-heading--left">
+        <p class="eyebrow">Keep going</p>
+        <h2 id="companion-tools-heading">Turn Learning Into Next Steps</h2>
+      </div>
+      <div class="companion-tools__grid">
+        <article>
+          <h3>Ask Health Questions</h3>
+          <p>Use JEIR for AI-guided wellness education and clearer questions to bring to your care team.</p>
+          <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Open JEIR" data-track-id="article-lower-jeir-{{ post.slug }}" data-track-position="article-lower-tools" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-source-page="{{ post.canonical_path }}" data-track-impression="1">Open JEIR</a>
+        </article>
+        <article>
+          <h3>Build Healthy Habits</h3>
+          <p>Use Memovela to practice repeatable habits around meals, movement, sleep, hydration, and check-ins.</p>
+          <a class="button-primary" href="https://memovela.com/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="article-lower-memovela-{{ post.slug }}" data-track-position="article-lower-tools" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-source-page="{{ post.canonical_path }}" data-track-impression="1">Try Memovela</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="newsletter-section companion-newsletter" aria-labelledby="companion-newsletter-heading">
+      <div class="newsletter-panel">
+        <div>
+          <p class="eyebrow">Optional updates</p>
+          <h2 id="companion-newsletter-heading">Get New Free Resources</h2>
+          <p>Mindful Diabetes periodically publishes new guides, articles, research updates, and wellness tools. The Fats Without Fear guide is free whether or not you subscribe.</p>
+        </div>
+        <div>
+          {% set newsletter_id = "article-companion-newsletter-email-" ~ post.slug %}
+          {% set newsletter_source = "article-companion-" ~ post.slug %}
+          {% set newsletter_click_event = "resource_newsletter_click" %}
+          {% set newsletter_success_event = "resource_newsletter_submit" %}
+          {% include "_newsletter_form.html" %}
+        </div>
+      </div>
+    </section>
+
+    <section class="free-guides-donation companion-donation" aria-labelledby="companion-donation-heading">
+      <div>
+        <p class="eyebrow">Keep them free</p>
+        <h2 id="companion-donation-heading">Support Free Health Education</h2>
+        <p>Mindful Diabetes Inc. is a 501(c)(3) nonprofit. Donations help create and maintain free educational resources for patients, families, and communities.</p>
+      </div>
+      <a class="button-primary" href="{{ url_for('page_detail', slug='donation') }}" data-track-event="resource_donation_click" data-track-category="resource" data-track-label="Support Free Health Education" data-track-id="article-companion-donation-{{ post.slug }}" data-track-position="article-companion-footer" data-track-destination="{{ url_for('page_detail', slug='donation') }}" data-button-location="article-companion-footer" data-source-page="{{ post.canonical_path }}">Support Free Health Education</a>
+    </section>
+
+    <p class="free-guides-confirmation" role="status" aria-live="polite" hidden>Your free guide is opening. No signup is required.</p>
+  {% else %}
+    {% include "_article_navigation.html" %}
+  {% endif %}
+
+  {% if related_posts and not companion_guide %}
     <section class="post-list article-related" aria-labelledby="more-posts">
       <div class="section-heading">
         <p class="eyebrow">Keep reading</p>
@@ -110,7 +283,15 @@
     </section>
   {% endif %}
 
-  {% set mobile_newsletter_id = "mobile-blog-newsletter-email-" ~ post.slug %}
-  {% set mobile_newsletter_source = "mobile-blog-" ~ post.slug %}
-  {% include "_mobile_blog_subscribe.html" %}
+  {% if not companion_guide %}
+    {% set mobile_newsletter_id = "mobile-blog-newsletter-email-" ~ post.slug %}
+    {% set mobile_newsletter_source = "mobile-blog-" ~ post.slug %}
+    {% include "_mobile_blog_subscribe.html" %}
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+  {% if companion_guide %}
+    <script src="{{ url_for('static', filename='js/free-guides.js') }}" defer></script>
+  {% endif %}
 {% endblock %}

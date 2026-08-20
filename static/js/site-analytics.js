@@ -19,10 +19,13 @@
     health_tool_click: true,
     newsletter_signup: true,
     paypal_click: true,
+    resource_donation_click: true,
     resource_download_click: true,
     resource_explore_click: true,
     resource_jeir_click: true,
+    resource_newsletter_submit: true,
     resource_nonprofit_article_click: true,
+    resource_pdf_view: true,
     resource_pdf_download: true,
     resource_related_guide_click: true,
     resource_share_click: true,
@@ -271,6 +274,8 @@
 
     if (sendTo) {
       params.send_to = sendTo;
+      params.value = 1.0;
+      params.currency = "USD";
       window.gtag("event", "conversion", params);
       return;
     }
