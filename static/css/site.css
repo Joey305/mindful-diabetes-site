@@ -8390,6 +8390,10 @@ a.article-navigation__link:hover {
   margin-top: clamp(3rem, 6vw, 4.5rem);
 }
 
+.companion-related-guides {
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
 .companion-tools__grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -9916,6 +9920,54 @@ a.article-navigation__link:hover {
 
   .companion-guide-final__cover img {
     max-height: 26rem;
+  }
+
+  .post-companion-guide .companion-related-guides {
+    margin-top: 3rem;
+    margin-bottom: 3.75rem;
+  }
+
+  .post-companion-guide .companion-related-guides .section-heading {
+    margin-bottom: 1.25rem;
+  }
+
+  .post-companion-guide .companion-related-guides .free-guide-mini-grid {
+    gap: 1rem;
+  }
+
+  .post-companion-guide .companion-related-guides .free-guide-mini-grid article {
+    display: grid;
+    gap: 0.65rem;
+    padding: 0.85rem;
+  }
+
+  .post-companion-guide .companion-related-guides .free-guide-mini-grid img {
+    width: 100%;
+    max-height: 11.5rem;
+    margin: 0;
+    padding: 0.45rem;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: var(--miami-orange-tint);
+    border: 1px solid var(--tint-line-orange);
+    border-radius: 6px;
+  }
+
+  .post-companion-guide .companion-related-guides .free-guide-mini-grid h3 {
+    margin: 0;
+    font-size: 1.24rem;
+    line-height: 1.18;
+  }
+
+  .post-companion-guide .companion-related-guides .free-guide-mini-grid p {
+    margin: 0;
+    color: var(--body);
+    font-size: 0.98rem;
+    line-height: 1.42;
+  }
+
+  .post-companion-guide .companion-tools {
+    margin-top: 0;
   }
 
   .article-impact-card {
