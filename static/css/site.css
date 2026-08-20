@@ -8341,6 +8341,18 @@ a.article-navigation__link:hover {
   margin-top: 1rem;
 }
 
+.companion-guide-inline .free-guide-actions .button-primary,
+.article-content .companion-guide-inline .free-guide-actions .button-primary {
+  color: var(--white) !important;
+}
+
+.companion-guide-inline .free-guide-actions .button-primary:hover,
+.companion-guide-inline .free-guide-actions .button-primary:focus-visible,
+.article-content .companion-guide-inline .free-guide-actions .button-primary:hover,
+.article-content .companion-guide-inline .free-guide-actions .button-primary:focus-visible {
+  color: var(--white) !important;
+}
+
 .companion-guide-final {
   display: grid;
   box-sizing: border-box;
