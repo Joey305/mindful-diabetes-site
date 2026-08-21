@@ -33,6 +33,8 @@ MEANINGFUL_ACTION_EVENTS = {
     "donation_completed",
     "donation_refunded",
     "health_tool_click",
+    "memovela_app_store_click",
+    "memovela_web_click",
     "search_result_click",
     "content_cta_click",
     "volunteer_cta_click",
@@ -71,6 +73,8 @@ VALID_EVENT_NAMES = {
     "donation_refunded",
     "donation_denied",
     "health_tool_click",
+    "memovela_app_store_click",
+    "memovela_web_click",
     "newsletter_form_view",
     "newsletter_form_interaction",
     "newsletter_signup",
@@ -114,6 +118,8 @@ EVENT_CATEGORIES = {
     "donation_refunded": "donation",
     "donation_denied": "donation",
     "health_tool_click": "health_tool",
+    "memovela_app_store_click": "health_tool",
+    "memovela_web_click": "health_tool",
     "newsletter_form_view": "newsletter",
     "newsletter_form_interaction": "newsletter",
     "newsletter_signup": "newsletter",
@@ -267,6 +273,8 @@ CTA_CLICK_EVENTS = {
     "donation_cta_click",
     "paypal_click",
     "health_tool_click",
+    "memovela_app_store_click",
+    "memovela_web_click",
     "content_cta_click",
     "resource_download_click",
     "resource_pdf_view",
@@ -474,7 +482,13 @@ class LocalAnalyticsStore(AnalyticsStore):
             "denied_donations": self._count(start, end, filters, event_name="donation_denied"),
             "confirmed_donation_amount_cents": self._sum_metadata_amount_cents(start, end, filters, event_name="donation_completed"),
             "refunded_donation_amount_cents": self._sum_metadata_amount_cents(start, end, filters, event_name="donation_refunded"),
-            "health_tool_clicks": self._count(start, end, filters, event_name="health_tool_click"),
+            "health_tool_clicks": (
+                self._count(start, end, filters, event_name="health_tool_click")
+                + self._count(start, end, filters, event_name="memovela_app_store_click")
+                + self._count(start, end, filters, event_name="memovela_web_click")
+            ),
+            "memovela_app_store_clicks": self._count(start, end, filters, event_name="memovela_app_store_click"),
+            "memovela_web_clicks": self._count(start, end, filters, event_name="memovela_web_click"),
             "newsletter_signups": self._count(start, end, filters, event_name="newsletter_signup"),
             "newsletter_views": self._count(start, end, filters, event_name="newsletter_form_view"),
             "newsletter_interactions": self._count(start, end, filters, event_name="newsletter_form_interaction"),
@@ -504,8 +518,8 @@ class LocalAnalyticsStore(AnalyticsStore):
             "donation_sources": self._group_counts(start, end, filters, "page_path", event_names=["donation_cta_click", "paypal_click"], limit=8),
             "donation_positions": self._group_counts(start, end, filters, "element_position", event_names=["donation_cta_click", "paypal_click"], limit=8),
             "donation_campaigns": self._group_counts(start, end, filters, "campaign", event_names=["donation_cta_click", "paypal_click"], limit=8),
-            "health_tools": self._group_counts(start, end, filters, "element_label", event_name="health_tool_click", limit=8),
-            "health_tool_pages": self._group_counts(start, end, filters, "page_path", event_name="health_tool_click", limit=8),
+            "health_tools": self._group_counts(start, end, filters, "element_label", event_names=["health_tool_click", "memovela_app_store_click", "memovela_web_click"], limit=8),
+            "health_tool_pages": self._group_counts(start, end, filters, "page_path", event_names=["health_tool_click", "memovela_app_store_click", "memovela_web_click"], limit=8),
             "newsletter_pages": self._group_counts(start, end, filters, "page_path", event_name="newsletter_signup", limit=8),
             "newsletter_referrers": self._group_counts(start, end, filters, "referrer_domain", event_name="newsletter_signup", limit=8),
             "newsletter_sources": self._group_counts(start, end, filters, "source", event_name="newsletter_signup", limit=8),
@@ -665,10 +679,10 @@ class LocalAnalyticsStore(AnalyticsStore):
                        COUNT(DISTINCT CASE WHEN event_name = 'page_view' THEN anonymous_session_id END) AS sessions,
                        COUNT(CASE WHEN event_name = 'donation_cta_click' THEN 1 END) AS donation_clicks,
                        COUNT(CASE WHEN event_name = 'paypal_click' THEN 1 END) AS paypal_clicks,
-                       COUNT(CASE WHEN event_name = 'health_tool_click' THEN 1 END) AS tool_clicks,
+                       COUNT(CASE WHEN event_name IN ('health_tool_click', 'memovela_app_store_click', 'memovela_web_click') THEN 1 END) AS tool_clicks,
                        COUNT(CASE WHEN event_name = 'newsletter_signup' THEN 1 END) AS newsletter_signups,
                        COUNT(CASE WHEN event_name IN ('resource_detail_view', 'resource_pdf_view', 'resource_pdf_download', 'resource_share_click', 'resource_jeir_click', 'resource_explore_click', 'resource_related_guide_click', 'resource_nonprofit_article_click', 'resource_video_click') THEN 1 END) AS guide_actions,
-                       COUNT(CASE WHEN event_name IN ('donation_cta_click', 'paypal_click', 'health_tool_click', 'newsletter_signup', 'resource_pdf_download', 'resource_share_click', 'resource_jeir_click', 'resource_explore_click', 'resource_related_guide_click', 'resource_nonprofit_article_click', 'resource_video_click', 'search_result_click') THEN 1 END) AS meaningful_actions
+                       COUNT(CASE WHEN event_name IN ('donation_cta_click', 'paypal_click', 'health_tool_click', 'memovela_app_store_click', 'memovela_web_click', 'newsletter_signup', 'resource_pdf_download', 'resource_share_click', 'resource_jeir_click', 'resource_explore_click', 'resource_related_guide_click', 'resource_nonprofit_article_click', 'resource_video_click', 'search_result_click') THEN 1 END) AS meaningful_actions
                 FROM analytics_events
                 {where}
                 GROUP BY page
@@ -689,7 +703,7 @@ class LocalAnalyticsStore(AnalyticsStore):
                        COUNT(DISTINCT NULLIF(anonymous_session_id, '')) AS sessions,
                        COUNT(CASE WHEN event_name = 'donation_cta_click' THEN 1 END) AS donation_clicks,
                        COUNT(CASE WHEN event_name = 'paypal_click' THEN 1 END) AS paypal_clicks,
-                       COUNT(CASE WHEN event_name = 'health_tool_click' THEN 1 END) AS tool_clicks,
+                       COUNT(CASE WHEN event_name IN ('health_tool_click', 'memovela_app_store_click', 'memovela_web_click') THEN 1 END) AS tool_clicks,
                        COUNT(CASE WHEN event_name = 'newsletter_signup' THEN 1 END) AS newsletter_signups,
                        COUNT(CASE WHEN event_name = 'site_search' THEN 1 END) AS searches,
                        COUNT(CASE WHEN event_name = 'search_result_click' THEN 1 END) AS search_clicks,
@@ -849,8 +863,8 @@ class LocalAnalyticsStore(AnalyticsStore):
                        COUNT(CASE WHEN event_name = 'newsletter_signup' THEN 1 END) AS newsletter_signups,
                        COUNT(CASE WHEN event_name = 'donation_cta_click' THEN 1 END) AS donation_clicks,
                        COUNT(CASE WHEN event_name = 'paypal_click' THEN 1 END) AS paypal_clicks,
-                       COUNT(CASE WHEN event_name = 'health_tool_click' THEN 1 END) AS health_tool_clicks,
-                       COUNT(CASE WHEN event_name IN ('newsletter_signup', 'donation_cta_click', 'paypal_click', 'health_tool_click', 'content_cta_click', 'volunteer_cta_click', 'resource_pdf_download', 'resource_share_click', 'resource_jeir_click', 'resource_explore_click', 'resource_related_guide_click', 'resource_nonprofit_article_click', 'resource_video_click', 'search_result_click') THEN 1 END) AS actions
+                       COUNT(CASE WHEN event_name IN ('health_tool_click', 'memovela_app_store_click', 'memovela_web_click') THEN 1 END) AS health_tool_clicks,
+                       COUNT(CASE WHEN event_name IN ('newsletter_signup', 'donation_cta_click', 'paypal_click', 'health_tool_click', 'memovela_app_store_click', 'memovela_web_click', 'content_cta_click', 'volunteer_cta_click', 'resource_pdf_download', 'resource_share_click', 'resource_jeir_click', 'resource_explore_click', 'resource_related_guide_click', 'resource_nonprofit_article_click', 'resource_video_click', 'search_result_click') THEN 1 END) AS actions
                 FROM analytics_events
                 {where} AND campaign != ''
                 GROUP BY campaign

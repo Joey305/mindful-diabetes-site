@@ -12,6 +12,8 @@ from urllib.parse import parse_qs, urlparse
 import bleach
 from markupsafe import Markup
 
+from mindful_diabetes import memovela as memovela_links
+
 try:
     import psycopg
     from psycopg.rows import dict_row
@@ -1611,7 +1613,7 @@ def health_tool_for_block(block):
         return {}
     tools = {
         "jeir": {"title": "JEIR", "url": "https://www.mindfuldiabetes.ai/", "description": "AI-guided diabetes and wellness education."},
-        "memovela": {"title": "Memovela", "url": "https://memovela.com", "description": "A memory and wellness support tool."},
+        "memovela": {"title": "Memovela", "url": memovela_links.MEMOVELA_WEB_URL, "description": "A memory and wellness support tool."},
         "health_tools": {"title": "Health Tools Hub", "url": "/health-tools/", "description": "Explore Mindful Diabetes wellness tools."},
         "mindful_eating": {"title": "Mindful Eating", "url": "/mindful-eating/", "description": "Practice nutrition choices with a mindful lens."},
     }

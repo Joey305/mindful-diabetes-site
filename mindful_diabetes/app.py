@@ -23,6 +23,7 @@ from markupsafe import Markup, escape
 
 from mindful_diabetes import cms
 from mindful_diabetes import analytics
+from mindful_diabetes import memovela as memovela_links
 from mindful_diabetes import resources as resource_library
 
 try:
@@ -281,7 +282,7 @@ FREE_GUIDE_DEFINITIONS = [
             {"label": "Research", "endpoint": "research"},
             {"label": "Health Tools", "endpoint": "health_tools"},
             {"label": "JEIR", "url": "https://www.mindfuldiabetes.ai/"},
-            {"label": "Memovela", "url": "https://memovela.com"},
+            {"label": "Memovela", "url": memovela_links.MEMOVELA_WEB_URL},
         ],
     },
 ]
@@ -497,6 +498,7 @@ def create_app(test_config=None):
             "navigation_state": navigation_state_for_request(content),
             "paypal_button_id": app.config["PAYPAL_HOSTED_BUTTON_ID"],
             "site_description": app.config["SITE_DESCRIPTION"],
+            "memovela": memovela_links.link_config(),
             "newsletter_enabled": is_mailchimp_configured(app.config),
             "turnstile_site_key": (
                 app.config["TURNSTILE_SITE_KEY"] if is_turnstile_configured(app.config) else ""
@@ -4071,6 +4073,12 @@ def clean_article_html(raw_html, paypal_button_id, post_slug="", companion_guide
     html = clean_wordpress_html(raw_html, paypal_button_id)
     html = rewrite_article_subscribe_links(html)
     html = remove_article_media(html)
+    if post_slug == "memovela":
+        html = update_memovela_article_html(html)
+    elif post_slug == "summer-walks-hydration-diabetes":
+        html = update_summer_walks_memovela_html(html)
+    elif post_slug == "otc-cgm-children-stelo-family-guide":
+        html = update_pediatric_cgm_memovela_html(html)
     if companion_guide:
         html = remove_companion_article_distractions(html)
     else:
@@ -4084,6 +4092,133 @@ def clean_article_html(raw_html, paypal_button_id, post_slug="", companion_guide
         html = add_fats_article_heading_ids(html)
         html = insert_companion_guide_cta(html, companion_guide)
     return html
+
+
+def memovela_app_store_badge_html(placement):
+    placement = escape(placement)
+    app_store_url = escape(memovela_links.MEMOVELA_APP_STORE_URL)
+    return f"""
+    <a class="app-store-badge" href="{app_store_url}" target="_blank" rel="noopener noreferrer" aria-label="Download Memovela on the App Store" data-track-event="memovela_app_store_click" data-track-category="health_tool" data-track-label="Download Memovela on the App Store" data-track-id="memovela-app-store-{placement}" data-track-position="{placement}" data-track-destination="{app_store_url}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="app_store" data-cta-position="{placement}">
+      <img src="/static/img/download-on-the-app-store.svg" alt="Download Memovela on the App Store" width="120" height="40" loading="lazy">
+    </a>
+    """
+
+
+def memovela_web_link_html(label, placement, css_class="button-secondary", track_id="memovela-web"):
+    label = escape(label)
+    placement = escape(placement)
+    css_class = escape(css_class)
+    track_id = escape(track_id)
+    web_url = escape(memovela_links.MEMOVELA_WEB_URL)
+    return f"""<a class="{css_class}" href="{web_url}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="{label}" data-track-id="{track_id}" data-track-position="{placement}" data-track-destination="{web_url}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-cta-position="{placement}">{label}</a>"""
+
+
+def update_memovela_article_html(html):
+    intro_callout = f"""
+    <aside class="memovela-inline-cta" aria-labelledby="memovela-app-availability">
+      <p class="eyebrow">Now available on the App Store</p>
+      <h2 id="memovela-app-availability">Memovela is available for iPhone and iPad.</h2>
+      <p>The web version remains available from any compatible browser, so Android, desktop, and shared-device visitors still have a clear path.</p>
+      <div class="memovela-inline-cta__actions">
+        {memovela_app_store_badge_html("memovela_article")}
+        {memovela_web_link_html("Use Memovela on the web", "memovela_article", track_id="memovela-article-web-intro")}
+      </div>
+    </aside>
+    """
+    html = re.sub(
+        r"(<p>✨\s*<strong>Meet Memovela</strong>.*?</p>)",
+        lambda match: match.group(1) + intro_callout,
+        html,
+        count=1,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    html = re.sub(
+        r"<h2>Where Memovela Is Right Now \(and What’s Coming Next\).*?</h2>\s*"
+        r"<p>Right now, Memovela is in an exciting early stage — it’s already usable, and we’re actively improving it week by week\.</p>",
+        "<h2>Using Memovela Today</h2><p>Memovela is available on the App Store for iPhone and iPad, and the web version remains available for people using Android, desktop, or any compatible browser. We continue improving both paths so the habit-tracking experience stays simple and supportive.</p>",
+        html,
+        count=1,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    try_memovela = f"""
+    <h3>✨ Try Memovela</h3>
+    <p>Choose the path that fits your device: download the native iPhone/iPad app, or continue with the web version in your browser.</p>
+    <div class="memovela-inline-cta memovela-inline-cta--compact" aria-label="Memovela download and web options">
+      <div class="memovela-inline-cta__actions">
+        {memovela_app_store_badge_html("memovela_article")}
+        {memovela_web_link_html("Create your free account on the web", "memovela_article", track_id="memovela-article-web-account")}
+        <a class="text-link" href="{escape(memovela_links.MEMOVELA_WEB_URL)}login" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Log in to Memovela on the web" data-track-id="memovela-article-web-login" data-track-position="memovela_article" data-track-destination="{escape(memovela_links.MEMOVELA_WEB_URL)}login" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-cta-position="memovela_article">Already have an account? Log in on the web</a>
+      </div>
+    </div>
+    """
+    html = re.sub(
+        r"<h3>✨ Try Memovela</h3>\s*<ul\b[^>]*>.*?</ul>\s*<p><em>\(If you’re reading this on mobile: save it to your home screen and treat it like a tiny daily check-in\.\)</em></p>",
+        try_memovela,
+        html,
+        count=1,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    html = re.sub(
+        r"<p><strong>Try Memovela:</strong>\s*<a href=\"https://memovela\.com\">https://memovela\.com</a></p>",
+        f"""<p><strong>Use Memovela on the web:</strong> <a href="{escape(memovela_links.MEMOVELA_WEB_URL)}" target="_blank" rel="noopener">memovela.com</a></p>""",
+        html,
+        count=1,
+        flags=re.IGNORECASE,
+    )
+    return html
+
+
+def update_summer_walks_memovela_html(html):
+    replacement = f"""
+    <aside class="article-wellness-tools" data-memovela-focus="true" aria-label="Memovela for walking and hydration habits">
+      <div class="article-wellness-tools__intro">
+        <p class="eyebrow">Make the habit easier to remember</p>
+        <p class="article-wellness-tools__title">Track walks, hydration, and recovery with Memovela.</p>
+        <p>Memovela helps you notice movement, water, meals, and body check-ins over time without turning a summer walk into another source of pressure.</p>
+      </div>
+      <div class="memovela-inline-cta__actions">
+        {memovela_app_store_badge_html("blog_article")}
+        {memovela_web_link_html("Use Memovela on the web", "blog_article", track_id="summer-walks-memovela-web")}
+        <a class="text-link" href="/memovela/">Read about Memovela</a>
+      </div>
+    </aside>
+    """
+    pattern = (
+        r"<div class=\"article-wellness-tools\" aria-label=\"Free wellness tools\">"
+        r".*?<a href=\"/memovela/\">Read about Memovela</a>.*?"
+        r"</div>\s*</div>"
+    )
+    html, count = re.subn(pattern, replacement, html, count=1, flags=re.IGNORECASE | re.DOTALL)
+    if count:
+        return html
+    return html
+
+
+def update_pediatric_cgm_memovela_html(html):
+    replacement = f"""
+    <aside class="article-wellness-tools" data-memovela-focus="true" aria-label="Memovela for routine notes">
+      <div class="article-wellness-tools__intro">
+        <p class="eyebrow">Track the question, not every number</p>
+        <p class="article-wellness-tools__title">Use simple routine notes to support better conversations.</p>
+        <p>When families are preparing for a clinician conversation, a short symptom note or routine log can sometimes be more helpful than reacting to every sensor point. For broader wellness journaling, Memovela is available on the App Store and on the web.</p>
+      </div>
+      <div class="memovela-inline-cta__actions">
+        {memovela_app_store_badge_html("blog_article")}
+        {memovela_web_link_html("Use Memovela on the web", "blog_article", track_id="pediatric-cgm-memovela-web")}
+        <a class="text-link" href="/memovela/">Read about Memovela</a>
+      </div>
+    </aside>
+    """
+    return re.sub(
+        r"<aside class=\"article-wellness-tools\">\s*<div class=\"article-wellness-tools__intro\">\s*"
+        r"<p class=\"eyebrow\">Mindful Diabetes Tools</p>\s*"
+        r"<h2 class=\"article-wellness-tools__title\">Track the Question, Not Every Number</h2>\s*"
+        r"<p>When families are preparing for a clinician conversation.*?</p>\s*</div>\s*</aside>",
+        replacement,
+        html,
+        count=1,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
 
 
 def remove_companion_article_distractions(html):
@@ -4405,7 +4540,7 @@ def promote_chicago_marathon_figure(html):
 
 
 def wellness_tools_panel():
-    return """
+    return f"""
     <div class="article-wellness-tools" aria-label="Free wellness tools">
       <div class="article-wellness-tools__intro">
         <p class="eyebrow">Free wellness tools</p>
@@ -4418,7 +4553,7 @@ def wellness_tools_panel():
           <strong>AI Wellness Guide</strong>
           <small>Ask clearer questions about blood sugar, insulin resistance, and brain health.</small>
         </a>
-        <a class="article-tool-card article-tool-card--memovela" href="https://memovela.com/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Memovela" data-track-id="imported-wellness-memovela" data-track-position="imported-wellness-tools" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">
+        <a class="article-tool-card article-tool-card--memovela" href="{memovela_links.MEMOVELA_WEB_URL}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Memovela" data-track-id="imported-wellness-memovela" data-track-position="imported-wellness-tools" data-track-destination="{memovela_links.MEMOVELA_WEB_URL}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-track-impression="1">
           <span>Memovela</span>
           <strong>Wellness Tracker</strong>
           <small>Build repeatable habits around movement, meals, sleep, hydration, and check-ins.</small>

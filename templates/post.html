@@ -32,7 +32,9 @@
             {% elif post.slug == "diabetes-health-jeir-updates" %}
               <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try JEIR" data-track-id="post-hero-jeir-{{ post.slug }}" data-track-position="article-hero" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-article-group="health tools" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">Try JEIR</a>
             {% elif post.slug == "memovela" %}
-              <a class="button-primary" href="https://memovela.com" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="post-hero-memovela-{{ post.slug }}" data-track-position="article-hero" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-article-group="health tools" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">Try Memovela</a>
+              {% set memovela_app_store_placement = "memovela_article" %}
+              {% include "_memovela_app_store_badge.html" %}
+              <a class="button-secondary button-secondary--light" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Use Memovela on the web" data-track-id="post-hero-memovela-web-{{ post.slug }}" data-track-position="memovela_article" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-article-group="health tools" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-cta-position="memovela_article" data-track-impression="1">Use Memovela on the web</a>
             {% else %}
               <a class="button-primary" href="{{ url_for('page_detail', slug='donation') }}" data-track-event="donation_cta_click" data-track-category="donation" data-track-label="Support prevention" data-track-id="post-hero-donation-{{ post.slug }}" data-track-position="article-hero" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-track-campaign-id="article-support" data-track-impression="1">Support prevention</a>
             {% endif %}
@@ -230,7 +232,11 @@
         <article>
           <h3>Build Healthy Habits</h3>
           <p>Use Memovela to practice repeatable habits around meals, movement, sleep, hydration, and check-ins.</p>
-          <a class="button-primary" href="https://memovela.com/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="article-lower-memovela-{{ post.slug }}" data-track-position="article-lower-tools" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-source-page="{{ post.canonical_path }}" data-track-impression="1">Try Memovela</a>
+          <div class="companion-tools__actions">
+            {% set memovela_app_store_placement = "blog_article" %}
+            {% include "_memovela_app_store_badge.html" %}
+            <a class="button-secondary" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Use Memovela on the web" data-track-id="article-lower-memovela-web-{{ post.slug }}" data-track-position="blog_article" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-source-page="{{ post.canonical_path }}" data-cta-position="blog_article" data-track-impression="1">Use Memovela on the web</a>
+          </div>
         </article>
       </div>
     </section>

@@ -125,6 +125,17 @@
                 <a href="{{ share.url }}" target="_blank" rel="noopener noreferrer" data-track-event="resource_share_click" data-track-category="resource" data-track-label="{{ share.label }} {{ guide.title }}" data-track-id="share-{{ guide.slug }}-{{ share.platform }}-card" data-track-position="guide-card" data-guide-title="{{ guide.title }}" data-guide-slug="{{ guide.slug }}" data-share-platform="{{ share.platform }}" data-source-page="/free-guides">{{ share.label }}</a>
               {% endfor %}
             </div>
+            {% if guide.slug == "7-day-prevention-reset" %}
+              <div class="free-guide-memovela-bridge">
+                <p class="eyebrow">Prefer tracking digitally?</p>
+                <p>Continue building your daily habits with Memovela.</p>
+                <div class="free-guide-memovela-bridge__actions">
+                  {% set memovela_app_store_placement = "free_guides" %}
+                  {% include "_memovela_app_store_badge.html" %}
+                  <a class="text-link" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Use Memovela on the web" data-track-id="free-guides-memovela-web-{{ guide.slug }}" data-track-position="free_guides" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-guide-title="{{ guide.title }}" data-guide-slug="{{ guide.slug }}" data-cta-position="free_guides" data-source-page="/free-guides">Use Memovela on the web</a>
+                </div>
+              </div>
+            {% endif %}
           </div>
         </article>
       {% endfor %}

@@ -17,7 +17,7 @@
         <p>Mindful Diabetes builds free wellness tools that make prevention easier to understand and easier to practice. Start with AI-guided education, daily habit tracking, or a quick nutrition game.</p>
         <div class="button-row">
           <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Open JEIR" data-track-id="health-tools-hero-jeir" data-track-position="hero" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">Open JEIR</a>
-          <a class="button-secondary button-secondary--light" href="https://memovela.com/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="health-tools-hero-memovela" data-track-position="hero" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">Try Memovela</a>
+          <a class="button-secondary button-secondary--light" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Try Memovela on the web" data-track-id="health-tools-hero-memovela-web" data-track-position="health_tools" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-cta-position="health_tools" data-track-impression="1">Try Memovela on the web</a>
         </div>
       </div>
       <div class="health-tools-hero__panel" aria-label="Mindful Diabetes health tools">
@@ -82,9 +82,11 @@
             <p>{{ memovela.excerpt_text }}</p>
           {% endif %}
           <div class="health-tool-actions">
-            <a class="button-primary" href="https://memovela.com/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="health-tools-memovela-card" data-track-position="tool-card" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">Try Memovela</a>
+            {% set memovela_app_store_placement = "health_tools" %}
+            {% include "_memovela_app_store_badge.html" %}
+            <a class="button-secondary" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Use Memovela on the web" data-track-id="health-tools-memovela-web" data-track-position="health_tools" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-cta-position="health_tools" data-track-impression="1">Use Memovela on the web</a>
             {% if memovela %}
-              <a class="button-secondary" href="{{ memovela.canonical_path }}">Read the Memovela article</a>
+              <a class="text-link" href="{{ memovela.canonical_path }}">Learn how Memovela works</a>
             {% endif %}
           </div>
         </div>

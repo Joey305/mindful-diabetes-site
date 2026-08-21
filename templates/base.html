@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-itunes-app" content="app-id={{ memovela.app_id }}">
     <title>{% block title %}Mindful Diabetes Inc{% endblock %}</title>
     {% block meta_description %}<meta name="description" content="{{ site_description }}">{% endblock %}
     {% block canonical %}{% endblock %}
@@ -231,7 +232,8 @@
           <h2>Wellness Tools</h2>
           <a href="{{ url_for('health_tools') }}">Health Tools Hub</a>
           <a href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener">Try JEIR</a>
-          <a href="https://memovela.com" target="_blank" rel="noopener">Try Memovela</a>
+          <a href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="footer-memovela-web" data-track-position="footer" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-cta-position="footer">Try Memovela</a>
+          <a href="{{ memovela.app_store_url }}" target="_blank" rel="noopener noreferrer" data-track-event="memovela_app_store_click" data-track-category="health_tool" data-track-label="Memovela on the App Store" data-track-id="footer-memovela-app-store" data-track-position="footer" data-track-destination="{{ memovela.app_store_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="app_store" data-cta-position="footer">Memovela on the App Store</a>
           <a href="{{ url_for('page_detail', slug='diabetes-health-jeir-updates') }}">JEIR Updates</a>
           <a href="{{ url_for('page_detail', slug='memovela') }}">Memovela Article</a>
         </nav>

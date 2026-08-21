@@ -72,6 +72,19 @@
     </div>
   </section>
 
+  <section class="resources-memovela-callout" aria-labelledby="resources-memovela-heading">
+    <div>
+      <p class="eyebrow">Put what you learn into practice</p>
+      <h2 id="resources-memovela-heading">Support everyday habits with Memovela.</h2>
+      <p>Memovela can help you keep track of movement, hydration, meals, and personal goals while you continue learning from Mindful Diabetes resources.</p>
+    </div>
+    <div class="resources-memovela-callout__actions">
+      {% set memovela_app_store_placement = "resources" %}
+      {% include "_memovela_app_store_badge.html" %}
+      <a class="button-secondary" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Use Memovela on the web" data-track-id="resources-memovela-web" data-track-position="resources" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-cta-position="resources">Use Memovela on the web</a>
+    </div>
+  </section>
+
   <section class="resources-attribution" aria-labelledby="resources-attribution-heading">
     <div>
       <p class="eyebrow">Attribution and intent</p>

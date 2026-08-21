@@ -17,6 +17,8 @@
     content_cta_click: true,
     donation_cta_click: true,
     health_tool_click: true,
+    memovela_app_store_click: true,
+    memovela_web_click: true,
     newsletter_signup: true,
     paypal_click: true,
     resource_donation_click: true,

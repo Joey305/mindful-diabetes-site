@@ -92,12 +92,15 @@
         <div class="tool-card__copy">
           <p class="eyebrow">Daily wellness tracker</p>
           <h3>Memovela for metabolic and brain health</h3>
+          <p class="tool-card__note">Now available on the App Store for iPhone and iPad.</p>
           <p>Memovela helps people build small, repeatable habits around movement, meals, sleep, hydration, and daily check-ins.</p>
           {% if memovela_post %}
             <p>{{ memovela_post.excerpt_text }}</p>
           {% endif %}
           <div class="button-row">
-            <a class="button-primary" href="https://memovela.com" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Try Memovela" data-track-id="home-memovela-tool" data-track-position="home-tools" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="external" data-track-impression="1">Try Memovela</a>
+            {% set memovela_app_store_placement = "homepage" %}
+            {% include "_memovela_app_store_badge.html" %}
+            <a class="button-secondary" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Use Memovela on the web" data-track-id="home-memovela-web" data-track-position="homepage" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-cta-position="homepage" data-track-impression="1">Use Memovela on the web</a>
             {% if memovela_post %}
               <a class="button-secondary" href="{{ memovela_post.canonical_path }}">Read the article</a>
             {% endif %}
