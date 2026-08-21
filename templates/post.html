@@ -127,11 +127,13 @@
       {% endif %}
 
       <div class="article-post-body">
-        <div class="article-post-body__header">
-          <h2>{{ post.article_section_title }}</h2>
-        </div>
+        {% if post.article_section_title %}
+          <div class="article-post-body__header">
+            <h2>{{ post.article_section_title }}</h2>
+          </div>
+        {% endif %}
         <div class="wp-content article-content">
-          {{ post.content_html | article_html(post.slug, companion_guide) }}
+          {{ post.content_html | article_html(post.slug, companion_guide, post.title, post.article_section_title) }}
         </div>
       </div>
 
@@ -143,6 +145,12 @@
           <p>Use Mindful Diabetes tools to connect everyday habits with metabolic and cognitive health.</p>
           <a class="button-primary" href="https://www.mindfuldiabetes.ai/" target="_blank" rel="noopener" data-track-event="health_tool_click" data-track-category="health_tool" data-track-label="Open JEIR" data-track-id="article-sidebar-jeir-{{ post.slug }}" data-track-position="article-sidebar" data-track-content-id="{{ post.id }}" data-track-content-type="post" data-tool-id="jeir" data-tool-name="JEIR" data-tool-slug="jeir" data-tool-destination-type="external" data-track-impression="1">Open JEIR</a>
         </div>
+
+        {% set memovela_card_context = "article-sidebar" %}
+        {% set memovela_card_track_id = "article-sidebar-memovela-" ~ post.slug %}
+        {% set memovela_card_content_id = post.id %}
+        {% set memovela_card_content_type = "post" %}
+        {% include "_memovela_blog_card.html" %}
 
         <div class="article-sidebar-card">
           <p class="eyebrow">Support</p>

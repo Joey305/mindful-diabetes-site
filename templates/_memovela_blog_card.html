@@ -1,0 +1,10 @@
+<div class="article-sidebar-card article-sidebar-card--memovela">
+  <p class="eyebrow">App</p>
+  <h2>Build tiny habits with Memovela</h2>
+  <p>Track meals, movement, sleep, hydration, and daily check-ins in a simple wellness app from Mindful Diabetes.</p>
+  <div class="article-sidebar-card__actions">
+    {% set memovela_app_store_placement = memovela_card_context|default("blog_article") %}
+    {% include "_memovela_app_store_badge.html" %}
+    <a class="button-secondary" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Use Memovela on the web" data-track-id="{{ memovela_card_track_id|default('blog-memovela-web') }}" data-track-position="{{ memovela_card_context|default('blog_article') }}" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-cta-position="{{ memovela_card_context|default('blog_article') }}"{% if memovela_card_content_id is defined %} data-track-content-id="{{ memovela_card_content_id }}"{% endif %}{% if memovela_card_content_type is defined %} data-track-content-type="{{ memovela_card_content_type }}"{% endif %} data-track-impression="1">Use the web app</a>
+  </div>
+</div>

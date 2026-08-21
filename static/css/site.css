@@ -8114,6 +8114,35 @@ a.article-navigation__link:hover {
   border-color: var(--miami-green);
 }
 
+.article-wellness-tools__app {
+  display: grid;
+  margin-top: 1rem;
+  padding: 0.9rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.8rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(0, 80, 48, 0.14);
+  border-radius: 8px;
+}
+
+.article-wellness-tools__app .eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--secondary);
+}
+
+.article-wellness-tools__app p:not(.eyebrow) {
+  margin: 0;
+  color: var(--body);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.article-wellness-tools__app .button-secondary {
+  margin: 0;
+  white-space: normal;
+}
+
 .memovela-inline-cta {
   margin: clamp(1.2rem, 3vw, 2rem) 0;
   padding: clamp(1rem, 3vw, 1.45rem);
@@ -8175,6 +8204,15 @@ a.article-navigation__link:hover {
   border-color: var(--tint-line-orange);
 }
 
+.article-sidebar-card--memovela,
+.article-sidebar-card--memovela:nth-child(odd),
+.article-sidebar-card--memovela:nth-child(even) {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(232, 247, 239, 0.86)),
+    var(--miami-green-tint);
+  border-color: var(--tint-line-green);
+}
+
 .article-sidebar-card h2 {
   margin-bottom: 0.45rem;
   font-size: 1.16rem;
@@ -8208,6 +8246,28 @@ a.article-navigation__link:hover {
   min-height: 2.45rem;
   padding: 0.65rem 0.85rem;
   font-size: 0.92rem;
+}
+
+.article-sidebar-card__actions {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.article-sidebar-card__actions .app-store-badge {
+  margin: 0;
+}
+
+.article-sidebar-card__actions .button-secondary {
+  width: 100%;
+  min-height: 2.45rem;
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+}
+
+.cms-public-memovela {
+  max-width: 840px;
+  margin: clamp(2rem, 5vw, 3rem) auto 0;
 }
 
 .post-companion-guide .article-post-hero__inner {
@@ -10140,6 +10200,15 @@ a.article-navigation__link:hover {
 
   .article-impact-card {
     padding: 0.65rem;
+  }
+
+  .article-wellness-tools__app {
+    grid-template-columns: 1fr;
+  }
+
+  .article-wellness-tools__app .memovela-inline-cta__actions {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .article-impact-card__media img,

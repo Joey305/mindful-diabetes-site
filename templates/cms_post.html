@@ -25,6 +25,13 @@
     <div class="cms-public-blocks">
       {{ rendered_blocks }}
     </div>
+    <aside class="cms-public-memovela" aria-label="Memovela app download">
+      {% set memovela_card_context = "cms-post" %}
+      {% set memovela_card_track_id = "cms-post-memovela-" ~ item.slug %}
+      {% set memovela_card_content_id = item.id %}
+      {% set memovela_card_content_type = "post" %}
+      {% include "_memovela_blog_card.html" %}
+    </aside>
   </article>
 
   {% set mobile_newsletter_id = "mobile-blog-newsletter-email-" ~ item.slug %}

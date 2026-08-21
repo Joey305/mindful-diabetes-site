@@ -8,6 +8,12 @@ from mindful_diabetes import create_app
 app_module = import_module("mindful_diabetes.app")
 
 
+def article_sidebar_card_count(response):
+    return response.data.count(b'<div class="article-sidebar-card">') + response.data.count(
+        b'<div class="article-sidebar-card article-sidebar-card--memovela">'
+    )
+
+
 class StubUrlopenResponse:
     def __init__(self, status=200, body=b"{}"):
         self.status = status
@@ -422,7 +428,8 @@ def test_jeir_article_uses_pilot_layout():
     assert b"Join Us in Preventing Type 3 Diabetes" not in response.data
     assert b"<li>\xc2\xa0</li>" not in response.data
     assert b"<ul></ul>" not in response.data
-    assert response.data.count(b'class="article-sidebar-card"') == 4
+    assert article_sidebar_card_count(response) == 5
+    assert b"Build tiny habits with Memovela" in response.data
     assert b"Follow Mindful Diabetes" in response.data
     assert b"social-link--youtube" in response.data
     assert b"social-link--tiktok" in response.data
@@ -799,10 +806,24 @@ def test_every_post_uses_shared_article_template():
             assert b"/static/js/mobile-blog-subscribe.js" not in response.data, post["canonical_path"]
         else:
             assert response.data.count(b'class="article-post-sidebar"') == 1, post["canonical_path"]
-            assert response.data.count(b'class="article-sidebar-card"') == 4, post["canonical_path"]
+            assert article_sidebar_card_count(response) == 5, post["canonical_path"]
+            assert b"Build tiny habits with Memovela" in response.data, post["canonical_path"]
             assert b'class="mobile-blog-subscribe"' in response.data, post["canonical_path"]
             assert f"mobile-blog-newsletter-email-{post['slug']}".encode() in response.data, post["canonical_path"]
             assert b"/static/js/mobile-blog-subscribe.js" in response.data, post["canonical_path"]
+
+
+def test_promoted_article_heading_is_not_repeated_in_first_content_card():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    response = client.get("/microglia-astrocytes-alzheimers/")
+    html = response.data.decode("utf-8")
+
+    assert response.status_code == 200
+    assert html.count("The Brain Has an Immune Language") == 1
+    first_section = html.split('<section class="article-section article-section--green">', 1)[1]
+    assert first_section.lstrip().startswith("<p>When people hear")
 
 
 def test_mobile_blog_subscribe_styles_are_mobile_only():

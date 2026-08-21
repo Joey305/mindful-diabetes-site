@@ -517,13 +517,15 @@ def create_app(test_config=None):
         return Markup(clean_wordpress_html(value or "", app.config["PAYPAL_HOSTED_BUTTON_ID"]))
 
     @app.template_filter("article_html")
-    def article_html(value, post_slug="", companion_guide=None):
+    def article_html(value, post_slug="", companion_guide=None, post_title="", article_section_title=""):
         return Markup(
             clean_article_html(
                 value or "",
                 app.config["PAYPAL_HOSTED_BUTTON_ID"],
                 post_slug=post_slug,
                 companion_guide=companion_guide,
+                post_title=post_title,
+                article_section_title=article_section_title,
             )
         )
 
@@ -1328,7 +1330,10 @@ def load_content(path):
         item["preview_image_alt"] = preview_image["alt"] if preview_image else item.get("title", "")
         item["preview_image_title"] = preview_image["title"] if preview_image else item.get("title", "")
         item["preview_image_description"] = preview_image["description"] if preview_image else ""
-        item["article_section_title"] = article_section_title_for(item.get("content_html", "")) or item.get("title", "")
+        item["article_section_title"] = article_section_title_for(
+            item.get("content_html", ""),
+            item.get("title", ""),
+        )
         item["search_text"] = " ".join(
             [item.get("title", ""), item.get("slug", ""), item.get("excerpt_text", ""), content_text]
         ).lower()
@@ -1362,11 +1367,13 @@ def youtube_url_to_embed(raw_url):
     return f"https://www.youtube.com/embed/{video_id}"
 
 
-def article_section_title_for(raw_html):
+def article_section_title_for(raw_html, post_title=""):
     for match in re.finditer(r"<h[1-4]\b[^>]*>(.*?)</h[1-4]>", raw_html or "", re.IGNORECASE | re.DOTALL):
         heading = html_to_text(match.group(1))
         if re.search(r"\b(?:want|prefer)\b.*\blisten\b", heading, re.IGNORECASE):
             continue
+        if headings_match(heading, post_title):
+            return ""
         return heading
     return ""
 
@@ -4069,10 +4076,18 @@ def strip_imported_attributes(html):
     )
 
 
-def clean_article_html(raw_html, paypal_button_id, post_slug="", companion_guide=None):
+def clean_article_html(
+    raw_html,
+    paypal_button_id,
+    post_slug="",
+    companion_guide=None,
+    post_title="",
+    article_section_title="",
+):
     html = clean_wordpress_html(raw_html, paypal_button_id)
     html = rewrite_article_subscribe_links(html)
     html = remove_article_media(html)
+    html = remove_duplicate_intro_heading(html, post_title, article_section_title)
     if post_slug == "memovela":
         html = update_memovela_article_html(html)
     elif post_slug == "summer-walks-hydration-diabetes":
@@ -4092,6 +4107,41 @@ def clean_article_html(raw_html, paypal_button_id, post_slug="", companion_guide
         html = add_fats_article_heading_ids(html)
         html = insert_companion_guide_cta(html, companion_guide)
     return html
+
+
+def normalized_heading_text(value):
+    text = html_lib.unescape(value or "").strip().lower()
+    text = re.sub(r"[\u2018\u2019]", "'", text)
+    text = re.sub(r"[\u201c\u201d]", '"', text)
+    text = re.sub(r"&", " and ", text)
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def headings_match(first_heading, post_title):
+    if not first_heading or not post_title:
+        return False
+    return normalized_heading_text(first_heading) == normalized_heading_text(post_title)
+
+
+def remove_duplicate_intro_heading(html, post_title, article_section_title=""):
+    duplicate_targets = [target for target in [post_title, article_section_title] if target]
+    if not duplicate_targets:
+        return html
+
+    first_heading = re.search(
+        r"(?P<prefix>^\s*)(?P<heading><h[1-4]\b[^>]*>(?P<content>.*?)</h[1-4]>)",
+        html or "",
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if not first_heading:
+        return html
+
+    heading_text = html_to_text(first_heading.group("content"))
+    if not any(headings_match(heading_text, target) for target in duplicate_targets):
+        return html
+
+    return html[: first_heading.start("heading")] + html[first_heading.end("heading") :]
 
 
 def memovela_app_store_badge_html(placement):
@@ -4568,6 +4618,16 @@ def wellness_tools_panel():
         <a href="/memovela/">Read about Memovela</a>
         <a href="/healthy-eating/">Read about the game</a>
         <a href="/diabetes-artificial-intelligence-jeir/">Read about JEIR AI</a>
+      </div>
+      <div class="article-wellness-tools__app" aria-label="Download Memovela">
+        <div>
+          <p class="eyebrow">Daily habits app</p>
+          <p>Want one simple place to practice the habits in this article? Memovela is available on the App Store and on the web.</p>
+        </div>
+        <div class="memovela-inline-cta__actions">
+          {memovela_app_store_badge_html("blog_article")}
+          {memovela_web_link_html("Use Memovela on the web", "blog_article", track_id="wellness-panel-memovela-web")}
+        </div>
       </div>
     </div>
     """
