@@ -102,6 +102,31 @@
             <p>Use the grocery guide for label reading, cart planning, and practical shopping choices.</p>
             <a class="button-secondary" href="{{ url_for('free_guide_detail', guide_slug='grocery-store-survival-guide') }}" data-track-event="resource_related_link_click" data-track-category="resource" data-track-label="Open The Grocery Store Survival Guide" data-track-id="article-pathway-grocery-guide" data-track-position="article-pathway" data-track-destination="{{ url_for('free_guide_detail', guide_slug='grocery-store-survival-guide') }}" data-action="related-guide" data-source-page="{{ post.canonical_path }}" data-track-impression="1">Open the Grocery Guide</a>
           </article>
+          <article class="companion-pathways__memovela">
+            <p class="eyebrow">App</p>
+            <h3>Want help making it stick?</h3>
+            <p>Try Memovela for meals, movement, hydration, sleep, and simple daily check-ins while you work on healthier routines.</p>
+            <div class="companion-tools__actions">
+              {% set memovela_app_store_placement = "fats_guide_pathway" %}
+              {% set memovela_app_store_variant = "compact" %}
+              {% include "_memovela_app_store_badge.html" %}
+              <a class="button-secondary" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Use Memovela on the web" data-track-id="article-pathway-memovela-web-{{ post.slug }}" data-track-position="fats_guide_pathway" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-source-page="{{ post.canonical_path }}" data-cta-position="fats_guide_pathway" data-track-impression="1">Use Memovela on the web</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="companion-memovela-spotlight" aria-labelledby="companion-memovela-heading">
+        <div class="companion-memovela-spotlight__copy">
+          <p class="eyebrow">Habit support</p>
+          <h2 id="companion-memovela-heading">Build the fats habits, not just the fats knowledge.</h2>
+          <p>People landing here are usually trying to make a real change, not just read one article. Memovela gives them an immediate next step for logging meals, hydration, movement, sleep, and simple daily check-ins while they put this guidance into practice.</p>
+        </div>
+        <div class="companion-memovela-spotlight__actions">
+          {% set memovela_app_store_placement = "fats_guide_spotlight" %}
+          {% include "_memovela_app_store_badge.html" %}
+          <a class="button-primary" href="{{ memovela.web_url }}" target="_blank" rel="noopener" data-track-event="memovela_web_click" data-track-category="health_tool" data-track-label="Open Memovela on the web" data-track-id="article-spotlight-memovela-web-{{ post.slug }}" data-track-position="fats_guide_spotlight" data-track-destination="{{ memovela.web_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="web" data-source-page="{{ post.canonical_path }}" data-cta-position="fats_guide_spotlight" data-track-impression="1">Open Memovela on the web</a>
+          <a class="button-secondary" href="/memovela/" data-track-event="content_cta_click" data-track-category="content" data-track-label="Read about Memovela" data-track-id="article-spotlight-memovela-about-{{ post.slug }}" data-track-position="fats_guide_spotlight" data-track-destination="/memovela/" data-source-page="{{ post.canonical_path }}" data-track-impression="1">Read about Memovela</a>
         </div>
       </section>
     {% endif %}
