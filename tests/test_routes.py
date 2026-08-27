@@ -37,11 +37,33 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 100
+    assert len(content.latest_posts) == 101
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
         assert response.status_code == 200, item["canonical_path"]
+
+
+def test_intermittent_fasting_2026_article_and_historic_update_render():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    response = client.get("/intermittent-fasting-diabetes-2026/")
+    assert response.status_code == 200
+    assert b"Intermittent Fasting and Diabetes in 2026" in response.data
+    assert b"92.4%" in response.data
+    assert b"81.4%" in response.data
+    assert b'intermittent-fasting-diabetes-2026-hero-1024.webp' in response.data
+    assert b'fetchpriority="high"' in response.data
+    assert b'loading="lazy"' in response.data
+    assert response.data.count(b'data-image-slot="') == 5
+    assert b'application/ld+json' in response.data
+    assert b'"datePublished": "2026-08-27"' in response.data
+
+    historic = client.get("/diabetes-pharmacies-fasting/")
+    assert historic.status_code == 200
+    assert b"2026 Evidence Update" in historic.data
+    assert historic.data.count(b'href="/intermittent-fasting-diabetes-2026/"') >= 2
 
 
 def test_wordpress_home_slug_redirects_to_root():
@@ -1106,7 +1128,7 @@ def test_pediatric_otc_cgm_stelo_article_has_verified_sources_and_guardrails():
 
     assert response.status_code == 200
     assert post["date"] == "2026-08-03 09:00:00"
-    assert app.config["CONTENT"].latest_posts[0]["slug"] == "otc-cgm-children-stelo-family-guide"
+    assert app.config["CONTENT"].latest_posts[1]["slug"] == "otc-cgm-children-stelo-family-guide"
     assert post["title"] == "The First Over-the-Counter CGM for Children: What Families Should Know About Stelo"
     assert post["content_html"].count("<img ") == 6
     assert post["content_html"].count("title=") == 6
@@ -1213,7 +1235,7 @@ def test_june_alzheimers_clinical_trials_post_has_snapshot_sources_and_images():
 
     assert response.status_code == 200
     assert post["date"] == "2026-06-10 09:00:00"
-    assert app.config["CONTENT"].latest_posts[2]["slug"] == "alzheimers-clinical-trials-june-2026"
+    assert app.config["CONTENT"].latest_posts[3]["slug"] == "alzheimers-clinical-trials-june-2026"
     assert post["content_html"].count("<img ") == 6
     assert post["content_html"].count("title=") == 6
     assert post["preview_image_title"] == "Alzheimer’s clinical-trial research visit"

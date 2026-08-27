@@ -1271,6 +1271,7 @@ def create_app(test_config=None):
                 companion_related_guides=related_guides,
                 related_posts=related_posts,
                 article_navigation=article_navigation,
+                post_schema=post_article_schema(post),
             )
 
         cms_item = cms.get_published_content_by_slug(app.config, slug)
@@ -1849,6 +1850,30 @@ def resource_article_schema(resource, canonical_url):
         "articleSection": resource["category"],
         "isAccessibleForFree": True,
     }
+
+
+def post_article_schema(post):
+    canonical_url = post.get("canonical_url") or f"{PUBLIC_SITE_URL}{post.get('canonical_path', '')}"
+    image = post.get("og_image") or post.get("hero_image") or post.get("preview_image_url")
+    if image and image.startswith("/"):
+        image = f"{PUBLIC_SITE_URL}{image}"
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.get("title", ""),
+        "description": post.get("meta_description") or post.get("excerpt_text", ""),
+        "datePublished": (post.get("date") or "")[:10],
+        "dateModified": (post.get("modified") or post.get("date") or "")[:10],
+        "author": {"@type": "Organization", "name": "Mindful Diabetes Inc."},
+        "publisher": organization_schema(),
+        "mainEntityOfPage": {"@type": "WebPage", "@id": canonical_url},
+        "url": canonical_url,
+        "articleSection": (post.get("categories") or ["Pathways to Wellness"])[0],
+        "isAccessibleForFree": True,
+    }
+    if image:
+        schema["image"] = image
+    return schema
 
 
 def resource_breadcrumb_schema(resource, canonical_url):
@@ -4086,7 +4111,10 @@ def clean_article_html(
 ):
     html = clean_wordpress_html(raw_html, paypal_button_id)
     html = rewrite_article_subscribe_links(html)
-    html = remove_article_media(html)
+    # The 2026 fasting feature uses semantic figure markup from its approved
+    # editorial package; its first inline figure is not a legacy hero to strip.
+    if post_slug != "intermittent-fasting-diabetes-2026":
+        html = remove_article_media(html)
     html = remove_duplicate_intro_heading(html, post_title, article_section_title)
     if post_slug == "memovela":
         html = update_memovela_article_html(html)

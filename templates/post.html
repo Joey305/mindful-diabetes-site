@@ -9,6 +9,11 @@
   {% if post.og_image or post.preview_image_url %}
     <meta property="og:image" content="{{ post.og_image or post.preview_image_url }}">
   {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ post.og_title or post.seo_title or post.title }}">
+  <meta name="twitter:description" content="{{ post.og_description or post.meta_description or post.excerpt_text }}">
+  {% if post.og_image or post.preview_image_url %}<meta name="twitter:image" content="{{ post.og_image or post.preview_image_url }}">{% endif %}
+  {% if post_schema %}<script type="application/ld+json">{{ post_schema | tojson }}</script>{% endif %}
 {% endblock %}
 {% block body_class %}post-view post-pilot post-{{ post.slug }}{% if companion_guide %} post-companion-guide{% endif %}{% endblock %}
 
@@ -41,6 +46,15 @@
             <a class="button-secondary button-secondary--light" href="#article">Read the article</a>
           </div>
         </div>
+        {% if post.hero_image %}
+          <figure class="article-post-hero__media">
+            <picture>
+              {% if post.hero_image_webp_srcset %}<source type="image/webp" srcset="{{ post.hero_image_webp_srcset }}" sizes="(max-width: 900px) calc(100vw - 2rem), 600px">{% endif %}
+              <img src="{{ post.hero_image }}" alt="{{ post.hero_alt or post.title }}" title="{{ post.hero_title or post.title }}" width="{{ post.hero_width or 1448 }}" height="{{ post.hero_height or 1086 }}" loading="eager" fetchpriority="high">
+            </picture>
+            {% if post.hero_caption %}<figcaption>{{ post.hero_caption }}</figcaption>{% endif %}
+          </figure>
+        {% endif %}
         {% if companion_guide %}
           <aside class="article-companion-card" aria-labelledby="article-companion-card-heading" data-track-impression="1" data-track-impression-event="resource_card_view" data-track-event="resource_card_view" data-track-category="resource" data-track-label="{{ companion_guide.title }}" data-track-id="article-hero-card-{{ companion_guide.slug }}" data-track-position="article-hero-companion-card" data-guide-title="{{ companion_guide.title }}" data-guide-slug="{{ companion_guide.slug }}" data-guide-category="{{ companion_guide.category }}" data-page-count="{{ companion_guide.page_count }}" data-file-type="{{ companion_guide.file_type }}" data-file-size="{{ companion_guide.file_size }}" data-source-page="{{ post.canonical_path }}">
             <div class="article-companion-card__cover">
