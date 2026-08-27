@@ -1327,10 +1327,18 @@ def load_content(path):
         content_text = searchable_content_text(item.get("content_html", ""))
         item["excerpt_text"] = preview_text_for(item)
         preview_image = first_content_image(item.get("content_html", ""))
-        item["preview_image_url"] = preview_image["src"] if preview_image else ""
-        item["preview_image_alt"] = preview_image["alt"] if preview_image else item.get("title", "")
-        item["preview_image_title"] = preview_image["title"] if preview_image else item.get("title", "")
-        item["preview_image_description"] = preview_image["description"] if preview_image else ""
+        # A deliberate hero should take precedence over the first in-article
+        # illustration on cards, listings, and the homepage.
+        if item.get("hero_image"):
+            item["preview_image_url"] = item["hero_image"]
+            item["preview_image_alt"] = item.get("hero_alt") or item.get("title", "")
+            item["preview_image_title"] = item.get("hero_title") or item.get("title", "")
+            item["preview_image_description"] = item.get("hero_description") or ""
+        else:
+            item["preview_image_url"] = preview_image["src"] if preview_image else ""
+            item["preview_image_alt"] = preview_image["alt"] if preview_image else item.get("title", "")
+            item["preview_image_title"] = preview_image["title"] if preview_image else item.get("title", "")
+            item["preview_image_description"] = preview_image["description"] if preview_image else ""
         item["article_section_title"] = article_section_title_for(
             item.get("content_html", ""),
             item.get("title", ""),

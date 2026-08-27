@@ -61,6 +61,10 @@ def test_intermittent_fasting_2026_article_and_historic_update_render():
     assert b'"datePublished": "2026-08-27"' in response.data
     assert response.data.count(b">The short version</h2>") == 1
 
+    guide = client.get("/guide/")
+    assert guide.status_code == 200
+    assert b'intermittent-fasting-diabetes-2026-hero-photo.png' in guide.data
+
     historic = client.get("/diabetes-pharmacies-fasting/")
     assert historic.status_code == 200
     assert b"2026 Evidence Update" in historic.data
