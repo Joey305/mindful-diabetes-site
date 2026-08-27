@@ -53,12 +53,13 @@ def test_intermittent_fasting_2026_article_and_historic_update_render():
     assert b"Intermittent Fasting and Diabetes in 2026" in response.data
     assert b"92.4%" in response.data
     assert b"81.4%" in response.data
-    assert b'intermittent-fasting-diabetes-2026-hero-1024.webp' in response.data
+    assert b'intermittent-fasting-diabetes-2026-hero-photo-1024.webp' in response.data
     assert b'fetchpriority="high"' in response.data
     assert b'loading="lazy"' in response.data
     assert response.data.count(b'data-image-slot="') == 5
     assert b'application/ld+json' in response.data
     assert b'"datePublished": "2026-08-27"' in response.data
+    assert response.data.count(b">The short version</h2>") == 1
 
     historic = client.get("/diabetes-pharmacies-fasting/")
     assert historic.status_code == 200
