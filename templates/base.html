@@ -31,6 +31,7 @@
       <script src="{{ url_for('static', filename='js/newsletter-turnstile.js') }}" defer></script>
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     {% endif %}
+    <script src="{{ url_for('static', filename='js/free-guide-download-prompt.js') }}" defer></script>
   </head>
   <body class="{% block body_class %}{% endblock %}">
     <header class="site-header">
@@ -253,6 +254,7 @@
         <p>Mindful Diabetes Inc. is a registered 501(c)(3) nonprofit.</p>
       </div>
     </footer>
+    {% include "_free_guide_download_prompt.html" %}
     {% block scripts %}{% endblock %}
   </body>
 </html>

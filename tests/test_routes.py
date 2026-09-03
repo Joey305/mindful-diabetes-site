@@ -595,9 +595,9 @@ def test_newsletter_forms_render_on_key_pages():
     client = app.test_client()
 
     expected_form_counts = {
-        "/": 2,
-        "/guide/": 2,
-        "/memovela/": 3,
+        "/": 3,
+        "/guide/": 3,
+        "/memovela/": 4,
     }
 
     for path, form_count in expected_form_counts.items():
@@ -606,6 +606,21 @@ def test_newsletter_forms_render_on_key_pages():
         assert response.status_code == 200
         assert response.data.count(b'action="/subscribe/"') == form_count
         assert b"Subscribe" in response.data
+        assert b"free-guide-download-prompt" in response.data
+
+
+def test_free_guide_download_prompt_is_available_across_guide_locations():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    for path in ["/free-guides/", "/free-guides/mindful-plate/", "/fats-guide/"]:
+        response = client.get(path)
+
+        assert response.status_code == 200
+        assert b"Stay up to date on diabetes and brain health" in response.data
+        assert b"Subscribe &amp; download" in response.data
+        assert b"No thanks \xe2\x80\x94 download free" in response.data
+        assert b"/static/js/free-guide-download-prompt.js" in response.data
 
 
 def test_subscribe_without_mailchimp_config_shows_setup_message():

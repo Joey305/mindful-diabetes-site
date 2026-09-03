@@ -4827,6 +4827,113 @@ a.article-navigation__link:hover {
   font-weight: 900;
 }
 
+body.free-guide-download-modal-open {
+  overflow: hidden;
+}
+
+.free-guide-download-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.free-guide-download-modal[hidden] {
+  display: none;
+}
+
+.free-guide-download-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 19, 56, 0.68);
+}
+
+.free-guide-download-modal__dialog {
+  position: relative;
+  width: min(100%, 37rem);
+  max-height: min(44rem, calc(100vh - 2rem));
+  overflow: auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--text);
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 24px 70px rgba(13, 19, 56, 0.36);
+}
+
+.free-guide-download-modal__dialog h2 {
+  margin: 0.35rem 2rem 0.75rem 0;
+  color: var(--primary);
+  font-family: "Lora", serif;
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
+  line-height: 1.18;
+}
+
+.free-guide-download-modal__dialog > p:not(.eyebrow):not(.free-guide-download-modal__note) {
+  margin: 0 0 1.25rem;
+  line-height: 1.6;
+}
+
+.free-guide-download-modal__close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  display: grid;
+  width: 2.3rem;
+  height: 2.3rem;
+  place-items: center;
+  padding: 0;
+  color: var(--primary);
+  background: var(--miami-green-tint);
+  border: 0;
+  border-radius: 50%;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.newsletter-form--download-prompt {
+  margin-top: 1.2rem;
+  padding: 0.6rem;
+  background: var(--miami-green-tint);
+  border-color: var(--tint-line-green);
+  border-radius: 12px;
+}
+
+.newsletter-form--download-prompt input {
+  border-color: rgba(13, 19, 56, 0.2);
+}
+
+.free-guide-download-modal__skip {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.35rem;
+  color: var(--primary);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.free-guide-download-modal__note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.free-guide-download-modal__response {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+
 .free-guide-detail-hero__inner {
   grid-template-columns: minmax(260px, 0.43fr) minmax(0, 1fr);
 }

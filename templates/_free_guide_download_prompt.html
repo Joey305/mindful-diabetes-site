@@ -1,0 +1,42 @@
+<div class="free-guide-download-modal" data-free-guide-download-modal hidden>
+  <div class="free-guide-download-modal__backdrop" data-free-guide-download-close></div>
+  <section class="free-guide-download-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="free-guide-download-title" aria-describedby="free-guide-download-description" tabindex="-1">
+    <button class="free-guide-download-modal__close" type="button" aria-label="Close signup invitation" data-free-guide-download-close>&times;</button>
+    <p class="eyebrow">Before your free download</p>
+    <h2 id="free-guide-download-title">Stay up to date on diabetes and brain health</h2>
+    <p id="free-guide-download-description">Would you like occasional emails with new free guides, practical diabetes information, research updates, and wellness tools from Mindful Diabetes?</p>
+    <form
+      class="newsletter-form newsletter-form--download-prompt"
+      action="{{ url_for('subscribe') }}"
+      method="post"
+      target="free-guide-download-signup-response"
+      data-track-event="newsletter_form_view"
+      data-track-impression="1"
+      data-track-category="newsletter"
+      data-track-label="Free guide download newsletter invitation"
+      data-track-id="free-guide-download-prompt"
+      data-track-position="free-guide-download-prompt"
+      data-signup-form-id="free-guide-download-prompt"
+    >
+      <input type="hidden" name="source" value="free-guide-download-prompt">
+      <input type="hidden" name="analytics_form_id" value="free-guide-download-prompt">
+      <input type="hidden" name="analytics_element_id" value="free-guide-download-prompt">
+      <input type="hidden" name="analytics_position" value="free-guide-download-prompt">
+      <input type="hidden" name="analytics_session_id" value="">
+      <input type="hidden" name="page_path" value="{{ request.path }}">
+      <div class="newsletter-form__bot-field" aria-hidden="true">
+        <label for="free-guide-download-prompt-website">Website</label>
+        <input id="free-guide-download-prompt-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <label class="screen-reader-text" for="free-guide-download-prompt-email">Email address</label>
+      <input id="free-guide-download-prompt-email" name="email" type="email" placeholder="Email address" required>
+      {% if turnstile_site_key %}
+        <div class="cf-turnstile newsletter-form__turnstile" data-sitekey="{{ turnstile_site_key }}" data-size="compact" data-appearance="execute" data-execution="execute" data-action="newsletter" data-callback="onNewsletterTurnstileSuccess" data-error-callback="onNewsletterTurnstileError" data-expired-callback="onNewsletterTurnstileExpired"></div>
+      {% endif %}
+      <button type="submit" data-track-event="resource_newsletter_click" data-track-category="resource" data-track-label="Subscribe from free guide download prompt" data-track-id="free-guide-download-prompt-subscribe" data-track-position="free-guide-download-prompt" data-button-location="free-guide-download-prompt">Subscribe &amp; download</button>
+    </form>
+    <button class="free-guide-download-modal__skip" type="button" data-free-guide-download-skip>No thanks — download free</button>
+    <p class="free-guide-download-modal__note">Your guide is free either way. You can unsubscribe at any time.</p>
+  </section>
+</div>
+<iframe class="free-guide-download-modal__response" name="free-guide-download-signup-response" title="Newsletter signup response"></iframe>

@@ -15,12 +15,6 @@
   }
 
   document.addEventListener("click", function (event) {
-    var downloadLink = event.target.closest("[data-resource-download]");
-    if (downloadLink) {
-      showConfirmation("Your free guide is opening. No signup is required.");
-      return;
-    }
-
     var copyButton = event.target.closest("[data-copy-resource-link]");
     if (!copyButton) {
       return;
