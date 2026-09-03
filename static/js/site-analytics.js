@@ -350,6 +350,13 @@
     if (!target) {
       return;
     }
+    // Free-guide downloads are confirmed by the download invitation, not by the
+    // first button press that only opens that invitation. The invitation adds
+    // data-free-guide-download-continue to the one link that starts the file
+    // download, so that is the only click counted as a download.
+    if (target.matches("a[data-resource-download]") && !target.hasAttribute("data-free-guide-download-continue")) {
+      return;
+    }
     var eventName = target.dataset.trackEvent;
     if (!eventName) {
       return;

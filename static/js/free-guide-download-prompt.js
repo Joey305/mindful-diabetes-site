@@ -58,6 +58,17 @@
     }
     var download = pendingDownload.cloneNode(true);
     download.setAttribute("data-free-guide-download-continue", "true");
+    // Some future guide links may point directly to a guide PDF without the
+    // usual analytics attributes. Give the actual download link the same
+    // event shape so it is still counted once, after the popup choice.
+    if (!download.dataset.trackEvent) {
+      download.dataset.trackEvent = "resource_pdf_download";
+      download.dataset.trackCategory = "resource";
+      download.dataset.trackLabel = pendingDownload.dataset.guideTitle || "Download free guide PDF";
+      download.dataset.trackId = "free-guide-download-prompt-" + (pendingDownload.dataset.guideSlug || "pdf");
+      download.dataset.trackPosition = "free-guide-download-prompt";
+      download.dataset.trackDestination = pendingDownload.href;
+    }
     download.style.display = "none";
     document.body.appendChild(download);
     download.click();

@@ -623,6 +623,15 @@ def test_free_guide_download_prompt_is_available_across_guide_locations():
         assert b"/static/js/free-guide-download-prompt.js" in response.data
 
 
+def test_free_guide_download_tracking_waits_for_popup_choice():
+    analytics_script = (app_module.BASE_DIR / "static" / "js" / "site-analytics.js").read_text(encoding="utf-8")
+    prompt_script = (app_module.BASE_DIR / "static" / "js" / "free-guide-download-prompt.js").read_text(encoding="utf-8")
+
+    assert 'target.matches("a[data-resource-download]") && !target.hasAttribute("data-free-guide-download-continue")' in analytics_script
+    assert 'download.setAttribute("data-free-guide-download-continue", "true")' in prompt_script
+    assert 'download.dataset.trackEvent = "resource_pdf_download"' in prompt_script
+
+
 def test_subscribe_without_mailchimp_config_shows_setup_message():
     app = create_app(
         {
