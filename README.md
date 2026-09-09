@@ -264,6 +264,8 @@ BREVO_API_KEY=
 DATABASE_URL=
 CMS_DATA_PATH=
 CMS_LOCAL_UPLOAD_ROOT=
+MEMOVELA_RESOURCE_WEBHOOK_URL=
+MEMOVELA_RESOURCE_WEBHOOK_SECRET=
 
 MAILCHIMP_API_KEY=
 MAILCHIMP_AUDIENCE_ID=
@@ -286,6 +288,8 @@ Environment variable reference:
 | `DATABASE_URL` | Optional | Stores admin login codes, activity events, and CMS content in Postgres when you want persistent Heroku data |
 | `CMS_DATA_PATH` | Optional | Local development JSON path for CMS content when no database is configured |
 | `CMS_LOCAL_UPLOAD_ROOT` | Optional | Local development upload root for admin image uploads |
+| `MEMOVELA_RESOURCE_WEBHOOK_URL` | Optional | Private Memovela endpoint that receives published CMS posts as Resources |
+| `MEMOVELA_RESOURCE_WEBHOOK_SECRET` | Optional | Shared secret used to authenticate those Resource events |
 | `MAILCHIMP_API_KEY` | Optional | Enables newsletter subscription when paired with an audience ID |
 | `MAILCHIMP_AUDIENCE_ID` | Optional | Mailchimp list/audience ID for subscribers |
 | `MAILCHIMP_SERVER_PREFIX` | Optional | Mailchimp data center prefix, such as `us21` |

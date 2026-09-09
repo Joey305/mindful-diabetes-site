@@ -201,6 +201,14 @@
               Featured image URL
               <input type="url" value="{{ item.featured_image }}" data-field="featured_image">
             </label>
+            {% if item.content_type == "post" %}
+              <h3>Memovela Resource</h3>
+              <label>
+                Resource Blurb
+                <textarea rows="5" data-setting="memovela_resource_blurb" maxlength="1200" placeholder="Write the short, welcoming note you want shared to Dr. J's Global Vela.">{{ item.settings_json.memovela_resource_blurb }}</textarea>
+              </label>
+              <p class="admin-muted">Required for every post. This exact blurb becomes the Memovela Resource; the article link and Resource tag are added automatically.</p>
+            {% endif %}
             <label>
               Template
               <select data-setting="template">
