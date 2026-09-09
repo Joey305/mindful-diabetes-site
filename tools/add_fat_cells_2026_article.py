@@ -226,6 +226,7 @@ def main() -> None:
             "hero_title": metadata[front_matter["hero_image"]]["title"],
             "hero_description": metadata[front_matter["hero_image"]]["description"],
             "memovela_resource_blurb": MEMOVELA_RESOURCE_BLURB,
+            "memovela_sync": True,
             "content_html": content_html,
         }
     )

@@ -89,6 +89,7 @@ def test_fat_cells_2026_article_renders_research_guardrails_and_memovela_blurb()
     assert b"It would be inappropriate to translate" in response.data
     assert b'class="article-wellness-tools"' in response.data
     assert b"Read about Memovela" in response.data
+    assert response.data.count(b">The short version</h2>") == 1
 
 
 def test_wordpress_home_slug_redirects_to_root():
@@ -2585,7 +2586,7 @@ def test_publishing_without_memovela_configuration_keeps_the_post_live(tmp_path)
     assert response.json["memovela_sync"]["status"] == "not_configured"
 
 
-def test_publishing_a_post_requires_an_authored_memovela_resource_blurb(tmp_path):
+def test_publishing_a_post_without_an_authored_memovela_resource_blurb_uses_a_fallback(tmp_path):
     app = create_app(
         {
             "TESTING": True,
@@ -2604,8 +2605,40 @@ def test_publishing_a_post_requires_an_authored_memovela_resource_blurb(tmp_path
         headers={"X-CSRF-Token": csrf_token},
     )
 
-    assert response.status_code == 400
-    assert response.json["message"] == "Write a Memovela Resource Blurb before publishing this post."
+    assert response.status_code == 200
+    assert response.json["memovela_sync"]["status"] == "not_configured"
+
+
+def test_legacy_article_sync_uses_its_preview_as_a_fallback_blurb_and_cli_command(tmp_path, monkeypatch):
+    captured = {}
+
+    def fake_urlopen(request, timeout):
+        captured["body"] = json.loads(request.data.decode("utf-8"))
+        return StubUrlopenResponse(status=201)
+
+    monkeypatch.setattr(app_module.memovela_sync, "urlopen", fake_urlopen)
+    app = create_app(
+        {
+            "TESTING": True,
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+            "SITE_BASE_URL": "https://mindfuldiabetes.example",
+            "MEMOVELA_RESOURCE_WEBHOOK_URL": "https://memovela.example/resources",
+            "MEMOVELA_RESOURCE_WEBHOOK_SECRET": "shared-test-secret",
+        }
+    )
+    post = dict(app.config["CONTENT"].posts_by_slug["fat-cells-store-release-energy-2026"])
+    post.pop("memovela_resource_blurb")
+
+    fallback_payload = app_module.memovela_sync.resource_payload(post, app.config["SITE_BASE_URL"])
+    assert fallback_payload["resource"]["blurb"] == post["excerpt_html"]
+    assert fallback_payload["resource"]["image_url"].startswith("https://mindfuldiabetes.example/static/uploads/")
+    assert fallback_payload["resource"]["external_id"] == "mindful-diabetes:legacy:fat-cells-store-release-energy-2026"
+
+    result = app.test_cli_runner().invoke(args=["sync-memovela-marked-articles"])
+
+    assert result.exit_code == 0
+    assert "fat-cells-store-release-energy-2026" in result.output
+    assert captured["body"]["resource"]["blurb"].startswith("Fat cells do far more than store energy")
 
 
 def test_admin_dashboard_links_to_content_studio(tmp_path):

@@ -15,21 +15,51 @@ RESOURCE_TAG = "resource"
 SOURCE_NAME = "Mindful Diabetes"
 
 
+def is_post(item):
+    """Support both CMS posts and the established site-content seed posts."""
+    return item.get("content_type") == "post" or item.get("type") == "post"
+
+
+def resource_blurb(item):
+    """Prefer an authored blurb, then use the article preview as a safe fallback."""
+    settings = item.get("settings_json") or {}
+    return cms.clean_plain_text(
+        settings.get("memovela_resource_blurb")
+        or item.get("memovela_resource_blurb")
+        or item.get("excerpt")
+        or item.get("excerpt_html")
+        or item.get("title")
+        or ""
+    )
+
+
+def absolute_url(value, site_base_url):
+    value = (value or "").strip()
+    if not value:
+        return ""
+    if value.startswith("/"):
+        return f"{site_base_url.rstrip('/')}{value}"
+    return value
+
+
 def resource_payload(item, site_base_url):
     """Return the versioned payload Memovela upserts into Dr. J's Global Vela."""
+    is_cms_post = item.get("content_type") == "post"
     source_url = f"{site_base_url.rstrip('/')}/{item['slug']}/"
-    blurb = cms.clean_plain_text((item.get("settings_json") or {}).get("memovela_resource_blurb") or "")
+    external_id = f"mindful-diabetes:{item['id']}" if is_cms_post else f"mindful-diabetes:legacy:{item['slug']}"
+    version = item.get("updated_at") if is_cms_post else item.get("modified") or item.get("date") or item["slug"]
+    image_url = item.get("featured_image") if is_cms_post else item.get("hero_image") or item.get("og_image")
     return {
         "event": "mindful_diabetes.resource.upserted",
         "version": 1,
-        "idempotency_key": f"mindful-diabetes:{item['id']}:{item['updated_at']}",
+        "idempotency_key": f"{external_id}:{version}",
         "resource": {
-            "external_id": f"mindful-diabetes:{item['id']}",
+            "external_id": external_id,
             "title": item["title"],
-            "blurb": blurb,
+            "blurb": resource_blurb(item),
             "url": source_url,
-            "image_url": item.get("featured_image") or "",
-            "published_at": item.get("published_at") or "",
+            "image_url": absolute_url(image_url, site_base_url),
+            "published_at": item.get("published_at") or item.get("date") or "",
             "author": item.get("author") or SOURCE_NAME,
             "tags": [RESOURCE_TAG, "mindful-diabetes"],
             "source": {"name": SOURCE_NAME, "url": site_base_url.rstrip("/")},
@@ -40,7 +70,7 @@ def resource_payload(item, site_base_url):
 
 def sync_published_post(config, item):
     """POST a signed resource event. Publishing remains successful if Memovela is unavailable."""
-    if item.get("content_type") != "post":
+    if not is_post(item):
         return {"status": "skipped", "message": "Only posts are shared with Memovela."}
 
     endpoint = (config.get("MEMOVELA_RESOURCE_WEBHOOK_URL") or "").strip()

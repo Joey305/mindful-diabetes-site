@@ -494,6 +494,7 @@ def create_app(test_config=None):
     if app.config["ANALYTICS_STORAGE_BACKEND"] == "local":
         analytics.analytics_store(app.config).health_check()
     register_analytics_commands(app)
+    register_memovela_commands(app, content)
 
     @app.context_processor
     def inject_site_data():
@@ -3789,6 +3790,29 @@ def register_analytics_commands(app):
         click.echo(f"Weekly analytics summary sent to {len(recipients)} recipient(s).")
 
 
+def register_memovela_commands(app, content):
+    @app.cli.command("sync-memovela-post")
+    @click.argument("slug")
+    def sync_memovela_post_command(slug):
+        """Send one published CMS or site-content article to Memovela."""
+        item = content.posts_by_slug.get(slug) or cms.get_published_content_by_slug(app.config, slug)
+        if not item:
+            raise click.ClickException(f"No published post was found for '{slug}'.")
+        result = memovela_sync.sync_published_post(app.config, item)
+        click.echo(result["message"])
+
+    @app.cli.command("sync-memovela-marked-articles")
+    def sync_memovela_marked_articles_command():
+        """Send site-content articles marked for automatic Memovela sharing."""
+        marked_posts = [item for item in content.latest_posts if item.get("memovela_sync")]
+        if not marked_posts:
+            click.echo("No site-content articles are marked for Memovela sharing.")
+            return
+        for item in marked_posts:
+            result = memovela_sync.sync_published_post(app.config, item)
+            click.echo(f"{item['slug']}: {result['message']}")
+
+
 def title_for_request(content, endpoint, view_args):
     if endpoint == "home":
         return "Homepage"
@@ -4127,7 +4151,7 @@ def clean_article_html(
     html = rewrite_article_subscribe_links(html)
     # The 2026 fasting feature uses semantic figure markup from its approved
     # editorial package; its first inline figure is not a legacy hero to strip.
-    if post_slug != "intermittent-fasting-diabetes-2026":
+    if post_slug not in {"intermittent-fasting-diabetes-2026", "fat-cells-store-release-energy-2026"}:
         html = remove_article_media(html)
     html = remove_duplicate_intro_heading(html, post_title, article_section_title)
     if post_slug == "memovela":

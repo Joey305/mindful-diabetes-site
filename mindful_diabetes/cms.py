@@ -493,8 +493,6 @@ def validate_publish_requirements(title, slug, blocks, content_type="page", sett
         raise CmsValidationError("Add a slug before publishing.")
     validate_heading_balance(blocks)
     validate_images_for_publish(blocks)
-    if content_type == "post" and not (settings or {}).get("memovela_resource_blurb"):
-        raise CmsValidationError("Write a Memovela Resource Blurb before publishing this post.")
 
 
 def validate_heading_balance(blocks):
