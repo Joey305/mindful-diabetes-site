@@ -23,14 +23,13 @@ def is_post(item):
 def resource_blurb(item):
     """Prefer an authored blurb, then use the article preview as a safe fallback."""
     settings = item.get("settings_json") or {}
-    return cms.clean_plain_text(
-        settings.get("memovela_resource_blurb")
-        or item.get("memovela_resource_blurb")
-        or item.get("excerpt")
-        or item.get("excerpt_html")
-        or item.get("title")
-        or ""
+    authored_blurb = cms.clean_resource_blurb(
+        settings.get("memovela_resource_blurb") or item.get("memovela_resource_blurb") or ""
     )
+    if authored_blurb:
+        return authored_blurb
+    preview = cms.clean_resource_blurb(item.get("excerpt") or item.get("excerpt_html") or item.get("title") or "")
+    return f"What does this research reveal about how the body works?\n\n{preview}".strip()
 
 
 def absolute_url(value, site_base_url):
@@ -47,7 +46,9 @@ def resource_payload(item, site_base_url):
     is_cms_post = item.get("content_type") == "post"
     source_url = f"{site_base_url.rstrip('/')}/{item['slug']}/"
     external_id = f"mindful-diabetes:{item['id']}" if is_cms_post else f"mindful-diabetes:legacy:{item['slug']}"
-    version = item.get("updated_at") if is_cms_post else item.get("modified") or item.get("date") or item["slug"]
+    version = item.get("updated_at") if is_cms_post else hashlib.sha256(
+        f"{item['title']}|{resource_blurb(item)}|{source_url}|{item.get('modified') or item.get('date') or ''}".encode("utf-8")
+    ).hexdigest()[:16]
     image_url = item.get("featured_image") if is_cms_post else item.get("hero_image") or item.get("og_image")
     return {
         "event": "mindful_diabetes.resource.upserted",

@@ -2,7 +2,7 @@
 
 When a CMS **post** is published or updated, Mindful Diabetes sends a signed `POST` request to the endpoint in `MEMOVELA_RESOURCE_WEBHOOK_URL`. The release process also sends established site articles that are marked for sharing. The receiving endpoint should upsert a memo into **Dr. J's Global Vela**, with the `resource` tag. Pages, drafts, and archived content are never sent.
 
-The editor can supply a **Memovela Resource Blurb**. When it is blank, Mindful Diabetes automatically uses the article preview summary instead, so publishing never depends on manually writing a second description.
+The editor can supply a **Memovela Resource Blurb**. When it is blank, Mindful Diabetes automatically uses a short curiosity question followed by the article preview summary, so publishing never depends on manually writing a second description.
 
 For a one-time resend, run `flask --app app.py sync-memovela-post <article-slug>`. The release process runs `sync-memovela-marked-articles` automatically on each deploy.
 

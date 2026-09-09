@@ -953,7 +953,7 @@ def validate_settings(settings, content_type):
         "estimated_reading_time": max(0, to_int(settings.get("estimated_reading_time"), 0)),
         "sidebar": bool(settings.get("sidebar", True)),
         "related_posts": bool(settings.get("related_posts", True)),
-        "memovela_resource_blurb": clean_plain_text(settings.get("memovela_resource_blurb") or "")[:1200],
+        "memovela_resource_blurb": clean_resource_blurb(settings.get("memovela_resource_blurb") or "")[:1200],
     }
     if content_type == "page":
         clean["category"] = ""
@@ -1004,6 +1004,12 @@ def set_link_attributes(attrs, new=False):
 
 def clean_plain_text(value):
     return html.unescape(re.sub(r"\s+", " ", bleach.clean(str(value or ""), tags=[], strip=True))).strip()
+
+
+def clean_resource_blurb(value):
+    """Preserve intentional paragraph breaks in externally shared article blurbs."""
+    paragraphs = re.split(r"(?:\r?\n\s*){2,}", str(value or ""))
+    return "\n\n".join(clean_plain_text(paragraph) for paragraph in paragraphs if clean_plain_text(paragraph)).strip()
 
 
 def clean_identifier(value):

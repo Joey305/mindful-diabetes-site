@@ -19,9 +19,10 @@ TITLE = "How Fat Cells Store and Release Energy: New 2026 Research on Insulin, L
 DATE = "2026-09-09 09:00:00"
 UPLOAD_DIR = Path("static/uploads/2026/09")
 MEMOVELA_RESOURCE_BLURB = (
-    "Fat cells do far more than store energy. This research guide explains how insulin, exercise "
-    "signals, leptin, and brain glucose sensing work together—and why steady, repeatable habits "
-    "matter more than chasing a single metabolic switch."
+    "Why can the same fat cell store energy after a meal, release it during exercise, and signal the brain?\n\n"
+    "New research is revealing that fat cells are not passive storage bags. Insulin, exercise signals, "
+    "leptin, and brain glucose sensing form a shifting system—and the latest studies help explain why "
+    "metabolic health depends on flexibility, not a single switch."
 )
 EXCERPT = (
     "Fat cells are not passive storage bags. New 2026 studies reveal how insulin directs lipid storage, "

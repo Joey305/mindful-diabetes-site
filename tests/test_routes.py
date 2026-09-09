@@ -81,7 +81,7 @@ def test_fat_cells_2026_article_renders_research_guardrails_and_memovela_blurb()
     assert response.status_code == 200
     assert post["date"] == "2026-09-09 09:00:00"
     assert post["categories"] == ["Research & Updates"]
-    assert post["memovela_resource_blurb"].startswith("Fat cells do far more than store energy")
+    assert post["memovela_resource_blurb"].startswith("Why can the same fat cell store energy")
     assert b"/static/uploads/2026/09/fat-cells-store-release-energy-2026-hero.png" in response.data
     assert response.data.count(b'data-image-slot=') == 5
     assert b"male mice" in response.data
@@ -2630,7 +2630,9 @@ def test_legacy_article_sync_uses_its_preview_as_a_fallback_blurb_and_cli_comman
     post.pop("memovela_resource_blurb")
 
     fallback_payload = app_module.memovela_sync.resource_payload(post, app.config["SITE_BASE_URL"])
-    assert fallback_payload["resource"]["blurb"] == post["excerpt_html"]
+    assert fallback_payload["resource"]["blurb"] == (
+        "What does this research reveal about how the body works?\n\n" + post["excerpt_html"]
+    )
     assert fallback_payload["resource"]["image_url"].startswith("https://mindfuldiabetes.example/static/uploads/")
     assert fallback_payload["resource"]["external_id"] == "mindful-diabetes:legacy:fat-cells-store-release-energy-2026"
 
@@ -2638,7 +2640,7 @@ def test_legacy_article_sync_uses_its_preview_as_a_fallback_blurb_and_cli_comman
 
     assert result.exit_code == 0
     assert "fat-cells-store-release-energy-2026" in result.output
-    assert captured["body"]["resource"]["blurb"].startswith("Fat cells do far more than store energy")
+    assert captured["body"]["resource"]["blurb"].startswith("Why can the same fat cell store energy")
 
 
 def test_admin_dashboard_links_to_content_studio(tmp_path):
