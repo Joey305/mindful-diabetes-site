@@ -465,7 +465,7 @@ def validate_content_payload(config, payload, existing=None):
     seo = validate_seo(payload.get("seo_json") or {})
     featured_image = clean_url(payload.get("featured_image") or "")
     if status == "published":
-        validate_publish_requirements(title, slug, blocks)
+        validate_publish_requirements(title, slug, blocks, content_type=content_type, settings=settings)
     return {
         "id": content_id,
         "content_type": content_type,
@@ -486,13 +486,15 @@ def validate_content_payload(config, payload, existing=None):
     }
 
 
-def validate_publish_requirements(title, slug, blocks):
+def validate_publish_requirements(title, slug, blocks, content_type="page", settings=None):
     if not title or title == "Untitled":
         raise CmsValidationError("Add a title before publishing.")
     if not slug:
         raise CmsValidationError("Add a slug before publishing.")
     validate_heading_balance(blocks)
     validate_images_for_publish(blocks)
+    if content_type == "post" and not (settings or {}).get("memovela_resource_blurb"):
+        raise CmsValidationError("Write a Memovela Resource Blurb before publishing this post.")
 
 
 def validate_heading_balance(blocks):
@@ -953,10 +955,12 @@ def validate_settings(settings, content_type):
         "estimated_reading_time": max(0, to_int(settings.get("estimated_reading_time"), 0)),
         "sidebar": bool(settings.get("sidebar", True)),
         "related_posts": bool(settings.get("related_posts", True)),
+        "memovela_resource_blurb": clean_plain_text(settings.get("memovela_resource_blurb") or "")[:1200],
     }
     if content_type == "page":
         clean["category"] = ""
         clean["tags"] = []
+        clean["memovela_resource_blurb"] = ""
     return clean
 
 

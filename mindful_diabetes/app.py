@@ -24,6 +24,7 @@ from markupsafe import Markup, escape
 from mindful_diabetes import cms
 from mindful_diabetes import analytics
 from mindful_diabetes import memovela as memovela_links
+from mindful_diabetes import memovela_sync
 from mindful_diabetes import resources as resource_library
 
 try:
@@ -458,6 +459,9 @@ def create_app(test_config=None):
         GOOGLE_ADS_CONVERSION_ACTIONS_JSON=os.getenv("GOOGLE_ADS_CONVERSION_ACTIONS_JSON", "{}"),
         GOOGLE_ADS_ENABLE_LOCAL_TESTING=os.getenv("GOOGLE_ADS_ENABLE_LOCAL_TESTING", ""),
         SITE_BASE_URL=os.getenv("SITE_BASE_URL", "https://mindfuldiabetes.org"),
+        MEMOVELA_RESOURCE_WEBHOOK_URL=os.getenv("MEMOVELA_RESOURCE_WEBHOOK_URL", ""),
+        MEMOVELA_RESOURCE_WEBHOOK_SECRET=os.getenv("MEMOVELA_RESOURCE_WEBHOOK_SECRET", ""),
+        MEMOVELA_RESOURCE_WEBHOOK_TIMEOUT_SECONDS=os.getenv("MEMOVELA_RESOURCE_WEBHOOK_TIMEOUT_SECONDS", "8"),
         PAYPAL_CLIENT_ID=os.getenv("PAYPAL_CLIENT_ID", ""),
         PAYPAL_CLIENT_SECRET=os.getenv("PAYPAL_CLIENT_SECRET", ""),
         PAYPAL_WEBHOOK_ID=os.getenv("PAYPAL_WEBHOOK_ID", ""),
@@ -1167,12 +1171,14 @@ def create_app(test_config=None):
             saved = cms.save_content(app.config, merged, actor=session.get("admin_email", ""), make_revision=True)
         except cms.CmsValidationError as error:
             return jsonify({"ok": False, "message": str(error)}), 400
+        memovela_result = memovela_sync.sync_published_post(app.config, saved)
         return jsonify(
             {
                 "ok": True,
-                "message": "Published",
+                "message": memovela_result["message"],
                 "content": cms_public_payload(saved),
                 "view_url": cms_view_url(saved),
+                "memovela_sync": memovela_result,
             }
         )
 

@@ -602,6 +602,8 @@
     root.querySelector("[data-field='excerpt']").value = state.excerpt;
     root.querySelector("[data-field='featured_image']").value = state.featured_image;
     root.querySelector("[data-setting='template']").value = state.settings.template || "standard";
+    const memovelaBlurb = root.querySelector("[data-setting='memovela_resource_blurb']");
+    if (memovelaBlurb) memovelaBlurb.value = state.settings.memovela_resource_blurb || "";
     Object.entries(state.seo || {}).forEach(([key, value]) => {
       const field = root.querySelector(`[data-seo='${key}']`);
       if (!field) return;
@@ -680,7 +682,7 @@
       state.status = "published";
       previewLink.href = result.view_url || root.dataset.previewUrl;
       syncFields();
-      markSaved("Published");
+      markSaved(result.message || "Published");
     } catch (error) {
       saveState.textContent = error.message;
     }

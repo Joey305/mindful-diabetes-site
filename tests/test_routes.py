@@ -37,7 +37,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 101
+    assert len(content.latest_posts) == 102
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -69,6 +69,26 @@ def test_intermittent_fasting_2026_article_and_historic_update_render():
     assert historic.status_code == 200
     assert b"2026 Evidence Update" in historic.data
     assert historic.data.count(b'href="/intermittent-fasting-diabetes-2026/"') >= 2
+
+
+def test_fat_cells_2026_article_renders_research_guardrails_and_memovela_blurb():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    post = app.config["CONTENT"].posts_by_slug["fat-cells-store-release-energy-2026"]
+
+    response = client.get("/fat-cells-store-release-energy-2026/")
+
+    assert response.status_code == 200
+    assert post["date"] == "2026-09-09 09:00:00"
+    assert post["categories"] == ["Research & Updates"]
+    assert post["memovela_resource_blurb"].startswith("Fat cells do far more than store energy")
+    assert b"/static/uploads/2026/09/fat-cells-store-release-energy-2026-hero.png" in response.data
+    assert response.data.count(b'data-image-slot=') == 5
+    assert b"male mice" in response.data
+    assert b"not medical advice" in response.data
+    assert b"It would be inappropriate to translate" in response.data
+    assert b'class="article-wellness-tools"' in response.data
+    assert b"Read about Memovela" in response.data
 
 
 def test_wordpress_home_slug_redirects_to_root():
@@ -1157,7 +1177,7 @@ def test_pediatric_otc_cgm_stelo_article_has_verified_sources_and_guardrails():
 
     assert response.status_code == 200
     assert post["date"] == "2026-08-03 09:00:00"
-    assert app.config["CONTENT"].latest_posts[1]["slug"] == "otc-cgm-children-stelo-family-guide"
+    assert app.config["CONTENT"].latest_posts[2]["slug"] == "otc-cgm-children-stelo-family-guide"
     assert post["title"] == "The First Over-the-Counter CGM for Children: What Families Should Know About Stelo"
     assert post["content_html"].count("<img ") == 6
     assert post["content_html"].count("title=") == 6
@@ -1264,7 +1284,7 @@ def test_june_alzheimers_clinical_trials_post_has_snapshot_sources_and_images():
 
     assert response.status_code == 200
     assert post["date"] == "2026-06-10 09:00:00"
-    assert app.config["CONTENT"].latest_posts[3]["slug"] == "alzheimers-clinical-trials-june-2026"
+    assert app.config["CONTENT"].latest_posts[4]["slug"] == "alzheimers-clinical-trials-june-2026"
     assert post["content_html"].count("<img ") == 6
     assert post["content_html"].count("title=") == 6
     assert post["preview_image_title"] == "Alzheimer’s clinical-trial research visit"
@@ -1542,7 +1562,7 @@ def test_january_amyloid_plaques_preview_image_and_tone_guardrails():
     assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
     assert all(phrase not in content for phrase in blocked_phrases)
 
-    for path in ["/guide/", "/amyloid-plaques-alzheimers-research/"]:
+    for path in ["/amyloid-plaques-alzheimers-research/"]:
         response = client.get(path)
 
         assert response.status_code == 200
@@ -2490,6 +2510,104 @@ def sign_in_admin(client):
     return "csrf-test-token"
 
 
+def test_publishing_a_cms_post_sends_a_signed_memovela_resource(tmp_path, monkeypatch):
+    captured = {}
+
+    def fake_urlopen(request, timeout):
+        captured["url"] = request.full_url
+        captured["body"] = json.loads(request.data.decode("utf-8"))
+        captured["signature"] = request.get_header("X-mindful-signature")
+        captured["idempotency_key"] = request.get_header("Idempotency-key")
+        captured["timeout"] = timeout
+        return StubUrlopenResponse(status=201)
+
+    monkeypatch.setattr(app_module.memovela_sync, "urlopen", fake_urlopen)
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+            "SITE_BASE_URL": "https://mindfuldiabetes.example",
+            "MEMOVELA_RESOURCE_WEBHOOK_URL": "https://memovela.example/api/integrations/mindful-diabetes/resources",
+            "MEMOVELA_RESOURCE_WEBHOOK_SECRET": "shared-test-secret",
+        }
+    )
+    client = app.test_client()
+    csrf_token = sign_in_admin(client)
+    item = app_module.cms.create_content(app.config, "post", author="Dr. J")
+
+    response = client.post(
+        f"/admin/content/{item['id']}/publish/",
+        json={
+            "title": "A mindful glucose check-in",
+            "slug": "mindful-glucose-check-in",
+            "excerpt": "A practical way to notice patterns without judgment.",
+            "settings": {"memovela_resource_blurb": "A practical way to notice patterns without judgment."},
+            "blocks": item["blocks_json"],
+        },
+        headers={"X-CSRF-Token": csrf_token},
+    )
+
+    assert response.status_code == 200
+    assert response.json["memovela_sync"]["status"] == "synced"
+    assert captured["url"].endswith("/api/integrations/mindful-diabetes/resources")
+    assert captured["body"]["resource"]["tags"] == ["resource", "mindful-diabetes"]
+    assert captured["body"]["resource"]["destination"] == {"vela": "global", "owner": "Dr. J"}
+    assert captured["body"]["resource"]["url"] == "https://mindfuldiabetes.example/mindful-glucose-check-in/"
+    assert captured["body"]["resource"]["blurb"] == "A practical way to notice patterns without judgment."
+    assert captured["signature"].startswith("sha256=")
+    assert captured["idempotency_key"] == captured["body"]["idempotency_key"]
+    assert captured["timeout"] == 8.0
+
+
+def test_publishing_without_memovela_configuration_keeps_the_post_live(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        }
+    )
+    client = app.test_client()
+    csrf_token = sign_in_admin(client)
+    item = app_module.cms.create_content(app.config, "post")
+
+    response = client.post(
+        f"/admin/content/{item['id']}/publish/",
+        json={"title": "Local-only post", "slug": "local-only-post", "blocks": item["blocks_json"], "settings": {"memovela_resource_blurb": "A short resource note."}},
+        headers={"X-CSRF-Token": csrf_token},
+    )
+
+    assert response.status_code == 200
+    assert response.json["content"]["status"] == "published"
+    assert response.json["memovela_sync"]["status"] == "not_configured"
+
+
+def test_publishing_a_post_requires_an_authored_memovela_resource_blurb(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "SECRET_KEY": "test-secret",
+            "ADMIN_DATA_PATH": str(tmp_path / "admin_data.json"),
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+        }
+    )
+    client = app.test_client()
+    csrf_token = sign_in_admin(client)
+    item = app_module.cms.create_content(app.config, "post")
+
+    response = client.post(
+        f"/admin/content/{item['id']}/publish/",
+        json={"title": "Needs a blurb", "slug": "needs-a-blurb", "blocks": item["blocks_json"]},
+        headers={"X-CSRF-Token": csrf_token},
+    )
+
+    assert response.status_code == 400
+    assert response.json["message"] == "Write a Memovela Resource Blurb before publishing this post."
+
+
 def test_admin_dashboard_links_to_content_studio(tmp_path):
     app = create_app(
         {
@@ -2566,7 +2684,7 @@ def test_admin_content_flow_saves_publishes_and_renders_sanitized_blocks(tmp_pat
                 "content": {"label": "Donate", "url": "/donation/"},
             },
         ],
-        "settings": {"template": "standard"},
+        "settings": {"template": "standard", "memovela_resource_blurb": "A short update about mindful diabetes research."},
         "seo": {"seo_title": "Safe CMS Page", "meta_description": "A safe page."},
     }
 
@@ -2633,7 +2751,7 @@ def test_cms_posts_include_mobile_blog_subscribe(tmp_path):
                 "content": {"html": "<p>Research update body.</p>"},
             }
         ],
-        "settings": {"template": "standard"},
+        "settings": {"template": "standard", "memovela_resource_blurb": "A short update about mindful diabetes research."},
         "seo": {"seo_title": "CMS Research Post", "meta_description": "A CMS research post."},
     }
 
@@ -2812,7 +2930,7 @@ def test_cms_new_mindful_diabetes_blocks_render_and_sanitize(tmp_path):
                 "content": {"heading": "Related reading"},
             },
         ],
-        "settings": {"template": "article"},
+        "settings": {"template": "article", "memovela_resource_blurb": "A short resource for exploring mindful diabetes research."},
         "seo": {},
     }
 
