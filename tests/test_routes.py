@@ -83,6 +83,7 @@ def test_fat_cells_2026_article_renders_research_guardrails_and_memovela_blurb()
     assert post["categories"] == ["Research & Updates"]
     assert post["memovela_resource_blurb"].startswith("Why can the same fat cell store energy")
     assert b"/static/uploads/2026/09/fat-cells-store-release-energy-2026-hero.png" in response.data
+    assert response.data.count(b'class="article-post-hero__media"') == 1
     assert response.data.count(b'data-image-slot=') == 5
     assert b"male mice" in response.data
     assert b"not medical advice" in response.data
@@ -90,6 +91,17 @@ def test_fat_cells_2026_article_renders_research_guardrails_and_memovela_blurb()
     assert b'class="article-wellness-tools"' in response.data
     assert b"Read about Memovela" in response.data
     assert response.data.count(b">The short version</h2>") == 1
+
+
+def test_every_published_post_renders_at_most_one_top_image():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    for post in app.config["CONTENT"].latest_posts:
+        response = client.get(post["canonical_path"])
+
+        assert response.status_code == 200, post["canonical_path"]
+        assert response.data.count(b'class="article-post-hero__media"') <= 1, post["slug"]
 
 
 def test_wordpress_home_slug_redirects_to_root():
