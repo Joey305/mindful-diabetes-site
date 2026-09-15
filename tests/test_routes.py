@@ -37,7 +37,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 102
+    assert len(content.latest_posts) == 103
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -91,6 +91,58 @@ def test_fat_cells_2026_article_renders_research_guardrails_and_memovela_blurb()
     assert b'class="article-wellness-tools"' in response.data
     assert b"Read about Memovela" in response.data
     assert response.data.count(b">The short version</h2>") == 1
+
+
+def test_metabolic_syndrome_midlife_brain_article_uses_existing_research_and_memovela_flow(tmp_path, monkeypatch):
+    sent_payloads = []
+
+    def fake_urlopen(request, timeout):
+        sent_payloads.append(json.loads(request.data.decode("utf-8")))
+        return StubUrlopenResponse(status=200)
+
+    monkeypatch.setattr(app_module.memovela_sync, "urlopen", fake_urlopen)
+    app = create_app(
+        {
+            "TESTING": True,
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+            "SITE_BASE_URL": "https://mindfuldiabetes.example",
+            "MEMOVELA_RESOURCE_WEBHOOK_URL": "https://memovela.example/resources",
+            "MEMOVELA_RESOURCE_WEBHOOK_SECRET": "shared-test-secret",
+        }
+    )
+    client = app.test_client()
+    post = app.config["CONTENT"].posts_by_slug["metabolic-syndrome-midlife-brain-2026"]
+
+    response = client.get("/metabolic-syndrome-midlife-brain-2026/")
+    sitemap = client.get("/sitemap.xml")
+    search = client.get("/search/?q=metabolic%20syndrome%20midlife")
+
+    assert response.status_code == 200
+    assert post["categories"] == ["Research & Updates"]
+    assert post["memovela_sync"] is True
+    assert response.data.count(b'class="article-post-hero__media"') == 1
+    assert response.data.count(b'data-image-slot=') == 6
+    assert response.data.count(b">Metabolic syndrome is a cluster") == 1
+    assert response.data.count(b'loading="lazy"') >= 6
+    assert b'fetchpriority="high"' in response.data
+    assert b'"datePublished": "2026-09-14"' in response.data
+    assert b"cognitively unimpaired" in response.data
+    assert b"not a direct recording of neurons firing" in response.data
+    assert "HR 1.43, 95% CI 1.15–1.77".encode() in response.data
+    assert b'href="/fats-guide/"' in response.data
+    assert b"/metabolic-syndrome-midlife-brain-2026/" in sitemap.data
+    assert b"Metabolic Syndrome Changing Your Brain" in search.data
+
+    runner = app.test_cli_runner()
+    assert runner.invoke(args=["sync-memovela-marked-articles"]).exit_code == 0
+    assert runner.invoke(args=["sync-memovela-marked-articles"]).exit_code == 0
+    new_payloads = [item for item in sent_payloads if item["resource"]["external_id"].endswith(post["slug"])]
+    assert len(new_payloads) == 2
+    assert new_payloads[0]["resource"]["url"] == "https://mindfuldiabetes.example/metabolic-syndrome-midlife-brain-2026/"
+    assert new_payloads[0]["resource"]["blurb"] == post["memovela_resource_blurb"]
+    assert "\n\n" in new_payloads[0]["resource"]["blurb"]
+    assert new_payloads[0]["resource"]["external_id"] == new_payloads[1]["resource"]["external_id"]
+    assert new_payloads[0]["idempotency_key"] == new_payloads[1]["idempotency_key"]
 
 
 def test_every_published_post_renders_at_most_one_top_image():
@@ -1190,7 +1242,7 @@ def test_pediatric_otc_cgm_stelo_article_has_verified_sources_and_guardrails():
 
     assert response.status_code == 200
     assert post["date"] == "2026-08-03 09:00:00"
-    assert app.config["CONTENT"].latest_posts[2]["slug"] == "otc-cgm-children-stelo-family-guide"
+    assert app.config["CONTENT"].latest_posts[3]["slug"] == "otc-cgm-children-stelo-family-guide"
     assert post["title"] == "The First Over-the-Counter CGM for Children: What Families Should Know About Stelo"
     assert post["content_html"].count("<img ") == 6
     assert post["content_html"].count("title=") == 6
@@ -1297,7 +1349,7 @@ def test_june_alzheimers_clinical_trials_post_has_snapshot_sources_and_images():
 
     assert response.status_code == 200
     assert post["date"] == "2026-06-10 09:00:00"
-    assert app.config["CONTENT"].latest_posts[4]["slug"] == "alzheimers-clinical-trials-june-2026"
+    assert app.config["CONTENT"].latest_posts[5]["slug"] == "alzheimers-clinical-trials-june-2026"
     assert post["content_html"].count("<img ") == 6
     assert post["content_html"].count("title=") == 6
     assert post["preview_image_title"] == "Alzheimer’s clinical-trial research visit"
@@ -1473,7 +1525,7 @@ def test_february_ipsc_alzheimers_preview_image_includes_seo_metadata():
     assert post["preview_image_title"] == "iPSC models help researchers study Alzheimer’s disease in human cells"
     assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
 
-    for path in ["/guide/", "/ipsc-cells-alzheimers-disease-models/"]:
+    for path in ["/guide/?page=2", "/ipsc-cells-alzheimers-disease-models/"]:
         response = client.get(path)
 
         assert response.status_code == 200
