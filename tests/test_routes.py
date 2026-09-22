@@ -1,6 +1,7 @@
 import json
 from importlib import import_module
 from pathlib import Path
+from xml.etree import ElementTree
 
 from mindful_diabetes import create_app
 
@@ -42,6 +43,61 @@ def test_published_wordpress_pages_and_posts_resolve():
     for item in expected_items:
         response = client.get(item["canonical_path"])
         assert response.status_code == 200, item["canonical_path"]
+
+
+def test_rss_feed_uses_public_article_sources_and_valid_xml(tmp_path):
+    app = create_app(
+        {
+            "TESTING": True,
+            "CMS_DATA_PATH": str(tmp_path / "cms_content.json"),
+            "SITE_BASE_URL": "https://mindfuldiabetes.org",
+        }
+    )
+    published = app_module.cms.create_content(app.config, "post")
+    published.update(
+        {
+            "title": "CMS RSS Article",
+            "slug": "cms-rss-article",
+            "status": "published",
+            "excerpt": "The canonical CMS blurb for RSS readers.",
+            "featured_image": "/static/uploads/cms-rss-article.png",
+            "published_at": "2026-09-20T12:00:00+00:00",
+            "settings_json": {"category": "Research", "tags": ["CMS", "Evidence"]},
+        }
+    )
+    app_module.cms.save_content(app.config, published)
+
+    draft = app_module.cms.create_content(app.config, "post")
+    draft.update({"title": "Private CMS Draft", "slug": "private-cms-draft", "excerpt": "Do not publish."})
+    app_module.cms.save_content(app.config, draft)
+
+    future = app_module.cms.create_content(app.config, "post")
+    future.update(
+        {
+            "title": "Future CMS Article",
+            "slug": "future-cms-article",
+            "status": "published",
+            "published_at": "2099-01-01T00:00:00+00:00",
+        }
+    )
+    app_module.cms.save_content(app.config, future)
+
+    response = app.test_client().get("/feed.xml")
+    root = ElementTree.fromstring(response.data)
+    items = root.findall("./channel/item")
+    cms_item = next(item for item in items if item.findtext("title") == "CMS RSS Article")
+
+    assert response.status_code == 200
+    assert response.headers["Content-Type"] == "application/rss+xml; charset=utf-8"
+    assert len(items) == 30
+    assert cms_item.findtext("link") == "https://mindfuldiabetes.org/cms-rss-article/"
+    assert cms_item.findtext("guid").startswith("mindful-diabetes:cms:")
+    assert cms_item.find("guid").attrib["isPermaLink"] == "false"
+    assert cms_item.findtext("description") == "The canonical CMS blurb for RSS readers."
+    assert cms_item.find("{http://search.yahoo.com/mrss/}content").attrib["url"] == "https://mindfuldiabetes.org/static/uploads/cms-rss-article.png"
+    assert {category.text for category in cms_item.findall("category")} == {"Research", "CMS", "Evidence"}
+    assert b"Private CMS Draft" not in response.data
+    assert b"Future CMS Article" not in response.data
 
 
 def test_intermittent_fasting_2026_article_and_historic_update_render():

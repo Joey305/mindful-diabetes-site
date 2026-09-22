@@ -11,14 +11,16 @@ import re
 import secrets
 import click
 from datetime import datetime, timedelta, timezone
+from email.utils import format_datetime
 from functools import wraps
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import parse_qs, quote, urlencode, urlparse
+from urllib.parse import parse_qs, quote, urlencode, urljoin, urlparse
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+from xml.sax.saxutils import escape as xml_escape
 
-from flask import Flask, abort, jsonify, redirect, render_template, request, session, url_for
+from flask import Flask, Response, abort, jsonify, redirect, render_template, request, session, url_for
 from markupsafe import Markup, escape
 
 from mindful_diabetes import cms
@@ -1251,6 +1253,15 @@ def create_app(test_config=None):
             "Content-Type": "application/xml"
         }
 
+    @app.get("/feed.xml")
+    def rss_feed():
+        """Expose published articles from the same sources as the public site."""
+        feed_items = rss_feed_items(content, app.config)
+        return Response(
+            build_rss_feed(feed_items, app.config),
+            content_type="application/rss+xml; charset=utf-8",
+        )
+
     @app.get("/<slug>/")
     def page_detail(slug):
         if slug == "mindful":
@@ -1323,6 +1334,161 @@ class ContentIndex:
         self.nav_pages.insert(2, free_guides_nav_page)
         self.nav_pages.insert(3, health_tools_nav_page)
         self.nav_pages.insert(4, research_nav_page)
+
+
+def rss_feed_items(content, config, now=None):
+    """Return public posts from both article stores in newest-first order.
+
+    The migrated content index powers the existing article archive, while CMS
+    posts are served directly from the CMS store.  Keeping this adapter here
+    means publishing through either established workflow updates the feed
+    without a separately maintained feed registry.
+    """
+    now = now or datetime.now(timezone.utc)
+    site_url = (config.get("SITE_BASE_URL") or PUBLIC_SITE_URL).rstrip("/")
+    items = []
+    seen_urls = set()
+
+    for post in content.latest_posts:
+        published_at = parse_feed_date(post.get("date"))
+        if not published_at or published_at > now:
+            continue
+        item = rss_item_from_migrated_post(post, site_url, published_at)
+        if item["url"] not in seen_urls:
+            items.append(item)
+            seen_urls.add(item["url"])
+
+    for post in cms.list_content(config):
+        if post.get("content_type") != "post" or post.get("status") != "published":
+            continue
+        published_at = cms.parse_timestamp(post.get("published_at"))
+        if not published_at or published_at > now:
+            continue
+        item = rss_item_from_cms_post(post, site_url, published_at)
+        # A migrated post wins on a collision because its route is resolved
+        # before the CMS fallback route used by the public site.
+        if item["url"] not in seen_urls:
+            items.append(item)
+            seen_urls.add(item["url"])
+
+    return sorted(items, key=lambda item: item["published_at"], reverse=True)[:30]
+
+
+def rss_item_from_migrated_post(post, site_url, published_at):
+    canonical_url = absolute_feed_url(post.get("canonical_url") or post.get("canonical_path"), site_url)
+    description = (
+        post.get("blurb")
+        or post.get("excerpt")
+        or post.get("excerpt_text")
+        or post.get("description")
+        or post.get("meta_description")
+        or post.get("title", "")
+    )
+    image = post.get("hero_image") or post.get("og_image") or post.get("preview_image_url")
+    return {
+        "title": post.get("title", ""),
+        "url": canonical_url,
+        "guid": canonical_url,
+        "guid_is_permalink": True,
+        "published_at": published_at,
+        "description": description,
+        "image": absolute_feed_url(rewrite_upload_urls(image), site_url) if image else "",
+        "categories": post.get("categories") or post.get("tags") or [],
+    }
+
+
+def rss_item_from_cms_post(post, site_url, published_at):
+    settings = post.get("settings_json") or {}
+    seo = post.get("seo_json") or {}
+    canonical_url = absolute_feed_url(
+        seo.get("canonical_url") or f"/{post.get('slug', '').strip('/')}/", site_url
+    )
+    description = (
+        post.get("blurb")
+        or post.get("excerpt")
+        or seo.get("meta_description")
+        or seo.get("social_description")
+        or post.get("title", "")
+    )
+    image = post.get("featured_image") or seo.get("social_image")
+    categories = [settings.get("category")] if settings.get("category") else []
+    categories.extend(settings.get("tags") or [])
+    return {
+        "title": post.get("title", ""),
+        "url": canonical_url,
+        # CMS slugs are editable after publication, so the immutable CMS id
+        # prevents a normal title or permalink edit from looking new in RSS.
+        "guid": f"mindful-diabetes:cms:{post.get('id', '')}",
+        "guid_is_permalink": False,
+        "published_at": published_at,
+        "description": description,
+        "image": absolute_feed_url(image, site_url) if image else "",
+        "categories": categories,
+    }
+
+
+def parse_feed_date(value):
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return parsed.replace(tzinfo=timezone.utc) if parsed.tzinfo is None else parsed.astimezone(timezone.utc)
+
+
+def absolute_feed_url(value, site_url):
+    """Make only public HTTP(S) URLs available to feed consumers."""
+    if not value:
+        return ""
+    url = urljoin(f"{site_url}/", str(value))
+    parsed = urlparse(url)
+    return url if parsed.scheme in {"http", "https"} and parsed.netloc else ""
+
+
+def xml_cdata(value):
+    value = re.sub(r"[\x00-\x08\x0B\x0C\x0E-\x1F]", "", str(value or "")).strip()
+    return value.replace("]]>", "]]&gt;")
+
+
+def xml_attribute(value):
+    return xml_escape(str(value or ""), {'"': "&quot;"})
+
+
+def build_rss_feed(items, config):
+    site_url = (config.get("SITE_BASE_URL") or PUBLIC_SITE_URL).rstrip("/")
+    feed_url = f"{site_url}/feed.xml"
+    last_build = max((item["published_at"] for item in items), default=datetime.now(timezone.utc))
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">',
+        "  <channel>",
+        "    <title>Mindful Diabetes Inc.</title>",
+        f"    <link>{xml_escape(site_url + '/')}</link>",
+        "    <description>Evidence-informed health education, research, prevention, and practical resources from Mindful Diabetes Inc.</description>",
+        "    <language>en-us</language>",
+        f'    <atom:link href="{xml_attribute(feed_url)}" rel="self" type="application/rss+xml" />',
+        f"    <lastBuildDate>{format_datetime(last_build, usegmt=True)}</lastBuildDate>",
+        "    <generator>Mindful Diabetes</generator>",
+        "    <copyright>Copyright Mindful Diabetes Inc.</copyright>",
+        "    <ttl>60</ttl>",
+    ]
+    for item in items:
+        lines.extend([
+            "    <item>",
+            f"      <title>{xml_escape(str(item['title']))}</title>",
+            f"      <link>{xml_escape(item['url'])}</link>",
+            f'      <guid isPermaLink="{"true" if item.get("guid_is_permalink") else "false"}">{xml_escape(item.get("guid") or item["url"])}</guid>',
+            f"      <pubDate>{format_datetime(item['published_at'], usegmt=True)}</pubDate>",
+            f"      <description><![CDATA[{xml_cdata(item['description'])}]]></description>",
+        ])
+        if item["image"]:
+            lines.append(f'      <media:content url="{xml_attribute(item["image"])}" medium="image" />')
+        for category in dict.fromkeys(category for category in item["categories"] if category):
+            lines.append(f"      <category>{xml_escape(str(category))}</category>")
+        lines.append("    </item>")
+    lines.extend(["  </channel>", "</rss>"])
+    return "\n".join(lines) + "\n"
 
 
 def load_content(path):
