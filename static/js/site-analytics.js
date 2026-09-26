@@ -169,6 +169,14 @@
       "linkKind",
       "resultRank",
       "resultPath",
+      "pageSlug",
+      "placement",
+      "destinationId",
+      "ctaType",
+      "contentVersion",
+      "sourceId",
+      "sourceDomain",
+      "sectionId",
     ];
     var keyMap = {
       campaignId: "campaign_id",
@@ -210,6 +218,14 @@
       linkKind: "link_kind",
       resultRank: "result_rank",
       resultPath: "result_path",
+      pageSlug: "page_slug",
+      placement: "placement",
+      destinationId: "destination_id",
+      ctaType: "cta_type",
+      contentVersion: "content_version",
+      sourceId: "source_id",
+      sourceDomain: "source_domain",
+      sectionId: "section_id",
     };
     var metadata = {};
     allowed.forEach(function (name) {
@@ -370,6 +386,11 @@
       recentClicks.delete(dedupeKey);
     }, 900);
     send(eventFromElement(target, eventName));
+    // DASH guide buttons use one click for useful diagnostic information and
+    // a second, canonical outcome event for the actual direct PDF action.
+    if (target.dataset.trackEventDownload) {
+      send(eventFromElement(target, target.dataset.trackEventDownload));
+    }
   }
 
   function initImpressions() {
@@ -408,6 +429,22 @@
     });
   }
 
+  function initDashSectionTracking() {
+    if (!("IntersectionObserver" in window)) return;
+    var seen = new Set();
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var id = entry.target.dataset.dashSection;
+        if (entry.isIntersecting && id && !seen.has(id)) {
+          seen.add(id);
+          window.trackEvent("dash_section_view", { section_id: id, source_page: "dash-diet" });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: [0.35] });
+    document.querySelectorAll("[data-dash-section]").forEach(function (element) { observer.observe(element); });
+  }
+
   function copySessionToNewsletterForms() {
     document.querySelectorAll(".newsletter-form").forEach(function (form) {
       var sessionInput = form.querySelector("input[name='analytics_session_id']");
@@ -438,5 +475,6 @@
     preserveAttributionOnInternalLinks();
     copySessionToNewsletterForms();
     initImpressions();
+    initDashSectionTracking();
   });
 })();

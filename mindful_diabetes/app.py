@@ -1275,6 +1275,8 @@ def create_app(test_config=None):
 
         post = content.posts_by_slug.get(slug)
         if post:
+            if slug == "dash-diet":
+                return render_template("dash_diet.html", post=post, post_schema=post_article_schema(post))
             free_guide_cards = build_free_guide_cards(content)
             companion_guide = companion_guide_for_post(slug, free_guide_cards)
             companion_landing = companion_landing_for_post(slug)
@@ -1496,6 +1498,20 @@ def load_content(path):
         items = json.load(handle)
 
     for item in items:
+        # Preserve the existing post, URL, feeds, and indexes while supplying
+        # current metadata for this substantially refreshed landing article.
+        if item.get("slug") == "dash-diet":
+            item.update({
+                "title": "DASH Diet for Blood Pressure and Diabetes: What the Evidence Says",
+                "seo_title": "DASH Diet: Blood Pressure, Diabetes & Practical Guide",
+                "meta_description": "Learn what the DASH diet emphasizes, what the research says about blood pressure and diabetes, how sodium fits in, and practical ways to start.",
+                "modified": "2026-09-26",
+                "hero_image": "/static/uploads/2026/09/01_dash_hero_foods.webp",
+                "hero_alt": "Fresh vegetables, berries, whole grains, beans, nuts, yogurt, fish, and lean poultry arranged as foods commonly emphasized in a DASH-style eating pattern.",
+                "hero_caption": "DASH is a food pattern built around vegetables, fruit, whole grains, beans, nuts, lower-fat dairy, and lean protein—not a special product list.",
+                "hero_width": 1528,
+                "hero_height": 720,
+            })
         item["canonical_path"] = canonical_path_for(item)
         content_text = searchable_content_text(item.get("content_html", ""))
         item["excerpt_text"] = preview_text_for(item)
