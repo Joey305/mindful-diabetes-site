@@ -43,6 +43,11 @@
 .dash-content h3 { margin-top: 1.75rem; }
 .dash-content p, .dash-content li { font-size: 1.07rem; line-height: 1.68; }
 .dash-content a { color: #176448; text-underline-offset: .16em; }
+.dash-content a.button-primary,
+.dash-content a.button-primary:hover,
+.dash-content a.button-primary:focus-visible {
+  color: var(--white);
+}
 .dash-quick-answer, .dash-callout, .dash-article .article-wellness-tools, .dash-newsletter, .dash-article .article-impact-card { border-radius: 1rem; padding: 1.5rem; background: #eff8f2; }
 .dash-quick-answer li { margin-bottom: .7rem; }
 .dash-callout { background: #fff7e6; border-left: 4px solid #c78d2b; }
