@@ -27,16 +27,9 @@
   --content: 1140px;
 }
 
-/* DASH landing article: scoped so shared article and global layouts remain intact. */
-.dash-wrap { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
-.dash-article .article-post-hero { padding: 4.5rem 0 2.5rem; background: linear-gradient(140deg, #eef8f2, #f9fcf8); }
-.dash-article .article-post-hero h1 { max-width: 860px; font-size: clamp(2.25rem, 5vw, 4.25rem); line-height: 1.04; margin: .35rem 0 1rem; }
+/* DASH article additions use the shared article shell and its color system. */
 .dash-deck { max-width: 760px; font-size: 1.2rem; line-height: 1.6; }
-.dash-article .article-post-hero .meta { color: #52665c; }
-.dash-article .dash-hero__image, .dash-figure { margin: 2rem 0; }
-.dash-article .dash-hero__image img, .dash-figure img { width: 100%; height: auto; display: block; border-radius: 1rem; box-shadow: 0 12px 32px rgba(28, 66, 45, .12); }
-.dash-article .dash-hero__image figcaption, .dash-figure figcaption { margin-top: .65rem; color: #536359; font-size: .92rem; }
-.dash-layout { display: grid; grid-template-columns: 210px minmax(0, 760px); gap: 3.5rem; padding: 3rem 0 5rem; }
+.dash-article .dash-layout { padding-bottom: 5rem; }
 .dash-toc { position: sticky; top: 1.5rem; align-self: start; display: grid; gap: .55rem; padding: 1rem; border-left: 3px solid #76a68a; }
 .dash-toc a { color: #315e48; text-decoration: none; font-weight: 650; }
 .dash-toc a:hover, .dash-toc a:focus-visible { text-decoration: underline; }
@@ -48,6 +41,8 @@
 .dash-quick-answer, .dash-callout, .dash-article .article-wellness-tools, .dash-newsletter, .dash-article .article-impact-card { border-radius: 1rem; padding: 1.5rem; background: #eff8f2; }
 .dash-quick-answer li { margin-bottom: .7rem; }
 .dash-callout { background: #fff7e6; border-left: 4px solid #c78d2b; }
+.dash-reflection { margin: 1.5rem 0; padding: 1.2rem 1.35rem; border-left: 4px solid var(--secondary); background: var(--miami-orange-tint); border-radius: 0 var(--button-radius) var(--button-radius) 0; }
+.dash-reflection h3 { margin-top: 0; }
 .dash-article .article-wellness-tools { background: #eaf2fa; }
 .dash-related > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .dash-related a { min-height: 105px; padding: 1.15rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #d3e3d8; border-radius: .85rem; text-decoration: none; background: white; }
@@ -57,8 +52,8 @@
 .dash-newsletter .newsletter-form input { flex: 1; }
 .dash-references { border-top: 1px solid #d7e1d9; padding-top: 2.5rem; }
 .dash-references li { margin-bottom: .8rem; font-size: .98rem; }
-@media (max-width: 820px) { .dash-article .article-post-hero { padding-top: 2.5rem; } .dash-layout { display: block; padding-top: 1.75rem; } .dash-toc { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 2.5rem; } .dash-toc .eyebrow { grid-column: 1 / -1; } .dash-related > div { grid-template-columns: 1fr; } }
-@media (max-width: 520px) { .dash-wrap { width: min(100% - 1.25rem, 1120px); } .dash-toc { grid-template-columns: 1fr; } .dash-newsletter .newsletter-form { display: grid; } }
+@media (max-width: 820px) { .dash-toc { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 2.5rem; } .dash-toc .eyebrow { grid-column: 1 / -1; } .dash-related > div { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .dash-toc { grid-template-columns: 1fr; } .dash-newsletter .newsletter-form { display: grid; } }
 
 .admin-analytics-dashboard {
   gap: 1.2rem;
