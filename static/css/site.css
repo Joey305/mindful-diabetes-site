@@ -30,6 +30,11 @@
 /* DASH article additions use the shared article shell and its color system. */
 .dash-deck { max-width: 760px; font-size: 1.2rem; line-height: 1.6; }
 .dash-article .dash-layout { padding-bottom: 5rem; }
+.dash-article .article-post-shell {
+  grid-template-areas: "body sidebar";
+}
+.dash-article .article-post-body { grid-area: body; }
+.dash-article .article-post-sidebar { grid-area: sidebar; }
 .dash-toc { position: sticky; top: 1.5rem; align-self: start; display: grid; gap: .55rem; padding: 1rem; border-left: 3px solid #76a68a; }
 .dash-toc a { color: #315e48; text-decoration: none; font-weight: 650; }
 .dash-toc a:hover, .dash-toc a:focus-visible { text-decoration: underline; }
