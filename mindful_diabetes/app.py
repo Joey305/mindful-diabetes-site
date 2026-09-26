@@ -127,6 +127,40 @@ FREE_GUIDES_PDF_STATIC_DIR = BASE_DIR / "static" / "free-guides" / "pdfs"
 FREE_GUIDES_IMAGE_STATIC_DIR = BASE_DIR / "static" / "free-guides" / "images"
 FREE_GUIDE_DEFINITIONS = [
     {
+        "slug": "7-days-of-dash",
+        "title": "7 Days of DASH",
+        "subtitle": "Grocery List, Sodium Swaps & Simple Meal Builder",
+        "description": (
+            "A practical, evidence-informed starter guide for exploring DASH one meal, grocery choice, and habit at a time. "
+            "Compare sodium, build a DASH-friendly grocery cart, create flexible meals, and try seven small experiments without turning healthy eating into a perfection challenge."
+        ),
+        "who": (
+            "People interested in lowering dietary sodium, building heart-supportive eating habits, understanding DASH, or adapting DASH principles to everyday meals—including people living with diabetes who need an individualized approach to carbohydrate intake."
+        ),
+        "category": "Heart Health / Nutrition",
+        "tags": ["DASH", "Heart Health", "Blood Pressure", "Nutrition", "Sodium", "Meal Planning"],
+        "page_count": 7,
+        "pdf_filename": "mindful-diabetes-7-days-of-dash-starter-guide.pdf",
+        "cover_filename": "7-days-of-dash-cover-preview.png",
+        "thumb_filename": "7-days-of-dash-download-card-thumbnail.png",
+        "banner_filename": "7-days-of-dash-banner-16x9.png",
+        "square_filename": "7-days-of-dash-square-promo.png",
+        "alt_text": "7 Days of DASH free health guide from Mindful Diabetes.",
+        "inside": [
+            "A flexible seven-day DASH starter plan",
+            "A sodium-comparison exercise and realistic sodium swaps",
+            "A practical grocery list and DASH-friendly meal builder",
+            "Everyday food ideas without a perfection challenge",
+            "Prompts for choosing one useful change at a time",
+        ],
+        "topics": ["DASH", "Blood pressure", "Sodium", "Grocery shopping", "Meal planning", "Healthy habits"],
+        "related_guide_slugs": ["mindful-plate", "grocery-store-survival-guide", "fats-without-fear", "7-day-prevention-reset"],
+        "related_links": [
+            {"label": "The DASH diet article", "slug": "dash-diet"},
+            {"label": "Free Health Guides", "endpoint": "guide"},
+        ],
+    },
+    {
         "slug": "mindful-plate",
         "title": "The Mindful Plate",
         "subtitle": "A Simple Guide to Blood Sugar-Friendly Eating",
@@ -1504,7 +1538,7 @@ def load_content(path):
             item.update({
                 "title": "DASH Diet for Blood Pressure and Diabetes: What the Evidence Says",
                 "seo_title": "DASH Diet: Blood Pressure, Diabetes & Practical Guide",
-                "meta_description": "Learn what the DASH diet emphasizes, what the research says about blood pressure and diabetes, how sodium fits in, and practical ways to start.",
+                "meta_description": "Learn what randomized trials show about DASH, blood pressure, diabetes, and sodium—and start with a free 7-day DASH guide.",
                 "modified": "2026-09-26",
                 "hero_image": "/static/uploads/2026/09/01_dash_hero_foods.webp",
                 "hero_alt": "Fresh vegetables, berries, whole grains, beans, nuts, yogurt, fish, and lean poultry arranged as foods commonly emphasized in a DASH-style eating pattern.",

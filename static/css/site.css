@@ -53,6 +53,9 @@
 .dash-callout { background: #fff7e6; border-left: 4px solid #c78d2b; }
 .dash-reflection { margin: 1.5rem 0; padding: 1.2rem 1.35rem; border-left: 4px solid var(--secondary); background: var(--miami-orange-tint); border-radius: 0 var(--button-radius) var(--button-radius) 0; }
 .dash-reflection h3 { margin-top: 0; }
+.dash-guide-card { display: grid; grid-template-columns: minmax(160px, 250px) minmax(0, 1fr); gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--miami-green-tint); border: 1px solid var(--tint-line-green); border-radius: var(--radius); }
+.dash-guide-card img { width: 100%; border-radius: 10px; box-shadow: var(--shadow); }
+.dash-guide-card h2 { margin-bottom: .35rem; }
 .dash-article .article-wellness-tools { background: #eaf2fa; }
 .dash-related > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .dash-related a { min-height: 105px; padding: 1.15rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #d3e3d8; border-radius: .85rem; text-decoration: none; background: white; }
@@ -62,7 +65,7 @@
 .dash-newsletter .newsletter-form input { flex: 1; }
 .dash-references { border-top: 1px solid #d7e1d9; padding-top: 2.5rem; }
 .dash-references li { margin-bottom: .8rem; font-size: .98rem; }
-@media (max-width: 820px) { .dash-toc { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 2.5rem; } .dash-toc .eyebrow { grid-column: 1 / -1; } .dash-related > div { grid-template-columns: 1fr; } }
+@media (max-width: 820px) { .dash-toc { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 2.5rem; } .dash-toc .eyebrow { grid-column: 1 / -1; } .dash-related > div { grid-template-columns: 1fr; } .dash-guide-card { grid-template-columns: 1fr; } .dash-guide-card img { max-width: 250px; } }
 @media (max-width: 520px) { .dash-toc { grid-template-columns: 1fr; } .dash-newsletter .newsletter-form { display: grid; } }
 
 .admin-analytics-dashboard {
