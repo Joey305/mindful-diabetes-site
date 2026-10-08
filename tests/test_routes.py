@@ -38,7 +38,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 103
+    assert len(content.latest_posts) == 104
 
     for item in expected_items:
         response = client.get(item["canonical_path"])

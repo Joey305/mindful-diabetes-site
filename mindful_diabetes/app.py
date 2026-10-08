@@ -4367,7 +4367,11 @@ def clean_article_html(
     html = rewrite_article_subscribe_links(html)
     # The 2026 fasting feature uses semantic figure markup from its approved
     # editorial package; its first inline figure is not a legacy hero to strip.
-    if post_slug not in {"intermittent-fasting-diabetes-2026", "fat-cells-store-release-energy-2026"}:
+    if post_slug not in {
+        "intermittent-fasting-diabetes-2026",
+        "fat-cells-store-release-energy-2026",
+        "same-meal-different-glucose-response",
+    }:
         html = remove_article_media(html)
     html = remove_duplicate_intro_heading(html, post_title, article_section_title)
     if post_slug == "memovela":
