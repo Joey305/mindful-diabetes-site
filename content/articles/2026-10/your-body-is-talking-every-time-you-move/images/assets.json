@@ -1,0 +1,64 @@
+{
+  "project": "Mindful Diabetes / 2026 movement article",
+  "images": [
+    {
+      "id": "hero",
+      "position": 1,
+      "article_section": "After headline and standfirst",
+      "recommended_file": "hero-body-communication.webp",
+      "alt": "Original medical illustration of a walking person with visible muscle fibers and colored molecular streams extending toward the brain, heart, liver, gut, and immune cells.",
+      "caption": "Cover illustration. Movement influences multiple body systems. The molecular connections are conceptual and do not depict pathways established by a single experiment.",
+      "width": 1600,
+      "height": 900,
+      "role": "cover",
+      "editable_source": null,
+      "fallback": "hero-body-communication.jpg"
+    },
+    {
+      "id": "figure_01",
+      "position": 2,
+      "article_section": "After Your muscles are more than motors",
+      "recommended_file": "figure-01-muscle-organ-messages.webp",
+      "alt": "Conceptual diagram showing a contracting muscle, molecules circulating in blood, and possible links with metabolic, immune, and nervous-system tissues.",
+      "caption": "Figure 1. Muscle is part of a whole-body signaling network. This diagram is a conceptual overview of exercise-related communication, not a map of experimentally proven organ-to-organ messages in the 2026 study.",
+      "width": 1600,
+      "height": 900,
+      "role": "inline figure",
+      "editable_source": "figure-01-muscle-organ-messages.svg",
+      "fallback": "figure-01-muscle-organ-messages.png"
+    },
+    {
+      "id": "figure_02",
+      "position": 3,
+      "article_section": "Within What scientists found in 2026, after results",
+      "recommended_file": "figure-02-proteomics-timeline.webp",
+      "alt": "Sampling timeline showing 45 minutes of cycling, the plasma and saliva collections before and up to 24 hours after exercise, and the more limited urine collection times.",
+      "caption": "Figure 2. How the 2026 protein atlas was constructed. Time points are shown as equally spaced positions for readability, not as a proportional time axis. The 3,007 count refers to proteins significantly changed immediately after exercise across the tested body fluids.",
+      "width": 1600,
+      "height": 900,
+      "role": "inline figure",
+      "editable_source": "figure-02-proteomics-timeline.svg",
+      "fallback": "figure-02-proteomics-timeline.png"
+    },
+    {
+      "id": "figure_03",
+      "position": 4,
+      "article_section": "Within How moving muscles help manage glucose",
+      "recommended_file": "figure-03-glut4-glucose-gateway.webp",
+      "alt": "Simplified two-pathway diagram: insulin signaling and muscle contraction both support GLUT4 movement to the muscle-cell membrane, allowing glucose to enter.",
+      "caption": "Figure 3. Two routes to the glucose gateway. Insulin and muscle contraction engage partly distinct signaling pathways that promote GLUT4 movement to the muscle-cell surface. Many intermediate steps are omitted in this educational illustration.",
+      "width": 1600,
+      "height": 900,
+      "role": "inline figure",
+      "editable_source": "figure-03-glut4-glucose-gateway.svg",
+      "fallback": "figure-03-glut4-glucose-gateway.png"
+    }
+  ],
+  "open_graph": {
+    "file": "og-body-communication.jpg",
+    "width": 1200,
+    "height": 630,
+    "alt": "Original editorial illustration of a walking person with molecular signals connecting organs."
+  },
+  "source_master": "source/hero-original.png"
+}
