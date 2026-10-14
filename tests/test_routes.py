@@ -146,13 +146,22 @@ def test_movement_2026_article_registers_images_metadata_and_discovery_surfaces(
     assert post["memovela_sync"] is False
     assert response.data.count(b"<h1") == 1
     assert response.data.count(b'class="article-post-hero__media"') == 1
-    assert response.data.count(b'data-image-slot="') == 3
+    assert response.data.count(b'data-image-slot="') == 8
     assert response.data.count(b"Cover illustration. Movement influences multiple body systems.") == 1
     assert response.data.count(b"Figure 1. Muscle is part of a whole-body signaling network.") == 1
     assert response.data.count(b"Figure 2. How the 2026 protein atlas was constructed.") == 1
     assert response.data.count(b"Figure 3. Two routes to the glucose gateway.") == 1
+    assert response.data.count(b"Figure 4. Two 2026 studies, two different questions.") == 1
+    assert response.data.count(b"Figure 5. What changes right away vs. what may adapt over time.") == 1
+    assert response.data.count(b"Figure 6. Why glucose can move in different directions during exercise.") == 1
+    assert response.data.count(b"Figure 7. A day with movement breaks.") == 1
+    assert response.data.count(b"Figure 8. Choose movement that fits your body and day.") == 1
+    assert b"Before turning from the molecular atlas to short activity bouts" in response.data
+    assert b"This study captured an acute response to one workout" in response.data
+    assert b"The point is not a perfect timer" in response.data
+    assert b"there is no one-size-fits-all routine" in response.data
     assert b'loading="eager" fetchpriority="high"' in response.data
-    assert response.data.count(b'loading="lazy"') >= 3
+    assert response.data.count(b'loading="lazy"') >= 8
     assert b"og-body-communication.jpg" in response.data
     assert b'"datePublished": "2026-10-13"' in response.data
     assert b"3,007" in response.data
@@ -182,6 +191,21 @@ def test_movement_2026_article_registers_images_metadata_and_discovery_surfaces(
         "figure-03-glut4-glucose-gateway.webp",
         "figure-03-glut4-glucose-gateway-724.webp",
         "figure-03-glut4-glucose-gateway-1024.webp",
+        "figure-04-two-2026-studies-two-different-questions.webp",
+        "figure-04-two-2026-studies-two-different-questions-724.webp",
+        "figure-04-two-2026-studies-two-different-questions-1024.webp",
+        "figure-05-what-changes-right-away-vs-what-may-adapt-over-time.webp",
+        "figure-05-what-changes-right-away-vs-what-may-adapt-over-time-724.webp",
+        "figure-05-what-changes-right-away-vs-what-may-adapt-over-time-1024.webp",
+        "figure-06-why-glucose-can-move-in-different-directions-during-exercise.webp",
+        "figure-06-why-glucose-can-move-in-different-directions-during-exercise-724.webp",
+        "figure-06-why-glucose-can-move-in-different-directions-during-exercise-1024.webp",
+        "figure-07-a-day-with-movement-breaks.webp",
+        "figure-07-a-day-with-movement-breaks-724.webp",
+        "figure-07-a-day-with-movement-breaks-1024.webp",
+        "figure-08-choose-movement-that-fits-your-body-and-day.webp",
+        "figure-08-choose-movement-that-fits-your-body-and-day-724.webp",
+        "figure-08-choose-movement-that-fits-your-body-and-day-1024.webp",
         "og-body-communication.jpg",
     ):
         asset_response = client.get(f"/static/uploads/2026/10/{asset}")

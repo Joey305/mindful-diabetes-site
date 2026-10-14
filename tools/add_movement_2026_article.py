@@ -61,16 +61,18 @@ def inline_markdown(text: str) -> str:
 def figure_html(filename: str, metadata: dict[str, dict[str, object]]) -> str:
     image = metadata[filename]
     stem = Path(filename).stem
+    width = int(image["width"])
+    height = int(image["height"])
     srcset = ", ".join(
         [
             *(f"/static/uploads/2026/10/{stem}-{width}.webp {width}w" for width in (724, 1024)),
-            f"/static/uploads/2026/10/{filename} 1600w",
+            f"/static/uploads/2026/10/{filename} {width}w",
         ]
     )
     return (
         f'<figure data-image-slot="{stem}"><picture>'
         f'<source type="image/webp" srcset="{srcset}" sizes="(max-width: 820px) 100vw, 820px">'
-        f'<img width="1600" height="900" src="/static/uploads/2026/10/{filename}" '
+        f'<img width="{width}" height="{height}" src="/static/uploads/2026/10/{filename}" '
         f'alt="{html.escape(str(image["alt"]), quote=True)}" '
         f'title="{html.escape(str(image["caption"]).split(".")[0], quote=True)}" loading="lazy">'
         f'</picture><figcaption>{inline_markdown(str(image["caption"]))}</figcaption></figure>'
@@ -183,6 +185,70 @@ def copy_source_archive(source_root: Path) -> None:
         shutil.copy2(source_root / relative, destination)
 
 
+def copy_supplemental_source_archive(supplemental_root: Path) -> None:
+    """Keep original supplemental WebP/PNG art and supplied SEO metadata editable."""
+    for relative in (
+        "README.md",
+        "integration/CODEX_INTEGRATION_PROMPT.md",
+        "integration/INSERTION_MAP.md",
+        "seo/IMAGE_SEO_MANIFEST.md",
+        "seo/image_manifest.csv",
+        "seo/image_manifest.json",
+        *(f"images/webp/{path.name}" for path in sorted((supplemental_root / "images/webp").glob("*.webp"))),
+        *(f"images/png/{path.name}" for path in sorted((supplemental_root / "images/png").glob("*.png"))),
+    ):
+        destination = SOURCE_ARCHIVE_DIR / "supplemental" / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(supplemental_root / relative, destination)
+
+
+def insert_once(content_html: str, needle: str, addition: str) -> str:
+    if content_html.count(needle) != 1:
+        raise ValueError(f"Expected exactly one insertion anchor, found {content_html.count(needle)}.")
+    return content_html.replace(needle, f"{needle}\n{addition}", 1)
+
+
+def integrate_supplemental_figures(content_html: str, metadata: dict[str, dict[str, object]]) -> str:
+    """Place supplied educational figures beside the exact explanatory text they support."""
+    lead_ins = {
+        "figure-04-two-2026-studies-two-different-questions.webp": "Before turning from the molecular atlas to short activity bouts, it helps to separate what these two studies actually measured.",
+        "figure-05-what-changes-right-away-vs-what-may-adapt-over-time.webp": "This study captured an acute response to one workout; lasting adaptations are a different question that requires longer-term research.",
+        "figure-06-why-glucose-can-move-in-different-directions-during-exercise.webp": "Muscle contraction can support glucose uptake, but the glucose pattern someone sees also depends on intensity, medication, recent food, sleep, and individual biology.",
+        "figure-07-a-day-with-movement-breaks.webp": "The point is not a perfect timer; it is finding practical moments to interrupt long stretches of sitting when you can.",
+        "figure-08-choose-movement-that-fits-your-body-and-day.webp": "A useful movement habit is one that is safe, accessible, and repeatable for your body—not a one-size-fits-all routine.",
+    }
+    figure = lambda filename: f"<p>{lead_ins[filename]}</p>\n{figure_html(filename, metadata)}"
+    figure_two_anchor = '</figcaption></figure>\n<h3>Why blood, saliva, and urine?</h3>'
+    if content_html.count(figure_two_anchor) != 1:
+        raise ValueError("Could not find the Figure 2 insertion anchor.")
+    content_html = content_html.replace(
+        figure_two_anchor,
+        f'</figcaption></figure>\n{figure("figure-05-what-changes-right-away-vs-what-may-adapt-over-time.webp")}\n<h3>Why blood, saliva, and urine?</h3>',
+        1,
+    )
+    content_html = content_html.replace(
+        '<h2>Can even one minute of movement make a difference?</h2>',
+        f'{figure("figure-04-two-2026-studies-two-different-questions.webp")}\n<h2>Can even one minute of movement make a difference?</h2>',
+        1,
+    )
+    content_html = insert_once(
+        content_html,
+        '<p>This is not a promise that glucose always falls after exercise. Especially with more intense effort, stress hormones can sometimes cause glucose to rise for a period. Medication, recent meals, sleep, and individual biology also influence what happens.</p>',
+        figure("figure-06-why-glucose-can-move-in-different-directions-during-exercise.webp"),
+    )
+    content_html = insert_once(
+        content_html,
+        '<p>The <a href="https://doi.org/10.2337/dc26-S005" target="_blank" rel="noopener noreferrer">American Diabetes Association\'s 2026 Standards of Care</a> advise people with diabetes to interrupt prolonged sitting at least every 30 minutes when practical, with brief standing, walking, or other light movement. The same guidance encourages gradual increases from a person\'s own baseline. For most adults with diabetes, it also recommends aiming toward at least 150 minutes a week of moderate-to-vigorous aerobic activity, along with individualized activity planning.</p>',
+        figure("figure-07-a-day-with-movement-breaks.webp"),
+    )
+    content_html = content_html.replace(
+        '<h3>Notice patterns, not perfection - with Memovela</h3>',
+        f'{figure("figure-08-choose-movement-that-fits-your-body-and-day.webp")}\n<h3>Notice patterns, not perfection - with Memovela</h3>',
+        1,
+    )
+    return content_html
+
+
 def make_webp_derivatives(source: Path) -> None:
     for width in (724, 1024):
         subprocess.run(
@@ -194,13 +260,20 @@ def make_webp_derivatives(source: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("source_root", type=Path, help="Extracted approved article-package directory")
+    parser.add_argument("--supplemental-root", type=Path, required=True, help="Extracted approved supplemental-figures package")
     args = parser.parse_args()
     source_root = args.source_root
+    supplemental_root = args.supplemental_root
     article_path = source_root / "article/your-body-is-talking-every-time-you-move.md"
     package_metadata = json.loads((source_root / "article/metadata.json").read_text(encoding="utf-8"))
     image_manifest = json.loads((source_root / "images/assets.json").read_text(encoding="utf-8"))
     images = {image["recommended_file"]: image for image in image_manifest["images"]}
+    base_image_filenames = set(images)
     content_html = markdown_to_html(article_path.read_text(encoding="utf-8"), images)
+    supplemental_manifest = json.loads((supplemental_root / "seo/image_manifest.json").read_text(encoding="utf-8"))
+    supplemental_images = {image["webp_name"]: image for image in supplemental_manifest}
+    images.update(supplemental_images)
+    content_html = integrate_supplemental_figures(content_html, images)
     content_html = content_html.replace(
         "\n<hr>\n<h2>Key takeaways</h2>",
         f"\n{WELLNESS_TOOLS_PANEL}\n<hr>\n<h2>Key takeaways</h2>",
@@ -208,9 +281,10 @@ def main() -> None:
     )
 
     copy_source_archive(source_root)
+    copy_supplemental_source_archive(supplemental_root)
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
     for filename in images:
-        source = source_root / "images" / filename
+        source = source_root / "images" / filename if filename in base_image_filenames else supplemental_root / "images/webp" / filename
         destination = UPLOAD_DIR / filename
         shutil.copy2(source, destination)
         make_webp_derivatives(destination)

@@ -1,0 +1,110 @@
+# Image SEO Manifest
+
+## FIGURE-04 — Two 2026 studies, two different questions
+
+- **Suggested website filename:** `figure-04-two-2026-studies-two-different-questions.webp`
+
+- **PNG filename:** `figure-04-two-2026-studies-two-different-questions.png`
+
+- **Dimensions:** 1448 × 1086
+
+- **Caption:** Figure 4. Two 2026 studies, two different questions. Side-by-side comparison of the 2026 acute exercise proteomics study and the 2026 vigorous exercise-snack glucose study, highlighting their different participants, designs, outcomes, and research questions.
+
+- **Alt text:** Infographic comparing two 2026 exercise studies. The left panel shows an acute exercise proteomics study in 25 healthy men after one 45-minute cycling session, with blood, saliva, and urine analyzed and more than 3,000 proteins changing after exercise. The right panel shows a vigorous exercise-snack glucose study in 31 adults with type 2 diabetes using four 1-minute vigorous activity bouts per day over 2 days, with improvements in some post-meal and glucose-variability measures but no significant change in average glucose.
+
+- **Description / SEO summary:** Educational infographic clarifying that the article discusses two separate 2026 studies that asked different scientific questions: one mapped acute molecular responses to a single workout, and the other tested short vigorous activity bouts and short-term glucose patterns.
+
+- **Suggested placement:** Immediately before the section “Can even one minute of movement make a difference?”
+
+- **Nearby in-text lead-in:** “Before turning from the molecular atlas to short activity bouts, it helps to separate what these two studies actually measured.”
+
+- **Suggested keywords:** exercise proteomics, movement science, type 2 diabetes, glucose response, 2026 studies, Mindful Diabetes
+
+
+
+## FIGURE-05 — What changes right away vs. what may adapt over time
+
+- **Suggested website filename:** `figure-05-what-changes-right-away-vs-what-may-adapt-over-time.webp`
+
+- **PNG filename:** `figure-05-what-changes-right-away-vs-what-may-adapt-over-time.png`
+
+- **Dimensions:** 1448 × 1086
+
+- **Caption:** Figure 5. What changes right away vs. what may adapt over time. Conceptual timeline showing immediate molecular responses during and after a single workout, followed by longer-term training adaptations that build over days to weeks with repeated activity.
+
+- **Alt text:** Infographic timeline with four stages: minutes, hours, days to weeks, and training adaptation. It shows that one workout triggers immediate molecular responses and acute changes in blood, saliva, and urine, while repeated activity over time contributes to longer-term adaptations such as improved fitness, metabolic flexibility, and changes in muscle function.
+
+- **Description / SEO summary:** Conceptual timeline distinguishing acute responses to one workout from longer-term training adaptations, helping readers avoid assuming that a single-session study proves durable changes.
+
+- **Suggested placement:** After the existing Figure 2 in the section “What scientists found in 2026.”
+
+- **Nearby in-text lead-in:** “This study captured an acute response to one workout; lasting adaptations are a different question that requires longer-term research.”
+
+- **Suggested keywords:** acute exercise response, training adaptation, exercise biology, movement science, metabolic flexibility
+
+
+
+## FIGURE-06 — Why glucose can move in different directions during exercise
+
+- **Suggested website filename:** `figure-06-why-glucose-can-move-in-different-directions-during-exercise.webp`
+
+- **PNG filename:** `figure-06-why-glucose-can-move-in-different-directions-during-exercise.png`
+
+- **Dimensions:** 1448 × 1086
+
+- **Caption:** Figure 6. Why glucose can move in different directions during exercise. Diagram showing that muscle contraction can support glucose uptake while several factors—including intensity, stress hormones, recent food, medication, sleep, and individual biology—can change the glucose pattern a person sees.
+
+- **Alt text:** Infographic showing two sides of exercise and glucose. On the left, glucose moves from the blood into a contracting muscle, illustrating that muscle contractions can support glucose uptake. On the right, icons represent intense effort, stress hormones, recent food, medication, sleep, and individual biology, alongside example glucose traces showing that glucose may go down, stay mixed, or rise temporarily during or after exercise.
+
+- **Description / SEO summary:** Balanced educational graphic explaining why glucose does not always behave the same way during exercise, even when movement supports glucose uptake.
+
+- **Suggested placement:** After the paragraph beginning “This is not a promise that glucose always falls after exercise.”
+
+- **Nearby in-text lead-in:** “Muscle contraction can support glucose uptake, but the glucose pattern someone sees also depends on intensity, medication, recent food, sleep, and individual biology.”
+
+- **Suggested keywords:** exercise and glucose, blood sugar response, muscle contraction, type 2 diabetes, glucose variability
+
+
+
+## FIGURE-07 — A day with movement breaks
+
+- **Suggested website filename:** `figure-07-a-day-with-movement-breaks.webp`
+
+- **PNG filename:** `figure-07-a-day-with-movement-breaks.png`
+
+- **Dimensions:** 1448 × 1086
+
+- **Caption:** Figure 7. A day with movement breaks. Practical workday-style timeline showing realistic opportunities to interrupt long stretches of sitting, including after meals, between meetings, during phone calls, while commuting, and during household tasks.
+
+- **Alt text:** Infographic timeline of a day with movement breaks. The panels suggest simple moments to move: a short walk after breakfast, standing and stretching between meetings, walking during a phone call, a brief walk after lunch, taking the stairs, moving during a household task, and gentle mobility in the evening.
+
+- **Description / SEO summary:** Simple daily movement-break infographic showing that interrupting long periods of sitting can fit naturally into ordinary routines.
+
+- **Suggested placement:** In the section “What happens when sitting fills the day?” after the ADA guidance.
+
+- **Nearby in-text lead-in:** “The point is not a perfect timer; it is finding practical moments to interrupt long stretches of sitting when you can.”
+
+- **Suggested keywords:** movement breaks, sitting less, daily activity, practical exercise tips, Mindful Diabetes
+
+
+
+## FIGURE-08 — Choose movement that fits your body and day
+
+- **Suggested website filename:** `figure-08-choose-movement-that-fits-your-body-and-day.webp`
+
+- **PNG filename:** `figure-08-choose-movement-that-fits-your-body-and-day.png`
+
+- **Dimensions:** 1448 × 1086
+
+- **Caption:** Figure 8. Choose movement that fits your body and day. Inclusive movement menu showing walking, seated movement, wheeling, light resistance, balance work, gentle mobility, and social or outdoor activity, with a reminder to individualize choices when needed with a care team.
+
+- **Alt text:** Infographic presenting several movement options: walking, seated movement, wheeling, light resistance exercise, balance work, gentle mobility, and social or outdoor activity. A note emphasizes that there is no one-size-fits-all routine and that movement can be individualized with a care team when needed.
+
+- **Description / SEO summary:** Inclusive movement-options infographic emphasizing that sustainable activity should be safe, accessible, repeatable, and individualized.
+
+- **Suggested placement:** Near the final takeaway, before the Memovela section or Key Takeaways.
+
+- **Nearby in-text lead-in:** “A useful movement habit is one that is safe, accessible, and repeatable for your body—not a one-size-fits-all routine.”
+
+- **Suggested keywords:** inclusive movement, accessible exercise, walking, seated exercise, light resistance, balance and mobility
+
