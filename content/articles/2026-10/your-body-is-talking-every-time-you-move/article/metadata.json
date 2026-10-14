@@ -1,0 +1,51 @@
+{
+  "title": "Your Body Is Talking Every Time You Move. Here's What Science Is Discovering.",
+  "slug": "your-body-is-talking-every-time-you-move",
+  "category": "Pathways to Wellness",
+  "status": "draft",
+  "published_at": null,
+  "language": "en",
+  "author": "Mindful Diabetes Inc.",
+  "summary": "A new 2026 study tracked thousands of protein changes after exercise. Here is what those molecular signals tell us about muscles, glucose, immunity, and why small movements matter.",
+  "seo_title": "How Movement Changes Your Body: New 2026 Science | Mindful Diabetes",
+  "seo_description": "New 2026 research reveals thousands of molecular changes after exercise. Explore how muscle movement affects glucose and signals across the body.",
+  "canonical_path": "/your-body-is-talking-every-time-you-move/",
+  "hero_image": "../images/hero-body-communication.webp",
+  "hero_alt": "Original medical illustration of a person walking as colorful molecular signals flow between muscles and surrounding organs.",
+  "tags": [
+    "exercise science",
+    "metabolism",
+    "glucose",
+    "muscle",
+    "2026 research",
+    "exerkines",
+    "movement"
+  ],
+  "url": "https://mindfuldiabetes.org/your-body-is-talking-every-time-you-move/",
+  "og_image": "images/og-body-communication.jpg",
+  "app_store_url": "https://apps.apple.com/us/app/memovela/id6796686305",
+  "research_citations": [
+    {
+      "doi": "10.1038/s42255-026-01621-w",
+      "type": "primary",
+      "publication_date": "2026-10-12"
+    },
+    {
+      "doi": "10.1007/s00125-026-06741-2",
+      "type": "clinical_trial",
+      "publication_date": "2026-04-24"
+    },
+    {
+      "doi": "10.1152/physrev.00033.2024",
+      "type": "mechanism_review"
+    },
+    {
+      "doi": "10.1038/s41574-022-00641-2",
+      "type": "exerkine_review"
+    },
+    {
+      "doi": "10.2337/dc26-S005",
+      "type": "ADA_2026_standards"
+    }
+  ]
+}

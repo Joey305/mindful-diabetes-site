@@ -38,7 +38,7 @@ def test_published_wordpress_pages_and_posts_resolve():
     expected_items = content.published_pages + content.latest_posts
 
     assert len(content.published_pages) == 8
-    assert len(content.latest_posts) == 104
+    assert len(content.latest_posts) == 105
 
     for item in expected_items:
         response = client.get(item["canonical_path"])
@@ -125,6 +125,67 @@ def test_intermittent_fasting_2026_article_and_historic_update_render():
     assert historic.status_code == 200
     assert b"2026 Evidence Update" in historic.data
     assert historic.data.count(b'href="/intermittent-fasting-diabetes-2026/"') >= 2
+
+
+def test_movement_2026_article_registers_images_metadata_and_discovery_surfaces():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    slug = "your-body-is-talking-every-time-you-move"
+    post = app.config["CONTENT"].posts_by_slug[slug]
+
+    response = client.get(f"/{slug}/")
+    sitemap = client.get("/sitemap.xml")
+    feed = client.get("/feed.xml")
+    search = client.get("/search/?q=exercise%20proteomics")
+    home = client.get("/")
+    guide = client.get("/guide/")
+
+    assert response.status_code == 200
+    assert post["date"] == "2026-10-13 09:00:00"
+    assert post["categories"] == ["Pathways to Wellness"]
+    assert post["memovela_sync"] is False
+    assert response.data.count(b"<h1") == 1
+    assert response.data.count(b'class="article-post-hero__media"') == 1
+    assert response.data.count(b'data-image-slot="') == 3
+    assert response.data.count(b"Cover illustration. Movement influences multiple body systems.") == 1
+    assert response.data.count(b"Figure 1. Muscle is part of a whole-body signaling network.") == 1
+    assert response.data.count(b"Figure 2. How the 2026 protein atlas was constructed.") == 1
+    assert response.data.count(b"Figure 3. Two routes to the glucose gateway.") == 1
+    assert b'loading="eager" fetchpriority="high"' in response.data
+    assert response.data.count(b'loading="lazy"') >= 3
+    assert b"og-body-communication.jpg" in response.data
+    assert b'"datePublished": "2026-10-13"' in response.data
+    assert b"3,007" in response.data
+    assert b"did not reach statistical significance" in response.data
+    assert b"not for measuring exerkines or diagnosing a glucose response" in response.data
+    assert b"Medical note: This article is educational" in response.data
+    assert b'href="https://doi.org/10.1038/s42255-026-01621-w"' in response.data
+    assert b'href="/same-meal-different-glucose-response/"' in response.data
+    assert b'href="/summer-walks-hydration-diabetes/"' in response.data
+
+    assert f"/{slug}/".encode() in sitemap.data
+    assert b"Your Body Is Talking Every Time You Move" in feed.data
+    assert b"Your Body Is Talking Every Time You Move" in search.data
+    assert b"hero-body-communication.webp" in home.data
+    assert b"hero-body-communication.webp" in guide.data
+
+    for asset in (
+        "hero-body-communication.webp",
+        "hero-body-communication-724.webp",
+        "hero-body-communication-1024.webp",
+        "figure-01-muscle-organ-messages.webp",
+        "figure-01-muscle-organ-messages-724.webp",
+        "figure-01-muscle-organ-messages-1024.webp",
+        "figure-02-proteomics-timeline.webp",
+        "figure-02-proteomics-timeline-724.webp",
+        "figure-02-proteomics-timeline-1024.webp",
+        "figure-03-glut4-glucose-gateway.webp",
+        "figure-03-glut4-glucose-gateway-724.webp",
+        "figure-03-glut4-glucose-gateway-1024.webp",
+        "og-body-communication.jpg",
+    ):
+        asset_response = client.get(f"/static/uploads/2026/10/{asset}")
+        assert asset_response.status_code == 200, asset
 
 
 def test_fat_cells_2026_article_renders_research_guardrails_and_memovela_blurb():
@@ -1226,7 +1287,9 @@ def test_summer_hydration_preview_images_include_seo_metadata():
     assert post["preview_image_title"] == "Summer walking essentials for diabetes and hydration"
     assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
 
-    for path in ["/", "/guide/", "/summer-walks-hydration-diabetes/"]:
+    # The home page shows the six latest posts; the newer movement article now
+    # occupies the final card that previously displayed this July post.
+    for path in ["/guide/", "/summer-walks-hydration-diabetes/"]:
         response = client.get(path)
 
         assert response.status_code == 200
@@ -1298,7 +1361,7 @@ def test_pediatric_otc_cgm_stelo_article_has_verified_sources_and_guardrails():
 
     assert response.status_code == 200
     assert post["date"] == "2026-08-03 09:00:00"
-    assert app.config["CONTENT"].latest_posts[3]["slug"] == "otc-cgm-children-stelo-family-guide"
+    assert app.config["CONTENT"].latest_posts[5]["slug"] == "otc-cgm-children-stelo-family-guide"
     assert post["title"] == "The First Over-the-Counter CGM for Children: What Families Should Know About Stelo"
     assert post["content_html"].count("<img ") == 6
     assert post["content_html"].count("title=") == 6
@@ -1405,7 +1468,7 @@ def test_june_alzheimers_clinical_trials_post_has_snapshot_sources_and_images():
 
     assert response.status_code == 200
     assert post["date"] == "2026-06-10 09:00:00"
-    assert app.config["CONTENT"].latest_posts[5]["slug"] == "alzheimers-clinical-trials-june-2026"
+    assert app.config["CONTENT"].latest_posts[7]["slug"] == "alzheimers-clinical-trials-june-2026"
     assert post["content_html"].count("<img ") == 6
     assert post["content_html"].count("title=") == 6
     assert post["preview_image_title"] == "Alzheimer’s clinical-trial research visit"
@@ -1500,7 +1563,9 @@ def test_april_alzheimers_research_preview_image_includes_seo_metadata():
     assert post["preview_image_title"] == "Alzheimer’s research explained with warmth and honesty"
     assert post["preview_image_description"].startswith("Hero image for a Mindful Diabetes article")
 
-    for path in ["/guide/", "/alzheimers-research-blood-tests-tau-trials/"]:
+    # This April post has moved below the first guide-list page as newer articles
+    # are published, but its own preview metadata must remain intact.
+    for path in ["/alzheimers-research-blood-tests-tau-trials/"]:
         response = client.get(path)
 
         assert response.status_code == 200
