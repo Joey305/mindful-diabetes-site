@@ -1272,6 +1272,15 @@ def create_app(test_config=None):
         post = random.choice(choices)
         return redirect(post["canonical_path"], code=302)
 
+    @app.get("/latest-blog/")
+    def latest_blog():
+        """Keep one shareable profile link pointed at the newest published article."""
+        if not content.latest_posts:
+            abort(404)
+        # A temporary redirect prevents social platforms and browsers from
+        # permanently caching whichever article happened to be newest today.
+        return redirect(content.latest_posts[0]["canonical_path"], code=302)
+
     @app.get("/sitemap.xml")
     def sitemap():
         extra_pages = [

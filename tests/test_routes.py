@@ -1037,6 +1037,17 @@ def test_random_article_redirects_to_a_post(monkeypatch):
     assert response.headers["Location"].endswith(target_post["canonical_path"])
 
 
+def test_latest_blog_redirects_to_the_newest_published_article():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    newest_post = app.config["CONTENT"].latest_posts[0]
+
+    response = client.get("/latest-blog/")
+
+    assert response.status_code == 302
+    assert response.headers["Location"].endswith(newest_post["canonical_path"])
+
+
 def test_every_post_uses_shared_article_template():
     app = create_app({"TESTING": True})
     client = app.test_client()
