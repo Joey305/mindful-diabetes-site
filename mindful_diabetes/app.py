@@ -1541,6 +1541,12 @@ def load_content(path):
         items = json.load(handle)
 
     for item in items:
+        # Keep the published movement article and its editable source aligned.
+        # Its quick-read label is intentionally distinct from other short summaries.
+        if item.get("slug") == "your-body-is-talking-every-time-you-move":
+            item["content_html"] = item.get("content_html", "").replace(
+                "<h2>The short version</h2>", "<h2>TLDR</h2>", 1
+            )
         # Preserve the existing post, URL, feeds, and indexes while supplying
         # current metadata for this substantially refreshed landing article.
         if item.get("slug") == "dash-diet":
@@ -4374,6 +4380,8 @@ def clean_article_html(
 ):
     html = clean_wordpress_html(raw_html, paypal_button_id)
     html = rewrite_article_subscribe_links(html)
+    if post_slug == "same-meal-different-glucose-response":
+        html = insert_same_meal_video_feature(html)
     # The 2026 fasting feature uses semantic figure markup from its approved
     # editorial package; its first inline figure is not a legacy hero to strip.
     if post_slug not in {
@@ -4383,6 +4391,7 @@ def clean_article_html(
     }:
         html = remove_article_media(html)
     html = remove_duplicate_intro_heading(html, post_title, article_section_title)
+    html = prevent_repeated_short_version_headings(html)
     if post_slug == "memovela":
         html = update_memovela_article_html(html)
     elif post_slug == "summer-walks-hydration-diabetes":
@@ -4437,6 +4446,54 @@ def remove_duplicate_intro_heading(html, post_title, article_section_title=""):
         return html
 
     return html[: first_heading.start("heading")] + html[first_heading.end("heading") :]
+
+
+SAME_MEAL_VIDEO_FEATURE = """
+<section class="article-video-feature" aria-labelledby="same-meal-video-heading">
+  <div class="article-video-feature__intro">
+    <p class="eyebrow">Watch the companion video</p>
+    <h2 id="same-meal-video-heading">Why the same food can feel different on different days</h2>
+    <p>Food matters, but sleep, stress, movement, timing, and individual biology shape the whole picture too.</p>
+  </div>
+  <div class="video-frame">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jC2SZWMShkc?si=KPtyf_GPJEm7d085" title="Why the same meal can affect your body differently" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section>
+""".strip()
+
+
+def insert_same_meal_video_feature(html):
+    """Add the approved companion video after the article's quick-answer list."""
+    if "article-video-feature" in html:
+        return html
+    return re.sub(
+        r"(</ul>\s*)(?=<p>This does <strong>not</strong> mean food composition is irrelevant\.)",
+        rf"\1{SAME_MEAL_VIDEO_FEATURE}\n",
+        html,
+        count=1,
+        flags=re.IGNORECASE,
+    )
+
+
+def prevent_repeated_short_version_headings(html):
+    """Keep imported posts from rendering more than one 'The short version' heading."""
+    seen_short_version = False
+
+    def replace(match):
+        nonlocal seen_short_version
+        if normalized_heading_text(html_to_text(match.group("content"))) != "the short version":
+            return match.group(0)
+        if not seen_short_version:
+            seen_short_version = True
+            return match.group(0)
+        return f'<h{match.group("level")}{match.group("attrs")}>TLDR</h{match.group("level")}>'
+
+    return re.sub(
+        r"<h(?P<level>[2-4])(?P<attrs>\b[^>]*)>(?P<content>.*?)</h[2-4]>",
+        replace,
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
 
 
 def memovela_app_store_badge_html(placement):

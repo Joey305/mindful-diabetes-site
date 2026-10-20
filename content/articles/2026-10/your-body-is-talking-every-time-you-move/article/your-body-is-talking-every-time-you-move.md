@@ -33,7 +33,7 @@ We have known for a long time that movement benefits health. What scientists are
 
 In October 2026, researchers published an unusually detailed snapshot of that molecular activity. Instead of looking only at heart rate or calories, they measured thousands of proteins in three different body fluids after a single workout. The results help explain why exercise is much bigger than one muscle, one number, or one trip to the gym. [Read the new *Nature Metabolism* study.](https://doi.org/10.1038/s42255-026-01621-w)
 
-## The short version
+## TLDR
 
 - **Your muscles are metabolically active tissue.** They use fuel, respond to hormones, and participate in chemical communication with the rest of the body.
 - **A single workout changes far more than heart rate.** A 2026 study found 3,007 proteins with significant changes immediately after 45 minutes of cycling, across the body fluids tested.

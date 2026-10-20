@@ -167,6 +167,8 @@ def test_movement_2026_article_registers_images_metadata_and_discovery_surfaces(
     assert b"3,007" in response.data
     assert b"did not reach statistical significance" in response.data
     assert b"not for measuring exerkines or diagnosing a glucose response" in response.data
+    assert response.data.count(b">The short version</h2>") == 0
+    assert response.data.count(b">TLDR</h2>") == 1
     assert b"Medical note: This article is educational" in response.data
     assert b'href="https://doi.org/10.1038/s42255-026-01621-w"' in response.data
     assert b'href="/same-meal-different-glucose-response/"' in response.data
@@ -210,6 +212,16 @@ def test_movement_2026_article_registers_images_metadata_and_discovery_surfaces(
     ):
         asset_response = client.get(f"/static/uploads/2026/10/{asset}")
         assert asset_response.status_code == 200, asset
+
+
+def test_same_meal_article_includes_its_companion_video_feature():
+    app = create_app({"TESTING": True})
+    response = app.test_client().get("/same-meal-different-glucose-response/")
+
+    assert response.status_code == 200
+    assert b'article-video-feature' in response.data
+    assert b'www.youtube.com/embed/jC2SZWMShkc' in response.data
+    assert b'Why the same food can feel different on different days' in response.data
 
 
 def test_fat_cells_2026_article_renders_research_guardrails_and_memovela_blurb():
