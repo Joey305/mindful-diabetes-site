@@ -22,6 +22,7 @@ from xml.sax.saxutils import escape as xml_escape
 
 from flask import Flask, Response, abort, jsonify, redirect, render_template, request, session, url_for
 from markupsafe import Markup, escape
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 from mindful_diabetes import cms
 from mindful_diabetes import analytics
@@ -520,6 +521,11 @@ def create_app(test_config=None):
     if test_config:
         app.config.update(test_config)
 
+    # Heroku terminates TLS before traffic reaches Gunicorn. Trust its forwarded
+    # scheme and host so canonical redirects recognize HTTPS requests correctly.
+    app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
+    app.config["SITE_BASE_URL"] = app.config["SITE_BASE_URL"].rstrip("/")
+
     app.secret_key = app.config["SECRET_KEY"]
     app.permanent_session_lifetime = timedelta(hours=ADMIN_SESSION_HOURS)
 
@@ -547,7 +553,22 @@ def create_app(test_config=None):
             "admin_csrf_token": get_admin_csrf_token,
             "analytics_browser_config": browser_analytics_config(app.config),
             "google_ads_config": google_ads_tracking_config(app.config),
+            "canonical_url": canonical_url_for_request(app.config),
+            "robots_directive": robots_directive_for_request(),
         }
+
+    @app.before_request
+    def redirect_to_canonical_origin():
+        """Keep protocol and host variants from becoming duplicate documents."""
+        if request.method not in {"GET", "HEAD"} or is_local_request_host(request.host):
+            return None
+
+        canonical = urlparse(app.config["SITE_BASE_URL"])
+        if request.scheme == canonical.scheme and request.host.lower() == canonical.netloc.lower():
+            return None
+
+        query_string = f"?{request.query_string.decode('utf-8')}" if request.query_string else ""
+        return redirect(f"{app.config['SITE_BASE_URL']}{request.path}{query_string}", code=301)
 
     @app.template_filter("date_label")
     def date_label(value):
@@ -696,6 +717,21 @@ def create_app(test_config=None):
     def favicon():
         return redirect(url_for("static", filename="img/mdi-favicon-32.png"), code=302)
 
+    @app.get("/robots.txt")
+    def robots_txt():
+        return Response(
+            "\n".join(
+                [
+                    "User-agent: *",
+                    "Disallow: /admin/",
+                    "Disallow: /search/",
+                    f"Sitemap: {app.config['SITE_BASE_URL']}/sitemap.xml",
+                    "",
+                ]
+            ),
+            content_type="text/plain; charset=utf-8",
+        )
+
     @app.post("/subscribe/")
     def subscribe():
         email = request.form.get("email", "").strip()
@@ -833,7 +869,7 @@ def create_app(test_config=None):
             "free_guides.html",
             guides=guides,
             featured_guide=guides[0],
-            canonical_url=f"{PUBLIC_SITE_URL}/free-guides",
+            canonical_url=f"{app.config['SITE_BASE_URL']}/free-guides/",
         )
 
     @app.get("/resources")
@@ -845,7 +881,7 @@ def create_app(test_config=None):
             resources=resource_library.all_resources(),
             jeir_url=resource_library.JEIR_URL,
             ai_resources_url=resource_library.AI_RESOURCES_URL,
-            canonical_url=f"{PUBLIC_SITE_URL}/resources",
+            canonical_url=f"{app.config['SITE_BASE_URL']}/resources",
         )
 
     @app.get("/resources/")
@@ -883,7 +919,7 @@ def create_app(test_config=None):
             "free_guide_detail.html",
             guide=guide,
             related_guides=related_guides,
-            canonical_url=f"{PUBLIC_SITE_URL}/free-guides/{guide['slug']}",
+            canonical_url=f"{app.config['SITE_BASE_URL']}/free-guides/{guide['slug']}/",
         )
 
     @app.get("/volunteer/")
@@ -1288,11 +1324,25 @@ def create_app(test_config=None):
             research_search_item(),
             volunteer_search_item(),
             resources_search_item(),
-            *resource_search_items(),
             free_guides_search_item(),
             *free_guide_search_items(),
         ]
-        return render_template("sitemap.xml", pages=content.published_pages + extra_pages, posts=content.latest_posts), {
+        cms_items = [
+            {
+                "canonical_path": f"/{item['slug']}/",
+                "modified": item.get("updated_at") or item.get("published_at"),
+            }
+            for item in cms.list_content(app.config)
+            if item["status"] == "published"
+            and not item.get("seo_json", {}).get("noindex")
+            and (not item.get("published_at") or parse_timestamp(item["published_at"]) <= utc_now())
+        ]
+        return render_template(
+            "sitemap.xml",
+            pages=content.published_pages + extra_pages + cms_items,
+            posts=content.latest_posts,
+            site_base_url=app.config["SITE_BASE_URL"],
+        ), {
             "Content-Type": "application/xml"
         }
 
@@ -4268,6 +4318,24 @@ def canonical_path_for(item):
     if item["type"] == "page" and item["slug"] == "mindful":
         return "/"
     return f"/{item['slug'].strip('/')}/"
+
+
+def canonical_url_for_request(config):
+    """Return the stable, query-free URL for the current public document."""
+    return f"{config['SITE_BASE_URL'].rstrip('/')}{request.path}"
+
+
+def is_local_request_host(host):
+    hostname = host.split(":", 1)[0].lower()
+    return hostname in {"localhost", "127.0.0.1", "::1", "testserver"}
+
+
+def robots_directive_for_request():
+    # Search result URLs and administrative screens are useful to visitors but
+    # should not compete with editorial pages in a search index.
+    if request.path.startswith("/search/") or request.path.startswith("/admin/"):
+        return "noindex, follow"
+    return ""
 
 
 def preview_text_for(item):

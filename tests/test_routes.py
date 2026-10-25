@@ -319,6 +319,43 @@ def test_wordpress_home_slug_redirects_to_root():
     assert response.headers["Location"].endswith("/")
 
 
+def test_public_pages_emit_a_stable_canonical_and_search_is_not_indexed():
+    app = create_app({"TESTING": True, "SITE_BASE_URL": "https://mindfuldiabetes.org"})
+    client = app.test_client()
+
+    home = client.get("/?utm_source=newsletter")
+    guide = client.get("/guide/?page=2")
+    search = client.get("/search/?q=diabetes")
+
+    assert b'<link rel="canonical" href="https://mindfuldiabetes.org/">' in home.data
+    assert b'<link rel="canonical" href="https://mindfuldiabetes.org/guide/">' in guide.data
+    assert b'<meta name="robots" content="noindex, follow">' in search.data
+
+
+def test_noncanonical_hosts_redirect_to_the_https_canonical_origin():
+    app = create_app({"TESTING": True, "SITE_BASE_URL": "https://mindfuldiabetes.org"})
+    client = app.test_client()
+
+    response = client.get("/guide/?page=2", base_url="http://www.mindfuldiabetes.org")
+
+    assert response.status_code == 301
+    assert response.headers["Location"] == "https://mindfuldiabetes.org/guide/?page=2"
+
+
+def test_robots_and_sitemap_only_advertise_indexable_first_party_urls():
+    app = create_app({"TESTING": True, "SITE_BASE_URL": "https://mindfuldiabetes.org"})
+    client = app.test_client()
+
+    robots = client.get("/robots.txt")
+    sitemap = client.get("/sitemap.xml")
+
+    assert robots.status_code == 200
+    assert b"Sitemap: https://mindfuldiabetes.org/sitemap.xml" in robots.data
+    assert b"Disallow: /admin/" in robots.data
+    assert b"/resources/understanding-a1c" not in sitemap.data
+    assert b"https://mindfuldiabetes.org/free-guides/" in sitemap.data
+
+
 def test_custom_404_page_uses_branded_recovery_layout():
     app = create_app({"TESTING": True})
     client = app.test_client()

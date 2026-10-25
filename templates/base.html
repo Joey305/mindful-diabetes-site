@@ -6,7 +6,8 @@
     <meta name="apple-itunes-app" content="app-id={{ memovela.app_id }}">
     <title>{% block title %}Mindful Diabetes Inc{% endblock %}</title>
     {% block meta_description %}<meta name="description" content="{{ site_description }}">{% endblock %}
-    {% block canonical %}{% endblock %}
+    {% block canonical %}<link rel="canonical" href="{{ canonical_url }}">{% endblock %}
+    {% block robots %}{% if robots_directive %}<meta name="robots" content="{{ robots_directive }}">{% endif %}{% endblock %}
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/mdi-favicon-32.png') }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='img/mdi-favicon-192.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/mdi-favicon-180.png') }}">
