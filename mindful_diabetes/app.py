@@ -4458,6 +4458,7 @@ def clean_article_html(
         "same-meal-different-glucose-response",
     }:
         html = remove_article_media(html)
+    html = insert_dash_video_promotion(html, post_slug)
     html = remove_duplicate_intro_heading(html, post_title, article_section_title)
     html = prevent_repeated_short_version_headings(html)
     if post_slug == "memovela":
@@ -4530,6 +4531,31 @@ SAME_MEAL_VIDEO_FEATURE = """
 """.strip()
 
 
+DASH_VIDEO_URL = "https://www.youtube.com/watch?v=QycWEHhWsiU"
+
+DASH_VIDEO_FEATURE = f"""
+<section class="article-video-feature dash-video-promotion" aria-labelledby="dash-video-promotion-heading">
+  <div class="article-video-feature__intro">
+    <p class="eyebrow">Watch the DASH overview</p>
+    <h2 id="dash-video-promotion-heading">Learn the DASH side of the MIND diet</h2>
+    <p>The MIND diet builds on DASH principles. Watch this practical overview for an approachable look at vegetables, fruit, whole grains, beans, lower-sodium choices, and small next steps.</p>
+    <p><a href="{DASH_VIDEO_URL}" target="_blank" rel="noopener noreferrer" data-track-event="dash_video_click" data-track-category="dash" data-track-label="Watch DASH overview from MIND diet" data-track-id="dash-video-mind-diet" data-track-position="inline_video" data-track-destination="{DASH_VIDEO_URL}" data-source-page="/mind-diet/">Watch on YouTube</a></p>
+  </div>
+  <div class="video-frame">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QycWEHhWsiU" title="Mindful Diabetes DASH diet overview" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section>
+""".strip()
+
+DASH_VIDEO_CALLOUT = f"""
+<aside class="article-callout dash-video-promotion" aria-label="DASH diet video">
+  <p class="article-callout__title">Want to learn more about DASH?</p>
+  <p>Watch our practical DASH overview for a quick introduction to the food pattern, lower-sodium choices, and realistic first steps.</p>
+  <p><a href="{DASH_VIDEO_URL}" target="_blank" rel="noopener noreferrer" data-track-event="dash_video_click" data-track-category="dash" data-track-label="Watch DASH overview" data-track-id="dash-video-{{slug}}" data-track-position="inline_callout" data-track-destination="{DASH_VIDEO_URL}">Watch the DASH overview on YouTube</a></p>
+</aside>
+""".strip()
+
+
 def insert_same_meal_video_feature(html):
     """Add the approved companion video after the article's quick-answer list."""
     if "article-video-feature" in html:
@@ -4541,6 +4567,26 @@ def insert_same_meal_video_feature(html):
         count=1,
         flags=re.IGNORECASE,
     )
+
+
+def insert_dash_video_promotion(html, post_slug):
+    """Place the DASH overview where it adds context without repeating it everywhere."""
+    if "dash-video-promotion" in html:
+        return html
+
+    if post_slug == "mind-diet":
+        promotion = DASH_VIDEO_FEATURE
+        marker = r"(?=<h[2-4]\b[^>]*>\s*(?:<[^>]+>\s*)*Scientific Backing\b)"
+    elif post_slug == "diabetes-nutrition-to-prevent-alzheimers":
+        promotion = DASH_VIDEO_CALLOUT.format(slug="nutrition-cognitive-health")
+        marker = r"(?=<h[2-4]\b[^>]*>\s*(?:<[^>]+>\s*)*Practical Tips for Implementation\b)"
+    elif post_slug == "same-meal-different-glucose-response":
+        promotion = DASH_VIDEO_CALLOUT.format(slug="same-meal")
+        marker = r"(?=<h2\b[^>]*>\s*(?:<[^>]+>\s*)*The bigger surprise\b)"
+    else:
+        return html
+
+    return re.sub(marker, f"{promotion}\n", html, count=1, flags=re.IGNORECASE)
 
 
 def prevent_repeated_short_version_headings(html):

@@ -224,6 +224,23 @@ def test_same_meal_article_includes_its_companion_video_feature():
     assert b'Why the same food can feel different on different days' in response.data
 
 
+def test_dash_video_is_featured_in_the_most_relevant_related_articles():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    mind = client.get("/mind-diet/")
+    nutrition = client.get("/diabetes-nutrition-to-prevent-alzheimers/")
+    same_meal = client.get("/same-meal-different-glucose-response/")
+
+    assert mind.status_code == 200
+    assert b'www.youtube.com/embed/QycWEHhWsiU' in mind.data
+    assert b'Learn the DASH side of the MIND diet' in mind.data
+    for response in (nutrition, same_meal):
+        assert response.status_code == 200
+        assert b'Want to learn more about DASH?' in response.data
+        assert b'https://www.youtube.com/watch?v=QycWEHhWsiU' in response.data
+
+
 def test_fat_cells_2026_article_renders_research_guardrails_and_memovela_blurb():
     app = create_app({"TESTING": True})
     client = app.test_client()
