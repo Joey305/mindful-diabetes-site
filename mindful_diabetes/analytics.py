@@ -1252,7 +1252,7 @@ def remote_params(start, end, filters=None):
     return params
 
 
-def date_range_from_args(args, default_days=30):
+def date_range_from_args(args, default_days=7):
     today = utc_now().date()
     range_name = (args.get("range") or f"{default_days}d").strip()
     if range_name == "today":

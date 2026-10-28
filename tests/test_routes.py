@@ -2740,6 +2740,7 @@ def test_analytics_dashboard_empty_state_and_storage_warning(tmp_path):
     assert response.status_code == 200
     assert b"Temporary analytics storage is active" in response.data
     assert b"No health-tool clicks have been recorded yet." in response.data
+    assert b'<option value="7d" selected>Last 7 days</option>' in response.data
 
 
 def test_remote_analytics_adapter_uses_randy_api(monkeypatch):
