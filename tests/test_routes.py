@@ -63,6 +63,8 @@ def test_natural_compounds_article_replaces_legacy_supplements_permalink():
     assert response.data.count(b"<table>") == 2
     assert b'<meta property="og:url" content="https://mindfuldiabetes.org/natural-compounds-brain-health/">' in response.data
     assert b'"datePublished": "2026-10-28"' in response.data
+    assert b'&lt;a id="ref-1"&gt;&lt;/a&gt;' not in response.data
+    assert b'<a id="ref-1"></a><strong>1.</strong>' in response.data
 
 
 def test_rss_feed_uses_public_article_sources_and_valid_xml(tmp_path):
@@ -188,7 +190,7 @@ def test_movement_2026_article_registers_images_metadata_and_discovery_surfaces(
     assert b"did not reach statistical significance" in response.data
     assert b"not for measuring exerkines or diagnosing a glucose response" in response.data
     assert response.data.count(b">The short version</h2>") == 0
-    assert response.data.count(b">TLDR</h2>") == 1
+    assert response.data.count(b">Key takeaways</h2>") == 1
     assert b"Medical note: This article is educational" in response.data
     assert b'href="https://doi.org/10.1038/s42255-026-01621-w"' in response.data
     assert b'href="/same-meal-different-glucose-response/"' in response.data

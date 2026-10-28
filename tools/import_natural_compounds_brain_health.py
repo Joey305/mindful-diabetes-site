@@ -29,6 +29,22 @@ PUBLISHED = "2026-10-28 09:00:00-04:00"
 
 
 def inline(text: str) -> str:
+    # The manuscript uses empty, named anchors as stable targets for its
+    # in-text citations. Preserve only that narrow, known-safe form before
+    # escaping prose; otherwise the anchors render literally to readers.
+    anchors: dict[str, str] = {}
+
+    def preserve_reference_anchor(match: re.Match[str]) -> str:
+        token = f"@@MDIREFANCHOR{len(anchors)}@@"
+        anchors[token] = f'<a id="{match.group(1)}"></a>'
+        return token
+
+    text = re.sub(
+        r'<a\s+id="(ref-\d+)"\s*></a>',
+        preserve_reference_anchor,
+        text,
+        flags=re.IGNORECASE,
+    )
     value = html.escape(text, quote=False)
 
     def link(match: re.Match[str]) -> str:
@@ -42,7 +58,10 @@ def inline(text: str) -> str:
     value = re.sub(r"\[\[(\d+)\]\]\(#(ref-\d+)\)", r'<a href="#\2" aria-label="Reference \1">[\1]</a>', value)
     value = re.sub(r"`([^`]+)`", r"<code>\1</code>", value)
     value = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", value)
-    return re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", value)
+    value = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", value)
+    for token, anchor in anchors.items():
+        value = value.replace(token, anchor)
+    return value
 
 
 def figure_html(item: dict, hero: bool = False) -> str:
@@ -176,7 +195,7 @@ def main() -> None:
         "hero_description": "Original Mindful Diabetes science illustration created for this article.",
         "editorial_history": "This completely rewritten article replaces an earlier Mindful Diabetes article first published January 28, 2025.",
         "memovela_resource_blurb": "A skeptical guide to lion's mane, turmeric, and ginkgo: what human trials do—and do not—show about brain and metabolic health.",
-        "memovela_sync": False, "content_html": body,
+        "memovela_sync": True, "content_html": body,
     })
     serialized = json.dumps(items, ensure_ascii=False, indent=2)
     # Retain the legacy route only at the HTTP redirect. Existing articles may

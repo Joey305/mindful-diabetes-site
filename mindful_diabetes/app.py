@@ -4600,7 +4600,12 @@ def insert_dash_video_promotion(html, post_slug):
 
 
 def prevent_repeated_short_version_headings(html):
-    """Keep imported posts from rendering more than one 'The short version' heading."""
+    """Give repeated imported summary headings a distinct, useful label.
+
+    Some article imports include the template's ``The short version`` heading
+    as well as an author-provided summary. Keep both sections rather than
+    discarding either one, but make the later heading intelligible on its own.
+    """
     seen_short_version = False
 
     def replace(match):
@@ -4610,7 +4615,7 @@ def prevent_repeated_short_version_headings(html):
         if not seen_short_version:
             seen_short_version = True
             return match.group(0)
-        return f'<h{match.group("level")}{match.group("attrs")}>TLDR</h{match.group("level")}>'
+        return f'<h{match.group("level")}{match.group("attrs")}>Key takeaways</h{match.group("level")}>'
 
     return re.sub(
         r"<h(?P<level>[2-4])(?P<attrs>\b[^>]*)>(?P<content>.*?)</h[2-4]>",
