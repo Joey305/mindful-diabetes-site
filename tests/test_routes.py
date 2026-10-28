@@ -65,6 +65,8 @@ def test_natural_compounds_article_replaces_legacy_supplements_permalink():
     assert b'"datePublished": "2026-10-28"' in response.data
     assert b'&lt;a id="ref-1"&gt;&lt;/a&gt;' not in response.data
     assert b'<a id="ref-1"></a><strong>1.</strong>' in response.data
+    assert response.data.count(b"The short version: what does the evidence actually say?") == 1
+    assert b"What you\xe2\x80\x99ll learn" in response.data
 
 
 def test_rss_feed_uses_public_article_sources_and_valid_xml(tmp_path):
