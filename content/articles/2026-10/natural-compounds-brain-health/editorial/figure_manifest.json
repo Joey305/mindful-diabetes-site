@@ -1,0 +1,263 @@
+[
+  {
+    "asset_id": "00_hero_nature_under_microscope",
+    "kind": "hero",
+    "label": "Cover",
+    "section": "Article opening",
+    "layout": "hero-wide",
+    "caption": "Lion’s mane, turmeric, and ginkgo: three extraordinary organisms, three very different paths through scientific research.",
+    "alt": "Lion’s mane mushrooms beside glowing orange turmeric rhizomes and golden ginkgo leaves against a deep-green science-inspired background, with Mindful Diabetes Inc. branding.",
+    "references": [],
+    "webp_path": "assets/webp_optimized/00_hero_nature_under_microscope.webp",
+    "png_path": "assets/png_hires/00_hero_nature_under_microscope.png",
+    "svg_path": null,
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/00_hero_nature_under_microscope.png"
+  },
+  {
+    "asset_id": "01_brain_signaling_glucose_vascular",
+    "kind": "scientific_figure",
+    "label": "Figure 1",
+    "section": "2. Diabetes and the brain",
+    "layout": "full-width",
+    "caption": "Brain insulin signaling, glucose use, and vascular or inflammatory influences are related but different biological processes. This is a conceptual illustration, not a diagnostic algorithm.",
+    "alt": "Mindful Diabetes science diagram with separate panels explaining insulin signaling in the brain, glucose utilization, and vascular or immune influences.",
+    "references": [
+      3,
+      4
+    ],
+    "webp_path": "assets/webp_optimized/01_brain_signaling_glucose_vascular.webp",
+    "png_path": "assets/png_hires/01_brain_signaling_glucose_vascular.png",
+    "svg_path": "assets/svg_editable/01_brain_signaling_glucose_vascular.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/01_brain_signaling_glucose_vascular.png"
+  },
+  {
+    "asset_id": "07_diabetes_dementia_alzheimers_distinctions",
+    "kind": "science_panel",
+    "label": "Figure 2",
+    "section": "2. Diabetes and the brain",
+    "layout": "full-width",
+    "caption": "Cardiometabolic risk, Alzheimer-associated pathology, and cognitive symptoms overlap in some people but are not interchangeable. Diabetes does not inevitably cause Alzheimer pathology.",
+    "alt": "Three-part Mindful Diabetes schematic distinguishing metabolic and vascular risk factors, Alzheimer-associated pathological changes, and cognitive outcomes or dementia syndromes.",
+    "references": [
+      1,
+      2
+    ],
+    "webp_path": "assets/webp_optimized/07_diabetes_dementia_alzheimers_distinctions.webp",
+    "png_path": "assets/png_hires/07_diabetes_dementia_alzheimers_distinctions.png",
+    "svg_path": "assets/svg_editable/07_diabetes_dementia_alzheimers_distinctions.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/07_diabetes_dementia_alzheimers_distinctions.png"
+  },
+  {
+    "asset_id": "08_lions_mane_fruiting_body_vs_mycelium",
+    "kind": "science_panel",
+    "label": "Figure 3",
+    "section": "3. Lion’s mane",
+    "layout": "inline-wide",
+    "caption": "The visible fruiting body and threadlike mycelium are different fungal structures. Study preparations can vary in their chemical composition; a common ingredient name does not identify a standardized exposure.",
+    "alt": "Side-by-side illustration of white lion’s mane fruiting bodies and a labeled branching mycelium network, with notes on compound families studied in each.",
+    "references": [
+      5
+    ],
+    "webp_path": "assets/webp_optimized/08_lions_mane_fruiting_body_vs_mycelium.webp",
+    "png_path": "assets/png_hires/08_lions_mane_fruiting_body_vs_mycelium.png",
+    "svg_path": "assets/svg_editable/08_lions_mane_fruiting_body_vs_mycelium.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/08_lions_mane_fruiting_body_vs_mycelium.png"
+  },
+  {
+    "asset_id": "02_lions_mane_neurotrophic_hypothesis",
+    "kind": "scientific_figure",
+    "label": "Figure 4",
+    "section": "3. Lion’s mane",
+    "layout": "full-width",
+    "caption": "Lion’s mane compounds are studied for possible roles in neurotrophic signaling. These proposed pathways do not establish a neurological benefit in people; an acute 18-person 2025 study found no significant overall cognitive benefit.",
+    "alt": "Mindful Diabetes lion’s mane diagram depicting hericenones, erinacines, exploratory neurotrophic pathways, and an 18-person human trial summary.",
+    "references": [
+      5,
+      7
+    ],
+    "webp_path": "assets/webp_optimized/02_lions_mane_neurotrophic_hypothesis.webp",
+    "png_path": "assets/png_hires/02_lions_mane_neurotrophic_hypothesis.png",
+    "svg_path": "assets/svg_editable/02_lions_mane_neurotrophic_hypothesis.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/02_lions_mane_neurotrophic_hypothesis.png"
+  },
+  {
+    "asset_id": "09_organism_to_supplement_product",
+    "kind": "science_panel",
+    "label": "Figure 5",
+    "section": "4. Supplements are formulations",
+    "layout": "full-width",
+    "caption": "Species identification, material used, extraction, formulation, and quality evaluation all matter. Products carrying the same common name may not be chemically or clinically equivalent.",
+    "alt": "Five-step infographic showing how organism identification, chosen biological material, extraction, formulation, and quality checks affect a supplement product.",
+    "references": [
+      5,
+      9,
+      17
+    ],
+    "webp_path": "assets/webp_optimized/09_organism_to_supplement_product.webp",
+    "png_path": "assets/png_hires/09_organism_to_supplement_product.png",
+    "svg_path": "assets/svg_editable/09_organism_to_supplement_product.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/09_organism_to_supplement_product.png"
+  },
+  {
+    "asset_id": "03_curcumin_pharmacokinetics",
+    "kind": "scientific_figure",
+    "label": "Figure 6",
+    "section": "5. Turmeric and curcumin",
+    "layout": "full-width",
+    "caption": "Curcumin’s journey through digestion, absorption, metabolism, and circulation helps explain why activity in a cell dish does not predict clinical benefit or safety.",
+    "alt": "A turmeric pharmacokinetics diagram showing ingestion, intestinal absorption, liver metabolism, circulation, and possible tissue exposure.",
+    "references": [
+      9
+    ],
+    "webp_path": "assets/webp_optimized/03_curcumin_pharmacokinetics.webp",
+    "png_path": "assets/png_hires/03_curcumin_pharmacokinetics.png",
+    "svg_path": "assets/svg_editable/03_curcumin_pharmacokinetics.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/03_curcumin_pharmacokinetics.png"
+  },
+  {
+    "asset_id": "04_ginkgo_GEM_trial_forest_plot",
+    "kind": "scientific_figure",
+    "label": "Figure 7",
+    "section": "6. Ginkgo",
+    "layout": "full-width",
+    "caption": "Published GEM trial estimates: all-cause dementia hazard ratio 1.12 (95% CI 0.94–1.33) and Alzheimer dementia 1.16 (95% CI 0.97–1.39). Neither outcome showed statistically established prevention benefit.",
+    "alt": "Forest plot of the Ginkgo Evaluation of Memory randomized trial; both confidence intervals include the null hazard ratio of one.",
+    "references": [
+      12
+    ],
+    "webp_path": "assets/webp_optimized/04_ginkgo_GEM_trial_forest_plot.webp",
+    "png_path": "assets/png_hires/04_ginkgo_GEM_trial_forest_plot.png",
+    "svg_path": "assets/svg_editable/04_ginkgo_GEM_trial_forest_plot.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/04_ginkgo_GEM_trial_forest_plot.png"
+  },
+  {
+    "asset_id": "05_natural_products_to_medicines",
+    "kind": "scientific_figure",
+    "label": "Figure 8",
+    "section": "7. Natural products and medicine",
+    "layout": "full-width",
+    "caption": "Natural-product inspiration and clinically approved medicines are different stages of discovery: the chemical history of metformin includes goat’s rue, while the synthetic GLP-1 medicine exenatide grew from Gila monster peptide research.",
+    "alt": "Two illustrated medicinal chemistry stories linking Galega officinalis to metformin history and the Gila monster peptide exendin-4 to synthetic exenatide.",
+    "references": [
+      15,
+      16
+    ],
+    "webp_path": "assets/webp_optimized/05_natural_products_to_medicines.webp",
+    "png_path": "assets/png_hires/05_natural_products_to_medicines.png",
+    "svg_path": "assets/svg_editable/05_natural_products_to_medicines.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/05_natural_products_to_medicines.png"
+  },
+  {
+    "asset_id": "10_what_cognitive_trials_measure",
+    "kind": "science_panel",
+    "label": "Figure 9",
+    "section": "8. How scientists evaluate evidence",
+    "layout": "inline-wide",
+    "caption": "A memory task, a test of executive function, a self-reported symptom, and a clinical diagnosis answer different research questions. Improvement on a test is not the same as preventing dementia.",
+    "alt": "Four comparison cards depicting memory tasks, executive function, self-reported experiences, and clinically important cognitive outcomes.",
+    "references": [
+      6,
+      7,
+      12
+    ],
+    "webp_path": "assets/webp_optimized/10_what_cognitive_trials_measure.webp",
+    "png_path": "assets/png_hires/10_what_cognitive_trials_measure.png",
+    "svg_path": "assets/svg_editable/10_what_cognitive_trials_measure.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/10_what_cognitive_trials_measure.png"
+  },
+  {
+    "asset_id": "06_how_to_evaluate_evidence",
+    "kind": "scientific_figure",
+    "label": "Figure 10",
+    "section": "8. How scientists evaluate evidence",
+    "layout": "full-width",
+    "caption": "From cellular studies to controlled human trials, each research design answers a different question. Strong claims need evidence suited to the claim and the population.",
+    "alt": "Scientific evidence map separating laboratory experiments, animal models, small human studies, and larger controlled clinical trials.",
+    "references": [
+      5,
+      7,
+      10,
+      11,
+      12
+    ],
+    "webp_path": "assets/webp_optimized/06_how_to_evaluate_evidence.webp",
+    "png_path": "assets/png_hires/06_how_to_evaluate_evidence.png",
+    "svg_path": "assets/svg_editable/06_how_to_evaluate_evidence.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/06_how_to_evaluate_evidence.png"
+  },
+  {
+    "asset_id": "11_supplement_safety_and_interactions",
+    "kind": "science_panel",
+    "label": "Figure 11",
+    "section": "9. Supplement safety",
+    "layout": "full-width",
+    "caption": "Bioactive does not necessarily mean safe. Limited long-term data for lion’s mane, turmeric-associated liver injury reports, and ginkgo–medication interactions deserve attention.",
+    "alt": "Three-column Mindful Diabetes safety infographic comparing uncertainties for lion’s mane, concentrated turmeric extracts, and ginkgo leaf extracts.",
+    "references": [
+      9,
+      13,
+      17
+    ],
+    "webp_path": "assets/webp_optimized/11_supplement_safety_and_interactions.webp",
+    "png_path": "assets/png_hires/11_supplement_safety_and_interactions.png",
+    "svg_path": "assets/svg_editable/11_supplement_safety_and_interactions.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/11_supplement_safety_and_interactions.png"
+  },
+  {
+    "asset_id": "12_evidence_informed_brain_health_habits",
+    "kind": "science_panel",
+    "label": "Figure 12",
+    "section": "10. Brain health priorities",
+    "layout": "full-width",
+    "caption": "Evidence-informed brain-health priorities include movement, cardiovascular care, individualized diabetes management, not smoking, hearing care, and social connection. No checklist guarantees prevention.",
+    "alt": "Six illustrated cards showing activity, blood-pressure management, diabetes care, smoking avoidance, hearing care, and social connection.",
+    "references": [
+      1,
+      18,
+      19
+    ],
+    "webp_path": "assets/webp_optimized/12_evidence_informed_brain_health_habits.webp",
+    "png_path": "assets/png_hires/12_evidence_informed_brain_health_habits.png",
+    "svg_path": "assets/svg_editable/12_evidence_informed_brain_health_habits.svg",
+    "credit": "Mindful Diabetes Inc. · mindfuldiabetes.org",
+    "width": 1600,
+    "height": 900,
+    "lightbox_png": "assets/png_hires/12_evidence_informed_brain_health_habits.png"
+  }
+]

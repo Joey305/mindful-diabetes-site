@@ -4,6 +4,7 @@
 {% block meta_description %}<meta name="description" content="{{ post.meta_description or post.excerpt_text }}">{% endblock %}
 {% block canonical %}
   <link rel="canonical" href="{{ post.canonical_url or post.url }}">
+  <meta property="og:url" content="{{ post.canonical_url or post.url }}">
   <meta property="og:title" content="{{ post.og_title or post.seo_title or post.title }}">
   <meta property="og:description" content="{{ post.og_description or post.meta_description or post.excerpt_text }}">
   {% if post.og_image or post.preview_image_url %}
