@@ -1355,6 +1355,15 @@ def create_app(test_config=None):
             content_type="application/rss+xml; charset=utf-8",
         )
 
+    @app.route("/diabetes-supplements/", methods=["GET", "HEAD"])
+    @app.route("/diabetes-supplements", methods=["GET", "HEAD"])
+    def diabetes_supplements_redirect():
+        """Keep the retired permalink public and permanently redirectable."""
+        destination = "https://mindfuldiabetes.org/natural-compounds-brain-health/"
+        if request.query_string:
+            destination = f"{destination}?{request.query_string.decode('utf-8')}"
+        return redirect(destination, code=301)
+
     @app.get("/<slug>/")
     def page_detail(slug):
         if slug == "mindful":
@@ -2159,7 +2168,7 @@ def post_article_schema(post):
         "headline": post.get("title", ""),
         "description": post.get("meta_description") or post.get("excerpt_text", ""),
         "datePublished": (post.get("date") or "")[:10],
-        "dateModified": (post.get("modified") or post.get("date") or "")[:10],
+        "dateModified": post.get("modified") or post.get("date") or "",
         "author": {"@type": "Organization", "name": "Mindful Diabetes Inc."},
         "publisher": organization_schema(),
         "mainEntityOfPage": {"@type": "WebPage", "@id": canonical_url},
@@ -4456,6 +4465,7 @@ def clean_article_html(
         "intermittent-fasting-diabetes-2026",
         "fat-cells-store-release-energy-2026",
         "same-meal-different-glucose-response",
+        "natural-compounds-brain-health",
     }:
         html = remove_article_media(html)
     html = insert_dash_video_promotion(html, post_slug)

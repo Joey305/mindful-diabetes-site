@@ -45,6 +45,26 @@ def test_published_wordpress_pages_and_posts_resolve():
         assert response.status_code == 200, item["canonical_path"]
 
 
+def test_natural_compounds_article_replaces_legacy_supplements_permalink():
+    app = create_app({"TESTING": True, "SITE_BASE_URL": "https://mindfuldiabetes.org"})
+    client = app.test_client()
+
+    legacy = client.get("/diabetes-supplements/?utm_source=archive", follow_redirects=False)
+    assert legacy.status_code == 301
+    assert legacy.headers["Location"] == (
+        "https://mindfuldiabetes.org/natural-compounds-brain-health/?utm_source=archive"
+    )
+
+    response = client.get("/natural-compounds-brain-health/")
+    assert response.status_code == 200
+    assert b"Nature Under the Microscope" in response.data
+    assert response.data.count(b'data-image-slot="') == 12
+    assert b"00_hero_nature_under_microscope.webp" in response.data
+    assert response.data.count(b"<table>") == 2
+    assert b'<meta property="og:url" content="https://mindfuldiabetes.org/natural-compounds-brain-health/">' in response.data
+    assert b'"datePublished": "2026-10-28"' in response.data
+
+
 def test_rss_feed_uses_public_article_sources_and_valid_xml(tmp_path):
     app = create_app(
         {
