@@ -7565,6 +7565,58 @@ a.article-navigation__link:hover {
   line-height: 1.5;
 }
 
+/* November 2026 UPF research article: figures remain legible at narrow widths
+   and their source artwork can be opened without loading a huge PNG by default. */
+.article-content .article-figure {
+  position: relative;
+  width: min(100%, 920px);
+  max-width: 100%;
+  margin: clamp(1.8rem, 5vw, 3rem) auto;
+}
+
+.article-content .article-figure img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.article-figure__expand {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.article-figure__expand::after {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 2.8rem;
+  padding: 0.35rem 0.55rem;
+  color: var(--white);
+  background: rgba(13, 19, 56, 0.88);
+  border-radius: 4px;
+  content: "Open full figure ↗";
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.article-content .figure-science-label {
+  margin: 0 0 0.65rem;
+  padding: 0.7rem 0.85rem;
+  color: var(--text);
+  background: #fff4dd;
+  border-left: 4px solid var(--secondary);
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
 .article-content blockquote {
   padding: 1rem 1.25rem;
   color: var(--primary);
