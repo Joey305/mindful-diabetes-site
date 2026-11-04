@@ -673,6 +673,23 @@ def test_guide_paginates_posts_nine_at_a_time():
     assert b'href="/guide/?page=2"' in first_page.data
 
 
+def test_past_articles_page_is_a_social_link_archive():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+    first_post = app.config["CONTENT"].latest_posts[0]
+
+    response = client.get("/past-articles/")
+    no_slash = client.get("/past-articles", follow_redirects=False)
+
+    assert response.status_code == 200
+    assert no_slash.status_code == 301
+    assert response.data.count(b'class="past-article-card"') == len(app.config["CONTENT"].latest_posts)
+    assert first_post["title"].encode() in response.data
+    assert first_post["preview_image_url"].encode() in response.data
+    assert b'target="_blank"' in response.data
+    assert b"Read article" in response.data
+
+
 def test_guide_uses_restored_pathways_layout():
     app = create_app({"TESTING": True})
     client = app.test_client()

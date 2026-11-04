@@ -686,6 +686,15 @@ def create_app(test_config=None):
             },
         )
 
+    @app.get("/past-articles/")
+    def past_articles():
+        """A simple, stable archive designed for social-profile links."""
+        return render_template("past_articles.html", articles=content.latest_posts)
+
+    @app.get("/past-articles")
+    def past_articles_no_slash():
+        return redirect(url_for("past_articles"), code=301)
+
     @app.get("/search/")
     def search():
         query = request.args.get("q", "").strip()
@@ -1329,6 +1338,7 @@ def create_app(test_config=None):
     @app.get("/sitemap.xml")
     def sitemap():
         extra_pages = [
+            {"canonical_path": "/past-articles/", "modified": None},
             health_tools_search_item(content),
             research_search_item(),
             volunteer_search_item(),
