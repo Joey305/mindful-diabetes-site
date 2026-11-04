@@ -4475,6 +4475,7 @@ def clean_article_html(
         "fat-cells-store-release-energy-2026",
         "same-meal-different-glucose-response",
         "natural-compounds-brain-health",
+        "ultra-processed-foods-same-calories-insulin-2026",
     }:
         html = remove_article_media(html)
     html = insert_dash_video_promotion(html, post_slug)
