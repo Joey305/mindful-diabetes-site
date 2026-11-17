@@ -1,0 +1,79 @@
+[
+  {
+    "figure_number": 1,
+    "figure_name": "Whole-Body Insulin Resistance",
+    "png_path": "assets/visual_final/Fig_01_Whole_Body_Insulin_Resistance_CORRECTED.png",
+    "webp_path": "assets/visual_final/Fig_01_Whole_Body_Insulin_Resistance_CORRECTED.webp",
+    "original_resolution": "1122x1402",
+    "alt_text": "Whole-body insulin resistance illustration",
+    "caption_subject": "Conceptual anatomy of insulin response across pancreas, liver, skeletal muscle and fat tissue.",
+    "release_status": "SCIENTIFIC_CORRECTED_AWAITING_EDITORIAL_VISUAL_APPROVAL",
+    "scientific_issue": "Corrected; see sources/FIGURE_CORRECTIONS_COMPLETED.md. Educational illustration, not original study source data."
+  },
+  {
+    "figure_number": 2,
+    "figure_name": "Clamp Method",
+    "png_path": "assets/visual_final/Fig_02_Clamp_Method_CORRECTED.png",
+    "webp_path": "assets/visual_final/Fig_02_Clamp_Method_CORRECTED.webp",
+    "original_resolution": "1122x1402",
+    "alt_text": "Hyperinsulinaemic–euglycaemic clamp illustration",
+    "caption_subject": "Participant receives insulin and glucose infusions during a monitored research clamp.",
+    "release_status": "SCIENTIFIC_CORRECTED_AWAITING_EDITORIAL_VISUAL_APPROVAL",
+    "scientific_issue": "Corrected; see sources/FIGURE_CORRECTIONS_COMPLETED.md. Educational illustration, not original study source data."
+  },
+  {
+    "figure_number": 3,
+    "figure_name": "Plasma Proteomics Pipeline",
+    "png_path": "assets/visual_final/Fig_03_Proteomics_Discovery_CORRECTED.png",
+    "webp_path": "assets/visual_final/Fig_03_Proteomics_Discovery_CORRECTED.webp",
+    "original_resolution": "1122x1402",
+    "alt_text": "Blood plasma proteomics and study-cohort diagram",
+    "caption_subject": "More than 8,000 proteins across combined assays; 488 insulin-sensitivity associations in the discovery analysis, 62 after additional adjustment. Counts refer to different analyses.",
+    "release_status": "SCIENTIFIC_CORRECTED_AWAITING_EDITORIAL_VISUAL_APPROVAL",
+    "scientific_issue": "Corrected; see sources/FIGURE_CORRECTIONS_COMPLETED.md. Educational illustration, not original study source data."
+  },
+  {
+    "figure_number": 4,
+    "figure_name": "Tissue Origin Network",
+    "png_path": "assets/visual_final/Fig_04_Tissue_Origin_CORRECTED.png",
+    "webp_path": "assets/visual_final/Fig_04_Tissue_Origin_CORRECTED.webp",
+    "original_resolution": "1122x1402",
+    "alt_text": "Conceptual circulating protein and tissue association diagram",
+    "caption_subject": "Conceptual protein-tissue associations inferred using Human Protein Atlas reference data. Organs and illustrated arrows are not direct secretion measurements in study participants.",
+    "release_status": "SCIENTIFIC_CORRECTED_AWAITING_EDITORIAL_VISUAL_APPROVAL",
+    "scientific_issue": "Corrected; see sources/FIGURE_CORRECTIONS_COMPLETED.md. Educational illustration, not original study source data."
+  },
+  {
+    "figure_number": 5,
+    "figure_name": "Exercise Proteomic Changes",
+    "png_path": "assets/visual_final/Fig_05_Exercise_Proteomics_CORRECTED.png",
+    "webp_path": "assets/visual_final/Fig_05_Exercise_Proteomics_CORRECTED.webp",
+    "original_resolution": "1122x1402",
+    "alt_text": "Illustrative male cyclist in an eight-week HIIT study; study summary and nonquantitative directional protein-change schematic.",
+    "caption_subject": "HIIT in 43 men improved M value by approximately 30–40%; 22 plasma proteins changed significantly. Lower protein-family arrows are conceptual, not measured effect sizes.",
+    "release_status": "SCIENTIFIC_CORRECTED_AWAITING_EDITORIAL_VISUAL_APPROVAL",
+    "scientific_issue": "Corrected; see sources/FIGURE_CORRECTIONS_COMPLETED.md. Educational illustration, not original study source data."
+  },
+  {
+    "figure_number": 6,
+    "figure_name": "13-Protein Model",
+    "png_path": "assets/visual_final/Fig_06_Thirteen_Protein_Model_CORRECTED.png",
+    "webp_path": "assets/visual_final/Fig_06_Thirteen_Protein_Model_CORRECTED.webp",
+    "original_resolution": "1122x1402",
+    "alt_text": "Insulin sensitivity prediction model inputs and validation accuracy",
+    "caption_subject": "In an independent 43-person test cohort, combined model R²=0.73 versus clinical-only R²=0.49; the comparison is about estimating clamp M value, not diagnosis.",
+    "release_status": "SCIENTIFIC_CORRECTED_AWAITING_EDITORIAL_VISUAL_APPROVAL",
+    "scientific_issue": "Corrected; see sources/FIGURE_CORRECTIONS_COMPLETED.md. Educational illustration, not original study source data."
+  },
+  {
+    "figure_number": 7,
+    "figure_name": "Disease Risk Prediction",
+    "png_path": "assets/visual_final/Fig_07_Disease_Risk_CORRECTED.png",
+    "webp_path": "assets/visual_final/Fig_07_Disease_Risk_CORRECTED.webp",
+    "original_resolution": "1122x1402",
+    "alt_text": "Type 2 diabetes risk C-index comparison",
+    "caption_subject": "UK Biobank future type 2 diabetes discrimination: model C-index 0.86, HbA1c 0.88, TG/HDL 0.74. These are not individual disease probabilities.",
+    "release_status": "SCIENTIFIC_CORRECTED_AWAITING_EDITORIAL_VISUAL_APPROVAL",
+    "scientific_issue": "Corrected; see sources/FIGURE_CORRECTIONS_COMPLETED.md. Educational illustration, not original study source data."
+  }
+]

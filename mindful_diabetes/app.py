@@ -95,6 +95,10 @@ PRESERVED_CONTENT_CLASSES = {
     "article-tool-card--jeir",
     "article-tool-card--memovela",
     "article-tool-card--game",
+    "article-figure",
+    "article-figure--protein-fingerprint",
+    "article-figure__expand",
+    "figure-science-source",
     "eyebrow",
 }
 

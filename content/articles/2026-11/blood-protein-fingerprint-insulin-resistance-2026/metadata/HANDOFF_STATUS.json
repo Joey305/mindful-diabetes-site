@@ -1,0 +1,17 @@
+{
+  "campaign": "Mindful Diabetes plasma proteomics / insulin sensitivity, November 2026",
+  "primary_paper_doi": "10.1038/s42255-026-01662-1",
+  "editorial_complete": true,
+  "website_deployed": false,
+  "publication_approved": false,
+  "seven_visual_concepts_included": true,
+  "images_with_release_holds": [],
+  "images_requiring_conceptual_caption_review": [],
+  "hero_og_image_approved": false,
+  "blockers": [
+    "Editorial visual sign-off on corrected educational figures",
+    "Approve dedicated hero image and social OG asset",
+    "Implement, test and deploy in website repository"
+  ],
+  "scientific_figure_corrections_completed": true
+}
