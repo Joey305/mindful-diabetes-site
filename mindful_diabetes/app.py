@@ -23,6 +23,7 @@ from markupsafe import Markup, escape
 
 from mindful_diabetes import cms
 from mindful_diabetes import analytics
+from mindful_diabetes import memovela_sync
 
 try:
     import psycopg
@@ -427,6 +428,9 @@ def create_app(test_config=None):
         GOOGLE_ADS_CONVERSION_ID=os.getenv("GOOGLE_ADS_CONVERSION_ID", "AW-11435654295"),
         GOOGLE_ADS_CONVERSION_ACTIONS_JSON=os.getenv("GOOGLE_ADS_CONVERSION_ACTIONS_JSON", "{}"),
         GOOGLE_ADS_ENABLE_LOCAL_TESTING=os.getenv("GOOGLE_ADS_ENABLE_LOCAL_TESTING", ""),
+        MEMOVELA_RESOURCE_WEBHOOK_URL=os.getenv("MEMOVELA_RESOURCE_WEBHOOK_URL", ""),
+        MEMOVELA_RESOURCE_WEBHOOK_SECRET=os.getenv("MEMOVELA_RESOURCE_WEBHOOK_SECRET", ""),
+        MEMOVELA_RESOURCE_WEBHOOK_TIMEOUT_SECONDS=os.getenv("MEMOVELA_RESOURCE_WEBHOOK_TIMEOUT_SECONDS", "8"),
         SITE_BASE_URL=os.getenv("SITE_BASE_URL", "https://mindfuldiabetes.org"),
         PAYPAL_CLIENT_ID=os.getenv("PAYPAL_CLIENT_ID", ""),
         PAYPAL_CLIENT_SECRET=os.getenv("PAYPAL_CLIENT_SECRET", ""),
@@ -460,6 +464,7 @@ def create_app(test_config=None):
     if app.config["ANALYTICS_STORAGE_BACKEND"] == "local":
         analytics.analytics_store(app.config).health_check()
     register_analytics_commands(app)
+    register_memovela_commands(app, content)
 
     @app.context_processor
     def inject_site_data():
@@ -3514,6 +3519,19 @@ def register_analytics_commands(app):
         if not sent:
             raise click.ClickException(message)
         click.echo(f"Weekly analytics summary sent to {len(recipients)} recipient(s).")
+
+
+def register_memovela_commands(app, content):
+    @app.cli.command("sync-memovela-marked-articles")
+    def sync_memovela_marked_articles_command():
+        """Upsert published site articles marked for Memovela sharing."""
+        marked_posts = [item for item in content.latest_posts if item.get("memovela_sync")]
+        if not marked_posts:
+            click.echo("No site-content articles are marked for Memovela sharing.")
+            return
+        for item in marked_posts:
+            result = memovela_sync.sync_published_post(app.config, item)
+            click.echo(f"{item['slug']}: {result['message']}")
 
 
 def title_for_request(content, endpoint, view_args):
