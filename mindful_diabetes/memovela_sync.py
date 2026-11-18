@@ -27,7 +27,8 @@ def resource_payload(item, site_base_url):
     version = hashlib.sha256(
         f"{item['title']}|{resource_blurb(item)}|{source_url}|{item.get('modified') or item.get('date') or ''}".encode("utf-8")
     ).hexdigest()[:16]
-    image_url = item.get("hero_image") or item.get("og_image") or ""
+    # Use the 1.91:1 social asset for Memovela cards; fall back to the editorial hero.
+    image_url = item.get("og_image") or item.get("hero_image") or ""
     if image_url.startswith("/"):
         image_url = f"{site_base_url.rstrip('/')}{image_url}"
     return {

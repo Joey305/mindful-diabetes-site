@@ -34,7 +34,12 @@
             <a class="button-secondary button-secondary--light" href="#article">Read the article</a>
           </div>
         </div>
-        {% if post.preview_image_url %}
+        {% if post.hero_image %}
+          <figure class="article-post-hero__media">
+            <img src="{{ post.hero_image }}" alt="{{ post.hero_alt or post.title }}" title="{{ post.hero_title or post.title }}" width="{{ post.hero_width or 1448 }}" height="{{ post.hero_height or 1086 }}" loading="eager" fetchpriority="high">
+            {% if post.hero_caption %}<figcaption>{{ post.hero_caption }}</figcaption>{% endif %}
+          </figure>
+        {% elif post.preview_image_url %}
           <div class="article-post-hero__media">
             <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt or post.title }}" title="{{ post.preview_image_title or post.title }}"{% if post.preview_image_description %} data-description="{{ post.preview_image_description }}"{% endif %}>
           </div>

@@ -158,7 +158,11 @@ def main() -> None:
         "excerpt_html": seo["dek"], "seo_title": seo["seo_title"],
         "meta_description": seo["meta_description"], "canonical_url": URL,
         "og_title": TITLE, "og_description": seo["meta_description"],
-        # No OG/hero source is assigned: both new generated concepts require approval.
+        "hero_image": "/static/uploads/2026/11/editorial-review/protein-fingerprint-hero-proposal.png",
+        "hero_alt": "Blood-plasma sample with conceptual protein structures in a metabolic research laboratory.",
+        "hero_caption": "Editorial scientific illustration for Mindful Diabetes. Molecular structures are conceptual and do not depict participant data.",
+        "hero_width": 1672, "hero_height": 941,
+        "og_image": "/static/uploads/2026/11/editorial-review/protein-fingerprint-social-proposal-1200x630.png",
         "publication_gate": "EDITORIAL_APPROVAL_REQUIRED_FOR_FIGURES_AND_HERO_OG",
         "figure_status": "SCIENTIFIC_CORRECTED_AWAITING_EDITORIAL_VISUAL_APPROVAL",
         "primary_paper_published": seo["primary_paper_published"],
