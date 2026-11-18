@@ -24,13 +24,14 @@ def resource_blurb(item):
 def resource_payload(item, site_base_url):
     source_url = f"{site_base_url.rstrip('/')}/{item['slug']}/"
     external_id = f"mindful-diabetes:legacy:{item['slug']}"
-    version = hashlib.sha256(
-        f"{item['title']}|{resource_blurb(item)}|{source_url}|{item.get('modified') or item.get('date') or ''}".encode("utf-8")
-    ).hexdigest()[:16]
-    # Use the 1.91:1 social asset for Memovela cards; fall back to the editorial hero.
+    # A changed card image must produce a new idempotency key so an existing
+    # Memovela Resource is refreshed instead of retaining its old media.
     image_url = item.get("og_image") or item.get("hero_image") or ""
     if image_url.startswith("/"):
         image_url = f"{site_base_url.rstrip('/')}{image_url}"
+    version = hashlib.sha256(
+        f"{item['title']}|{resource_blurb(item)}|{source_url}|{image_url}|{item.get('modified') or item.get('date') or ''}".encode("utf-8")
+    ).hexdigest()[:16]
     return {
         "event": "mindful_diabetes.resource.upserted",
         "version": 1,
