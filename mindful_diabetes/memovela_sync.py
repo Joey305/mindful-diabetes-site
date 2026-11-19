@@ -30,7 +30,7 @@ def resource_payload(item, site_base_url):
     if image_url.startswith("/"):
         image_url = f"{site_base_url.rstrip('/')}{image_url}"
     version = hashlib.sha256(
-        f"{item['title']}|{resource_blurb(item)}|{source_url}|{image_url}|{item.get('modified') or item.get('date') or ''}".encode("utf-8")
+        f"memovela-image-refresh-2026-11-19|{item['title']}|{resource_blurb(item)}|{source_url}|{image_url}|{item.get('modified') or item.get('date') or ''}".encode("utf-8")
     ).hexdigest()[:16]
     return {
         "event": "mindful_diabetes.resource.upserted",
