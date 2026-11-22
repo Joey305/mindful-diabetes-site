@@ -8399,6 +8399,37 @@ a.article-navigation__link:hover {
   line-height: 1.25;
 }
 
+/* Past articles archive */
+.past-articles-view { background: #f8faf7; }
+.past-articles-hero { overflow: hidden; color: var(--white); background: radial-gradient(circle at 88% 12%, rgba(240, 114, 57, .32), transparent 24rem), linear-gradient(125deg, var(--miami-green-deep), #075e42 58%, #0d243c); }
+.past-articles-hero__inner, .past-articles-list { width: min(var(--content), calc(100% - 2rem)); margin: 0 auto; }
+.past-articles-hero__inner { max-width: 850px; padding: clamp(4.75rem, 9vw, 7.5rem) 0 clamp(4rem, 8vw, 6.25rem); }
+.past-articles-hero .eyebrow { color: #ffc39f; }
+.past-articles-hero h1 { max-width: 720px; margin: .3rem 0 1rem; font-family: "Lora", serif; font-size: clamp(2.65rem, 6vw, 5rem); line-height: 1.04; }
+.past-articles-hero p:not(.eyebrow) { max-width: 630px; margin: 0; color: rgba(255,255,255,.84); font-size: clamp(1.05rem, 2vw, 1.22rem); line-height: 1.7; }
+.past-articles-hero__link { display: inline-flex; gap: .65rem; margin-top: 1.7rem; padding: .82rem 1.05rem; color: var(--white); border: 1px solid rgba(255,255,255,.46); border-radius: 999px; font-weight: 800; text-decoration: none; }
+.past-articles-hero__link:hover { color: var(--primary); background: var(--white); }
+.past-articles-list { padding: clamp(3.5rem, 7vw, 6.5rem) 0; }
+.past-articles-list__heading { display: flex; margin-bottom: 2rem; gap: 2rem; align-items: end; justify-content: space-between; }
+.past-articles-list__heading h2 { margin: .2rem 0 0; color: var(--primary); font-family: "Lora", serif; font-size: clamp(2rem, 4vw, 3.15rem); line-height: 1.1; }
+.past-articles-list__heading > p { max-width: 18rem; margin: 0 0 .35rem; color: var(--muted); font-weight: 700; line-height: 1.5; }
+.past-articles-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem; }
+.past-article-card { display: flex; min-width: 0; overflow: hidden; flex-direction: column; background: var(--white); border: 1px solid rgba(13,19,56,.1); border-radius: 18px; box-shadow: 0 12px 32px rgba(13,19,56,.08); transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+.past-article-card:hover { border-color: rgba(240,114,57,.48); box-shadow: 0 20px 42px rgba(13,19,56,.15); transform: translateY(-5px); }
+.past-article-card__image { display: block; overflow: hidden; aspect-ratio: 16 / 10; background: linear-gradient(135deg, var(--miami-green), var(--primary)); }
+.past-article-card__image img { width: 100%; height: 100%; margin: 0; border-radius: 0; object-fit: cover; transition: transform 300ms ease; }
+.past-article-card:hover .past-article-card__image img { transform: scale(1.045); }
+.past-article-card__image span { display: grid; width: 100%; height: 100%; place-items: center; color: var(--white); font-family: "Lora", serif; font-size: 3rem; }
+.past-article-card__body { display: flex; height: 100%; padding: 1.35rem; flex-direction: column; align-items: flex-start; }
+.past-article-card__date { margin: 0 0 .55rem; color: var(--secondary-dark); font-size: .79rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.past-article-card h2 { margin: 0; color: var(--primary); font-family: "Lora", serif; font-size: 1.35rem; line-height: 1.26; }
+.past-article-card__excerpt { display: -webkit-box; overflow: hidden; margin: .75rem 0 1.2rem; color: var(--body); line-height: 1.55; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.past-article-card__button { margin-top: auto; color: var(--miami-green); font-weight: 800; text-decoration: none; }
+.past-article-card__button:hover { color: var(--secondary-dark); }
+
+@media (max-width: 900px) { .past-articles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .past-articles-list__heading { display: block; } .past-articles-list__heading > p { margin-top: .85rem; } .past-articles-grid { grid-template-columns: 1fr; } .past-article-card__body { padding: 1.2rem; } }
+
 .sponsors-cta {
   display: flex;
   margin-bottom: clamp(4rem, 7vw, 6rem);

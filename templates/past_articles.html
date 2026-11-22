@@ -5,27 +5,37 @@
 
 {% block content %}
   <section class="past-articles-hero" aria-labelledby="past-articles-heading">
-    <div>
-      <p class="eyebrow">Mindful Diabetes</p>
+    <div class="past-articles-hero__inner">
+      <p class="eyebrow">Mindful Diabetes Library</p>
       <h1 id="past-articles-heading">Read past articles</h1>
-      <p>Explore the articles behind our videos. Choose one to read the full story in a new tab.</p>
+      <p>Explore practical guidance and research-informed stories on diabetes, brain health, food, movement, and everyday wellbeing.</p>
+      <a class="past-articles-hero__link" href="{{ url_for('guide') }}">See the newest articles <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <section class="past-articles-list" aria-label="Past articles">
+    <div class="past-articles-list__heading">
+      <div>
+        <p class="eyebrow">The archive</p>
+        <h2>Stories worth returning to</h2>
+      </div>
+      <p>{{ articles|length }} articles to explore at your own pace.</p>
+    </div>
     <div class="past-articles-grid">
       {% for post in articles %}
         <article class="past-article-card">
-          <div class="past-article-card__image">
+          <a class="past-article-card__image" href="{{ post.canonical_path }}" aria-label="Read {{ post.title }}">
             {% if post.preview_image_url %}
               <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt }}" title="{{ post.preview_image_title or post.title }}"{% if post.preview_image_description %} data-description="{{ post.preview_image_description }}"{% endif %}>
             {% else %}
-              <span>Mindful Diabetes</span>
+              <span aria-hidden="true">MD</span>
             {% endif %}
-          </div>
+          </a>
           <div class="past-article-card__body">
+            <p class="past-article-card__date">{{ post.date | date_label }}</p>
             <h2>{{ post.title }}</h2>
-            <a class="past-article-card__button" href="{{ post.canonical_path }}" target="_blank" rel="noopener noreferrer" data-track-event="content_cta_click" data-track-category="content" data-track-label="Read past article: {{ post.title }}" data-track-id="past-articles-{{ post.slug }}" data-track-position="past-articles" data-track-destination="{{ post.canonical_path }}">Read article <span aria-hidden="true">↗</span><span class="screen-reader-text"> (opens in a new tab)</span></a>
+            {% if post.excerpt_text %}<p class="past-article-card__excerpt">{{ post.excerpt_text }}</p>{% endif %}
+            <a class="past-article-card__button" href="{{ post.canonical_path }}" data-track-event="content_cta_click" data-track-category="content" data-track-label="Read past article: {{ post.title }}" data-track-id="past-articles-{{ post.slug }}" data-track-position="past-articles" data-track-destination="{{ post.canonical_path }}">Read article <span aria-hidden="true">→</span></a>
           </div>
         </article>
       {% endfor %}

@@ -79,7 +79,8 @@ def test_past_articles_and_legacy_latest_blog_routes_are_available():
     assert app.config["CONTENT"].latest_posts[0]["title"].encode() in archive.data
 
     assert client.get("/past-articles", follow_redirects=False).headers["Location"].endswith("/past-articles/")
-    assert client.get("/latest-blog/", follow_redirects=False).headers["Location"].endswith("/past-articles/")
+    newest_post_path = app.config["CONTENT"].latest_posts[0]["canonical_path"]
+    assert client.get("/latest-blog/", follow_redirects=False).headers["Location"].endswith(newest_post_path)
 
 
 def test_custom_404_page_uses_branded_recovery_layout():

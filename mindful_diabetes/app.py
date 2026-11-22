@@ -602,8 +602,10 @@ def create_app(test_config=None):
     @app.get("/latest-blog/")
     @app.get("/latest-blog")
     def latest_blog_redirect():
-        """Preserve the legacy blog link while using the current archive."""
-        return redirect(url_for("past_articles"), code=301)
+        """Send the legacy link to the newest published Pathways article."""
+        if not content.latest_posts:
+            return redirect(url_for("guide"), code=302)
+        return redirect(content.latest_posts[0]["canonical_path"], code=302)
 
     @app.get("/search/")
     def search():
