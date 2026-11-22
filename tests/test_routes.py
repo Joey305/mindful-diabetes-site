@@ -69,6 +69,19 @@ def test_rss_feed_includes_published_articles_and_valid_rss_metadata():
     assert legacy_response.headers["Location"].endswith("/feed.xml")
 
 
+def test_past_articles_and_legacy_latest_blog_routes_are_available():
+    app = create_app({"TESTING": True})
+    client = app.test_client()
+
+    archive = client.get("/past-articles/")
+    assert archive.status_code == 200
+    assert b"Read past articles" in archive.data
+    assert app.config["CONTENT"].latest_posts[0]["title"].encode() in archive.data
+
+    assert client.get("/past-articles", follow_redirects=False).headers["Location"].endswith("/past-articles/")
+    assert client.get("/latest-blog/", follow_redirects=False).headers["Location"].endswith("/past-articles/")
+
+
 def test_custom_404_page_uses_branded_recovery_layout():
     app = create_app({"TESTING": True})
     client = app.test_client()

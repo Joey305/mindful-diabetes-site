@@ -590,6 +590,21 @@ def create_app(test_config=None):
             },
         )
 
+    @app.get("/past-articles/")
+    def past_articles():
+        """A stable full archive used by social-profile links."""
+        return render_template("past_articles.html", articles=content.latest_posts)
+
+    @app.get("/past-articles")
+    def past_articles_no_slash():
+        return redirect(url_for("past_articles"), code=301)
+
+    @app.get("/latest-blog/")
+    @app.get("/latest-blog")
+    def latest_blog_redirect():
+        """Preserve the legacy blog link while using the current archive."""
+        return redirect(url_for("past_articles"), code=301)
+
     @app.get("/search/")
     def search():
         query = request.args.get("q", "").strip()
@@ -1180,6 +1195,7 @@ def create_app(test_config=None):
     @app.get("/sitemap.xml")
     def sitemap():
         extra_pages = [
+            {"canonical_path": "/past-articles/", "modified": None},
             health_tools_search_item(content),
             research_search_item(),
             volunteer_search_item(),
