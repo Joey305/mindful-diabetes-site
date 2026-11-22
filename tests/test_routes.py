@@ -64,6 +64,10 @@ def test_rss_feed_includes_published_articles_and_valid_rss_metadata():
     assert first_post["canonical_path"].encode() in response.data
     assert b"<pubDate>" in response.data
 
+    legacy_response = client.get("/feed.xml/", follow_redirects=False)
+    assert legacy_response.status_code == 301
+    assert legacy_response.headers["Location"].endswith("/feed.xml")
+
 
 def test_custom_404_page_uses_branded_recovery_layout():
     app = create_app({"TESTING": True})

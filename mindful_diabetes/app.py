@@ -1201,6 +1201,11 @@ def create_app(test_config=None):
             generated_at=datetime.now(timezone.utc),
         ), {"Content-Type": "application/rss+xml; charset=utf-8"}
 
+    @app.get("/feed.xml/")
+    def rss_feed_with_trailing_slash():
+        """Keep the old, slash-terminated feed address working after migration."""
+        return redirect(url_for("rss_feed"), code=301)
+
     @app.get("/<slug>/")
     def page_detail(slug):
         if slug == "mindful":
