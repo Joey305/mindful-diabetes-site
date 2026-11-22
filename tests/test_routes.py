@@ -48,6 +48,23 @@ def test_wordpress_home_slug_redirects_to_root():
     assert response.headers["Location"].endswith("/")
 
 
+def test_rss_feed_includes_published_articles_and_valid_rss_metadata():
+    app = create_app({"TESTING": True, "SITE_BASE_URL": "https://mindfuldiabetes.org"})
+    client = app.test_client()
+    first_post = app.config["CONTENT"].latest_posts[0]
+
+    response = client.get("/feed.xml")
+
+    assert response.status_code == 200
+    assert response.content_type == "application/rss+xml"
+    assert b'<rss version="2.0"' in response.data
+    assert b'rel="self" type="application/rss+xml"' in response.data
+    assert b"https://mindfuldiabetes.org/feed.xml" in response.data
+    assert first_post["title"].encode() in response.data
+    assert first_post["canonical_path"].encode() in response.data
+    assert b"<pubDate>" in response.data
+
+
 def test_custom_404_page_uses_branded_recovery_layout():
     app = create_app({"TESTING": True})
     client = app.test_client()

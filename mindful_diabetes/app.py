@@ -486,6 +486,10 @@ def create_app(test_config=None):
     def date_label(value):
         return format_date(value)
 
+    @app.template_filter("rss_date")
+    def rss_date(value):
+        return format_rss_date(value)
+
     @app.template_filter("wordpress_html")
     def wordpress_html(value):
         return Markup(clean_wordpress_html(value or "", app.config["PAYPAL_HOSTED_BUTTON_ID"]))
@@ -1186,6 +1190,17 @@ def create_app(test_config=None):
             "Content-Type": "application/xml"
         }
 
+    @app.get("/feed.xml")
+    def rss_feed():
+        """Publish site articles in the RSS format consumed by Mailchimp."""
+        return render_template(
+            "feed.xml",
+            posts=rss_posts(content, app.config),
+            site_url=app.config["SITE_BASE_URL"].rstrip("/"),
+            site_description=app.config["SITE_DESCRIPTION"],
+            generated_at=datetime.now(timezone.utc),
+        ), {"Content-Type": "application/rss+xml; charset=utf-8"}
+
     @app.get("/<slug>/")
     def page_detail(slug):
         if slug == "mindful":
@@ -1289,6 +1304,31 @@ def navigation_for_post(latest_posts, slug):
         "previous": latest_posts[index + 1] if index + 1 < len(latest_posts) else None,
         "next": latest_posts[index - 1] if index > 0 else None,
     }
+
+
+def rss_posts(content, config):
+    """Return published legacy and CMS posts in descending publication order."""
+    posts = [dict(post) for post in content.latest_posts]
+    now = datetime.now(timezone.utc)
+
+    for item in cms.list_content(config):
+        if item.get("content_type") != "post" or item.get("status") != "published":
+            continue
+        published_at = cms.parse_timestamp(item.get("published_at"))
+        if published_at and published_at > now:
+            continue
+        posts.append(
+            {
+                "title": item.get("title", ""),
+                "canonical_path": f"/{item.get('slug', '').strip('/')}/",
+                "date": item.get("published_at") or item.get("created_at") or "",
+                "modified": item.get("updated_at") or "",
+                "excerpt_text": item.get("excerpt") or "Read the full article from Mindful Diabetes.",
+                "creator": item.get("author") or "Mindful Diabetes",
+            }
+        )
+
+    return sorted(posts, key=lambda post: post.get("date") or "", reverse=True)
 
 
 def youtube_url_to_embed(raw_url):
@@ -3816,6 +3856,17 @@ def format_date(value):
         return datetime.strptime(value[:10], "%Y-%m-%d").strftime("%B %-d, %Y")
     except ValueError:
         return value[:10]
+
+
+def format_rss_date(value):
+    """Format imported WordPress and CMS timestamps for an RSS pubDate."""
+    parsed = cms.parse_timestamp(value)
+    if not parsed:
+        try:
+            parsed = datetime.strptime(str(value), "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+        except (TypeError, ValueError):
+            return ""
+    return parsed.astimezone(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")
 
 
 def clean_wordpress_html(raw_html, paypal_button_id):

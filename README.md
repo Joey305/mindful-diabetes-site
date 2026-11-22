@@ -501,6 +501,12 @@ Sitemap route:
 /sitemap.xml
 ```
 
+RSS route (used by the Mailchimp RSS campaign):
+
+```text
+/feed.xml
+```
+
 The sitemap includes every published page and post from the content seed. Use it after migrations or content updates to confirm public URLs are discoverable.
 
 Tip: after changing content, run tests and open `/sitemap.xml` locally to confirm new URLs appear as expected.
