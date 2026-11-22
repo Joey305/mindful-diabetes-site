@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Past Articles | Mindful Diabetes Inc{% endblock %}
+{% block body_class %}past-articles-view{% endblock %}
+
+{% block content %}
+  <section class="past-articles-hero" aria-labelledby="past-articles-heading">
+    <div>
+      <p class="eyebrow">Mindful Diabetes</p>
+      <h1 id="past-articles-heading">Read past articles</h1>
+      <p>Explore the articles behind our videos. Choose one to read the full story in a new tab.</p>
+    </div>
+  </section>
+
+  <section class="past-articles-list" aria-label="Past articles">
+    <div class="past-articles-grid">
+      {% for post in articles %}
+        <article class="past-article-card">
+          <div class="past-article-card__image">
+            {% if post.preview_image_url %}
+              <img src="{{ post.preview_image_url }}" alt="{{ post.preview_image_alt }}" title="{{ post.preview_image_title or post.title }}"{% if post.preview_image_description %} data-description="{{ post.preview_image_description }}"{% endif %}>
+            {% else %}
+              <span>Mindful Diabetes</span>
+            {% endif %}
+          </div>
+          <div class="past-article-card__body">
+            <h2>{{ post.title }}</h2>
+            <a class="past-article-card__button" href="{{ post.canonical_path }}" target="_blank" rel="noopener noreferrer" data-track-event="content_cta_click" data-track-category="content" data-track-label="Read past article: {{ post.title }}" data-track-id="past-articles-{{ post.slug }}" data-track-position="past-articles" data-track-destination="{{ post.canonical_path }}">Read article <span aria-hidden="true">↗</span><span class="screen-reader-text"> (opens in a new tab)</span></a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

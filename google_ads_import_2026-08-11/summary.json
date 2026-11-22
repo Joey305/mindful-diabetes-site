@@ -1,0 +1,21 @@
+{
+  "source": "/Users/jerrismacbook/Downloads/MindfulDiabetes_Google_Ads_Launch_Pack.xlsx",
+  "files": {
+    "campaigns": "/Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/google_ads_import_2026-08-11/01_campaigns.csv",
+    "adgroups": "/Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/google_ads_import_2026-08-11/02_ad_groups.csv",
+    "keywords": "/Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/google_ads_import_2026-08-11/03_keywords.csv",
+    "rsa_ads": "/Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/google_ads_import_2026-08-11/04_responsive_search_ads.csv",
+    "negative_keywords": "/Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/google_ads_import_2026-08-11/05_negative_keywords.csv",
+    "sitelinks": "/Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/google_ads_import_2026-08-11/06_sitelinks.csv",
+    "callouts": "/Users/jerrismacbook/Desktop/Mindful-Diabetes-Site/google_ads_import_2026-08-11/07_callouts.csv"
+  },
+  "counts": {
+    "campaigns": 5,
+    "adgroups": 5,
+    "keywords": 80,
+    "rsa_ads": 5,
+    "negative_keywords": 90,
+    "sitelinks": 30,
+    "callouts": 30
+  }
+}

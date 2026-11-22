@@ -1,0 +1,5 @@
+{% set placement = memovela_app_store_placement|default("site") %}
+{% set badge_variant = memovela_app_store_variant|default("") %}
+<a class="app-store-badge{% if badge_variant %} app-store-badge--{{ badge_variant }}{% endif %}" href="{{ memovela.app_store_url }}" target="_blank" rel="noopener noreferrer" aria-label="Download Memovela on the App Store" data-track-event="memovela_app_store_click" data-track-category="health_tool" data-track-label="Download Memovela on the App Store" data-track-id="memovela-app-store-{{ placement }}" data-track-position="{{ placement }}" data-track-destination="{{ memovela.app_store_url }}" data-tool-id="memovela" data-tool-name="Memovela" data-tool-slug="memovela" data-tool-destination-type="app_store" data-cta-position="{{ placement }}" data-source-page="{{ request.path }}">
+  <img src="{{ url_for('static', filename='img/download-on-the-app-store.svg') }}" alt="Download Memovela on the App Store" width="120" height="40" loading="lazy">
+</a>
